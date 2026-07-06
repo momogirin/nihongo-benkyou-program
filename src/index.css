@@ -1,0 +1,63 @@
+@import './styles/fonts.css';
+@import './styles/tokens.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  color-scheme: light dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100svh;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.page h1 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.page-placeholder {
+  color: var(--color-ink-muted);
+}

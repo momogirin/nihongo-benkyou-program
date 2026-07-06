@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-vite@latest . --template react-ts --no-interactive --overwrite)",
+      "Bash(npm install *)",
+      "Bash(rm -f \"src/assets/react.svg\" \"src/assets/vite.svg\" \"src/assets/hero.png\" \"src/App.css\" *)",
+      "Bash(node \"C:\\\\Users\\\\cch16\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\e--99-------99----------nihongo-benkyou-program\\\\e8afc7ea-7b86-40c7-b335-92e533819462\\\\scratchpad\\\\contrast.mjs\")",
+      "Bash(node -e ' *)",
+      "Skill(fewer-permission-prompts)",
+      "Skill(fewer-permission-prompts:*)",
+      "Bash(ls -la ~/.claude/projects/ 2>/dev/null | head -20)",
+      "Bash(npm run build)",
+      "Bash(npm run lint)",
+      "Bash(npx tsc --noEmit)",
+      "Read(//c/Users/cch16/.claude/projects/**)",
+      "Read(//c/Users/cch16/.claude/projects/e--99-------99----------nihongo-benkyou-program/**)",
+      "Read(//c/Users/cch16/.claude/projects/e--02-AxiQuant-1-AxiQuant2-Client/**)"
+    ],
+    "additionalDirectories": [
+      "E:\\99. 개인자료\\99. 개인 프로젝트\\nihongo-benkyou-program\\src\\assets"
+    ]
+  }
+}

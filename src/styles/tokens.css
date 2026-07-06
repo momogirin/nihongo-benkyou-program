@@ -1,0 +1,37 @@
+:root {
+  --color-bg: #FAF8F3;
+  --color-bg-elevated: #FFFFFF;
+  --color-ink: #2B2B2E;
+  --color-ink-muted: #6B6B70;
+  --color-primary: #B24F1E;
+  --color-primary-dark: #8A3B15;
+  --color-accent: #B23A2E;
+  --color-correct: #3F7D57;
+  --color-incorrect: #B23A2E;
+  --color-border: #E4DFD3;
+  --color-radical-tag: #8A6D3B;
+  --color-selected-bg: rgba(178, 79, 30, 0.08);
+
+  --font-display: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+  --font-caption: 'Noto Sans KR', sans-serif;
+}
+
+/* dark-mode values below are derived (only bg/ink/primary/accent were spec'd);
+   verified against --color-bg-dark at >=4.5:1 (WCAG AA) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1C1B1A;
+    --color-bg-elevated: #262521;
+    --color-ink: #EDEAE3;
+    --color-ink-muted: #A8A29B;
+    --color-primary: #DD7A3D;
+    --color-primary-dark: #B24F1E;
+    --color-accent: #D9695C;
+    --color-correct: #5FA978;
+    --color-incorrect: #D9695C;
+    --color-border: #3A3835;
+    --color-radical-tag: #C9A464;
+    --color-selected-bg: rgba(221, 122, 61, 0.16);
+  }
+}

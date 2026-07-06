@@ -1,0 +1,79 @@
+.setup-screen {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.setup-screen h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.setup-screen fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 0 0 16px;
+}
+
+.setup-screen legend {
+  padding: 0 6px;
+  color: var(--color-ink-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  margin: 2px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.option:has(input:checked) {
+  background: var(--color-selected-bg);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.option.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.option-block {
+  display: flex;
+  width: 100%;
+}
+
+.hint {
+  margin: 8px 2px 0;
+  font-size: 13px;
+  color: var(--color-ink-muted);
+}
+
+.start-button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.start-button:disabled {
+  background: var(--color-border);
+  color: var(--color-ink-muted);
+  cursor: not-allowed;
+}

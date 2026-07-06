@@ -1,0 +1,14 @@
+/* subset-specific imports only (not the combined weight css) — each resolves to a
+   single woff2 file instead of dozens of unicode-range chunks, which keeps the
+   PWA precache small enough for offline use on iOS Safari */
+@import '@fontsource/noto-sans-kr/latin-400.css';
+@import '@fontsource/noto-sans-kr/latin-500.css';
+@import '@fontsource/noto-sans-kr/latin-700.css';
+@import '@fontsource/noto-sans-kr/korean-400.css';
+@import '@fontsource/noto-sans-kr/korean-500.css';
+@import '@fontsource/noto-sans-kr/korean-700.css';
+@import '@fontsource/noto-sans-jp/japanese-400.css';
+@import '@fontsource/noto-sans-jp/japanese-500.css';
+@import '@fontsource/noto-sans-jp/japanese-700.css';
+@import '@fontsource/noto-serif-jp/japanese-400.css';
+@import '@fontsource/noto-serif-jp/japanese-700.css';
