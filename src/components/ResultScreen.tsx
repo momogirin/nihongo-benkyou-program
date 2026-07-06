@@ -1,11 +1,12 @@
 import { useEffect } from 'react'
 import { addWrongNotes } from '../lib/storage'
-import type { AnsweredQuestion } from '../types'
+import type { AnsweredQuestion, QuestionType } from '../types'
 import './ResultScreen.css'
 
 interface Props {
   answers: AnsweredQuestion[]
   elapsedMs: number
+  questionType: QuestionType
   onRestart: () => void
 }
 
@@ -16,7 +17,22 @@ function formatElapsed(ms: number): string {
   return `${minutes}분 ${seconds}초`
 }
 
-export default function ResultScreen({ answers, elapsedMs, onRestart }: Props) {
+function correctAnswerLabel(a: AnsweredQuestion, questionType: QuestionType): string {
+  switch (questionType) {
+    case 'promptToAnswer':
+      return a.kanji.kunKr
+    case 'answerToPrompt':
+    case 'kunReadingToKanji':
+    case 'onReadingToKanji':
+      return a.kanji.kanji
+    case 'kunReading':
+      return a.kanji.kunJp
+    case 'onReading':
+      return a.kanji.onJp
+  }
+}
+
+export default function ResultScreen({ answers, elapsedMs, questionType, onRestart }: Props) {
   const correctCount = answers.filter((a) => a.isCorrect).length
   const total = answers.length
   const rate = total > 0 ? Math.round((correctCount / total) * 100) : 0
@@ -40,7 +56,7 @@ export default function ResultScreen({ answers, elapsedMs, onRestart }: Props) {
           <li key={`${a.kanji.id}-${i}`} className={a.isCorrect ? 'correct' : 'incorrect'}>
             <span className="result-kanji">{a.kanji.kanji}</span>
             <span className="result-detail">
-              정답: {a.kanji.kunKr}
+              정답: {correctAnswerLabel(a, questionType)}
               {!a.isCorrect && <> · 내 답: {a.userAnswer || '(미입력)'}</>}
             </span>
           </li>

@@ -7,7 +7,7 @@ import type { AnsweredQuestion, QuizConfig } from '../types'
 type Phase =
   | { step: 'setup' }
   | { step: 'running'; config: QuizConfig }
-  | { step: 'result'; answers: AnsweredQuestion[]; elapsedMs: number }
+  | { step: 'result'; config: QuizConfig; answers: AnsweredQuestion[]; elapsedMs: number }
 
 export default function QuizPage() {
   const [phase, setPhase] = useState<Phase>({ step: 'setup' })
@@ -20,7 +20,9 @@ export default function QuizPage() {
     return (
       <QuizRunner
         config={phase.config}
-        onFinish={(answers, elapsedMs) => setPhase({ step: 'result', answers, elapsedMs })}
+        onFinish={(answers, elapsedMs) =>
+          setPhase({ step: 'result', config: phase.config, answers, elapsedMs })
+        }
       />
     )
   }
@@ -29,6 +31,7 @@ export default function QuizPage() {
     <ResultScreen
       answers={phase.answers}
       elapsedMs={phase.elapsedMs}
+      questionType={phase.config.questionType}
       onRestart={() => setPhase({ step: 'setup' })}
     />
   )

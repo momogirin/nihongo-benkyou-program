@@ -4,7 +4,6 @@ import './Sidebar.css'
 const NAV_ITEMS: { id: PageId; label: string }[] = [
   { id: 'home', label: '홈' },
   { id: 'quiz', label: '퀴즈' },
-  { id: 'flashcard', label: '플래시카드' },
   { id: 'wrongNote', label: '오답노트' },
   { id: 'backup', label: '백업' },
 ]
