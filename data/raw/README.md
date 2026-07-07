@@ -23,9 +23,10 @@ scripts/build-data.ts (예정)가 이 파일을 읽어 src/data/kanji.ts, src/da
 
 강희부수(康熙部首) 214개 전체. `number`/`strokeCount`/`radical`은 강희자전 표준 순서(위키백과 Kangxi radical 문서로 대조)라 고정값으로 신뢰도 높음.
 
-`meaningKr`(한국식 훈음)은 두 경로로 채워진다 (build-radical-data.mjs가 빌드 시점에 처리):
+`meaningKr`(한국식 훈음)은 세 경로로 채워진다 (build-radical-data.mjs가 빌드 시점에 처리):
 1. `meaningKrSource: "kanji-data"` — 해당 부수 글자가 기존 상용한자 데이터(kanji.json)에도 독립된 한자로 존재하면, 그 항목의 `kunKr`을 그대로 가져다 씀 (122자) — 같은 글자가 화면마다 다른 훈음으로 보이는 걸 방지.
-2. `meaningKrSource: "generated-uncertain"` — 위 매칭이 안 되는 92자(丨丶丿 등 단독 한자로 안 쓰이는 부수)는 모델이 직접 생성한 훈음이라 다른 소스로 교차 검증되지 않았다. 획수 그룹별 배열 순서(1획 6자 · 2획 23자 · 3획 31자 · … 17획 1자, 합계 214)는 위키백과 목록과 대조해 확인했다.
+2. `meaningKrSource: "wiktionary"` — 위 매칭이 안 되는 92자 중 91자는 ko.wiktionary.org의 `{{한자풀이|부수풀이=...}}`(부수로 쓰일 때의 공식 명칭, 우선) 또는 `{{ko-hanja|...}}`(표제자로서의 훈/음) 템플릿에서 가져와 교차 검증함 (`scripts/fetch-radical-meanings.mjs`로 조회 → `data/cache/radical-meanings-wiktionary.json` 캐시 → `scripts/apply-radical-meanings.mjs`로 반영, 2026-07-07). 이 중 34자는 모델이 원래 생성했던 값과 실제로 달라 교체됐다.
+3. `meaningKrSource: "generated-uncertain"` — 위키낱말사전에도 대응 항목이 없는 1자(尸, "주검 시")만 여전히 모델이 생성한 훈음이라 교차 검증되지 않았다. 획수 그룹별 배열 순서(1획 6자 · 2획 23자 · 3획 31자 · … 17획 1자, 합계 214)는 위키백과 목록과 대조해 확인했다.
 
 ## 학습(단어장) 콘텐츠 (data/study-n5.json → src/data/studyContent.ts)
 

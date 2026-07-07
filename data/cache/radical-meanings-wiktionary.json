@@ -1,0 +1,1025 @@
+[
+  {
+    "radical": "丨",
+    "number": 2,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "뚫을 곤",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "丶",
+    "number": 3,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "점 주",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "丿",
+    "number": 4,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "삐침 별",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "亅",
+    "number": 6,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "갈고리 궐",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "亠",
+    "number": 8,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "돼지해머리 두",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "儿",
+    "number": 10,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "어진사람 인",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "冂",
+    "number": 13,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "멀 경",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "冖",
+    "number": 14,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "덮을 멱",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "冫",
+    "number": 15,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "얼음 빙",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "几",
+    "number": 16,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "안석 궤",
+        "template": "ko-hanja"
+      },
+      {
+        "meaningKr": "조짐 기",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "凵",
+    "number": 17,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "입 벌릴 감",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "勹",
+    "number": 20,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "쌀 포",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "匕",
+    "number": 21,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "비수 비",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "匚",
+    "number": 22,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "상자 방",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "匸",
+    "number": 23,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "감출 혜",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "卜",
+    "number": 25,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "점 복",
+        "template": "ko-hanja"
+      },
+      {
+        "meaningKr": "짐바리 짐",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "卩",
+    "number": 26,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "병부 절",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "厂",
+    "number": 27,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "기슭 엄",
+        "template": "ko-hanja"
+      },
+      {
+        "meaningKr": "기슭 한",
+        "template": "ko-hanja"
+      },
+      {
+        "meaningKr": "공장 창",
+        "template": "ko-hanja"
+      }
+    ]
+  },
+  {
+    "radical": "厶",
+    "number": 28,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "사사 사",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "囗",
+    "number": 31,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "에울 위",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "夂",
+    "number": 34,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "뒤져올 치",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "夊",
+    "number": 35,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "천천히 걸을 쇠",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "宀",
+    "number": 40,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "집 면",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "尢",
+    "number": 43,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "절름발이 왕",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "尸",
+    "number": 44,
+    "status": "no_template_match",
+    "senses": []
+  },
+  {
+    "radical": "屮",
+    "number": 45,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "왼손 좌",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "巛",
+    "number": 47,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "내 천",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "幺",
+    "number": 52,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "작을 요",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "广",
+    "number": 53,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "집 엄",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "廴",
+    "number": 54,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "길게 걸을 인",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "廾",
+    "number": 55,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "들 공",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "弋",
+    "number": 56,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "주살 익",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "彐",
+    "number": 58,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "돼지머리 계",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "彡",
+    "number": 59,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "터럭 삼",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "彳",
+    "number": 60,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "천천히 걸을 척",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "戈",
+    "number": 62,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "창 과",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "戶",
+    "number": 63,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "지게 호",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "攴",
+    "number": 66,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "칠 복",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "无",
+    "number": 71,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "없을 무",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "曰",
+    "number": 73,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "가로 왈",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "歹",
+    "number": 78,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "앙상한 뼈 알",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "殳",
+    "number": 79,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "창 수",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "毋",
+    "number": 80,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "말 무",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "气",
+    "number": 84,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "기운 기",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "爻",
+    "number": 89,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "점괘 효",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "爿",
+    "number": 90,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "널조각 장",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "瓜",
+    "number": 97,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "오이 과",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "疋",
+    "number": 103,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "필 필, 발 소",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "疒",
+    "number": 104,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "병 들어 기댈 녁",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "癶",
+    "number": 105,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "등질 발",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "禸",
+    "number": 114,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "짐승 발자국 유",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "禾",
+    "number": 115,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "벼 화",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "网",
+    "number": 122,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "그물 망",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "而",
+    "number": 126,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "말이을 이",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "耒",
+    "number": 127,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "쟁기 뢰",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "聿",
+    "number": 129,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "붓 율",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "舛",
+    "number": 136,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "어그러질 천",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "艮",
+    "number": 138,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "괘이름간",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "艸",
+    "number": 140,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "풀 초",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "虍",
+    "number": 141,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "범의 문채 호",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "襾",
+    "number": 146,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "덮을 아",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "豕",
+    "number": 152,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "돼지 시",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "豸",
+    "number": 153,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "발 없는 벌레 치",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "辰",
+    "number": 161,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "다섯째 지지 진",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "辵",
+    "number": 162,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "쉬엄쉬엄 갈 착",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "邑",
+    "number": 163,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "고을 읍",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "酉",
+    "number": 164,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "열째 지지 유",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "釆",
+    "number": 165,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "분별할 변",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "隶",
+    "number": 171,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "미칠 이",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "隹",
+    "number": 172,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "새 추",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "靑",
+    "number": 174,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "푸를 청",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "韋",
+    "number": 178,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "무두질한 가죽 위",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "韭",
+    "number": 179,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "부추 구",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "頁",
+    "number": 181,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "머리 혈",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "髟",
+    "number": 190,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "머리털 드리워질 표",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "鬥",
+    "number": 191,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "싸울 두",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "鬯",
+    "number": 192,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "울창주 창",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "鬲",
+    "number": 193,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "솥 력",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "鹵",
+    "number": 197,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "소금 로",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "麥",
+    "number": 199,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "보리 맥",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "黃",
+    "number": 201,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "누를 황",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "黍",
+    "number": 202,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "기장 서",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "黑",
+    "number": 203,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "검을 흑",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "黹",
+    "number": 204,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "바느질할 치",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "黽",
+    "number": 205,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "힘쓸 민",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "鼎",
+    "number": 206,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "솥 정",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "鼠",
+    "number": 208,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "쥐 서",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "齊",
+    "number": 210,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "가지런할 제",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "齒",
+    "number": 211,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "이 치",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "龍",
+    "number": 212,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "용 룡",
+        "template": "한자풀이(부수풀이)"
+      }
+    ]
+  },
+  {
+    "radical": "龜",
+    "number": 213,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "거북 귀",
+        "template": "한자풀이"
+      }
+    ]
+  },
+  {
+    "radical": "龠",
+    "number": 214,
+    "status": "ok",
+    "senses": [
+      {
+        "meaningKr": "피리 약",
+        "template": "ko-hanja"
+      }
+    ]
+  }
+]
