@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import SetupScreen from '../components/SetupScreen'
 import QuizRunner from '../components/QuizRunner'
 import ResultScreen from '../components/ResultScreen'
-import { saveLastQuizConfig } from '../lib/storage'
+import { addQuizHistoryEntry } from '../lib/storage'
 import type { AnsweredQuestion, QuizConfig } from '../types'
 
 type Phase =
@@ -11,7 +11,8 @@ type Phase =
   | { step: 'result'; config: QuizConfig; answers: AnsweredQuestion[]; elapsedMs: number }
 
 interface Props {
-  // preset config from "오답만 재도전" / "이어하기" entry points; skips SetupScreen
+  // preset config from "오답만 재도전" / 학습 배치 / 기록에서 재시도 entry
+  // points; skips SetupScreen
   initialConfig: QuizConfig | null
   onInitialConfigConsumed: () => void
 }
@@ -29,23 +30,24 @@ export default function QuizPage({ initialConfig, onInitialConfigConsumed }: Pro
   }, [])
 
   if (phase.step === 'setup') {
-    return (
-      <SetupScreen
-        onStart={(config) => {
-          saveLastQuizConfig(config)
-          setPhase({ step: 'running', config })
-        }}
-      />
-    )
+    return <SetupScreen onStart={(config) => setPhase({ step: 'running', config })} />
   }
 
   if (phase.step === 'running') {
     return (
       <QuizRunner
         config={phase.config}
-        onFinish={(answers, elapsedMs) =>
+        onFinish={(answers, elapsedMs) => {
+          addQuizHistoryEntry({
+            id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+            config: phase.config,
+            total: answers.length,
+            correct: answers.filter((a) => a.isCorrect).length,
+            elapsedMs,
+            finishedAt: new Date().toISOString(),
+          })
           setPhase({ step: 'result', config: phase.config, answers, elapsedMs })
-        }
+        }}
       />
     )
   }

@@ -33,3 +33,68 @@
   color: var(--color-ink-muted);
   font-size: 14px;
 }
+
+.home-history {
+  margin-top: 28px;
+}
+
+.home-history-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  margin: 0 0 10px;
+}
+
+.home-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.home-history-item:hover {
+  border-color: var(--color-primary);
+  background: var(--color-selected-bg);
+}
+
+.home-history-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.home-history-summary {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.home-history-date {
+  font-size: 13px;
+  color: var(--color-ink-muted);
+}
+
+.home-history-score {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}

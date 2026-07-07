@@ -1,19 +1,19 @@
 import { useState, type ChangeEvent } from 'react'
 import {
-  getLastQuizConfig,
+  getQuizHistory,
   getWrongNotes,
+  importQuizHistory,
   importWrongNotes,
-  saveLastQuizConfig,
   type WrongNoteEntry,
 } from '../lib/storage'
-import type { QuizConfig } from '../types'
+import type { QuizHistoryEntry } from '../types'
 import './BackupPage.css'
 
 interface BackupFile {
-  version: 1
+  version: 2
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
-  lastQuizConfig: QuizConfig | null
+  quizHistory: QuizHistoryEntry[]
 }
 
 type Status = { type: 'success' | 'error'; message: string }
@@ -31,10 +31,10 @@ export default function BackupPage() {
 
   function handleExport() {
     const payload: BackupFile = {
-      version: 1,
+      version: 2,
       exportedAt: new Date().toISOString(),
       wrongNotes: getWrongNotes(),
-      lastQuizConfig: getLastQuizConfig(),
+      quizHistory: getQuizHistory(),
     }
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
@@ -58,7 +58,7 @@ export default function BackupPage() {
         const parsed: unknown = JSON.parse(String(reader.result))
         if (!isBackupFile(parsed)) throw new Error('invalid shape')
         importWrongNotes(parsed.wrongNotes)
-        if (parsed.lastQuizConfig) saveLastQuizConfig(parsed.lastQuizConfig)
+        if (parsed.quizHistory) importQuizHistory(parsed.quizHistory)
         setStatus({ type: 'success', message: `가져오기 완료 (오답 ${parsed.wrongNotes.length}건)` })
       } catch {
         setStatus({ type: 'error', message: '올바른 백업 파일이 아닙니다' })
@@ -72,7 +72,7 @@ export default function BackupPage() {
     <div className="page">
       <h1>백업</h1>
       <p className="page-placeholder">
-        기기를 옮길 때 학습 진도(오답노트 · 마지막 설정)를 내보내고 불러올 수 있습니다.
+        기기를 옮길 때 학습 진도(오답노트 · 퀴즈 기록)를 내보내고 불러올 수 있습니다.
       </p>
 
       <div className="backup-actions">

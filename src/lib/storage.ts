@@ -1,5 +1,5 @@
 import type { KanjiLevel } from '../data/kanji'
-import type { QuizConfig } from '../types'
+import type { QuizHistoryEntry } from '../types'
 
 export interface WrongNoteEntry {
   kanjiId: string
@@ -7,7 +7,8 @@ export interface WrongNoteEntry {
 }
 
 const WRONG_NOTES_KEY = 'kanjiApp.wrongNotes'
-const LAST_QUIZ_CONFIG_KEY = 'kanjiApp.lastQuizConfig'
+const QUIZ_HISTORY_KEY = 'kanjiApp.quizHistory'
+const QUIZ_HISTORY_LIMIT = 20
 const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
 const STUDY_BATCH_SIZE_KEY = 'kanjiApp.studyBatchSize'
 const DEFAULT_STUDY_BATCH_SIZE = 10
@@ -36,19 +37,29 @@ export function removeWrongNote(kanjiId: string) {
   localStorage.setItem(WRONG_NOTES_KEY, JSON.stringify(remaining))
 }
 
-// last config started from SetupScreen, used by HomePage's "이어하기" entry
-// point (not written by ad-hoc entry points like 오답 재도전)
-export function getLastQuizConfig(): QuizConfig | null {
+// every finished quiz (regardless of entry point), newest first — capped so
+// localStorage doesn't grow forever; used by HomePage's history list
+export function getQuizHistory(): QuizHistoryEntry[] {
   try {
-    const raw = localStorage.getItem(LAST_QUIZ_CONFIG_KEY)
-    return raw ? JSON.parse(raw) : null
+    const raw = localStorage.getItem(QUIZ_HISTORY_KEY)
+    return raw ? JSON.parse(raw) : []
   } catch {
-    return null
+    return []
   }
 }
 
-export function saveLastQuizConfig(config: QuizConfig) {
-  localStorage.setItem(LAST_QUIZ_CONFIG_KEY, JSON.stringify(config))
+export function addQuizHistoryEntry(entry: QuizHistoryEntry) {
+  const history = [entry, ...getQuizHistory()].slice(0, QUIZ_HISTORY_LIMIT)
+  localStorage.setItem(QUIZ_HISTORY_KEY, JSON.stringify(history))
+}
+
+// merges by id (backup import), keeping the union sorted newest-first and
+// capped the same way addQuizHistoryEntry is
+export function importQuizHistory(entries: QuizHistoryEntry[]) {
+  const byId = new Map(getQuizHistory().map((entry) => [entry.id, entry]))
+  for (const entry of entries) byId.set(entry.id, entry)
+  const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
+  localStorage.setItem(QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
 }
 
 // merges by kanjiId, keeping whichever entry was marked wrong more recently —

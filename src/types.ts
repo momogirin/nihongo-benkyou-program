@@ -27,3 +27,15 @@ export interface AnsweredQuestion {
   userAnswer: string
   isCorrect: boolean
 }
+
+// one finished quiz session, kept so HomePage can show a watch-history-style
+// list of past attempts (and let the user re-run any of them) instead of
+// only ever repeating the single last config
+export interface QuizHistoryEntry {
+  id: string
+  config: QuizConfig
+  total: number
+  correct: number
+  elapsedMs: number
+  finishedAt: string
+}
