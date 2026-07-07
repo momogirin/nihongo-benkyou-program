@@ -121,7 +121,8 @@ export default function StudyPage({ onStartQuiz }: Props) {
                 <dt>예문</dt>
                 <dd>
                   {kanji.exampleKanji}
-                  {kanji.exampleJp && `(${kanji.exampleJp})`} · {kanji.exampleKr}
+                  {kanji.exampleJp && `(${kanji.exampleJp})`}
+                  {kanji.exampleKr && ` · ${kanji.exampleKr}`}
                 </dd>
               </div>
             )}

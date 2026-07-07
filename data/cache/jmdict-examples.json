@@ -1,0 +1,10677 @@
+{
+  "順": {
+    "exampleKanji": "手順",
+    "exampleJp": "てじゅん",
+    "score": 0
+  },
+  "響": {
+    "exampleKanji": "影響",
+    "exampleJp": "えいきょう",
+    "score": 0
+  },
+  "呼": {
+    "exampleKanji": "呼ぶ",
+    "exampleJp": "よぶ",
+    "score": 0
+  },
+  "吸": {
+    "exampleKanji": "吸う",
+    "exampleJp": "すう",
+    "score": 0
+  },
+  "明": {
+    "exampleKanji": "明白",
+    "exampleJp": "めいはく",
+    "score": 0
+  },
+  "白": {
+    "exampleKanji": "明白",
+    "exampleJp": "めいはく",
+    "score": 0
+  },
+  "悪": {
+    "exampleKanji": "悪い",
+    "exampleJp": "わるい",
+    "score": 0
+  },
+  "論": {
+    "exampleKanji": "異論",
+    "exampleJp": "いろん",
+    "score": 0
+  },
+  "遇": {
+    "exampleKanji": "境遇",
+    "exampleJp": "きょうぐう",
+    "score": 0
+  },
+  "馬": {
+    "exampleKanji": "馬穴",
+    "exampleJp": "バケツ",
+    "score": 0
+  },
+  "酔": {
+    "exampleKanji": "酔う",
+    "exampleJp": "よう",
+    "score": 0
+  },
+  "木": {
+    "exampleKanji": "荒木",
+    "exampleJp": "あらき",
+    "score": 0
+  },
+  "彼": {
+    "exampleKanji": "彼処",
+    "exampleJp": "あそこ",
+    "score": 0
+  },
+  "処": {
+    "exampleKanji": "彼処",
+    "exampleJp": "あそこ",
+    "score": 0
+  },
+  "間": {
+    "exampleKanji": "間隔",
+    "exampleJp": "かんかく",
+    "score": 0
+  },
+  "人": {
+    "exampleKanji": "愛人",
+    "exampleJp": "あいじん",
+    "score": 0
+  },
+  "方": {
+    "exampleKanji": "此方",
+    "exampleJp": "こちら",
+    "score": 0
+  },
+  "羅": {
+    "exampleKanji": "網羅",
+    "exampleJp": "もうら",
+    "score": 0
+  },
+  "甘": {
+    "exampleKanji": "甘い",
+    "exampleJp": "あまい",
+    "score": 0
+  },
+  "子": {
+    "exampleKanji": "硝子",
+    "exampleJp": "ガラス",
+    "score": 0
+  },
+  "加": {
+    "exampleKanji": "加圧",
+    "exampleJp": "かあつ",
+    "score": 0
+  },
+  "減": {
+    "exampleKanji": "加減",
+    "exampleJp": "かげん",
+    "score": 0
+  },
+  "年": {
+    "exampleKanji": "越年",
+    "exampleJp": "えつねん",
+    "score": 0
+  },
+  "否": {
+    "exampleKanji": "否々",
+    "exampleJp": "いやいや",
+    "score": 0
+  },
+  "如": {
+    "exampleKanji": "如何",
+    "exampleJp": "どう",
+    "score": 0
+  },
+  "何": {
+    "exampleKanji": "如何",
+    "exampleJp": "どう",
+    "score": 0
+  },
+  "場": {
+    "exampleKanji": "夏場",
+    "exampleJp": "なつば",
+    "score": 0
+  },
+  "合": {
+    "exampleKanji": "化合",
+    "exampleJp": "かごう",
+    "score": 0
+  },
+  "幾": {
+    "exampleKanji": "幾つ",
+    "exampleJp": "いくつ",
+    "score": 0
+  },
+  "行": {
+    "exampleKanji": "移行",
+    "exampleJp": "いこう",
+    "score": 0
+  },
+  "可": {
+    "exampleKanji": "可き",
+    "exampleJp": "べき",
+    "score": 0
+  },
+  "回": {
+    "exampleKanji": "一回",
+    "exampleJp": "いっかい",
+    "score": 0
+  },
+  "時": {
+    "exampleKanji": "何時",
+    "exampleJp": "いつ",
+    "score": 0
+  },
+  "簡": {
+    "exampleKanji": "簡易",
+    "exampleJp": "かんい",
+    "score": 0
+  },
+  "単": {
+    "exampleKanji": "簡単",
+    "exampleJp": "かんたん",
+    "score": 0
+  },
+  "背": {
+    "exampleKanji": "猫背",
+    "exampleJp": "ねこぜ",
+    "score": 0
+  },
+  "嫌": {
+    "exampleKanji": "機嫌",
+    "exampleJp": "きげん",
+    "score": 0
+  },
+  "居": {
+    "exampleKanji": "居間",
+    "exampleJp": "いま",
+    "score": 0
+  },
+  "畝": {
+    "exampleKanji": "畝り",
+    "exampleJp": "うねり",
+    "score": 0
+  },
+  "斉": {
+    "exampleKanji": "一斉",
+    "exampleJp": "いっせい",
+    "score": 0
+  },
+  "魚": {
+    "exampleKanji": "魚類",
+    "exampleJp": "ぎょるい",
+    "score": 0
+  },
+  "出": {
+    "exampleKanji": "演出",
+    "exampleJp": "えんしゅつ",
+    "score": 0
+  },
+  "節": {
+    "exampleKanji": "関節",
+    "exampleJp": "かんせつ",
+    "score": 0
+  },
+  "座": {
+    "exampleKanji": "一座",
+    "exampleJp": "いちざ",
+    "score": 0
+  },
+  "落": {
+    "exampleKanji": "下落",
+    "exampleJp": "げらく",
+    "score": 0
+  },
+  "御": {
+    "exampleKanji": "御田",
+    "exampleJp": "おでん",
+    "score": 0
+  },
+  "田": {
+    "exampleKanji": "御田",
+    "exampleJp": "おでん",
+    "score": 0
+  },
+  "鍋": {
+    "exampleKanji": "もつ鍋",
+    "exampleJp": "もつなべ",
+    "score": 0.01
+  },
+  "負": {
+    "exampleKanji": "自負",
+    "exampleJp": "じふ",
+    "score": 0
+  },
+  "呪": {
+    "exampleKanji": "呪い",
+    "exampleJp": "のろい",
+    "score": 0
+  },
+  "気": {
+    "exampleKanji": "悪気",
+    "exampleJp": "わるぎ",
+    "score": 0
+  },
+  "触": {
+    "exampleKanji": "感触",
+    "exampleJp": "かんしょく",
+    "score": 0
+  },
+  "粧": {
+    "exampleKanji": "化粧",
+    "exampleJp": "けしょう",
+    "score": 0
+  },
+  "握": {
+    "exampleKanji": "握り",
+    "exampleJp": "にぎり",
+    "score": 0
+  },
+  "陰": {
+    "exampleKanji": "陰気",
+    "exampleJp": "いんき",
+    "score": 0
+  },
+  "様": {
+    "exampleKanji": "様に",
+    "exampleJp": "ように",
+    "score": 0
+  },
+  "下": {
+    "exampleKanji": "以下",
+    "exampleJp": "いか",
+    "score": 0
+  },
+  "化": {
+    "exampleKanji": "悪化",
+    "exampleJp": "あっか",
+    "score": 0
+  },
+  "屋": {
+    "exampleKanji": "屋外",
+    "exampleJp": "おくがい",
+    "score": 0
+  },
+  "敷": {
+    "exampleKanji": "座敷",
+    "exampleJp": "ざしき",
+    "score": 0
+  },
+  "嫁": {
+    "exampleKanji": "嫁ぐ",
+    "exampleJp": "とつぐ",
+    "score": 0
+  },
+  "菓": {
+    "exampleKanji": "菓子",
+    "exampleJp": "かし",
+    "score": 0
+  },
+  "願": {
+    "exampleKanji": "願い",
+    "exampleJp": "ねがい",
+    "score": 0
+  },
+  "帰": {
+    "exampleKanji": "回帰",
+    "exampleJp": "かいき",
+    "score": 0
+  },
+  "毒": {
+    "exampleKanji": "消毒",
+    "exampleJp": "しょうどく",
+    "score": 0
+  },
+  "客": {
+    "exampleKanji": "観客",
+    "exampleJp": "かんきゃく",
+    "score": 0
+  },
+  "休": {
+    "exampleKanji": "運休",
+    "exampleJp": "うんきゅう",
+    "score": 0
+  },
+  "宮": {
+    "exampleKanji": "王宮",
+    "exampleJp": "おうきゅう",
+    "score": 0
+  },
+  "参": {
+    "exampleKanji": "古参",
+    "exampleJp": "こさん",
+    "score": 0
+  },
+  "供": {
+    "exampleKanji": "供給",
+    "exampleJp": "きょうきゅう",
+    "score": 0
+  },
+  "金": {
+    "exampleKanji": "お金",
+    "exampleJp": "おかね",
+    "score": 0
+  },
+  "兄": {
+    "exampleKanji": "兄貴",
+    "exampleJp": "あにき",
+    "score": 0
+  },
+  "結": {
+    "exampleKanji": "完結",
+    "exampleJp": "かんけつ",
+    "score": 0
+  },
+  "見": {
+    "exampleKanji": "意見",
+    "exampleJp": "いけん",
+    "score": 0
+  },
+  "舞": {
+    "exampleKanji": "舞う",
+    "exampleJp": "まう",
+    "score": 0
+  },
+  "古": {
+    "exampleKanji": "稽古",
+    "exampleJp": "けいこ",
+    "score": 0
+  },
+  "好": {
+    "exampleKanji": "愛好",
+    "exampleJp": "あいこう",
+    "score": 0
+  },
+  "焼": {
+    "exampleKanji": "焼く",
+    "exampleJp": "やく",
+    "score": 0
+  },
+  "構": {
+    "exampleKanji": "遺構",
+    "exampleJp": "いこう",
+    "score": 0
+  },
+  "絞": {
+    "exampleKanji": "絞り",
+    "exampleJp": "しぼり",
+    "score": 0
+  },
+  "札": {
+    "exampleKanji": "荷札",
+    "exampleJp": "にふだ",
+    "score": 0
+  },
+  "雑": {
+    "exampleKanji": "混雑",
+    "exampleJp": "こんざつ",
+    "score": 0
+  },
+  "煮": {
+    "exampleKanji": "雑煮",
+    "exampleJp": "ぞうに",
+    "score": 0
+  },
+  "三": {
+    "exampleKanji": "再三",
+    "exampleJp": "さいさん",
+    "score": 0
+  },
+  "産": {
+    "exampleKanji": "お産",
+    "exampleJp": "おさん",
+    "score": 0
+  },
+  "仕": {
+    "exampleKanji": "仕業",
+    "exampleJp": "しわざ",
+    "score": 0
+  },
+  "使": {
+    "exampleKanji": "駆使",
+    "exampleJp": "くし",
+    "score": 0
+  },
+  "姉": {
+    "exampleKanji": "姉妹",
+    "exampleJp": "しまい",
+    "score": 0
+  },
+  "歯": {
+    "exampleKanji": "歯科",
+    "exampleJp": "しか",
+    "score": 0
+  },
+  "黒": {
+    "exampleKanji": "黒い",
+    "exampleJp": "くろい",
+    "score": 0
+  },
+  "辞": {
+    "exampleKanji": "賛辞",
+    "exampleJp": "さんじ",
+    "score": 0
+  },
+  "儀": {
+    "exampleKanji": "儀式",
+    "exampleJp": "ぎしき",
+    "score": 0
+  },
+  "七": {
+    "exampleKanji": "七つ",
+    "exampleJp": "ななつ",
+    "score": 0
+  },
+  "夜": {
+    "exampleKanji": "月夜",
+    "exampleJp": "つきよ",
+    "score": 0
+  },
+  "邪": {
+    "exampleKanji": "邪魔",
+    "exampleJp": "じゃま",
+    "score": 0
+  },
+  "魔": {
+    "exampleKanji": "悪魔",
+    "exampleJp": "あくま",
+    "score": 0
+  },
+  "守": {
+    "exampleKanji": "厳守",
+    "exampleJp": "げんしゅ",
+    "score": 0
+  },
+  "手": {
+    "exampleKanji": "握手",
+    "exampleJp": "あくしゅ",
+    "score": 0
+  },
+  "玉": {
+    "exampleKanji": "目玉",
+    "exampleJp": "めだま",
+    "score": 0
+  },
+  "上": {
+    "exampleKanji": "以上",
+    "exampleJp": "いじょう",
+    "score": 0
+  },
+  "盛": {
+    "exampleKanji": "旺盛",
+    "exampleJp": "おうせい",
+    "score": 0
+  },
+  "洗": {
+    "exampleKanji": "水洗",
+    "exampleJp": "すいせん",
+    "score": 0
+  },
+  "伝": {
+    "exampleKanji": "遺伝",
+    "exampleJp": "いでん",
+    "score": 0
+  },
+  "巡": {
+    "exampleKanji": "巡る",
+    "exampleJp": "めぐる",
+    "score": 0
+  },
+  "召": {
+    "exampleKanji": "召集",
+    "exampleJp": "しょうしゅう",
+    "score": 0
+  },
+  "物": {
+    "exampleKanji": "安物",
+    "exampleJp": "やすもの",
+    "score": 0
+  },
+  "勧": {
+    "exampleKanji": "勧め",
+    "exampleJp": "すすめ",
+    "score": 0
+  },
+  "嬢": {
+    "exampleKanji": "お嬢さん",
+    "exampleJp": "おじょうさん",
+    "score": 0.02
+  },
+  "食": {
+    "exampleKanji": "飲食",
+    "exampleJp": "いんしょく",
+    "score": 0
+  },
+  "初": {
+    "exampleKanji": "最初",
+    "exampleJp": "さいしょ",
+    "score": 0
+  },
+  "尻": {
+    "exampleKanji": "尻尾",
+    "exampleJp": "しっぽ",
+    "score": 0
+  },
+  "寝": {
+    "exampleKanji": "就寝",
+    "exampleJp": "しゅうしん",
+    "score": 0
+  },
+  "小": {
+    "exampleKanji": "最小",
+    "exampleJp": "さいしょう",
+    "score": 0
+  },
+  "新": {
+    "exampleKanji": "維新",
+    "exampleJp": "いしん",
+    "score": 0
+  },
+  "香": {
+    "exampleKanji": "香港",
+    "exampleJp": "ホンコン",
+    "score": 0
+  },
+  "浸": {
+    "exampleKanji": "浸す",
+    "exampleJp": "ひたす",
+    "score": 0
+  },
+  "神": {
+    "exampleKanji": "神輿",
+    "exampleJp": "みこし",
+    "score": 0
+  },
+  "酒": {
+    "exampleKanji": "飲酒",
+    "exampleJp": "いんしゅ",
+    "score": 0
+  },
+  "尋": {
+    "exampleKanji": "尋問",
+    "exampleJp": "じんもん",
+    "score": 0
+  },
+  "者": {
+    "exampleKanji": "悪者",
+    "exampleJp": "わるもの",
+    "score": 0
+  },
+  "世": {
+    "exampleKanji": "近世",
+    "exampleJp": "きんせい",
+    "score": 0
+  },
+  "話": {
+    "exampleKanji": "会話",
+    "exampleJp": "かいわ",
+    "score": 0
+  },
+  "生": {
+    "exampleKanji": "衛生",
+    "exampleJp": "えいせい",
+    "score": 0
+  },
+  "憎": {
+    "exampleKanji": "生憎",
+    "exampleJp": "あいにく",
+    "score": 0
+  },
+  "先": {
+    "exampleKanji": "口先",
+    "exampleJp": "くちさき",
+    "score": 0
+  },
+  "前": {
+    "exampleKanji": "お前",
+    "exampleJp": "おまえ",
+    "score": 0
+  },
+  "膳": {
+    "exampleKanji": "お膳",
+    "exampleJp": "おぜん",
+    "score": 99
+  },
+  "祖": {
+    "exampleKanji": "教祖",
+    "exampleJp": "きょうそ",
+    "score": 0
+  },
+  "父": {
+    "exampleKanji": "義父",
+    "exampleJp": "ぎふ",
+    "score": 0
+  },
+  "母": {
+    "exampleKanji": "義母",
+    "exampleJp": "ぎぼ",
+    "score": 0
+  },
+  "早": {
+    "exampleKanji": "最早",
+    "exampleJp": "もはや",
+    "score": 0
+  },
+  "孫": {
+    "exampleKanji": "子孫",
+    "exampleJp": "しそん",
+    "score": 0
+  },
+  "待": {
+    "exampleKanji": "期待",
+    "exampleJp": "きたい",
+    "score": 0
+  },
+  "袋": {
+    "exampleKanji": "お袋",
+    "exampleJp": "おふくろ",
+    "score": 0
+  },
+  "大": {
+    "exampleKanji": "偉大",
+    "exampleJp": "いだい",
+    "score": 0
+  },
+  "事": {
+    "exampleKanji": "悪事",
+    "exampleJp": "あくじ",
+    "score": 0
+  },
+  "宅": {
+    "exampleKanji": "お宅",
+    "exampleJp": "おたく",
+    "score": 0
+  },
+  "誕": {
+    "exampleKanji": "生誕",
+    "exampleJp": "せいたん",
+    "score": 0
+  },
+  "日": {
+    "exampleKanji": "何日",
+    "exampleJp": "なんにち",
+    "score": 0
+  },
+  "知": {
+    "exampleKanji": "関知",
+    "exampleJp": "かんち",
+    "score": 0
+  },
+  "茶": {
+    "exampleKanji": "お茶",
+    "exampleJp": "おちゃ",
+    "score": 0
+  },
+  "口": {
+    "exampleKanji": "一口",
+    "exampleJp": "ひとくち",
+    "score": 0
+  },
+  "天": {
+    "exampleKanji": "雨天",
+    "exampleJp": "うてん",
+    "score": 0
+  },
+  "転": {
+    "exampleKanji": "移転",
+    "exampleJp": "いてん",
+    "score": 0
+  },
+  "婆": {
+    "exampleKanji": "婆さん",
+    "exampleJp": "ばあさん",
+    "score": 0.01
+  },
+  "土": {
+    "exampleKanji": "郷土",
+    "exampleJp": "きょうど",
+    "score": 0
+  },
+  "湯": {
+    "exampleKanji": "銭湯",
+    "exampleJp": "せんとう",
+    "score": 0
+  },
+  "得": {
+    "exampleKanji": "獲得",
+    "exampleJp": "かくとく",
+    "score": 0
+  },
+  "凸": {
+    "exampleKanji": "お凸",
+    "exampleJp": "おでこ",
+    "score": 0
+  },
+  "疲": {
+    "exampleKanji": "疲れ",
+    "exampleJp": "つかれ",
+    "score": 0
+  },
+  "付": {
+    "exampleKanji": "給付",
+    "exampleJp": "きゅうふ",
+    "score": 0
+  },
+  "風": {
+    "exampleKanji": "一風",
+    "exampleJp": "いっぷう",
+    "score": 0
+  },
+  "呂": {
+    "exampleKanji": "風呂",
+    "exampleJp": "ふろ",
+    "score": 0
+  },
+  "入": {
+    "exampleKanji": "加入",
+    "exampleJp": "かにゅう",
+    "score": 0
+  },
+  "腹": {
+    "exampleKanji": "お腹",
+    "exampleJp": "おなか",
+    "score": 0
+  },
+  "別": {
+    "exampleKanji": "格別",
+    "exampleJp": "かくべつ",
+    "score": 0
+  },
+  "返": {
+    "exampleKanji": "返す",
+    "exampleJp": "かえす",
+    "score": 0
+  },
+  "坊": {
+    "exampleKanji": "寝坊",
+    "exampleJp": "ねぼう",
+    "score": 0
+  },
+  "墨": {
+    "exampleKanji": "墨西哥",
+    "exampleJp": "メキシコ",
+    "score": 0.01
+  },
+  "盆": {
+    "exampleKanji": "盆栽",
+    "exampleJp": "ぼんさい",
+    "score": 0
+  },
+  "餅": {
+    "exampleKanji": "煎餅",
+    "exampleJp": "せんべい",
+    "score": 0
+  },
+  "冷": {
+    "exampleKanji": "寒冷",
+    "exampleJp": "かんれい",
+    "score": 0
+  },
+  "漏": {
+    "exampleKanji": "漏る",
+    "exampleJp": "もる",
+    "score": 0
+  },
+  "中": {
+    "exampleKanji": "渦中",
+    "exampleJp": "かちゅう",
+    "score": 0
+  },
+  "畏": {
+    "exampleKanji": "畏まりました",
+    "exampleJp": "かしこまりました",
+    "score": 0.04
+  },
+  "片": {
+    "exampleKanji": "欠片",
+    "exampleJp": "かけら",
+    "score": 0
+  },
+  "格": {
+    "exampleKanji": "価格",
+    "exampleJp": "かかく",
+    "score": 0
+  },
+  "敵": {
+    "exampleKanji": "強敵",
+    "exampleJp": "きょうてき",
+    "score": 0
+  },
+  "絡": {
+    "exampleKanji": "短絡",
+    "exampleJp": "たんらく",
+    "score": 0
+  },
+  "繰": {
+    "exampleKanji": "繰入",
+    "exampleJp": "くりいれ",
+    "score": 0
+  },
+  "言": {
+    "exampleKanji": "遺言",
+    "exampleJp": "ゆいごん",
+    "score": 0
+  },
+  "弱": {
+    "exampleKanji": "弱い",
+    "exampleJp": "よわい",
+    "score": 0
+  },
+  "蛇": {
+    "exampleKanji": "蛇口",
+    "exampleJp": "じゃぐち",
+    "score": 0
+  },
+  "藍": {
+    "exampleKanji": "伽藍",
+    "exampleJp": "がらん",
+    "score": 2.33
+  },
+  "堂": {
+    "exampleKanji": "一堂",
+    "exampleJp": "いちどう",
+    "score": 0
+  },
+  "勉": {
+    "exampleKanji": "勤勉",
+    "exampleJp": "きんべん",
+    "score": 0
+  },
+  "度": {
+    "exampleKanji": "屹度",
+    "exampleJp": "きっと",
+    "score": 0
+  },
+  "刻": {
+    "exampleKanji": "刻々",
+    "exampleJp": "ギザギザ",
+    "score": 0
+  },
+  "腰": {
+    "exampleKanji": "腰痛",
+    "exampleJp": "ようつう",
+    "score": 0
+  },
+  "限": {
+    "exampleKanji": "下限",
+    "exampleJp": "かげん",
+    "score": 0
+  },
+  "笑": {
+    "exampleKanji": "笑い",
+    "exampleJp": "わらい",
+    "score": 0
+  },
+  "草": {
+    "exampleKanji": "起草",
+    "exampleJp": "きそう",
+    "score": 0
+  },
+  "法": {
+    "exampleKanji": "違法",
+    "exampleJp": "いほう",
+    "score": 0
+  },
+  "師": {
+    "exampleKanji": "医師",
+    "exampleJp": "いし",
+    "score": 0
+  },
+  "比": {
+    "exampleKanji": "比べ",
+    "exampleJp": "くらべ",
+    "score": 0
+  },
+  "病": {
+    "exampleKanji": "臆病",
+    "exampleJp": "おくびょう",
+    "score": 0
+  },
+  "式": {
+    "exampleKanji": "一式",
+    "exampleJp": "いっしき",
+    "score": 0
+  },
+  "鳴": {
+    "exampleKanji": "共鳴",
+    "exampleJp": "きょうめい",
+    "score": 0
+  },
+  "愚": {
+    "exampleKanji": "愚か",
+    "exampleJp": "おろか",
+    "score": 0
+  },
+  "図": {
+    "exampleKanji": "意図",
+    "exampleJp": "いと",
+    "score": 0
+  },
+  "穴": {
+    "exampleKanji": "馬穴",
+    "exampleJp": "バケツ",
+    "score": 0
+  },
+  "担": {
+    "exampleKanji": "担ぐ",
+    "exampleJp": "かつぐ",
+    "score": 0
+  },
+  "泥": {
+    "exampleKanji": "泥々",
+    "exampleJp": "どろどろ",
+    "score": 0
+  },
+  "掛": {
+    "exampleKanji": "掛け",
+    "exampleJp": "かけ",
+    "score": 0
+  },
+  "布": {
+    "exampleKanji": "公布",
+    "exampleJp": "こうふ",
+    "score": 0
+  },
+  "団": {
+    "exampleKanji": "一団",
+    "exampleJp": "いちだん",
+    "score": 0
+  },
+  "拘": {
+    "exampleKanji": "拘る",
+    "exampleJp": "こだわる",
+    "score": 0
+  },
+  "来": {
+    "exampleKanji": "以来",
+    "exampleJp": "いらい",
+    "score": 0
+  },
+  "外": {
+    "exampleKanji": "案外",
+    "exampleJp": "あんがい",
+    "score": 0
+  },
+  "果": {
+    "exampleKanji": "因果",
+    "exampleJp": "いんが",
+    "score": 0
+  },
+  "頃": {
+    "exampleKanji": "近頃",
+    "exampleJp": "ちかごろ",
+    "score": 0
+  },
+  "辺": {
+    "exampleKanji": "海辺",
+    "exampleJp": "うみべ",
+    "score": 0
+  },
+  "同": {
+    "exampleKanji": "一同",
+    "exampleJp": "いちどう",
+    "score": 0
+  },
+  "等": {
+    "exampleKanji": "等閑",
+    "exampleJp": "なおざり",
+    "score": 0
+  },
+  "誤": {
+    "exampleKanji": "誤り",
+    "exampleJp": "あやまり",
+    "score": 0
+  },
+  "箱": {
+    "exampleKanji": "本箱",
+    "exampleJp": "ほんばこ",
+    "score": 0
+  },
+  "苦": {
+    "exampleKanji": "苦い",
+    "exampleJp": "にがい",
+    "score": 0
+  },
+  "労": {
+    "exampleKanji": "過労",
+    "exampleJp": "かろう",
+    "score": 0
+  },
+  "弟": {
+    "exampleKanji": "兄弟",
+    "exampleJp": "きょうだい",
+    "score": 0
+  },
+  "心": {
+    "exampleKanji": "安心",
+    "exampleJp": "あんしん",
+    "score": 0
+  },
+  "配": {
+    "exampleKanji": "気配",
+    "exampleJp": "けはい",
+    "score": 0
+  },
+  "走": {
+    "exampleKanji": "滑走",
+    "exampleJp": "かっそう",
+    "score": 0
+  },
+  "注": {
+    "exampleKanji": "傾注",
+    "exampleJp": "けいちゅう",
+    "score": 0
+  },
+  "意": {
+    "exampleKanji": "悪意",
+    "exampleJp": "あくい",
+    "score": 0
+  },
+  "覧": {
+    "exampleKanji": "一覧",
+    "exampleJp": "いちらん",
+    "score": 0
+  },
+  "置": {
+    "exampleKanji": "拘置",
+    "exampleJp": "こうち",
+    "score": 0
+  },
+  "萎": {
+    "exampleKanji": "萎む",
+    "exampleJp": "しぼむ",
+    "score": 0
+  },
+  "頻": {
+    "exampleKanji": "頻度",
+    "exampleJp": "ひんど",
+    "score": 0
+  },
+  "泣": {
+    "exampleKanji": "泣き",
+    "exampleJp": "なき",
+    "score": 0
+  },
+  "繁": {
+    "exampleKanji": "繁栄",
+    "exampleJp": "はんえい",
+    "score": 0
+  },
+  "執": {
+    "exampleKanji": "確執",
+    "exampleJp": "かくしつ",
+    "score": 0
+  },
+  "逆": {
+    "exampleKanji": "吃逆",
+    "exampleJp": "しゃっくり",
+    "score": 0
+  },
+  "易": {
+    "exampleKanji": "安易",
+    "exampleJp": "あんい",
+    "score": 0
+  },
+  "便": {
+    "exampleKanji": "船便",
+    "exampleJp": "ふなびん",
+    "score": 0
+  },
+  "垂": {
+    "exampleKanji": "垂れ",
+    "exampleJp": "たれ",
+    "score": 0
+  },
+  "吹": {
+    "exampleKanji": "吹く",
+    "exampleJp": "ふく",
+    "score": 0
+  },
+  "凝": {
+    "exampleKanji": "凝る",
+    "exampleJp": "こる",
+    "score": 0
+  },
+  "芋": {
+    "exampleKanji": "焼き芋",
+    "exampleJp": "やきいも",
+    "score": 0.01
+  },
+  "拳": {
+    "exampleKanji": "拳骨",
+    "exampleJp": "げんこつ",
+    "score": 0
+  },
+  "焦": {
+    "exampleKanji": "焦り",
+    "exampleJp": "あせり",
+    "score": 0
+  },
+  "良": {
+    "exampleKanji": "改良",
+    "exampleJp": "かいりょう",
+    "score": 0
+  },
+  "擦": {
+    "exampleKanji": "擦る",
+    "exampleJp": "こする",
+    "score": 0
+  },
+  "濡": {
+    "exampleKanji": "濡らす",
+    "exampleJp": "ぬらす",
+    "score": 0.01
+  },
+  "奴": {
+    "exampleKanji": "其奴",
+    "exampleJp": "そいつ",
+    "score": 0
+  },
+  "然": {
+    "exampleKanji": "依然",
+    "exampleJp": "いぜん",
+    "score": 0
+  },
+  "唆": {
+    "exampleKanji": "唆す",
+    "exampleJp": "そそのかす",
+    "score": 0
+  },
+  "漫": {
+    "exampleKanji": "漫画",
+    "exampleJp": "まんが",
+    "score": 0
+  },
+  "歩": {
+    "exampleKanji": "一歩",
+    "exampleJp": "いっぽ",
+    "score": 0
+  },
+  "為": {
+    "exampleKanji": "為に",
+    "exampleJp": "ために",
+    "score": 0
+  },
+  "後": {
+    "exampleKanji": "以後",
+    "exampleJp": "いご",
+    "score": 0
+  },
+  "実": {
+    "exampleKanji": "忠実",
+    "exampleJp": "ちゅうじつ",
+    "score": 0
+  },
+  "他": {
+    "exampleKanji": "他に",
+    "exampleJp": "ほかに",
+    "score": 0
+  },
+  "都": {
+    "exampleKanji": "古都",
+    "exampleJp": "こと",
+    "score": 0
+  },
+  "内": {
+    "exampleKanji": "案内",
+    "exampleJp": "あんない",
+    "score": 0
+  },
+  "反": {
+    "exampleKanji": "違反",
+    "exampleJp": "いはん",
+    "score": 0
+  },
+  "面": {
+    "exampleKanji": "一面",
+    "exampleJp": "いちめん",
+    "score": 0
+  },
+  "丈": {
+    "exampleKanji": "頑丈",
+    "exampleJp": "がんじょう",
+    "score": 0
+  },
+  "程": {
+    "exampleKanji": "課程",
+    "exampleJp": "かてい",
+    "score": 0
+  },
+  "以": {
+    "exampleKanji": "以て",
+    "exampleJp": "もって",
+    "score": 0
+  },
+  "故": {
+    "exampleKanji": "故に",
+    "exampleJp": "ゆえに",
+    "score": 0
+  },
+  "高": {
+    "exampleKanji": "円高",
+    "exampleJp": "えんだか",
+    "score": 0
+  },
+  "集": {
+    "exampleKanji": "歌集",
+    "exampleJp": "かしゅう",
+    "score": 0
+  },
+  "取": {
+    "exampleKanji": "採取",
+    "exampleJp": "さいしゅ",
+    "score": 0
+  },
+  "駄": {
+    "exampleKanji": "下駄",
+    "exampleJp": "げた",
+    "score": 0
+  },
+  "目": {
+    "exampleKanji": "一目",
+    "exampleJp": "ひとめ",
+    "score": 0
+  },
+  "無": {
+    "exampleKanji": "皆無",
+    "exampleJp": "かいむ",
+    "score": 0
+  },
+  "怠": {
+    "exampleKanji": "怠い",
+    "exampleJp": "だるい",
+    "score": 0
+  },
+  "乳": {
+    "exampleKanji": "牛乳",
+    "exampleJp": "ぎゅうにゅう",
+    "score": 0
+  },
+  "切": {
+    "exampleKanji": "一切",
+    "exampleJp": "いっさい",
+    "score": 0
+  },
+  "料": {
+    "exampleKanji": "衣料",
+    "exampleJp": "いりょう",
+    "score": 0
+  },
+  "理": {
+    "exampleKanji": "監理",
+    "exampleJp": "かんり",
+    "score": 0
+  },
+  "映": {
+    "exampleKanji": "映る",
+    "exampleJp": "うつる",
+    "score": 0
+  },
+  "画": {
+    "exampleKanji": "映画",
+    "exampleJp": "えいが",
+    "score": 0
+  },
+  "一": {
+    "exampleKanji": "一つ",
+    "exampleJp": "ひとつ",
+    "score": 0
+  },
+  "杯": {
+    "exampleKanji": "洋杯",
+    "exampleJp": "コップ",
+    "score": 0
+  },
+  "点": {
+    "exampleKanji": "一点",
+    "exampleJp": "いってん",
+    "score": 0
+  },
+  "丁": {
+    "exampleKanji": "一丁",
+    "exampleJp": "いっちょう",
+    "score": 0
+  },
+  "放": {
+    "exampleKanji": "解放",
+    "exampleJp": "かいほう",
+    "score": 0
+  },
+  "序": {
+    "exampleKanji": "順序",
+    "exampleJp": "じゅんじょ",
+    "score": 0
+  },
+  "詰": {
+    "exampleKanji": "缶詰",
+    "exampleJp": "かんづめ",
+    "score": 0
+  },
+  "突": {
+    "exampleKanji": "煙突",
+    "exampleJp": "えんとつ",
+    "score": 0
+  },
+  "道": {
+    "exampleKanji": "沿道",
+    "exampleJp": "えんどう",
+    "score": 0
+  },
+  "刑": {
+    "exampleKanji": "求刑",
+    "exampleJp": "きゅうけい",
+    "score": 0
+  },
+  "所": {
+    "exampleKanji": "所が",
+    "exampleJp": "ところが",
+    "score": 0
+  },
+  "途": {
+    "exampleKanji": "帰途",
+    "exampleJp": "きと",
+    "score": 0
+  },
+  "隣": {
+    "exampleKanji": "近隣",
+    "exampleJp": "きんりん",
+    "score": 0
+  },
+  "芝": {
+    "exampleKanji": "芝居",
+    "exampleJp": "しばい",
+    "score": 0
+  },
+  "青": {
+    "exampleKanji": "青い",
+    "exampleJp": "あおい",
+    "score": 0
+  },
+  "飛": {
+    "exampleKanji": "飛ぶ",
+    "exampleJp": "とぶ",
+    "score": 0
+  },
+  "仮": {
+    "exampleKanji": "仮に",
+    "exampleJp": "かりに",
+    "score": 0
+  },
+  "定": {
+    "exampleKanji": "安定",
+    "exampleJp": "あんてい",
+    "score": 0
+  },
+  "共": {
+    "exampleKanji": "共に",
+    "exampleJp": "ともに",
+    "score": 0
+  },
+  "訳": {
+    "exampleKanji": "英訳",
+    "exampleJp": "えいやく",
+    "score": 0
+  },
+  "考": {
+    "exampleKanji": "考え",
+    "exampleJp": "かんがえ",
+    "score": 0
+  },
+  "宜": {
+    "exampleKanji": "適宜",
+    "exampleJp": "てきぎ",
+    "score": 0
+  },
+  "致": {
+    "exampleKanji": "一致",
+    "exampleJp": "いっち",
+    "score": 0
+  },
+  "位": {
+    "exampleKanji": "一位",
+    "exampleJp": "いちい",
+    "score": 0
+  },
+  "底": {
+    "exampleKanji": "海底",
+    "exampleJp": "かいてい",
+    "score": 0
+  },
+  "交": {
+    "exampleKanji": "外交",
+    "exampleJp": "がいこう",
+    "score": 0
+  },
+  "閑": {
+    "exampleKanji": "等閑",
+    "exampleJp": "なおざり",
+    "score": 0
+  },
+  "和": {
+    "exampleKanji": "英和",
+    "exampleJp": "えいわ",
+    "score": 0
+  },
+  "因": {
+    "exampleKanji": "一因",
+    "exampleJp": "いちいん",
+    "score": 0
+  },
+  "異": {
+    "exampleKanji": "異議",
+    "exampleJp": "いぎ",
+    "score": 0
+  },
+  "依": {
+    "exampleKanji": "依然",
+    "exampleJp": "いぜん",
+    "score": 0
+  },
+  "拠": {
+    "exampleKanji": "拠点",
+    "exampleJp": "きょてん",
+    "score": 0
+  },
+  "応": {
+    "exampleKanji": "一応",
+    "exampleJp": "いちおう",
+    "score": 0
+  },
+  "過": {
+    "exampleKanji": "一過",
+    "exampleJp": "いっか",
+    "score": 0
+  },
+  "関": {
+    "exampleKanji": "関係",
+    "exampleJp": "かんけい",
+    "score": 0
+  },
+  "基": {
+    "exampleKanji": "基督",
+    "exampleJp": "キリスト",
+    "score": 0
+  },
+  "似": {
+    "exampleKanji": "酷似",
+    "exampleJp": "こくじ",
+    "score": 0
+  },
+  "就": {
+    "exampleKanji": "去就",
+    "exampleJp": "きょしゅう",
+    "score": 0
+  },
+  "照": {
+    "exampleKanji": "参照",
+    "exampleJp": "さんしょう",
+    "score": 0
+  },
+  "対": {
+    "exampleKanji": "応対",
+    "exampleJp": "おうたい",
+    "score": 0
+  },
+  "当": {
+    "exampleKanji": "過当",
+    "exampleJp": "かとう",
+    "score": 0
+  },
+  "込": {
+    "exampleKanji": "込む",
+    "exampleJp": "こむ",
+    "score": 0
+  },
+  "逸": {
+    "exampleKanji": "逸脱",
+    "exampleJp": "いつだつ",
+    "score": 0
+  },
+  "将": {
+    "exampleKanji": "王将",
+    "exampleJp": "おうしょう",
+    "score": 0
+  },
+  "又": {
+    "exampleKanji": "又は",
+    "exampleJp": "または",
+    "score": 0
+  },
+  "迷": {
+    "exampleKanji": "混迷",
+    "exampleJp": "こんめい",
+    "score": 0
+  },
+  "惑": {
+    "exampleKanji": "疑惑",
+    "exampleJp": "ぎわく",
+    "score": 0
+  },
+  "含": {
+    "exampleKanji": "含み",
+    "exampleJp": "ふくみ",
+    "score": 0
+  },
+  "羞": {
+    "exampleKanji": "羞恥",
+    "exampleJp": "しゅうち",
+    "score": 2.45
+  },
+  "延": {
+    "exampleKanji": "延べ",
+    "exampleJp": "のべ",
+    "score": 0
+  },
+  "倒": {
+    "exampleKanji": "圧倒",
+    "exampleJp": "あっとう",
+    "score": 0
+  },
+  "半": {
+    "exampleKanji": "後半",
+    "exampleJp": "こうはん",
+    "score": 0
+  },
+  "許": {
+    "exampleKanji": "許り",
+    "exampleJp": "ばかり",
+    "score": 0
+  },
+  "荷": {
+    "exampleKanji": "荷札",
+    "exampleJp": "にふだ",
+    "score": 0
+  },
+  "管": {
+    "exampleKanji": "只管",
+    "exampleJp": "ひたすら",
+    "score": 0
+  },
+  "直": {
+    "exampleKanji": "硬直",
+    "exampleJp": "こうちょく",
+    "score": 0
+  },
+  "向": {
+    "exampleKanji": "一向",
+    "exampleJp": "いっこう",
+    "score": 0
+  },
+  "引": {
+    "exampleKanji": "引く",
+    "exampleJp": "ひく",
+    "score": 0
+  },
+  "光": {
+    "exampleKanji": "栄光",
+    "exampleJp": "えいこう",
+    "score": 0
+  },
+  "動": {
+    "exampleKanji": "異動",
+    "exampleJp": "いどう",
+    "score": 0
+  },
+  "膨": {
+    "exampleKanji": "膨張",
+    "exampleJp": "ぼうちょう",
+    "score": 0
+  },
+  "太": {
+    "exampleKanji": "丸太",
+    "exampleJp": "まるた",
+    "score": 0
+  },
+  "棒": {
+    "exampleKanji": "鉄棒",
+    "exampleJp": "てつぼう",
+    "score": 0
+  },
+  "通": {
+    "exampleKanji": "一通",
+    "exampleJp": "いっつう",
+    "score": 0
+  },
+  "打": {
+    "exampleKanji": "安打",
+    "exampleJp": "あんだ",
+    "score": 0
+  },
+  "凹": {
+    "exampleKanji": "凹む",
+    "exampleJp": "へこむ",
+    "score": 0
+  },
+  "医": {
+    "exampleKanji": "医院",
+    "exampleJp": "いいん",
+    "score": 0
+  },
+  "穂": {
+    "exampleKanji": "稲穂",
+    "exampleJp": "いなほ",
+    "score": 2.25
+  },
+  "紫": {
+    "exampleKanji": "紫色",
+    "exampleJp": "むらさきいろ",
+    "score": 0
+  },
+  "本": {
+    "exampleKanji": "本の",
+    "exampleJp": "ほんの",
+    "score": 0
+  },
+  "始": {
+    "exampleKanji": "開始",
+    "exampleJp": "かいし",
+    "score": 0
+  },
+  "四": {
+    "exampleKanji": "四つ",
+    "exampleJp": "よっつ",
+    "score": 0
+  },
+  "角": {
+    "exampleKanji": "一角",
+    "exampleJp": "いっかく",
+    "score": 0
+  },
+  "忠": {
+    "exampleKanji": "忠実",
+    "exampleJp": "ちゅうじつ",
+    "score": 0
+  },
+  "剥": {
+    "exampleKanji": "剥く",
+    "exampleJp": "むく",
+    "score": 0
+  },
+  "藻": {
+    "exampleKanji": "海藻",
+    "exampleJp": "かいそう",
+    "score": 0
+  },
+  "若": {
+    "exampleKanji": "若し",
+    "exampleJp": "もし",
+    "score": 0
+  },
+  "能": {
+    "exampleKanji": "可能",
+    "exampleJp": "かのう",
+    "score": 0
+  },
+  "持": {
+    "exampleKanji": "維持",
+    "exampleJp": "いじ",
+    "score": 0
+  },
+  "成": {
+    "exampleKanji": "化成",
+    "exampleJp": "かせい",
+    "score": 0
+  },
+  "諸": {
+    "exampleKanji": "諸君",
+    "exampleJp": "しょくん",
+    "score": 0
+  },
+  "漸": {
+    "exampleKanji": "漸と",
+    "exampleJp": "やっと",
+    "score": 0
+  },
+  "矢": {
+    "exampleKanji": "矢印",
+    "exampleJp": "やじるし",
+    "score": 0
+  },
+  "張": {
+    "exampleKanji": "拡張",
+    "exampleJp": "かくちょう",
+    "score": 0
+  },
+  "遣": {
+    "exampleKanji": "遣る",
+    "exampleJp": "やる",
+    "score": 0
+  },
+  "柔": {
+    "exampleKanji": "柔道",
+    "exampleJp": "じゅうどう",
+    "score": 0
+  },
+  "揺": {
+    "exampleKanji": "動揺",
+    "exampleJp": "どうよう",
+    "score": 0
+  },
+  "緩": {
+    "exampleKanji": "緩い",
+    "exampleJp": "ゆるい",
+    "score": 0
+  },
+  "寄": {
+    "exampleKanji": "寄せ",
+    "exampleJp": "よせ",
+    "score": 0
+  },
+  "越": {
+    "exampleKanji": "越す",
+    "exampleJp": "こす",
+    "score": 0
+  },
+  "縦": {
+    "exampleKanji": "縦断",
+    "exampleJp": "じゅうだん",
+    "score": 0
+  },
+  "列": {
+    "exampleKanji": "系列",
+    "exampleJp": "けいれつ",
+    "score": 0
+  },
+  "記": {
+    "exampleKanji": "下記",
+    "exampleJp": "かき",
+    "score": 0
+  },
+  "染": {
+    "exampleKanji": "汚染",
+    "exampleJp": "おせん",
+    "score": 0
+  },
+  "灯": {
+    "exampleKanji": "電灯",
+    "exampleJp": "でんとう",
+    "score": 0
+  },
+  "族": {
+    "exampleKanji": "遺族",
+    "exampleJp": "いぞく",
+    "score": 0
+  },
+  "酸": {
+    "exampleKanji": "核酸",
+    "exampleJp": "かくさん",
+    "score": 0
+  },
+  "亜": {
+    "exampleKanji": "亜鉛",
+    "exampleJp": "あえん",
+    "score": 0
+  },
+  "細": {
+    "exampleKanji": "些細",
+    "exampleJp": "ささい",
+    "score": 0
+  },
+  "平": {
+    "exampleKanji": "公平",
+    "exampleJp": "こうへい",
+    "score": 0
+  },
+  "洋": {
+    "exampleKanji": "洋杯",
+    "exampleJp": "コップ",
+    "score": 0
+  },
+  "地": {
+    "exampleKanji": "意地",
+    "exampleJp": "いじ",
+    "score": 0
+  },
+  "域": {
+    "exampleKanji": "域外",
+    "exampleJp": "いきがい",
+    "score": 0
+  },
+  "電": {
+    "exampleKanji": "家電",
+    "exampleJp": "かでん",
+    "score": 0
+  },
+  "帳": {
+    "exampleKanji": "記帳",
+    "exampleJp": "きちょう",
+    "score": 0
+  },
+  "変": {
+    "exampleKanji": "異変",
+    "exampleJp": "いへん",
+    "score": 0
+  },
+  "換": {
+    "exampleKanji": "換気",
+    "exampleJp": "かんき",
+    "score": 0
+  },
+  "器": {
+    "exampleKanji": "火器",
+    "exampleJp": "かき",
+    "score": 0
+  },
+  "計": {
+    "exampleKanji": "家計",
+    "exampleJp": "かけい",
+    "score": 0
+  },
+  "算": {
+    "exampleKanji": "演算",
+    "exampleJp": "えんざん",
+    "score": 0
+  },
+  "機": {
+    "exampleKanji": "危機",
+    "exampleJp": "きき",
+    "score": 0
+  },
+  "荒": {
+    "exampleKanji": "荒い",
+    "exampleJp": "あらい",
+    "score": 0
+  },
+  "運": {
+    "exampleKanji": "運ぶ",
+    "exampleJp": "はこぶ",
+    "score": 0
+  },
+  "数": {
+    "exampleKanji": "員数",
+    "exampleJp": "いんずう",
+    "score": 0
+  },
+  "字": {
+    "exampleKanji": "一字",
+    "exampleJp": "いちじ",
+    "score": 0
+  },
+  "里": {
+    "exampleKanji": "郷里",
+    "exampleJp": "きょうり",
+    "score": 0
+  },
+  "性": {
+    "exampleKanji": "悪性",
+    "exampleJp": "あくせい",
+    "score": 0
+  },
+  "存": {
+    "exampleKanji": "温存",
+    "exampleJp": "おんぞん",
+    "score": 0
+  },
+  "症": {
+    "exampleKanji": "炎症",
+    "exampleJp": "えんしょう",
+    "score": 0
+  },
+  "羊": {
+    "exampleKanji": "羊毛",
+    "exampleJp": "ようもう",
+    "score": 0
+  },
+  "線": {
+    "exampleKanji": "Ｘ線",
+    "exampleJp": "エックスせん",
+    "score": 0
+  },
+  "安": {
+    "exampleKanji": "安い",
+    "exampleJp": "やすい",
+    "score": 0
+  },
+  "尼": {
+    "exampleKanji": "尼羅",
+    "exampleJp": "ナイル",
+    "score": 1
+  },
+  "活": {
+    "exampleKanji": "活気",
+    "exampleJp": "かっき",
+    "score": 0
+  },
+  "英": {
+    "exampleKanji": "育英",
+    "exampleJp": "いくえい",
+    "score": 0
+  },
+  "吉": {
+    "exampleKanji": "不吉",
+    "exampleJp": "ふきつ",
+    "score": 0
+  },
+  "利": {
+    "exampleKanji": "営利",
+    "exampleJp": "えいり",
+    "score": 0
+  },
+  "色": {
+    "exampleKanji": "異色",
+    "exampleJp": "いしょく",
+    "score": 0
+  },
+  "教": {
+    "exampleKanji": "教え",
+    "exampleJp": "おしえ",
+    "score": 0
+  },
+  "徒": {
+    "exampleKanji": "学徒",
+    "exampleJp": "がくと",
+    "score": 0
+  },
+  "原": {
+    "exampleKanji": "原案",
+    "exampleJp": "げんあん",
+    "score": 0
+  },
+  "主": {
+    "exampleKanji": "家主",
+    "exampleJp": "やぬし",
+    "score": 0
+  },
+  "義": {
+    "exampleKanji": "意義",
+    "exampleJp": "いぎ",
+    "score": 0
+  },
+  "犬": {
+    "exampleKanji": "愛犬",
+    "exampleJp": "あいけん",
+    "score": 0
+  },
+  "薄": {
+    "exampleKanji": "軽薄",
+    "exampleJp": "けいはく",
+    "score": 0
+  },
+  "拉": {
+    "exampleKanji": "拉麺",
+    "exampleJp": "ラーメン",
+    "score": 0
+  },
+  "久": {
+    "exampleKanji": "恒久",
+    "exampleJp": "こうきゅう",
+    "score": 0
+  },
+  "品": {
+    "exampleKanji": "遺品",
+    "exampleJp": "いひん",
+    "score": 0
+  },
+  "紙": {
+    "exampleKanji": "印紙",
+    "exampleJp": "いんし",
+    "score": 0
+  },
+  "印": {
+    "exampleKanji": "印度",
+    "exampleJp": "インド",
+    "score": 0
+  },
+  "支": {
+    "exampleKanji": "支援",
+    "exampleJp": "しえん",
+    "score": 0
+  },
+  "那": {
+    "exampleKanji": "旦那",
+    "exampleJp": "だんな",
+    "score": 0
+  },
+  "西": {
+    "exampleKanji": "瑞西",
+    "exampleJp": "スイス",
+    "score": 0
+  },
+  "開": {
+    "exampleKanji": "開く",
+    "exampleJp": "ひらく",
+    "score": 0
+  },
+  "発": {
+    "exampleKanji": "発条",
+    "exampleJp": "ばね",
+    "score": 0
+  },
+  "短": {
+    "exampleKanji": "最短",
+    "exampleJp": "さいたん",
+    "score": 0
+  },
+  "調": {
+    "exampleKanji": "快調",
+    "exampleJp": "かいちょう",
+    "score": 0
+  },
+  "長": {
+    "exampleKanji": "医長",
+    "exampleJp": "いちょう",
+    "score": 0
+  },
+  "盤": {
+    "exampleKanji": "円盤",
+    "exampleJp": "えんばん",
+    "score": 0
+  },
+  "克": {
+    "exampleKanji": "克服",
+    "exampleJp": "こくふく",
+    "score": 0
+  },
+  "宇": {
+    "exampleKanji": "宇宙",
+    "exampleJp": "うちゅう",
+    "score": 0
+  },
+  "柳": {
+    "exampleKanji": "川柳",
+    "exampleJp": "せんりゅう",
+    "score": 0
+  },
+  "貝": {
+    "exampleKanji": "貝殻",
+    "exampleJp": "かいがら",
+    "score": 0
+  },
+  "厄": {
+    "exampleKanji": "厄介",
+    "exampleJp": "やっかい",
+    "score": 0
+  },
+  "多": {
+    "exampleKanji": "過多",
+    "exampleJp": "かた",
+    "score": 0
+  },
+  "及": {
+    "exampleKanji": "及び",
+    "exampleJp": "および",
+    "score": 0
+  },
+  "歴": {
+    "exampleKanji": "学歴",
+    "exampleJp": "がくれき",
+    "score": 0
+  },
+  "障": {
+    "exampleKanji": "気障",
+    "exampleJp": "きざ",
+    "score": 0
+  },
+  "牛": {
+    "exampleKanji": "牛肉",
+    "exampleJp": "ぎゅうにく",
+    "score": 0
+  },
+  "津": {
+    "exampleKanji": "津波",
+    "exampleJp": "つなみ",
+    "score": 0
+  },
+  "指": {
+    "exampleKanji": "屈指",
+    "exampleJp": "くっし",
+    "score": 0
+  },
+  "語": {
+    "exampleKanji": "英語",
+    "exampleJp": "えいご",
+    "score": 0
+  },
+  "強": {
+    "exampleKanji": "強い",
+    "exampleJp": "つよい",
+    "score": 0
+  },
+  "会": {
+    "exampleKanji": "宴会",
+    "exampleJp": "えんかい",
+    "score": 0
+  },
+  "員": {
+    "exampleKanji": "委員",
+    "exampleJp": "いいん",
+    "score": 0
+  },
+  "答": {
+    "exampleKanji": "応答",
+    "exampleJp": "おうとう",
+    "score": 0
+  },
+  "児": {
+    "exampleKanji": "遺児",
+    "exampleJp": "いじ",
+    "score": 0
+  },
+  "型": {
+    "exampleKanji": "型録",
+    "exampleJp": "カタログ",
+    "score": 0
+  },
+  "録": {
+    "exampleKanji": "型録",
+    "exampleJp": "カタログ",
+    "score": 0
+  },
+  "丼": {
+    "exampleKanji": "牛丼",
+    "exampleJp": "ぎゅうどん",
+    "score": 0
+  },
+  "特": {
+    "exampleKanji": "特に",
+    "exampleJp": "とくに",
+    "score": 0
+  },
+  "力": {
+    "exampleKanji": "握力",
+    "exampleJp": "あくりょく",
+    "score": 0
+  },
+  "奈": {
+    "exampleKanji": "奈良",
+    "exampleJp": "なら",
+    "score": 0
+  },
+  "糸": {
+    "exampleKanji": "糸口",
+    "exampleJp": "いとぐち",
+    "score": 0
+  },
+  "曲": {
+    "exampleKanji": "一曲",
+    "exampleJp": "いっきょく",
+    "score": 0
+  },
+  "肉": {
+    "exampleKanji": "牛肉",
+    "exampleJp": "ぎゅうにく",
+    "score": 0
+  },
+  "腫": {
+    "exampleKanji": "腫瘍",
+    "exampleJp": "しゅよう",
+    "score": 0
+  },
+  "空": {
+    "exampleKanji": "架空",
+    "exampleJp": "かくう",
+    "score": 0
+  },
+  "楽": {
+    "exampleKanji": "音楽",
+    "exampleJp": "おんがく",
+    "score": 0
+  },
+  "部": {
+    "exampleKanji": "一部",
+    "exampleJp": "いちぶ",
+    "score": 0
+  },
+  "寒": {
+    "exampleKanji": "悪寒",
+    "exampleJp": "おかん",
+    "score": 0
+  },
+  "武": {
+    "exampleKanji": "武器",
+    "exampleJp": "ぶき",
+    "score": 0
+  },
+  "瓦": {
+    "exampleKanji": "瓦斯",
+    "exampleJp": "ガス",
+    "score": 0
+  },
+  "欠": {
+    "exampleKanji": "欠く",
+    "exampleJp": "かく",
+    "score": 0
+  },
+  "栓": {
+    "exampleKanji": "栓抜き",
+    "exampleJp": "せんぬき",
+    "score": 0.01
+  },
+  "硝": {
+    "exampleKanji": "硝子",
+    "exampleJp": "ガラス",
+    "score": 0
+  },
+  "綿": {
+    "exampleKanji": "綿密",
+    "exampleJp": "めんみつ",
+    "score": 0
+  },
+  "沈": {
+    "exampleKanji": "沈む",
+    "exampleJp": "しずむ",
+    "score": 0
+  },
+  "菜": {
+    "exampleKanji": "菜園",
+    "exampleJp": "さいえん",
+    "score": 0
+  },
+  "丹": {
+    "exampleKanji": "丹精",
+    "exampleJp": "たんせい",
+    "score": 0
+  },
+  "督": {
+    "exampleKanji": "基督",
+    "exampleJp": "キリスト",
+    "score": 0
+  },
+  "文": {
+    "exampleKanji": "一文",
+    "exampleJp": "いちもん",
+    "score": 0
+  },
+  "弦": {
+    "exampleKanji": "弦楽",
+    "exampleJp": "げんがく",
+    "score": 0
+  },
+  "希": {
+    "exampleKanji": "希臘",
+    "exampleJp": "ギリシャ",
+    "score": 0
+  },
+  "券": {
+    "exampleKanji": "株券",
+    "exampleJp": "かぶけん",
+    "score": 0
+  },
+  "科": {
+    "exampleKanji": "医科",
+    "exampleJp": "いか",
+    "score": 0
+  },
+  "威": {
+    "exampleKanji": "威嚇",
+    "exampleJp": "いかく",
+    "score": 0
+  },
+  "留": {
+    "exampleKanji": "在留",
+    "exampleJp": "ざいりゅう",
+    "score": 0
+  },
+  "技": {
+    "exampleKanji": "演技",
+    "exampleJp": "えんぎ",
+    "score": 0
+  },
+  "術": {
+    "exampleKanji": "学術",
+    "exampleJp": "がくじゅつ",
+    "score": 0
+  },
+  "徳": {
+    "exampleKanji": "悪徳",
+    "exampleJp": "あくとく",
+    "score": 0
+  },
+  "車": {
+    "exampleKanji": "下車",
+    "exampleJp": "げしゃ",
+    "score": 0
+  },
+  "分": {
+    "exampleKanji": "一分",
+    "exampleJp": "いちぶ",
+    "score": 0
+  },
+  "離": {
+    "exampleKanji": "隔離",
+    "exampleJp": "かくり",
+    "score": 0
+  },
+  "暦": {
+    "exampleKanji": "還暦",
+    "exampleJp": "かんれき",
+    "score": 0
+  },
+  "工": {
+    "exampleKanji": "加工",
+    "exampleJp": "かこう",
+    "score": 0
+  },
+  "剣": {
+    "exampleKanji": "剣士",
+    "exampleJp": "けんし",
+    "score": 0
+  },
+  "橋": {
+    "exampleKanji": "橋脚",
+    "exampleJp": "きょうきゃく",
+    "score": 0
+  },
+  "戦": {
+    "exampleKanji": "一戦",
+    "exampleJp": "いっせん",
+    "score": 0
+  },
+  "兵": {
+    "exampleKanji": "工兵",
+    "exampleJp": "こうへい",
+    "score": 0
+  },
+  "耳": {
+    "exampleKanji": "耳元",
+    "exampleJp": "みみもと",
+    "score": 0
+  },
+  "豆": {
+    "exampleKanji": "小豆",
+    "exampleJp": "あずき",
+    "score": 0
+  },
+  "効": {
+    "exampleKanji": "効果",
+    "exampleJp": "こうか",
+    "score": 0
+  },
+  "率": {
+    "exampleKanji": "確率",
+    "exampleJp": "かくりつ",
+    "score": 0
+  },
+  "割": {
+    "exampleKanji": "１割",
+    "exampleJp": "いちわり",
+    "score": 0
+  },
+  "倫": {
+    "exampleKanji": "不倫",
+    "exampleJp": "ふりん",
+    "score": 0
+  },
+  "卵": {
+    "exampleKanji": "産卵",
+    "exampleJp": "さんらん",
+    "score": 0
+  },
+  "混": {
+    "exampleKanji": "混血",
+    "exampleJp": "こんけつ",
+    "score": 0
+  },
+  "製": {
+    "exampleKanji": "既製",
+    "exampleJp": "きせい",
+    "score": 0
+  },
+  "援": {
+    "exampleKanji": "援助",
+    "exampleJp": "えんじょ",
+    "score": 0
+  },
+  "用": {
+    "exampleKanji": "愛用",
+    "exampleJp": "あいよう",
+    "score": 0
+  },
+  "設": {
+    "exampleKanji": "開設",
+    "exampleJp": "かいせつ",
+    "score": 0
+  },
+  "積": {
+    "exampleKanji": "集積",
+    "exampleJp": "しゅうせき",
+    "score": 0
+  },
+  "護": {
+    "exampleKanji": "護謨",
+    "exampleJp": "ゴム",
+    "score": 0
+  },
+  "貢": {
+    "exampleKanji": "貢献",
+    "exampleJp": "こうけん",
+    "score": 0
+  },
+  "妻": {
+    "exampleKanji": "稲妻",
+    "exampleJp": "いなずま",
+    "score": 0
+  },
+  "鈍": {
+    "exampleKanji": "鈍化",
+    "exampleJp": "どんか",
+    "score": 0
+  },
+  "砂": {
+    "exampleKanji": "砂糖",
+    "exampleJp": "さとう",
+    "score": 0
+  },
+  "漠": {
+    "exampleKanji": "漠然",
+    "exampleJp": "ばくぜん",
+    "score": 0
+  },
+  "皿": {
+    "exampleKanji": "灰皿",
+    "exampleJp": "はいざら",
+    "score": 0
+  },
+  "周": {
+    "exampleKanji": "円周",
+    "exampleJp": "えんしゅう",
+    "score": 0
+  },
+  "波": {
+    "exampleKanji": "寒波",
+    "exampleJp": "かんぱ",
+    "score": 0
+  },
+  "朱": {
+    "exampleKanji": "朱印",
+    "exampleJp": "しゅいん",
+    "score": 2.4
+  },
+  "派": {
+    "exampleKanji": "一派",
+    "exampleJp": "いっぱ",
+    "score": 0
+  },
+  "遊": {
+    "exampleKanji": "外遊",
+    "exampleJp": "がいゆう",
+    "score": 0
+  },
+  "舎": {
+    "exampleKanji": "校舎",
+    "exampleJp": "こうしゃ",
+    "score": 0
+  },
+  "路": {
+    "exampleKanji": "回路",
+    "exampleJp": "かいろ",
+    "score": 0
+  },
+  "析": {
+    "exampleKanji": "解析",
+    "exampleJp": "かいせき",
+    "score": 0
+  },
+  "雪": {
+    "exampleKanji": "降雪",
+    "exampleJp": "こうせつ",
+    "score": 0
+  },
+  "演": {
+    "exampleKanji": "演歌",
+    "exampleJp": "えんか",
+    "score": 0
+  },
+  "学": {
+    "exampleKanji": "医学",
+    "exampleJp": "いがく",
+    "score": 0
+  },
+  "校": {
+    "exampleKanji": "開校",
+    "exampleJp": "かいこう",
+    "score": 0
+  },
+  "叙": {
+    "exampleKanji": "叙勲",
+    "exampleJp": "じょくん",
+    "score": 0
+  },
+  "信": {
+    "exampleKanji": "威信",
+    "exampleJp": "いしん",
+    "score": 0
+  },
+  "送": {
+    "exampleKanji": "移送",
+    "exampleJp": "いそう",
+    "score": 0
+  },
+  "写": {
+    "exampleKanji": "試写",
+    "exampleJp": "ししゃ",
+    "score": 0
+  },
+  "牙": {
+    "exampleKanji": "象牙",
+    "exampleJp": "ぞうげ",
+    "score": 0
+  },
+  "買": {
+    "exampleKanji": "購買",
+    "exampleJp": "こうばい",
+    "score": 0
+  },
+  "寿": {
+    "exampleKanji": "寿命",
+    "exampleJp": "じゅみょう",
+    "score": 0
+  },
+  "府": {
+    "exampleKanji": "政府",
+    "exampleJp": "せいふ",
+    "score": 0
+  },
+  "紀": {
+    "exampleKanji": "紀元",
+    "exampleJp": "きげん",
+    "score": 0
+  },
+  "思": {
+    "exampleKanji": "意思",
+    "exampleJp": "いし",
+    "score": 0
+  },
+  "汗": {
+    "exampleKanji": "発汗",
+    "exampleJp": "はっかん",
+    "score": 0
+  },
+  "典": {
+    "exampleKanji": "瑞典",
+    "exampleJp": "スウェーデン",
+    "score": 0
+  },
+  "板": {
+    "exampleKanji": "看板",
+    "exampleJp": "かんばん",
+    "score": 0
+  },
+  "番": {
+    "exampleKanji": "一番",
+    "exampleJp": "いちばん",
+    "score": 0
+  },
+  "士": {
+    "exampleKanji": "学士",
+    "exampleJp": "がくし",
+    "score": 0
+  },
+  "篤": {
+    "exampleKanji": "危篤",
+    "exampleJp": "きとく",
+    "score": 0
+  },
+  "恒": {
+    "exampleKanji": "恒久",
+    "exampleJp": "こうきゅう",
+    "score": 0
+  },
+  "候": {
+    "exampleKanji": "気候",
+    "exampleJp": "きこう",
+    "score": 0
+  },
+  "群": {
+    "exampleKanji": "群れ",
+    "exampleJp": "むれ",
+    "score": 0
+  },
+  "女": {
+    "exampleKanji": "悪女",
+    "exampleJp": "あくじょ",
+    "score": 0
+  },
+  "備": {
+    "exampleKanji": "軍備",
+    "exampleJp": "ぐんび",
+    "score": 0
+  },
+  "聞": {
+    "exampleKanji": "見聞",
+    "exampleJp": "けんぶん",
+    "score": 0
+  },
+  "根": {
+    "exampleKanji": "屋根",
+    "exampleJp": "やね",
+    "score": 0
+  },
+  "革": {
+    "exampleKanji": "改革",
+    "exampleJp": "かいかく",
+    "score": 0
+  },
+  "服": {
+    "exampleKanji": "衣服",
+    "exampleJp": "いふく",
+    "score": 0
+  },
+  "略": {
+    "exampleKanji": "簡略",
+    "exampleJp": "かんりゃく",
+    "score": 0
+  },
+  "塞": {
+    "exampleKanji": "梗塞",
+    "exampleJp": "こうそく",
+    "score": 0
+  },
+  "維": {
+    "exampleKanji": "維持",
+    "exampleJp": "いじ",
+    "score": 0
+  },
+  "次": {
+    "exampleKanji": "次ぐ",
+    "exampleJp": "つぐ",
+    "score": 0
+  },
+  "連": {
+    "exampleKanji": "ソ連",
+    "exampleJp": "ソれん",
+    "score": 0
+  },
+  "国": {
+    "exampleKanji": "愛国",
+    "exampleJp": "あいこく",
+    "score": 0
+  },
+  "乗": {
+    "exampleKanji": "乗り",
+    "exampleJp": "のり",
+    "score": 0
+  },
+  "輪": {
+    "exampleKanji": "花輪",
+    "exampleJp": "はなわ",
+    "score": 0
+  },
+  "均": {
+    "exampleKanji": "均一",
+    "exampleJp": "きんいつ",
+    "score": 0
+  },
+  "株": {
+    "exampleKanji": "株価",
+    "exampleJp": "かぶか",
+    "score": 0
+  },
+  "価": {
+    "exampleKanji": "安価",
+    "exampleJp": "あんか",
+    "score": 0
+  },
+  "弾": {
+    "exampleKanji": "実弾",
+    "exampleJp": "じつだん",
+    "score": 0
+  },
+  "押": {
+    "exampleKanji": "押し",
+    "exampleJp": "おし",
+    "score": 0
+  },
+  "達": {
+    "exampleKanji": "伊達",
+    "exampleJp": "だて",
+    "score": 0
+  },
+  "頼": {
+    "exampleKanji": "依頼",
+    "exampleJp": "いらい",
+    "score": 0
+  },
+  "断": {
+    "exampleKanji": "横断",
+    "exampleJp": "おうだん",
+    "score": 0
+  },
+  "痛": {
+    "exampleKanji": "苦痛",
+    "exampleJp": "くつう",
+    "score": 0
+  },
+  "窒": {
+    "exampleKanji": "窒素",
+    "exampleJp": "ちっそ",
+    "score": 0
+  },
+  "扶": {
+    "exampleKanji": "扶助",
+    "exampleJp": "ふじょ",
+    "score": 0
+  },
+  "蔵": {
+    "exampleKanji": "蔵書",
+    "exampleJp": "ぞうしょ",
+    "score": 0
+  },
+  "錯": {
+    "exampleKanji": "錯覚",
+    "exampleJp": "さっかく",
+    "score": 0
+  },
+  "終": {
+    "exampleKanji": "最終",
+    "exampleJp": "さいしゅう",
+    "score": 0
+  },
+  "第": {
+    "exampleKanji": "次第",
+    "exampleJp": "しだい",
+    "score": 0
+  },
+  "局": {
+    "exampleKanji": "医局",
+    "exampleJp": "いきょく",
+    "score": 0
+  },
+  "塔": {
+    "exampleKanji": "バベルの塔",
+    "exampleJp": "バベルのとう",
+    "score": 0.03
+  },
+  "報": {
+    "exampleKanji": "会報",
+    "exampleJp": "かいほう",
+    "score": 0
+  },
+  "攻": {
+    "exampleKanji": "攻め",
+    "exampleJp": "せめ",
+    "score": 0
+  },
+  "撃": {
+    "exampleKanji": "一撃",
+    "exampleJp": "いちげき",
+    "score": 0
+  },
+  "組": {
+    "exampleKanji": "改組",
+    "exampleJp": "かいそ",
+    "score": 0
+  },
+  "織": {
+    "exampleKanji": "羽織",
+    "exampleJp": "はおり",
+    "score": 0
+  },
+  "策": {
+    "exampleKanji": "国策",
+    "exampleJp": "こくさく",
+    "score": 0
+  },
+  "頭": {
+    "exampleKanji": "音頭",
+    "exampleJp": "おんど",
+    "score": 0
+  },
+  "解": {
+    "exampleKanji": "解く",
+    "exampleJp": "とく",
+    "score": 0
+  },
+  "値": {
+    "exampleKanji": "安値",
+    "exampleJp": "やすね",
+    "score": 0
+  },
+  "抹": {
+    "exampleKanji": "抹消",
+    "exampleJp": "まっしょう",
+    "score": 0
+  },
+  "音": {
+    "exampleKanji": "音楽",
+    "exampleJp": "おんがく",
+    "score": 0
+  },
+  "号": {
+    "exampleKanji": "暗号",
+    "exampleJp": "あんごう",
+    "score": 0
+  },
+  "民": {
+    "exampleKanji": "移民",
+    "exampleJp": "いみん",
+    "score": 0
+  },
+  "邦": {
+    "exampleKanji": "東邦",
+    "exampleJp": "とうほう",
+    "score": 0
+  },
+  "息": {
+    "exampleKanji": "一息",
+    "exampleJp": "ひといき",
+    "score": 0
+  },
+  "南": {
+    "exampleKanji": "西南",
+    "exampleJp": "せいなん",
+    "score": 0
+  },
+  "京": {
+    "exampleKanji": "帰京",
+    "exampleJp": "ききょう",
+    "score": 0
+  },
+  "媒": {
+    "exampleKanji": "触媒",
+    "exampleJp": "しょくばい",
+    "score": 0
+  },
+  "体": {
+    "exampleKanji": "遺体",
+    "exampleJp": "いたい",
+    "score": 0
+  },
+  "育": {
+    "exampleKanji": "育ち",
+    "exampleJp": "そだち",
+    "score": 0
+  },
+  "双": {
+    "exampleKanji": "双子",
+    "exampleJp": "ふたご",
+    "score": 0
+  },
+  "準": {
+    "exampleKanji": "準急",
+    "exampleJp": "じゅんきゅう",
+    "score": 0
+  },
+  "州": {
+    "exampleKanji": "欧州",
+    "exampleJp": "おうしゅう",
+    "score": 0
+  },
+  "賞": {
+    "exampleKanji": "観賞",
+    "exampleJp": "かんしょう",
+    "score": 0
+  },
+  "諾": {
+    "exampleKanji": "許諾",
+    "exampleJp": "きょだく",
+    "score": 0
+  },
+  "公": {
+    "exampleKanji": "公安",
+    "exampleJp": "こうあん",
+    "score": 0
+  },
+  "望": {
+    "exampleKanji": "希望",
+    "exampleJp": "きぼう",
+    "score": 0
+  },
+  "遠": {
+    "exampleKanji": "永遠",
+    "exampleJp": "えいえん",
+    "score": 0
+  },
+  "鏡": {
+    "exampleKanji": "眼鏡",
+    "exampleJp": "メガネ",
+    "score": 0
+  },
+  "河": {
+    "exampleKanji": "運河",
+    "exampleJp": "うんが",
+    "score": 0
+  },
+  "洪": {
+    "exampleKanji": "洪水",
+    "exampleJp": "こうずい",
+    "score": 0
+  },
+  "素": {
+    "exampleKanji": "塩素",
+    "exampleJp": "えんそ",
+    "score": 0
+  },
+  "停": {
+    "exampleKanji": "調停",
+    "exampleJp": "ちょうてい",
+    "score": 0
+  },
+  "着": {
+    "exampleKanji": "一着",
+    "exampleJp": "いっちゃく",
+    "score": 0
+  },
+  "皮": {
+    "exampleKanji": "脱皮",
+    "exampleJp": "だっぴ",
+    "score": 0
+  },
+  "条": {
+    "exampleKanji": "発条",
+    "exampleJp": "ばね",
+    "score": 0
+  },
+  "晩": {
+    "exampleKanji": "一晩",
+    "exampleJp": "ひとばん",
+    "score": 0
+  },
+  "谷": {
+    "exampleKanji": "渓谷",
+    "exampleJp": "けいこく",
+    "score": 0
+  },
+  "従": {
+    "exampleKanji": "侍従",
+    "exampleJp": "じじゅう",
+    "score": 0
+  },
+  "業": {
+    "exampleKanji": "偉業",
+    "exampleJp": "いぎょう",
+    "score": 0
+  },
+  "爆": {
+    "exampleKanji": "起爆",
+    "exampleJp": "きばく",
+    "score": 0
+  },
+  "役": {
+    "exampleKanji": "悪役",
+    "exampleJp": "あくやく",
+    "score": 0
+  },
+  "認": {
+    "exampleKanji": "確認",
+    "exampleJp": "かくにん",
+    "score": 0
+  },
+  "識": {
+    "exampleKanji": "意識",
+    "exampleJp": "いしき",
+    "score": 0
+  },
+  "台": {
+    "exampleKanji": "一台",
+    "exampleJp": "いちだい",
+    "score": 0
+  },
+  "伴": {
+    "exampleKanji": "同伴",
+    "exampleJp": "どうはん",
+    "score": 0
+  },
+  "粉": {
+    "exampleKanji": "花粉",
+    "exampleJp": "かふん",
+    "score": 0
+  },
+  "麦": {
+    "exampleKanji": "蕎麦",
+    "exampleJp": "そば",
+    "score": 0
+  },
+  "瓶": {
+    "exampleKanji": "花瓶",
+    "exampleJp": "かびん",
+    "score": 0
+  },
+  "試": {
+    "exampleKanji": "試し",
+    "exampleJp": "ためし",
+    "score": 0
+  },
+  "験": {
+    "exampleKanji": "経験",
+    "exampleJp": "けいけん",
+    "score": 0
+  },
+  "剤": {
+    "exampleKanji": "洗剤",
+    "exampleJp": "せんざい",
+    "score": 0
+  },
+  "毎": {
+    "exampleKanji": "毎に",
+    "exampleJp": "ごとに",
+    "score": 0
+  },
+  "誌": {
+    "exampleKanji": "雑誌",
+    "exampleJp": "ざっし",
+    "score": 0
+  },
+  "律": {
+    "exampleKanji": "一律",
+    "exampleJp": "いちりつ",
+    "score": 0
+  },
+  "賓": {
+    "exampleKanji": "国賓",
+    "exampleJp": "こくひん",
+    "score": 0
+  },
+  "制": {
+    "exampleKanji": "管制",
+    "exampleJp": "かんせい",
+    "score": 0
+  },
+  "殺": {
+    "exampleKanji": "暗殺",
+    "exampleJp": "あんさつ",
+    "score": 0
+  },
+  "伯": {
+    "exampleKanji": "伯爵",
+    "exampleJp": "はくしゃく",
+    "score": 0
+  },
+  "勃": {
+    "exampleKanji": "勃起",
+    "exampleJp": "ぼっき",
+    "score": 0
+  },
+  "郎": {
+    "exampleKanji": "新郎",
+    "exampleJp": "しんろう",
+    "score": 0
+  },
+  "争": {
+    "exampleKanji": "競争",
+    "exampleJp": "きょうそう",
+    "score": 0
+  },
+  "弁": {
+    "exampleKanji": "駅弁",
+    "exampleJp": "えきべん",
+    "score": 0
+  },
+  "柄": {
+    "exampleKanji": "家柄",
+    "exampleJp": "いえがら",
+    "score": 0
+  },
+  "竜": {
+    "exampleKanji": "恐竜",
+    "exampleJp": "きょうりゅう",
+    "score": 0
+  },
+  "秘": {
+    "exampleKanji": "極秘",
+    "exampleJp": "ごくひ",
+    "score": 0
+  },
+  "露": {
+    "exampleKanji": "吐露",
+    "exampleJp": "とろ",
+    "score": 0
+  },
+  "塗": {
+    "exampleKanji": "塗る",
+    "exampleJp": "ぬる",
+    "score": 0
+  },
+  "真": {
+    "exampleKanji": "写真",
+    "exampleJp": "しゃしん",
+    "score": 0
+  },
+  "寸": {
+    "exampleKanji": "燐寸",
+    "exampleJp": "マッチ",
+    "score": 0
+  },
+  "遷": {
+    "exampleKanji": "左遷",
+    "exampleJp": "させん",
+    "score": 0
+  },
+  "移": {
+    "exampleKanji": "移す",
+    "exampleJp": "うつす",
+    "score": 0
+  },
+  "満": {
+    "exampleKanji": "円満",
+    "exampleJp": "えんまん",
+    "score": 0
+  },
+  "俺": {
+    "exampleKanji": "満俺",
+    "exampleJp": "マンガン",
+    "score": 1
+  },
+  "弥": {
+    "exampleKanji": "弥生",
+    "exampleJp": "やよい",
+    "score": 0
+  },
+  "駆": {
+    "exampleKanji": "駆使",
+    "exampleJp": "くし",
+    "score": 0
+  },
+  "逐": {
+    "exampleKanji": "駆逐艦",
+    "exampleJp": "くちくかん",
+    "score": 0.01
+  },
+  "艦": {
+    "exampleKanji": "艦船",
+    "exampleJp": "かんせん",
+    "score": 0
+  },
+  "防": {
+    "exampleKanji": "攻防",
+    "exampleJp": "こうぼう",
+    "score": 0
+  },
+  "衛": {
+    "exampleKanji": "衛星",
+    "exampleJp": "えいせい",
+    "score": 0
+  },
+  "級": {
+    "exampleKanji": "一級",
+    "exampleJp": "いっきゅう",
+    "score": 0
+  },
+  "王": {
+    "exampleKanji": "王位",
+    "exampleJp": "おうい",
+    "score": 0
+  },
+  "項": {
+    "exampleKanji": "項目",
+    "exampleJp": "こうもく",
+    "score": 0
+  },
+  "摩": {
+    "exampleKanji": "摩る",
+    "exampleJp": "さする",
+    "score": 0
+  },
+  "猶": {
+    "exampleKanji": "猶予",
+    "exampleJp": "ゆうよ",
+    "score": 0
+  },
+  "沃": {
+    "exampleKanji": "豊沃",
+    "exampleJp": "ほうよく",
+    "score": 99
+  },
+  "欧": {
+    "exampleKanji": "欧州",
+    "exampleJp": "おうしゅう",
+    "score": 0
+  },
+  "麺": {
+    "exampleKanji": "拉麺",
+    "exampleJp": "ラーメン",
+    "score": 0
+  },
+  "油": {
+    "exampleKanji": "給油",
+    "exampleJp": "きゅうゆ",
+    "score": 0
+  },
+  "奏": {
+    "exampleKanji": "合奏",
+    "exampleJp": "がっそう",
+    "score": 0
+  },
+  "川": {
+    "exampleKanji": "河川",
+    "exampleJp": "かせん",
+    "score": 0
+  },
+  "島": {
+    "exampleKanji": "群島",
+    "exampleJp": "ぐんとう",
+    "score": 0
+  },
+  "毛": {
+    "exampleKanji": "羽毛",
+    "exampleJp": "うもう",
+    "score": 0
+  },
+  "虫": {
+    "exampleKanji": "害虫",
+    "exampleJp": "がいちゅう",
+    "score": 0
+  },
+  "的": {
+    "exampleKanji": "劇的",
+    "exampleJp": "げきてき",
+    "score": 0
+  },
+  "代": {
+    "exampleKanji": "一代",
+    "exampleJp": "いちだい",
+    "score": 0
+  },
+  "東": {
+    "exampleKanji": "関東",
+    "exampleJp": "かんとう",
+    "score": 0
+  },
+  "払": {
+    "exampleKanji": "払う",
+    "exampleJp": "はらう",
+    "score": 0
+  },
+  "溝": {
+    "exampleKanji": "側溝",
+    "exampleJp": "そっこう",
+    "score": 2.3
+  },
+  "菌": {
+    "exampleKanji": "球菌",
+    "exampleJp": "きゅうきん",
+    "score": 0
+  },
+  "層": {
+    "exampleKanji": "一層",
+    "exampleJp": "いっそう",
+    "score": 0
+  },
+  "船": {
+    "exampleKanji": "艦船",
+    "exampleJp": "かんせん",
+    "score": 0
+  },
+  "射": {
+    "exampleKanji": "射す",
+    "exampleJp": "さす",
+    "score": 0
+  },
+  "筒": {
+    "exampleKanji": "円筒",
+    "exampleJp": "えんとう",
+    "score": 0
+  },
+  "視": {
+    "exampleKanji": "監視",
+    "exampleJp": "かんし",
+    "score": 0
+  },
+  "覚": {
+    "exampleKanji": "覚え",
+    "exampleJp": "おぼえ",
+    "score": 0
+  },
+  "浪": {
+    "exampleKanji": "放浪",
+    "exampleJp": "ほうろう",
+    "score": 0
+  },
+  "華": {
+    "exampleKanji": "華僑",
+    "exampleJp": "かきょう",
+    "score": 0
+  },
+  "頓": {
+    "exampleKanji": "整頓",
+    "exampleJp": "せいとん",
+    "score": 0
+  },
+  "鉛": {
+    "exampleKanji": "亜鉛",
+    "exampleJp": "あえん",
+    "score": 0
+  },
+  "版": {
+    "exampleKanji": "出版",
+    "exampleJp": "しゅっぱん",
+    "score": 0
+  },
+  "末": {
+    "exampleKanji": "巻末",
+    "exampleJp": "かんまつ",
+    "score": 0
+  },
+  "温": {
+    "exampleKanji": "温い",
+    "exampleJp": "ぬるい",
+    "score": 0
+  },
+  "帯": {
+    "exampleKanji": "一帯",
+    "exampleJp": "いったい",
+    "score": 0
+  },
+  "綱": {
+    "exampleKanji": "横綱",
+    "exampleJp": "よこづな",
+    "score": 0
+  },
+  "種": {
+    "exampleKanji": "一種",
+    "exampleJp": "いっしゅ",
+    "score": 0
+  },
+  "塩": {
+    "exampleKanji": "塩化",
+    "exampleJp": "えんか",
+    "score": 0
+  },
+  "圏": {
+    "exampleKanji": "圏内",
+    "exampleJp": "けんない",
+    "score": 0
+  },
+  "聖": {
+    "exampleKanji": "神聖",
+    "exampleJp": "しんせい",
+    "score": 0
+  },
+  "属": {
+    "exampleKanji": "帰属",
+    "exampleJp": "きぞく",
+    "score": 0
+  },
+  "炭": {
+    "exampleKanji": "石炭",
+    "exampleJp": "せきたん",
+    "score": 0
+  },
+  "熱": {
+    "exampleKanji": "加熱",
+    "exampleJp": "かねつ",
+    "score": 0
+  },
+  "米": {
+    "exampleKanji": "玄米",
+    "exampleJp": "げんまい",
+    "score": 0
+  },
+  "衆": {
+    "exampleKanji": "観衆",
+    "exampleJp": "かんしゅう",
+    "score": 0
+  },
+  "杉": {
+    "exampleKanji": "杉林",
+    "exampleJp": "すぎばやし",
+    "score": 2.37
+  },
+  "麻": {
+    "exampleKanji": "胡麻",
+    "exampleJp": "ごま",
+    "score": 0
+  },
+  "仁": {
+    "exampleKanji": "仁義",
+    "exampleJp": "じんぎ",
+    "score": 2.27
+  },
+  "流": {
+    "exampleKanji": "一流",
+    "exampleJp": "いちりゅう",
+    "score": 0
+  },
+  "硫": {
+    "exampleKanji": "硫黄",
+    "exampleJp": "いおう",
+    "score": 0
+  },
+  "鈴": {
+    "exampleKanji": "風鈴",
+    "exampleJp": "ふうりん",
+    "score": 0
+  },
+  "福": {
+    "exampleKanji": "幸福",
+    "exampleJp": "こうふく",
+    "score": 0
+  },
+  "鼻": {
+    "exampleKanji": "鼻水",
+    "exampleJp": "はなみず",
+    "score": 0
+  },
+  "叫": {
+    "exampleKanji": "叫び",
+    "exampleJp": "さけび",
+    "score": 0
+  },
+  "喚": {
+    "exampleKanji": "喚く",
+    "exampleJp": "わめく",
+    "score": 0
+  },
+  "窟": {
+    "exampleKanji": "洞窟",
+    "exampleJp": "どうくつ",
+    "score": 2.29
+  },
+  "追": {
+    "exampleKanji": "訴追",
+    "exampleJp": "そつい",
+    "score": 0
+  },
+  "哀": {
+    "exampleKanji": "哀れ",
+    "exampleJp": "あわれ",
+    "score": 0
+  },
+  "歌": {
+    "exampleKanji": "演歌",
+    "exampleJp": "えんか",
+    "score": 0
+  },
+  "感": {
+    "exampleKanji": "快感",
+    "exampleJp": "かいかん",
+    "score": 0
+  },
+  "歓": {
+    "exampleKanji": "歓喜",
+    "exampleJp": "かんき",
+    "score": 0
+  },
+  "史": {
+    "exampleKanji": "史家",
+    "exampleJp": "しか",
+    "score": 0
+  },
+  "詞": {
+    "exampleKanji": "歌詞",
+    "exampleJp": "かし",
+    "score": 0
+  },
+  "詩": {
+    "exampleKanji": "詩集",
+    "exampleJp": "ししゅう",
+    "score": 0
+  },
+  "愁": {
+    "exampleKanji": "哀愁",
+    "exampleJp": "あいしゅう",
+    "score": 0
+  },
+  "傷": {
+    "exampleKanji": "外傷",
+    "exampleJp": "がいしょう",
+    "score": 0
+  },
+  "情": {
+    "exampleKanji": "愛情",
+    "exampleJp": "あいじょう",
+    "score": 0
+  },
+  "惜": {
+    "exampleKanji": "惜しい",
+    "exampleJp": "おしい",
+    "score": 0.01
+  },
+  "訴": {
+    "exampleKanji": "起訴",
+    "exampleJp": "きそ",
+    "score": 0
+  },
+  "弔": {
+    "exampleKanji": "弔辞",
+    "exampleJp": "ちょうじ",
+    "score": 0
+  },
+  "悼": {
+    "exampleKanji": "哀悼",
+    "exampleJp": "あいとう",
+    "score": 0
+  },
+  "慕": {
+    "exampleKanji": "慕う",
+    "exampleJp": "したう",
+    "score": 0
+  },
+  "愛": {
+    "exampleKanji": "愛嬌",
+    "exampleJp": "あいきょう",
+    "score": 0
+  },
+  "飢": {
+    "exampleKanji": "飢え",
+    "exampleJp": "うえ",
+    "score": 0
+  },
+  "晶": {
+    "exampleKanji": "液晶",
+    "exampleJp": "えきしょう",
+    "score": 0
+  },
+  "飲": {
+    "exampleKanji": "飲む",
+    "exampleJp": "のむ",
+    "score": 0
+  },
+  "液": {
+    "exampleKanji": "液化",
+    "exampleJp": "えきか",
+    "score": 0
+  },
+  "煙": {
+    "exampleKanji": "煙い",
+    "exampleJp": "けむい",
+    "score": 0
+  },
+  "家": {
+    "exampleKanji": "家屋",
+    "exampleJp": "かおく",
+    "score": 0
+  },
+  "玩": {
+    "exampleKanji": "玩具",
+    "exampleJp": "おもちゃ",
+    "score": 0
+  },
+  "郷": {
+    "exampleKanji": "郷愁",
+    "exampleJp": "きょうしゅう",
+    "score": 0
+  },
+  "吟": {
+    "exampleKanji": "吟味",
+    "exampleJp": "ぎんみ",
+    "score": 0
+  },
+  "顧": {
+    "exampleKanji": "回顧",
+    "exampleJp": "かいこ",
+    "score": 0
+  },
+  "書": {
+    "exampleKanji": "遺書",
+    "exampleJp": "いしょ",
+    "score": 0
+  },
+  "唱": {
+    "exampleKanji": "歌唱",
+    "exampleJp": "かしょう",
+    "score": 0
+  },
+  "称": {
+    "exampleKanji": "愛称",
+    "exampleJp": "あいしょう",
+    "score": 0
+  },
+  "想": {
+    "exampleKanji": "仮想",
+    "exampleJp": "かそう",
+    "score": 0
+  },
+  "併": {
+    "exampleKanji": "併合",
+    "exampleJp": "へいごう",
+    "score": 0
+  },
+  "県": {
+    "exampleKanji": "県営",
+    "exampleJp": "けんえい",
+    "score": 0
+  },
+  "鳥": {
+    "exampleKanji": "小鳥",
+    "exampleJp": "ことり",
+    "score": 0
+  },
+  "読": {
+    "exampleKanji": "愛読",
+    "exampleJp": "あいどく",
+    "score": 0
+  },
+  "猫": {
+    "exampleKanji": "猫舌",
+    "exampleJp": "ねこじた",
+    "score": 0
+  },
+  "媛": {
+    "exampleKanji": "才媛",
+    "exampleJp": "さいえん",
+    "score": 99
+  },
+  "娘": {
+    "exampleKanji": "娘婿",
+    "exampleJp": "むすめむこ",
+    "score": 0
+  },
+  "挨": {
+    "exampleKanji": "挨拶",
+    "exampleJp": "あいさつ",
+    "score": 0
+  },
+  "拶": {
+    "exampleKanji": "挨拶",
+    "exampleJp": "あいさつ",
+    "score": 0
+  },
+  "状": {
+    "exampleKanji": "異状",
+    "exampleJp": "いじょう",
+    "score": 0
+  },
+  "瀬": {
+    "exampleKanji": "瀬戸",
+    "exampleJp": "せと",
+    "score": 0
+  },
+  "祭": {
+    "exampleKanji": "祭る",
+    "exampleJp": "まつる",
+    "score": 0
+  },
+  "傾": {
+    "exampleKanji": "傾向",
+    "exampleJp": "けいこう",
+    "score": 0
+  },
+  "誘": {
+    "exampleKanji": "勧誘",
+    "exampleJp": "かんゆう",
+    "score": 0
+  },
+  "衣": {
+    "exampleKanji": "衣装",
+    "exampleJp": "いしょう",
+    "score": 0
+  },
+  "縁": {
+    "exampleKanji": "因縁",
+    "exampleJp": "いんねん",
+    "score": 0
+  },
+  "影": {
+    "exampleKanji": "遺影",
+    "exampleJp": "いえい",
+    "score": 0
+  },
+  "疫": {
+    "exampleKanji": "検疫",
+    "exampleJp": "けんえき",
+    "score": 0
+  },
+  "貨": {
+    "exampleKanji": "貨車",
+    "exampleJp": "かしゃ",
+    "score": 0
+  },
+  "漢": {
+    "exampleKanji": "漢語",
+    "exampleJp": "かんご",
+    "score": 0
+  },
+  "鬼": {
+    "exampleKanji": "鬼神",
+    "exampleJp": "きしん",
+    "score": 0
+  },
+  "戯": {
+    "exampleKanji": "悪戯",
+    "exampleJp": "いたずら",
+    "score": 0
+  },
+  "僧": {
+    "exampleKanji": "小僧",
+    "exampleJp": "こぞう",
+    "score": 0
+  },
+  "球": {
+    "exampleKanji": "気球",
+    "exampleJp": "ききゅう",
+    "score": 0
+  },
+  "形": {
+    "exampleKanji": "花形",
+    "exampleJp": "はながた",
+    "score": 0
+  },
+  "賢": {
+    "exampleKanji": "賢い",
+    "exampleJp": "かしこい",
+    "score": 0
+  },
+  "巧": {
+    "exampleKanji": "技巧",
+    "exampleJp": "ぎこう",
+    "score": 0
+  },
+  "材": {
+    "exampleKanji": "器材",
+    "exampleJp": "きざい",
+    "score": 0
+  },
+  "疾": {
+    "exampleKanji": "疾患",
+    "exampleJp": "しっかん",
+    "score": 0
+  },
+  "質": {
+    "exampleKanji": "悪質",
+    "exampleJp": "あくしつ",
+    "score": 0
+  },
+  "趣": {
+    "exampleKanji": "趣向",
+    "exampleJp": "しゅこう",
+    "score": 0
+  },
+  "味": {
+    "exampleKanji": "意味",
+    "exampleJp": "いみ",
+    "score": 0
+  },
+  "習": {
+    "exampleKanji": "演習",
+    "exampleJp": "えんしゅう",
+    "score": 0
+  },
+  "慣": {
+    "exampleKanji": "慣れ",
+    "exampleJp": "なれ",
+    "score": 0
+  },
+  "臭": {
+    "exampleKanji": "悪臭",
+    "exampleJp": "あくしゅう",
+    "score": 0
+  },
+  "循": {
+    "exampleKanji": "循環",
+    "exampleJp": "じゅんかん",
+    "score": 0
+  },
+  "環": {
+    "exampleKanji": "一環",
+    "exampleJp": "いっかん",
+    "score": 0
+  },
+  "件": {
+    "exampleKanji": "案件",
+    "exampleJp": "あんけん",
+    "score": 0
+  },
+  "推": {
+    "exampleKanji": "推す",
+    "exampleJp": "おす",
+    "score": 0
+  },
+  "量": {
+    "exampleKanji": "雨量",
+    "exampleJp": "うりょう",
+    "score": 0
+  },
+  "水": {
+    "exampleKanji": "汚水",
+    "exampleJp": "おすい",
+    "score": 0
+  },
+  "瘍": {
+    "exampleKanji": "腫瘍",
+    "exampleJp": "しゅよう",
+    "score": 0
+  },
+  "政": {
+    "exampleKanji": "軍政",
+    "exampleJp": "ぐんせい",
+    "score": 0
+  },
+  "声": {
+    "exampleKanji": "音声",
+    "exampleJp": "おんせい",
+    "score": 0
+  },
+  "税": {
+    "exampleKanji": "課税",
+    "exampleJp": "かぜい",
+    "score": 0
+  },
+  "舌": {
+    "exampleKanji": "猫舌",
+    "exampleJp": "ねこじた",
+    "score": 0
+  },
+  "闘": {
+    "exampleKanji": "格闘",
+    "exampleJp": "かくとう",
+    "score": 0
+  },
+  "銭": {
+    "exampleKanji": "金銭",
+    "exampleJp": "きんせん",
+    "score": 0
+  },
+  "相": {
+    "exampleKanji": "外相",
+    "exampleJp": "がいしょう",
+    "score": 0
+  },
+  "騒": {
+    "exampleKanji": "騒ぎ",
+    "exampleJp": "さわぎ",
+    "score": 0
+  },
+  "態": {
+    "exampleKanji": "旧態",
+    "exampleJp": "きゅうたい",
+    "score": 0
+  },
+  "党": {
+    "exampleKanji": "一党",
+    "exampleJp": "いっとう",
+    "score": 0
+  },
+  "投": {
+    "exampleKanji": "継投",
+    "exampleJp": "けいとう",
+    "score": 0
+  },
+  "童": {
+    "exampleKanji": "学童",
+    "exampleJp": "がくどう",
+    "score": 0
+  },
+  "念": {
+    "exampleKanji": "概念",
+    "exampleJp": "がいねん",
+    "score": 0
+  },
+  "罵": {
+    "exampleKanji": "罵る",
+    "exampleJp": "ののしる",
+    "score": 0
+  },
+  "筆": {
+    "exampleKanji": "鉛筆",
+    "exampleJp": "えんぴつ",
+    "score": 0
+  },
+  "評": {
+    "exampleKanji": "好評",
+    "exampleJp": "こうひょう",
+    "score": 0
+  },
+  "婦": {
+    "exampleKanji": "主婦",
+    "exampleJp": "しゅふ",
+    "score": 0
+  },
+  "弊": {
+    "exampleKanji": "疲弊",
+    "exampleJp": "ひへい",
+    "score": 0
+  },
+  "夢": {
+    "exampleKanji": "悪夢",
+    "exampleJp": "あくむ",
+    "score": 0
+  },
+  "友": {
+    "exampleKanji": "交友",
+    "exampleJp": "こうゆう",
+    "score": 0
+  },
+  "令": {
+    "exampleKanji": "号令",
+    "exampleJp": "ごうれい",
+    "score": 0
+  },
+  "例": {
+    "exampleKanji": "異例",
+    "exampleJp": "いれい",
+    "score": 0
+  },
+  "辣": {
+    "exampleKanji": "悪辣",
+    "exampleJp": "あくらつ",
+    "score": 99
+  },
+  "司": {
+    "exampleKanji": "公司",
+    "exampleJp": "コンス",
+    "score": 0
+  },
+  "締": {
+    "exampleKanji": "締結",
+    "exampleJp": "ていけつ",
+    "score": 0
+  },
+  "旗": {
+    "exampleKanji": "旗手",
+    "exampleJp": "きしゅ",
+    "score": 0
+  },
+  "昇": {
+    "exampleKanji": "昇格",
+    "exampleJp": "しょうかく",
+    "score": 0
+  },
+  "笛": {
+    "exampleKanji": "汽笛",
+    "exampleJp": "きてき",
+    "score": 0
+  },
+  "弓": {
+    "exampleKanji": "洋弓",
+    "exampleJp": "ようきゅう",
+    "score": 2.32
+  },
+  "圧": {
+    "exampleKanji": "圧巻",
+    "exampleJp": "あっかん",
+    "score": 0
+  },
+  "石": {
+    "exampleKanji": "一石",
+    "exampleJp": "いっせき",
+    "score": 0
+  },
+  "折": {
+    "exampleKanji": "右折",
+    "exampleJp": "うせつ",
+    "score": 0
+  },
+  "鋼": {
+    "exampleKanji": "鋼材",
+    "exampleJp": "こうざい",
+    "score": 0
+  },
+  "巻": {
+    "exampleKanji": "圧巻",
+    "exampleJp": "あっかん",
+    "score": 0
+  },
+  "痕": {
+    "exampleKanji": "血痕",
+    "exampleJp": "けっこん",
+    "score": 0
+  },
+  "砕": {
+    "exampleKanji": "砕く",
+    "exampleJp": "くだく",
+    "score": 0
+  },
+  "搾": {
+    "exampleKanji": "搾取",
+    "exampleJp": "さくしゅ",
+    "score": 0
+  },
+  "死": {
+    "exampleKanji": "急死",
+    "exampleJp": "きゅうし",
+    "score": 0
+  },
+  "縮": {
+    "exampleKanji": "圧縮",
+    "exampleJp": "あっしゅく",
+    "score": 0
+  },
+  "勝": {
+    "exampleKanji": "圧勝",
+    "exampleJp": "あっしょう",
+    "score": 0
+  },
+  "接": {
+    "exampleKanji": "応接",
+    "exampleJp": "おうせつ",
+    "score": 0
+  },
+  "端": {
+    "exampleKanji": "異端",
+    "exampleJp": "いたん",
+    "score": 0
+  },
+  "排": {
+    "exampleKanji": "排気",
+    "exampleJp": "はいき",
+    "score": 0
+  },
+  "迫": {
+    "exampleKanji": "圧迫",
+    "exampleJp": "あっぱく",
+    "score": 0
+  },
+  "整": {
+    "exampleKanji": "均整",
+    "exampleJp": "きんせい",
+    "score": 0
+  },
+  "旋": {
+    "exampleKanji": "斡旋",
+    "exampleJp": "あっせん",
+    "score": 0
+  },
+  "扱": {
+    "exampleKanji": "扱い",
+    "exampleJp": "あつかい",
+    "score": 0
+  },
+  "宛": {
+    "exampleKanji": "宛先",
+    "exampleJp": "あてさき",
+    "score": 0
+  },
+  "錦": {
+    "exampleKanji": "錦絵",
+    "exampleJp": "にしきえ",
+    "score": 2.38
+  },
+  "立": {
+    "exampleKanji": "王立",
+    "exampleJp": "おうりつ",
+    "score": 0
+  },
+  "穏": {
+    "exampleKanji": "穏健",
+    "exampleJp": "おんけん",
+    "score": 0
+  },
+  "危": {
+    "exampleKanji": "危害",
+    "exampleJp": "きがい",
+    "score": 0
+  },
+  "住": {
+    "exampleKanji": "安住",
+    "exampleJp": "あんじゅう",
+    "score": 0
+  },
+  "宿": {
+    "exampleKanji": "下宿",
+    "exampleJp": "げしゅく",
+    "score": 0
+  },
+  "命": {
+    "exampleKanji": "運命",
+    "exampleJp": "うんめい",
+    "score": 0
+  },
+  "静": {
+    "exampleKanji": "安静",
+    "exampleJp": "あんせい",
+    "score": 0
+  },
+  "全": {
+    "exampleKanji": "安全",
+    "exampleJp": "あんぜん",
+    "score": 0
+  },
+  "期": {
+    "exampleKanji": "一期",
+    "exampleJp": "いちご",
+    "score": 0
+  },
+  "保": {
+    "exampleKanji": "安保",
+    "exampleJp": "あんぽ",
+    "score": 0
+  },
+  "約": {
+    "exampleKanji": "解約",
+    "exampleJp": "かいやく",
+    "score": 0
+  },
+  "泰": {
+    "exampleKanji": "安泰",
+    "exampleJp": "あんたい",
+    "score": 0
+  },
+  "桃": {
+    "exampleKanji": "胡桃",
+    "exampleJp": "くるみ",
+    "score": 0
+  },
+  "山": {
+    "exampleKanji": "奥山",
+    "exampleJp": "おくやま",
+    "score": 0
+  },
+  "寧": {
+    "exampleKanji": "丁寧",
+    "exampleJp": "ていねい",
+    "score": 0
+  },
+  "秩": {
+    "exampleKanji": "秩序",
+    "exampleJp": "ちつじょ",
+    "score": 0
+  },
+  "倍": {
+    "exampleKanji": "倍増",
+    "exampleJp": "ばいぞう",
+    "score": 0
+  },
+  "売": {
+    "exampleKanji": "競売",
+    "exampleJp": "きょうばい",
+    "score": 0
+  },
+  "普": {
+    "exampleKanji": "普及",
+    "exampleJp": "ふきゅう",
+    "score": 0
+  },
+  "請": {
+    "exampleKanji": "申請",
+    "exampleJp": "しんせい",
+    "score": 0
+  },
+  "眠": {
+    "exampleKanji": "安眠",
+    "exampleJp": "あんみん",
+    "score": 0
+  },
+  "室": {
+    "exampleKanji": "一室",
+    "exampleJp": "いっしつ",
+    "score": 0
+  },
+  "暗": {
+    "exampleKanji": "暗い",
+    "exampleJp": "くらい",
+    "score": 0
+  },
+  "闇": {
+    "exampleKanji": "暗闇",
+    "exampleJp": "くらやみ",
+    "score": 0
+  },
+  "雲": {
+    "exampleKanji": "暗雲",
+    "exampleJp": "あんうん",
+    "score": 0
+  },
+  "褐": {
+    "exampleKanji": "褐色",
+    "exampleJp": "かっしょく",
+    "score": 0
+  },
+  "君": {
+    "exampleKanji": "君子",
+    "exampleJp": "くんし",
+    "score": 0
+  },
+  "陸": {
+    "exampleKanji": "上陸",
+    "exampleJp": "じょうりく",
+    "score": 0
+  },
+  "示": {
+    "exampleKanji": "暗示",
+    "exampleJp": "あんじ",
+    "score": 0
+  },
+  "礁": {
+    "exampleKanji": "暗礁",
+    "exampleJp": "あんしょう",
+    "score": 0
+  },
+  "証": {
+    "exampleKanji": "偽証",
+    "exampleJp": "ぎしょう",
+    "score": 0
+  },
+  "赤": {
+    "exampleKanji": "赤い",
+    "exampleJp": "あかい",
+    "score": 0
+  },
+  "模": {
+    "exampleKanji": "規模",
+    "exampleJp": "きぼ",
+    "score": 0
+  },
+  "索": {
+    "exampleKanji": "検索",
+    "exampleJp": "けんさく",
+    "score": 0
+  },
+  "黙": {
+    "exampleKanji": "暗黙",
+    "exampleJp": "あんもく",
+    "score": 0
+  },
+  "躍": {
+    "exampleKanji": "一躍",
+    "exampleJp": "いちやく",
+    "score": 0
+  },
+  "涙": {
+    "exampleKanji": "催涙",
+    "exampleJp": "さいるい",
+    "score": 0
+  },
+  "咽": {
+    "exampleKanji": "耳鼻咽喉科",
+    "exampleJp": "じびいんこうか",
+    "score": 2.3899999999999997
+  },
+  "喩": {
+    "exampleKanji": "比喩",
+    "exampleJp": "ひゆ",
+    "score": 0
+  },
+  "案": {
+    "exampleKanji": "案外",
+    "exampleJp": "あんがい",
+    "score": 0
+  },
+  "係": {
+    "exampleKanji": "関係",
+    "exampleJp": "かんけい",
+    "score": 0
+  },
+  "替": {
+    "exampleKanji": "為替",
+    "exampleJp": "かわせ",
+    "score": 0
+  },
+  "林": {
+    "exampleKanji": "山林",
+    "exampleJp": "さんりん",
+    "score": 0
+  },
+  "往": {
+    "exampleKanji": "往生",
+    "exampleJp": "おうじょう",
+    "score": 0
+  },
+  "降": {
+    "exampleKanji": "以降",
+    "exampleJp": "いこう",
+    "score": 0
+  },
+  "北": {
+    "exampleKanji": "東北",
+    "exampleJp": "とうほく",
+    "score": 0
+  },
+  "佐": {
+    "exampleKanji": "少佐",
+    "exampleJp": "しょうさ",
+    "score": 0
+  },
+  "勢": {
+    "exampleKanji": "威勢",
+    "exampleJp": "いせい",
+    "score": 0
+  },
+  "姿": {
+    "exampleKanji": "姿勢",
+    "exampleJp": "しせい",
+    "score": 0
+  },
+  "男": {
+    "exampleKanji": "一男",
+    "exampleJp": "いちなん",
+    "score": 0
+  },
+  "階": {
+    "exampleKanji": "一階",
+    "exampleJp": "いっかい",
+    "score": 0
+  },
+  "勲": {
+    "exampleKanji": "勲章",
+    "exampleJp": "くんしょう",
+    "score": 0
+  },
+  "冠": {
+    "exampleKanji": "栄冠",
+    "exampleJp": "えいかん",
+    "score": 0
+  },
+  "官": {
+    "exampleKanji": "官界",
+    "exampleJp": "かんかい",
+    "score": 0
+  },
+  "贈": {
+    "exampleKanji": "贈る",
+    "exampleJp": "おくる",
+    "score": 0
+  },
+  "免": {
+    "exampleKanji": "減免",
+    "exampleJp": "げんめん",
+    "score": 0
+  },
+  "託": {
+    "exampleKanji": "委託",
+    "exampleJp": "いたく",
+    "score": 0
+  },
+  "偉": {
+    "exampleKanji": "偉い",
+    "exampleJp": "えらい",
+    "score": 0
+  },
+  "観": {
+    "exampleKanji": "外観",
+    "exampleJp": "がいかん",
+    "score": 0
+  },
+  "挙": {
+    "exampleKanji": "一挙",
+    "exampleJp": "いっきょ",
+    "score": 0
+  },
+  "功": {
+    "exampleKanji": "功績",
+    "exampleJp": "こうせき",
+    "score": 0
+  },
+  "夫": {
+    "exampleKanji": "工夫",
+    "exampleJp": "くふう",
+    "score": 0
+  },
+  "績": {
+    "exampleKanji": "業績",
+    "exampleJp": "ぎょうせき",
+    "score": 0
+  },
+  "烈": {
+    "exampleKanji": "強烈",
+    "exampleJp": "きょうれつ",
+    "score": 0
+  },
+  "囲": {
+    "exampleKanji": "囲い",
+    "exampleJp": "かこい",
+    "score": 0
+  },
+  "碁": {
+    "exampleKanji": "囲碁",
+    "exampleJp": "いご",
+    "score": 0
+  },
+  "炉": {
+    "exampleKanji": "焜炉",
+    "exampleJp": "こんろ",
+    "score": 0
+  },
+  "裏": {
+    "exampleKanji": "脳裏",
+    "exampleJp": "のうり",
+    "score": 0
+  },
+  "俗": {
+    "exampleKanji": "俗語",
+    "exampleJp": "ぞくご",
+    "score": 0
+  },
+  "委": {
+    "exampleKanji": "委員",
+    "exampleJp": "いいん",
+    "score": 0
+  },
+  "談": {
+    "exampleKanji": "縁談",
+    "exampleJp": "えんだん",
+    "score": 0
+  },
+  "任": {
+    "exampleKanji": "委任",
+    "exampleJp": "いにん",
+    "score": 0
+  },
+  "嚇": {
+    "exampleKanji": "威嚇",
+    "exampleJp": "いかく",
+    "score": 0
+  },
+  "喝": {
+    "exampleKanji": "恐喝",
+    "exampleJp": "きょうかつ",
+    "score": 0
+  },
+  "権": {
+    "exampleKanji": "棄権",
+    "exampleJp": "きけん",
+    "score": 0
+  },
+  "厳": {
+    "exampleKanji": "厳か",
+    "exampleJp": "おごそか",
+    "score": 0
+  },
+  "散": {
+    "exampleKanji": "解散",
+    "exampleJp": "かいさん",
+    "score": 0
+  },
+  "名": {
+    "exampleKanji": "異名",
+    "exampleJp": "いみょう",
+    "score": 0
+  },
+  "尉": {
+    "exampleKanji": "大尉",
+    "exampleJp": "たいい",
+    "score": 0
+  },
+  "軒": {
+    "exampleKanji": "一軒",
+    "exampleJp": "いっけん",
+    "score": 0
+  },
+  "消": {
+    "exampleKanji": "解消",
+    "exampleJp": "かいしょう",
+    "score": 0
+  },
+  "阻": {
+    "exampleKanji": "阻む",
+    "exampleJp": "はばむ",
+    "score": 0
+  },
+  "喪": {
+    "exampleKanji": "喪失",
+    "exampleJp": "そうしつ",
+    "score": 0
+  },
+  "固": {
+    "exampleKanji": "確固",
+    "exampleJp": "かっこ",
+    "score": 0
+  },
+  "志": {
+    "exampleKanji": "意志",
+    "exampleJp": "いし",
+    "score": 0
+  },
+  "疎": {
+    "exampleKanji": "過疎",
+    "exampleJp": "かそ",
+    "score": 0
+  },
+  "決": {
+    "exampleKanji": "可決",
+    "exampleJp": "かけつ",
+    "score": 0
+  },
+  "表": {
+    "exampleKanji": "意表",
+    "exampleJp": "いひょう",
+    "score": 0
+  },
+  "不": {
+    "exampleKanji": "不安",
+    "exampleJp": "ふあん",
+    "score": 0
+  },
+  "匠": {
+    "exampleKanji": "巨匠",
+    "exampleJp": "きょしょう",
+    "score": 0
+  },
+  "猿": {
+    "exampleKanji": "猿人",
+    "exampleJp": "えんじん",
+    "score": 2.31
+  },
+  "深": {
+    "exampleKanji": "深い",
+    "exampleJp": "ふかい",
+    "score": 0
+  },
+  "慰": {
+    "exampleKanji": "慰安",
+    "exampleJp": "いあん",
+    "score": 0
+  },
+  "謝": {
+    "exampleKanji": "感謝",
+    "exampleJp": "かんしゃ",
+    "score": 0
+  },
+  "問": {
+    "exampleKanji": "学問",
+    "exampleJp": "がくもん",
+    "score": 0
+  },
+  "霊": {
+    "exampleKanji": "幽霊",
+    "exampleJp": "ゆうれい",
+    "score": 0
+  },
+  "経": {
+    "exampleKanji": "経つ",
+    "exampleJp": "たつ",
+    "score": 0
+  },
+  "椅": {
+    "exampleKanji": "椅子",
+    "exampleJp": "いす",
+    "score": 0
+  },
+  "難": {
+    "exampleKanji": "海難",
+    "exampleJp": "かいなん",
+    "score": 0
+  },
+  "残": {
+    "exampleKanji": "残り",
+    "exampleJp": "のこり",
+    "score": 0
+  },
+  "尽": {
+    "exampleKanji": "尽きる",
+    "exampleJp": "つきる",
+    "score": 0.01
+  },
+  "続": {
+    "exampleKanji": "永続",
+    "exampleJp": "えいぞく",
+    "score": 0
+  },
+  "銀": {
+    "exampleKanji": "銀河",
+    "exampleJp": "ぎんが",
+    "score": 0
+  },
+  "敬": {
+    "exampleKanji": "敬う",
+    "exampleJp": "うやまう",
+    "score": 0
+  },
+  "怖": {
+    "exampleKanji": "恐怖",
+    "exampleJp": "きょうふ",
+    "score": 0
+  },
+  "議": {
+    "exampleKanji": "異議",
+    "exampleJp": "いぎ",
+    "score": 0
+  },
+  "彩": {
+    "exampleKanji": "彩り",
+    "exampleJp": "いろどり",
+    "score": 0
+  },
+  "才": {
+    "exampleKanji": "才能",
+    "exampleJp": "さいのう",
+    "score": 0
+  },
+  "宗": {
+    "exampleKanji": "宗教",
+    "exampleJp": "しゅうきょう",
+    "score": 0
+  },
+  "象": {
+    "exampleKanji": "印象",
+    "exampleJp": "いんしょう",
+    "score": 0
+  },
+  "常": {
+    "exampleKanji": "異常",
+    "exampleJp": "いじょう",
+    "score": 0
+  },
+  "了": {
+    "exampleKanji": "完了",
+    "exampleJp": "かんりょう",
+    "score": 0
+  },
+  "姓": {
+    "exampleKanji": "旧姓",
+    "exampleJp": "きゅうせい",
+    "score": 0
+  },
+  "星": {
+    "exampleKanji": "衛星",
+    "exampleJp": "えいせい",
+    "score": 0
+  },
+  "説": {
+    "exampleKanji": "演説",
+    "exampleJp": "えんぜつ",
+    "score": 0
+  },
+  "朝": {
+    "exampleKanji": "王朝",
+    "exampleJp": "おうちょう",
+    "score": 0
+  },
+  "導": {
+    "exampleKanji": "指導",
+    "exampleJp": "しどう",
+    "score": 0
+  },
+  "膜": {
+    "exampleKanji": "角膜",
+    "exampleJp": "かくまく",
+    "score": 0
+  },
+  "類": {
+    "exampleKanji": "魚類",
+    "exampleJp": "ぎょるい",
+    "score": 0
+  },
+  "植": {
+    "exampleKanji": "移植",
+    "exampleJp": "いしょく",
+    "score": 0
+  },
+  "籍": {
+    "exampleKanji": "移籍",
+    "exampleJp": "いせき",
+    "score": 0
+  },
+  "駐": {
+    "exampleKanji": "常駐",
+    "exampleJp": "じょうちゅう",
+    "score": 0
+  },
+  "館": {
+    "exampleKanji": "開館",
+    "exampleJp": "かいかん",
+    "score": 0
+  },
+  "費": {
+    "exampleKanji": "会費",
+    "exampleJp": "かいひ",
+    "score": 0
+  },
+  "緯": {
+    "exampleKanji": "緯度",
+    "exampleJp": "いど",
+    "score": 0
+  },
+  "胃": {
+    "exampleKanji": "胃腸",
+    "exampleJp": "いちょう",
+    "score": 0
+  },
+  "炎": {
+    "exampleKanji": "炎症",
+    "exampleJp": "えんしょう",
+    "score": 0
+  },
+  "浄": {
+    "exampleKanji": "浄化",
+    "exampleJp": "じょうか",
+    "score": 0
+  },
+  "腸": {
+    "exampleKanji": "胃腸",
+    "exampleJp": "いちょう",
+    "score": 0
+  },
+  "潰": {
+    "exampleKanji": "潰す",
+    "exampleJp": "つぶす",
+    "score": 0
+  },
+  "壁": {
+    "exampleKanji": "外壁",
+    "exampleJp": "がいへき",
+    "score": 0
+  },
+  "薬": {
+    "exampleKanji": "医薬",
+    "exampleJp": "いやく",
+    "score": 0
+  },
+  "架": {
+    "exampleKanji": "架空",
+    "exampleJp": "かくう",
+    "score": 0
+  },
+  "桁": {
+    "exampleKanji": "衣桁",
+    "exampleJp": "いこう",
+    "score": 99
+  },
+  "装": {
+    "exampleKanji": "衣装",
+    "exampleJp": "いしょう",
+    "score": 0
+  },
+  "鉢": {
+    "exampleKanji": "鉢巻",
+    "exampleJp": "はちまき",
+    "score": 0
+  },
+  "紋": {
+    "exampleKanji": "指紋",
+    "exampleJp": "しもん",
+    "score": 0
+  },
+  "糧": {
+    "exampleKanji": "食糧",
+    "exampleJp": "しょくりょう",
+    "score": 0
+  },
+  "違": {
+    "exampleKanji": "違い",
+    "exampleJp": "ちがい",
+    "score": 0
+  },
+  "憲": {
+    "exampleKanji": "違憲",
+    "exampleJp": "いけん",
+    "score": 0
+  },
+  "遺": {
+    "exampleKanji": "遺影",
+    "exampleJp": "いえい",
+    "score": 0
+  },
+  "詠": {
+    "exampleKanji": "詠む",
+    "exampleJp": "よむ",
+    "score": 0
+  },
+  "戒": {
+    "exampleKanji": "戒告",
+    "exampleJp": "かいこく",
+    "score": 0
+  },
+  "骸": {
+    "exampleKanji": "骸骨",
+    "exampleJp": "がいこつ",
+    "score": 0
+  },
+  "憾": {
+    "exampleKanji": "遺憾",
+    "exampleJp": "いかん",
+    "score": 0
+  },
+  "訓": {
+    "exampleKanji": "教訓",
+    "exampleJp": "きょうくん",
+    "score": 0
+  },
+  "孤": {
+    "exampleKanji": "孤児",
+    "exampleJp": "こじ",
+    "score": 0
+  },
+  "稿": {
+    "exampleKanji": "原稿",
+    "exampleJp": "げんこう",
+    "score": 0
+  },
+  "告": {
+    "exampleKanji": "戒告",
+    "exampleJp": "かいこく",
+    "score": 0
+  },
+  "骨": {
+    "exampleKanji": "遺骨",
+    "exampleJp": "いこつ",
+    "score": 0
+  },
+  "恨": {
+    "exampleKanji": "恨み",
+    "exampleJp": "うらみ",
+    "score": 0
+  },
+  "財": {
+    "exampleKanji": "家財",
+    "exampleJp": "かざい",
+    "score": 0
+  },
+  "作": {
+    "exampleKanji": "遺作",
+    "exampleJp": "いさく",
+    "score": 0
+  },
+  "失": {
+    "exampleKanji": "過失",
+    "exampleJp": "かしつ",
+    "score": 0
+  },
+  "臣": {
+    "exampleKanji": "大臣",
+    "exampleJp": "だいじん",
+    "score": 0
+  },
+  "精": {
+    "exampleKanji": "射精",
+    "exampleJp": "しゃせい",
+    "score": 0
+  },
+  "跡": {
+    "exampleKanji": "遺跡",
+    "exampleJp": "いせき",
+    "score": 0
+  },
+  "脱": {
+    "exampleKanji": "逸脱",
+    "exampleJp": "いつだつ",
+    "score": 0
+  },
+  "著": {
+    "exampleKanji": "共著",
+    "exampleJp": "きょうちょ",
+    "score": 0
+  },
+  "髪": {
+    "exampleKanji": "散髪",
+    "exampleJp": "さんぱつ",
+    "score": 0
+  },
+  "芳": {
+    "exampleKanji": "芳香",
+    "exampleJp": "ほうこう",
+    "score": 2.27
+  },
+  "院": {
+    "exampleKanji": "医院",
+    "exampleJp": "いいん",
+    "score": 0
+  },
+  "界": {
+    "exampleKanji": "界隈",
+    "exampleJp": "かいわい",
+    "score": 0
+  },
+  "博": {
+    "exampleKanji": "博愛",
+    "exampleJp": "はくあい",
+    "score": 0
+  },
+  "務": {
+    "exampleKanji": "外務",
+    "exampleJp": "がいむ",
+    "score": 0
+  },
+  "療": {
+    "exampleKanji": "医療",
+    "exampleJp": "いりょう",
+    "score": 0
+  },
+  "械": {
+    "exampleKanji": "機械",
+    "exampleJp": "きかい",
+    "score": 0
+  },
+  "施": {
+    "exampleKanji": "施す",
+    "exampleJp": "ほどこす",
+    "score": 0
+  },
+  "険": {
+    "exampleKanji": "危険",
+    "exampleJp": "きけん",
+    "score": 0
+  },
+  "酬": {
+    "exampleKanji": "応酬",
+    "exampleJp": "おうしゅう",
+    "score": 0
+  },
+  "輸": {
+    "exampleKanji": "運輸",
+    "exampleJp": "うんゆ",
+    "score": 0
+  },
+  "井": {
+    "exampleKanji": "井戸",
+    "exampleJp": "いど",
+    "score": 0
+  },
+  "海": {
+    "exampleKanji": "沿海",
+    "exampleJp": "えんかい",
+    "score": 0
+  },
+  "戸": {
+    "exampleKanji": "井戸",
+    "exampleJp": "いど",
+    "score": 0
+  },
+  "掘": {
+    "exampleKanji": "掘る",
+    "exampleJp": "ほる",
+    "score": 0
+  },
+  "側": {
+    "exampleKanji": "縁側",
+    "exampleJp": "えんがわ",
+    "score": 0
+  },
+  "泉": {
+    "exampleKanji": "温泉",
+    "exampleJp": "おんせん",
+    "score": 0
+  },
+  "親": {
+    "exampleKanji": "近親",
+    "exampleJp": "きんしん",
+    "score": 0
+  },
+  "園": {
+    "exampleKanji": "園芸",
+    "exampleJp": "えんげい",
+    "score": 0
+  },
+  "栽": {
+    "exampleKanji": "栽培",
+    "exampleJp": "さいばい",
+    "score": 0
+  },
+  "培": {
+    "exampleKanji": "栽培",
+    "exampleJp": "さいばい",
+    "score": 0
+  },
+  "苗": {
+    "exampleKanji": "苗木",
+    "exampleJp": "なえぎ",
+    "score": 0
+  },
+  "巾": {
+    "exampleKanji": "雑巾",
+    "exampleJp": "ぞうきん",
+    "score": 0
+  },
+  "八": {
+    "exampleKanji": "十八",
+    "exampleJp": "じゅうはち",
+    "score": 0
+  },
+  "身": {
+    "exampleKanji": "一身",
+    "exampleJp": "いっしん",
+    "score": 0
+  },
+  "二": {
+    "exampleKanji": "十二",
+    "exampleJp": "じゅうに",
+    "score": 0
+  },
+  "専": {
+    "exampleKanji": "住専",
+    "exampleJp": "じゅうせん",
+    "score": 0
+  },
+  "羽": {
+    "exampleKanji": "羽織",
+    "exampleJp": "はおり",
+    "score": 0
+  },
+  "雨": {
+    "exampleKanji": "雨具",
+    "exampleJp": "あまぐ",
+    "score": 0
+  },
+  "円": {
+    "exampleKanji": "一円",
+    "exampleJp": "いちえん",
+    "score": 0
+  },
+  "億": {
+    "exampleKanji": "一億",
+    "exampleJp": "いちおく",
+    "score": 0
+  },
+  "稼": {
+    "exampleKanji": "稼ぎ",
+    "exampleJp": "かせぎ",
+    "score": 0
+  },
+  "箇": {
+    "exampleKanji": "箇所",
+    "exampleJp": "かしょ",
+    "score": 0
+  },
+  "花": {
+    "exampleKanji": "火花",
+    "exampleJp": "ひばな",
+    "score": 0
+  },
+  "介": {
+    "exampleKanji": "介護",
+    "exampleJp": "かいご",
+    "score": 0
+  },
+  "忌": {
+    "exampleKanji": "回忌",
+    "exampleJp": "かいき",
+    "score": 0
+  },
+  "塊": {
+    "exampleKanji": "団塊",
+    "exampleJp": "だんかい",
+    "score": 0
+  },
+  "概": {
+    "exampleKanji": "概算",
+    "exampleJp": "がいさん",
+    "score": 0
+  },
+  "獣": {
+    "exampleKanji": "怪獣",
+    "exampleJp": "かいじゅう",
+    "score": 0
+  },
+  "郭": {
+    "exampleKanji": "輪郭",
+    "exampleJp": "りんかく",
+    "score": 0
+  },
+  "括": {
+    "exampleKanji": "一括",
+    "exampleJp": "いっかつ",
+    "score": 0
+  },
+  "貫": {
+    "exampleKanji": "一貫",
+    "exampleJp": "いっかん",
+    "score": 0
+  },
+  "丸": {
+    "exampleKanji": "一丸",
+    "exampleJp": "いちがん",
+    "score": 0
+  },
+  "眼": {
+    "exampleKanji": "眼科",
+    "exampleJp": "がんか",
+    "score": 0
+  },
+  "喜": {
+    "exampleKanji": "歓喜",
+    "exampleJp": "かんき",
+    "score": 0
+  },
+  "憂": {
+    "exampleKanji": "憂慮",
+    "exampleJp": "ゆうりょ",
+    "score": 0
+  },
+  "軸": {
+    "exampleKanji": "主軸",
+    "exampleJp": "しゅじく",
+    "score": 0
+  },
+  "騎": {
+    "exampleKanji": "騎士",
+    "exampleJp": "きし",
+    "score": 0
+  },
+  "千": {
+    "exampleKanji": "何千",
+    "exampleJp": "なんぜん",
+    "score": 0
+  },
+  "菊": {
+    "exampleKanji": "菊花",
+    "exampleJp": "きっか",
+    "score": 2.26
+  },
+  "足": {
+    "exampleKanji": "一足",
+    "exampleJp": "いっそく",
+    "score": 0
+  },
+  "両": {
+    "exampleKanji": "一両",
+    "exampleJp": "いちりょう",
+    "score": 0
+  },
+  "興": {
+    "exampleKanji": "興す",
+    "exampleJp": "おこす",
+    "score": 0
+  },
+  "驚": {
+    "exampleKanji": "吃驚",
+    "exampleJp": "びっくり",
+    "score": 0
+  },
+  "斤": {
+    "exampleKanji": "一斤",
+    "exampleJp": "いっきん",
+    "score": 99
+  },
+  "筋": {
+    "exampleKanji": "筋道",
+    "exampleJp": "すじみち",
+    "score": 0
+  },
+  "縄": {
+    "exampleKanji": "沖縄",
+    "exampleJp": "おきなわ",
+    "score": 0
+  },
+  "句": {
+    "exampleKanji": "禁句",
+    "exampleJp": "きんく",
+    "score": 0
+  },
+  "区": {
+    "exampleKanji": "学区",
+    "exampleJp": "がっく",
+    "score": 0
+  },
+  "具": {
+    "exampleKanji": "雨具",
+    "exampleJp": "あまぐ",
+    "score": 0
+  },
+  "軍": {
+    "exampleKanji": "一軍",
+    "exampleJp": "いちぐん",
+    "score": 0
+  },
+  "系": {
+    "exampleKanji": "家系",
+    "exampleJp": "かけい",
+    "score": 0
+  },
+  "芸": {
+    "exampleKanji": "園芸",
+    "exampleJp": "えんげい",
+    "score": 0
+  },
+  "月": {
+    "exampleKanji": "１月",
+    "exampleJp": "いちがつ",
+    "score": 0
+  },
+  "献": {
+    "exampleKanji": "献金",
+    "exampleJp": "けんきん",
+    "score": 0
+  },
+  "元": {
+    "exampleKanji": "一元",
+    "exampleJp": "いちげん",
+    "score": 0
+  },
+  "琴": {
+    "exampleKanji": "琴線",
+    "exampleJp": "きんせん",
+    "score": 99
+  },
+  "個": {
+    "exampleKanji": "一個",
+    "exampleJp": "いっこ",
+    "score": 0
+  },
+  "己": {
+    "exampleKanji": "自己",
+    "exampleJp": "じこ",
+    "score": 0
+  },
+  "建": {
+    "exampleKanji": "建議",
+    "exampleJp": "けんぎ",
+    "score": 0
+  },
+  "鼓": {
+    "exampleKanji": "太鼓",
+    "exampleJp": "たいこ",
+    "score": 0
+  },
+  "商": {
+    "exampleKanji": "画商",
+    "exampleJp": "がしょう",
+    "score": 0
+  },
+  "更": {
+    "exampleKanji": "更に",
+    "exampleJp": "さらに",
+    "score": 0
+  },
+  "票": {
+    "exampleKanji": "一票",
+    "exampleJp": "いっぴょう",
+    "score": 0
+  },
+  "再": {
+    "exampleKanji": "再び",
+    "exampleJp": "ふたたび",
+    "score": 0
+  },
+  "際": {
+    "exampleKanji": "間際",
+    "exampleJp": "まぎわ",
+    "score": 0
+  },
+  "昨": {
+    "exampleKanji": "昨今",
+    "exampleJp": "さっこん",
+    "score": 0
+  },
+  "冊": {
+    "exampleKanji": "一冊",
+    "exampleJp": "いっさつ",
+    "score": 0
+  },
+  "撮": {
+    "exampleKanji": "撮る",
+    "exampleJp": "とる",
+    "score": 0
+  },
+  "賜": {
+    "exampleKanji": "賜杯",
+    "exampleJp": "しはい",
+    "score": 0
+  },
+  "預": {
+    "exampleKanji": "預金",
+    "exampleJp": "よきん",
+    "score": 0
+  },
+  "憶": {
+    "exampleKanji": "記憶",
+    "exampleJp": "きおく",
+    "score": 0
+  },
+  "尺": {
+    "exampleKanji": "尺度",
+    "exampleJp": "しゃくど",
+    "score": 0
+  },
+  "販": {
+    "exampleKanji": "再販",
+    "exampleJp": "さいはん",
+    "score": 0
+  },
+  "首": {
+    "exampleKanji": "一首",
+    "exampleJp": "いっしゅ",
+    "score": 0
+  },
+  "蹴": {
+    "exampleKanji": "蹴る",
+    "exampleJp": "ける",
+    "score": 0
+  },
+  "週": {
+    "exampleKanji": "今週",
+    "exampleJp": "こんしゅう",
+    "score": 0
+  },
+  "汁": {
+    "exampleKanji": "果汁",
+    "exampleJp": "かじゅう",
+    "score": 0
+  },
+  "重": {
+    "exampleKanji": "貴重",
+    "exampleJp": "きちょう",
+    "score": 0
+  },
+  "継": {
+    "exampleKanji": "継ぐ",
+    "exampleJp": "つぐ",
+    "score": 0
+  },
+  "桜": {
+    "exampleKanji": "桜花",
+    "exampleJp": "おうか",
+    "score": 2.26
+  },
+  "飯": {
+    "exampleKanji": "ご飯",
+    "exampleJp": "ごはん",
+    "score": 0
+  },
+  "瞬": {
+    "exampleKanji": "一瞬",
+    "exampleJp": "いっしゅん",
+    "score": 0
+  },
+  "旬": {
+    "exampleKanji": "下旬",
+    "exampleJp": "げじゅん",
+    "score": 0
+  },
+  "懸": {
+    "exampleKanji": "懸案",
+    "exampleJp": "けんあん",
+    "score": 0
+  },
+  "緒": {
+    "exampleKanji": "一緒",
+    "exampleJp": "いっしょ",
+    "score": 0
+  },
+  "助": {
+    "exampleKanji": "一助",
+    "exampleJp": "いちじょ",
+    "score": 0
+  },
+  "升": {
+    "exampleKanji": "一升",
+    "exampleJp": "いっしょう",
+    "score": 99
+  },
+  "畳": {
+    "exampleKanji": "畳む",
+    "exampleJp": "たたむ",
+    "score": 0
+  },
+  "錠": {
+    "exampleKanji": "手錠",
+    "exampleJp": "てじょう",
+    "score": 0
+  },
+  "即": {
+    "exampleKanji": "即ち",
+    "exampleJp": "すなわち",
+    "score": 0
+  },
+  "審": {
+    "exampleKanji": "一審",
+    "exampleJp": "いっしん",
+    "score": 0
+  },
+  "乱": {
+    "exampleKanji": "狂乱",
+    "exampleJp": "きょうらん",
+    "score": 0
+  },
+  "進": {
+    "exampleKanji": "急進",
+    "exampleJp": "きゅうしん",
+    "score": 0
+  },
+  "退": {
+    "exampleKanji": "引退",
+    "exampleJp": "いんたい",
+    "score": 0
+  },
+  "陣": {
+    "exampleKanji": "出陣",
+    "exampleJp": "しゅつじん",
+    "score": 0
+  },
+  "炊": {
+    "exampleKanji": "自炊",
+    "exampleJp": "じすい",
+    "score": 0
+  },
+  "逃": {
+    "exampleKanji": "逃走",
+    "exampleJp": "とうそう",
+    "score": 0
+  },
+  "涯": {
+    "exampleKanji": "生涯",
+    "exampleJp": "しょうがい",
+    "score": 0
+  },
+  "検": {
+    "exampleKanji": "検診",
+    "exampleJp": "けんしん",
+    "score": 0
+  },
+  "隻": {
+    "exampleKanji": "一隻",
+    "exampleJp": "いっせき",
+    "score": 99
+  },
+  "席": {
+    "exampleKanji": "寄席",
+    "exampleJp": "よせ",
+    "score": 0
+  },
+  "昔": {
+    "exampleKanji": "一昔",
+    "exampleJp": "ひとむかし",
+    "score": 0
+  },
+  "掃": {
+    "exampleKanji": "一掃",
+    "exampleJp": "いっそう",
+    "score": 0
+  },
+  "曹": {
+    "exampleKanji": "法曹",
+    "exampleJp": "ほうそう",
+    "score": 2.27
+  },
+  "槽": {
+    "exampleKanji": "水槽",
+    "exampleJp": "すいそう",
+    "score": 0
+  },
+  "隊": {
+    "exampleKanji": "艦隊",
+    "exampleJp": "かんたい",
+    "score": 0
+  },
+  "旦": {
+    "exampleKanji": "一旦",
+    "exampleJp": "いったん",
+    "score": 0
+  },
+  "段": {
+    "exampleKanji": "一段",
+    "exampleJp": "いちだん",
+    "score": 0
+  },
+  "昼": {
+    "exampleKanji": "昼寝",
+    "exampleJp": "ひるね",
+    "score": 0
+  },
+  "夕": {
+    "exampleKanji": "朝夕",
+    "exampleJp": "あさゆう",
+    "score": 0
+  },
+  "坪": {
+    "exampleKanji": "坪数",
+    "exampleJp": "つぼすう",
+    "score": 99
+  },
+  "社": {
+    "exampleKanji": "会社",
+    "exampleJp": "かいしゃ",
+    "score": 0
+  },
+  "滴": {
+    "exampleKanji": "水滴",
+    "exampleJp": "すいてき",
+    "score": 0
+  },
+  "徹": {
+    "exampleKanji": "徹底",
+    "exampleJp": "てってい",
+    "score": 0
+  },
+  "万": {
+    "exampleKanji": "万一",
+    "exampleJp": "まんいち",
+    "score": 0
+  },
+  "斗": {
+    "exampleKanji": "一斗",
+    "exampleJp": "いっと",
+    "score": 99
+  },
+  "刀": {
+    "exampleKanji": "剃刀",
+    "exampleJp": "かみそり",
+    "score": 0
+  },
+  "彫": {
+    "exampleKanji": "彫る",
+    "exampleJp": "ほる",
+    "score": 0
+  },
+  "棟": {
+    "exampleKanji": "病棟",
+    "exampleJp": "びょうとう",
+    "score": 0
+  },
+  "卒": {
+    "exampleKanji": "何卒",
+    "exampleJp": "なにとぞ",
+    "score": 0
+  },
+  "統": {
+    "exampleKanji": "系統",
+    "exampleJp": "けいとう",
+    "score": 0
+  },
+  "増": {
+    "exampleKanji": "急増",
+    "exampleJp": "きゅうぞう",
+    "score": 0
+  },
+  "起": {
+    "exampleKanji": "縁起",
+    "exampleJp": "えんぎ",
+    "score": 0
+  },
+  "把": {
+    "exampleKanji": "把握",
+    "exampleJp": "はあく",
+    "score": 0
+  },
+  "敗": {
+    "exampleKanji": "一敗",
+    "exampleJp": "いっぱい",
+    "score": 0
+  },
+  "泊": {
+    "exampleKanji": "一泊",
+    "exampleJp": "いっぱく",
+    "score": 0
+  },
+  "肌": {
+    "exampleKanji": "肌色",
+    "exampleJp": "はだいろ",
+    "score": 0
+  },
+  "斑": {
+    "exampleKanji": "一斑",
+    "exampleJp": "いっぱん",
+    "score": 99
+  },
+  "般": {
+    "exampleKanji": "一般",
+    "exampleJp": "いっぱん",
+    "score": 0
+  },
+  "幕": {
+    "exampleKanji": "一幕",
+    "exampleJp": "ひとまく",
+    "score": 0
+  },
+  "僚": {
+    "exampleKanji": "閣僚",
+    "exampleJp": "かくりょう",
+    "score": 0
+  },
+  "鶏": {
+    "exampleKanji": "鶏肉",
+    "exampleJp": "とりにく",
+    "score": 0
+  },
+  "匹": {
+    "exampleKanji": "一匹",
+    "exampleJp": "いっぴき",
+    "score": 0
+  },
+  "姫": {
+    "exampleKanji": "舞姫",
+    "exampleJp": "まいひめ",
+    "score": 2.41
+  },
+  "俵": {
+    "exampleKanji": "土俵",
+    "exampleJp": "どひょう",
+    "score": 0
+  },
+  "秒": {
+    "exampleKanji": "秒速",
+    "exampleJp": "びょうそく",
+    "score": 0
+  },
+  "封": {
+    "exampleKanji": "完封",
+    "exampleJp": "かんぷう",
+    "score": 0
+  },
+  "幅": {
+    "exampleKanji": "大幅",
+    "exampleJp": "おおはば",
+    "score": 0
+  },
+  "厘": {
+    "exampleKanji": "分厘",
+    "exampleJp": "ふんりん",
+    "score": 99
+  },
+  "癖": {
+    "exampleKanji": "口癖",
+    "exampleJp": "くちぐせ",
+    "score": 0
+  },
+  "遍": {
+    "exampleKanji": "何遍",
+    "exampleJp": "なんべん",
+    "score": 0
+  },
+  "抱": {
+    "exampleKanji": "辛抱",
+    "exampleJp": "しんぼう",
+    "score": 0
+  },
+  "泡": {
+    "exampleKanji": "発泡スチロール",
+    "exampleJp": "はっぽうスチロール",
+    "score": 0.05
+  },
+  "松": {
+    "exampleKanji": "赤松",
+    "exampleJp": "あかまつ",
+    "score": 0
+  },
+  "釣": {
+    "exampleKanji": "釣り",
+    "exampleJp": "つり",
+    "score": 0
+  },
+  "枚": {
+    "exampleKanji": "一枚",
+    "exampleJp": "いちまい",
+    "score": 0
+  },
+  "看": {
+    "exampleKanji": "看る",
+    "exampleJp": "みる",
+    "score": 0
+  },
+  "岩": {
+    "exampleKanji": "岩間",
+    "exampleJp": "いわま",
+    "score": 0
+  },
+  "脈": {
+    "exampleKanji": "金脈",
+    "exampleJp": "きんみゃく",
+    "score": 0
+  },
+  "睡": {
+    "exampleKanji": "睡眠",
+    "exampleJp": "すいみん",
+    "score": 0
+  },
+  "網": {
+    "exampleKanji": "金網",
+    "exampleJp": "かなあみ",
+    "score": 0
+  },
+  "瞭": {
+    "exampleKanji": "明瞭",
+    "exampleJp": "めいりょう",
+    "score": 0
+  },
+  "門": {
+    "exampleKanji": "一門",
+    "exampleJp": "いちもん",
+    "score": 0
+  },
+  "乞": {
+    "exampleKanji": "乞食",
+    "exampleJp": "こじき",
+    "score": 0
+  },
+  "造": {
+    "exampleKanji": "改造",
+    "exampleJp": "かいぞう",
+    "score": 0
+  },
+  "漬": {
+    "exampleKanji": "漬物",
+    "exampleJp": "つけもの",
+    "score": 0
+  },
+  "葉": {
+    "exampleKanji": "言葉",
+    "exampleJp": "ことば",
+    "score": 0
+  },
+  "翼": {
+    "exampleKanji": "一翼",
+    "exampleJp": "いちよく",
+    "score": 0
+  },
+  "害": {
+    "exampleKanji": "害虫",
+    "exampleJp": "がいちゅう",
+    "score": 0
+  },
+  "塚": {
+    "exampleKanji": "貝塚",
+    "exampleJp": "かいづか",
+    "score": 2.32
+  },
+  "粒": {
+    "exampleKanji": "大粒",
+    "exampleJp": "おおつぶ",
+    "score": 0
+  },
+  "既": {
+    "exampleKanji": "既に",
+    "exampleJp": "すでに",
+    "score": 0
+  },
+  "塁": {
+    "exampleKanji": "一塁",
+    "exampleJp": "いちるい",
+    "score": 0
+  },
+  "礼": {
+    "exampleKanji": "儀礼",
+    "exampleJp": "ぎれい",
+    "score": 0
+  },
+  "六": {
+    "exampleKanji": "十六",
+    "exampleJp": "じゅうろく",
+    "score": 0
+  },
+  "刹": {
+    "exampleKanji": "刹那",
+    "exampleJp": "せつな",
+    "score": 0
+  },
+  "稲": {
+    "exampleKanji": "稲妻",
+    "exampleJp": "いなずま",
+    "score": 0
+  },
+  "刈": {
+    "exampleKanji": "刈る",
+    "exampleJp": "かる",
+    "score": 0
+  },
+  "茨": {
+    "exampleKanji": "茨垣",
+    "exampleJp": "いばらがき",
+    "score": 99
+  },
+  "城": {
+    "exampleKanji": "城内",
+    "exampleJp": "じょうない",
+    "score": 0
+  },
+  "茎": {
+    "exampleKanji": "芋茎",
+    "exampleJp": "ずいき",
+    "score": 99
+  },
+  "鑑": {
+    "exampleKanji": "印鑑",
+    "exampleJp": "いんかん",
+    "score": 0
+  },
+  "刷": {
+    "exampleKanji": "印刷",
+    "exampleJp": "いんさつ",
+    "score": 0
+  },
+  "璽": {
+    "exampleKanji": "印璽",
+    "exampleJp": "いんじ",
+    "score": 99
+  },
+  "章": {
+    "exampleKanji": "楽章",
+    "exampleJp": "がくしょう",
+    "score": 0
+  },
+  "池": {
+    "exampleKanji": "電池",
+    "exampleJp": "でんち",
+    "score": 0
+  },
+  "判": {
+    "exampleKanji": "公判",
+    "exampleJp": "こうはん",
+    "score": 0
+  },
+  "譜": {
+    "exampleKanji": "楽譜",
+    "exampleJp": "がくふ",
+    "score": 0
+  },
+  "籠": {
+    "exampleKanji": "籠もる",
+    "exampleJp": "こもる",
+    "score": 0.01
+  },
+  "喉": {
+    "exampleKanji": "耳鼻咽喉科",
+    "exampleJp": "じびいんこうか",
+    "score": 2.3899999999999997
+  },
+  "由": {
+    "exampleKanji": "経由",
+    "exampleJp": "けいゆ",
+    "score": 0
+  },
+  "姻": {
+    "exampleKanji": "婚姻",
+    "exampleJp": "こんいん",
+    "score": 0
+  },
+  "戚": {
+    "exampleKanji": "親戚",
+    "exampleJp": "しんせき",
+    "score": 0
+  },
+  "去": {
+    "exampleKanji": "過去",
+    "exampleJp": "かこ",
+    "score": 0
+  },
+  "抜": {
+    "exampleKanji": "海抜",
+    "exampleJp": "かいばつ",
+    "score": 0
+  },
+  "眉": {
+    "exampleKanji": "眉毛",
+    "exampleJp": "まゆげ",
+    "score": 0
+  },
+  "戻": {
+    "exampleKanji": "戻す",
+    "exampleJp": "もどす",
+    "score": 0
+  },
+  "裂": {
+    "exampleKanji": "裂く",
+    "exampleJp": "さく",
+    "score": 0
+  },
+  "火": {
+    "exampleKanji": "下火",
+    "exampleJp": "したび",
+    "score": 0
+  },
+  "責": {
+    "exampleKanji": "引責",
+    "exampleJp": "いんせき",
+    "score": 0
+  },
+  "符": {
+    "exampleKanji": "切符",
+    "exampleJp": "きっぷ",
+    "score": 0
+  },
+  "干": {
+    "exampleKanji": "干潟",
+    "exampleJp": "ひがた",
+    "score": 0
+  },
+  "題": {
+    "exampleKanji": "課題",
+    "exampleJp": "かだい",
+    "score": 0
+  },
+  "店": {
+    "exampleKanji": "開店",
+    "exampleJp": "かいてん",
+    "score": 0
+  },
+  "淫": {
+    "exampleKanji": "淫ら",
+    "exampleJp": "みだら",
+    "score": 99
+  },
+  "奔": {
+    "exampleKanji": "奔放",
+    "exampleJp": "ほんぽう",
+    "score": 0
+  },
+  "宣": {
+    "exampleKanji": "宣言",
+    "exampleJp": "せんげん",
+    "score": 0
+  },
+  "核": {
+    "exampleKanji": "核酸",
+    "exampleJp": "かくさん",
+    "score": 0
+  },
+  "極": {
+    "exampleKanji": "究極",
+    "exampleJp": "きゅうきょく",
+    "score": 0
+  },
+  "惨": {
+    "exampleKanji": "惨め",
+    "exampleJp": "みじめ",
+    "score": 0
+  },
+  "湿": {
+    "exampleKanji": "湿る",
+    "exampleJp": "しめる",
+    "score": 0
+  },
+  "唇": {
+    "exampleKanji": "下唇",
+    "exampleJp": "したくちびる",
+    "score": 0
+  },
+  "晴": {
+    "exampleKanji": "快晴",
+    "exampleJp": "かいせい",
+    "score": 0
+  },
+  "慶": {
+    "exampleKanji": "弁慶",
+    "exampleJp": "べんけい",
+    "score": 0
+  },
+  "謀": {
+    "exampleKanji": "陰謀",
+    "exampleJp": "いんぼう",
+    "score": 0
+  },
+  "陽": {
+    "exampleKanji": "太陽",
+    "exampleJp": "たいよう",
+    "score": 0
+  },
+  "鬱": {
+    "exampleKanji": "憂鬱",
+    "exampleJp": "ゆううつ",
+    "score": 0
+  },
+  "隠": {
+    "exampleKanji": "隠す",
+    "exampleJp": "かくす",
+    "score": 0
+  },
+  "借": {
+    "exampleKanji": "借り",
+    "exampleJp": "かり",
+    "score": 0
+  },
+  "韻": {
+    "exampleKanji": "余韻",
+    "exampleJp": "よいん",
+    "score": 0
+  },
+  "匿": {
+    "exampleKanji": "匿名",
+    "exampleJp": "とくめい",
+    "score": 0
+  },
+  "資": {
+    "exampleKanji": "外資",
+    "exampleJp": "がいし",
+    "score": 0
+  },
+  "忍": {
+    "exampleKanji": "忍ぶ",
+    "exampleJp": "しのぶ",
+    "score": 0
+  },
+  "微": {
+    "exampleKanji": "微細",
+    "exampleJp": "びさい",
+    "score": 0
+  },
+  "蔽": {
+    "exampleKanji": "隠蔽",
+    "exampleJp": "いんぺい",
+    "score": 99
+  },
+  "亡": {
+    "exampleKanji": "死亡",
+    "exampleJp": "しぼう",
+    "score": 0
+  },
+  "密": {
+    "exampleKanji": "過密",
+    "exampleJp": "かみつ",
+    "score": 0
+  },
+  "滅": {
+    "exampleKanji": "隠滅",
+    "exampleJp": "いんめつ",
+    "score": 0
+  },
+  "脚": {
+    "exampleKanji": "脚色",
+    "exampleJp": "きゃくしょく",
+    "score": 0
+  },
+  "右": {
+    "exampleKanji": "右下",
+    "exampleJp": "みぎした",
+    "score": 0
+  },
+  "左": {
+    "exampleKanji": "左右",
+    "exampleJp": "さゆう",
+    "score": 0
+  },
+  "岸": {
+    "exampleKanji": "沿岸",
+    "exampleJp": "えんがん",
+    "score": 0
+  },
+  "舷": {
+    "exampleKanji": "右舷",
+    "exampleJp": "うげん",
+    "score": 2.34
+  },
+  "弧": {
+    "exampleKanji": "括弧",
+    "exampleJp": "かっこ",
+    "score": 0
+  },
+  "禁": {
+    "exampleKanji": "解禁",
+    "exampleJp": "かいきん",
+    "score": 0
+  },
+  "止": {
+    "exampleKanji": "休止",
+    "exampleJp": "きゅうし",
+    "score": 0
+  },
+  "脳": {
+    "exampleKanji": "首脳",
+    "exampleJp": "しゅのう",
+    "score": 0
+  },
+  "腕": {
+    "exampleKanji": "右腕",
+    "exampleJp": "みぎうで",
+    "score": 0
+  },
+  "宙": {
+    "exampleKanji": "宇宙",
+    "exampleJp": "うちゅう",
+    "score": 0
+  },
+  "帽": {
+    "exampleKanji": "帽子",
+    "exampleJp": "ぼうし",
+    "score": 0
+  },
+  "旅": {
+    "exampleKanji": "旅館",
+    "exampleJp": "りょかん",
+    "score": 0
+  },
+  "賊": {
+    "exampleKanji": "烏賊",
+    "exampleJp": "イカ",
+    "score": 0
+  },
+  "野": {
+    "exampleKanji": "下野",
+    "exampleJp": "げや",
+    "score": 0
+  },
+  "有": {
+    "exampleKanji": "含有",
+    "exampleJp": "がんゆう",
+    "score": 0
+  },
+  "沙": {
+    "exampleKanji": "ご無沙汰",
+    "exampleJp": "ごぶさた",
+    "score": 0.02
+  },
+  "汰": {
+    "exampleKanji": "ご無沙汰",
+    "exampleJp": "ごぶさた",
+    "score": 0.02
+  },
+  "振": {
+    "exampleKanji": "三振",
+    "exampleJp": "さんしん",
+    "score": 0
+  },
+  "靴": {
+    "exampleKanji": "靴下",
+    "exampleJp": "くつした",
+    "score": 0
+  },
+  "飼": {
+    "exampleKanji": "飼う",
+    "exampleJp": "かう",
+    "score": 0
+  },
+  "氷": {
+    "exampleKanji": "氷河",
+    "exampleJp": "ひょうが",
+    "score": 0
+  },
+  "峠": {
+    "exampleKanji": "峠道",
+    "exampleJp": "とうげみち",
+    "score": 99
+  },
+  "臼": {
+    "exampleKanji": "臼歯",
+    "exampleJp": "きゅうし",
+    "score": 99
+  },
+  "砲": {
+    "exampleKanji": "主砲",
+    "exampleJp": "しゅほう",
+    "score": 0
+  },
+  "渦": {
+    "exampleKanji": "渦中",
+    "exampleJp": "かちゅう",
+    "score": 0
+  },
+  "潮": {
+    "exampleKanji": "黒潮",
+    "exampleJp": "くろしお",
+    "score": 0
+  },
+  "百": {
+    "exampleKanji": "何百",
+    "exampleJp": "なんびゃく",
+    "score": 0
+  },
+  "浦": {
+    "exampleKanji": "津々浦々",
+    "exampleJp": "つつうらうら",
+    "score": 2.4
+  },
+  "営": {
+    "exampleKanji": "運営",
+    "exampleJp": "うんえい",
+    "score": 0
+  },
+  "航": {
+    "exampleKanji": "運航",
+    "exampleJp": "うんこう",
+    "score": 0
+  },
+  "針": {
+    "exampleKanji": "指針",
+    "exampleJp": "ししん",
+    "score": 0
+  },
+  "賃": {
+    "exampleKanji": "運賃",
+    "exampleJp": "うんちん",
+    "score": 0
+  },
+  "搬": {
+    "exampleKanji": "運搬",
+    "exampleJp": "うんぱん",
+    "score": 0
+  },
+  "省": {
+    "exampleKanji": "帰省",
+    "exampleJp": "きせい",
+    "score": 0
+  },
+  "霧": {
+    "exampleKanji": "霧雨",
+    "exampleJp": "きりさめ",
+    "score": 0
+  },
+  "差": {
+    "exampleKanji": "格差",
+    "exampleJp": "かくさ",
+    "score": 0
+  },
+  "顔": {
+    "exampleKanji": "横顔",
+    "exampleJp": "よこがお",
+    "score": 0
+  },
+  "餌": {
+    "exampleKanji": "餌食",
+    "exampleJp": "えじき",
+    "score": 99
+  },
+  "旨": {
+    "exampleKanji": "趣旨",
+    "exampleJp": "しゅし",
+    "score": 0
+  },
+  "慮": {
+    "exampleKanji": "遠慮",
+    "exampleJp": "えんりょ",
+    "score": 0
+  },
+  "収": {
+    "exampleKanji": "押収",
+    "exampleJp": "おうしゅう",
+    "score": 0
+  },
+  "畑": {
+    "exampleKanji": "田畑",
+    "exampleJp": "たはた",
+    "score": 0
+  },
+  "繕": {
+    "exampleKanji": "修繕",
+    "exampleJp": "しゅうぜん",
+    "score": 0
+  },
+  "倉": {
+    "exampleKanji": "倉庫",
+    "exampleJp": "そうこ",
+    "score": 0
+  },
+  "巣": {
+    "exampleKanji": "古巣",
+    "exampleJp": "ふるす",
+    "score": 0
+  },
+  "署": {
+    "exampleKanji": "署名",
+    "exampleJp": "しょめい",
+    "score": 0
+  },
+  "絵": {
+    "exampleKanji": "絵画",
+    "exampleJp": "かいが",
+    "score": 0
+  },
+  "像": {
+    "exampleKanji": "映像",
+    "exampleJp": "えいぞう",
+    "score": 0
+  },
+  "監": {
+    "exampleKanji": "監禁",
+    "exampleJp": "かんきん",
+    "score": 0
+  },
+  "栄": {
+    "exampleKanji": "栄冠",
+    "exampleJp": "えいかん",
+    "score": 0
+  },
+  "枯": {
+    "exampleKanji": "枯葉",
+    "exampleJp": "かれは",
+    "score": 0
+  },
+  "衰": {
+    "exampleKanji": "衰弱",
+    "exampleJp": "すいじゃく",
+    "score": 0
+  },
+  "誉": {
+    "exampleKanji": "栄誉",
+    "exampleJp": "えいよ",
+    "score": 0
+  },
+  "養": {
+    "exampleKanji": "栄養",
+    "exampleJp": "えいよう",
+    "score": 0
+  },
+  "永": {
+    "exampleKanji": "永遠",
+    "exampleJp": "えいえん",
+    "score": 0
+  },
+  "泳": {
+    "exampleKanji": "泳ぐ",
+    "exampleJp": "およぐ",
+    "score": 0
+  },
+  "悟": {
+    "exampleKanji": "覚悟",
+    "exampleJp": "かくご",
+    "score": 0
+  },
+  "礎": {
+    "exampleKanji": "基礎",
+    "exampleJp": "きそ",
+    "score": 0
+  },
+  "雄": {
+    "exampleKanji": "英雄",
+    "exampleJp": "えいゆう",
+    "score": 0
+  },
+  "鋭": {
+    "exampleKanji": "鋭い",
+    "exampleJp": "するどい",
+    "score": 0
+  },
+  "敏": {
+    "exampleKanji": "過敏",
+    "exampleJp": "かびん",
+    "score": 0
+  },
+  "痢": {
+    "exampleKanji": "下痢",
+    "exampleJp": "げり",
+    "score": 0
+  },
+  "益": {
+    "exampleKanji": "権益",
+    "exampleJp": "けんえき",
+    "score": 0
+  },
+  "駅": {
+    "exampleKanji": "駅員",
+    "exampleJp": "えきいん",
+    "score": 0
+  },
+  "競": {
+    "exampleKanji": "競う",
+    "exampleJp": "きそう",
+    "score": 0
+  },
+  "悦": {
+    "exampleKanji": "満悦",
+    "exampleJp": "まんえつ",
+    "score": 2.37
+  },
+  "謁": {
+    "exampleKanji": "謁見",
+    "exampleJp": "えっけん",
+    "score": 99
+  },
+  "境": {
+    "exampleKanji": "越境",
+    "exampleJp": "えっきょう",
+    "score": 0
+  },
+  "冬": {
+    "exampleKanji": "越冬",
+    "exampleJp": "えっとう",
+    "score": 0
+  },
+  "閲": {
+    "exampleKanji": "閲覧",
+    "exampleJp": "えつらん",
+    "score": 0
+  },
+  "飽": {
+    "exampleKanji": "飽食",
+    "exampleJp": "ほうしょく",
+    "score": 0
+  },
+  "悲": {
+    "exampleKanji": "慈悲",
+    "exampleJp": "じひ",
+    "score": 0
+  },
+  "蓋": {
+    "exampleKanji": "円蓋",
+    "exampleJp": "えんがい",
+    "score": 99
+  },
+  "規": {
+    "exampleKanji": "規格",
+    "exampleJp": "きかく",
+    "score": 0
+  },
+  "軌": {
+    "exampleKanji": "軌跡",
+    "exampleJp": "きせき",
+    "score": 0
+  },
+  "丘": {
+    "exampleKanji": "丘陵",
+    "exampleJp": "きゅうりょう",
+    "score": 0
+  },
+  "款": {
+    "exampleKanji": "借款",
+    "exampleJp": "しゃっかん",
+    "score": 0
+  },
+  "寂": {
+    "exampleKanji": "静寂",
+    "exampleJp": "せいじゃく",
+    "score": 0
+  },
+  "熟": {
+    "exampleKanji": "熟語",
+    "exampleJp": "じゅくご",
+    "score": 0
+  },
+  "刃": {
+    "exampleKanji": "刃物",
+    "exampleJp": "はもの",
+    "score": 0
+  },
+  "卓": {
+    "exampleKanji": "円卓",
+    "exampleJp": "えんたく",
+    "score": 0
+  },
+  "柱": {
+    "exampleKanji": "支柱",
+    "exampleJp": "しちゅう",
+    "score": 0
+  },
+  "頂": {
+    "exampleKanji": "山頂",
+    "exampleJp": "さんちょう",
+    "score": 0
+  },
+  "滑": {
+    "exampleKanji": "滑る",
+    "exampleJp": "すべる",
+    "score": 0
+  },
+  "墳": {
+    "exampleKanji": "古墳",
+    "exampleJp": "こふん",
+    "score": 0
+  },
+  "缶": {
+    "exampleKanji": "缶詰",
+    "exampleJp": "かんづめ",
+    "score": 0
+  },
+  "堤": {
+    "exampleKanji": "堤防",
+    "exampleJp": "ていぼう",
+    "score": 0
+  },
+  "宴": {
+    "exampleKanji": "宴会",
+    "exampleJp": "えんかい",
+    "score": 0
+  },
+  "伸": {
+    "exampleKanji": "欠伸",
+    "exampleJp": "あくび",
+    "score": 0
+  },
+  "髄": {
+    "exampleKanji": "骨髄",
+    "exampleJp": "こつずい",
+    "score": 0
+  },
+  "滞": {
+    "exampleKanji": "延滞",
+    "exampleJp": "えんたい",
+    "score": 0
+  },
+  "納": {
+    "exampleKanji": "収納",
+    "exampleJp": "しゅうのう",
+    "score": 0
+  },
+  "怨": {
+    "exampleKanji": "怨念",
+    "exampleJp": "おんねん",
+    "score": 2.25
+  },
+  "沿": {
+    "exampleKanji": "沿う",
+    "exampleJp": "そう",
+    "score": 0
+  },
+  "劇": {
+    "exampleKanji": "演劇",
+    "exampleJp": "えんげき",
+    "score": 0
+  },
+  "練": {
+    "exampleKanji": "訓練",
+    "exampleJp": "くんれん",
+    "score": 0
+  },
+  "壇": {
+    "exampleKanji": "演壇",
+    "exampleJp": "えんだん",
+    "score": 0
+  },
+  "暑": {
+    "exampleKanji": "残暑",
+    "exampleJp": "ざんしょ",
+    "score": 0
+  },
+  "股": {
+    "exampleKanji": "猿股",
+    "exampleJp": "さるまた",
+    "score": 99
+  },
+  "艶": {
+    "exampleKanji": "艶々",
+    "exampleJp": "つやつや",
+    "score": 0
+  },
+  "隔": {
+    "exampleKanji": "遠隔",
+    "exampleJp": "えんかく",
+    "score": 0
+  },
+  "講": {
+    "exampleKanji": "休講",
+    "exampleJp": "きゅうこう",
+    "score": 0
+  },
+  "操": {
+    "exampleKanji": "操る",
+    "exampleJp": "あやつる",
+    "score": 0
+  },
+  "距": {
+    "exampleKanji": "距離",
+    "exampleJp": "きょり",
+    "score": 0
+  },
+  "近": {
+    "exampleKanji": "間近",
+    "exampleJp": "まぢか",
+    "score": 0
+  },
+  "景": {
+    "exampleKanji": "景観",
+    "exampleJp": "けいかん",
+    "score": 0
+  },
+  "征": {
+    "exampleKanji": "遠征",
+    "exampleJp": "えんせい",
+    "score": 0
+  },
+  "浅": {
+    "exampleKanji": "浅い",
+    "exampleJp": "あさい",
+    "score": 0
+  },
+  "漁": {
+    "exampleKanji": "漁る",
+    "exampleJp": "あさる",
+    "score": 0
+  },
+  "雷": {
+    "exampleKanji": "機雷",
+    "exampleJp": "きらい",
+    "score": 0
+  },
+  "釈": {
+    "exampleKanji": "会釈",
+    "exampleJp": "えしゃく",
+    "score": 0
+  },
+  "削": {
+    "exampleKanji": "削る",
+    "exampleJp": "けずる",
+    "score": 0
+  },
+  "辛": {
+    "exampleKanji": "辛子",
+    "exampleJp": "からし",
+    "score": 0
+  },
+  "濃": {
+    "exampleKanji": "濃い",
+    "exampleJp": "こい",
+    "score": 0
+  },
+  "梅": {
+    "exampleKanji": "梅雨",
+    "exampleJp": "つゆ",
+    "score": 0
+  },
+  "溶": {
+    "exampleKanji": "溶く",
+    "exampleJp": "とく",
+    "score": 0
+  },
+  "汚": {
+    "exampleKanji": "汚い",
+    "exampleJp": "きたない",
+    "score": 0
+  },
+  "職": {
+    "exampleKanji": "汚職",
+    "exampleJp": "おしょく",
+    "score": 0
+  },
+  "辱": {
+    "exampleKanji": "屈辱",
+    "exampleJp": "くつじょく",
+    "score": 0
+  },
+  "源": {
+    "exampleKanji": "源泉",
+    "exampleJp": "げんせん",
+    "score": 0
+  },
+  "除": {
+    "exampleKanji": "解除",
+    "exampleJp": "かいじょ",
+    "score": 0
+  },
+  "損": {
+    "exampleKanji": "欠損",
+    "exampleJp": "けっそん",
+    "score": 0
+  },
+  "濁": {
+    "exampleKanji": "汚濁",
+    "exampleJp": "おだく",
+    "score": 0
+  },
+  "奥": {
+    "exampleKanji": "奥山",
+    "exampleJp": "おくやま",
+    "score": 0
+  },
+  "孝": {
+    "exampleKanji": "孝行",
+    "exampleJp": "こうこう",
+    "score": 0
+  },
+  "勤": {
+    "exampleKanji": "勤め",
+    "exampleJp": "つとめ",
+    "score": 0
+  },
+  "殿": {
+    "exampleKanji": "宮殿",
+    "exampleJp": "きゅうでん",
+    "score": 0
+  },
+  "庭": {
+    "exampleKanji": "家庭",
+    "exampleJp": "かてい",
+    "score": 0
+  },
+  "妙": {
+    "exampleKanji": "奇妙",
+    "exampleJp": "きみょう",
+    "score": 0
+  },
+  "還": {
+    "exampleKanji": "還元",
+    "exampleJp": "かんげん",
+    "score": 0
+  },
+  "診": {
+    "exampleKanji": "検診",
+    "exampleJp": "けんしん",
+    "score": 0
+  },
+  "復": {
+    "exampleKanji": "往復",
+    "exampleJp": "おうふく",
+    "score": 0
+  },
+  "訪": {
+    "exampleKanji": "訪日",
+    "exampleJp": "ほうにち",
+    "score": 0
+  },
+  "急": {
+    "exampleKanji": "応急",
+    "exampleJp": "おうきゅう",
+    "score": 0
+  },
+  "渡": {
+    "exampleKanji": "過渡",
+    "exampleJp": "かと",
+    "score": 0
+  },
+  "募": {
+    "exampleKanji": "応募",
+    "exampleJp": "おうぼ",
+    "score": 0
+  },
+  "広": {
+    "exampleKanji": "広い",
+    "exampleJp": "ひろい",
+    "score": 0
+  },
+  "破": {
+    "exampleKanji": "打破",
+    "exampleJp": "だは",
+    "score": 0
+  },
+  "旺": {
+    "exampleKanji": "旺盛",
+    "exampleJp": "おうせい",
+    "score": 0
+  },
+  "横": {
+    "exampleKanji": "横顔",
+    "exampleJp": "よこがお",
+    "score": 0
+  },
+  "標": {
+    "exampleKanji": "指標",
+    "exampleJp": "しひょう",
+    "score": 0
+  },
+  "奪": {
+    "exampleKanji": "争奪",
+    "exampleJp": "そうだつ",
+    "score": 0
+  },
+  "並": {
+    "exampleKanji": "並び",
+    "exampleJp": "ならび",
+    "score": 0
+  },
+  "現": {
+    "exampleKanji": "現に",
+    "exampleJp": "げんに",
+    "score": 0
+  },
+  "暴": {
+    "exampleKanji": "横暴",
+    "exampleJp": "おうぼう",
+    "score": 0
+  },
+  "領": {
+    "exampleKanji": "横領",
+    "exampleJp": "おうりょう",
+    "score": 0
+  },
+  "恋": {
+    "exampleKanji": "失恋",
+    "exampleJp": "しつれん",
+    "score": 0
+  },
+  "殴": {
+    "exampleKanji": "殴る",
+    "exampleJp": "なぐる",
+    "score": 0
+  },
+  "妃": {
+    "exampleKanji": "王妃",
+    "exampleJp": "おうひ",
+    "score": 0
+  },
+  "黄": {
+    "exampleKanji": "黄金",
+    "exampleJp": "おうごん",
+    "score": 0
+  },
+  "禍": {
+    "exampleKanji": "コロナ禍",
+    "exampleJp": "コロナか",
+    "score": 0.02
+  },
+  "崇": {
+    "exampleKanji": "崇拝",
+    "exampleJp": "すうはい",
+    "score": 0
+  },
+  "拝": {
+    "exampleKanji": "参拝",
+    "exampleJp": "さんぱい",
+    "score": 0
+  },
+  "仙": {
+    "exampleKanji": "仙台",
+    "exampleJp": "せんだい",
+    "score": 0
+  },
+  "鉄": {
+    "exampleKanji": "国鉄",
+    "exampleJp": "こくてつ",
+    "score": 0
+  },
+  "鉱": {
+    "exampleKanji": "鉱業",
+    "exampleJp": "こうぎょう",
+    "score": 0
+  },
+  "十": {
+    "exampleKanji": "十一",
+    "exampleJp": "じゅういち",
+    "score": 0
+  },
+  "緑": {
+    "exampleKanji": "新緑",
+    "exampleJp": "しんりょく",
+    "score": 0
+  },
+  "岡": {
+    "exampleKanji": "福岡",
+    "exampleJp": "ふくおか",
+    "score": 0
+  },
+  "傍": {
+    "exampleKanji": "傍観",
+    "exampleJp": "ぼうかん",
+    "score": 0
+  },
+  "沖": {
+    "exampleKanji": "沖縄",
+    "exampleJp": "おきなわ",
+    "score": 0
+  },
+  "仲": {
+    "exampleKanji": "仲介",
+    "exampleJp": "ちゅうかい",
+    "score": 0
+  },
+  "兆": {
+    "exampleKanji": "兆し",
+    "exampleJp": "きざし",
+    "score": 0
+  },
+  "臆": {
+    "exampleKanji": "臆病",
+    "exampleJp": "おくびょう",
+    "score": 0
+  },
+  "乙": {
+    "exampleKanji": "早乙女",
+    "exampleJp": "さおとめ",
+    "score": 0.01
+  },
+  "卸": {
+    "exampleKanji": "卸す",
+    "exampleJp": "おろす",
+    "score": 0
+  },
+  "恩": {
+    "exampleKanji": "恩恵",
+    "exampleJp": "おんけい",
+    "score": 0
+  },
+  "給": {
+    "exampleKanji": "給食",
+    "exampleJp": "きゅうしょく",
+    "score": 0
+  },
+  "恵": {
+    "exampleKanji": "恩恵",
+    "exampleJp": "おんけい",
+    "score": 0
+  },
+  "赦": {
+    "exampleKanji": "恩赦",
+    "exampleJp": "おんしゃ",
+    "score": 0
+  },
+  "沢": {
+    "exampleKanji": "光沢",
+    "exampleJp": "こうたく",
+    "score": 0
+  },
+  "雅": {
+    "exampleKanji": "雅致",
+    "exampleJp": "がち",
+    "score": 0
+  },
+  "厚": {
+    "exampleKanji": "温厚",
+    "exampleJp": "おんこう",
+    "score": 0
+  },
+  "床": {
+    "exampleKanji": "温床",
+    "exampleJp": "おんしょう",
+    "score": 0
+  },
+  "暖": {
+    "exampleKanji": "温暖",
+    "exampleJp": "おんだん",
+    "score": 0
+  },
+  "容": {
+    "exampleKanji": "寛容",
+    "exampleJp": "かんよう",
+    "score": 0
+  },
+  "浴": {
+    "exampleKanji": "入浴",
+    "exampleJp": "にゅうよく",
+    "score": 0
+  },
+  "健": {
+    "exampleKanji": "穏健",
+    "exampleJp": "おんけん",
+    "score": 0
+  },
+  "速": {
+    "exampleKanji": "加速",
+    "exampleJp": "かそく",
+    "score": 0
+  },
+  "坂": {
+    "exampleKanji": "坂道",
+    "exampleJp": "さかみち",
+    "score": 0
+  },
+  "互": {
+    "exampleKanji": "互い",
+    "exampleJp": "たがい",
+    "score": 0
+  },
+  "顎": {
+    "exampleKanji": "下顎",
+    "exampleJp": "したあご",
+    "score": 99
+  },
+  "協": {
+    "exampleKanji": "協会",
+    "exampleJp": "きょうかい",
+    "score": 0
+  },
+  "稽": {
+    "exampleKanji": "滑稽",
+    "exampleJp": "こっけい",
+    "score": 0
+  },
+  "血": {
+    "exampleKanji": "血圧",
+    "exampleJp": "けつあつ",
+    "score": 0
+  },
+  "査": {
+    "exampleKanji": "検査",
+    "exampleJp": "けんさ",
+    "score": 0
+  },
+  "獄": {
+    "exampleKanji": "監獄",
+    "exampleJp": "かんごく",
+    "score": 0
+  },
+  "阪": {
+    "exampleKanji": "京阪",
+    "exampleJp": "けいはん",
+    "score": 0
+  },
+  "肢": {
+    "exampleKanji": "選択肢",
+    "exampleJp": "せんたくし",
+    "score": 0.01
+  },
+  "渋": {
+    "exampleKanji": "苦渋",
+    "exampleJp": "くじゅう",
+    "score": 0
+  },
+  "履": {
+    "exampleKanji": "草履",
+    "exampleJp": "ぞうり",
+    "score": 0
+  },
+  "町": {
+    "exampleKanji": "下町",
+    "exampleJp": "したまち",
+    "score": 0
+  },
+  "働": {
+    "exampleKanji": "働き",
+    "exampleJp": "はたらき",
+    "score": 0
+  },
+  "卑": {
+    "exampleKanji": "卑怯",
+    "exampleJp": "ひきょう",
+    "score": 0
+  },
+  "肥": {
+    "exampleKanji": "堆肥",
+    "exampleJp": "たいひ",
+    "score": 0
+  },
+  "縫": {
+    "exampleKanji": "裁縫",
+    "exampleJp": "さいほう",
+    "score": 0
+  },
+  "僕": {
+    "exampleKanji": "僕ら",
+    "exampleJp": "ぼくら",
+    "score": 0
+  },
+  "吏": {
+    "exampleKanji": "官吏",
+    "exampleJp": "かんり",
+    "score": 2.34
+  },
+  "劣": {
+    "exampleKanji": "卑劣",
+    "exampleJp": "ひれつ",
+    "score": 0
+  },
+  "繊": {
+    "exampleKanji": "化繊",
+    "exampleJp": "かせん",
+    "score": 0
+  },
+  "燃": {
+    "exampleKanji": "再燃",
+    "exampleJp": "さいねん",
+    "score": 0
+  },
+  "勘": {
+    "exampleKanji": "勘定",
+    "exampleJp": "かんじょう",
+    "score": 0
+  },
+  "漆": {
+    "exampleKanji": "漆器",
+    "exampleJp": "しっき",
+    "score": 2.29
+  },
+  "受": {
+    "exampleKanji": "享受",
+    "exampleJp": "きょうじゅ",
+    "score": 0
+  },
+  "葬": {
+    "exampleKanji": "火葬",
+    "exampleJp": "かそう",
+    "score": 0
+  },
+  "踏": {
+    "exampleKanji": "踏む",
+    "exampleJp": "ふむ",
+    "score": 0
+  },
+  "貼": {
+    "exampleKanji": "貼付",
+    "exampleJp": "ちょうふ",
+    "score": 0
+  },
+  "痘": {
+    "exampleKanji": "種痘",
+    "exampleJp": "しゅとう",
+    "score": 2.27
+  },
+  "埋": {
+    "exampleKanji": "埋葬",
+    "exampleJp": "まいそう",
+    "score": 0
+  },
+  "枕": {
+    "exampleKanji": "枕詞",
+    "exampleJp": "まくらことば",
+    "score": 2.43
+  },
+  "某": {
+    "exampleKanji": "某国",
+    "exampleJp": "ぼうこく",
+    "score": 99
+  },
+  "歳": {
+    "exampleKanji": "歳月",
+    "exampleJp": "さいげつ",
+    "score": 0
+  },
+  "曜": {
+    "exampleKanji": "火曜",
+    "exampleJp": "かよう",
+    "score": 0
+  },
+  "額": {
+    "exampleKanji": "額面",
+    "exampleJp": "がくめん",
+    "score": 0
+  },
+  "佳": {
+    "exampleKanji": "佳作",
+    "exampleJp": "かさく",
+    "score": 0
+  },
+  "醸": {
+    "exampleKanji": "醸成",
+    "exampleJp": "じょうせい",
+    "score": 0
+  },
+  "麗": {
+    "exampleKanji": "華麗",
+    "exampleJp": "かれい",
+    "score": 0
+  },
+  "虐": {
+    "exampleKanji": "虐殺",
+    "exampleJp": "ぎゃくさつ",
+    "score": 0
+  },
+  "抵": {
+    "exampleKanji": "大抵",
+    "exampleJp": "たいてい",
+    "score": 0
+  },
+  "抗": {
+    "exampleKanji": "抗議",
+    "exampleJp": "こうぎ",
+    "score": 0
+  },
+  "貿": {
+    "exampleKanji": "貿易",
+    "exampleJp": "ぼうえき",
+    "score": 0
+  },
+  "糖": {
+    "exampleKanji": "砂糖",
+    "exampleJp": "さとう",
+    "score": 0
+  },
+  "俸": {
+    "exampleKanji": "年俸",
+    "exampleJp": "ねんぽう",
+    "score": 0
+  },
+  "盟": {
+    "exampleKanji": "加盟",
+    "exampleJp": "かめい",
+    "score": 0
+  },
+  "齢": {
+    "exampleKanji": "高齢",
+    "exampleJp": "こうれい",
+    "score": 0
+  },
+  "塑": {
+    "exampleKanji": "彫塑",
+    "exampleJp": "ちょうそ",
+    "score": 2.44
+  },
+  "鍛": {
+    "exampleKanji": "鍛える",
+    "exampleJp": "きたえる",
+    "score": 0.01
+  },
+  "聴": {
+    "exampleKanji": "視聴",
+    "exampleJp": "しちょう",
+    "score": 0
+  },
+  "選": {
+    "exampleKanji": "改選",
+    "exampleJp": "かいせん",
+    "score": 0
+  },
+  "択": {
+    "exampleKanji": "採択",
+    "exampleJp": "さいたく",
+    "score": 0
+  },
+  "夏": {
+    "exampleKanji": "夏至",
+    "exampleJp": "げし",
+    "score": 0
+  },
+  "季": {
+    "exampleKanji": "季刊",
+    "exampleJp": "きかん",
+    "score": 0
+  },
+  "暇": {
+    "exampleKanji": "休暇",
+    "exampleJp": "きゅうか",
+    "score": 0
+  },
+  "蚕": {
+    "exampleKanji": "養蚕",
+    "exampleJp": "ようさん",
+    "score": 2.3
+  },
+  "至": {
+    "exampleKanji": "夏至",
+    "exampleJp": "げし",
+    "score": 0
+  },
+  "扇": {
+    "exampleKanji": "扇子",
+    "exampleJp": "せんす",
+    "score": 0
+  },
+  "簿": {
+    "exampleKanji": "帳簿",
+    "exampleJp": "ちょうぼ",
+    "score": 0
+  },
+  "捜": {
+    "exampleKanji": "捜査",
+    "exampleJp": "そうさ",
+    "score": 0
+  },
+  "畜": {
+    "exampleKanji": "家畜",
+    "exampleJp": "かちく",
+    "score": 0
+  },
+  "裁": {
+    "exampleKanji": "決裁",
+    "exampleJp": "けっさい",
+    "score": 0
+  },
+  "欄": {
+    "exampleKanji": "本欄",
+    "exampleJp": "ほんらん",
+    "score": 0
+  },
+  "宝": {
+    "exampleKanji": "国宝",
+    "exampleJp": "こくほう",
+    "score": 0
+  },
+  "老": {
+    "exampleKanji": "敬老",
+    "exampleJp": "けいろう",
+    "score": 0
+  },
+  "寡": {
+    "exampleKanji": "寡占",
+    "exampleJp": "かせん",
+    "score": 0
+  },
+  "少": {
+    "exampleKanji": "希少",
+    "exampleJp": "きしょう",
+    "score": 0
+  },
+  "占": {
+    "exampleKanji": "寡占",
+    "exampleJp": "かせん",
+    "score": 0
+  },
+  "欲": {
+    "exampleKanji": "食欲",
+    "exampleJp": "しょくよく",
+    "score": 0
+  },
+  "庁": {
+    "exampleKanji": "官庁",
+    "exampleJp": "かんちょう",
+    "score": 0
+  },
+  "敢": {
+    "exampleKanji": "果敢",
+    "exampleJp": "かかん",
+    "score": 0
+  },
+  "樹": {
+    "exampleKanji": "果樹",
+    "exampleJp": "かじゅ",
+    "score": 0
+  },
+  "碑": {
+    "exampleKanji": "碑文",
+    "exampleJp": "ひぶん",
+    "score": 0
+  },
+  "伎": {
+    "exampleKanji": "歌舞伎",
+    "exampleJp": "かぶき",
+    "score": 0.01
+  },
+  "謡": {
+    "exampleKanji": "歌謡",
+    "exampleJp": "かよう",
+    "score": 0
+  },
+  "港": {
+    "exampleKanji": "開港",
+    "exampleJp": "かいこう",
+    "score": 0
+  },
+  "鹿": {
+    "exampleKanji": "馬鹿",
+    "exampleJp": "ばか",
+    "score": 0
+  },
+  "豚": {
+    "exampleKanji": "海豚",
+    "exampleJp": "いるか",
+    "score": 0
+  },
+  "畔": {
+    "exampleKanji": "湖畔",
+    "exampleJp": "こはん",
+    "score": 0
+  },
+  "湖": {
+    "exampleKanji": "湖沼",
+    "exampleJp": "こしょう",
+    "score": 0
+  },
+  "災": {
+    "exampleKanji": "火災",
+    "exampleJp": "かさい",
+    "score": 0
+  },
+  "灰": {
+    "exampleKanji": "灰皿",
+    "exampleJp": "はいざら",
+    "score": 0
+  },
+  "銃": {
+    "exampleKanji": "拳銃",
+    "exampleJp": "けんじゅう",
+    "score": 0
+  },
+  "箸": {
+    "exampleKanji": "割り箸",
+    "exampleJp": "わりばし",
+    "score": 0.01
+  },
+  "芽": {
+    "exampleKanji": "発芽",
+    "exampleJp": "はつが",
+    "score": 0
+  },
+  "咲": {
+    "exampleKanji": "咲く",
+    "exampleJp": "さく",
+    "score": 0
+  },
+  "束": {
+    "exampleKanji": "花束",
+    "exampleJp": "はなたば",
+    "score": 0
+  },
+  "曇": {
+    "exampleKanji": "曇る",
+    "exampleJp": "くもる",
+    "score": 0
+  },
+  "被": {
+    "exampleKanji": "被る",
+    "exampleJp": "かぶる",
+    "score": 0
+  },
+  "婿": {
+    "exampleKanji": "花婿",
+    "exampleJp": "はなむこ",
+    "score": 0
+  },
+  "梨": {
+    "exampleKanji": "花梨",
+    "exampleJp": "かりん",
+    "score": 99
+  },
+  "苛": {
+    "exampleKanji": "苛々",
+    "exampleJp": "いらいら",
+    "score": 0
+  },
+  "崩": {
+    "exampleKanji": "雪崩",
+    "exampleJp": "なだれ",
+    "score": 0
+  },
+  "揚": {
+    "exampleKanji": "掲揚",
+    "exampleJp": "けいよう",
+    "score": 0
+  },
+  "甲": {
+    "exampleKanji": "甲斐",
+    "exampleJp": "かい",
+    "score": 0
+  },
+  "美": {
+    "exampleKanji": "賛美",
+    "exampleJp": "さんび",
+    "score": 0
+  },
+  "課": {
+    "exampleKanji": "課員",
+    "exampleJp": "かいん",
+    "score": 0
+  },
+  "控": {
+    "exampleKanji": "控え",
+    "exampleJp": "ひかえ",
+    "score": 0
+  },
+  "徴": {
+    "exampleKanji": "象徴",
+    "exampleJp": "しょうちょう",
+    "score": 0
+  },
+  "殖": {
+    "exampleKanji": "生殖",
+    "exampleJp": "せいしょく",
+    "score": 0
+  },
+  "自": {
+    "exampleKanji": "各自",
+    "exampleJp": "かくじ",
+    "score": 0
+  },
+  "幣": {
+    "exampleKanji": "貨幣",
+    "exampleJp": "かへい",
+    "score": 0
+  },
+  "楼": {
+    "exampleKanji": "楼閣",
+    "exampleJp": "ろうかく",
+    "score": 0
+  },
+  "激": {
+    "exampleKanji": "過激",
+    "exampleJp": "かげき",
+    "score": 0
+  },
+  "剰": {
+    "exampleKanji": "過剰",
+    "exampleJp": "かじょう",
+    "score": 0
+  },
+  "褒": {
+    "exampleKanji": "褒美",
+    "exampleJp": "ほうび",
+    "score": 0
+  },
+  "蚊": {
+    "exampleKanji": "蚊帳",
+    "exampleJp": "かや",
+    "score": 0
+  },
+  "盲": {
+    "exampleKanji": "盲人",
+    "exampleJp": "もうじん",
+    "score": 0
+  },
+  "我": {
+    "exampleKanji": "我慢",
+    "exampleJp": "がまん",
+    "score": 0
+  },
+  "慢": {
+    "exampleKanji": "我慢",
+    "exampleJp": "がまん",
+    "score": 0
+  },
+  "廊": {
+    "exampleKanji": "画廊",
+    "exampleJp": "がろう",
+    "score": 0
+  },
+  "薪": {
+    "exampleKanji": "薪炭",
+    "exampleJp": "しんたん",
+    "score": 2.45
+  },
+  "胆": {
+    "exampleKanji": "大胆",
+    "exampleJp": "だいたん",
+    "score": 0
+  },
+  "胞": {
+    "exampleKanji": "細胞",
+    "exampleJp": "さいぼう",
+    "score": 0
+  },
+  "賀": {
+    "exampleKanji": "祝賀",
+    "exampleJp": "しゅくが",
+    "score": 0
+  },
+  "正": {
+    "exampleKanji": "改正",
+    "exampleJp": "かいせい",
+    "score": 0
+  },
+  "懐": {
+    "exampleKanji": "懐疑",
+    "exampleJp": "かいぎ",
+    "score": 0
+  },
+  "餓": {
+    "exampleKanji": "飢餓",
+    "exampleJp": "きが",
+    "score": 0
+  },
+  "殻": {
+    "exampleKanji": "貝殻",
+    "exampleJp": "かいがら",
+    "score": 0
+  },
+  "在": {
+    "exampleKanji": "介在",
+    "exampleJp": "かいざい",
+    "score": 0
+  },
+  "添": {
+    "exampleKanji": "添う",
+    "exampleJp": "そう",
+    "score": 0
+  },
+  "軟": {
+    "exampleKanji": "柔軟",
+    "exampleJp": "じゅうなん",
+    "score": 0
+  },
+  "要": {
+    "exampleKanji": "概要",
+    "exampleJp": "がいよう",
+    "score": 0
+  },
+  "則": {
+    "exampleKanji": "規則",
+    "exampleJp": "きそく",
+    "score": 0
+  },
+  "雇": {
+    "exampleKanji": "解雇",
+    "exampleJp": "かいこ",
+    "score": 0
+  },
+  "凍": {
+    "exampleKanji": "凍結",
+    "exampleJp": "とうけつ",
+    "score": 0
+  },
+  "剖": {
+    "exampleKanji": "解剖",
+    "exampleJp": "かいぼう",
+    "score": 0
+  },
+  "避": {
+    "exampleKanji": "回避",
+    "exampleJp": "かいひ",
+    "score": 0
+  },
+  "壊": {
+    "exampleKanji": "壊す",
+    "exampleJp": "こわす",
+    "score": 0
+  },
+  "快": {
+    "exampleKanji": "快い",
+    "exampleJp": "こころよい",
+    "score": 0
+  },
+  "適": {
+    "exampleKanji": "快適",
+    "exampleJp": "かいてき",
+    "score": 0
+  },
+  "怪": {
+    "exampleKanji": "怪我",
+    "exampleJp": "けが",
+    "score": 0
+  },
+  "奇": {
+    "exampleKanji": "怪奇",
+    "exampleJp": "かいき",
+    "score": 0
+  },
+  "傑": {
+    "exampleKanji": "傑作",
+    "exampleJp": "けっさく",
+    "score": 0
+  },
+  "盗": {
+    "exampleKanji": "強盗",
+    "exampleJp": "ごうとう",
+    "score": 0
+  },
+  "悔": {
+    "exampleKanji": "悔い",
+    "exampleJp": "くい",
+    "score": 0
+  },
+  "改": {
+    "exampleKanji": "改革",
+    "exampleJp": "かいかく",
+    "score": 0
+  },
+  "疑": {
+    "exampleKanji": "懐疑",
+    "exampleJp": "かいぎ",
+    "score": 0
+  },
+  "旧": {
+    "exampleKanji": "旧式",
+    "exampleJp": "きゅうしき",
+    "score": 0
+  },
+  "胎": {
+    "exampleKanji": "胎児",
+    "exampleJp": "たいじ",
+    "score": 0
+  },
+  "妊": {
+    "exampleKanji": "妊娠",
+    "exampleJp": "にんしん",
+    "score": 0
+  },
+  "拐": {
+    "exampleKanji": "誘拐",
+    "exampleJp": "ゆうかい",
+    "score": 0
+  },
+  "修": {
+    "exampleKanji": "改修",
+    "exampleJp": "かいしゅう",
+    "score": 0
+  },
+  "善": {
+    "exampleKanji": "改善",
+    "exampleJp": "かいぜん",
+    "score": 0
+  },
+  "築": {
+    "exampleKanji": "改築",
+    "exampleJp": "かいちく",
+    "score": 0
+  },
+  "鋳": {
+    "exampleKanji": "鋳型",
+    "exampleJp": "いがた",
+    "score": 2.2800000000000002
+  },
+  "訂": {
+    "exampleKanji": "改訂",
+    "exampleJp": "かいてい",
+    "score": 0
+  },
+  "廃": {
+    "exampleKanji": "荒廃",
+    "exampleJp": "こうはい",
+    "score": 0
+  },
+  "編": {
+    "exampleKanji": "改編",
+    "exampleJp": "かいへん",
+    "score": 0
+  },
+  "幸": {
+    "exampleKanji": "幸い",
+    "exampleJp": "さいわい",
+    "score": 0
+  },
+  "峡": {
+    "exampleKanji": "海峡",
+    "exampleJp": "かいきょう",
+    "score": 0
+  },
+  "浜": {
+    "exampleKanji": "海浜",
+    "exampleJp": "かいひん",
+    "score": 0
+  },
+  "皆": {
+    "exampleKanji": "皆無",
+    "exampleJp": "かいむ",
+    "score": 0
+  },
+  "済": {
+    "exampleKanji": "救済",
+    "exampleJp": "きゅうさい",
+    "score": 0
+  },
+  "描": {
+    "exampleKanji": "描写",
+    "exampleJp": "びょうしゃ",
+    "score": 0
+  },
+  "襟": {
+    "exampleKanji": "襟巻き",
+    "exampleJp": "えりまき",
+    "score": 0.01
+  },
+  "墾": {
+    "exampleKanji": "開墾",
+    "exampleJp": "かいこん",
+    "score": 2.41
+  },
+  "催": {
+    "exampleKanji": "開催",
+    "exampleJp": "かいさい",
+    "score": 0
+  },
+  "拓": {
+    "exampleKanji": "開拓",
+    "exampleJp": "かいたく",
+    "score": 0
+  },
+  "廷": {
+    "exampleKanji": "宮廷",
+    "exampleJp": "きゅうてい",
+    "score": 0
+  },
+  "扉": {
+    "exampleKanji": "門扉",
+    "exampleJp": "もんぴ",
+    "score": 0
+  },
+  "閉": {
+    "exampleKanji": "開閉",
+    "exampleJp": "かいへい",
+    "score": 0
+  },
+  "劾": {
+    "exampleKanji": "弾劾",
+    "exampleJp": "だんがい",
+    "score": 0
+  },
+  "径": {
+    "exampleKanji": "口径",
+    "exampleJp": "こうけい",
+    "score": 0
+  },
+  "登": {
+    "exampleKanji": "登記",
+    "exampleJp": "とうき",
+    "score": 0
+  },
+  "債": {
+    "exampleKanji": "起債",
+    "exampleJp": "きさい",
+    "score": 0
+  },
+  "需": {
+    "exampleKanji": "外需",
+    "exampleJp": "がいじゅ",
+    "score": 0
+  },
+  "剛": {
+    "exampleKanji": "金剛",
+    "exampleJp": "こんごう",
+    "score": 2.2800000000000002
+  },
+  "堀": {
+    "exampleKanji": "堀川",
+    "exampleJp": "ほりかわ",
+    "score": 0
+  },
+  "患": {
+    "exampleKanji": "患う",
+    "exampleJp": "わずらう",
+    "score": 0
+  },
+  "枠": {
+    "exampleKanji": "枠内",
+    "exampleJp": "わくない",
+    "score": 0
+  },
+  "況": {
+    "exampleKanji": "活況",
+    "exampleJp": "かっきょう",
+    "score": 0
+  },
+  "街": {
+    "exampleKanji": "街角",
+    "exampleJp": "まちかど",
+    "score": 0
+  },
+  "該": {
+    "exampleKanji": "該当",
+    "exampleJp": "がいとう",
+    "score": 0
+  },
+  "垣": {
+    "exampleKanji": "垣根",
+    "exampleJp": "かきね",
+    "score": 0
+  },
+  "各": {
+    "exampleKanji": "各位",
+    "exampleJp": "かくい",
+    "score": 0
+  },
+  "市": {
+    "exampleKanji": "市営",
+    "exampleJp": "しえい",
+    "score": 0
+  },
+  "藩": {
+    "exampleKanji": "藩主",
+    "exampleJp": "はんしゅ",
+    "score": 0
+  },
+  "拡": {
+    "exampleKanji": "拡散",
+    "exampleJp": "かくさん",
+    "score": 0
+  },
+  "充": {
+    "exampleKanji": "拡充",
+    "exampleJp": "かくじゅう",
+    "score": 0
+  },
+  "窓": {
+    "exampleKanji": "窓口",
+    "exampleJp": "まどぐち",
+    "score": 0
+  },
+  "庫": {
+    "exampleKanji": "金庫",
+    "exampleJp": "きんこ",
+    "score": 0
+  },
+  "融": {
+    "exampleKanji": "金融",
+    "exampleJp": "きんゆう",
+    "score": 0
+  },
+  "抑": {
+    "exampleKanji": "抑圧",
+    "exampleJp": "よくあつ",
+    "score": 0
+  },
+  "獲": {
+    "exampleKanji": "獲得",
+    "exampleJp": "かくとく",
+    "score": 0
+  },
+  "確": {
+    "exampleKanji": "確固",
+    "exampleJp": "かっこ",
+    "score": 0
+  },
+  "較": {
+    "exampleKanji": "比較",
+    "exampleJp": "ひかく",
+    "score": 0
+  },
+  "優": {
+    "exampleKanji": "女優",
+    "exampleJp": "じょゆう",
+    "score": 0
+  },
+  "閣": {
+    "exampleKanji": "閣議",
+    "exampleJp": "かくぎ",
+    "score": 0
+  },
+  "絶": {
+    "exampleKanji": "気絶",
+    "exampleJp": "きぜつ",
+    "score": 0
+  },
+  "究": {
+    "exampleKanji": "究極",
+    "exampleJp": "きゅうきょく",
+    "score": 0
+  },
+  "塾": {
+    "exampleKanji": "塾長",
+    "exampleJp": "じゅくちょう",
+    "score": 0
+  },
+  "寮": {
+    "exampleKanji": "寮生",
+    "exampleJp": "りょうせい",
+    "score": 2.27
+  },
+  "閥": {
+    "exampleKanji": "財閥",
+    "exampleJp": "ざいばつ",
+    "score": 0
+  },
+  "岳": {
+    "exampleKanji": "山岳",
+    "exampleJp": "さんがく",
+    "score": 0
+  },
+  "竹": {
+    "exampleKanji": "爆竹",
+    "exampleJp": "ばくちく",
+    "score": 0
+  },
+  "譲": {
+    "exampleKanji": "譲る",
+    "exampleJp": "ゆずる",
+    "score": 0
+  },
+  "采": {
+    "exampleKanji": "納采",
+    "exampleJp": "のうさい",
+    "score": 2.29
+  },
+  "渇": {
+    "exampleKanji": "渇き",
+    "exampleJp": "かわき",
+    "score": 0
+  },
+  "葛": {
+    "exampleKanji": "葛藤",
+    "exampleJp": "かっとう",
+    "score": 0
+  },
+  "藤": {
+    "exampleKanji": "葛藤",
+    "exampleJp": "かっとう",
+    "score": 0
+  },
+  "且": {
+    "exampleKanji": "且つ",
+    "exampleJp": "かつ",
+    "score": 0
+  },
+  "総": {
+    "exampleKanji": "総意",
+    "exampleJp": "そうい",
+    "score": 0
+  },
+  "鎌": {
+    "exampleKanji": "鎌倉",
+    "exampleJp": "かまくら",
+    "score": 0
+  },
+  "猟": {
+    "exampleKanji": "狩猟",
+    "exampleJp": "しゅりょう",
+    "score": 0
+  },
+  "乾": {
+    "exampleKanji": "乾く",
+    "exampleJp": "かわく",
+    "score": 0
+  },
+  "拭": {
+    "exampleKanji": "拭う",
+    "exampleJp": "ぬぐう",
+    "score": 0
+  },
+  "燥": {
+    "exampleKanji": "乾燥",
+    "exampleJp": "かんそう",
+    "score": 0
+  },
+  "濯": {
+    "exampleKanji": "洗濯",
+    "exampleJp": "せんたく",
+    "score": 0
+  },
+  "農": {
+    "exampleKanji": "農園",
+    "exampleJp": "のうえん",
+    "score": 0
+  },
+  "腐": {
+    "exampleKanji": "陳腐",
+    "exampleJp": "ちんぷ",
+    "score": 0
+  },
+  "朽": {
+    "exampleKanji": "老朽",
+    "exampleJp": "ろうきゅう",
+    "score": 0
+  },
+  "酪": {
+    "exampleKanji": "酪農",
+    "exampleJp": "らくのう",
+    "score": 0
+  },
+  "婚": {
+    "exampleKanji": "既婚",
+    "exampleJp": "きこん",
+    "score": 0
+  },
+  "村": {
+    "exampleKanji": "漁村",
+    "exampleJp": "ぎょそん",
+    "score": 0
+  },
+  "刊": {
+    "exampleKanji": "刊行",
+    "exampleJp": "かんこう",
+    "score": 0
+  },
+  "奨": {
+    "exampleKanji": "勧奨",
+    "exampleJp": "かんしょう",
+    "score": 0
+  },
+  "懲": {
+    "exampleKanji": "懲戒",
+    "exampleJp": "ちょうかい",
+    "score": 0
+  },
+  "尾": {
+    "exampleKanji": "尻尾",
+    "exampleJp": "しっぽ",
+    "score": 0
+  },
+  "耐": {
+    "exampleKanji": "耐久",
+    "exampleJp": "たいきゅう",
+    "score": 0
+  },
+  "堪": {
+    "exampleKanji": "堪能",
+    "exampleJp": "たんのう",
+    "score": 0
+  },
+  "兼": {
+    "exampleKanji": "兼任",
+    "exampleJp": "けんにん",
+    "score": 0
+  },
+  "完": {
+    "exampleKanji": "完結",
+    "exampleJp": "かんけつ",
+    "score": 0
+  },
+  "遂": {
+    "exampleKanji": "遂に",
+    "exampleJp": "ついに",
+    "score": 0
+  },
+  "膚": {
+    "exampleKanji": "皮膚",
+    "exampleJp": "ひふ",
+    "score": 0
+  },
+  "邸": {
+    "exampleKanji": "官邸",
+    "exampleJp": "かんてい",
+    "score": 0
+  },
+  "房": {
+    "exampleKanji": "官房",
+    "exampleJp": "かんぼう",
+    "score": 0
+  },
+  "寛": {
+    "exampleKanji": "寛ぐ",
+    "exampleJp": "くつろぐ",
+    "score": 0
+  },
+  "潟": {
+    "exampleKanji": "干潟",
+    "exampleJp": "ひがた",
+    "score": 0
+  },
+  "渉": {
+    "exampleKanji": "干渉",
+    "exampleJp": "かんしょう",
+    "score": 0
+  },
+  "幹": {
+    "exampleKanji": "幹事",
+    "exampleJp": "かんじ",
+    "score": 0
+  },
+  "唐": {
+    "exampleKanji": "唐突",
+    "exampleJp": "とうとつ",
+    "score": 0
+  },
+  "慨": {
+    "exampleKanji": "感慨",
+    "exampleJp": "かんがい",
+    "score": 0
+  },
+  "嘆": {
+    "exampleKanji": "感嘆",
+    "exampleJp": "かんたん",
+    "score": 0
+  },
+  "冒": {
+    "exampleKanji": "冒す",
+    "exampleJp": "おかす",
+    "score": 0
+  },
+  "銘": {
+    "exampleKanji": "感銘",
+    "exampleJp": "かんめい",
+    "score": 0
+  },
+  "棺": {
+    "exampleKanji": "石棺",
+    "exampleJp": "せっかん",
+    "score": 2.34
+  },
+  "迎": {
+    "exampleKanji": "歓迎",
+    "exampleJp": "かんげい",
+    "score": 0
+  },
+  "腺": {
+    "exampleKanji": "甲状腺",
+    "exampleJp": "こうじょうせん",
+    "score": 0.01
+  },
+  "偶": {
+    "exampleKanji": "偶数",
+    "exampleJp": "ぐうすう",
+    "score": 0
+  },
+  "酢": {
+    "exampleKanji": "お酢",
+    "exampleJp": "おす",
+    "score": 0
+  },
+  "察": {
+    "exampleKanji": "監察",
+    "exampleJp": "かんさつ",
+    "score": 0
+  },
+  "轄": {
+    "exampleKanji": "管轄",
+    "exampleJp": "かんかつ",
+    "score": 0
+  },
+  "掌": {
+    "exampleKanji": "車掌",
+    "exampleJp": "しゃしょう",
+    "score": 0
+  },
+  "潔": {
+    "exampleKanji": "簡潔",
+    "exampleJp": "かんけつ",
+    "score": 0
+  },
+  "衝": {
+    "exampleKanji": "衝撃",
+    "exampleJp": "しょうげき",
+    "score": 0
+  },
+  "肝": {
+    "exampleKanji": "肝炎",
+    "exampleJp": "かんえん",
+    "score": 0
+  },
+  "硬": {
+    "exampleKanji": "強硬",
+    "exampleJp": "きょうこう",
+    "score": 0
+  },
+  "臓": {
+    "exampleKanji": "肝臓",
+    "exampleJp": "かんぞう",
+    "score": 0
+  },
+  "載": {
+    "exampleKanji": "記載",
+    "exampleJp": "きさい",
+    "score": 0
+  },
+  "艇": {
+    "exampleKanji": "艦艇",
+    "exampleJp": "かんてい",
+    "score": 0
+  },
+  "研": {
+    "exampleKanji": "研究",
+    "exampleJp": "けんきゅう",
+    "score": 0
+  },
+  "測": {
+    "exampleKanji": "観測",
+    "exampleJp": "かんそく",
+    "score": 0
+  },
+  "狂": {
+    "exampleKanji": "狂う",
+    "exampleJp": "くるう",
+    "score": 0
+  },
+  "隙": {
+    "exampleKanji": "隙間",
+    "exampleJp": "すきま",
+    "score": 0
+  },
+  "貸": {
+    "exampleKanji": "貸し",
+    "exampleJp": "かし",
+    "score": 0
+  },
+  "与": {
+    "exampleKanji": "関与",
+    "exampleJp": "かんよ",
+    "score": 0
+  },
+  "脇": {
+    "exampleKanji": "関脇",
+    "exampleJp": "せきわけ",
+    "score": 0
+  },
+  "陥": {
+    "exampleKanji": "陥る",
+    "exampleJp": "おちいる",
+    "score": 0
+  },
+  "没": {
+    "exampleKanji": "陥没",
+    "exampleJp": "かんぼつ",
+    "score": 0
+  },
+  "韓": {
+    "exampleKanji": "韓国",
+    "exampleJp": "かんこく",
+    "score": 0
+  },
+  "蜂": {
+    "exampleKanji": "蜂蜜",
+    "exampleJp": "はちみつ",
+    "score": 0
+  },
+  "裸": {
+    "exampleKanji": "裸足",
+    "exampleJp": "はだし",
+    "score": 0
+  },
+  "蓄": {
+    "exampleKanji": "蓄財",
+    "exampleJp": "ちくざい",
+    "score": 0
+  },
+  "弄": {
+    "exampleKanji": "弄る",
+    "exampleJp": "いじる",
+    "score": 0
+  },
+  "棚": {
+    "exampleKanji": "戸棚",
+    "exampleJp": "とだな",
+    "score": 0
+  },
+  "偽": {
+    "exampleKanji": "偽証",
+    "exampleJp": "ぎしょう",
+    "score": 0
+  },
+  "爪": {
+    "exampleKanji": "爪楊枝",
+    "exampleJp": "つまようじ",
+    "score": 0.01
+  },
+  "頑": {
+    "exampleKanji": "頑な",
+    "exampleJp": "かたくな",
+    "score": 0
+  },
+  "求": {
+    "exampleKanji": "求刑",
+    "exampleJp": "きゅうけい",
+    "score": 0
+  },
+  "企": {
+    "exampleKanji": "企み",
+    "exampleJp": "たくらみ",
+    "score": 0
+  },
+  "峰": {
+    "exampleKanji": "連峰",
+    "exampleJp": "れんぽう",
+    "score": 0
+  },
+  "勇": {
+    "exampleKanji": "勇敢",
+    "exampleJp": "ゆうかん",
+    "score": 0
+  },
+  "捨": {
+    "exampleKanji": "捨てる",
+    "exampleJp": "すてる",
+    "score": 0.01
+  },
+  "怒": {
+    "exampleKanji": "激怒",
+    "exampleJp": "げきど",
+    "score": 0
+  },
+  "貧": {
+    "exampleKanji": "清貧",
+    "exampleJp": "せいひん",
+    "score": 0
+  },
+  "乏": {
+    "exampleKanji": "欠乏",
+    "exampleJp": "けつぼう",
+    "score": 0
+  },
+  "鎖": {
+    "exampleKanji": "鎖国",
+    "exampleJp": "さこく",
+    "score": 0
+  },
+  "矯": {
+    "exampleKanji": "矯正",
+    "exampleJp": "きょうせい",
+    "score": 0
+  },
+  "襲": {
+    "exampleKanji": "奇襲",
+    "exampleJp": "きしゅう",
+    "score": 0
+  },
+  "嬉": {
+    "exampleKanji": "嬉しい",
+    "exampleJp": "うれしい",
+    "score": 0.01
+  },
+  "岐": {
+    "exampleKanji": "岐路",
+    "exampleJp": "きろ",
+    "score": 0
+  },
+  "阜": {
+    "exampleKanji": "岐阜",
+    "exampleJp": "ぎふ",
+    "score": 0
+  },
+  "揮": {
+    "exampleKanji": "指揮",
+    "exampleJp": "しき",
+    "score": 0
+  },
+  "机": {
+    "exampleKanji": "机上",
+    "exampleJp": "きじょう",
+    "score": 0
+  },
+  "棋": {
+    "exampleKanji": "棋士",
+    "exampleJp": "きし",
+    "score": 0
+  },
+  "棄": {
+    "exampleKanji": "棄却",
+    "exampleJp": "ききゃく",
+    "score": 0
+  },
+  "却": {
+    "exampleKanji": "棄却",
+    "exampleJp": "ききゃく",
+    "score": 0
+  },
+  "警": {
+    "exampleKanji": "警戒",
+    "exampleJp": "けいかい",
+    "score": 0
+  },
+  "翻": {
+    "exampleKanji": "翻す",
+    "exampleJp": "ひるがえす",
+    "score": 0
+  },
+  "富": {
+    "exampleKanji": "貧富",
+    "exampleJp": "ひんぷ",
+    "score": 0
+  },
+  "胸": {
+    "exampleKanji": "胸中",
+    "exampleJp": "きょうちゅう",
+    "score": 0
+  },
+  "軽": {
+    "exampleKanji": "気軽",
+    "exampleJp": "きがる",
+    "score": 0
+  },
+  "孔": {
+    "exampleKanji": "孔子",
+    "exampleJp": "こうし",
+    "score": 2.25
+  },
+  "汽": {
+    "exampleKanji": "汽車",
+    "exampleJp": "きしゃ",
+    "score": 0
+  },
+  "祈": {
+    "exampleKanji": "祈り",
+    "exampleJp": "いのり",
+    "score": 0
+  },
+  "誓": {
+    "exampleKanji": "誓い",
+    "exampleJp": "ちかい",
+    "score": 0
+  },
+  "述": {
+    "exampleKanji": "記述",
+    "exampleJp": "きじゅつ",
+    "score": 0
+  },
+  "貴": {
+    "exampleKanji": "貴社",
+    "exampleJp": "きしゃ",
+    "score": 0
+  },
+  "顕": {
+    "exampleKanji": "顕在",
+    "exampleJp": "けんざい",
+    "score": 0
+  },
+  "紳": {
+    "exampleKanji": "紳士",
+    "exampleJp": "しんし",
+    "score": 0
+  },
+  "伏": {
+    "exampleKanji": "起伏",
+    "exampleJp": "きふく",
+    "score": 0
+  },
+  "輝": {
+    "exampleKanji": "輝き",
+    "exampleJp": "かがやき",
+    "score": 0
+  },
+  "帝": {
+    "exampleKanji": "皇帝",
+    "exampleJp": "こうてい",
+    "score": 0
+  },
+  "亀": {
+    "exampleKanji": "亀裂",
+    "exampleJp": "きれつ",
+    "score": 0
+  },
+  "罪": {
+    "exampleKanji": "謝罪",
+    "exampleJp": "しゃざい",
+    "score": 0
+  },
+  "娠": {
+    "exampleKanji": "妊娠",
+    "exampleJp": "にんしん",
+    "score": 0
+  },
+  "範": {
+    "exampleKanji": "広範",
+    "exampleJp": "こうはん",
+    "score": 0
+  },
+  "提": {
+    "exampleKanji": "前提",
+    "exampleJp": "ぜんてい",
+    "score": 0
+  },
+  "携": {
+    "exampleKanji": "携帯",
+    "exampleJp": "けいたい",
+    "score": 0
+  },
+  "紛": {
+    "exampleKanji": "紛糾",
+    "exampleJp": "ふんきゅう",
+    "score": 0
+  },
+  "擬": {
+    "exampleKanji": "模擬",
+    "exampleJp": "もぎ",
+    "score": 0
+  },
+  "珠": {
+    "exampleKanji": "真珠",
+    "exampleJp": "しんじゅ",
+    "score": 0
+  },
+  "欺": {
+    "exampleKanji": "欺く",
+    "exampleJp": "あざむく",
+    "score": 0
+  },
+  "犠": {
+    "exampleKanji": "犠牲",
+    "exampleJp": "ぎせい",
+    "score": 0
+  },
+  "牲": {
+    "exampleKanji": "犠牲",
+    "exampleJp": "ぎせい",
+    "score": 0
+  },
+  "憤": {
+    "exampleKanji": "憤慨",
+    "exampleJp": "ふんがい",
+    "score": 0
+  },
+  "妹": {
+    "exampleKanji": "姉妹",
+    "exampleJp": "しまい",
+    "score": 0
+  },
+  "凶": {
+    "exampleKanji": "凶作",
+    "exampleJp": "きょうさく",
+    "score": 0
+  },
+  "祥": {
+    "exampleKanji": "発祥",
+    "exampleJp": "はっしょう",
+    "score": 0
+  },
+  "喫": {
+    "exampleKanji": "喫煙",
+    "exampleJp": "きつえん",
+    "score": 0
+  },
+  "梗": {
+    "exampleKanji": "梗塞",
+    "exampleJp": "こうそく",
+    "score": 0
+  },
+  "探": {
+    "exampleKanji": "探る",
+    "exampleJp": "さぐる",
+    "score": 0
+  },
+  "噴": {
+    "exampleKanji": "噴火",
+    "exampleJp": "ふんか",
+    "score": 0
+  },
+  "茂": {
+    "exampleKanji": "茂る",
+    "exampleJp": "しげる",
+    "score": 0
+  },
+  "陵": {
+    "exampleKanji": "丘陵",
+    "exampleJp": "きゅうりょう",
+    "score": 0
+  },
+  "慈": {
+    "exampleKanji": "慈善",
+    "exampleJp": "じぜん",
+    "score": 0
+  },
+  "討": {
+    "exampleKanji": "検討",
+    "exampleJp": "けんとう",
+    "score": 0
+  },
+  "憩": {
+    "exampleKanji": "休憩",
+    "exampleJp": "きゅうけい",
+    "score": 0
+  },
+  "崎": {
+    "exampleKanji": "川崎",
+    "exampleJp": "かわさき",
+    "score": 0
+  },
+  "須": {
+    "exampleKanji": "必須",
+    "exampleJp": "ひっす",
+    "score": 0
+  },
+  "逝": {
+    "exampleKanji": "逝去",
+    "exampleJp": "せいきょ",
+    "score": 2.33
+  },
+  "騰": {
+    "exampleKanji": "急騰",
+    "exampleJp": "きゅうとう",
+    "score": 0
+  },
+  "救": {
+    "exampleKanji": "救い",
+    "exampleJp": "すくい",
+    "score": 0
+  },
+  "班": {
+    "exampleKanji": "首班",
+    "exampleJp": "しゅはん",
+    "score": 0
+  },
+  "誇": {
+    "exampleKanji": "誇り",
+    "exampleJp": "ほこり",
+    "score": 0
+  },
+  "償": {
+    "exampleKanji": "償い",
+    "exampleJp": "つぐない",
+    "score": 0
+  },
+  "暮": {
+    "exampleKanji": "歳暮",
+    "exampleJp": "せいぼ",
+    "score": 0
+  },
+  "拾": {
+    "exampleKanji": "収拾",
+    "exampleJp": "しゅうしゅう",
+    "score": 0
+  },
+  "窮": {
+    "exampleKanji": "窮屈",
+    "exampleJp": "きゅうくつ",
+    "score": 0
+  },
+  "屈": {
+    "exampleKanji": "窮屈",
+    "exampleJp": "きゅうくつ",
+    "score": 0
+  },
+  "糾": {
+    "exampleKanji": "紛糾",
+    "exampleJp": "ふんきゅう",
+    "score": 0
+  },
+  "脂": {
+    "exampleKanji": "脂肪",
+    "exampleJp": "しぼう",
+    "score": 0
+  },
+  "巨": {
+    "exampleKanji": "巨額",
+    "exampleJp": "きょがく",
+    "score": 0
+  },
+  "鐘": {
+    "exampleKanji": "警鐘",
+    "exampleJp": "けいしょう",
+    "score": 0
+  },
+  "舶": {
+    "exampleKanji": "船舶",
+    "exampleJp": "せんぱく",
+    "score": 0
+  },
+  "拒": {
+    "exampleKanji": "拒む",
+    "exampleJp": "こばむ",
+    "score": 0
+  },
+  "措": {
+    "exampleKanji": "措置",
+    "exampleJp": "そち",
+    "score": 0
+  },
+  "虚": {
+    "exampleKanji": "虚偽",
+    "exampleJp": "きょぎ",
+    "score": 0
+  },
+  "飾": {
+    "exampleKanji": "飾り",
+    "exampleJp": "かざり",
+    "score": 0
+  },
+  "妄": {
+    "exampleKanji": "妄想",
+    "exampleJp": "もうそう",
+    "score": 0
+  },
+  "享": {
+    "exampleKanji": "享受",
+    "exampleJp": "きょうじゅ",
+    "score": 0
+  },
+  "奉": {
+    "exampleKanji": "奉公",
+    "exampleJp": "ほうこう",
+    "score": 0
+  },
+  "郡": {
+    "exampleKanji": "郡部",
+    "exampleJp": "ぐんぶ",
+    "score": 0
+  },
+  "治": {
+    "exampleKanji": "治安",
+    "exampleJp": "ちあん",
+    "score": 0
+  },
+  "創": {
+    "exampleKanji": "創意",
+    "exampleJp": "そうい",
+    "score": 0
+  },
+  "墓": {
+    "exampleKanji": "墓石",
+    "exampleJp": "ぼせき",
+    "score": 0
+  },
+  "犯": {
+    "exampleKanji": "共犯",
+    "exampleJp": "きょうはん",
+    "score": 0
+  },
+  "賛": {
+    "exampleKanji": "協賛",
+    "exampleJp": "きょうさん",
+    "score": 0
+  },
+  "湾": {
+    "exampleKanji": "港湾",
+    "exampleJp": "こうわん",
+    "score": 0
+  },
+  "震": {
+    "exampleKanji": "軽震",
+    "exampleJp": "けいしん",
+    "score": 0
+  },
+  "壮": {
+    "exampleKanji": "壮行",
+    "exampleJp": "そうこう",
+    "score": 0
+  },
+  "恐": {
+    "exampleKanji": "恐れ",
+    "exampleJp": "おそれ",
+    "score": 0
+  },
+  "慌": {
+    "exampleKanji": "恐慌",
+    "exampleJp": "きょうこう",
+    "score": 0
+  },
+  "恭": {
+    "exampleKanji": "恭敬",
+    "exampleJp": "きょうけい",
+    "score": 99
+  },
+  "謙": {
+    "exampleKanji": "謙虚",
+    "exampleJp": "けんきょ",
+    "score": 0
+  },
+  "挟": {
+    "exampleKanji": "挟む",
+    "exampleJp": "はさむ",
+    "score": 0
+  },
+  "皇": {
+    "exampleKanji": "皇居",
+    "exampleJp": "こうきょ",
+    "score": 0
+  },
+  "授": {
+    "exampleKanji": "教授",
+    "exampleJp": "きょうじゅ",
+    "score": 0
+  },
+  "諭": {
+    "exampleKanji": "教諭",
+    "exampleJp": "きょうゆ",
+    "score": 0
+  },
+  "舟": {
+    "exampleKanji": "小舟",
+    "exampleJp": "こぶね",
+    "score": 2.27
+  },
+  "狭": {
+    "exampleKanji": "狭い",
+    "exampleJp": "せまい",
+    "score": 0
+  },
+  "脅": {
+    "exampleKanji": "脅す",
+    "exampleJp": "おどす",
+    "score": 0
+  },
+  "奮": {
+    "exampleKanji": "興奮",
+    "exampleJp": "こうふん",
+    "score": 0
+  },
+  "隆": {
+    "exampleKanji": "隆盛",
+    "exampleJp": "りゅうせい",
+    "score": 0
+  },
+  "仰": {
+    "exampleKanji": "仰ぐ",
+    "exampleJp": "あおぐ",
+    "score": 0
+  },
+  "暁": {
+    "exampleKanji": "暁星",
+    "exampleJp": "ぎょうせい",
+    "score": 2.43
+  },
+  "独": {
+    "exampleKanji": "孤独",
+    "exampleJp": "こどく",
+    "score": 0
+  },
+  "低": {
+    "exampleKanji": "高低",
+    "exampleJp": "こうてい",
+    "score": 0
+  },
+  "僅": {
+    "exampleKanji": "僅か",
+    "exampleJp": "わずか",
+    "score": 0
+  },
+  "努": {
+    "exampleKanji": "努力",
+    "exampleJp": "どりょく",
+    "score": 0
+  },
+  "倹": {
+    "exampleKanji": "倹約",
+    "exampleJp": "けんやく",
+    "score": 0
+  },
+  "惰": {
+    "exampleKanji": "怠惰",
+    "exampleJp": "たいだ",
+    "score": 0
+  },
+  "衡": {
+    "exampleKanji": "均衡",
+    "exampleJp": "きんこう",
+    "score": 0
+  },
+  "錮": {
+    "exampleKanji": "禁錮",
+    "exampleJp": "きんこ",
+    "score": 0
+  },
+  "緊": {
+    "exampleKanji": "緊急",
+    "exampleJp": "きんきゅう",
+    "score": 0
+  },
+  "縛": {
+    "exampleKanji": "束縛",
+    "exampleJp": "そくばく",
+    "score": 0
+  },
+  "謹": {
+    "exampleKanji": "謹慎",
+    "exampleJp": "きんしん",
+    "score": 0
+  },
+  "啓": {
+    "exampleKanji": "啓発",
+    "exampleJp": "けいはつ",
+    "score": 0
+  },
+  "慎": {
+    "exampleKanji": "謹慎",
+    "exampleJp": "きんしん",
+    "score": 0
+  },
+  "呈": {
+    "exampleKanji": "贈呈",
+    "exampleJp": "ぞうてい",
+    "score": 0
+  },
+  "畿": {
+    "exampleKanji": "近畿",
+    "exampleJp": "きんき",
+    "score": 0
+  },
+  "郊": {
+    "exampleKanji": "近郊",
+    "exampleJp": "きんこう",
+    "score": 0
+  },
+  "未": {
+    "exampleKanji": "未だ",
+    "exampleJp": "まだ",
+    "score": 0
+  },
+  "九": {
+    "exampleKanji": "九つ",
+    "exampleJp": "ここのつ",
+    "score": 0
+  },
+  "穀": {
+    "exampleKanji": "穀物",
+    "exampleJp": "こくもつ",
+    "score": 0
+  },
+  "五": {
+    "exampleKanji": "五つ",
+    "exampleJp": "いつつ",
+    "score": 0
+  },
+  "衷": {
+    "exampleKanji": "折衷",
+    "exampleJp": "せっちゅう",
+    "score": 0
+  },
+  "悩": {
+    "exampleKanji": "苦悩",
+    "exampleJp": "くのう",
+    "score": 0
+  },
+  "寺": {
+    "exampleKanji": "寺院",
+    "exampleJp": "じいん",
+    "score": 0
+  },
+  "駒": {
+    "exampleKanji": "駒鳥",
+    "exampleJp": "こまどり",
+    "score": 99
+  },
+  "陳": {
+    "exampleKanji": "陳謝",
+    "exampleJp": "ちんしゃ",
+    "score": 0
+  },
+  "痴": {
+    "exampleKanji": "愚痴",
+    "exampleJp": "ぐち",
+    "score": 0
+  },
+  "昧": {
+    "exampleKanji": "曖昧",
+    "exampleJp": "あいまい",
+    "score": 0
+  },
+  "虞": {
+    "exampleKanji": "不虞",
+    "exampleJp": "ふぐ",
+    "score": 99
+  },
+  "狙": {
+    "exampleKanji": "狙い",
+    "exampleJp": "ねらい",
+    "score": 0
+  },
+  "浮": {
+    "exampleKanji": "浮き",
+    "exampleJp": "うき",
+    "score": 0
+  },
+  "洞": {
+    "exampleKanji": "空洞",
+    "exampleJp": "くうどう",
+    "score": 0
+  },
+  "包": {
+    "exampleKanji": "梱包",
+    "exampleJp": "こんぽう",
+    "score": 0
+  },
+  "串": {
+    "exampleKanji": "竹串",
+    "exampleJp": "たけぐし",
+    "score": 99
+  },
+  "磨": {
+    "exampleKanji": "磨く",
+    "exampleJp": "みがく",
+    "score": 0
+  },
+  "熊": {
+    "exampleKanji": "熊手",
+    "exampleJp": "くまで",
+    "score": 2.41
+  },
+  "桑": {
+    "exampleKanji": "桑田",
+    "exampleJp": "そうでん",
+    "score": 0
+  },
+  "摘": {
+    "exampleKanji": "指摘",
+    "exampleJp": "してき",
+    "score": 0
+  },
+  "爵": {
+    "exampleKanji": "伯爵",
+    "exampleJp": "はくしゃく",
+    "score": 0
+  },
+  "臨": {
+    "exampleKanji": "君臨",
+    "exampleJp": "くんりん",
+    "score": 0
+  },
+  "薫": {
+    "exampleKanji": "薫香",
+    "exampleJp": "くんこう",
+    "score": 99
+  },
+  "蒸": {
+    "exampleKanji": "蒸す",
+    "exampleJp": "むす",
+    "score": 0
+  },
+  "陶": {
+    "exampleKanji": "陶器",
+    "exampleJp": "とうき",
+    "score": 0
+  },
+  "侵": {
+    "exampleKanji": "侵す",
+    "exampleJp": "おかす",
+    "score": 0
+  },
+  "撤": {
+    "exampleKanji": "撤回",
+    "exampleJp": "てっかい",
+    "score": 0
+  },
+  "累": {
+    "exampleKanji": "累計",
+    "exampleJp": "るいけい",
+    "score": 0
+  },
+  "斜": {
+    "exampleKanji": "傾斜",
+    "exampleJp": "けいしゃ",
+    "score": 0
+  },
+  "覆": {
+    "exampleKanji": "転覆",
+    "exampleJp": "てんぷく",
+    "score": 0
+  },
+  "訟": {
+    "exampleKanji": "訴訟",
+    "exampleJp": "そしょう",
+    "score": 0
+  },
+  "罰": {
+    "exampleKanji": "刑罰",
+    "exampleJp": "けいばつ",
+    "score": 0
+  },
+  "余": {
+    "exampleKanji": "余す",
+    "exampleJp": "あます",
+    "score": 0
+  },
+  "契": {
+    "exampleKanji": "契機",
+    "exampleJp": "けいき",
+    "score": 0
+  },
+  "祝": {
+    "exampleKanji": "祝い",
+    "exampleJp": "いわい",
+    "score": 0
+  },
+  "掲": {
+    "exampleKanji": "掲載",
+    "exampleJp": "けいさい",
+    "score": 0
+  },
+  "渓": {
+    "exampleKanji": "渓谷",
+    "exampleJp": "けいこく",
+    "score": 0
+  },
+  "綻": {
+    "exampleKanji": "破綻",
+    "exampleJp": "はたん",
+    "score": 0
+  },
+  "展": {
+    "exampleKanji": "個展",
+    "exampleJp": "こてん",
+    "score": 0
+  },
+  "嗣": {
+    "exampleKanji": "継嗣",
+    "exampleJp": "けいし",
+    "score": 99
+  },
+  "承": {
+    "exampleKanji": "継承",
+    "exampleJp": "けいしょう",
+    "score": 0
+  },
+  "蛍": {
+    "exampleKanji": "蛍光灯",
+    "exampleJp": "けいこうとう",
+    "score": 0.01
+  },
+  "狩": {
+    "exampleKanji": "狩り",
+    "exampleJp": "かり",
+    "score": 0
+  },
+  "輩": {
+    "exampleKanji": "後輩",
+    "exampleJp": "こうはい",
+    "score": 0
+  },
+  "侮": {
+    "exampleKanji": "侮辱",
+    "exampleJp": "ぶじょく",
+    "score": 0
+  },
+  "蔑": {
+    "exampleKanji": "軽蔑",
+    "exampleJp": "けいべつ",
+    "score": 0
+  },
+  "鯨": {
+    "exampleKanji": "捕鯨",
+    "exampleJp": "ほげい",
+    "score": 0
+  },
+  "墜": {
+    "exampleKanji": "撃墜",
+    "exampleJp": "げきつい",
+    "score": 0
+  },
+  "励": {
+    "exampleKanji": "激励",
+    "exampleJp": "げきれい",
+    "score": 0
+  },
+  "届": {
+    "exampleKanji": "届く",
+    "exampleJp": "とどく",
+    "score": 0
+  },
+  "披": {
+    "exampleKanji": "披露",
+    "exampleJp": "ひろう",
+    "score": 0
+  },
+  "清": {
+    "exampleKanji": "清い",
+    "exampleJp": "きよい",
+    "score": 0
+  },
+  "遅": {
+    "exampleKanji": "遅い",
+    "exampleJp": "おそい",
+    "score": 0
+  },
+  "賦": {
+    "exampleKanji": "月賦",
+    "exampleJp": "げっぷ",
+    "score": 0
+  },
+  "康": {
+    "exampleKanji": "健康",
+    "exampleJp": "けんこう",
+    "score": 0
+  },
+  "忘": {
+    "exampleKanji": "忘却",
+    "exampleJp": "ぼうきゃく",
+    "score": 0
+  },
+  "摂": {
+    "exampleKanji": "摂氏",
+    "exampleJp": "せっし",
+    "score": 0
+  },
+  "補": {
+    "exampleKanji": "候補",
+    "exampleJp": "こうほ",
+    "score": 0
+  },
+  "豪": {
+    "exampleKanji": "豪雨",
+    "exampleJp": "ごうう",
+    "score": 0
+  },
+  "堅": {
+    "exampleKanji": "堅持",
+    "exampleJp": "けんじ",
+    "score": 0
+  },
+  "崖": {
+    "exampleKanji": "断崖",
+    "exampleJp": "だんがい",
+    "score": 2.39
+  },
+  "尿": {
+    "exampleKanji": "糖尿病",
+    "exampleJp": "とうにょうびょう",
+    "score": 0.01
+  },
+  "儒": {
+    "exampleKanji": "儒教",
+    "exampleJp": "じゅきょう",
+    "score": 0
+  },
+  "絹": {
+    "exampleKanji": "絹糸",
+    "exampleJp": "きぬいと",
+    "score": 2.4
+  },
+  "肩": {
+    "exampleKanji": "肩こり",
+    "exampleJp": "かたこり",
+    "score": 0.01
+  },
+  "透": {
+    "exampleKanji": "浸透",
+    "exampleJp": "しんとう",
+    "score": 0
+  },
+  "据": {
+    "exampleKanji": "据える",
+    "exampleJp": "すえる",
+    "score": 0.01
+  },
+  "遜": {
+    "exampleKanji": "謙遜",
+    "exampleJp": "けんそん",
+    "score": 0
+  },
+  "哲": {
+    "exampleKanji": "哲学",
+    "exampleJp": "てつがく",
+    "score": 0
+  },
+  "鍵": {
+    "exampleKanji": "鍵盤",
+    "exampleJp": "けんばん",
+    "score": 0
+  },
+  "彰": {
+    "exampleKanji": "顕彰",
+    "exampleJp": "けんしょう",
+    "score": 0
+  },
+  "帥": {
+    "exampleKanji": "元帥",
+    "exampleJp": "げんすい",
+    "score": 0
+  },
+  "潜": {
+    "exampleKanji": "原潜",
+    "exampleJp": "げんせん",
+    "score": 0
+  },
+  "酷": {
+    "exampleKanji": "酷似",
+    "exampleJp": "こくじ",
+    "score": 0
+  },
+  "粛": {
+    "exampleKanji": "厳粛",
+    "exampleJp": "げんしゅく",
+    "score": 0
+  },
+  "幻": {
+    "exampleKanji": "幻覚",
+    "exampleJp": "げんかく",
+    "score": 0
+  },
+  "氏": {
+    "exampleKanji": "氏名",
+    "exampleJp": "しめい",
+    "score": 0
+  },
+  "玄": {
+    "exampleKanji": "玄関",
+    "exampleJp": "げんかん",
+    "score": 0
+  },
+  "今": {
+    "exampleKanji": "古今",
+    "exampleJp": "ここん",
+    "score": 0
+  },
+  "唾": {
+    "exampleKanji": "唾液",
+    "exampleJp": "だえき",
+    "score": 99
+  },
+  "枝": {
+    "exampleKanji": "爪楊枝",
+    "exampleJp": "つまようじ",
+    "score": 0.01
+  },
+  "淡": {
+    "exampleKanji": "淡水",
+    "exampleJp": "たんすい",
+    "score": 0
+  },
+  "沼": {
+    "exampleKanji": "湖沼",
+    "exampleJp": "こしょう",
+    "score": 0
+  },
+  "虎": {
+    "exampleKanji": "虎列刺",
+    "exampleJp": "コレラ",
+    "score": 0.01
+  },
+  "午": {
+    "exampleKanji": "午後",
+    "exampleJp": "ごご",
+    "score": 0
+  },
+  "呉": {
+    "exampleKanji": "呉服",
+    "exampleJp": "ごふく",
+    "score": 0
+  },
+  "娯": {
+    "exampleKanji": "娯楽",
+    "exampleJp": "ごらく",
+    "score": 0
+  },
+  "盾": {
+    "exampleKanji": "矛盾",
+    "exampleJp": "むじゅん",
+    "score": 0
+  },
+  "釜": {
+    "exampleKanji": "後釜",
+    "exampleJp": "あとがま",
+    "score": 99
+  },
+  "忙": {
+    "exampleKanji": "多忙",
+    "exampleJp": "たぼう",
+    "score": 0
+  },
+  "尊": {
+    "exampleKanji": "尊敬",
+    "exampleJp": "そんけい",
+    "score": 0
+  },
+  "彙": {
+    "exampleKanji": "語彙",
+    "exampleJp": "ごい",
+    "score": 0
+  },
+  "遮": {
+    "exampleKanji": "遮る",
+    "exampleJp": "さえぎる",
+    "score": 0
+  },
+  "妨": {
+    "exampleKanji": "妨げ",
+    "exampleJp": "さまたげ",
+    "score": 0
+  },
+  "侯": {
+    "exampleKanji": "侯爵",
+    "exampleJp": "こうしゃく",
+    "score": 2.41
+  },
+  "磁": {
+    "exampleKanji": "磁気",
+    "exampleJp": "じき",
+    "score": 0
+  },
+  "私": {
+    "exampleKanji": "公私",
+    "exampleJp": "こうし",
+    "score": 0
+  },
+  "租": {
+    "exampleKanji": "租税",
+    "exampleJp": "そぜい",
+    "score": 0
+  },
+  "勾": {
+    "exampleKanji": "勾配",
+    "exampleJp": "こうばい",
+    "score": 0
+  },
+  "恥": {
+    "exampleKanji": "無恥",
+    "exampleJp": "むち",
+    "score": 0
+  },
+  "紅": {
+    "exampleKanji": "口紅",
+    "exampleJp": "くちべに",
+    "score": 0
+  },
+  "拍": {
+    "exampleKanji": "拍車",
+    "exampleJp": "はくしゃ",
+    "score": 0
+  },
+  "純": {
+    "exampleKanji": "純益",
+    "exampleJp": "じゅんえき",
+    "score": 0
+  },
+  "后": {
+    "exampleKanji": "皇后",
+    "exampleJp": "こうごう",
+    "score": 0
+  },
+  "坑": {
+    "exampleKanji": "坑内",
+    "exampleJp": "こうない",
+    "score": 2.26
+  },
+  "尚": {
+    "exampleKanji": "尚更",
+    "exampleJp": "なおさら",
+    "score": 0
+  },
+  "拙": {
+    "exampleKanji": "拙速",
+    "exampleJp": "せっそく",
+    "score": 0
+  },
+  "甚": {
+    "exampleKanji": "甚だ",
+    "exampleJp": "はなはだ",
+    "score": 0
+  },
+  "迭": {
+    "exampleKanji": "更迭",
+    "exampleJp": "こうてつ",
+    "score": 0
+  },
+  "江": {
+    "exampleKanji": "江戸",
+    "exampleJp": "えど",
+    "score": 0
+  },
+  "丙": {
+    "exampleKanji": "丙午",
+    "exampleJp": "ひのえうま",
+    "score": 99
+  },
+  "陛": {
+    "exampleKanji": "陛下",
+    "exampleJp": "へいか",
+    "score": 0
+  },
+  "耕": {
+    "exampleKanji": "耕す",
+    "exampleJp": "たがやす",
+    "score": 0
+  },
+  "肯": {
+    "exampleKanji": "肯定",
+    "exampleJp": "こうてい",
+    "score": 0
+  },
+  "肘": {
+    "exampleKanji": "肘鉄",
+    "exampleJp": "ひじてつ",
+    "score": 99
+  },
+  "涼": {
+    "exampleKanji": "清涼",
+    "exampleJp": "せいりょう",
+    "score": 0
+  },
+  "殊": {
+    "exampleKanji": "殊に",
+    "exampleJp": "ことに",
+    "score": 0
+  },
+  "購": {
+    "exampleKanji": "購読",
+    "exampleJp": "こうどく",
+    "score": 0
+  },
+  "酵": {
+    "exampleKanji": "酵素",
+    "exampleJp": "こうそ",
+    "score": 0
+  },
+  "霜": {
+    "exampleKanji": "霜降り",
+    "exampleJp": "しもふり",
+    "score": 2.3699999999999997
+  },
+  "拷": {
+    "exampleKanji": "拷問",
+    "exampleJp": "ごうもん",
+    "score": 0
+  },
+  "爽": {
+    "exampleKanji": "爽快",
+    "exampleJp": "そうかい",
+    "score": 0
+  },
+  "粋": {
+    "exampleKanji": "純粋",
+    "exampleJp": "じゅんすい",
+    "score": 0
+  },
+  "是": {
+    "exampleKanji": "国是",
+    "exampleJp": "こくぜ",
+    "score": 0
+  },
+  "宰": {
+    "exampleKanji": "宰相",
+    "exampleJp": "さいしょう",
+    "score": 0
+  },
+  "粗": {
+    "exampleKanji": "粗い",
+    "exampleJp": "あらい",
+    "score": 0
+  },
+  "秋": {
+    "exampleKanji": "今秋",
+    "exampleJp": "こんしゅう",
+    "score": 0
+  },
+  "春": {
+    "exampleKanji": "今春",
+    "exampleJp": "こんしゅん",
+    "score": 0
+  },
+  "宵": {
+    "exampleKanji": "今宵",
+    "exampleJp": "こよい",
+    "score": 0
+  },
+  "困": {
+    "exampleKanji": "困る",
+    "exampleJp": "こまる",
+    "score": 0
+  },
+  "懇": {
+    "exampleKanji": "懇親",
+    "exampleJp": "こんしん",
+    "score": 0
+  },
+  "昆": {
+    "exampleKanji": "昆虫",
+    "exampleJp": "こんちゅう",
+    "score": 0
+  },
+  "採": {
+    "exampleKanji": "採掘",
+    "exampleJp": "さいくつ",
+    "score": 0
+  },
+  "紡": {
+    "exampleKanji": "紡績",
+    "exampleJp": "ぼうせき",
+    "score": 0
+  },
+  "紺": {
+    "exampleKanji": "紺屋",
+    "exampleJp": "こうや",
+    "score": 0
+  },
+  "魂": {
+    "exampleKanji": "鎮魂",
+    "exampleJp": "ちんこん",
+    "score": 0
+  },
+  "嵐": {
+    "exampleKanji": "青嵐",
+    "exampleJp": "あおあらし",
+    "score": 2.38
+  },
+  "詐": {
+    "exampleKanji": "詐欺",
+    "exampleJp": "さぎ",
+    "score": 0
+  },
+  "禅": {
+    "exampleKanji": "座禅",
+    "exampleJp": "ざぜん",
+    "score": 0
+  },
+  "挫": {
+    "exampleKanji": "挫折",
+    "exampleJp": "ざせつ",
+    "score": 0
+  },
+  "促": {
+    "exampleKanji": "催促",
+    "exampleJp": "さいそく",
+    "score": 0
+  },
+  "最": {
+    "exampleKanji": "最も",
+    "exampleJp": "もっとも",
+    "score": 0
+  },
+  "遭": {
+    "exampleKanji": "遭難",
+    "exampleJp": "そうなん",
+    "score": 0
+  },
+  "斎": {
+    "exampleKanji": "斎場",
+    "exampleJp": "さいじょう",
+    "score": 0
+  },
+  "屯": {
+    "exampleKanji": "駐屯",
+    "exampleJp": "ちゅうとん",
+    "score": 0
+  },
+  "埼": {
+    "exampleKanji": "埼玉",
+    "exampleJp": "さいたま",
+    "score": 0
+  },
+  "詳": {
+    "exampleKanji": "詳細",
+    "exampleJp": "しょうさい",
+    "score": 0
+  },
+  "到": {
+    "exampleKanji": "殺到",
+    "exampleJp": "さっとう",
+    "score": 0
+  },
+  "伐": {
+    "exampleKanji": "伐採",
+    "exampleJp": "ばっさい",
+    "score": 0
+  },
+  "帆": {
+    "exampleKanji": "帆船",
+    "exampleJp": "はんせん",
+    "score": 0
+  },
+  "凡": {
+    "exampleKanji": "平凡",
+    "exampleJp": "へいぼん",
+    "score": 0
+  },
+  "傘": {
+    "exampleKanji": "傘下",
+    "exampleJp": "さんか",
+    "score": 0
+  },
+  "詣": {
+    "exampleKanji": "初詣",
+    "exampleJp": "はつもうで",
+    "score": 0
+  },
+  "酌": {
+    "exampleKanji": "媒酌",
+    "exampleJp": "ばいしゃく",
+    "score": 2.36
+  },
+  "荘": {
+    "exampleKanji": "山荘",
+    "exampleJp": "さんそう",
+    "score": 0
+  },
+  "桟": {
+    "exampleKanji": "桟橋",
+    "exampleJp": "さんばし",
+    "score": 0
+  },
+  "斬": {
+    "exampleKanji": "斬る",
+    "exampleJp": "きる",
+    "score": 0
+  },
+  "暫": {
+    "exampleKanji": "暫く",
+    "exampleJp": "しばらく",
+    "score": 0
+  },
+  "伺": {
+    "exampleKanji": "伺う",
+    "exampleJp": "うかがう",
+    "score": 0
+  },
+  "刺": {
+    "exampleKanji": "刺し",
+    "exampleJp": "さし",
+    "score": 0
+  },
+  "唯": {
+    "exampleKanji": "唯一",
+    "exampleJp": "ゆいいつ",
+    "score": 0
+  },
+  "隅": {
+    "exampleKanji": "片隅",
+    "exampleJp": "かたすみ",
+    "score": 0
+  },
+  "唄": {
+    "exampleKanji": "長唄",
+    "exampleJp": "ながうた",
+    "score": 0
+  },
+  "煩": {
+    "exampleKanji": "煩い",
+    "exampleJp": "うるさい",
+    "score": 0
+  },
+  "囚": {
+    "exampleKanji": "囚人",
+    "exampleJp": "しゅうじん",
+    "score": 0
+  },
+  "迅": {
+    "exampleKanji": "迅速",
+    "exampleJp": "じんそく",
+    "score": 0
+  },
+  "淑": {
+    "exampleKanji": "淑やか",
+    "exampleJp": "しとやか",
+    "score": 0.01
+  },
+  "偵": {
+    "exampleKanji": "探偵",
+    "exampleJp": "たんてい",
+    "score": 0
+  },
+  "肪": {
+    "exampleKanji": "脂肪",
+    "exampleJp": "しぼう",
+    "score": 0
+  },
+  "抄": {
+    "exampleKanji": "抄本",
+    "exampleJp": "しょうほん",
+    "score": 2.43
+  },
+  "諮": {
+    "exampleKanji": "諮問",
+    "exampleJp": "しもん",
+    "score": 0
+  },
+  "雌": {
+    "exampleKanji": "雌雄",
+    "exampleJp": "しゆう",
+    "score": 2.2800000000000002
+  },
+  "珍": {
+    "exampleKanji": "珍しい",
+    "exampleJp": "めずらしい",
+    "score": 0.01
+  },
+  "非": {
+    "exampleKanji": "是非",
+    "exampleJp": "ぜひ",
+    "score": 0
+  },
+  "侍": {
+    "exampleKanji": "侍従",
+    "exampleJp": "じじゅう",
+    "score": 0
+  },
+  "祉": {
+    "exampleKanji": "福祉",
+    "exampleJp": "ふくし",
+    "score": 0
+  },
+  "滋": {
+    "exampleKanji": "滋養",
+    "exampleJp": "じよう",
+    "score": 2.46
+  },
+  "癒": {
+    "exampleKanji": "治癒",
+    "exampleJp": "ちゆ",
+    "score": 0
+  },
+  "澄": {
+    "exampleKanji": "澄む",
+    "exampleJp": "すむ",
+    "score": 0
+  },
+  "紹": {
+    "exampleKanji": "紹介",
+    "exampleJp": "しょうかい",
+    "score": 0
+  },
+  "複": {
+    "exampleKanji": "複合",
+    "exampleJp": "ふくごう",
+    "score": 0
+  },
+  "薦": {
+    "exampleKanji": "推薦",
+    "exampleJp": "すいせん",
+    "score": 0
+  },
+  "堕": {
+    "exampleKanji": "堕落",
+    "exampleJp": "だらく",
+    "score": 0
+  },
+  "賠": {
+    "exampleKanji": "賠償",
+    "exampleJp": "ばいしょう",
+    "score": 0
+  },
+  "嘲": {
+    "exampleKanji": "嘲る",
+    "exampleJp": "あざける",
+    "score": 0
+  },
+  "袖": {
+    "exampleKanji": "長袖",
+    "exampleJp": "ながそで",
+    "score": 0
+  },
+  "叱": {
+    "exampleKanji": "叱る",
+    "exampleJp": "しかる",
+    "score": 0
+  },
+  "予": {
+    "exampleKanji": "猶予",
+    "exampleJp": "ゆうよ",
+    "score": 0
+  },
+  "踪": {
+    "exampleKanji": "失踪",
+    "exampleJp": "しっそう",
+    "score": 0
+  },
+  "嫉": {
+    "exampleKanji": "嫉妬",
+    "exampleJp": "しっと",
+    "score": 0
+  },
+  "妬": {
+    "exampleKanji": "嫉妬",
+    "exampleJp": "しっと",
+    "score": 0
+  },
+  "潤": {
+    "exampleKanji": "潤い",
+    "exampleJp": "うるおい",
+    "score": 0
+  },
+  "朴": {
+    "exampleKanji": "素朴",
+    "exampleJp": "そぼく",
+    "score": 0
+  },
+  "践": {
+    "exampleKanji": "実践",
+    "exampleJp": "じっせん",
+    "score": 0
+  },
+  "沸": {
+    "exampleKanji": "沸騰",
+    "exampleJp": "ふっとう",
+    "score": 0
+  },
+  "虹": {
+    "exampleKanji": "主虹",
+    "exampleJp": "しゅにじ",
+    "score": 99
+  },
+  "招": {
+    "exampleKanji": "招き",
+    "exampleJp": "まねき",
+    "score": 0
+  },
+  "仏": {
+    "exampleKanji": "大仏",
+    "exampleJp": "だいぶつ",
+    "score": 0
+  },
+  "穫": {
+    "exampleKanji": "収穫",
+    "exampleJp": "しゅうかく",
+    "score": 0
+  },
+  "繭": {
+    "exampleKanji": "収繭",
+    "exampleJp": "しゅうけん",
+    "score": 99
+  },
+  "賄": {
+    "exampleKanji": "収賄",
+    "exampleJp": "しゅうわい",
+    "score": 0
+  },
+  "秀": {
+    "exampleKanji": "秀才",
+    "exampleJp": "しゅうさい",
+    "score": 0
+  },
+  "醜": {
+    "exampleKanji": "醜い",
+    "exampleJp": "みにくい",
+    "score": 0
+  },
+  "柿": {
+    "exampleKanji": "渋柿",
+    "exampleJp": "しぶがき",
+    "score": 2.46
+  },
+  "鎮": {
+    "exampleKanji": "重鎮",
+    "exampleJp": "じゅうちん",
+    "score": 0
+  },
+  "超": {
+    "exampleKanji": "超越",
+    "exampleJp": "ちょうえつ",
+    "score": 0
+  },
+  "俊": {
+    "exampleKanji": "俊足",
+    "exampleJp": "しゅんそく",
+    "score": 0
+  },
+  "准": {
+    "exampleKanji": "批准",
+    "exampleJp": "ひじゅん",
+    "score": 0
+  },
+  "殉": {
+    "exampleKanji": "殉教",
+    "exampleJp": "じゅんきょう",
+    "score": 2.3
+  },
+  "遵": {
+    "exampleKanji": "遵守",
+    "exampleJp": "じゅんしゅ",
+    "score": 0
+  },
+  "詮": {
+    "exampleKanji": "所詮",
+    "exampleJp": "しょせん",
+    "score": 0
+  },
+  "庶": {
+    "exampleKanji": "庶民",
+    "exampleJp": "しょみん",
+    "score": 0
+  },
+  "郵": {
+    "exampleKanji": "郵送",
+    "exampleJp": "ゆうそう",
+    "score": 0
+  },
+  "徐": {
+    "exampleKanji": "徐行",
+    "exampleJp": "じょこう",
+    "score": 0
+  },
+  "捕": {
+    "exampleKanji": "逮捕",
+    "exampleJp": "たいほ",
+    "score": 0
+  },
+  "舗": {
+    "exampleKanji": "店舗",
+    "exampleJp": "てんぽ",
+    "score": 0
+  },
+  "滝": {
+    "exampleKanji": "滝川",
+    "exampleJp": "たきがわ",
+    "score": 0
+  },
+  "昭": {
+    "exampleKanji": "昭和",
+    "exampleJp": "しょうわ",
+    "score": 0
+  },
+  "耗": {
+    "exampleKanji": "消耗",
+    "exampleJp": "しょうもう",
+    "score": 0
+  },
+  "酎": {
+    "exampleKanji": "焼酎",
+    "exampleJp": "しょうちゅう",
+    "score": 0
+  },
+  "肖": {
+    "exampleKanji": "肖像",
+    "exampleJp": "しょうぞう",
+    "score": 0
+  },
+  "裾": {
+    "exampleKanji": "裾野",
+    "exampleJp": "すその",
+    "score": 2.45
+  },
+  "詔": {
+    "exampleKanji": "詔書",
+    "exampleJp": "しょうしょ",
+    "score": 2.39
+  },
+  "勅": {
+    "exampleKanji": "詔勅",
+    "exampleJp": "しょうちょく",
+    "score": 99
+  },
+  "副": {
+    "exampleKanji": "副詞",
+    "exampleJp": "ふくし",
+    "score": 0
+  },
+  "申": {
+    "exampleKanji": "上申",
+    "exampleJp": "じょうしん",
+    "score": 0
+  },
+  "冗": {
+    "exampleKanji": "冗談",
+    "exampleJp": "じょうだん",
+    "score": 0
+  },
+  "瑠": {
+    "exampleKanji": "瑠璃",
+    "exampleJp": "るり",
+    "score": 0
+  },
+  "璃": {
+    "exampleKanji": "瑠璃",
+    "exampleJp": "るり",
+    "score": 0
+  },
+  "嘱": {
+    "exampleKanji": "嘱託",
+    "exampleJp": "しょくたく",
+    "score": 0
+  },
+  "捉": {
+    "exampleKanji": "捉える",
+    "exampleJp": "とらえる",
+    "score": 0.01
+  },
+  "鮮": {
+    "exampleKanji": "新鮮",
+    "exampleJp": "しんせん",
+    "score": 0
+  },
+  "森": {
+    "exampleKanji": "森林",
+    "exampleJp": "しんりん",
+    "score": 0
+  },
+  "摯": {
+    "exampleKanji": "真摯",
+    "exampleJp": "しんし",
+    "score": 0
+  },
+  "睦": {
+    "exampleKanji": "親睦",
+    "exampleJp": "しんぼく",
+    "score": 0
+  },
+  "捗": {
+    "exampleKanji": "進捗",
+    "exampleJp": "しんちょく",
+    "score": 0
+  },
+  "央": {
+    "exampleKanji": "中央",
+    "exampleJp": "ちゅうおう",
+    "score": 0
+  },
+  "翁": {
+    "exampleKanji": "老翁",
+    "exampleJp": "ろうおう",
+    "score": 99
+  },
+  "腎": {
+    "exampleKanji": "腎臓",
+    "exampleJp": "じんぞう",
+    "score": 0
+  },
+  "随": {
+    "exampleKanji": "随一",
+    "exampleJp": "ずいいち",
+    "score": 0
+  },
+  "枢": {
+    "exampleKanji": "中枢",
+    "exampleJp": "ちゅうすう",
+    "score": 0
+  },
+  "凄": {
+    "exampleKanji": "凄い",
+    "exampleJp": "すごい",
+    "score": 0
+  },
+  "覇": {
+    "exampleKanji": "制覇",
+    "exampleJp": "せいは",
+    "score": 0
+  },
+  "朗": {
+    "exampleKanji": "明朗",
+    "exampleJp": "めいろう",
+    "score": 0
+  },
+  "廉": {
+    "exampleKanji": "廉売",
+    "exampleJp": "れんばい",
+    "score": 2.26
+  },
+  "必": {
+    "exampleKanji": "必ず",
+    "exampleJp": "かならず",
+    "score": 0
+  },
+  "錬": {
+    "exampleKanji": "錬金術師",
+    "exampleJp": "れんきんじゅつし",
+    "score": 0.02
+  },
+  "緻": {
+    "exampleKanji": "緻密",
+    "exampleJp": "ちみつ",
+    "score": 0
+  },
+  "誠": {
+    "exampleKanji": "誠に",
+    "exampleJp": "まことに",
+    "score": 0
+  },
+  "銅": {
+    "exampleKanji": "銅貨",
+    "exampleJp": "どうか",
+    "score": 0
+  },
+  "斥": {
+    "exampleKanji": "排斥",
+    "exampleJp": "はいせき",
+    "score": 0
+  },
+  "塀": {
+    "exampleKanji": "土塀",
+    "exampleJp": "どべい",
+    "score": 2.43
+  },
+  "脊": {
+    "exampleKanji": "脊椎",
+    "exampleJp": "せきつい",
+    "score": 2.3
+  },
+  "椎": {
+    "exampleKanji": "椎茸",
+    "exampleJp": "しいたけ",
+    "score": 0
+  },
+  "窃": {
+    "exampleKanji": "窃盗",
+    "exampleJp": "せっとう",
+    "score": 0
+  },
+  "倣": {
+    "exampleKanji": "模倣",
+    "exampleJp": "もほう",
+    "score": 0
+  },
+  "鶴": {
+    "exampleKanji": "鶴嘴",
+    "exampleJp": "つるはし",
+    "score": 99
+  },
+  "慄": {
+    "exampleKanji": "戦慄",
+    "exampleJp": "せんりつ",
+    "score": 2.45
+  },
+  "煎": {
+    "exampleKanji": "煎餅",
+    "exampleJp": "せんべい",
+    "score": 0
+  },
+  "羨": {
+    "exampleKanji": "羨ましい",
+    "exampleJp": "うらやましい",
+    "score": 0.02
+  },
+  "貌": {
+    "exampleKanji": "全貌",
+    "exampleJp": "ぜんぼう",
+    "score": 0
+  },
+  "遡": {
+    "exampleKanji": "遡る",
+    "exampleJp": "さかのぼる",
+    "score": 0
+  },
+  "侶": {
+    "exampleKanji": "僧侶",
+    "exampleJp": "そうりょ",
+    "score": 0
+  },
+  "胴": {
+    "exampleKanji": "胴体",
+    "exampleJp": "どうたい",
+    "score": 0
+  },
+  "璧": {
+    "exampleKanji": "完璧",
+    "exampleJp": "かんぺき",
+    "score": 0
+  },
+  "挿": {
+    "exampleKanji": "挿入",
+    "exampleJp": "そうにゅう",
+    "score": 0
+  },
+  "痩": {
+    "exampleKanji": "痩身",
+    "exampleJp": "そうしん",
+    "score": 0
+  },
+  "撲": {
+    "exampleKanji": "相撲",
+    "exampleJp": "すもう",
+    "score": 0
+  },
+  "跳": {
+    "exampleKanji": "跳躍",
+    "exampleJp": "ちょうやく",
+    "score": 0
+  },
+  "諦": {
+    "exampleKanji": "諦める",
+    "exampleJp": "あきらめる",
+    "score": 0.01
+  },
+  "妥": {
+    "exampleKanji": "妥協",
+    "exampleJp": "だきょう",
+    "score": 0
+  },
+  "堆": {
+    "exampleKanji": "堆積",
+    "exampleJp": "たいせき",
+    "score": 0
+  },
+  "戴": {
+    "exampleKanji": "頂戴",
+    "exampleJp": "ちょうだい",
+    "score": 0
+  },
+  "逮": {
+    "exampleKanji": "逮捕",
+    "exampleJp": "たいほ",
+    "score": 0
+  },
+  "牧": {
+    "exampleKanji": "牧師",
+    "exampleJp": "ぼくし",
+    "score": 0
+  },
+  "陪": {
+    "exampleKanji": "陪審",
+    "exampleJp": "ばいしん",
+    "score": 0
+  },
+  "但": {
+    "exampleKanji": "但し",
+    "exampleJp": "ただし",
+    "score": 0
+  },
+  "誰": {
+    "exampleKanji": "誰か",
+    "exampleJp": "だれか",
+    "score": 0
+  },
+  "赴": {
+    "exampleKanji": "赴く",
+    "exampleJp": "おもむく",
+    "score": 0
+  },
+  "冶": {
+    "exampleKanji": "冶金",
+    "exampleJp": "やきん",
+    "score": 2.43
+  },
+  "稚": {
+    "exampleKanji": "稚魚",
+    "exampleJp": "ちぎょ",
+    "score": 0
+  },
+  "嫡": {
+    "exampleKanji": "嫡出",
+    "exampleJp": "ちゃくしゅつ",
+    "score": 0
+  },
+  "庸": {
+    "exampleKanji": "凡庸",
+    "exampleJp": "ぼんよう",
+    "score": 2.4699999999999998
+  },
+  "抽": {
+    "exampleKanji": "抽出",
+    "exampleJp": "ちゅうしゅつ",
+    "score": 0
+  },
+  "猛": {
+    "exampleKanji": "猛威",
+    "exampleJp": "もうい",
+    "score": 0
+  },
+  "貯": {
+    "exampleKanji": "貯金",
+    "exampleJp": "ちょきん",
+    "score": 0
+  },
+  "挑": {
+    "exampleKanji": "挑戦",
+    "exampleJp": "ちょうせん",
+    "score": 0
+  },
+  "眺": {
+    "exampleKanji": "眺め",
+    "exampleJp": "ながめ",
+    "score": 0
+  },
+  "捻": {
+    "exampleKanji": "捻る",
+    "exampleJp": "ひねる",
+    "score": 0
+  },
+  "零": {
+    "exampleKanji": "零す",
+    "exampleJp": "こぼす",
+    "score": 0
+  },
+  "亭": {
+    "exampleKanji": "亭主",
+    "exampleJp": "ていしゅ",
+    "score": 0
+  },
+  "貞": {
+    "exampleKanji": "貞潔",
+    "exampleJp": "ていけつ",
+    "score": 99
+  },
+  "逓": {
+    "exampleKanji": "逓信",
+    "exampleJp": "ていしん",
+    "score": 2.22
+  },
+  "溺": {
+    "exampleKanji": "溺れる",
+    "exampleJp": "おぼれる",
+    "score": 0.01
+  },
+  "壌": {
+    "exampleKanji": "土壌",
+    "exampleJp": "どじょう",
+    "score": 0
+  },
+  "吐": {
+    "exampleKanji": "吐く",
+    "exampleJp": "つく",
+    "score": 0
+  },
+  "賭": {
+    "exampleKanji": "賭け",
+    "exampleJp": "かけ",
+    "score": 0
+  },
+  "隷": {
+    "exampleKanji": "奴隷",
+    "exampleJp": "どれい",
+    "score": 0
+  },
+  "搭": {
+    "exampleKanji": "搭載",
+    "exampleJp": "とうさい",
+    "score": 0
+  },
+  "謄": {
+    "exampleKanji": "戸籍謄本",
+    "exampleJp": "こせきとうほん",
+    "score": 0.02
+  },
+  "罷": {
+    "exampleKanji": "罷免",
+    "exampleJp": "ひめん",
+    "score": 0
+  },
+  "憧": {
+    "exampleKanji": "憧れ",
+    "exampleJp": "あこがれ",
+    "score": 0
+  },
+  "憬": {
+    "exampleKanji": "憧憬",
+    "exampleJp": "どうけい",
+    "score": 2.46
+  },
+  "瞳": {
+    "exampleKanji": "瞳孔",
+    "exampleJp": "どうこう",
+    "score": 2.32
+  },
+  "栃": {
+    "exampleKanji": "栃若",
+    "exampleJp": "とちわか",
+    "score": 99
+  },
+  "泌": {
+    "exampleKanji": "分泌",
+    "exampleJp": "ぶんぴつ",
+    "score": 0
+  },
+  "蛮": {
+    "exampleKanji": "野蛮",
+    "exampleJp": "やばん",
+    "score": 0
+  },
+  "匂": {
+    "exampleKanji": "匂い",
+    "exampleJp": "におい",
+    "score": 0
+  },
+  "幼": {
+    "exampleKanji": "幼い",
+    "exampleJp": "おさない",
+    "score": 0
+  },
+  "粘": {
+    "exampleKanji": "粘り",
+    "exampleJp": "ねばり",
+    "score": 0
+  },
+  "俳": {
+    "exampleKanji": "俳句",
+    "exampleJp": "はいく",
+    "score": 0
+  },
+  "諧": {
+    "exampleKanji": "俳諧",
+    "exampleJp": "はいかい",
+    "score": 2.37
+  },
+  "肺": {
+    "exampleKanji": "肺炎",
+    "exampleJp": "はいえん",
+    "score": 0
+  },
+  "叔": {
+    "exampleKanji": "叔父",
+    "exampleJp": "おじ",
+    "score": 0
+  },
+  "哺": {
+    "exampleKanji": "哺乳類",
+    "exampleJp": "ほにゅうるい",
+    "score": 2.4499999999999997
+  },
+  "氾": {
+    "exampleKanji": "氾濫",
+    "exampleJp": "はんらん",
+    "score": 0
+  },
+  "濫": {
+    "exampleKanji": "氾濫",
+    "exampleJp": "はんらん",
+    "score": 0
+  },
+  "汎": {
+    "exampleKanji": "汎用",
+    "exampleJp": "はんよう",
+    "score": 0
+  },
+  "頒": {
+    "exampleKanji": "頒布",
+    "exampleJp": "はんぷ",
+    "score": 2.33
+  },
+  "批": {
+    "exampleKanji": "批准",
+    "exampleJp": "ひじゅん",
+    "score": 0
+  },
+  "膝": {
+    "exampleKanji": "膝頭",
+    "exampleJp": "ひざがしら",
+    "score": 99
+  },
+  "偏": {
+    "exampleKanji": "偏り",
+    "exampleJp": "かたより",
+    "score": 0
+  },
+  "漂": {
+    "exampleKanji": "漂う",
+    "exampleJp": "ただよう",
+    "score": 0
+  },
+  "愉": {
+    "exampleKanji": "愉快",
+    "exampleJp": "ゆかい",
+    "score": 0
+  },
+  "箋": {
+    "exampleKanji": "便箋",
+    "exampleJp": "びんせん",
+    "score": 0
+  },
+  "裕": {
+    "exampleKanji": "富裕",
+    "exampleJp": "ふゆう",
+    "score": 0
+  },
+  "踊": {
+    "exampleKanji": "舞踊",
+    "exampleJp": "ぶよう",
+    "score": 0
+  },
+  "湧": {
+    "exampleKanji": "湧く",
+    "exampleJp": "わく",
+    "score": 0
+  },
+  "雰": {
+    "exampleKanji": "雰囲気",
+    "exampleJp": "ふんいき",
+    "score": 0.01
+  },
+  "虜": {
+    "exampleKanji": "捕虜",
+    "exampleJp": "ほりょ",
+    "score": 0
+  },
+  "蜜": {
+    "exampleKanji": "蜂蜜",
+    "exampleJp": "はちみつ",
+    "score": 0
+  },
+  "豊": {
+    "exampleKanji": "豊か",
+    "exampleJp": "ゆたか",
+    "score": 0
+  },
+  "魅": {
+    "exampleKanji": "魅了",
+    "exampleJp": "みりょう",
+    "score": 0
+  },
+  "岬": {
+    "exampleKanji": "岬湾",
+    "exampleJp": "こうわん",
+    "score": 99
+  },
+  "矛": {
+    "exampleKanji": "矛盾",
+    "exampleJp": "むじゅん",
+    "score": 0
+  },
+  "冥": {
+    "exampleKanji": "冥福",
+    "exampleJp": "めいふく",
+    "score": 0
+  },
+  "幽": {
+    "exampleKanji": "幽霊",
+    "exampleJp": "ゆうれい",
+    "score": 0
+  },
+  "悠": {
+    "exampleKanji": "悠々",
+    "exampleJp": "ゆうゆう",
+    "score": 0
+  },
+  "妖": {
+    "exampleKanji": "妖怪",
+    "exampleJp": "ようかい",
+    "score": 0
+  },
+  "擁": {
+    "exampleKanji": "擁立",
+    "exampleJp": "ようりつ",
+    "score": 0
+  },
+  "窯": {
+    "exampleKanji": "窯業",
+    "exampleJp": "ようぎょう",
+    "score": 2.35
+  },
+  "翌": {
+    "exampleKanji": "翌月",
+    "exampleJp": "よくげつ",
+    "score": 0
+  },
+  "賂": {
+    "exampleKanji": "賄賂",
+    "exampleJp": "わいろ",
+    "score": 0
+  },
+  "傲": {
+    "exampleKanji": "傲慢",
+    "exampleJp": "ごうまん",
+    "score": 0
+  },
+  "嗅": {
+    "exampleKanji": "嗅ぐ",
+    "exampleJp": "かぐ",
+    "score": 0
+  },
+  "毀": {
+    "exampleKanji": "毀損",
+    "exampleJp": "きそん",
+    "score": 0
+  },
+  "恣": {
+    "exampleKanji": "恣意",
+    "exampleJp": "しい",
+    "score": 2.2800000000000002
+  },
+  "曖": {
+    "exampleKanji": "曖昧",
+    "exampleJp": "あいまい",
+    "score": 0
+  },
+  "楷": {
+    "exampleKanji": "楷書",
+    "exampleJp": "かいしょ",
+    "score": 0
+  },
+  "訃": {
+    "exampleKanji": "訃報",
+    "exampleJp": "ふほう",
+    "score": 2.31
+  },
+  "貪": {
+    "exampleKanji": "貪る",
+    "exampleJp": "むさぼる",
+    "score": 0
+  },
+  "曽": {
+    "exampleKanji": "曽祖父",
+    "exampleJp": "そうそふ",
+    "score": 99.01
+  },
+  "惧": {
+    "exampleKanji": "危惧",
+    "exampleJp": "きぐ",
+    "score": 0
+  },
+  "謎": {
+    "exampleKanji": "謎々",
+    "exampleJp": "なぞなぞ",
+    "score": 0
+  },
+  "醒": {
+    "exampleKanji": "覚醒",
+    "exampleJp": "かくせい",
+    "score": 0
+  },
+  "附": {
+    "exampleKanji": "交附",
+    "exampleJp": "こうふ",
+    "score": 99
+  },
+  "芯": {
+    "exampleKanji": "帯芯",
+    "exampleJp": "おびしん",
+    "score": 99
+  },
+  "麓": {
+    "exampleKanji": "山麓",
+    "exampleJp": "さんろく",
+    "score": 2.38
+  },
+  "柵": {
+    "exampleKanji": "鉄柵",
+    "exampleJp": "てっさく",
+    "score": 99
+  },
+  "弐": {
+    "exampleKanji": "弐つ",
+    "exampleJp": "ふたつ",
+    "score": 99
+  },
+  "壱": {
+    "exampleKanji": "壱越",
+    "exampleJp": "いちこつ",
+    "score": 99
+  }
+}
