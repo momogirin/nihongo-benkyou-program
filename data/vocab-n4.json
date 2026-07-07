@@ -1,0 +1,6014 @@
+[
+  {
+    "id": "N4-1",
+    "level": "N4",
+    "num": 1,
+    "word": "踏む",
+    "reading": "ふむ",
+    "meaningKr": "밟다",
+    "meaningEn": "to step on, to tread on"
+  },
+  {
+    "id": "N4-2",
+    "level": "N4",
+    "num": 2,
+    "word": "～区",
+    "reading": "～く",
+    "meaningKr": "~구(행정구역)",
+    "meaningEn": "~ district, ~ ward, ~ borough"
+  },
+  {
+    "id": "N4-3",
+    "level": "N4",
+    "num": 3,
+    "word": "すっと",
+    "reading": "すっと",
+    "meaningKr": "쓱(재빨리)",
+    "meaningEn": "straight, quickly"
+  },
+  {
+    "id": "N4-4",
+    "level": "N4",
+    "num": 4,
+    "word": "盗む",
+    "reading": "ぬすむ",
+    "meaningKr": "훔치다",
+    "meaningEn": "to steal; to rob"
+  },
+  {
+    "id": "N4-5",
+    "level": "N4",
+    "num": 5,
+    "word": "大抵",
+    "reading": "たいてい",
+    "meaningKr": "대개",
+    "meaningEn": "generally, usually"
+  },
+  {
+    "id": "N4-6",
+    "level": "N4",
+    "num": 6,
+    "word": "とうとう",
+    "reading": "とうとう",
+    "meaningKr": "결국(마침내)",
+    "meaningEn": "finally, at last"
+  },
+  {
+    "id": "N4-7",
+    "level": "N4",
+    "num": 7,
+    "word": "ガソリン",
+    "reading": "ガソリン",
+    "meaningKr": "휘발유",
+    "meaningEn": "gasoline, petrol"
+  },
+  {
+    "id": "N4-8",
+    "level": "N4",
+    "num": 8,
+    "word": "鳴る",
+    "reading": "なる",
+    "meaningKr": "울리다",
+    "meaningEn": "to sound, to ring (v.i.)"
+  },
+  {
+    "id": "N4-9",
+    "level": "N4",
+    "num": 9,
+    "word": "しっかり",
+    "reading": "しっかり",
+    "meaningKr": "확실히(단단히)",
+    "meaningEn": "firmly, steady"
+  },
+  {
+    "id": "N4-10",
+    "level": "N4",
+    "num": 10,
+    "word": "生きる",
+    "reading": "いきる",
+    "meaningKr": "살다",
+    "meaningEn": "to live"
+  },
+  {
+    "id": "N4-11",
+    "level": "N4",
+    "num": 11,
+    "word": "苦い",
+    "reading": "にがい",
+    "meaningKr": "쓰다(맛)",
+    "meaningEn": "bitter"
+  },
+  {
+    "id": "N4-12",
+    "level": "N4",
+    "num": 12,
+    "word": "沸く",
+    "reading": "わく",
+    "meaningKr": "끓다",
+    "meaningEn": "to boil, to grow hot"
+  },
+  {
+    "id": "N4-13",
+    "level": "N4",
+    "num": 13,
+    "word": "意見",
+    "reading": "いけん",
+    "meaningKr": "의견",
+    "meaningEn": "opinion, view, idea"
+  },
+  {
+    "id": "N4-14",
+    "level": "N4",
+    "num": 14,
+    "word": "やはり; やっぱり",
+    "reading": "やはり; やっぱり",
+    "meaningKr": "역시",
+    "meaningEn": "as I thought, absolutely"
+  },
+  {
+    "id": "N4-15",
+    "level": "N4",
+    "num": 15,
+    "word": "漫画",
+    "reading": "まんが",
+    "meaningKr": "만화",
+    "meaningEn": "comic (book), cartoon"
+  },
+  {
+    "id": "N4-16",
+    "level": "N4",
+    "num": 16,
+    "word": "ステレオ",
+    "reading": "ステレオ",
+    "meaningKr": "스테레오",
+    "meaningEn": "stereo"
+  },
+  {
+    "id": "N4-17",
+    "level": "N4",
+    "num": 17,
+    "word": "医学",
+    "reading": "いがく",
+    "meaningKr": "의학",
+    "meaningEn": "medical science"
+  },
+  {
+    "id": "N4-18",
+    "level": "N4",
+    "num": 18,
+    "word": "テキスト",
+    "reading": "テキスト",
+    "meaningKr": "교재(텍스트)",
+    "meaningEn": "text; text book"
+  },
+  {
+    "id": "N4-19",
+    "level": "N4",
+    "num": 19,
+    "word": "～月",
+    "reading": "～つき",
+    "meaningKr": "~달(개월)",
+    "meaningEn": "month"
+  },
+  {
+    "id": "N4-20",
+    "level": "N4",
+    "num": 20,
+    "word": "折る",
+    "reading": "おる",
+    "meaningKr": "꺾다(접다)",
+    "meaningEn": "to snap, to break; to bend"
+  },
+  {
+    "id": "N4-21",
+    "level": "N4",
+    "num": 21,
+    "word": "～会",
+    "reading": "～かい",
+    "meaningKr": "~회(모임)",
+    "meaningEn": "~ meeting"
+  },
+  {
+    "id": "N4-22",
+    "level": "N4",
+    "num": 22,
+    "word": "うかがう",
+    "reading": "うかがう",
+    "meaningKr": "여쭙다(찾아뵙다)",
+    "meaningEn": "to ask"
+  },
+  {
+    "id": "N4-23",
+    "level": "N4",
+    "num": 23,
+    "word": "聞こえる",
+    "reading": "きこえる",
+    "meaningKr": "들리다",
+    "meaningEn": "to be heard, to be audible"
+  },
+  {
+    "id": "N4-24",
+    "level": "N4",
+    "num": 24,
+    "word": "僕",
+    "reading": "ぼく",
+    "meaningKr": "나(남성 1인칭)",
+    "meaningEn": "I (used by men towards those of equal or lower status)"
+  },
+  {
+    "id": "N4-25",
+    "level": "N4",
+    "num": 25,
+    "word": "必ず",
+    "reading": "かならず",
+    "meaningKr": "반드시",
+    "meaningEn": "surely, certainly"
+  },
+  {
+    "id": "N4-26",
+    "level": "N4",
+    "num": 26,
+    "word": "壊す",
+    "reading": "こわす",
+    "meaningKr": "부수다(고장내다)",
+    "meaningEn": "to break, to break down"
+  },
+  {
+    "id": "N4-27",
+    "level": "N4",
+    "num": 27,
+    "word": "怒る",
+    "reading": "おこる",
+    "meaningKr": "화내다",
+    "meaningEn": "to get angry; to scold angrily"
+  },
+  {
+    "id": "N4-28",
+    "level": "N4",
+    "num": 28,
+    "word": "床屋",
+    "reading": "とこや",
+    "meaningKr": "이발소",
+    "meaningEn": "barber's (shop)"
+  },
+  {
+    "id": "N4-29",
+    "level": "N4",
+    "num": 29,
+    "word": "オートバイ",
+    "reading": "オートバイ",
+    "meaningKr": "오토바이",
+    "meaningEn": "motorcycle (lit: auto-bi(ke))"
+  },
+  {
+    "id": "N4-30",
+    "level": "N4",
+    "num": 30,
+    "word": "運動",
+    "reading": "うんどうする",
+    "meaningKr": "운동(하다)",
+    "meaningEn": "exercise"
+  },
+  {
+    "id": "N4-31",
+    "level": "N4",
+    "num": 31,
+    "word": "止む",
+    "reading": "やむ",
+    "meaningKr": "그치다",
+    "meaningEn": "to cease, to stop"
+  },
+  {
+    "id": "N4-32",
+    "level": "N4",
+    "num": 32,
+    "word": "もし",
+    "reading": "もし",
+    "meaningKr": "만약",
+    "meaningEn": "if"
+  },
+  {
+    "id": "N4-33",
+    "level": "N4",
+    "num": 33,
+    "word": "表",
+    "reading": "おもて",
+    "meaningKr": "표면(겉)",
+    "meaningEn": "surface; front; outside"
+  },
+  {
+    "id": "N4-34",
+    "level": "N4",
+    "num": 34,
+    "word": "大学生",
+    "reading": "だいがくせい",
+    "meaningKr": "대학생",
+    "meaningEn": "college student, university student"
+  },
+  {
+    "id": "N4-35",
+    "level": "N4",
+    "num": 35,
+    "word": "運転手",
+    "reading": "うんてんしゅ",
+    "meaningKr": "운전기사",
+    "meaningEn": "driver (by occupation)"
+  },
+  {
+    "id": "N4-36",
+    "level": "N4",
+    "num": 36,
+    "word": "予習",
+    "reading": "よしゅう",
+    "meaningKr": "예습",
+    "meaningEn": "preparation of lessons (for class)"
+  },
+  {
+    "id": "N4-37",
+    "level": "N4",
+    "num": 37,
+    "word": "心配",
+    "reading": "しんぱいする",
+    "meaningKr": "걱정(하다)",
+    "meaningEn": "worry, concern"
+  },
+  {
+    "id": "N4-38",
+    "level": "N4",
+    "num": 38,
+    "word": "別",
+    "reading": "べつ",
+    "meaningKr": "별개(다름)",
+    "meaningEn": "distinction, different"
+  },
+  {
+    "id": "N4-39",
+    "level": "N4",
+    "num": 39,
+    "word": "非常に",
+    "reading": "ひじょうに",
+    "meaningKr": "매우",
+    "meaningEn": "extremely; very"
+  },
+  {
+    "id": "N4-40",
+    "level": "N4",
+    "num": 40,
+    "word": "お宅",
+    "reading": "おたく",
+    "meaningKr": "댁(상대방의 집)",
+    "meaningEn": "(someone else's) house; home -- polite word for 家 (いえ) --"
+  },
+  {
+    "id": "N4-41",
+    "level": "N4",
+    "num": 41,
+    "word": "柔らかい",
+    "reading": "やわらかい",
+    "meaningKr": "부드럽다",
+    "meaningEn": "soft (in reference to texture), tender"
+  },
+  {
+    "id": "N4-42",
+    "level": "N4",
+    "num": 42,
+    "word": "拾う",
+    "reading": "ひろう",
+    "meaningKr": "줍다",
+    "meaningEn": "to pick up (something), to find"
+  },
+  {
+    "id": "N4-43",
+    "level": "N4",
+    "num": 43,
+    "word": "～ございます",
+    "reading": "～ございます",
+    "meaningKr": "~입니다(정중)",
+    "meaningEn": "to be (polite), to exist"
+  },
+  {
+    "id": "N4-44",
+    "level": "N4",
+    "num": 44,
+    "word": "気",
+    "reading": "き",
+    "meaningKr": "기운(마음)",
+    "meaningEn": "spirit, mood"
+  },
+  {
+    "id": "N4-45",
+    "level": "N4",
+    "num": 45,
+    "word": "比べる",
+    "reading": "くらべる",
+    "meaningKr": "비교하다",
+    "meaningEn": "to compare"
+  },
+  {
+    "id": "N4-46",
+    "level": "N4",
+    "num": 46,
+    "word": "ほとんど",
+    "reading": "ほとんど",
+    "meaningKr": "거의",
+    "meaningEn": "mostly, almost"
+  },
+  {
+    "id": "N4-47",
+    "level": "N4",
+    "num": 47,
+    "word": "つもり",
+    "reading": "つもり",
+    "meaningKr": "작정(생각)",
+    "meaningEn": "intention, plan"
+  },
+  {
+    "id": "N4-48",
+    "level": "N4",
+    "num": 48,
+    "word": "郊外",
+    "reading": "こうがい",
+    "meaningKr": "교외",
+    "meaningEn": "suburb, outskirts"
+  },
+  {
+    "id": "N4-49",
+    "level": "N4",
+    "num": 49,
+    "word": "だめ",
+    "reading": "だめ",
+    "meaningKr": "안 됨(소용없음)",
+    "meaningEn": "useless, no good, hopeless"
+  },
+  {
+    "id": "N4-50",
+    "level": "N4",
+    "num": 50,
+    "word": "売り場",
+    "reading": "うりば",
+    "meaningKr": "매장",
+    "meaningEn": "place where things are sold"
+  },
+  {
+    "id": "N4-51",
+    "level": "N4",
+    "num": 51,
+    "word": "正月",
+    "reading": "しょうがつ",
+    "meaningKr": "설날",
+    "meaningEn": "New Year, New Year's Day"
+  },
+  {
+    "id": "N4-52",
+    "level": "N4",
+    "num": 52,
+    "word": "規則",
+    "reading": "きそく",
+    "meaningKr": "규칙",
+    "meaningEn": "rule, regulation"
+  },
+  {
+    "id": "N4-53",
+    "level": "N4",
+    "num": 53,
+    "word": "うん",
+    "reading": "うん",
+    "meaningKr": "응(긍정)",
+    "meaningEn": "yes (informal), all right (ok)"
+  },
+  {
+    "id": "N4-54",
+    "level": "N4",
+    "num": 54,
+    "word": "発音",
+    "reading": "はつおん",
+    "meaningKr": "발음",
+    "meaningEn": "pronunciation"
+  },
+  {
+    "id": "N4-55",
+    "level": "N4",
+    "num": 55,
+    "word": "焼く",
+    "reading": "やく",
+    "meaningKr": "굽다",
+    "meaningEn": "to bake, to grill"
+  },
+  {
+    "id": "N4-56",
+    "level": "N4",
+    "num": 56,
+    "word": "屋上",
+    "reading": "おくじょう",
+    "meaningKr": "옥상",
+    "meaningEn": "rooftop"
+  },
+  {
+    "id": "N4-57",
+    "level": "N4",
+    "num": 57,
+    "word": "失礼",
+    "reading": "しつれい",
+    "meaningKr": "실례",
+    "meaningEn": "discourtesy, impoliteness; Excuse me"
+  },
+  {
+    "id": "N4-58",
+    "level": "N4",
+    "num": 58,
+    "word": "ごみ",
+    "reading": "ごみ",
+    "meaningKr": "쓰레기",
+    "meaningEn": "trash, garbage"
+  },
+  {
+    "id": "N4-59",
+    "level": "N4",
+    "num": 59,
+    "word": "アフリカ",
+    "reading": "アフリカ",
+    "meaningKr": "아프리카",
+    "meaningEn": "Africa"
+  },
+  {
+    "id": "N4-60",
+    "level": "N4",
+    "num": 60,
+    "word": "点",
+    "reading": "てん",
+    "meaningKr": "점(점수)",
+    "meaningEn": "mark, score, grade; point, dot"
+  },
+  {
+    "id": "N4-61",
+    "level": "N4",
+    "num": 61,
+    "word": "一生懸命",
+    "reading": "いっしょうけんめい",
+    "meaningKr": "열심히",
+    "meaningEn": "very hard (as in \"to work hard\"), with utmost effort"
+  },
+  {
+    "id": "N4-62",
+    "level": "N4",
+    "num": 62,
+    "word": "今度",
+    "reading": "こんど",
+    "meaningKr": "이번(다음)",
+    "meaningEn": "now, this time, near future, one of these days, next time"
+  },
+  {
+    "id": "N4-63",
+    "level": "N4",
+    "num": 63,
+    "word": "機会",
+    "reading": "きかい",
+    "meaningKr": "기회",
+    "meaningEn": "chance, opportunity"
+  },
+  {
+    "id": "N4-64",
+    "level": "N4",
+    "num": 64,
+    "word": "建てる",
+    "reading": "たてる",
+    "meaningKr": "짓다(세우다)",
+    "meaningEn": "to build"
+  },
+  {
+    "id": "N4-65",
+    "level": "N4",
+    "num": 65,
+    "word": "複雑",
+    "reading": "ふくざつ",
+    "meaningKr": "복잡함",
+    "meaningEn": "complexity, complication"
+  },
+  {
+    "id": "N4-66",
+    "level": "N4",
+    "num": 66,
+    "word": "彼",
+    "reading": "かれ",
+    "meaningKr": "그(남자친구)",
+    "meaningEn": "he, boyfriend"
+  },
+  {
+    "id": "N4-67",
+    "level": "N4",
+    "num": 67,
+    "word": "いらっしゃる",
+    "reading": "いらっしゃる",
+    "meaningKr": "계시다(가시다/오시다의 존경어)",
+    "meaningEn": "-- honorific expression for いく, くる, and いる --"
+  },
+  {
+    "id": "N4-68",
+    "level": "N4",
+    "num": 68,
+    "word": "布団",
+    "reading": "ふとん",
+    "meaningKr": "이불(요)",
+    "meaningEn": "futon"
+  },
+  {
+    "id": "N4-69",
+    "level": "N4",
+    "num": 69,
+    "word": "大事",
+    "reading": "だいじ",
+    "meaningKr": "중요함(소중함)",
+    "meaningEn": "important, valuable, serious matter"
+  },
+  {
+    "id": "N4-70",
+    "level": "N4",
+    "num": 70,
+    "word": "贈り物",
+    "reading": "おくりもの",
+    "meaningKr": "선물",
+    "meaningEn": "a gift; a present"
+  },
+  {
+    "id": "N4-71",
+    "level": "N4",
+    "num": 71,
+    "word": "泥棒",
+    "reading": "どろぼう",
+    "meaningKr": "도둑",
+    "meaningEn": "thief; burglar"
+  },
+  {
+    "id": "N4-72",
+    "level": "N4",
+    "num": 72,
+    "word": "～製",
+    "reading": "～せい",
+    "meaningKr": "~제(~산)",
+    "meaningEn": "made in ~"
+  },
+  {
+    "id": "N4-73",
+    "level": "N4",
+    "num": 73,
+    "word": "注意",
+    "reading": "ちゅうい",
+    "meaningKr": "주의",
+    "meaningEn": "caution, attention"
+  },
+  {
+    "id": "N4-74",
+    "level": "N4",
+    "num": 74,
+    "word": "台風",
+    "reading": "たいふう",
+    "meaningKr": "태풍",
+    "meaningEn": "typhoon"
+  },
+  {
+    "id": "N4-75",
+    "level": "N4",
+    "num": 75,
+    "word": "日",
+    "reading": "ひ",
+    "meaningKr": "해(태양/날)",
+    "meaningEn": "sun, sunshine, day"
+  },
+  {
+    "id": "N4-76",
+    "level": "N4",
+    "num": 76,
+    "word": "～軒",
+    "reading": "～けん",
+    "meaningKr": "~채(집 세는 단위)",
+    "meaningEn": "counter for houses"
+  },
+  {
+    "id": "N4-77",
+    "level": "N4",
+    "num": 77,
+    "word": "そう",
+    "reading": "そう",
+    "meaningKr": "그렇게(정말)",
+    "meaningEn": "really, (is that) so; yes, right"
+  },
+  {
+    "id": "N4-78",
+    "level": "N4",
+    "num": 78,
+    "word": "通る",
+    "reading": "とおる",
+    "meaningKr": "지나가다(통과하다)",
+    "meaningEn": "to pass (by), to go through"
+  },
+  {
+    "id": "N4-79",
+    "level": "N4",
+    "num": 79,
+    "word": "過ぎる",
+    "reading": "すぎる",
+    "meaningKr": "지나치다(초과하다)",
+    "meaningEn": "to exceed, to go beyond"
+  },
+  {
+    "id": "N4-80",
+    "level": "N4",
+    "num": 80,
+    "word": "レポート; リポート",
+    "reading": "レポート; リポート",
+    "meaningKr": "리포트(보고서)",
+    "meaningEn": "report"
+  },
+  {
+    "id": "N4-81",
+    "level": "N4",
+    "num": 81,
+    "word": "葉",
+    "reading": "は",
+    "meaningKr": "잎",
+    "meaningEn": "leaf"
+  },
+  {
+    "id": "N4-82",
+    "level": "N4",
+    "num": 82,
+    "word": "必要",
+    "reading": "ひつよう",
+    "meaningKr": "필요함",
+    "meaningEn": "necessary"
+  },
+  {
+    "id": "N4-83",
+    "level": "N4",
+    "num": 83,
+    "word": "課長",
+    "reading": "かちょう",
+    "meaningKr": "과장",
+    "meaningEn": "section manager"
+  },
+  {
+    "id": "N4-84",
+    "level": "N4",
+    "num": 84,
+    "word": "地震",
+    "reading": "じしん",
+    "meaningKr": "지진",
+    "meaningEn": "earthquake"
+  },
+  {
+    "id": "N4-85",
+    "level": "N4",
+    "num": 85,
+    "word": "すると",
+    "reading": "すると",
+    "meaningKr": "그러자",
+    "meaningEn": "and, then"
+  },
+  {
+    "id": "N4-86",
+    "level": "N4",
+    "num": 86,
+    "word": "止める",
+    "reading": "やめる",
+    "meaningKr": "그만두다",
+    "meaningEn": "to end, to stop"
+  },
+  {
+    "id": "N4-87",
+    "level": "N4",
+    "num": 87,
+    "word": "ガラス",
+    "reading": "ガラス",
+    "meaningKr": "유리",
+    "meaningEn": "glass, pane"
+  },
+  {
+    "id": "N4-88",
+    "level": "N4",
+    "num": 88,
+    "word": "～学部",
+    "reading": "～がくぶ",
+    "meaningKr": "~학부",
+    "meaningEn": "department of a university"
+  },
+  {
+    "id": "N4-89",
+    "level": "N4",
+    "num": 89,
+    "word": "厳しい",
+    "reading": "きびしい",
+    "meaningKr": "엄격하다",
+    "meaningEn": "hard; rigorous; strict"
+  },
+  {
+    "id": "N4-90",
+    "level": "N4",
+    "num": 90,
+    "word": "エスカレーター",
+    "reading": "エスカレーター",
+    "meaningKr": "에스컬레이터",
+    "meaningEn": "escalator"
+  },
+  {
+    "id": "N4-91",
+    "level": "N4",
+    "num": 91,
+    "word": "人口",
+    "reading": "じんこう",
+    "meaningKr": "인구",
+    "meaningEn": "population"
+  },
+  {
+    "id": "N4-92",
+    "level": "N4",
+    "num": 92,
+    "word": "月",
+    "reading": "つき",
+    "meaningKr": "달(月)",
+    "meaningEn": "moon"
+  },
+  {
+    "id": "N4-93",
+    "level": "N4",
+    "num": 93,
+    "word": "絹",
+    "reading": "きぬ",
+    "meaningKr": "비단(실크)",
+    "meaningEn": "silk"
+  },
+  {
+    "id": "N4-94",
+    "level": "N4",
+    "num": 94,
+    "word": "ちっとも",
+    "reading": "ちっとも",
+    "meaningKr": "조금도(전혀)",
+    "meaningEn": "not at all (neg. verb)"
+  },
+  {
+    "id": "N4-95",
+    "level": "N4",
+    "num": 95,
+    "word": "深い",
+    "reading": "ふかい",
+    "meaningKr": "깊다",
+    "meaningEn": "deep, profound"
+  },
+  {
+    "id": "N4-96",
+    "level": "N4",
+    "num": 96,
+    "word": "壊れる",
+    "reading": "こわれる",
+    "meaningKr": "부서지다(고장나다)",
+    "meaningEn": "to be broken, to break"
+  },
+  {
+    "id": "N4-97",
+    "level": "N4",
+    "num": 97,
+    "word": "揺れる",
+    "reading": "ゆれる",
+    "meaningKr": "흔들리다",
+    "meaningEn": "to shake, to sway"
+  },
+  {
+    "id": "N4-98",
+    "level": "N4",
+    "num": 98,
+    "word": "落る",
+    "reading": "おちる",
+    "meaningKr": "떨어지다",
+    "meaningEn": "to fall, to drop"
+  },
+  {
+    "id": "N4-99",
+    "level": "N4",
+    "num": 99,
+    "word": "できるだけ",
+    "reading": "できるだけ",
+    "meaningKr": "가능한 한",
+    "meaningEn": "if at all possible, as much as possible"
+  },
+  {
+    "id": "N4-100",
+    "level": "N4",
+    "num": 100,
+    "word": "悲しい",
+    "reading": "かなしい",
+    "meaningKr": "슬프다",
+    "meaningEn": "sad, sorrowful"
+  },
+  {
+    "id": "N4-101",
+    "level": "N4",
+    "num": 101,
+    "word": "中学校",
+    "reading": "ちゅうがっこう",
+    "meaningKr": "중학교",
+    "meaningEn": "junior high school pupil"
+  },
+  {
+    "id": "N4-102",
+    "level": "N4",
+    "num": 102,
+    "word": "ガス",
+    "reading": "ガス",
+    "meaningKr": "가스",
+    "meaningEn": "gas"
+  },
+  {
+    "id": "N4-103",
+    "level": "N4",
+    "num": 103,
+    "word": "祈る",
+    "reading": "いのる",
+    "meaningKr": "기도하다(빌다)",
+    "meaningEn": "to pray; to wish"
+  },
+  {
+    "id": "N4-104",
+    "level": "N4",
+    "num": 104,
+    "word": "盛ん",
+    "reading": "さかん",
+    "meaningKr": "성함(활발함)",
+    "meaningEn": "prosperous, active, thriving"
+  },
+  {
+    "id": "N4-105",
+    "level": "N4",
+    "num": 105,
+    "word": "アルバイト",
+    "reading": "アルバイト",
+    "meaningKr": "아르바이트",
+    "meaningEn": "part-time job"
+  },
+  {
+    "id": "N4-106",
+    "level": "N4",
+    "num": 106,
+    "word": "起こす",
+    "reading": "おこす",
+    "meaningKr": "깨우다(일으키다)",
+    "meaningEn": "to wake (someone) up"
+  },
+  {
+    "id": "N4-107",
+    "level": "N4",
+    "num": 107,
+    "word": "致す",
+    "reading": "いたす",
+    "meaningKr": "하다(する의 겸양어)",
+    "meaningEn": "-- extra-modest expression for する --"
+  },
+  {
+    "id": "N4-108",
+    "level": "N4",
+    "num": 108,
+    "word": "噛む",
+    "reading": "かむ",
+    "meaningKr": "씹다(물다)",
+    "meaningEn": "to bite, to chew"
+  },
+  {
+    "id": "N4-109",
+    "level": "N4",
+    "num": 109,
+    "word": "赤ちゃん",
+    "reading": "あかちゃん",
+    "meaningKr": "아기",
+    "meaningEn": "baby, infant"
+  },
+  {
+    "id": "N4-110",
+    "level": "N4",
+    "num": 110,
+    "word": "浅い",
+    "reading": "あさい",
+    "meaningKr": "얕다",
+    "meaningEn": "shallow, superficial"
+  },
+  {
+    "id": "N4-111",
+    "level": "N4",
+    "num": 111,
+    "word": "うそ",
+    "reading": "嘘",
+    "meaningKr": "거짓말",
+    "meaningEn": "lie"
+  },
+  {
+    "id": "N4-112",
+    "level": "N4",
+    "num": 112,
+    "word": "小説",
+    "reading": "しょうせつ",
+    "meaningKr": "소설",
+    "meaningEn": "novel"
+  },
+  {
+    "id": "N4-113",
+    "level": "N4",
+    "num": 113,
+    "word": "親",
+    "reading": "おや",
+    "meaningKr": "부모",
+    "meaningEn": "a parent"
+  },
+  {
+    "id": "N4-114",
+    "level": "N4",
+    "num": 114,
+    "word": "それに",
+    "reading": "それに",
+    "meaningKr": "게다가",
+    "meaningEn": "moreover; besides"
+  },
+  {
+    "id": "N4-115",
+    "level": "N4",
+    "num": 115,
+    "word": "西洋",
+    "reading": "せいよう",
+    "meaningKr": "서양",
+    "meaningEn": "the West, Western countries"
+  },
+  {
+    "id": "N4-116",
+    "level": "N4",
+    "num": 116,
+    "word": "思う",
+    "reading": "おもう",
+    "meaningKr": "생각하다",
+    "meaningEn": "to think, to feel"
+  },
+  {
+    "id": "N4-117",
+    "level": "N4",
+    "num": 117,
+    "word": "パート (タイム)",
+    "reading": "パート (タイム)",
+    "meaningKr": "파트타임(아르바이트)",
+    "meaningEn": "part time (esp. female part time employees)"
+  },
+  {
+    "id": "N4-118",
+    "level": "N4",
+    "num": 118,
+    "word": "時代",
+    "reading": "じだい",
+    "meaningKr": "시대",
+    "meaningEn": "age, period, epoch, era"
+  },
+  {
+    "id": "N4-119",
+    "level": "N4",
+    "num": 119,
+    "word": "申し上げる",
+    "reading": "もうしあげる",
+    "meaningKr": "말씀드리다",
+    "meaningEn": "(humble)to say, to tell"
+  },
+  {
+    "id": "N4-120",
+    "level": "N4",
+    "num": 120,
+    "word": "～式",
+    "reading": "～しき",
+    "meaningKr": "~식(예식/방식)",
+    "meaningEn": "~ ceremony; ~ style"
+  },
+  {
+    "id": "N4-121",
+    "level": "N4",
+    "num": 121,
+    "word": "出席",
+    "reading": "しゅっせきする",
+    "meaningKr": "출석(하다)",
+    "meaningEn": "attendance"
+  },
+  {
+    "id": "N4-122",
+    "level": "N4",
+    "num": 122,
+    "word": "～家",
+    "reading": "～か",
+    "meaningKr": "~가(전문가)",
+    "meaningEn": "person who is specialized in ~"
+  },
+  {
+    "id": "N4-123",
+    "level": "N4",
+    "num": 123,
+    "word": "迎える",
+    "reading": "むかえる",
+    "meaningKr": "맞이하다",
+    "meaningEn": "to welcome; to meet; to greet"
+  },
+  {
+    "id": "N4-124",
+    "level": "N4",
+    "num": 124,
+    "word": "触る",
+    "reading": "さわる",
+    "meaningKr": "만지다",
+    "meaningEn": "to touch, to feel"
+  },
+  {
+    "id": "N4-125",
+    "level": "N4",
+    "num": 125,
+    "word": "建て",
+    "reading": "～だて",
+    "meaningKr": "~층 건물",
+    "meaningEn": "~ storied, separate housing"
+  },
+  {
+    "id": "N4-126",
+    "level": "N4",
+    "num": 126,
+    "word": "社長",
+    "reading": "しゃちょう",
+    "meaningKr": "사장",
+    "meaningEn": "president of a company"
+  },
+  {
+    "id": "N4-127",
+    "level": "N4",
+    "num": 127,
+    "word": "動物園",
+    "reading": "どうぶつえん",
+    "meaningKr": "동물원",
+    "meaningEn": "zoo"
+  },
+  {
+    "id": "N4-128",
+    "level": "N4",
+    "num": 128,
+    "word": "捕まえる",
+    "reading": "つかまえる",
+    "meaningKr": "잡다(붙잡다)",
+    "meaningEn": "to catch, to arrest"
+  },
+  {
+    "id": "N4-129",
+    "level": "N4",
+    "num": 129,
+    "word": "季節",
+    "reading": "きせつ",
+    "meaningKr": "계절",
+    "meaningEn": "season (in reference to weather)"
+  },
+  {
+    "id": "N4-130",
+    "level": "N4",
+    "num": 130,
+    "word": "寄る",
+    "reading": "よる",
+    "meaningKr": "들르다",
+    "meaningEn": "to stop by"
+  },
+  {
+    "id": "N4-131",
+    "level": "N4",
+    "num": 131,
+    "word": "決まる",
+    "reading": "きまる",
+    "meaningKr": "정해지다",
+    "meaningEn": "to be set; fixed (v.i.)"
+  },
+  {
+    "id": "N4-132",
+    "level": "N4",
+    "num": 132,
+    "word": "開く",
+    "reading": "ひらく",
+    "meaningKr": "열리다(개최하다)",
+    "meaningEn": "to open; to hold (an event)"
+  },
+  {
+    "id": "N4-133",
+    "level": "N4",
+    "num": 133,
+    "word": "逃げる",
+    "reading": "にげる",
+    "meaningKr": "도망가다",
+    "meaningEn": "to escape, to run away"
+  },
+  {
+    "id": "N4-134",
+    "level": "N4",
+    "num": 134,
+    "word": "だから",
+    "reading": "だから",
+    "meaningKr": "그래서",
+    "meaningEn": "so; therefore"
+  },
+  {
+    "id": "N4-135",
+    "level": "N4",
+    "num": 135,
+    "word": "残念",
+    "reading": "ざんねん",
+    "meaningKr": "유감스러움",
+    "meaningEn": "regret; regrettable"
+  },
+  {
+    "id": "N4-136",
+    "level": "N4",
+    "num": 136,
+    "word": "畳",
+    "reading": "たたみ",
+    "meaningKr": "다다미",
+    "meaningEn": "tatami mat (Japanese straw mat)"
+  },
+  {
+    "id": "N4-137",
+    "level": "N4",
+    "num": 137,
+    "word": "丁寧",
+    "reading": "ていねい",
+    "meaningKr": "공손함(정중함)",
+    "meaningEn": "polite, courteous, careful"
+  },
+  {
+    "id": "N4-138",
+    "level": "N4",
+    "num": 138,
+    "word": "地理",
+    "reading": "ちり",
+    "meaningKr": "지리",
+    "meaningEn": "geography"
+  },
+  {
+    "id": "N4-139",
+    "level": "N4",
+    "num": 139,
+    "word": "さっき",
+    "reading": "さっき",
+    "meaningKr": "아까",
+    "meaningEn": "a little while ago"
+  },
+  {
+    "id": "N4-140",
+    "level": "N4",
+    "num": 140,
+    "word": "怖い",
+    "reading": "こわい",
+    "meaningKr": "무섭다",
+    "meaningEn": "scary, frightening"
+  },
+  {
+    "id": "N4-141",
+    "level": "N4",
+    "num": 141,
+    "word": "包む",
+    "reading": "つつむ",
+    "meaningKr": "싸다(포장하다)",
+    "meaningEn": "to wrap, to cover"
+  },
+  {
+    "id": "N4-142",
+    "level": "N4",
+    "num": 142,
+    "word": "なるべく",
+    "reading": "なるべく",
+    "meaningKr": "가능한 한",
+    "meaningEn": "if possible, as much as possible"
+  },
+  {
+    "id": "N4-143",
+    "level": "N4",
+    "num": 143,
+    "word": "無理",
+    "reading": "むり",
+    "meaningKr": "무리",
+    "meaningEn": "unreasonable, impossible"
+  },
+  {
+    "id": "N4-144",
+    "level": "N4",
+    "num": 144,
+    "word": "サンドイッチ",
+    "reading": "サンドイッチ",
+    "meaningKr": "샌드위치",
+    "meaningEn": "sandwich"
+  },
+  {
+    "id": "N4-145",
+    "level": "N4",
+    "num": 145,
+    "word": "会議室",
+    "reading": "かいぎしつ",
+    "meaningKr": "회의실",
+    "meaningEn": "conference room"
+  },
+  {
+    "id": "N4-146",
+    "level": "N4",
+    "num": 146,
+    "word": "品物",
+    "reading": "しなもの",
+    "meaningKr": "물품",
+    "meaningEn": "goods"
+  },
+  {
+    "id": "N4-147",
+    "level": "N4",
+    "num": 147,
+    "word": "人形",
+    "reading": "にんぎょう",
+    "meaningKr": "인형",
+    "meaningEn": "doll, figure"
+  },
+  {
+    "id": "N4-148",
+    "level": "N4",
+    "num": 148,
+    "word": "利用",
+    "reading": "りよう",
+    "meaningKr": "이용",
+    "meaningEn": "use, utilization"
+  },
+  {
+    "id": "N4-149",
+    "level": "N4",
+    "num": 149,
+    "word": "飾る",
+    "reading": "かざる",
+    "meaningKr": "장식하다",
+    "meaningEn": "to decorate, to adorn"
+  },
+  {
+    "id": "N4-150",
+    "level": "N4",
+    "num": 150,
+    "word": "止める",
+    "reading": "とめる",
+    "meaningKr": "세우다(멈추다)",
+    "meaningEn": "to stop (something)"
+  },
+  {
+    "id": "N4-151",
+    "level": "N4",
+    "num": 151,
+    "word": "恥ずかしい",
+    "reading": "はずかしい",
+    "meaningKr": "부끄럽다",
+    "meaningEn": "ashamed, embarrassed"
+  },
+  {
+    "id": "N4-152",
+    "level": "N4",
+    "num": 152,
+    "word": "いくら～ても",
+    "reading": "いくら～ても",
+    "meaningKr": "아무리 ~해도",
+    "meaningEn": "however much one may ~"
+  },
+  {
+    "id": "N4-153",
+    "level": "N4",
+    "num": 153,
+    "word": "用事",
+    "reading": "ようじ",
+    "meaningKr": "볼일",
+    "meaningEn": "business to take care of; tasks; errands"
+  },
+  {
+    "id": "N4-154",
+    "level": "N4",
+    "num": 154,
+    "word": "ビル",
+    "reading": "ビル",
+    "meaningKr": "빌딩",
+    "meaningEn": "(abbr.) building"
+  },
+  {
+    "id": "N4-155",
+    "level": "N4",
+    "num": 155,
+    "word": "けんかする",
+    "reading": "けんかする",
+    "meaningKr": "싸움(하다)",
+    "meaningEn": "quarrel"
+  },
+  {
+    "id": "N4-156",
+    "level": "N4",
+    "num": 156,
+    "word": "頑張る",
+    "reading": "がんばる",
+    "meaningKr": "열심히 하다",
+    "meaningEn": "to try one's best, to try hard, to persist"
+  },
+  {
+    "id": "N4-157",
+    "level": "N4",
+    "num": 157,
+    "word": "投げる",
+    "reading": "なげる",
+    "meaningKr": "던지다",
+    "meaningEn": "to pitch, to cast away"
+  },
+  {
+    "id": "N4-158",
+    "level": "N4",
+    "num": 158,
+    "word": "故障",
+    "reading": "こしょうする",
+    "meaningKr": "고장(나다)",
+    "meaningEn": "breakdown"
+  },
+  {
+    "id": "N4-159",
+    "level": "N4",
+    "num": 159,
+    "word": "力",
+    "reading": "ちから",
+    "meaningKr": "힘",
+    "meaningEn": "strength, power"
+  },
+  {
+    "id": "N4-160",
+    "level": "N4",
+    "num": 160,
+    "word": "受ける",
+    "reading": "うける",
+    "meaningKr": "받다(시험 등을 치르다)",
+    "meaningEn": "to take (an examination, interview, etc.); to receive"
+  },
+  {
+    "id": "N4-161",
+    "level": "N4",
+    "num": 161,
+    "word": "気分",
+    "reading": "きぶん",
+    "meaningKr": "기분",
+    "meaningEn": "feeling, mood"
+  },
+  {
+    "id": "N4-162",
+    "level": "N4",
+    "num": 162,
+    "word": "間違える",
+    "reading": "まちがえる",
+    "meaningKr": "틀리다(실수하다)",
+    "meaningEn": "to make a mistake"
+  },
+  {
+    "id": "N4-163",
+    "level": "N4",
+    "num": 163,
+    "word": "そんな",
+    "reading": "そんな",
+    "meaningKr": "그런",
+    "meaningEn": "such, like that, that sort of"
+  },
+  {
+    "id": "N4-164",
+    "level": "N4",
+    "num": 164,
+    "word": "星",
+    "reading": "ほし",
+    "meaningKr": "별",
+    "meaningEn": "star"
+  },
+  {
+    "id": "N4-165",
+    "level": "N4",
+    "num": 165,
+    "word": "場合",
+    "reading": "ばあい",
+    "meaningKr": "경우",
+    "meaningEn": "case, situation"
+  },
+  {
+    "id": "N4-166",
+    "level": "N4",
+    "num": 166,
+    "word": "やっと",
+    "reading": "やっと",
+    "meaningKr": "드디어",
+    "meaningEn": "at last, finally"
+  },
+  {
+    "id": "N4-167",
+    "level": "N4",
+    "num": 167,
+    "word": "足りる",
+    "reading": "たりる",
+    "meaningKr": "충분하다",
+    "meaningEn": "to be sufficient; to be enough"
+  },
+  {
+    "id": "N4-168",
+    "level": "N4",
+    "num": 168,
+    "word": "行う",
+    "reading": "おこなう",
+    "meaningKr": "행하다(실시하다)",
+    "meaningEn": "to carry out; to conduct (typically used in written language)"
+  },
+  {
+    "id": "N4-169",
+    "level": "N4",
+    "num": 169,
+    "word": "ぶどう",
+    "reading": "ぶどう",
+    "meaningKr": "포도",
+    "meaningEn": "grapes"
+  },
+  {
+    "id": "N4-170",
+    "level": "N4",
+    "num": 170,
+    "word": "無くなる",
+    "reading": "なくなる",
+    "meaningKr": "없어지다",
+    "meaningEn": "to disappear, to get lost"
+  },
+  {
+    "id": "N4-171",
+    "level": "N4",
+    "num": 171,
+    "word": "準備",
+    "reading": "じゅんびする",
+    "meaningKr": "준비(하다)",
+    "meaningEn": "prepare"
+  },
+  {
+    "id": "N4-172",
+    "level": "N4",
+    "num": 172,
+    "word": "世界",
+    "reading": "せかい",
+    "meaningKr": "세계",
+    "meaningEn": "world"
+  },
+  {
+    "id": "N4-173",
+    "level": "N4",
+    "num": 173,
+    "word": "住所",
+    "reading": "じゅうしょ",
+    "meaningKr": "주소",
+    "meaningEn": "address; place of residence"
+  },
+  {
+    "id": "N4-174",
+    "level": "N4",
+    "num": 174,
+    "word": "再来月",
+    "reading": "さらいげつ",
+    "meaningKr": "다다음 달",
+    "meaningEn": "the month after next"
+  },
+  {
+    "id": "N4-175",
+    "level": "N4",
+    "num": 175,
+    "word": "林",
+    "reading": "はやし",
+    "meaningKr": "숲",
+    "meaningEn": "woods, forest"
+  },
+  {
+    "id": "N4-176",
+    "level": "N4",
+    "num": 176,
+    "word": "倍",
+    "reading": "ばい",
+    "meaningKr": "배(곱절)",
+    "meaningEn": "double"
+  },
+  {
+    "id": "N4-177",
+    "level": "N4",
+    "num": 177,
+    "word": "痩せる",
+    "reading": "やせる",
+    "meaningKr": "살이 빠지다",
+    "meaningEn": "to lose weight"
+  },
+  {
+    "id": "N4-178",
+    "level": "N4",
+    "num": 178,
+    "word": "線",
+    "reading": "せん",
+    "meaningKr": "선",
+    "meaningEn": "line, wire"
+  },
+  {
+    "id": "N4-179",
+    "level": "N4",
+    "num": 179,
+    "word": "戦争",
+    "reading": "せんそう",
+    "meaningKr": "전쟁",
+    "meaningEn": "war"
+  },
+  {
+    "id": "N4-180",
+    "level": "N4",
+    "num": 180,
+    "word": "決める",
+    "reading": "きめる",
+    "meaningKr": "정하다",
+    "meaningEn": "to decide (v.t.)"
+  },
+  {
+    "id": "N4-181",
+    "level": "N4",
+    "num": 181,
+    "word": "調べる",
+    "reading": "しらべる",
+    "meaningKr": "조사하다(찾아보다)",
+    "meaningEn": "to check; to look up; to inquire; to search"
+  },
+  {
+    "id": "N4-182",
+    "level": "N4",
+    "num": 182,
+    "word": "寝坊",
+    "reading": "ねぼう",
+    "meaningKr": "늦잠",
+    "meaningEn": "sleeping in late"
+  },
+  {
+    "id": "N4-183",
+    "level": "N4",
+    "num": 183,
+    "word": "パパ",
+    "reading": "パパ",
+    "meaningKr": "아빠",
+    "meaningEn": "papa, daddy"
+  },
+  {
+    "id": "N4-184",
+    "level": "N4",
+    "num": 184,
+    "word": "光る",
+    "reading": "ひかる",
+    "meaningKr": "빛나다",
+    "meaningEn": "to shine, to glitter"
+  },
+  {
+    "id": "N4-185",
+    "level": "N4",
+    "num": 185,
+    "word": "夫",
+    "reading": "おっと",
+    "meaningKr": "남편",
+    "meaningEn": "husband"
+  },
+  {
+    "id": "N4-186",
+    "level": "N4",
+    "num": 186,
+    "word": "雲",
+    "reading": "くも",
+    "meaningKr": "구름",
+    "meaningEn": "cloud"
+  },
+  {
+    "id": "N4-187",
+    "level": "N4",
+    "num": 187,
+    "word": "坂",
+    "reading": "さか",
+    "meaningKr": "비탈길(언덕)",
+    "meaningEn": "slope, hill"
+  },
+  {
+    "id": "N4-188",
+    "level": "N4",
+    "num": 188,
+    "word": "～(て) しまう",
+    "reading": "～(て) しまう",
+    "meaningKr": "~해 버리다",
+    "meaningEn": "to end up ~"
+  },
+  {
+    "id": "N4-189",
+    "level": "N4",
+    "num": 189,
+    "word": "飛行場",
+    "reading": "ひこうじょう",
+    "meaningKr": "비행장",
+    "meaningEn": "airport"
+  },
+  {
+    "id": "N4-190",
+    "level": "N4",
+    "num": 190,
+    "word": "柔道",
+    "reading": "じゅうどう",
+    "meaningKr": "유도",
+    "meaningEn": "judo"
+  },
+  {
+    "id": "N4-191",
+    "level": "N4",
+    "num": 191,
+    "word": "決して",
+    "reading": "けっして",
+    "meaningKr": "결코",
+    "meaningEn": "never"
+  },
+  {
+    "id": "N4-192",
+    "level": "N4",
+    "num": 192,
+    "word": "事務所",
+    "reading": "じむしょ",
+    "meaningKr": "사무소",
+    "meaningEn": "office"
+  },
+  {
+    "id": "N4-193",
+    "level": "N4",
+    "num": 193,
+    "word": "連絡",
+    "reading": "れんらく",
+    "meaningKr": "연락",
+    "meaningEn": "communication, contact, connection"
+  },
+  {
+    "id": "N4-194",
+    "level": "N4",
+    "num": 194,
+    "word": "小学校",
+    "reading": "しょうがっこう",
+    "meaningKr": "초등학교",
+    "meaningEn": "elementary school"
+  },
+  {
+    "id": "N4-195",
+    "level": "N4",
+    "num": 195,
+    "word": "客",
+    "reading": "きゃく",
+    "meaningKr": "손님",
+    "meaningEn": "guest, customer"
+  },
+  {
+    "id": "N4-196",
+    "level": "N4",
+    "num": 196,
+    "word": "昔",
+    "reading": "むかし",
+    "meaningKr": "옛날",
+    "meaningEn": "old days; past"
+  },
+  {
+    "id": "N4-197",
+    "level": "N4",
+    "num": 197,
+    "word": "美しい",
+    "reading": "うつくしい",
+    "meaningKr": "아름답다",
+    "meaningEn": "beautiful, lovely"
+  },
+  {
+    "id": "N4-198",
+    "level": "N4",
+    "num": 198,
+    "word": "捨てる",
+    "reading": "すてる",
+    "meaningKr": "버리다",
+    "meaningEn": "throw away (trash), dump, discard"
+  },
+  {
+    "id": "N4-199",
+    "level": "N4",
+    "num": 199,
+    "word": "なさる",
+    "reading": "なさる",
+    "meaningKr": "하시다(する의 존경어)",
+    "meaningEn": "-- honorific expression for する --"
+  },
+  {
+    "id": "N4-200",
+    "level": "N4",
+    "num": 200,
+    "word": "事",
+    "reading": "こと",
+    "meaningKr": "일(사물)",
+    "meaningEn": "thing(s), matter(s), fact"
+  },
+  {
+    "id": "N4-201",
+    "level": "N4",
+    "num": 201,
+    "word": "どんどん",
+    "reading": "どんどん",
+    "meaningKr": "점점(계속)",
+    "meaningEn": "quickly and steadily; at a rapid pace"
+  },
+  {
+    "id": "N4-202",
+    "level": "N4",
+    "num": 202,
+    "word": "試合",
+    "reading": "しあい",
+    "meaningKr": "시합",
+    "meaningEn": "match, game, competition"
+  },
+  {
+    "id": "N4-203",
+    "level": "N4",
+    "num": 203,
+    "word": "適当",
+    "reading": "てきとう",
+    "meaningKr": "적당함",
+    "meaningEn": "fitness, suitability"
+  },
+  {
+    "id": "N4-204",
+    "level": "N4",
+    "num": 204,
+    "word": "素晴らしい",
+    "reading": "すばらしい",
+    "meaningKr": "멋지다",
+    "meaningEn": "wonderful; terrific"
+  },
+  {
+    "id": "N4-205",
+    "level": "N4",
+    "num": 205,
+    "word": "美術館",
+    "reading": "びじゅつかん",
+    "meaningKr": "미술관",
+    "meaningEn": "art gallery, art museum"
+  },
+  {
+    "id": "N4-206",
+    "level": "N4",
+    "num": 206,
+    "word": "文法",
+    "reading": "ぶんぽう",
+    "meaningKr": "문법",
+    "meaningEn": "grammar"
+  },
+  {
+    "id": "N4-207",
+    "level": "N4",
+    "num": 207,
+    "word": "終わり",
+    "reading": "おわり",
+    "meaningKr": "끝",
+    "meaningEn": "end"
+  },
+  {
+    "id": "N4-208",
+    "level": "N4",
+    "num": 208,
+    "word": "壁",
+    "reading": "かべ",
+    "meaningKr": "벽",
+    "meaningEn": "wall"
+  },
+  {
+    "id": "N4-209",
+    "level": "N4",
+    "num": 209,
+    "word": "一度",
+    "reading": "いちど",
+    "meaningKr": "한 번",
+    "meaningEn": "once, one time"
+  },
+  {
+    "id": "N4-210",
+    "level": "N4",
+    "num": 210,
+    "word": "お礼",
+    "reading": "おれい",
+    "meaningKr": "감사 인사(답례)",
+    "meaningEn": "expression of gratitude; thanking; gift of appreciation; bow"
+  },
+  {
+    "id": "N4-211",
+    "level": "N4",
+    "num": 211,
+    "word": "親切",
+    "reading": "しんせつ",
+    "meaningKr": "친절",
+    "meaningEn": "kindness"
+  },
+  {
+    "id": "N4-212",
+    "level": "N4",
+    "num": 212,
+    "word": "知らせる",
+    "reading": "しらせる",
+    "meaningKr": "알리다",
+    "meaningEn": "to notify"
+  },
+  {
+    "id": "N4-213",
+    "level": "N4",
+    "num": 213,
+    "word": "歯医者",
+    "reading": "はいしゃ",
+    "meaningKr": "치과의사",
+    "meaningEn": "dentist"
+  },
+  {
+    "id": "N4-214",
+    "level": "N4",
+    "num": 214,
+    "word": "熱心",
+    "reading": "ねっしん",
+    "meaningKr": "열심(열정)",
+    "meaningEn": "enthusiasm"
+  },
+  {
+    "id": "N4-215",
+    "level": "N4",
+    "num": 215,
+    "word": "始める",
+    "reading": "はじめる",
+    "meaningKr": "시작하다",
+    "meaningEn": "to start, to begin"
+  },
+  {
+    "id": "N4-216",
+    "level": "N4",
+    "num": 216,
+    "word": "もらう",
+    "reading": "もらう",
+    "meaningKr": "받다",
+    "meaningEn": "to receive"
+  },
+  {
+    "id": "N4-217",
+    "level": "N4",
+    "num": 217,
+    "word": "泣く",
+    "reading": "なく",
+    "meaningKr": "울다",
+    "meaningEn": "to cry"
+  },
+  {
+    "id": "N4-218",
+    "level": "N4",
+    "num": 218,
+    "word": "治る",
+    "reading": "なおる",
+    "meaningKr": "낫다(병이)",
+    "meaningEn": "to get better; to recover from illness (v.i.)"
+  },
+  {
+    "id": "N4-219",
+    "level": "N4",
+    "num": 219,
+    "word": "熱",
+    "reading": "ねつ",
+    "meaningKr": "열(체온)",
+    "meaningEn": "fever, temperature"
+  },
+  {
+    "id": "N4-220",
+    "level": "N4",
+    "num": 220,
+    "word": "お祭り",
+    "reading": "おまつり",
+    "meaningKr": "축제",
+    "meaningEn": "festival"
+  },
+  {
+    "id": "N4-221",
+    "level": "N4",
+    "num": 221,
+    "word": "水道",
+    "reading": "すいどう",
+    "meaningKr": "수도",
+    "meaningEn": "water service, water line"
+  },
+  {
+    "id": "N4-222",
+    "level": "N4",
+    "num": 222,
+    "word": "匂い",
+    "reading": "におい",
+    "meaningKr": "냄새",
+    "meaningEn": "odor, smell"
+  },
+  {
+    "id": "N4-223",
+    "level": "N4",
+    "num": 223,
+    "word": "ベル",
+    "reading": "ベル",
+    "meaningKr": "벨(종)",
+    "meaningEn": "bell"
+  },
+  {
+    "id": "N4-224",
+    "level": "N4",
+    "num": 224,
+    "word": "赤ん坊",
+    "reading": "あかんぼう",
+    "meaningKr": "아기",
+    "meaningEn": "baby"
+  },
+  {
+    "id": "N4-225",
+    "level": "N4",
+    "num": 225,
+    "word": "おかしい",
+    "reading": "おかしい",
+    "meaningKr": "이상하다(우습다)",
+    "meaningEn": "strange; odd; funny"
+  },
+  {
+    "id": "N4-226",
+    "level": "N4",
+    "num": 226,
+    "word": "事故",
+    "reading": "じこ",
+    "meaningKr": "사고",
+    "meaningEn": "accident"
+  },
+  {
+    "id": "N4-227",
+    "level": "N4",
+    "num": 227,
+    "word": "変",
+    "reading": "へん",
+    "meaningKr": "이상함",
+    "meaningEn": "strange, odd"
+  },
+  {
+    "id": "N4-228",
+    "level": "N4",
+    "num": 228,
+    "word": "辞典",
+    "reading": "じてん",
+    "meaningKr": "사전",
+    "meaningEn": "encyclopedia, reference book"
+  },
+  {
+    "id": "N4-229",
+    "level": "N4",
+    "num": 229,
+    "word": "残る",
+    "reading": "のこる",
+    "meaningKr": "남다",
+    "meaningEn": "to remain (v.i.), to be left"
+  },
+  {
+    "id": "N4-230",
+    "level": "N4",
+    "num": 230,
+    "word": "立てる",
+    "reading": "たてる",
+    "meaningKr": "세우다",
+    "meaningEn": "to stand (something) up, to erect (something)"
+  },
+  {
+    "id": "N4-231",
+    "level": "N4",
+    "num": 231,
+    "word": "くれる",
+    "reading": "くれる",
+    "meaningKr": "(나에게) 주다",
+    "meaningEn": "to give, to do for"
+  },
+  {
+    "id": "N4-232",
+    "level": "N4",
+    "num": 232,
+    "word": "～員",
+    "reading": "～いん",
+    "meaningKr": "~원(구성원)",
+    "meaningEn": "member of ~"
+  },
+  {
+    "id": "N4-233",
+    "level": "N4",
+    "num": 233,
+    "word": "原因",
+    "reading": "げんいん",
+    "meaningKr": "원인",
+    "meaningEn": "cause, origin, source"
+  },
+  {
+    "id": "N4-234",
+    "level": "N4",
+    "num": 234,
+    "word": "驚く",
+    "reading": "おどろく",
+    "meaningKr": "놀라다",
+    "meaningEn": "to be surprised, to be astonished"
+  },
+  {
+    "id": "N4-235",
+    "level": "N4",
+    "num": 235,
+    "word": "いただく",
+    "reading": "頂く",
+    "meaningKr": "받다(먹다/마시다의 겸양어)",
+    "meaningEn": "-- extra-modest expression for たべる and のむ; humble expression for もらう --"
+  },
+  {
+    "id": "N4-236",
+    "level": "N4",
+    "num": 236,
+    "word": "祖母",
+    "reading": "そぼ",
+    "meaningKr": "할머니",
+    "meaningEn": "grandmother"
+  },
+  {
+    "id": "N4-237",
+    "level": "N4",
+    "num": 237,
+    "word": "場所",
+    "reading": "ばしょ",
+    "meaningKr": "장소",
+    "meaningEn": "place, location"
+  },
+  {
+    "id": "N4-238",
+    "level": "N4",
+    "num": 238,
+    "word": "答",
+    "reading": "こたえ",
+    "meaningKr": "답",
+    "meaningEn": "answer, response"
+  },
+  {
+    "id": "N4-239",
+    "level": "N4",
+    "num": 239,
+    "word": "もちろん",
+    "reading": "もちろん",
+    "meaningKr": "물론",
+    "meaningEn": "certainly, of course"
+  },
+  {
+    "id": "N4-240",
+    "level": "N4",
+    "num": 240,
+    "word": "漬ける",
+    "reading": "つける",
+    "meaningKr": "담그다(절이다)",
+    "meaningEn": "to soak, to moisten, to pickle"
+  },
+  {
+    "id": "N4-241",
+    "level": "N4",
+    "num": 241,
+    "word": "受付",
+    "reading": "うけつけ",
+    "meaningKr": "접수처",
+    "meaningEn": "reception(ist) desk"
+  },
+  {
+    "id": "N4-242",
+    "level": "N4",
+    "num": 242,
+    "word": "内",
+    "reading": "うち",
+    "meaningKr": "안(내부)",
+    "meaningEn": "within, inside"
+  },
+  {
+    "id": "N4-243",
+    "level": "N4",
+    "num": 243,
+    "word": "スクリーン",
+    "reading": "スクリーン",
+    "meaningKr": "스크린",
+    "meaningEn": "screen"
+  },
+  {
+    "id": "N4-244",
+    "level": "N4",
+    "num": 244,
+    "word": "増える",
+    "reading": "ふえる",
+    "meaningKr": "늘다(증가하다)",
+    "meaningEn": "to increase, to multiply"
+  },
+  {
+    "id": "N4-245",
+    "level": "N4",
+    "num": 245,
+    "word": "または",
+    "reading": "または",
+    "meaningKr": "또는",
+    "meaningEn": "or, otherwise"
+  },
+  {
+    "id": "N4-246",
+    "level": "N4",
+    "num": 246,
+    "word": "けがする",
+    "reading": "けがする",
+    "meaningKr": "부상(다치다)",
+    "meaningEn": "injury (to animate object), hurt"
+  },
+  {
+    "id": "N4-247",
+    "level": "N4",
+    "num": 247,
+    "word": "以下",
+    "reading": "いか",
+    "meaningKr": "이하",
+    "meaningEn": "less than, below"
+  },
+  {
+    "id": "N4-248",
+    "level": "N4",
+    "num": 248,
+    "word": "選ぶ",
+    "reading": "えらぶ",
+    "meaningKr": "고르다(선택하다)",
+    "meaningEn": "to choose; to select"
+  },
+  {
+    "id": "N4-249",
+    "level": "N4",
+    "num": 249,
+    "word": "～ばかり",
+    "reading": "～ばかり",
+    "meaningKr": "~뿐(만)",
+    "meaningEn": "just did ~, only"
+  },
+  {
+    "id": "N4-250",
+    "level": "N4",
+    "num": 250,
+    "word": "心",
+    "reading": "こころ",
+    "meaningKr": "마음",
+    "meaningEn": "heart, mind"
+  },
+  {
+    "id": "N4-251",
+    "level": "N4",
+    "num": 251,
+    "word": "～だす",
+    "reading": "～だす",
+    "meaningKr": "~하기 시작하다",
+    "meaningEn": "to start doing ~"
+  },
+  {
+    "id": "N4-252",
+    "level": "N4",
+    "num": 252,
+    "word": "サラダ",
+    "reading": "サラダ",
+    "meaningKr": "샐러드",
+    "meaningEn": "salad"
+  },
+  {
+    "id": "N4-253",
+    "level": "N4",
+    "num": 253,
+    "word": "届ける",
+    "reading": "とどける",
+    "meaningKr": "배달하다(전달하다)",
+    "meaningEn": "to deliver (v.t.)"
+  },
+  {
+    "id": "N4-254",
+    "level": "N4",
+    "num": 254,
+    "word": "あいさつする",
+    "reading": "挨拶",
+    "meaningKr": "인사(하다)",
+    "meaningEn": "greet(ing)"
+  },
+  {
+    "id": "N4-255",
+    "level": "N4",
+    "num": 255,
+    "word": "景色",
+    "reading": "けしき",
+    "meaningKr": "경치",
+    "meaningEn": "scenery, landscape"
+  },
+  {
+    "id": "N4-256",
+    "level": "N4",
+    "num": 256,
+    "word": "確か",
+    "reading": "たしか",
+    "meaningKr": "확실함(아마)",
+    "meaningEn": "if I remember correctly; certain, definite"
+  },
+  {
+    "id": "N4-257",
+    "level": "N4",
+    "num": 257,
+    "word": "ステーキ",
+    "reading": "ステーキ",
+    "meaningKr": "스테이크",
+    "meaningEn": "steak"
+  },
+  {
+    "id": "N4-258",
+    "level": "N4",
+    "num": 258,
+    "word": "食料品",
+    "reading": "しょくりょうひん",
+    "meaningKr": "식료품",
+    "meaningEn": "foodstuff, groceries"
+  },
+  {
+    "id": "N4-259",
+    "level": "N4",
+    "num": 259,
+    "word": "森",
+    "reading": "もり",
+    "meaningKr": "숲(삼림)",
+    "meaningEn": "forest"
+  },
+  {
+    "id": "N4-260",
+    "level": "N4",
+    "num": 260,
+    "word": "以内",
+    "reading": "いない",
+    "meaningKr": "이내",
+    "meaningEn": "within, less (no more) than"
+  },
+  {
+    "id": "N4-261",
+    "level": "N4",
+    "num": 261,
+    "word": "予定",
+    "reading": "よてい",
+    "meaningKr": "예정",
+    "meaningEn": "plans, arrangement, schedule"
+  },
+  {
+    "id": "N4-262",
+    "level": "N4",
+    "num": 262,
+    "word": "オーバー",
+    "reading": "オーバー",
+    "meaningKr": "오버(코트/초과)",
+    "meaningEn": "overcoat; over, exceeding, exaggeration"
+  },
+  {
+    "id": "N4-263",
+    "level": "N4",
+    "num": 263,
+    "word": "乾く",
+    "reading": "かわく",
+    "meaningKr": "마르다",
+    "meaningEn": "to get dry"
+  },
+  {
+    "id": "N4-264",
+    "level": "N4",
+    "num": 264,
+    "word": "石",
+    "reading": "いし",
+    "meaningKr": "돌",
+    "meaningEn": "stone"
+  },
+  {
+    "id": "N4-265",
+    "level": "N4",
+    "num": 265,
+    "word": "思い出す",
+    "reading": "おもいだす",
+    "meaningKr": "떠올리다(생각나다)",
+    "meaningEn": "to recall, to remember"
+  },
+  {
+    "id": "N4-266",
+    "level": "N4",
+    "num": 266,
+    "word": "踊る",
+    "reading": "おどる",
+    "meaningKr": "춤추다",
+    "meaningEn": "to dance"
+  },
+  {
+    "id": "N4-267",
+    "level": "N4",
+    "num": 267,
+    "word": "細かい",
+    "reading": "こまかい",
+    "meaningKr": "자세하다(잘다)",
+    "meaningEn": "small; fine, minute"
+  },
+  {
+    "id": "N4-268",
+    "level": "N4",
+    "num": 268,
+    "word": "塗る",
+    "reading": "ぬる",
+    "meaningKr": "칠하다",
+    "meaningEn": "to paint, to plaster"
+  },
+  {
+    "id": "N4-269",
+    "level": "N4",
+    "num": 269,
+    "word": "ご主人",
+    "reading": "ごしゅじん",
+    "meaningKr": "남편(높임말)",
+    "meaningEn": "(your, her) husband"
+  },
+  {
+    "id": "N4-270",
+    "level": "N4",
+    "num": 270,
+    "word": "珍しい",
+    "reading": "めずらしい",
+    "meaningKr": "드물다(희귀하다)",
+    "meaningEn": "unusual, rare"
+  },
+  {
+    "id": "N4-271",
+    "level": "N4",
+    "num": 271,
+    "word": "用",
+    "reading": "よう",
+    "meaningKr": "용무(볼일)",
+    "meaningEn": "errand, task, business (to take care of)"
+  },
+  {
+    "id": "N4-272",
+    "level": "N4",
+    "num": 272,
+    "word": "公務員",
+    "reading": "こうむいん",
+    "meaningKr": "공무원",
+    "meaningEn": "government worker, public servant"
+  },
+  {
+    "id": "N4-273",
+    "level": "N4",
+    "num": 273,
+    "word": "お嬢さん",
+    "reading": "おじょうさん",
+    "meaningKr": "따님",
+    "meaningEn": "(someone's) daughter (polite)"
+  },
+  {
+    "id": "N4-274",
+    "level": "N4",
+    "num": 274,
+    "word": "用意",
+    "reading": "ようい",
+    "meaningKr": "준비",
+    "meaningEn": "preparation"
+  },
+  {
+    "id": "N4-275",
+    "level": "N4",
+    "num": 275,
+    "word": "探す",
+    "reading": "さがす",
+    "meaningKr": "찾다",
+    "meaningEn": "to search, to seek, to look for"
+  },
+  {
+    "id": "N4-276",
+    "level": "N4",
+    "num": 276,
+    "word": "形",
+    "reading": "かたち",
+    "meaningKr": "모양(형태)",
+    "meaningEn": "shape"
+  },
+  {
+    "id": "N4-277",
+    "level": "N4",
+    "num": 277,
+    "word": "運転",
+    "reading": "うんてんする",
+    "meaningKr": "운전(하다)",
+    "meaningEn": "driving"
+  },
+  {
+    "id": "N4-278",
+    "level": "N4",
+    "num": 278,
+    "word": "すっかり",
+    "reading": "すっかり",
+    "meaningKr": "완전히",
+    "meaningEn": "all, completely"
+  },
+  {
+    "id": "N4-279",
+    "level": "N4",
+    "num": 279,
+    "word": "アナウンサー",
+    "reading": "アナウンサー",
+    "meaningKr": "아나운서",
+    "meaningEn": "announcer"
+  },
+  {
+    "id": "N4-280",
+    "level": "N4",
+    "num": 280,
+    "word": "お土産",
+    "reading": "おみやげ",
+    "meaningKr": "기념품(선물)",
+    "meaningEn": "souvenir"
+  },
+  {
+    "id": "N4-281",
+    "level": "N4",
+    "num": 281,
+    "word": "消しゴム",
+    "reading": "けしゴム",
+    "meaningKr": "지우개",
+    "meaningEn": "eraser"
+  },
+  {
+    "id": "N4-282",
+    "level": "N4",
+    "num": 282,
+    "word": "旅館",
+    "reading": "りょかん",
+    "meaningKr": "료칸(일본식 여관)",
+    "meaningEn": "a Japanese inn"
+  },
+  {
+    "id": "N4-283",
+    "level": "N4",
+    "num": 283,
+    "word": "海岸",
+    "reading": "かいがん",
+    "meaningKr": "해안",
+    "meaningEn": "coast, seashore"
+  },
+  {
+    "id": "N4-284",
+    "level": "N4",
+    "num": 284,
+    "word": "寂しい",
+    "reading": "さびしい",
+    "meaningKr": "외롭다",
+    "meaningEn": "lonely, lonesome"
+  },
+  {
+    "id": "N4-285",
+    "level": "N4",
+    "num": 285,
+    "word": "火",
+    "reading": "ひ",
+    "meaningKr": "불",
+    "meaningEn": "fire"
+  },
+  {
+    "id": "N4-286",
+    "level": "N4",
+    "num": 286,
+    "word": "育てる",
+    "reading": "そだてる",
+    "meaningKr": "기르다(키우다)",
+    "meaningEn": "to raise (v.t.); to bring up"
+  },
+  {
+    "id": "N4-287",
+    "level": "N4",
+    "num": 287,
+    "word": "味噌",
+    "reading": "みそ",
+    "meaningKr": "된장(미소)",
+    "meaningEn": "miso, bean paste"
+  },
+  {
+    "id": "N4-288",
+    "level": "N4",
+    "num": 288,
+    "word": "お祝い",
+    "reading": "おいわい",
+    "meaningKr": "축하",
+    "meaningEn": "congratulation, celebration"
+  },
+  {
+    "id": "N4-289",
+    "level": "N4",
+    "num": 289,
+    "word": "乗り物",
+    "reading": "のりもの",
+    "meaningKr": "탈것",
+    "meaningEn": "vehicle"
+  },
+  {
+    "id": "N4-290",
+    "level": "N4",
+    "num": 290,
+    "word": "案内",
+    "reading": "あんないする",
+    "meaningKr": "안내(하다)",
+    "meaningEn": "information, guidance"
+  },
+  {
+    "id": "N4-291",
+    "level": "N4",
+    "num": 291,
+    "word": "通う",
+    "reading": "かよう",
+    "meaningKr": "다니다(왕래하다)",
+    "meaningEn": "to go back and forth; to commute"
+  },
+  {
+    "id": "N4-292",
+    "level": "N4",
+    "num": 292,
+    "word": "連れる",
+    "reading": "つれる",
+    "meaningKr": "데리고 가다",
+    "meaningEn": "to lead, to take (a person)"
+  },
+  {
+    "id": "N4-293",
+    "level": "N4",
+    "num": 293,
+    "word": "技術",
+    "reading": "ぎじゅつ",
+    "meaningKr": "기술",
+    "meaningEn": "technique, technology, skill"
+  },
+  {
+    "id": "N4-294",
+    "level": "N4",
+    "num": 294,
+    "word": "小鳥",
+    "reading": "ことり",
+    "meaningKr": "작은 새",
+    "meaningEn": "small bird"
+  },
+  {
+    "id": "N4-295",
+    "level": "N4",
+    "num": 295,
+    "word": "下宿",
+    "reading": "げしゅく",
+    "meaningKr": "하숙",
+    "meaningEn": "lodging, boarding house"
+  },
+  {
+    "id": "N4-296",
+    "level": "N4",
+    "num": 296,
+    "word": "ジャム",
+    "reading": "ジャム",
+    "meaningKr": "잼",
+    "meaningEn": "jam"
+  },
+  {
+    "id": "N4-297",
+    "level": "N4",
+    "num": 297,
+    "word": "招待",
+    "reading": "しょうたいする",
+    "meaningKr": "초대(하다)",
+    "meaningEn": "invitation"
+  },
+  {
+    "id": "N4-298",
+    "level": "N4",
+    "num": 298,
+    "word": "鏡",
+    "reading": "かがみ",
+    "meaningKr": "거울",
+    "meaningEn": "mirror"
+  },
+  {
+    "id": "N4-299",
+    "level": "N4",
+    "num": 299,
+    "word": "はず",
+    "reading": "はず",
+    "meaningKr": "당연히 ~할 터",
+    "meaningEn": "it should be so"
+  },
+  {
+    "id": "N4-300",
+    "level": "N4",
+    "num": 300,
+    "word": "法律",
+    "reading": "ほうりつ",
+    "meaningKr": "법률",
+    "meaningEn": "law"
+  },
+  {
+    "id": "N4-301",
+    "level": "N4",
+    "num": 301,
+    "word": "進む",
+    "reading": "すすむ",
+    "meaningKr": "나아가다",
+    "meaningEn": "to advance, to proceed"
+  },
+  {
+    "id": "N4-302",
+    "level": "N4",
+    "num": 302,
+    "word": "楽む",
+    "reading": "たのしむ",
+    "meaningKr": "즐기다",
+    "meaningEn": "to enjoy"
+  },
+  {
+    "id": "N4-303",
+    "level": "N4",
+    "num": 303,
+    "word": "貿易",
+    "reading": "ぼうえき",
+    "meaningKr": "무역",
+    "meaningEn": "trade"
+  },
+  {
+    "id": "N4-304",
+    "level": "N4",
+    "num": 304,
+    "word": "反対",
+    "reading": "はんたい",
+    "meaningKr": "반대",
+    "meaningEn": "oppose, opposition, resistance"
+  },
+  {
+    "id": "N4-305",
+    "level": "N4",
+    "num": 305,
+    "word": "おる",
+    "reading": "おる",
+    "meaningKr": "있다(いる의 겸양어)",
+    "meaningEn": "-- extra-modest expression for いる --"
+  },
+  {
+    "id": "N4-306",
+    "level": "N4",
+    "num": 306,
+    "word": "申す",
+    "reading": "もうす",
+    "meaningKr": "말하다(言う의 겸양어)",
+    "meaningEn": "-- extra-modest (humble) expression for 言う (いう) --"
+  },
+  {
+    "id": "N4-307",
+    "level": "N4",
+    "num": 307,
+    "word": "試験",
+    "reading": "しけん",
+    "meaningKr": "시험",
+    "meaningEn": "an exam"
+  },
+  {
+    "id": "N4-308",
+    "level": "N4",
+    "num": 308,
+    "word": "真面目",
+    "reading": "まじめ",
+    "meaningKr": "성실함(진지함)",
+    "meaningEn": "diligent, serious"
+  },
+  {
+    "id": "N4-309",
+    "level": "N4",
+    "num": 309,
+    "word": "ごらんになる",
+    "reading": "",
+    "meaningKr": "보시다(見る의 존경어)",
+    "meaningEn": "-- honorific expression for みる --"
+  },
+  {
+    "id": "N4-310",
+    "level": "N4",
+    "num": 310,
+    "word": "店員",
+    "reading": "てんいん",
+    "meaningKr": "점원",
+    "meaningEn": "clerk; shop-employee"
+  },
+  {
+    "id": "N4-311",
+    "level": "N4",
+    "num": 311,
+    "word": "泊まる",
+    "reading": "とまる",
+    "meaningKr": "묵다(숙박하다)",
+    "meaningEn": "to stay (over night) (v.i.)"
+  },
+  {
+    "id": "N4-312",
+    "level": "N4",
+    "num": 312,
+    "word": "よろしい",
+    "reading": "よろしい",
+    "meaningKr": "좋습니다(정중)",
+    "meaningEn": "(hon.) good, OK, all right"
+  },
+  {
+    "id": "N4-313",
+    "level": "N4",
+    "num": 313,
+    "word": "今夜",
+    "reading": "こんや",
+    "meaningKr": "오늘 밤",
+    "meaningEn": "this evening, tonight"
+  },
+  {
+    "id": "N4-314",
+    "level": "N4",
+    "num": 314,
+    "word": "おつり",
+    "reading": "おつり",
+    "meaningKr": "거스름돈",
+    "meaningEn": "change; balance of money returned to the purchaser"
+  },
+  {
+    "id": "N4-315",
+    "level": "N4",
+    "num": 315,
+    "word": "チェックする",
+    "reading": "チェックする",
+    "meaningKr": "체크(확인)하다",
+    "meaningEn": "check"
+  },
+  {
+    "id": "N4-316",
+    "level": "N4",
+    "num": 316,
+    "word": "会話",
+    "reading": "かいわ",
+    "meaningKr": "회화(대화)",
+    "meaningEn": "conversation"
+  },
+  {
+    "id": "N4-317",
+    "level": "N4",
+    "num": 317,
+    "word": "空気",
+    "reading": "くうき",
+    "meaningKr": "공기",
+    "meaningEn": "air, atmosphere"
+  },
+  {
+    "id": "N4-318",
+    "level": "N4",
+    "num": 318,
+    "word": "交通",
+    "reading": "こうつう",
+    "meaningKr": "교통",
+    "meaningEn": "traffic, transportation"
+  },
+  {
+    "id": "N4-319",
+    "level": "N4",
+    "num": 319,
+    "word": "ワープロ",
+    "reading": "ワープロ",
+    "meaningKr": "워드프로세서",
+    "meaningEn": "word processor"
+  },
+  {
+    "id": "N4-320",
+    "level": "N4",
+    "num": 320,
+    "word": "喜ぶ",
+    "reading": "よろこぶ",
+    "meaningKr": "기뻐하다",
+    "meaningEn": "to rejoice, to be delighted, to be glad"
+  },
+  {
+    "id": "N4-321",
+    "level": "N4",
+    "num": 321,
+    "word": "急行",
+    "reading": "きゅうこう",
+    "meaningKr": "급행",
+    "meaningEn": "express train or bus"
+  },
+  {
+    "id": "N4-322",
+    "level": "N4",
+    "num": 322,
+    "word": "皆",
+    "reading": "みな",
+    "meaningKr": "모두",
+    "meaningEn": "everyone"
+  },
+  {
+    "id": "N4-323",
+    "level": "N4",
+    "num": 323,
+    "word": "味",
+    "reading": "あじ",
+    "meaningKr": "맛",
+    "meaningEn": "flavor, taste"
+  },
+  {
+    "id": "N4-324",
+    "level": "N4",
+    "num": 324,
+    "word": "空港",
+    "reading": "くうこう",
+    "meaningKr": "공항",
+    "meaningEn": "airport"
+  },
+  {
+    "id": "N4-325",
+    "level": "N4",
+    "num": 325,
+    "word": "手袋",
+    "reading": "てぶくろ",
+    "meaningKr": "장갑",
+    "meaningEn": "glove(s)"
+  },
+  {
+    "id": "N4-326",
+    "level": "N4",
+    "num": 326,
+    "word": "校長",
+    "reading": "こうちょう",
+    "meaningKr": "교장",
+    "meaningEn": "principal, headmaster"
+  },
+  {
+    "id": "N4-327",
+    "level": "N4",
+    "num": 327,
+    "word": "ごちそう",
+    "reading": "ごちそう",
+    "meaningKr": "진수성찬(대접)",
+    "meaningEn": "feast, treating (someone)"
+  },
+  {
+    "id": "N4-328",
+    "level": "N4",
+    "num": 328,
+    "word": "踊り",
+    "reading": "おどり",
+    "meaningKr": "춤",
+    "meaningEn": "dance"
+  },
+  {
+    "id": "N4-329",
+    "level": "N4",
+    "num": 329,
+    "word": "興味",
+    "reading": "きょうみ",
+    "meaningKr": "흥미",
+    "meaningEn": "interest (in something)"
+  },
+  {
+    "id": "N4-330",
+    "level": "N4",
+    "num": 330,
+    "word": "引っ越す",
+    "reading": "ひっこす",
+    "meaningKr": "이사하다",
+    "meaningEn": "to move to a new place of residence"
+  },
+  {
+    "id": "N4-331",
+    "level": "N4",
+    "num": 331,
+    "word": "冷房",
+    "reading": "れいぼう",
+    "meaningKr": "냉방",
+    "meaningEn": "cooling, air conditioning"
+  },
+  {
+    "id": "N4-332",
+    "level": "N4",
+    "num": 332,
+    "word": "都合",
+    "reading": "つごう",
+    "meaningKr": "사정(형편)",
+    "meaningEn": "circumstances, convenience"
+  },
+  {
+    "id": "N4-333",
+    "level": "N4",
+    "num": 333,
+    "word": "遠慮",
+    "reading": "えんりょする",
+    "meaningKr": "사양(하다)",
+    "meaningEn": "restraint, reserve, hesitate"
+  },
+  {
+    "id": "N4-334",
+    "level": "N4",
+    "num": 334,
+    "word": "亡くなる",
+    "reading": "なくなる",
+    "meaningKr": "돌아가시다(사망하다)",
+    "meaningEn": "to pass away"
+  },
+  {
+    "id": "N4-335",
+    "level": "N4",
+    "num": 335,
+    "word": "科学",
+    "reading": "かがく",
+    "meaningKr": "과학",
+    "meaningEn": "science"
+  },
+  {
+    "id": "N4-336",
+    "level": "N4",
+    "num": 336,
+    "word": "はっきり",
+    "reading": "はっきり",
+    "meaningKr": "확실히",
+    "meaningEn": "clearly, distinctly"
+  },
+  {
+    "id": "N4-337",
+    "level": "N4",
+    "num": 337,
+    "word": "差し上げる",
+    "reading": "さしあげる",
+    "meaningKr": "드리다(あげる의 겸양어)",
+    "meaningEn": "-- humble expression for あげる --"
+  },
+  {
+    "id": "N4-338",
+    "level": "N4",
+    "num": 338,
+    "word": "気持ち",
+    "reading": "きもち",
+    "meaningKr": "기분(느낌)",
+    "meaningEn": "feeling, sensation, mood"
+  },
+  {
+    "id": "N4-339",
+    "level": "N4",
+    "num": 339,
+    "word": "祖父",
+    "reading": "そふ",
+    "meaningKr": "할아버지",
+    "meaningEn": "grandfather"
+  },
+  {
+    "id": "N4-340",
+    "level": "N4",
+    "num": 340,
+    "word": "港",
+    "reading": "みなと",
+    "meaningKr": "항구",
+    "meaningEn": "harbor, port"
+  },
+  {
+    "id": "N4-341",
+    "level": "N4",
+    "num": 341,
+    "word": "予約",
+    "reading": "よやく",
+    "meaningKr": "예약",
+    "meaningEn": "reservation"
+  },
+  {
+    "id": "N4-342",
+    "level": "N4",
+    "num": 342,
+    "word": "凄い",
+    "reading": "すごい",
+    "meaningKr": "대단하다",
+    "meaningEn": "terrific, great"
+  },
+  {
+    "id": "N4-343",
+    "level": "N4",
+    "num": 343,
+    "word": "入学",
+    "reading": "にゅうがくする",
+    "meaningKr": "입학(하다)",
+    "meaningEn": "entry to school or university"
+  },
+  {
+    "id": "N4-344",
+    "level": "N4",
+    "num": 344,
+    "word": "片付ける",
+    "reading": "かたづける",
+    "meaningKr": "정리하다(치우다)",
+    "meaningEn": "to (clean) tidy up (v.t.), to put away"
+  },
+  {
+    "id": "N4-345",
+    "level": "N4",
+    "num": 345,
+    "word": "写す",
+    "reading": "うつす",
+    "meaningKr": "베끼다(촬영하다)",
+    "meaningEn": "to copy (v.t.); to photograph"
+  },
+  {
+    "id": "N4-346",
+    "level": "N4",
+    "num": 346,
+    "word": "パソコン",
+    "reading": "パソコン",
+    "meaningKr": "개인용 컴퓨터",
+    "meaningEn": "(personal) computer"
+  },
+  {
+    "id": "N4-347",
+    "level": "N4",
+    "num": 347,
+    "word": "部長",
+    "reading": "ぶちょう",
+    "meaningKr": "부장",
+    "meaningEn": "department (division) manager"
+  },
+  {
+    "id": "N4-348",
+    "level": "N4",
+    "num": 348,
+    "word": "火事",
+    "reading": "かじ",
+    "meaningKr": "화재",
+    "meaningEn": "fire"
+  },
+  {
+    "id": "N4-349",
+    "level": "N4",
+    "num": 349,
+    "word": "足す",
+    "reading": "たす",
+    "meaningKr": "더하다",
+    "meaningEn": "to add (numbers)"
+  },
+  {
+    "id": "N4-350",
+    "level": "N4",
+    "num": 350,
+    "word": "教会",
+    "reading": "きょうかい",
+    "meaningKr": "교회",
+    "meaningEn": "church"
+  },
+  {
+    "id": "N4-351",
+    "level": "N4",
+    "num": 351,
+    "word": "彼ら",
+    "reading": "かれら",
+    "meaningKr": "그들",
+    "meaningEn": "they (usually male)"
+  },
+  {
+    "id": "N4-352",
+    "level": "N4",
+    "num": 352,
+    "word": "いっぱい",
+    "reading": "一杯",
+    "meaningKr": "가득",
+    "meaningEn": "full, to the utmost"
+  },
+  {
+    "id": "N4-353",
+    "level": "N4",
+    "num": 353,
+    "word": "アメリカ",
+    "reading": "アメリカ",
+    "meaningKr": "미국",
+    "meaningEn": "America, U.S.A."
+  },
+  {
+    "id": "N4-354",
+    "level": "N4",
+    "num": 354,
+    "word": "男性",
+    "reading": "だんせい",
+    "meaningKr": "남성",
+    "meaningEn": "man; male"
+  },
+  {
+    "id": "N4-355",
+    "level": "N4",
+    "num": 355,
+    "word": "理由",
+    "reading": "りゆう",
+    "meaningKr": "이유",
+    "meaningEn": "reason"
+  },
+  {
+    "id": "N4-356",
+    "level": "N4",
+    "num": 356,
+    "word": "生産",
+    "reading": "せいさんする",
+    "meaningKr": "생산(하다)",
+    "meaningEn": "production; to produce"
+  },
+  {
+    "id": "N4-357",
+    "level": "N4",
+    "num": 357,
+    "word": "着物",
+    "reading": "きもの",
+    "meaningKr": "기모노(일본 전통 의상)",
+    "meaningEn": "kimono; Japanese traditional dress"
+  },
+  {
+    "id": "N4-358",
+    "level": "N4",
+    "num": 358,
+    "word": "おもちゃ",
+    "reading": "おもちゃ",
+    "meaningKr": "장난감",
+    "meaningEn": "a toy"
+  },
+  {
+    "id": "N4-359",
+    "level": "N4",
+    "num": 359,
+    "word": "暮れる",
+    "reading": "くれる",
+    "meaningKr": "저물다",
+    "meaningEn": "to get dark, to come to an end"
+  },
+  {
+    "id": "N4-360",
+    "level": "N4",
+    "num": 360,
+    "word": "釣る",
+    "reading": "つる",
+    "meaningKr": "낚다",
+    "meaningEn": "to fish"
+  },
+  {
+    "id": "N4-361",
+    "level": "N4",
+    "num": 361,
+    "word": "～ちゃん",
+    "reading": "～ちゃん",
+    "meaningKr": "~짱(친근한 호칭)",
+    "meaningEn": "suffix for familiar (female) person"
+  },
+  {
+    "id": "N4-362",
+    "level": "N4",
+    "num": 362,
+    "word": "打つ",
+    "reading": "うつ",
+    "meaningKr": "치다",
+    "meaningEn": "to hit, to strike"
+  },
+  {
+    "id": "N4-363",
+    "level": "N4",
+    "num": 363,
+    "word": "あんな",
+    "reading": "あんな",
+    "meaningKr": "저런",
+    "meaningEn": "such, like that"
+  },
+  {
+    "id": "N4-364",
+    "level": "N4",
+    "num": 364,
+    "word": "謝る",
+    "reading": "あやまる",
+    "meaningKr": "사과하다",
+    "meaningEn": "to apologize"
+  },
+  {
+    "id": "N4-365",
+    "level": "N4",
+    "num": 365,
+    "word": "昼間",
+    "reading": "ひるま",
+    "meaningKr": "낮 동안",
+    "meaningEn": "daytime, during the day"
+  },
+  {
+    "id": "N4-366",
+    "level": "N4",
+    "num": 366,
+    "word": "教育",
+    "reading": "きょういく",
+    "meaningKr": "교육",
+    "meaningEn": "education"
+  },
+  {
+    "id": "N4-367",
+    "level": "N4",
+    "num": 367,
+    "word": "女性",
+    "reading": "じょせい",
+    "meaningKr": "여성",
+    "meaningEn": "woman"
+  },
+  {
+    "id": "N4-368",
+    "level": "N4",
+    "num": 368,
+    "word": "米",
+    "reading": "こめ",
+    "meaningKr": "쌀",
+    "meaningEn": "uncooked rice"
+  },
+  {
+    "id": "N4-369",
+    "level": "N4",
+    "num": 369,
+    "word": "邪魔",
+    "reading": "じゃま",
+    "meaningKr": "방해",
+    "meaningEn": "hindrance, intrusion"
+  },
+  {
+    "id": "N4-370",
+    "level": "N4",
+    "num": 370,
+    "word": "国際",
+    "reading": "こくさい",
+    "meaningKr": "국제",
+    "meaningEn": "international"
+  },
+  {
+    "id": "N4-371",
+    "level": "N4",
+    "num": 371,
+    "word": "隅",
+    "reading": "すみ",
+    "meaningKr": "구석",
+    "meaningEn": "corner"
+  },
+  {
+    "id": "N4-372",
+    "level": "N4",
+    "num": 372,
+    "word": "伺う",
+    "reading": "うかがう",
+    "meaningKr": "찾아뵙다(듣다/여쭙다의 겸양어)",
+    "meaningEn": "humble form of 行く (いく), 聞く (きく) and 来る (くる)"
+  },
+  {
+    "id": "N4-373",
+    "level": "N4",
+    "num": 373,
+    "word": "再来週",
+    "reading": "さらいしゅう",
+    "meaningKr": "다다음 주",
+    "meaningEn": "the week after next"
+  },
+  {
+    "id": "N4-374",
+    "level": "N4",
+    "num": 374,
+    "word": "夢",
+    "reading": "ゆめ",
+    "meaningKr": "꿈",
+    "meaningEn": "a dream"
+  },
+  {
+    "id": "N4-375",
+    "level": "N4",
+    "num": 375,
+    "word": "喉",
+    "reading": "のど",
+    "meaningKr": "목구멍",
+    "meaningEn": "throat"
+  },
+  {
+    "id": "N4-376",
+    "level": "N4",
+    "num": 376,
+    "word": "最近",
+    "reading": "さいきん",
+    "meaningKr": "최근",
+    "meaningEn": "recently, nowadays, in recent years, most recent, latest"
+  },
+  {
+    "id": "N4-377",
+    "level": "N4",
+    "num": 377,
+    "word": "周り",
+    "reading": "まわり",
+    "meaningKr": "주위",
+    "meaningEn": "surroundings"
+  },
+  {
+    "id": "N4-378",
+    "level": "N4",
+    "num": 378,
+    "word": "歴史",
+    "reading": "れきし",
+    "meaningKr": "역사",
+    "meaningEn": "history"
+  },
+  {
+    "id": "N4-379",
+    "level": "N4",
+    "num": 379,
+    "word": "不便",
+    "reading": "ふべん",
+    "meaningKr": "불편",
+    "meaningEn": "inconvenience"
+  },
+  {
+    "id": "N4-380",
+    "level": "N4",
+    "num": 380,
+    "word": "血",
+    "reading": "ち",
+    "meaningKr": "피",
+    "meaningEn": "blood"
+  },
+  {
+    "id": "N4-381",
+    "level": "N4",
+    "num": 381,
+    "word": "～続ける",
+    "reading": "～つづける",
+    "meaningKr": "계속 ~하다",
+    "meaningEn": "to continue doing ~"
+  },
+  {
+    "id": "N4-382",
+    "level": "N4",
+    "num": 382,
+    "word": "毛",
+    "reading": "け",
+    "meaningKr": "털(머리카락)",
+    "meaningEn": "hair, fur"
+  },
+  {
+    "id": "N4-383",
+    "level": "N4",
+    "num": 383,
+    "word": "ひどい",
+    "reading": "ひどい",
+    "meaningKr": "심하다(지독하다)",
+    "meaningEn": "terrible, awful, unfair, cruel"
+  },
+  {
+    "id": "N4-384",
+    "level": "N4",
+    "num": 384,
+    "word": "例えば",
+    "reading": "たとえば",
+    "meaningKr": "예를 들면",
+    "meaningEn": "for example, e.g."
+  },
+  {
+    "id": "N4-385",
+    "level": "N4",
+    "num": 385,
+    "word": "中々",
+    "reading": "なかなか",
+    "meaningKr": "상당히(좀처럼)",
+    "meaningEn": "very, considerably, quite"
+  },
+  {
+    "id": "N4-386",
+    "level": "N4",
+    "num": 386,
+    "word": "随分",
+    "reading": "ずいぶん",
+    "meaningKr": "꽤(상당히)",
+    "meaningEn": "extremely"
+  },
+  {
+    "id": "N4-387",
+    "level": "N4",
+    "num": 387,
+    "word": "～やすい",
+    "reading": "～やすい",
+    "meaningKr": "~하기 쉽다",
+    "meaningEn": "easy to do ~"
+  },
+  {
+    "id": "N4-388",
+    "level": "N4",
+    "num": 388,
+    "word": "押し入れ",
+    "reading": "おしいれ",
+    "meaningKr": "붙박이장(벽장)",
+    "meaningEn": "closet"
+  },
+  {
+    "id": "N4-389",
+    "level": "N4",
+    "num": 389,
+    "word": "電灯",
+    "reading": "でんとう",
+    "meaningKr": "전등",
+    "meaningEn": "electric light"
+  },
+  {
+    "id": "N4-390",
+    "level": "N4",
+    "num": 390,
+    "word": "叱る",
+    "reading": "しかる",
+    "meaningKr": "혼내다(꾸짖다)",
+    "meaningEn": "to scold"
+  },
+  {
+    "id": "N4-391",
+    "level": "N4",
+    "num": 391,
+    "word": "サンダル",
+    "reading": "サンダル",
+    "meaningKr": "샌들",
+    "meaningEn": "sandal"
+  },
+  {
+    "id": "N4-392",
+    "level": "N4",
+    "num": 392,
+    "word": "びっくりする",
+    "reading": "びっくりする",
+    "meaningKr": "놀라다",
+    "meaningEn": "to be surprised"
+  },
+  {
+    "id": "N4-393",
+    "level": "N4",
+    "num": 393,
+    "word": "うまい",
+    "reading": "うまい",
+    "meaningKr": "맛있다(능숙하다)",
+    "meaningEn": "delicious; skillful; fortunate"
+  },
+  {
+    "id": "N4-394",
+    "level": "N4",
+    "num": 394,
+    "word": "変える",
+    "reading": "かえる",
+    "meaningKr": "바꾸다",
+    "meaningEn": "to change, to alter, to vary"
+  },
+  {
+    "id": "N4-395",
+    "level": "N4",
+    "num": 395,
+    "word": "講堂",
+    "reading": "こうどう",
+    "meaningKr": "강당",
+    "meaningEn": "auditorium"
+  },
+  {
+    "id": "N4-396",
+    "level": "N4",
+    "num": 396,
+    "word": "子",
+    "reading": "こ",
+    "meaningKr": "아이",
+    "meaningEn": "child"
+  },
+  {
+    "id": "N4-397",
+    "level": "N4",
+    "num": 397,
+    "word": "沸かす",
+    "reading": "わかす",
+    "meaningKr": "끓이다",
+    "meaningEn": "to boil"
+  },
+  {
+    "id": "N4-398",
+    "level": "N4",
+    "num": 398,
+    "word": "レジ",
+    "reading": "レジ",
+    "meaningKr": "계산대",
+    "meaningEn": "register"
+  },
+  {
+    "id": "N4-399",
+    "level": "N4",
+    "num": 399,
+    "word": "しばらく",
+    "reading": "しばらく",
+    "meaningKr": "잠시",
+    "meaningEn": "little while"
+  },
+  {
+    "id": "N4-400",
+    "level": "N4",
+    "num": 400,
+    "word": "特に",
+    "reading": "とくに",
+    "meaningKr": "특히",
+    "meaningEn": "particularly"
+  },
+  {
+    "id": "N4-401",
+    "level": "N4",
+    "num": 401,
+    "word": "空く",
+    "reading": "あく",
+    "meaningKr": "비다(열리다)",
+    "meaningEn": "to open, to become empty (vacant)"
+  },
+  {
+    "id": "N4-402",
+    "level": "N4",
+    "num": 402,
+    "word": "計画",
+    "reading": "けいかくする",
+    "meaningKr": "계획(하다)",
+    "meaningEn": "plan, project, schedule"
+  },
+  {
+    "id": "N4-403",
+    "level": "N4",
+    "num": 403,
+    "word": "通り",
+    "reading": "とおり",
+    "meaningKr": "~거리(도로)",
+    "meaningEn": "~ Street, ~ Avenue"
+  },
+  {
+    "id": "N4-404",
+    "level": "N4",
+    "num": 404,
+    "word": "下着",
+    "reading": "したぎ",
+    "meaningKr": "속옷",
+    "meaningEn": "underwear"
+  },
+  {
+    "id": "N4-405",
+    "level": "N4",
+    "num": 405,
+    "word": "経済",
+    "reading": "けいざい",
+    "meaningKr": "경제",
+    "meaningEn": "economics, finance, economy"
+  },
+  {
+    "id": "N4-406",
+    "level": "N4",
+    "num": 406,
+    "word": "こう",
+    "reading": "こう",
+    "meaningKr": "이렇게",
+    "meaningEn": "like this, this way"
+  },
+  {
+    "id": "N4-407",
+    "level": "N4",
+    "num": 407,
+    "word": "是非",
+    "reading": "ぜひ",
+    "meaningKr": "꼭(반드시)",
+    "meaningEn": "certainly, by all means; without fail"
+  },
+  {
+    "id": "N4-408",
+    "level": "N4",
+    "num": 408,
+    "word": "裏",
+    "reading": "うら",
+    "meaningKr": "뒷면(안)",
+    "meaningEn": "reverse side, back"
+  },
+  {
+    "id": "N4-409",
+    "level": "N4",
+    "num": 409,
+    "word": "為",
+    "reading": "ため",
+    "meaningKr": "위함(이익)",
+    "meaningEn": "good, advantage, in order to"
+  },
+  {
+    "id": "N4-410",
+    "level": "N4",
+    "num": 410,
+    "word": "おいでになる",
+    "reading": "おいでになる",
+    "meaningKr": "가시다/오시다(존경어)",
+    "meaningEn": "(hon.) to be"
+  },
+  {
+    "id": "N4-411",
+    "level": "N4",
+    "num": 411,
+    "word": "変わる",
+    "reading": "かわる",
+    "meaningKr": "바뀌다",
+    "meaningEn": "to change (v.i.), to be transformed, to vary"
+  },
+  {
+    "id": "N4-412",
+    "level": "N4",
+    "num": 412,
+    "word": "以外",
+    "reading": "いがい",
+    "meaningKr": "이외",
+    "meaningEn": "other than, with the exception of, excepting"
+  },
+  {
+    "id": "N4-413",
+    "level": "N4",
+    "num": 413,
+    "word": "済む",
+    "reading": "すむ",
+    "meaningKr": "끝나다(해결되다)",
+    "meaningEn": "to finish, to end"
+  },
+  {
+    "id": "N4-414",
+    "level": "N4",
+    "num": 414,
+    "word": "ハンバーグ",
+    "reading": "ハンバーグ",
+    "meaningKr": "함박스테이크",
+    "meaningEn": "hamburger steak"
+  },
+  {
+    "id": "N4-415",
+    "level": "N4",
+    "num": 415,
+    "word": "市",
+    "reading": "し",
+    "meaningKr": "시(도시)",
+    "meaningEn": "city"
+  },
+  {
+    "id": "N4-416",
+    "level": "N4",
+    "num": 416,
+    "word": "引き出し",
+    "reading": "ひきだし",
+    "meaningKr": "서랍",
+    "meaningEn": "drawer"
+  },
+  {
+    "id": "N4-417",
+    "level": "N4",
+    "num": 417,
+    "word": "遊び",
+    "reading": "あそび",
+    "meaningKr": "놀이",
+    "meaningEn": "play"
+  },
+  {
+    "id": "N4-418",
+    "level": "N4",
+    "num": 418,
+    "word": "支度",
+    "reading": "したくする",
+    "meaningKr": "준비(하다)",
+    "meaningEn": "preparation"
+  },
+  {
+    "id": "N4-419",
+    "level": "N4",
+    "num": 419,
+    "word": "～始める",
+    "reading": "～はじめる",
+    "meaningKr": "~하기 시작하다",
+    "meaningEn": "to start doing ~"
+  },
+  {
+    "id": "N4-420",
+    "level": "N4",
+    "num": 420,
+    "word": "見える",
+    "reading": "みえる",
+    "meaningKr": "보이다",
+    "meaningEn": "to be visible; -- polite verb meaning 来る (くる) --"
+  },
+  {
+    "id": "N4-421",
+    "level": "N4",
+    "num": 421,
+    "word": "十分",
+    "reading": "じゅうぶん",
+    "meaningKr": "충분함",
+    "meaningEn": "enough"
+  },
+  {
+    "id": "N4-422",
+    "level": "N4",
+    "num": 422,
+    "word": "音",
+    "reading": "おと",
+    "meaningKr": "소리",
+    "meaningEn": "sound, note"
+  },
+  {
+    "id": "N4-423",
+    "level": "N4",
+    "num": 423,
+    "word": "きっと",
+    "reading": "きっと",
+    "meaningKr": "분명(반드시)",
+    "meaningEn": "surely, definitely, undoubtedly, certainly"
+  },
+  {
+    "id": "N4-424",
+    "level": "N4",
+    "num": 424,
+    "word": "まず",
+    "reading": "まず",
+    "meaningKr": "우선",
+    "meaningEn": "first (of all), to start with"
+  },
+  {
+    "id": "N4-425",
+    "level": "N4",
+    "num": 425,
+    "word": "遠く",
+    "reading": "とおく",
+    "meaningKr": "멀리",
+    "meaningEn": "far away, distant"
+  },
+  {
+    "id": "N4-426",
+    "level": "N4",
+    "num": 426,
+    "word": "大体",
+    "reading": "だいたい",
+    "meaningKr": "대체로",
+    "meaningEn": "approximately; in most cases; in general; to begin with (same as もともと)"
+  },
+  {
+    "id": "N4-427",
+    "level": "N4",
+    "num": 427,
+    "word": "折れる",
+    "reading": "おれる",
+    "meaningKr": "부러지다(꺾이다)",
+    "meaningEn": "to break, to be folded, to give in; to turn (a corner)"
+  },
+  {
+    "id": "N4-428",
+    "level": "N4",
+    "num": 428,
+    "word": "正しい",
+    "reading": "ただしい",
+    "meaningKr": "올바르다",
+    "meaningEn": "correct"
+  },
+  {
+    "id": "N4-429",
+    "level": "N4",
+    "num": 429,
+    "word": "輸入",
+    "reading": "ゆにゅう",
+    "meaningKr": "수입",
+    "meaningEn": "import"
+  },
+  {
+    "id": "N4-430",
+    "level": "N4",
+    "num": 430,
+    "word": "返事",
+    "reading": "へんじ",
+    "meaningKr": "답장(대답)",
+    "meaningEn": "reply, answer"
+  },
+  {
+    "id": "N4-431",
+    "level": "N4",
+    "num": 431,
+    "word": "都",
+    "reading": "と",
+    "meaningKr": "도(수도권 행정구역)",
+    "meaningEn": "metropolitan"
+  },
+  {
+    "id": "N4-432",
+    "level": "N4",
+    "num": 432,
+    "word": "産業",
+    "reading": "さんぎょう",
+    "meaningKr": "산업",
+    "meaningEn": "industry"
+  },
+  {
+    "id": "N4-433",
+    "level": "N4",
+    "num": 433,
+    "word": "伝える",
+    "reading": "つたえる",
+    "meaningKr": "전하다",
+    "meaningEn": "to convey (a message); to tell, to report"
+  },
+  {
+    "id": "N4-434",
+    "level": "N4",
+    "num": 434,
+    "word": "お金持ち",
+    "reading": "かねもち; おかねもち",
+    "meaningKr": "부자",
+    "meaningEn": "rich person"
+  },
+  {
+    "id": "N4-435",
+    "level": "N4",
+    "num": 435,
+    "word": "説明",
+    "reading": "せつめい",
+    "meaningKr": "설명",
+    "meaningEn": "explanation"
+  },
+  {
+    "id": "N4-436",
+    "level": "N4",
+    "num": 436,
+    "word": "島",
+    "reading": "しま",
+    "meaningKr": "섬",
+    "meaningEn": "island"
+  },
+  {
+    "id": "N4-437",
+    "level": "N4",
+    "num": 437,
+    "word": "道具",
+    "reading": "どうぐ",
+    "meaningKr": "도구",
+    "meaningEn": "tool"
+  },
+  {
+    "id": "N4-438",
+    "level": "N4",
+    "num": 438,
+    "word": "滑る",
+    "reading": "すべる",
+    "meaningKr": "미끄러지다",
+    "meaningEn": "to slide, to slip"
+  },
+  {
+    "id": "N4-439",
+    "level": "N4",
+    "num": 439,
+    "word": "それほど",
+    "reading": "それほど",
+    "meaningKr": "그 정도로",
+    "meaningEn": "to that degree; extent"
+  },
+  {
+    "id": "N4-440",
+    "level": "N4",
+    "num": 440,
+    "word": "以上",
+    "reading": "いじょう",
+    "meaningKr": "이상",
+    "meaningEn": "more than; this is all"
+  },
+  {
+    "id": "N4-441",
+    "level": "N4",
+    "num": 441,
+    "word": "～まま",
+    "reading": "～まま",
+    "meaningKr": "~한 채로",
+    "meaningEn": "as it is"
+  },
+  {
+    "id": "N4-442",
+    "level": "N4",
+    "num": 442,
+    "word": "特急",
+    "reading": "とっきゅう",
+    "meaningKr": "특급(열차)",
+    "meaningEn": "limited express (train faster than an express)"
+  },
+  {
+    "id": "N4-443",
+    "level": "N4",
+    "num": 443,
+    "word": "プレゼント",
+    "reading": "プレゼント",
+    "meaningKr": "선물",
+    "meaningEn": "present, gift"
+  },
+  {
+    "id": "N4-444",
+    "level": "N4",
+    "num": 444,
+    "word": "～(に) よると",
+    "reading": "～(に) よると",
+    "meaningKr": "~에 따르면",
+    "meaningEn": "according to ~"
+  },
+  {
+    "id": "N4-445",
+    "level": "N4",
+    "num": 445,
+    "word": "妻",
+    "reading": "つま",
+    "meaningKr": "아내",
+    "meaningEn": "wife (humble)"
+  },
+  {
+    "id": "N4-446",
+    "level": "N4",
+    "num": 446,
+    "word": "帰り",
+    "reading": "かえり",
+    "meaningKr": "귀가(돌아옴)",
+    "meaningEn": "return, coming back"
+  },
+  {
+    "id": "N4-447",
+    "level": "N4",
+    "num": 447,
+    "word": "具合",
+    "reading": "ぐあい",
+    "meaningKr": "상태(컨디션)",
+    "meaningEn": "condition, state, health"
+  },
+  {
+    "id": "N4-448",
+    "level": "N4",
+    "num": 448,
+    "word": "堅; 硬; 固い",
+    "reading": "かたい",
+    "meaningKr": "딱딱하다(단단하다)",
+    "meaningEn": "solid, hard, firm"
+  },
+  {
+    "id": "N4-449",
+    "level": "N4",
+    "num": 449,
+    "word": "駐車場",
+    "reading": "ちゅうしゃじょう",
+    "meaningKr": "주차장",
+    "meaningEn": "parking lot"
+  },
+  {
+    "id": "N4-450",
+    "level": "N4",
+    "num": 450,
+    "word": "スーツ",
+    "reading": "スーツ",
+    "meaningKr": "정장",
+    "meaningEn": "suit"
+  },
+  {
+    "id": "N4-451",
+    "level": "N4",
+    "num": 451,
+    "word": "危険",
+    "reading": "きけん",
+    "meaningKr": "위험",
+    "meaningEn": "danger, risk, hazard"
+  },
+  {
+    "id": "N4-452",
+    "level": "N4",
+    "num": 452,
+    "word": "髪",
+    "reading": "かみ",
+    "meaningKr": "머리카락",
+    "meaningEn": "hair"
+  },
+  {
+    "id": "N4-453",
+    "level": "N4",
+    "num": 453,
+    "word": "天気予報",
+    "reading": "てんきよほう",
+    "meaningKr": "일기예보",
+    "meaningEn": "weather forecast"
+  },
+  {
+    "id": "N4-454",
+    "level": "N4",
+    "num": 454,
+    "word": "彼女",
+    "reading": "かのじょ",
+    "meaningKr": "여자친구(그녀)",
+    "meaningEn": "girlfriend; she"
+  },
+  {
+    "id": "N4-455",
+    "level": "N4",
+    "num": 455,
+    "word": "間",
+    "reading": "あいだ",
+    "meaningKr": "사이(간격)",
+    "meaningEn": "space, interval"
+  },
+  {
+    "id": "N4-456",
+    "level": "N4",
+    "num": 456,
+    "word": "卒業",
+    "reading": "そつぎょう",
+    "meaningKr": "졸업",
+    "meaningEn": "graduation"
+  },
+  {
+    "id": "N4-457",
+    "level": "N4",
+    "num": 457,
+    "word": "それで",
+    "reading": "それで",
+    "meaningKr": "그래서",
+    "meaningEn": "and (conj.), thereupon, because of that"
+  },
+  {
+    "id": "N4-458",
+    "level": "N4",
+    "num": 458,
+    "word": "枝",
+    "reading": "えだ",
+    "meaningKr": "나뭇가지",
+    "meaningEn": "branch, twig"
+  },
+  {
+    "id": "N4-459",
+    "level": "N4",
+    "num": 459,
+    "word": "専門",
+    "reading": "せんもん",
+    "meaningKr": "전문",
+    "meaningEn": "major; speciality"
+  },
+  {
+    "id": "N4-460",
+    "level": "N4",
+    "num": 460,
+    "word": "そろそろ",
+    "reading": "そろそろ",
+    "meaningKr": "슬슬",
+    "meaningEn": "gradually, soon"
+  },
+  {
+    "id": "N4-461",
+    "level": "N4",
+    "num": 461,
+    "word": "送る",
+    "reading": "おくる",
+    "meaningKr": "보내다",
+    "meaningEn": "to send, to dispatch"
+  },
+  {
+    "id": "N4-462",
+    "level": "N4",
+    "num": 462,
+    "word": "あげる",
+    "reading": "あげる",
+    "meaningKr": "주다",
+    "meaningEn": "to give"
+  },
+  {
+    "id": "N4-463",
+    "level": "N4",
+    "num": 463,
+    "word": "騒ぐ",
+    "reading": "さわぐ",
+    "meaningKr": "떠들다",
+    "meaningEn": "to make noise, to clamor"
+  },
+  {
+    "id": "N4-464",
+    "level": "N4",
+    "num": 464,
+    "word": "尋ねる",
+    "reading": "たずねる",
+    "meaningKr": "묻다",
+    "meaningEn": "to inquire (same as 質問する)"
+  },
+  {
+    "id": "N4-465",
+    "level": "N4",
+    "num": 465,
+    "word": "放送",
+    "reading": "ほうそうする",
+    "meaningKr": "방송(하다)",
+    "meaningEn": "broadcasting"
+  },
+  {
+    "id": "N4-466",
+    "level": "N4",
+    "num": 466,
+    "word": "政治",
+    "reading": "せいじ",
+    "meaningKr": "정치",
+    "meaningEn": "politics"
+  },
+  {
+    "id": "N4-467",
+    "level": "N4",
+    "num": 467,
+    "word": "市民",
+    "reading": "しみん",
+    "meaningKr": "시민",
+    "meaningEn": "citizen"
+  },
+  {
+    "id": "N4-468",
+    "level": "N4",
+    "num": 468,
+    "word": "ファックス",
+    "reading": "ファックス",
+    "meaningKr": "팩스",
+    "meaningEn": "fax"
+  },
+  {
+    "id": "N4-469",
+    "level": "N4",
+    "num": 469,
+    "word": "負ける",
+    "reading": "まける",
+    "meaningKr": "지다(패배하다)",
+    "meaningEn": "to lose (a game) (v.i.), to be defeated"
+  },
+  {
+    "id": "N4-470",
+    "level": "N4",
+    "num": 470,
+    "word": "指輪",
+    "reading": "ゆびわ",
+    "meaningKr": "반지",
+    "meaningEn": "(finger) ring"
+  },
+  {
+    "id": "N4-471",
+    "level": "N4",
+    "num": 471,
+    "word": "田舎",
+    "reading": "いなか",
+    "meaningKr": "시골",
+    "meaningEn": "rural, countryside"
+  },
+  {
+    "id": "N4-472",
+    "level": "N4",
+    "num": 472,
+    "word": "見つける",
+    "reading": "みつける",
+    "meaningKr": "발견하다(찾다)",
+    "meaningEn": "to discover, to find (v.t.)"
+  },
+  {
+    "id": "N4-473",
+    "level": "N4",
+    "num": 473,
+    "word": "高校生",
+    "reading": "こうこうせい",
+    "meaningKr": "고등학생",
+    "meaningEn": "high school student"
+  },
+  {
+    "id": "N4-474",
+    "level": "N4",
+    "num": 474,
+    "word": "講義",
+    "reading": "こうぎ",
+    "meaningKr": "강의",
+    "meaningEn": "a lecture"
+  },
+  {
+    "id": "N4-475",
+    "level": "N4",
+    "num": 475,
+    "word": "そんなに",
+    "reading": "そんなに",
+    "meaningKr": "그렇게",
+    "meaningEn": "so much, like that"
+  },
+  {
+    "id": "N4-476",
+    "level": "N4",
+    "num": 476,
+    "word": "昼休み",
+    "reading": "ひるやすみ",
+    "meaningKr": "점심시간",
+    "meaningEn": "lunch break, noon recess"
+  },
+  {
+    "id": "N4-477",
+    "level": "N4",
+    "num": 477,
+    "word": "忘れ物",
+    "reading": "わすれもの",
+    "meaningKr": "분실물(잊은 물건)",
+    "meaningEn": "lost article, something forgotten"
+  },
+  {
+    "id": "N4-478",
+    "level": "N4",
+    "num": 478,
+    "word": "下りる",
+    "reading": "おりる",
+    "meaningKr": "내려가다",
+    "meaningEn": "to get down, to go; come down"
+  },
+  {
+    "id": "N4-479",
+    "level": "N4",
+    "num": 479,
+    "word": "腕",
+    "reading": "うで",
+    "meaningKr": "팔",
+    "meaningEn": "arm (in reference to body)"
+  },
+  {
+    "id": "N4-480",
+    "level": "N4",
+    "num": 480,
+    "word": "訳",
+    "reading": "わけ",
+    "meaningKr": "이유(까닭)",
+    "meaningEn": "reason; explanation"
+  },
+  {
+    "id": "N4-481",
+    "level": "N4",
+    "num": 481,
+    "word": "承知",
+    "reading": "しょうちする",
+    "meaningKr": "승낙(양해)",
+    "meaningEn": "consent, acceptance"
+  },
+  {
+    "id": "N4-482",
+    "level": "N4",
+    "num": 482,
+    "word": "日記",
+    "reading": "にっき",
+    "meaningKr": "일기",
+    "meaningEn": "diary, journal"
+  },
+  {
+    "id": "N4-483",
+    "level": "N4",
+    "num": 483,
+    "word": "高校; 高等学校",
+    "reading": "こうこう; こうとうがっこう",
+    "meaningKr": "고등학교",
+    "meaningEn": "high school; senior high school"
+  },
+  {
+    "id": "N4-484",
+    "level": "N4",
+    "num": 484,
+    "word": "似る",
+    "reading": "にる",
+    "meaningKr": "닮다",
+    "meaningEn": "to resemble, to be similar"
+  },
+  {
+    "id": "N4-485",
+    "level": "N4",
+    "num": 485,
+    "word": "～おわる",
+    "reading": "～おわる",
+    "meaningKr": "~하기를 마치다",
+    "meaningEn": "to finish doing ~"
+  },
+  {
+    "id": "N4-486",
+    "level": "N4",
+    "num": 486,
+    "word": "暖房",
+    "reading": "だんぼう",
+    "meaningKr": "난방",
+    "meaningEn": "heating"
+  },
+  {
+    "id": "N4-487",
+    "level": "N4",
+    "num": 487,
+    "word": "留守",
+    "reading": "るす",
+    "meaningKr": "부재중",
+    "meaningEn": "absence; not at home"
+  },
+  {
+    "id": "N4-488",
+    "level": "N4",
+    "num": 488,
+    "word": "割合",
+    "reading": "わりあい",
+    "meaningKr": "비율",
+    "meaningEn": "rate, ratio, percentage"
+  },
+  {
+    "id": "N4-489",
+    "level": "N4",
+    "num": 489,
+    "word": "寺",
+    "reading": "てら",
+    "meaningKr": "절(사찰)",
+    "meaningEn": "Buddhist temple"
+  },
+  {
+    "id": "N4-490",
+    "level": "N4",
+    "num": 490,
+    "word": "慣れる",
+    "reading": "なれる",
+    "meaningKr": "익숙해지다",
+    "meaningEn": "to grow accustomed to"
+  },
+  {
+    "id": "N4-491",
+    "level": "N4",
+    "num": 491,
+    "word": "普通",
+    "reading": "ふつう",
+    "meaningKr": "보통",
+    "meaningEn": "common; usual"
+  },
+  {
+    "id": "N4-492",
+    "level": "N4",
+    "num": 492,
+    "word": "手伝う",
+    "reading": "てつだう",
+    "meaningKr": "돕다",
+    "meaningEn": "to help"
+  },
+  {
+    "id": "N4-493",
+    "level": "N4",
+    "num": 493,
+    "word": "なるほど",
+    "reading": "なるほど",
+    "meaningKr": "과연(그렇군)",
+    "meaningEn": "I see; I now understand"
+  },
+  {
+    "id": "N4-494",
+    "level": "N4",
+    "num": 494,
+    "word": "くださる",
+    "reading": "くださる",
+    "meaningKr": "주시다",
+    "meaningEn": "(hon.) to give, to confer"
+  },
+  {
+    "id": "N4-495",
+    "level": "N4",
+    "num": 495,
+    "word": "息子",
+    "reading": "むすこ",
+    "meaningKr": "아들",
+    "meaningEn": "(humble) son"
+  },
+  {
+    "id": "N4-496",
+    "level": "N4",
+    "num": 496,
+    "word": "お子さん",
+    "reading": "おこさん",
+    "meaningKr": "자녀분",
+    "meaningEn": "(someone else's) child (polite)"
+  },
+  {
+    "id": "N4-497",
+    "level": "N4",
+    "num": 497,
+    "word": "会場",
+    "reading": "かいじょう",
+    "meaningKr": "행사장",
+    "meaningEn": "venue, meeting place"
+  },
+  {
+    "id": "N4-498",
+    "level": "N4",
+    "num": 498,
+    "word": "笑う",
+    "reading": "わらう",
+    "meaningKr": "웃다",
+    "meaningEn": "to laugh, to smile"
+  },
+  {
+    "id": "N4-499",
+    "level": "N4",
+    "num": 499,
+    "word": "運ぶ",
+    "reading": "はこぶ",
+    "meaningKr": "옮기다(운반하다)",
+    "meaningEn": "to transport, to carry"
+  },
+  {
+    "id": "N4-500",
+    "level": "N4",
+    "num": 500,
+    "word": "文学",
+    "reading": "ぶんがく",
+    "meaningKr": "문학",
+    "meaningEn": "literature"
+  },
+  {
+    "id": "N4-501",
+    "level": "N4",
+    "num": 501,
+    "word": "光",
+    "reading": "ひかり",
+    "meaningKr": "빛",
+    "meaningEn": "light"
+  },
+  {
+    "id": "N4-502",
+    "level": "N4",
+    "num": 502,
+    "word": "お見舞い",
+    "reading": "おみまい",
+    "meaningKr": "병문안",
+    "meaningEn": "calling on someone who is ill, visit"
+  },
+  {
+    "id": "N4-503",
+    "level": "N4",
+    "num": 503,
+    "word": "席",
+    "reading": "せき",
+    "meaningKr": "자리",
+    "meaningEn": "a seat"
+  },
+  {
+    "id": "N4-504",
+    "level": "N4",
+    "num": 504,
+    "word": "～様",
+    "reading": "～さま",
+    "meaningKr": "~님",
+    "meaningEn": "Mr., Mrs., Ms."
+  },
+  {
+    "id": "N4-505",
+    "level": "N4",
+    "num": 505,
+    "word": "ご存じ",
+    "reading": "ごぞんじ",
+    "meaningKr": "아심(知る의 존경어)",
+    "meaningEn": "knowing, acquaintance"
+  },
+  {
+    "id": "N4-506",
+    "level": "N4",
+    "num": 506,
+    "word": "下る",
+    "reading": "さがる",
+    "meaningKr": "내려가다(낮아지다)",
+    "meaningEn": "to descend, to drop, to fall"
+  },
+  {
+    "id": "N4-507",
+    "level": "N4",
+    "num": 507,
+    "word": "字",
+    "reading": "じ",
+    "meaningKr": "글자",
+    "meaningEn": "letter; character"
+  },
+  {
+    "id": "N4-508",
+    "level": "N4",
+    "num": 508,
+    "word": "アジア",
+    "reading": "アジア",
+    "meaningKr": "아시아",
+    "meaningEn": "Asia"
+  },
+  {
+    "id": "N4-509",
+    "level": "N4",
+    "num": 509,
+    "word": "褒める",
+    "reading": "ほめる",
+    "meaningKr": "칭찬하다",
+    "meaningEn": "to praise; to say nice things"
+  },
+  {
+    "id": "N4-510",
+    "level": "N4",
+    "num": 510,
+    "word": "空く",
+    "reading": "すく",
+    "meaningKr": "한산해지다",
+    "meaningEn": "to be empty (in reference to people), to be less crowded"
+  },
+  {
+    "id": "N4-511",
+    "level": "N4",
+    "num": 511,
+    "word": "あ",
+    "reading": "あ",
+    "meaningKr": "아(감탄사)",
+    "meaningEn": "Ah"
+  },
+  {
+    "id": "N4-512",
+    "level": "N4",
+    "num": 512,
+    "word": "最も",
+    "reading": "もっとも",
+    "meaningKr": "가장",
+    "meaningEn": "most"
+  },
+  {
+    "id": "N4-513",
+    "level": "N4",
+    "num": 513,
+    "word": "合う",
+    "reading": "あう",
+    "meaningKr": "맞다(어울리다)",
+    "meaningEn": "to fit, to match"
+  },
+  {
+    "id": "N4-514",
+    "level": "N4",
+    "num": 514,
+    "word": "～代",
+    "reading": "～だい",
+    "meaningKr": "~대(시대/나이대)",
+    "meaningEn": "~ age; period"
+  },
+  {
+    "id": "N4-515",
+    "level": "N4",
+    "num": 515,
+    "word": "最後",
+    "reading": "さいご",
+    "meaningKr": "마지막",
+    "meaningEn": "last, end"
+  },
+  {
+    "id": "N4-516",
+    "level": "N4",
+    "num": 516,
+    "word": "値段",
+    "reading": "ねだん",
+    "meaningKr": "가격",
+    "meaningEn": "price"
+  },
+  {
+    "id": "N4-517",
+    "level": "N4",
+    "num": 517,
+    "word": "退院",
+    "reading": "たいいんする",
+    "meaningKr": "퇴원(하다)",
+    "meaningEn": "leaving hospital"
+  },
+  {
+    "id": "N4-518",
+    "level": "N4",
+    "num": 518,
+    "word": "展覧会",
+    "reading": "てんらんかい",
+    "meaningKr": "전람회",
+    "meaningEn": "exhibition"
+  },
+  {
+    "id": "N4-519",
+    "level": "N4",
+    "num": 519,
+    "word": "久しぶり",
+    "reading": "ひさしぶり",
+    "meaningKr": "오랜만",
+    "meaningEn": "it has been a long time; for the first time in a long time"
+  },
+  {
+    "id": "N4-520",
+    "level": "N4",
+    "num": 520,
+    "word": "カーテン",
+    "reading": "カーテン",
+    "meaningKr": "커튼",
+    "meaningEn": "curtain"
+  },
+  {
+    "id": "N4-521",
+    "level": "N4",
+    "num": 521,
+    "word": "汽車",
+    "reading": "きしゃ",
+    "meaningKr": "기차",
+    "meaningEn": "train (steam)"
+  },
+  {
+    "id": "N4-522",
+    "level": "N4",
+    "num": 522,
+    "word": "遅れる",
+    "reading": "おくれる",
+    "meaningKr": "늦다",
+    "meaningEn": "to (be) become late"
+  },
+  {
+    "id": "N4-523",
+    "level": "N4",
+    "num": 523,
+    "word": "見つかる",
+    "reading": "みつかる",
+    "meaningKr": "발견되다",
+    "meaningEn": "to be found (v.i.), to be discovered"
+  },
+  {
+    "id": "N4-524",
+    "level": "N4",
+    "num": 524,
+    "word": "召し上がる",
+    "reading": "めしあがる",
+    "meaningKr": "드시다",
+    "meaningEn": "-- honorific form of 食べる (たべる) and 飲む (のむ) --"
+  },
+  {
+    "id": "N4-525",
+    "level": "N4",
+    "num": 525,
+    "word": "太る",
+    "reading": "ふとる",
+    "meaningKr": "살찌다",
+    "meaningEn": "to gain weight"
+  },
+  {
+    "id": "N4-526",
+    "level": "N4",
+    "num": 526,
+    "word": "注射",
+    "reading": "ちゅうしゃ",
+    "meaningKr": "주사",
+    "meaningEn": "injection"
+  },
+  {
+    "id": "N4-527",
+    "level": "N4",
+    "num": 527,
+    "word": "様",
+    "reading": "よう",
+    "meaningKr": "모양(방식)",
+    "meaningEn": "way, manner, kind"
+  },
+  {
+    "id": "N4-528",
+    "level": "N4",
+    "num": 528,
+    "word": "～おき",
+    "reading": "～おき",
+    "meaningKr": "~마다(간격으로)",
+    "meaningEn": "after every ~"
+  },
+  {
+    "id": "N4-529",
+    "level": "N4",
+    "num": 529,
+    "word": "最初",
+    "reading": "さいしょ",
+    "meaningKr": "처음(최초)",
+    "meaningEn": "beginning, first"
+  },
+  {
+    "id": "N4-530",
+    "level": "N4",
+    "num": 530,
+    "word": "御～",
+    "reading": "ご～",
+    "meaningKr": "~(존경 접두사)",
+    "meaningEn": "honorable ~"
+  },
+  {
+    "id": "N4-531",
+    "level": "N4",
+    "num": 531,
+    "word": "安心",
+    "reading": "あんしん",
+    "meaningKr": "안심",
+    "meaningEn": "peace of mind, relief"
+  },
+  {
+    "id": "N4-532",
+    "level": "N4",
+    "num": 532,
+    "word": "直る",
+    "reading": "なおる",
+    "meaningKr": "고쳐지다",
+    "meaningEn": "to be fixed"
+  },
+  {
+    "id": "N4-533",
+    "level": "N4",
+    "num": 533,
+    "word": "集める",
+    "reading": "あつめる",
+    "meaningKr": "모으다",
+    "meaningEn": "to collect, to gather (v.t.), to assemble"
+  },
+  {
+    "id": "N4-534",
+    "level": "N4",
+    "num": 534,
+    "word": "直す",
+    "reading": "なおす",
+    "meaningKr": "고치다",
+    "meaningEn": "to correct (v.t.); to fix"
+  },
+  {
+    "id": "N4-535",
+    "level": "N4",
+    "num": 535,
+    "word": "続く",
+    "reading": "つづく",
+    "meaningKr": "계속되다",
+    "meaningEn": "to be continued"
+  },
+  {
+    "id": "N4-536",
+    "level": "N4",
+    "num": 536,
+    "word": "先輩",
+    "reading": "せんぱい",
+    "meaningKr": "선배",
+    "meaningEn": "senior members of a group"
+  },
+  {
+    "id": "N4-537",
+    "level": "N4",
+    "num": 537,
+    "word": "約束",
+    "reading": "やくそく",
+    "meaningKr": "약속",
+    "meaningEn": "arrangement, appointment, promise"
+  },
+  {
+    "id": "N4-538",
+    "level": "N4",
+    "num": 538,
+    "word": "世話",
+    "reading": "せわする",
+    "meaningKr": "돌봄(보살핌)",
+    "meaningEn": "looking after; to look after"
+  },
+  {
+    "id": "N4-539",
+    "level": "N4",
+    "num": 539,
+    "word": "近所",
+    "reading": "きんじょ",
+    "meaningKr": "근처(이웃)",
+    "meaningEn": "neighborhood"
+  },
+  {
+    "id": "N4-540",
+    "level": "N4",
+    "num": 540,
+    "word": "将来",
+    "reading": "しょうらい",
+    "meaningKr": "장래(미래)",
+    "meaningEn": "(in the) future; prospects"
+  },
+  {
+    "id": "N4-541",
+    "level": "N4",
+    "num": 541,
+    "word": "億",
+    "reading": "おく",
+    "meaningKr": "억(숫자)",
+    "meaningEn": "hundred million"
+  },
+  {
+    "id": "N4-542",
+    "level": "N4",
+    "num": 542,
+    "word": "数学",
+    "reading": "すうがく",
+    "meaningKr": "수학",
+    "meaningEn": "mathematics"
+  },
+  {
+    "id": "N4-543",
+    "level": "N4",
+    "num": 543,
+    "word": "文化",
+    "reading": "ぶんか",
+    "meaningKr": "문화",
+    "meaningEn": "culture"
+  },
+  {
+    "id": "N4-544",
+    "level": "N4",
+    "num": 544,
+    "word": "払う",
+    "reading": "はらう",
+    "meaningKr": "지불하다",
+    "meaningEn": "to pay"
+  },
+  {
+    "id": "N4-545",
+    "level": "N4",
+    "num": 545,
+    "word": "習慣",
+    "reading": "しゅうかん",
+    "meaningKr": "습관",
+    "meaningEn": "custom (in reference to culture)"
+  },
+  {
+    "id": "N4-546",
+    "level": "N4",
+    "num": 546,
+    "word": "焼ける",
+    "reading": "やける",
+    "meaningKr": "타다(구워지다)",
+    "meaningEn": "to burn, to be roasted"
+  },
+  {
+    "id": "N4-547",
+    "level": "N4",
+    "num": 547,
+    "word": "君",
+    "reading": "きみ",
+    "meaningKr": "너(남성이 쓰는 2인칭)",
+    "meaningEn": "you (informal for men)"
+  },
+  {
+    "id": "N4-548",
+    "level": "N4",
+    "num": 548,
+    "word": "冷える",
+    "reading": "ひえる",
+    "meaningKr": "차가워지다",
+    "meaningEn": "to grow cold, to cool down"
+  },
+  {
+    "id": "N4-549",
+    "level": "N4",
+    "num": 549,
+    "word": "点く",
+    "reading": "つく",
+    "meaningKr": "켜지다",
+    "meaningEn": "to be started, to be switched on"
+  },
+  {
+    "id": "N4-550",
+    "level": "N4",
+    "num": 550,
+    "word": "この間",
+    "reading": "このあいだ",
+    "meaningKr": "요전에(지난번)",
+    "meaningEn": "the other day, recently"
+  },
+  {
+    "id": "N4-551",
+    "level": "N4",
+    "num": 551,
+    "word": "かっこう",
+    "reading": "格好",
+    "meaningKr": "모습(자세)",
+    "meaningEn": "appearance, manner, shape, form, posture"
+  },
+  {
+    "id": "N4-552",
+    "level": "N4",
+    "num": 552,
+    "word": "かまう",
+    "reading": "",
+    "meaningKr": "신경 쓰다(상관하다)",
+    "meaningEn": "to mind, to care about, to be concerned about"
+  },
+  {
+    "id": "N4-553",
+    "level": "N4",
+    "num": 553,
+    "word": "続ける",
+    "reading": "つづける",
+    "meaningKr": "계속하다",
+    "meaningEn": "to continue, to keep up"
+  },
+  {
+    "id": "N4-554",
+    "level": "N4",
+    "num": 554,
+    "word": "落す",
+    "reading": "おとす",
+    "meaningKr": "떨어뜨리다(잃다)",
+    "meaningEn": "to drop, to lose"
+  },
+  {
+    "id": "N4-555",
+    "level": "N4",
+    "num": 555,
+    "word": "明日",
+    "reading": "あす",
+    "meaningKr": "내일",
+    "meaningEn": "tomorrow"
+  },
+  {
+    "id": "N4-556",
+    "level": "N4",
+    "num": 556,
+    "word": "出発",
+    "reading": "しゅっぱつする",
+    "meaningKr": "출발(하다)",
+    "meaningEn": "departure"
+  },
+  {
+    "id": "N4-557",
+    "level": "N4",
+    "num": 557,
+    "word": "拝見",
+    "reading": "はいけんする",
+    "meaningKr": "봄(見る의 겸양어)",
+    "meaningEn": "(humble) (polite) seeing, look at"
+  },
+  {
+    "id": "N4-558",
+    "level": "N4",
+    "num": 558,
+    "word": "割れる",
+    "reading": "われる",
+    "meaningKr": "깨지다",
+    "meaningEn": "to break"
+  },
+  {
+    "id": "N4-559",
+    "level": "N4",
+    "num": 559,
+    "word": "背中",
+    "reading": "せなか",
+    "meaningKr": "등(신체)",
+    "meaningEn": "back (of body)"
+  },
+  {
+    "id": "N4-560",
+    "level": "N4",
+    "num": 560,
+    "word": "新聞社",
+    "reading": "しんぶんしゃ",
+    "meaningKr": "신문사",
+    "meaningEn": "newspaper company"
+  },
+  {
+    "id": "N4-561",
+    "level": "N4",
+    "num": 561,
+    "word": "いじめる",
+    "reading": "いじめる",
+    "meaningKr": "괴롭히다",
+    "meaningEn": "to bully, to torment"
+  },
+  {
+    "id": "N4-562",
+    "level": "N4",
+    "num": 562,
+    "word": "回る、回す",
+    "reading": "まわる、まわす",
+    "meaningKr": "돌다, 돌리다",
+    "meaningEn": "to go around, to revolve"
+  },
+  {
+    "id": "N4-563",
+    "level": "N4",
+    "num": 563,
+    "word": "～君",
+    "reading": "～くん",
+    "meaningKr": "~군(호칭)",
+    "meaningEn": "Mr. (junior) ~, master ~"
+  },
+  {
+    "id": "N4-564",
+    "level": "N4",
+    "num": 564,
+    "word": "おっしゃる",
+    "reading": "おっしゃる",
+    "meaningKr": "말씀하시다",
+    "meaningEn": "-- honorific expression for いう --"
+  },
+  {
+    "id": "N4-565",
+    "level": "N4",
+    "num": 565,
+    "word": "眠い",
+    "reading": "ねむい",
+    "meaningKr": "졸리다",
+    "meaningEn": "sleepy, drowsy"
+  },
+  {
+    "id": "N4-566",
+    "level": "N4",
+    "num": 566,
+    "word": "濡れる",
+    "reading": "ぬれる",
+    "meaningKr": "젖다",
+    "meaningEn": "to get wet"
+  },
+  {
+    "id": "N4-567",
+    "level": "N4",
+    "num": 567,
+    "word": "倒れる",
+    "reading": "たおれる",
+    "meaningKr": "쓰러지다",
+    "meaningEn": "to collapse, to break down"
+  },
+  {
+    "id": "N4-568",
+    "level": "N4",
+    "num": 568,
+    "word": "スーパー (マーケット)",
+    "reading": "スーパー (マーケット)",
+    "meaningKr": "슈퍼마켓",
+    "meaningEn": "supermarket"
+  },
+  {
+    "id": "N4-569",
+    "level": "N4",
+    "num": 569,
+    "word": "アクセサリー",
+    "reading": "アクセサリー",
+    "meaningKr": "액세서리",
+    "meaningEn": "accessory"
+  },
+  {
+    "id": "N4-570",
+    "level": "N4",
+    "num": 570,
+    "word": "考える",
+    "reading": "かんがえる",
+    "meaningKr": "생각하다",
+    "meaningEn": "to think (about); to consider"
+  },
+  {
+    "id": "N4-571",
+    "level": "N4",
+    "num": 571,
+    "word": "向かう",
+    "reading": "むかう",
+    "meaningKr": "향하다",
+    "meaningEn": "to face, to go towards"
+  },
+  {
+    "id": "N4-572",
+    "level": "N4",
+    "num": 572,
+    "word": "自由",
+    "reading": "じゆう",
+    "meaningKr": "자유",
+    "meaningEn": "freedom"
+  },
+  {
+    "id": "N4-573",
+    "level": "N4",
+    "num": 573,
+    "word": "仕方",
+    "reading": "しかた",
+    "meaningKr": "방법(하는 방식)",
+    "meaningEn": "way (of doing something)"
+  },
+  {
+    "id": "N4-574",
+    "level": "N4",
+    "num": 574,
+    "word": "首",
+    "reading": "くび",
+    "meaningKr": "목",
+    "meaningEn": "neck"
+  },
+  {
+    "id": "N4-575",
+    "level": "N4",
+    "num": 575,
+    "word": "程",
+    "reading": "ほど",
+    "meaningKr": "정도",
+    "meaningEn": "degree, extent"
+  },
+  {
+    "id": "N4-576",
+    "level": "N4",
+    "num": 576,
+    "word": "代わり",
+    "reading": "かわり",
+    "meaningKr": "대신",
+    "meaningEn": "substitute, replacement"
+  },
+  {
+    "id": "N4-577",
+    "level": "N4",
+    "num": 577,
+    "word": "失敗",
+    "reading": "しっぱい",
+    "meaningKr": "실패",
+    "meaningEn": "failure, mistake"
+  },
+  {
+    "id": "N4-578",
+    "level": "N4",
+    "num": 578,
+    "word": "工業",
+    "reading": "こうぎょう",
+    "meaningKr": "공업",
+    "meaningEn": "(manufacturing) industry"
+  },
+  {
+    "id": "N4-579",
+    "level": "N4",
+    "num": 579,
+    "word": "移る",
+    "reading": "うつる",
+    "meaningKr": "옮기다(이동하다)",
+    "meaningEn": "to move (from a house); to transfer (from a department); to shift"
+  },
+  {
+    "id": "N4-580",
+    "level": "N4",
+    "num": 580,
+    "word": "スーツケース",
+    "reading": "スーツケース",
+    "meaningKr": "여행용 가방",
+    "meaningEn": "suitcase"
+  },
+  {
+    "id": "N4-581",
+    "level": "N4",
+    "num": 581,
+    "word": "ひげ",
+    "reading": "ひげ",
+    "meaningKr": "수염",
+    "meaningEn": "beard"
+  },
+  {
+    "id": "N4-582",
+    "level": "N4",
+    "num": 582,
+    "word": "研究室",
+    "reading": "けんきゅうしつ",
+    "meaningKr": "연구실",
+    "meaningEn": "the professor's office; laboratory"
+  },
+  {
+    "id": "N4-583",
+    "level": "N4",
+    "num": 583,
+    "word": "工場",
+    "reading": "こうじょう",
+    "meaningKr": "공장",
+    "meaningEn": "factory"
+  },
+  {
+    "id": "N4-584",
+    "level": "N4",
+    "num": 584,
+    "word": "紹介",
+    "reading": "しょうかい",
+    "meaningKr": "소개",
+    "meaningEn": "an introduction"
+  },
+  {
+    "id": "N4-585",
+    "level": "N4",
+    "num": 585,
+    "word": "けれど; けれども",
+    "reading": "けれど; けれども",
+    "meaningKr": "그렇지만",
+    "meaningEn": "but, although"
+  },
+  {
+    "id": "N4-586",
+    "level": "N4",
+    "num": 586,
+    "word": "舟",
+    "reading": "ふね",
+    "meaningKr": "배(선박)",
+    "meaningEn": "ship, boat"
+  },
+  {
+    "id": "N4-587",
+    "level": "N4",
+    "num": 587,
+    "word": "動く",
+    "reading": "うごく",
+    "meaningKr": "움직이다",
+    "meaningEn": "to move"
+  },
+  {
+    "id": "N4-588",
+    "level": "N4",
+    "num": 588,
+    "word": "～(に) ついて",
+    "reading": "～(に) ついて",
+    "meaningKr": "~에 대해",
+    "meaningEn": "about, concerning"
+  },
+  {
+    "id": "N4-589",
+    "level": "N4",
+    "num": 589,
+    "word": "コンサート",
+    "reading": "コンサート",
+    "meaningKr": "콘서트",
+    "meaningEn": "concert"
+  },
+  {
+    "id": "N4-590",
+    "level": "N4",
+    "num": 590,
+    "word": "虫",
+    "reading": "むし",
+    "meaningKr": "벌레",
+    "meaningEn": "insect"
+  },
+  {
+    "id": "N4-591",
+    "level": "N4",
+    "num": 591,
+    "word": "優しい",
+    "reading": "やさしい",
+    "meaningKr": "상냥하다(다정하다)",
+    "meaningEn": "kind (person), gentle (person), easy (problem)"
+  },
+  {
+    "id": "N4-592",
+    "level": "N4",
+    "num": 592,
+    "word": "コンピュータ; コンピューター",
+    "reading": "コンピュータ; コンピューター",
+    "meaningKr": "컴퓨터",
+    "meaningEn": "computer"
+  },
+  {
+    "id": "N4-593",
+    "level": "N4",
+    "num": 593,
+    "word": "植える",
+    "reading": "うえる",
+    "meaningKr": "심다",
+    "meaningEn": "to plant"
+  },
+  {
+    "id": "N4-594",
+    "level": "N4",
+    "num": 594,
+    "word": "両方",
+    "reading": "りょうほう",
+    "meaningKr": "양쪽",
+    "meaningEn": "both sides, both parties"
+  },
+  {
+    "id": "N4-595",
+    "level": "N4",
+    "num": 595,
+    "word": "汚れる",
+    "reading": "よごれる",
+    "meaningKr": "더러워지다",
+    "meaningEn": "to become dirty"
+  },
+  {
+    "id": "N4-596",
+    "level": "N4",
+    "num": 596,
+    "word": "水泳",
+    "reading": "すいえい",
+    "meaningKr": "수영",
+    "meaningEn": "swimming"
+  },
+  {
+    "id": "N4-597",
+    "level": "N4",
+    "num": 597,
+    "word": "経験",
+    "reading": "けいけんする",
+    "meaningKr": "경험(하다)",
+    "meaningEn": "experience"
+  },
+  {
+    "id": "N4-598",
+    "level": "N4",
+    "num": 598,
+    "word": "勝つ",
+    "reading": "かつ",
+    "meaningKr": "이기다",
+    "meaningEn": "to win"
+  },
+  {
+    "id": "N4-599",
+    "level": "N4",
+    "num": 599,
+    "word": "砂",
+    "reading": "すな",
+    "meaningKr": "모래",
+    "meaningEn": "sand"
+  },
+  {
+    "id": "N4-600",
+    "level": "N4",
+    "num": 600,
+    "word": "警察",
+    "reading": "けいさつ",
+    "meaningKr": "경찰",
+    "meaningEn": "police; police station"
+  },
+  {
+    "id": "N4-601",
+    "level": "N4",
+    "num": 601,
+    "word": "取り替える",
+    "reading": "とりかえる",
+    "meaningKr": "교체하다",
+    "meaningEn": "to exchange, to replace"
+  },
+  {
+    "id": "N4-602",
+    "level": "N4",
+    "num": 602,
+    "word": "急ぐ",
+    "reading": "いそぐ",
+    "meaningKr": "서두르다",
+    "meaningEn": "to hurry, to be in a hurry, to rush"
+  },
+  {
+    "id": "N4-603",
+    "level": "N4",
+    "num": 603,
+    "word": "簡単",
+    "reading": "かんたん",
+    "meaningKr": "간단함",
+    "meaningEn": "simple"
+  },
+  {
+    "id": "N4-604",
+    "level": "N4",
+    "num": 604,
+    "word": "参る",
+    "reading": "まいる",
+    "meaningKr": "가다/오다(겸양어)",
+    "meaningEn": "humble expression for 行く and 来る"
+  },
+  {
+    "id": "N4-605",
+    "level": "N4",
+    "num": 605,
+    "word": "全然",
+    "reading": "ぜんぜん",
+    "meaningKr": "전혀",
+    "meaningEn": "not at all; wholly, entirely"
+  },
+  {
+    "id": "N4-606",
+    "level": "N4",
+    "num": 606,
+    "word": "特別",
+    "reading": "とくべつ",
+    "meaningKr": "특별함",
+    "meaningEn": "special"
+  },
+  {
+    "id": "N4-607",
+    "level": "N4",
+    "num": 607,
+    "word": "復習",
+    "reading": "ふくしゅう",
+    "meaningKr": "복습",
+    "meaningEn": "review (of lessons), revision"
+  },
+  {
+    "id": "N4-608",
+    "level": "N4",
+    "num": 608,
+    "word": "間に合う",
+    "reading": "まにあう",
+    "meaningKr": "시간에 맞추다",
+    "meaningEn": "to be in time for"
+  },
+  {
+    "id": "N4-609",
+    "level": "N4",
+    "num": 609,
+    "word": "役に立つ",
+    "reading": "やくにたつ",
+    "meaningKr": "도움이 되다",
+    "meaningEn": "to be helpful, to be useful"
+  },
+  {
+    "id": "N4-610",
+    "level": "N4",
+    "num": 610,
+    "word": "もうすぐ",
+    "reading": "もうすぐ",
+    "meaningKr": "이제 곧",
+    "meaningEn": "very soon; in a few moments; days"
+  },
+  {
+    "id": "N4-611",
+    "level": "N4",
+    "num": 611,
+    "word": "真中",
+    "reading": "まんなか",
+    "meaningKr": "한가운데",
+    "meaningEn": "middle, center"
+  },
+  {
+    "id": "N4-612",
+    "level": "N4",
+    "num": 612,
+    "word": "戻る",
+    "reading": "もどる",
+    "meaningKr": "되돌아가다",
+    "meaningEn": "to return (v.i.); to come back"
+  },
+  {
+    "id": "N4-613",
+    "level": "N4",
+    "num": 613,
+    "word": "研究",
+    "reading": "けんきゅう",
+    "meaningKr": "연구",
+    "meaningEn": "study, research, investigation"
+  },
+  {
+    "id": "N4-614",
+    "level": "N4",
+    "num": 614,
+    "word": "ケーキ",
+    "reading": "ケーキ",
+    "meaningKr": "케이크",
+    "meaningEn": "cake"
+  },
+  {
+    "id": "N4-615",
+    "level": "N4",
+    "num": 615,
+    "word": "草",
+    "reading": "くさ",
+    "meaningKr": "풀",
+    "meaningEn": "grass"
+  },
+  {
+    "id": "N4-616",
+    "level": "N4",
+    "num": 616,
+    "word": "込む",
+    "reading": "こむ",
+    "meaningKr": "붐비다",
+    "meaningEn": "to be crowded"
+  },
+  {
+    "id": "N4-617",
+    "level": "N4",
+    "num": 617,
+    "word": "この頃",
+    "reading": "このごろ",
+    "meaningKr": "요즘",
+    "meaningEn": "these days, nowadays"
+  },
+  {
+    "id": "N4-618",
+    "level": "N4",
+    "num": 618,
+    "word": "訪ねる",
+    "reading": "たずねる",
+    "meaningKr": "방문하다",
+    "meaningEn": "to visit"
+  },
+  {
+    "id": "N4-619",
+    "level": "N4",
+    "num": 619,
+    "word": "下げる",
+    "reading": "さげる",
+    "meaningKr": "내리다",
+    "meaningEn": "to lower (v.t.); to hang"
+  },
+  {
+    "id": "N4-620",
+    "level": "N4",
+    "num": 620,
+    "word": "花見",
+    "reading": "はなみ",
+    "meaningKr": "꽃놀이(벚꽃놀이)",
+    "meaningEn": "cherry-blossom viewing"
+  },
+  {
+    "id": "N4-621",
+    "level": "N4",
+    "num": 621,
+    "word": "途中",
+    "reading": "とちゅう",
+    "meaningKr": "도중",
+    "meaningEn": "on the way, midway"
+  },
+  {
+    "id": "N4-622",
+    "level": "N4",
+    "num": 622,
+    "word": "入院",
+    "reading": "にゅういんする",
+    "meaningKr": "입원(하다)",
+    "meaningEn": "hospitalization"
+  },
+  {
+    "id": "N4-623",
+    "level": "N4",
+    "num": 623,
+    "word": "乗り換える",
+    "reading": "のりかえる",
+    "meaningKr": "환승하다",
+    "meaningEn": "to transfer (trains), to change (bus, train, etc.)"
+  },
+  {
+    "id": "N4-624",
+    "level": "N4",
+    "num": 624,
+    "word": "別れる",
+    "reading": "わかれる",
+    "meaningKr": "헤어지다",
+    "meaningEn": "to part from, to separate"
+  },
+  {
+    "id": "N4-625",
+    "level": "N4",
+    "num": 625,
+    "word": "～町",
+    "reading": "～ちょう",
+    "meaningKr": "~마을(동네)",
+    "meaningEn": "the town of ~"
+  },
+  {
+    "id": "N4-626",
+    "level": "N4",
+    "num": 626,
+    "word": "安全",
+    "reading": "あんぜん",
+    "meaningKr": "안전",
+    "meaningEn": "safety, security"
+  },
+  {
+    "id": "N4-627",
+    "level": "N4",
+    "num": 627,
+    "word": "看護婦",
+    "reading": "かんごふ",
+    "meaningKr": "간호사",
+    "meaningEn": "(female) nurse"
+  },
+  {
+    "id": "N4-628",
+    "level": "N4",
+    "num": 628,
+    "word": "見物",
+    "reading": "けんぶつ",
+    "meaningKr": "구경",
+    "meaningEn": "sightseeing"
+  },
+  {
+    "id": "N4-629",
+    "level": "N4",
+    "num": 629,
+    "word": "相談",
+    "reading": "そうだんする",
+    "meaningKr": "상담(하다)",
+    "meaningEn": "consultation"
+  },
+  {
+    "id": "N4-630",
+    "level": "N4",
+    "num": 630,
+    "word": "ガソリンスタンド",
+    "reading": "ガソリンスタンド",
+    "meaningKr": "주유소",
+    "meaningEn": "gas station, service station"
+  },
+  {
+    "id": "N4-631",
+    "level": "N4",
+    "num": 631,
+    "word": "テニス",
+    "reading": "テニス",
+    "meaningKr": "테니스",
+    "meaningEn": "tennis"
+  },
+  {
+    "id": "N4-632",
+    "level": "N4",
+    "num": 632,
+    "word": "眠る",
+    "reading": "ねむる",
+    "meaningKr": "잠들다",
+    "meaningEn": "to sleep"
+  },
+  {
+    "id": "N4-633",
+    "level": "N4",
+    "num": 633,
+    "word": "上がる",
+    "reading": "あがる",
+    "meaningKr": "오르다",
+    "meaningEn": "to rise, to go up"
+  },
+  {
+    "id": "N4-634",
+    "level": "N4",
+    "num": 634,
+    "word": "翻訳",
+    "reading": "ほんやく",
+    "meaningKr": "번역",
+    "meaningEn": "translation"
+  },
+  {
+    "id": "N4-635",
+    "level": "N4",
+    "num": 635,
+    "word": "食事",
+    "reading": "しょくじする",
+    "meaningKr": "식사(하다)",
+    "meaningEn": "meal"
+  },
+  {
+    "id": "N4-636",
+    "level": "N4",
+    "num": 636,
+    "word": "おかげ",
+    "reading": "お陰",
+    "meaningKr": "덕분",
+    "meaningEn": "thanks or owing to"
+  },
+  {
+    "id": "N4-637",
+    "level": "N4",
+    "num": 637,
+    "word": "娘",
+    "reading": "むすめ",
+    "meaningKr": "딸",
+    "meaningEn": "daughter (humble)"
+  },
+  {
+    "id": "N4-638",
+    "level": "N4",
+    "num": 638,
+    "word": "湯",
+    "reading": "ゆ",
+    "meaningKr": "뜨거운 물",
+    "meaningEn": "hot water"
+  },
+  {
+    "id": "N4-639",
+    "level": "N4",
+    "num": 639,
+    "word": "競争",
+    "reading": "きょうそう",
+    "meaningKr": "경쟁",
+    "meaningEn": "competition, contest"
+  },
+  {
+    "id": "N4-640",
+    "level": "N4",
+    "num": 640,
+    "word": "会議",
+    "reading": "かいぎ",
+    "meaningKr": "회의",
+    "meaningEn": "business meeting; conference"
+  },
+  {
+    "id": "N4-641",
+    "level": "N4",
+    "num": 641,
+    "word": "湖",
+    "reading": "みずうみ",
+    "meaningKr": "호수",
+    "meaningEn": "lake"
+  },
+  {
+    "id": "N4-642",
+    "level": "N4",
+    "num": 642,
+    "word": "集まる",
+    "reading": "あつまる",
+    "meaningKr": "모이다",
+    "meaningEn": "to gather (v.i.), to collect"
+  },
+  {
+    "id": "N4-643",
+    "level": "N4",
+    "num": 643,
+    "word": "～にくい",
+    "reading": "～にくい",
+    "meaningKr": "~하기 어렵다",
+    "meaningEn": "difficult to do ~"
+  },
+  {
+    "id": "N4-644",
+    "level": "N4",
+    "num": 644,
+    "word": "生活",
+    "reading": "せいかつする",
+    "meaningKr": "생활(하다)",
+    "meaningEn": "living, life; to live"
+  },
+  {
+    "id": "N4-645",
+    "level": "N4",
+    "num": 645,
+    "word": "糸",
+    "reading": "いと",
+    "meaningKr": "실",
+    "meaningEn": "thread"
+  },
+  {
+    "id": "N4-646",
+    "level": "N4",
+    "num": 646,
+    "word": "関係",
+    "reading": "かんけい",
+    "meaningKr": "관계",
+    "meaningEn": "relation(ship), connection"
+  },
+  {
+    "id": "N4-647",
+    "level": "N4",
+    "num": 647,
+    "word": "ピアノ",
+    "reading": "ピアノ",
+    "meaningKr": "피아노",
+    "meaningEn": "piano"
+  },
+  {
+    "id": "N4-648",
+    "level": "N4",
+    "num": 648,
+    "word": "～目",
+    "reading": "～め",
+    "meaningKr": "~번째",
+    "meaningEn": "number ~ sequence, ~nd; ~th"
+  },
+  {
+    "id": "N4-649",
+    "level": "N4",
+    "num": 649,
+    "word": "番組",
+    "reading": "ばんぐみ",
+    "meaningKr": "방송 프로그램",
+    "meaningEn": "broadcast program"
+  },
+  {
+    "id": "N4-650",
+    "level": "N4",
+    "num": 650,
+    "word": "急",
+    "reading": "きゅう",
+    "meaningKr": "급함(갑작스러움)",
+    "meaningEn": "urgent, sudden; steep"
+  },
+  {
+    "id": "N4-651",
+    "level": "N4",
+    "num": 651,
+    "word": "棚",
+    "reading": "たな",
+    "meaningKr": "선반",
+    "meaningEn": "shelves, rack"
+  },
+  {
+    "id": "N4-652",
+    "level": "N4",
+    "num": 652,
+    "word": "木綿",
+    "reading": "もめん",
+    "meaningKr": "목면(무명)",
+    "meaningEn": "cotton"
+  },
+  {
+    "id": "N4-653",
+    "level": "N4",
+    "num": 653,
+    "word": "輸出",
+    "reading": "ゆしゅつする",
+    "meaningKr": "수출(하다)",
+    "meaningEn": "export"
+  },
+  {
+    "id": "N4-654",
+    "level": "N4",
+    "num": 654,
+    "word": "タイプ",
+    "reading": "タイプ",
+    "meaningKr": "타입(유형)",
+    "meaningEn": "type, style"
+  },
+  {
+    "id": "N4-655",
+    "level": "N4",
+    "num": 655,
+    "word": "すり",
+    "reading": "すり",
+    "meaningKr": "소매치기",
+    "meaningEn": "pickpocket"
+  },
+  {
+    "id": "N4-656",
+    "level": "N4",
+    "num": 656,
+    "word": "うれしい",
+    "reading": "嬉しい",
+    "meaningKr": "기쁘다",
+    "meaningEn": "to be happy; to be glad"
+  },
+  {
+    "id": "N4-657",
+    "level": "N4",
+    "num": 657,
+    "word": "アルコール",
+    "reading": "アルコール",
+    "meaningKr": "알코올",
+    "meaningEn": "alcohol"
+  },
+  {
+    "id": "N4-658",
+    "level": "N4",
+    "num": 658,
+    "word": "ソフト",
+    "reading": "ソフト",
+    "meaningKr": "소프트(부드러움)",
+    "meaningEn": "soft; soft hat; software"
+  },
+  {
+    "id": "N4-659",
+    "level": "N4",
+    "num": 659,
+    "word": "神社",
+    "reading": "じんじゃ",
+    "meaningKr": "신사(神社)",
+    "meaningEn": "Shinto shrine"
+  },
+  {
+    "id": "N4-660",
+    "level": "N4",
+    "num": 660,
+    "word": "大分",
+    "reading": "だいぶ",
+    "meaningKr": "꽤(상당히)",
+    "meaningEn": "fairly well, to a large extent, considerably, pretty much"
+  },
+  {
+    "id": "N4-661",
+    "level": "N4",
+    "num": 661,
+    "word": "楽しみ",
+    "reading": "たのしみ",
+    "meaningKr": "낙(즐거움)",
+    "meaningEn": "pleasure, joy"
+  },
+  {
+    "id": "N4-662",
+    "level": "N4",
+    "num": 662,
+    "word": "趣味",
+    "reading": "しゅみ",
+    "meaningKr": "취미",
+    "meaningEn": "hobby; pastime"
+  },
+  {
+    "id": "N4-663",
+    "level": "N4",
+    "num": 663,
+    "word": "電報",
+    "reading": "でんぽう",
+    "meaningKr": "전보",
+    "meaningEn": "telegram"
+  },
+  {
+    "id": "N4-664",
+    "level": "N4",
+    "num": 664,
+    "word": "家内",
+    "reading": "かない",
+    "meaningKr": "아내",
+    "meaningEn": "(one's own) wife"
+  },
+  {
+    "id": "N4-665",
+    "level": "N4",
+    "num": 665,
+    "word": "指",
+    "reading": "ゆび",
+    "meaningKr": "손가락",
+    "meaningEn": "finger"
+  },
+  {
+    "id": "N4-666",
+    "level": "N4",
+    "num": 666,
+    "word": "これから",
+    "reading": "これから",
+    "meaningKr": "이제부터",
+    "meaningEn": "from now on, after this"
+  },
+  {
+    "id": "N4-667",
+    "level": "N4",
+    "num": 667,
+    "word": "たまに",
+    "reading": "たまに",
+    "meaningKr": "가끔",
+    "meaningEn": "occasionally"
+  },
+  {
+    "id": "N4-668",
+    "level": "N4",
+    "num": 668,
+    "word": "社会",
+    "reading": "しゃかい",
+    "meaningKr": "사회",
+    "meaningEn": "society"
+  }
+]
