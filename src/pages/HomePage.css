@@ -1,0 +1,35 @@
+.home-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  text-align: left;
+}
+
+.home-entry-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.home-entry-card:hover {
+  border-color: var(--color-primary);
+  background: var(--color-selected-bg);
+}
+
+.home-entry-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.home-entry-detail {
+  color: var(--color-ink-muted);
+  font-size: 14px;
+}

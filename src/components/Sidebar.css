@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--color-primary);
   color: #fff;
 }
@@ -48,7 +48,7 @@
   padding: 11px 12px;
   border: none;
   border-left: 3px solid transparent;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
   background: transparent;
   color: var(--color-ink-muted);
   font-size: 15px;
@@ -62,9 +62,14 @@
   color: var(--color-ink);
 }
 
+.nav-item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
 .nav-item.active {
   background: var(--color-selected-bg);
   border-left-color: var(--color-primary);
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   font-weight: 600;
 }

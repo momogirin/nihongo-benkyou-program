@@ -17,13 +17,13 @@
   padding: 0;
   text-align: left;
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   overflow: hidden;
 }
 
 .result-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   padding: 12px 16px;
   border-bottom: 1px solid var(--color-border);
@@ -48,17 +48,31 @@
   width: 40px;
   text-align: center;
   flex: none;
+  padding-top: 2px;
 }
 
 .result-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 4px;
+}
+
+.result-detail-main {
   color: var(--color-ink-muted);
   font-size: 14px;
+}
+
+.result-example {
+  color: var(--color-ink-muted);
+  font-size: 13px;
+  opacity: 0.85;
 }
 
 .restart-button {
   padding: 14px 28px;
   border: none;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   background: var(--color-primary);
   color: #fff;
   font-size: 16px;

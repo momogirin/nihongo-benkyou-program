@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { addWrongNotes } from '../lib/storage'
+import { correctAnswerLabel } from '../lib/answerMatching'
+import { addWrongNotes, removeWrongNote } from '../lib/storage'
 import type { AnsweredQuestion, QuestionType } from '../types'
 import './ResultScreen.css'
 
@@ -17,19 +18,10 @@ function formatElapsed(ms: number): string {
   return `${minutes}분 ${seconds}초`
 }
 
-function correctAnswerLabel(a: AnsweredQuestion, questionType: QuestionType): string {
-  switch (questionType) {
-    case 'promptToAnswer':
-      return a.kanji.kunKr
-    case 'answerToPrompt':
-    case 'kunReadingToKanji':
-    case 'onReadingToKanji':
-      return a.kanji.kanji
-    case 'kunReading':
-      return a.kanji.kunJp
-    case 'onReading':
-      return a.kanji.onJp
-  }
+function exampleLabel(a: AnsweredQuestion): string | null {
+  const { exampleKanji, exampleJp, exampleKr } = a.kanji
+  if (!exampleKanji) return null
+  return `${exampleKanji}${exampleJp ? `(${exampleJp})` : ''}${exampleKr ? ` · ${exampleKr}` : ''}`
 }
 
 export default function ResultScreen({ answers, elapsedMs, questionType, onRestart }: Props) {
@@ -40,6 +32,8 @@ export default function ResultScreen({ answers, elapsedMs, questionType, onResta
   useEffect(() => {
     const wrongIds = answers.filter((a) => !a.isCorrect).map((a) => a.kanji.id)
     addWrongNotes(wrongIds)
+    // a kanji answered correctly this round is no longer a standing weak point
+    answers.filter((a) => a.isCorrect).forEach((a) => removeWrongNote(a.kanji.id))
     // run once when results are shown
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -56,8 +50,13 @@ export default function ResultScreen({ answers, elapsedMs, questionType, onResta
           <li key={`${a.kanji.id}-${i}`} className={a.isCorrect ? 'correct' : 'incorrect'}>
             <span className="result-kanji">{a.kanji.kanji}</span>
             <span className="result-detail">
-              정답: {correctAnswerLabel(a, questionType)}
-              {!a.isCorrect && <> · 내 답: {a.userAnswer || '(미입력)'}</>}
+              <span className="result-detail-main">
+                정답: {correctAnswerLabel(questionType, a.kanji)}
+                {!a.isCorrect && <> · 내 답: {a.userAnswer || '(미입력)'}</>}
+              </span>
+              {!a.isCorrect && exampleLabel(a) && (
+                <span className="result-example">예: {exampleLabel(a)}</span>
+              )}
             </span>
           </li>
         ))}

@@ -1,28 +1,42 @@
-import { useState, type ReactElement } from 'react'
+import { useState } from 'react'
 import Sidebar from './components/Sidebar'
 import HomePage from './pages/HomePage'
 import QuizPage from './pages/QuizPage'
 import WrongNotePage from './pages/WrongNotePage'
 import BackupPage from './pages/BackupPage'
-import type { PageId } from './types'
-
-const PAGES: Record<PageId, () => ReactElement> = {
-  home: HomePage,
-  quiz: QuizPage,
-  wrongNote: WrongNotePage,
-  backup: BackupPage,
-}
+import type { PageId, QuizConfig } from './types'
 
 function App() {
   const [page, setPage] = useState<PageId>('home')
-  const Page = PAGES[page]
+  const [pendingQuizConfig, setPendingQuizConfig] = useState<QuizConfig | null>(null)
+
+  function startQuiz(config: QuizConfig) {
+    setPendingQuizConfig(config)
+    setPage('quiz')
+  }
+
+  function renderPage() {
+    switch (page) {
+      case 'home':
+        return <HomePage onStartQuiz={startQuiz} />
+      case 'quiz':
+        return (
+          <QuizPage
+            initialConfig={pendingQuizConfig}
+            onInitialConfigConsumed={() => setPendingQuizConfig(null)}
+          />
+        )
+      case 'wrongNote':
+        return <WrongNotePage onStartQuiz={startQuiz} />
+      case 'backup':
+        return <BackupPage />
+    }
+  }
 
   return (
     <div className="app-shell">
       <Sidebar active={page} onNavigate={setPage} />
-      <main className="content">
-        <Page />
-      </main>
+      <main className="content">{renderPage()}</main>
     </div>
   )
 }

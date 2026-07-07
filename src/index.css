@@ -31,6 +31,13 @@ h3 {
   margin: 0;
 }
 
+/* every screen's page title is the same size/weight regardless of its
+   container width (setup/quiz/result previously each set their own) */
+h1 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
 button,
 input {
   font-family: inherit;
@@ -53,11 +60,21 @@ input {
   text-align: center;
 }
 
-.page h1 {
-  font-size: 26px;
-  margin-bottom: 12px;
-}
-
 .page-placeholder {
   color: var(--color-ink-muted);
+}
+
+/* shared "title + primary action" row, reused by any page that needs a
+   header-level button (오답노트/홈/백업) instead of the centered .page title */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  margin-bottom: 0;
 }

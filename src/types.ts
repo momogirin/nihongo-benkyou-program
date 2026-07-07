@@ -23,6 +23,9 @@ export interface QuizConfig {
   questionType: QuestionType
   order: QuizOrder
   count: QuestionCount
+  // when set, quiz draws only from these kanji ids instead of `levels`
+  // (used by "오답만 재도전" / "이어하기" entry points that bypass SetupScreen)
+  kanjiIds?: string[]
 }
 
 export interface AnsweredQuestion {

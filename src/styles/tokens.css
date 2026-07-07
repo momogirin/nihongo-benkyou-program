@@ -1,37 +1,49 @@
 :root {
-  --color-bg: #FAF8F3;
+  --color-bg: #F5F5F7;
   --color-bg-elevated: #FFFFFF;
-  --color-ink: #2B2B2E;
+  --color-ink: #1E1E20;
   --color-ink-muted: #6B6B70;
-  --color-primary: #B24F1E;
-  --color-primary-dark: #8A3B15;
+  /* Postman-orange brand color — for solid fills/borders (white text on top).
+     text/active-state usage should read --color-primary-dark instead, since
+     this shade doesn't clear 4.5:1 as small text on a light background */
+  --color-primary: #FF6C37;
+  --color-primary-dark: #B24F1E;
   --color-accent: #B23A2E;
-  --color-correct: #3F7D57;
-  --color-incorrect: #B23A2E;
-  --color-border: #E4DFD3;
+  --color-correct: #1F9254;
+  --color-incorrect: #E5484D;
+  --color-border: #E2E2E6;
   --color-radical-tag: #8A6D3B;
-  --color-selected-bg: rgba(178, 79, 30, 0.08);
+  --color-selected-bg: rgba(255, 108, 55, 0.08);
 
   --font-display: 'Noto Serif JP', serif;
   --font-sans: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
   --font-caption: 'Noto Sans KR', sans-serif;
+
+  /* same role = same radius: sm for compact inline controls (segment picker),
+     md for standard controls (nav/option/tag buttons), lg for buttons that
+     carry a primary action, xl for card/list containers */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
 }
 
-/* dark-mode values below are derived (only bg/ink/primary/accent were spec'd);
-   verified against --color-bg-dark at >=4.5:1 (WCAG AA) */
+/* dark variants of the same Postman-orange palette; primary/primary-dark are
+   both bright here since dark backgrounds don't have the text-contrast
+   problem a vivid orange has on white */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #1C1B1A;
-    --color-bg-elevated: #262521;
-    --color-ink: #EDEAE3;
-    --color-ink-muted: #A8A29B;
-    --color-primary: #DD7A3D;
-    --color-primary-dark: #B24F1E;
+    --color-bg: #1C1C1E;
+    --color-bg-elevated: #262629;
+    --color-ink: #EDEDEF;
+    --color-ink-muted: #A6A6AA;
+    --color-primary: #FF7A45;
+    --color-primary-dark: #E8703D;
     --color-accent: #D9695C;
-    --color-correct: #5FA978;
-    --color-incorrect: #D9695C;
-    --color-border: #3A3835;
+    --color-correct: #34C77B;
+    --color-incorrect: #F0525A;
+    --color-border: #3A3A3D;
     --color-radical-tag: #C9A464;
-    --color-selected-bg: rgba(221, 122, 61, 0.16);
+    --color-selected-bg: rgba(255, 122, 69, 0.16);
   }
 }

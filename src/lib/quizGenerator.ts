@@ -8,6 +8,19 @@ export interface QuizQuestion {
 
 export const SEGMENT_SIZE = 50
 
+// shared by HomePage's "오답 재도전" card and WrongNotePage's retry button,
+// so the two entry points can't drift apart on question type/order/count
+export function wrongNoteQuizConfig(kanjiIds: string[]): QuizConfig {
+  return {
+    levels: [],
+    levelSegments: {},
+    kanjiIds,
+    questionType: 'promptToAnswer',
+    order: 'random',
+    count: 'all',
+  }
+}
+
 export function levelPool(level: KanjiLevel): Kanji[] {
   return kanjiList.filter((k) => k.level === level).sort((a, b) => a.num - b.num)
 }
@@ -70,7 +83,9 @@ const KANJI_CHOICE_TYPES = new Set<QuizConfig['questionType']>([
 ])
 
 export function generateQuestions(config: QuizConfig): QuizQuestion[] {
-  const basePool = config.levels.flatMap((level) => segmentPool(level, config.levelSegments[level]))
+  const basePool = config.kanjiIds
+    ? config.kanjiIds.map((id) => kanjiList.find((k) => k.id === id)).filter((k): k is Kanji => k !== undefined)
+    : config.levels.flatMap((level) => segmentPool(level, config.levelSegments[level]))
   const field = READING_FIELD[config.questionType]
   const pool = field ? basePool.filter((k) => hasReading(k, field)) : basePool
 
