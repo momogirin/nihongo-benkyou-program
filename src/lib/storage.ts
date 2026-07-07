@@ -94,6 +94,12 @@ export function clearInProgressQuiz() {
   localStorage.removeItem(IN_PROGRESS_QUIZ_KEY)
 }
 
+// only restores from a backup if nothing's currently in progress locally —
+// an active session on this device shouldn't be clobbered by an older backup
+export function importInProgressQuiz(quiz: InProgressQuiz | null) {
+  if (quiz && !getInProgressQuiz()) saveInProgressQuiz(quiz)
+}
+
 // merges by kanjiId, keeping whichever entry was marked wrong more recently —
 // used by BackupPage import so restoring an old backup can't erase newer progress
 export function importWrongNotes(entries: WrongNoteEntry[]) {
@@ -129,6 +135,27 @@ export function setStudyProgress(level: KanjiLevel, completedCount: number) {
   }
   all[level] = completedCount
   localStorage.setItem(STUDY_PROGRESS_KEY, JSON.stringify(all))
+}
+
+// every level's progress at once, for BackupPage export
+export function getAllStudyProgress(): Record<string, number> {
+  try {
+    const raw = localStorage.getItem(STUDY_PROGRESS_KEY)
+    return raw ? JSON.parse(raw) : {}
+  } catch {
+    return {}
+  }
+}
+
+// takes the max per level (progress only ever increases), so restoring an
+// older backup can't undo progress made since
+export function importStudyProgress(progress: Record<string, number>) {
+  const current = getAllStudyProgress()
+  const merged: Record<string, number> = { ...current }
+  for (const [level, count] of Object.entries(progress)) {
+    merged[level] = Math.max(merged[level] ?? 0, count)
+  }
+  localStorage.setItem(STUDY_PROGRESS_KEY, JSON.stringify(merged))
 }
 
 export function getStudyBatchSize(): number {

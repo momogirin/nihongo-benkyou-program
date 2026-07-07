@@ -1,19 +1,26 @@
 import { useState, type ChangeEvent } from 'react'
 import {
+  getAllStudyProgress,
+  getInProgressQuiz,
   getQuizHistory,
   getWrongNotes,
+  importInProgressQuiz,
   importQuizHistory,
+  importStudyProgress,
   importWrongNotes,
+  type InProgressQuiz,
   type WrongNoteEntry,
 } from '../lib/storage'
 import type { QuizHistoryEntry } from '../types'
 import './BackupPage.css'
 
 interface BackupFile {
-  version: 2
+  version: 3
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
+  studyProgress: Record<string, number>
+  inProgressQuiz: InProgressQuiz | null
 }
 
 type Status = { type: 'success' | 'error'; message: string }
@@ -31,10 +38,12 @@ export default function BackupPage() {
 
   function handleExport() {
     const payload: BackupFile = {
-      version: 2,
+      version: 3,
       exportedAt: new Date().toISOString(),
       wrongNotes: getWrongNotes(),
       quizHistory: getQuizHistory(),
+      studyProgress: getAllStudyProgress(),
+      inProgressQuiz: getInProgressQuiz(),
     }
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
@@ -59,6 +68,8 @@ export default function BackupPage() {
         if (!isBackupFile(parsed)) throw new Error('invalid shape')
         importWrongNotes(parsed.wrongNotes)
         if (parsed.quizHistory) importQuizHistory(parsed.quizHistory)
+        if (parsed.studyProgress) importStudyProgress(parsed.studyProgress)
+        if (parsed.inProgressQuiz) importInProgressQuiz(parsed.inProgressQuiz)
         setStatus({ type: 'success', message: `가져오기 완료 (오답 ${parsed.wrongNotes.length}건)` })
       } catch {
         setStatus({ type: 'error', message: '올바른 백업 파일이 아닙니다' })
@@ -72,7 +83,7 @@ export default function BackupPage() {
     <div className="page">
       <h1>백업</h1>
       <p className="page-placeholder">
-        기기를 옮길 때 학습 진도(오답노트 · 퀴즈 기록)를 내보내고 불러올 수 있습니다.
+        기기를 옮길 때 학습 진도(오답노트 · 퀴즈 기록 · 급수별 학습 진도 · 마무리못한 퀴즈)를 내보내고 불러올 수 있습니다.
       </p>
 
       <div className="backup-actions">
