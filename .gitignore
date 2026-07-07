@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# JMdict.xml is ~115MB, over GitHub's 100MB per-file push limit — kept local
+data-source/japanese/JMdict.xml
