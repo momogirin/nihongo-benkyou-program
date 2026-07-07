@@ -1,14 +1,27 @@
 import type { KanjiLevel } from '../data/kanji'
-import type { QuizHistoryEntry } from '../types'
+import type { QuizQuestion } from './quizGenerator'
+import type { AnsweredQuestion, QuizConfig, QuizHistoryEntry } from '../types'
 
 export interface WrongNoteEntry {
   kanjiId: string
   wrongAt: string
 }
 
+// a quiz session that's been started but not finished yet, saved after every
+// answer so it can be resumed exactly (same questions/choices, same answers
+// so far) instead of restarting from scratch
+export interface InProgressQuiz {
+  config: QuizConfig
+  questions: QuizQuestion[]
+  index: number
+  answers: AnsweredQuestion[]
+  startedAt: string
+}
+
 const WRONG_NOTES_KEY = 'kanjiApp.wrongNotes'
 const QUIZ_HISTORY_KEY = 'kanjiApp.quizHistory'
 const QUIZ_HISTORY_LIMIT = 20
+const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
 const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
 const STUDY_BATCH_SIZE_KEY = 'kanjiApp.studyBatchSize'
 const DEFAULT_STUDY_BATCH_SIZE = 10
@@ -60,6 +73,25 @@ export function importQuizHistory(entries: QuizHistoryEntry[]) {
   for (const entry of entries) byId.set(entry.id, entry)
   const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
   localStorage.setItem(QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
+}
+
+// only one in-progress quiz is tracked at a time — starting any new quiz
+// (fresh setup, 오답 재도전, 학습 배치, re-running a history entry) replaces it
+export function getInProgressQuiz(): InProgressQuiz | null {
+  try {
+    const raw = localStorage.getItem(IN_PROGRESS_QUIZ_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
+export function saveInProgressQuiz(state: InProgressQuiz) {
+  localStorage.setItem(IN_PROGRESS_QUIZ_KEY, JSON.stringify(state))
+}
+
+export function clearInProgressQuiz() {
+  localStorage.removeItem(IN_PROGRESS_QUIZ_KEY)
 }
 
 // merges by kanjiId, keeping whichever entry was marked wrong more recently —

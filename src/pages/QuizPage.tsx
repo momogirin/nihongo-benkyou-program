@@ -2,12 +2,18 @@ import { useEffect, useState } from 'react'
 import SetupScreen from '../components/SetupScreen'
 import QuizRunner from '../components/QuizRunner'
 import ResultScreen from '../components/ResultScreen'
-import { addQuizHistoryEntry } from '../lib/storage'
+import {
+  addQuizHistoryEntry,
+  clearInProgressQuiz,
+  getInProgressQuiz,
+  saveInProgressQuiz,
+  type InProgressQuiz,
+} from '../lib/storage'
 import type { AnsweredQuestion, QuizConfig } from '../types'
 
 type Phase =
   | { step: 'setup' }
-  | { step: 'running'; config: QuizConfig }
+  | { step: 'running'; config: QuizConfig; resume?: InProgressQuiz }
   | { step: 'result'; config: QuizConfig; answers: AnsweredQuestion[]; elapsedMs: number }
 
 interface Props {
@@ -15,29 +21,57 @@ interface Props {
   // points; skips SetupScreen
   initialConfig: QuizConfig | null
   onInitialConfigConsumed: () => void
+  // set when HomePage's "마무리못한 퀴즈" card was clicked; loads the saved
+  // in-progress session instead of starting a fresh one
+  resumeRequested: boolean
+  onResumeRequestConsumed: () => void
 }
 
-export default function QuizPage({ initialConfig, onInitialConfigConsumed }: Props) {
-  const [phase, setPhase] = useState<Phase>(() =>
-    initialConfig ? { step: 'running', config: initialConfig } : { step: 'setup' },
-  )
+export default function QuizPage({
+  initialConfig,
+  onInitialConfigConsumed,
+  resumeRequested,
+  onResumeRequestConsumed,
+}: Props) {
+  const [phase, setPhase] = useState<Phase>(() => {
+    if (resumeRequested) {
+      const saved = getInProgressQuiz()
+      if (saved) return { step: 'running', config: saved.config, resume: saved }
+    }
+    if (initialConfig) return { step: 'running', config: initialConfig }
+    return { step: 'setup' }
+  })
 
   useEffect(() => {
-    if (initialConfig) onInitialConfigConsumed()
-    // consume the preset config once on mount only, so a later "다시 설정하기"
-    // within this same session isn't overridden by a stale prop
+    if (resumeRequested) onResumeRequestConsumed()
+    else if (initialConfig) {
+      onInitialConfigConsumed()
+      clearInProgressQuiz()
+    }
+    // consume the preset config/resume request once on mount only, so a later
+    // "다시 설정하기" within this same session isn't overridden by a stale prop
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (phase.step === 'setup') {
-    return <SetupScreen onStart={(config) => setPhase({ step: 'running', config })} />
+    return (
+      <SetupScreen
+        onStart={(config) => {
+          clearInProgressQuiz()
+          setPhase({ step: 'running', config })
+        }}
+      />
+    )
   }
 
   if (phase.step === 'running') {
     return (
       <QuizRunner
         config={phase.config}
+        resume={phase.resume}
+        onProgress={saveInProgressQuiz}
         onFinish={(answers, elapsedMs) => {
+          clearInProgressQuiz()
           addQuizHistoryEntry({
             id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
             config: phase.config,

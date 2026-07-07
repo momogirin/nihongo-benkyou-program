@@ -1,12 +1,15 @@
 import { useMemo } from 'react'
 import { kanjiList } from '../data/kanji'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
-import { getQuizHistory, getWrongNotes } from '../lib/storage'
+import { getInProgressQuiz, getQuizHistory, getWrongNotes } from '../lib/storage'
+import { getStudyProgressSummary } from '../lib/studyProgress'
 import type { QuizConfig } from '../types'
 import './HomePage.css'
 
 interface Props {
   onStartQuiz: (config: QuizConfig) => void
+  onResumeQuiz: () => void
+  onGoToStudy: () => void
 }
 
 // 오답 재도전/학습 배치/기록 재시도는 전부 levels 없이 kanjiIds로 직접 지정하니,
@@ -24,8 +27,10 @@ function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
 }
 
-export default function HomePage({ onStartQuiz }: Props) {
+export default function HomePage({ onStartQuiz, onResumeQuiz, onGoToStudy }: Props) {
   const history = useMemo(() => getQuizHistory(), [])
+  const inProgress = useMemo(() => getInProgressQuiz(), [])
+  const studyProgress = useMemo(() => getStudyProgressSummary(), [])
 
   const wrongNoteIds = useMemo(() => {
     const validIds = new Set(kanjiList.map((k) => k.id))
@@ -34,7 +39,8 @@ export default function HomePage({ onStartQuiz }: Props) {
       .filter((id) => validIds.has(id))
   }, [])
 
-  if (history.length === 0 && wrongNoteIds.length === 0) {
+  const hasAnyEntry = studyProgress || inProgress || wrongNoteIds.length > 0
+  if (!hasAnyEntry && history.length === 0) {
     return (
       <div className="page">
         <h1>홈</h1>
@@ -47,16 +53,34 @@ export default function HomePage({ onStartQuiz }: Props) {
     <div className="page">
       <h1>홈</h1>
 
-      {wrongNoteIds.length > 0 && (
+      {hasAnyEntry && (
         <div className="home-entry-grid">
-          <button
-            type="button"
-            className="home-entry-card"
-            onClick={() => onStartQuiz(kanjiIdsQuizConfig(wrongNoteIds))}
-          >
-            <span className="home-entry-title">오답 재도전</span>
-            <span className="home-entry-detail">{wrongNoteIds.length}자</span>
-          </button>
+          {studyProgress && (
+            <button type="button" className="home-entry-card" onClick={onGoToStudy}>
+              <span className="home-entry-title">학습 진도</span>
+              <span className="home-entry-detail">
+                {studyProgress.level} {studyProgress.completed}/{studyProgress.total}자 학습함
+              </span>
+            </button>
+          )}
+          {inProgress && (
+            <button type="button" className="home-entry-card" onClick={onResumeQuiz}>
+              <span className="home-entry-title">마무리못한 퀴즈</span>
+              <span className="home-entry-detail">
+                {configSummary(inProgress.config)} · {inProgress.index}/{inProgress.questions.length} 진행 중
+              </span>
+            </button>
+          )}
+          {wrongNoteIds.length > 0 && (
+            <button
+              type="button"
+              className="home-entry-card"
+              onClick={() => onStartQuiz(kanjiIdsQuizConfig(wrongNoteIds))}
+            >
+              <span className="home-entry-title">오답 재도전</span>
+              <span className="home-entry-detail">{wrongNoteIds.length}자</span>
+            </button>
+          )}
         </div>
       )}
 

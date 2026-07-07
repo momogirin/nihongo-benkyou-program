@@ -1,12 +1,17 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { generateQuestions, type QuizQuestion } from '../lib/quizGenerator'
 import { correctAnswerLabel, isCorrectAnswer } from '../lib/answerMatching'
+import type { InProgressQuiz } from '../lib/storage'
 import type { Kanji } from '../data/kanji'
 import type { AnsweredQuestion, QuizConfig } from '../types'
 import './QuizRunner.css'
 
 interface Props {
   config: QuizConfig
+  // present when resuming a quiz saved by a previous, unfinished session —
+  // reuses the same generated questions/choices instead of re-rolling them
+  resume?: InProgressQuiz
+  onProgress: (state: InProgressQuiz) => void
   onFinish: (answers: AnsweredQuestion[], elapsedMs: number) => void
 }
 
@@ -44,13 +49,14 @@ function choiceLabel(questionType: QuizConfig['questionType'], choice: Kanji): s
   }
 }
 
-export default function QuizRunner({ config, onFinish }: Props) {
-  const questions = useMemo(() => generateQuestions(config), [config])
-  const [index, setIndex] = useState(0)
+export default function QuizRunner({ config, resume, onProgress, onFinish }: Props) {
+  const [questions] = useState(() => resume?.questions ?? generateQuestions(config))
+  const [index, setIndex] = useState(resume?.index ?? 0)
   const [inputValue, setInputValue] = useState('')
   const [feedback, setFeedback] = useState<Feedback | null>(null)
-  const answersRef = useRef<AnsweredQuestion[]>([])
-  const startTimeRef = useRef(Date.now())
+  const answersRef = useRef<AnsweredQuestion[]>(resume?.answers ?? [])
+  const startedAtRef = useRef(resume?.startedAt ?? new Date().toISOString())
+  const startTimeRef = useRef(new Date(startedAtRef.current).getTime())
   const inputRef = useRef<HTMLInputElement>(null)
   // Guards against a question being submitted twice (e.g. a fast double
   // Enter press landing before the feedback delay advances to the next question).
@@ -86,9 +92,20 @@ export default function QuizRunner({ config, onFinish }: Props) {
     ]
     setFeedback({ isCorrect, selectedLabel: rawAnswer })
 
+    const nextIndex = index + 1
+    if (nextIndex < questions.length) {
+      onProgress({
+        config,
+        questions,
+        index: nextIndex,
+        answers: answersRef.current,
+        startedAt: startedAtRef.current,
+      })
+    }
+
     setTimeout(() => {
-      if (index + 1 < questions.length) {
-        setIndex(index + 1)
+      if (nextIndex < questions.length) {
+        setIndex(nextIndex)
       } else {
         onFinish(answersRef.current, Date.now() - startTimeRef.current)
       }

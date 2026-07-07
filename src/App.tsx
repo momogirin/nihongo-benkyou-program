@@ -13,6 +13,7 @@ const MOBILE_QUERY = '(max-width: 768px)'
 function App() {
   const [page, setPage] = useState<PageId>('home')
   const [pendingQuizConfig, setPendingQuizConfig] = useState<QuizConfig | null>(null)
+  const [resumeRequested, setResumeRequested] = useState(false)
   const [isMobile, setIsMobile] = useState(() => window.matchMedia(MOBILE_QUERY).matches)
   const [sidebarOpen, setSidebarOpen] = useState(() => !window.matchMedia(MOBILE_QUERY).matches)
 
@@ -40,6 +41,11 @@ function App() {
     setPage('quiz')
   }
 
+  function resumeQuiz() {
+    setResumeRequested(true)
+    setPage('quiz')
+  }
+
   function handleNavigate(nextPage: PageId) {
     setPage(nextPage)
     if (isMobile) setSidebarOpen(false)
@@ -48,7 +54,13 @@ function App() {
   function renderPage() {
     switch (page) {
       case 'home':
-        return <HomePage onStartQuiz={startQuiz} />
+        return (
+          <HomePage
+            onStartQuiz={startQuiz}
+            onResumeQuiz={resumeQuiz}
+            onGoToStudy={() => handleNavigate('study')}
+          />
+        )
       case 'study':
         return <StudyPage onStartQuiz={startQuiz} />
       case 'quiz':
@@ -56,6 +68,8 @@ function App() {
           <QuizPage
             initialConfig={pendingQuizConfig}
             onInitialConfigConsumed={() => setPendingQuizConfig(null)}
+            resumeRequested={resumeRequested}
+            onResumeRequestConsumed={() => setResumeRequested(false)}
           />
         )
       case 'wrongNote':
