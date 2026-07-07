@@ -106,6 +106,52 @@
   font-weight: 600;
 }
 
+.nav-group-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  padding: 11px 12px;
+  border: none;
+  border-left: 3px solid transparent;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: transparent;
+  color: var(--color-ink-muted);
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-group-toggle:hover {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+.nav-group-chevron {
+  font-size: 12px;
+  transition: transform 0.15s ease;
+}
+
+.nav-group-toggle.expanded .nav-group-chevron {
+  transform: rotate(180deg);
+}
+
+.nav-subgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.nav-subitem {
+  padding-left: 24px;
+  font-size: 14px;
+}
+
 /* below this width the sidebar becomes an overlay drawer instead of a
    persistent column — same open/closed state, different mechanics */
 @media (max-width: 768px) {
