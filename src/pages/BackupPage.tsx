@@ -1,11 +1,13 @@
 import { useState, type ChangeEvent } from 'react'
 import {
+  getAllRadicalStudyProgress,
   getAllStudyProgress,
   getInProgressQuiz,
   getQuizHistory,
   getWrongNotes,
   importInProgressQuiz,
   importQuizHistory,
+  importRadicalStudyProgress,
   importStudyProgress,
   importWrongNotes,
   type InProgressQuiz,
@@ -15,11 +17,12 @@ import type { QuizHistoryEntry } from '../types'
 import './BackupPage.css'
 
 interface BackupFile {
-  version: 3
+  version: 4
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
   studyProgress: Record<string, number>
+  radicalStudyProgress: Record<string, number>
   inProgressQuiz: InProgressQuiz | null
 }
 
@@ -38,11 +41,12 @@ export default function BackupPage() {
 
   function handleExport() {
     const payload: BackupFile = {
-      version: 3,
+      version: 4,
       exportedAt: new Date().toISOString(),
       wrongNotes: getWrongNotes(),
       quizHistory: getQuizHistory(),
       studyProgress: getAllStudyProgress(),
+      radicalStudyProgress: getAllRadicalStudyProgress(),
       inProgressQuiz: getInProgressQuiz(),
     }
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
@@ -69,6 +73,7 @@ export default function BackupPage() {
         importWrongNotes(parsed.wrongNotes)
         if (parsed.quizHistory) importQuizHistory(parsed.quizHistory)
         if (parsed.studyProgress) importStudyProgress(parsed.studyProgress)
+        if (parsed.radicalStudyProgress) importRadicalStudyProgress(parsed.radicalStudyProgress)
         if (parsed.inProgressQuiz) importInProgressQuiz(parsed.inProgressQuiz)
         setStatus({ type: 'success', message: `가져오기 완료 (오답 ${parsed.wrongNotes.length}건)` })
       } catch {

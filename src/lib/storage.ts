@@ -24,6 +24,8 @@ const QUIZ_HISTORY_LIMIT = 20
 const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
 const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
 const STUDY_BATCH_SIZE_KEY = 'kanjiApp.studyBatchSize'
+const RADICAL_STUDY_PROGRESS_KEY = 'kanjiApp.radicalStudyProgress'
+const RADICAL_STUDY_BATCH_SIZE_KEY = 'kanjiApp.radicalStudyBatchSize'
 const DEFAULT_STUDY_BATCH_SIZE = 10
 
 export function getWrongNotes(): WrongNoteEntry[] {
@@ -113,57 +115,85 @@ export function importWrongNotes(entries: WrongNoteEntry[]) {
   localStorage.setItem(WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
 }
 
-// how many kanji (in `num` order) have been completed in the study flow for
-// a given level, so "이어하기" can resume past what's already been studied
-export function getStudyProgress(level: KanjiLevel): number {
+function getLevelProgressMap(key: string): Record<string, number> {
   try {
-    const raw = localStorage.getItem(STUDY_PROGRESS_KEY)
-    const all = raw ? JSON.parse(raw) : {}
-    return typeof all[level] === 'number' ? all[level] : 0
-  } catch {
-    return 0
-  }
-}
-
-export function setStudyProgress(level: KanjiLevel, completedCount: number) {
-  let all: Record<string, number> = {}
-  try {
-    const raw = localStorage.getItem(STUDY_PROGRESS_KEY)
-    all = raw ? JSON.parse(raw) : {}
-  } catch {
-    all = {}
-  }
-  all[level] = completedCount
-  localStorage.setItem(STUDY_PROGRESS_KEY, JSON.stringify(all))
-}
-
-// every level's progress at once, for BackupPage export
-export function getAllStudyProgress(): Record<string, number> {
-  try {
-    const raw = localStorage.getItem(STUDY_PROGRESS_KEY)
+    const raw = localStorage.getItem(key)
     return raw ? JSON.parse(raw) : {}
   } catch {
     return {}
   }
 }
 
+function setLevelProgress(key: string, level: KanjiLevel, completedCount: number) {
+  const all = getLevelProgressMap(key)
+  all[level] = completedCount
+  localStorage.setItem(key, JSON.stringify(all))
+}
+
 // takes the max per level (progress only ever increases), so restoring an
 // older backup can't undo progress made since
-export function importStudyProgress(progress: Record<string, number>) {
-  const current = getAllStudyProgress()
-  const merged: Record<string, number> = { ...current }
+function importLevelProgress(key: string, progress: Record<string, number>) {
+  const merged = getLevelProgressMap(key)
   for (const [level, count] of Object.entries(progress)) {
     merged[level] = Math.max(merged[level] ?? 0, count)
   }
-  localStorage.setItem(STUDY_PROGRESS_KEY, JSON.stringify(merged))
+  localStorage.setItem(key, JSON.stringify(merged))
 }
 
-export function getStudyBatchSize(): number {
-  const raw = localStorage.getItem(STUDY_BATCH_SIZE_KEY)
+function getBatchSize(key: string): number {
+  const raw = localStorage.getItem(key)
   const n = raw ? Number(raw) : NaN
   return Number.isFinite(n) && n > 0 ? n : DEFAULT_STUDY_BATCH_SIZE
 }
 
+// how many kanji (in `num` order) have been completed in the study flow for
+// a given level, so "이어하기" can resume past what's already been studied
+export function getStudyProgress(level: KanjiLevel): number {
+  return getLevelProgressMap(STUDY_PROGRESS_KEY)[level] ?? 0
+}
+
+export function setStudyProgress(level: KanjiLevel, completedCount: number) {
+  setLevelProgress(STUDY_PROGRESS_KEY, level, completedCount)
+}
+
+// every level's progress at once, for BackupPage export
+export function getAllStudyProgress(): Record<string, number> {
+  return getLevelProgressMap(STUDY_PROGRESS_KEY)
+}
+
+export function importStudyProgress(progress: Record<string, number>) {
+  importLevelProgress(STUDY_PROGRESS_KEY, progress)
+}
+
+export function getStudyBatchSize(): number {
+  return getBatchSize(STUDY_BATCH_SIZE_KEY)
+}
+
 export function setStudyBatchSize(size: number) {
   localStorage.setItem(STUDY_BATCH_SIZE_KEY, String(size))
+}
+
+// same shape as the kanji study progress above, but for the 부수 학습 flow
+export function getRadicalStudyProgress(level: KanjiLevel): number {
+  return getLevelProgressMap(RADICAL_STUDY_PROGRESS_KEY)[level] ?? 0
+}
+
+export function setRadicalStudyProgress(level: KanjiLevel, completedCount: number) {
+  setLevelProgress(RADICAL_STUDY_PROGRESS_KEY, level, completedCount)
+}
+
+export function getAllRadicalStudyProgress(): Record<string, number> {
+  return getLevelProgressMap(RADICAL_STUDY_PROGRESS_KEY)
+}
+
+export function importRadicalStudyProgress(progress: Record<string, number>) {
+  importLevelProgress(RADICAL_STUDY_PROGRESS_KEY, progress)
+}
+
+export function getRadicalStudyBatchSize(): number {
+  return getBatchSize(RADICAL_STUDY_BATCH_SIZE_KEY)
+}
+
+export function setRadicalStudyBatchSize(size: number) {
+  localStorage.setItem(RADICAL_STUDY_BATCH_SIZE_KEY, String(size))
 }
