@@ -37,3 +37,11 @@ scripts/build-data.ts (예정)가 이 파일을 읽어 src/data/kanji.ts, src/da
 - `radicalNumber`(이 한자에 쓰인 강희부수 번호): [yagays/kanjivg-radical](https://github.com/yagays/kanjivg-radical)의 `kanji2element.json`(KanjiVG 획 분해 데이터)에서 구성요소를 가져온 뒤, 그중 214개 강희부수 중 하나에 해당하는 걸 골라 매핑했다. 헷갈리는 경우(来·南·書·年·聞·毎 등)는 japandict.com에서 실제 사전 부수 표기를 대조해 확정함 — 예: 来는 木이 아니라 人部, 南은 十이 아니라 干部, 書는 曰이 아니라 日部.
 - `etymology`(유래·어원 설명): 모델이 직접 작성했고 다른 출처로 교차검증하지 않았다. N5 한자는 대부분 상형자/지사자로 비교적 정설이 확립된 기초 한자라 리스크가 낮지만, 東·六·九처럼 자형 유래에 이견이 있는 경우는 "~라는 설도 있음" 식으로 단정하지 않는 표현을 썼다. N4 이하로 내려갈수록(형성자 비중이 높아지고 유래가 더 불확실해짐) 같은 방식으로 신뢰도가 떨어질 수 있으니, 이후 급수 추가 시 표현 수위를 더 보수적으로 조정할 것.
 
+## 어휘(단어) 데이터 (data/vocab-{level}.json → src/data/vocab.ts)
+
+JLPT 급수별 단어(N5~N1). `word`/`reading`/`level`/`meaningEn`은 [elzup/jlpt-word-list](https://github.com/elzup/jlpt-word-list)(GitHub, `chyyran/jlpt-anki-decks` → `jamsinclair/open-anki-jlpt-decks`를 거쳐 결국 한자 급수와 같은 tanos.co.uk/Jonathan Waller 계열로 귀결)의 `src/{level}.csv`에서 그대로 가져왔다 (N5 718 · N4 668 · N3 2139 · N2 1748 · N1 2699, 총 7972단어). 이 리스트도 한자 급수 리스트처럼 JLPT 공식 리스트가 아닌 민간 정리본이라 이견이 있을 수 있음은 동일.
+
+`meaningKr`은 소스에 한국어 뜻이 없어서(영어 뜻만 있음) 모델이 `word`(일본어 단어) 자체를 보고 직접 번역했다 — exampleKr과 마찬가지로 사용자가 "번역해서라도 채워라"고 승인한 건. 사전 대조 없이 번역한 값이라 개별 오역 가능성이 있다. `meaningEn`은 원본 영어 뜻을 그대로 보존해서, 나중에 `meaningKr`을 검증/재번역할 때 대조할 수 있게 남겨뒀다.
+
+2026-07-07 기준 **N5만 완료**. N4~N1은 `data/cache/vocab-raw.json`(전체 7972단어 원본 파싱 결과)에 이미 있으니, 같은 방식(단어별로 `meaningKr` 번역 → `data/vocab-{level}.json` 생성)으로 이어서 채우면 된다.
+
