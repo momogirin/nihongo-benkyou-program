@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "icons:generate": "node scripts/generate-icons.mjs",
     "data:build": "node scripts/build-kanji-data.mjs",
-    "data:build:radicals": "node scripts/build-radical-data.mjs"
+    "data:build:radicals": "node scripts/build-radical-data.mjs",
+    "data:build:study": "node scripts/build-study-data.mjs"
   },
   "dependencies": {
     "@fontsource/noto-sans-jp": "^5.2.9",

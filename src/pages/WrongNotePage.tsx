@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { kanjiList, type Kanji } from '../data/kanji'
-import { wrongNoteQuizConfig } from '../lib/quizGenerator'
+import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import { getWrongNotes, removeWrongNote } from '../lib/storage'
 import type { QuizConfig } from '../types'
 import './WrongNotePage.css'
@@ -33,7 +33,7 @@ export default function WrongNotePage({ onStartQuiz }: Props) {
   }
 
   function handleRetry() {
-    onStartQuiz(wrongNoteQuizConfig(entries.map((e) => e.kanji.id)))
+    onStartQuiz(kanjiIdsQuizConfig(entries.map((e) => e.kanji.id)))
   }
 
   if (entries.length === 0) {

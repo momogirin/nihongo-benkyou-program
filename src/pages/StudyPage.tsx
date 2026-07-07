@@ -1,0 +1,208 @@
+import { useEffect, useMemo, useState } from 'react'
+import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
+import { studyContentByKanjiId } from '../data/studyContent'
+import { radicalList } from '../data/radicals'
+import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
+import { getStudyBatchSize, getStudyProgress, setStudyBatchSize, setStudyProgress } from '../lib/storage'
+import type { QuizConfig } from '../types'
+import './StudyPage.css'
+
+interface Props {
+  onStartQuiz: (config: QuizConfig) => void
+}
+
+const ALL_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+
+function levelPool(level: KanjiLevel): Kanji[] {
+  return kanjiList
+    .filter((k) => k.level === level && studyContentByKanjiId[k.id])
+    .sort((a, b) => a.num - b.num)
+}
+
+type Phase = 'setup' | 'studying' | 'done'
+
+export default function StudyPage({ onStartQuiz }: Props) {
+  const availableLevels = useMemo(() => ALL_LEVELS.filter((l) => levelPool(l).length > 0), [])
+  const [level, setLevel] = useState<KanjiLevel | null>(availableLevels[0] ?? null)
+  const pool = useMemo(() => (level ? levelPool(level) : []), [level])
+  const completedCount = level ? Math.min(getStudyProgress(level), pool.length) : 0
+  const remaining = pool.length - completedCount
+
+  const [batchSizeInput, setBatchSizeInput] = useState(() => getStudyBatchSize())
+  const [phase, setPhase] = useState<Phase>('setup')
+  const [batch, setBatch] = useState<Kanji[]>([])
+  const [cardIndex, setCardIndex] = useState(0)
+
+  function startBatch() {
+    if (!level) return
+    const size = Math.max(1, Math.min(batchSizeInput || 1, remaining))
+    setStudyBatchSize(size)
+    setBatch(pool.slice(completedCount, completedCount + size))
+    setCardIndex(0)
+    setPhase('studying')
+  }
+
+  function finishBatch() {
+    if (!level) return
+    setStudyProgress(level, completedCount + batch.length)
+    setPhase('done')
+  }
+
+  useEffect(() => {
+    if (phase !== 'studying') return
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'ArrowRight' || e.key === 'Enter') {
+        setCardIndex((i) => (i + 1 < batch.length ? i + 1 : i))
+      } else if (e.key === 'ArrowLeft') {
+        setCardIndex((i) => (i > 0 ? i - 1 : i))
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [phase, batch.length])
+
+  if (!level) {
+    return (
+      <div className="page">
+        <h1>학습</h1>
+        <p className="page-placeholder">아직 준비된 학습 콘텐츠가 없습니다.</p>
+      </div>
+    )
+  }
+
+  if (phase === 'studying') {
+    const kanji = batch[cardIndex]
+    const content = studyContentByKanjiId[kanji.id]
+    const radical = radicalList.find((r) => r.number === content.radicalNumber)
+    const isLast = cardIndex + 1 === batch.length
+
+    return (
+      <div className="page study-page">
+        <div className="quiz-progress">
+          {cardIndex + 1} / {batch.length}
+        </div>
+        <div className="study-card">
+          <div className="study-kanji">{kanji.kanji}</div>
+          <dl className="study-fields">
+            <div className="study-field">
+              <dt>한국 훈음</dt>
+              <dd>{kanji.kunKr}</dd>
+            </div>
+            <div className="study-field">
+              <dt>일본 훈독</dt>
+              <dd>{kanji.kunJp}</dd>
+            </div>
+            <div className="study-field">
+              <dt>일본 음독</dt>
+              <dd>{kanji.onJp}</dd>
+            </div>
+            {radical && (
+              <div className="study-field">
+                <dt>부수</dt>
+                <dd>
+                  {radical.radical} ({radical.meaningKr})
+                </dd>
+              </div>
+            )}
+            <div className="study-field">
+              <dt>유래</dt>
+              <dd>{content.etymology}</dd>
+            </div>
+            {kanji.exampleKanji && (
+              <div className="study-field">
+                <dt>예문</dt>
+                <dd>
+                  {kanji.exampleKanji}
+                  {kanji.exampleJp && `(${kanji.exampleJp})`} · {kanji.exampleKr}
+                </dd>
+              </div>
+            )}
+          </dl>
+        </div>
+        <div className="study-nav">
+          <button type="button" onClick={() => setCardIndex((i) => i - 1)} disabled={cardIndex === 0}>
+            이전
+          </button>
+          {isLast ? (
+            <button type="button" className="study-nav-primary" onClick={finishBatch}>
+              학습 완료
+            </button>
+          ) : (
+            <button type="button" className="study-nav-primary" onClick={() => setCardIndex((i) => i + 1)}>
+              다음
+            </button>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  if (phase === 'done') {
+    return (
+      <div className="page">
+        <h1>수고했어요!</h1>
+        <p className="page-placeholder">{batch.length}자를 학습했습니다. 방금 배운 한자로 퀴즈를 풀어볼까요?</p>
+        <div className="study-done-actions">
+          <button
+            type="button"
+            className="study-nav-primary"
+            onClick={() => onStartQuiz(kanjiIdsQuizConfig(batch.map((k) => k.id)))}
+          >
+            퀴즈 풀기
+          </button>
+          <button type="button" onClick={() => setPhase('setup')}>
+            나중에
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  const isLevelFinished = pool.length > 0 && remaining <= 0
+
+  return (
+    <div className="page study-setup">
+      <h1>학습</h1>
+
+      {availableLevels.length > 1 && (
+        <div className="study-level-picker">
+          {availableLevels.map((l) => (
+            <button
+              key={l}
+              type="button"
+              className={`study-level-btn${l === level ? ' active' : ''}`}
+              onClick={() => setLevel(l)}
+            >
+              {l}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <p className="study-progress-summary">
+        {level} · {completedCount} / {pool.length}자 학습함
+      </p>
+
+      {isLevelFinished ? (
+        <p className="page-placeholder">이 급수를 모두 학습했습니다.</p>
+      ) : (
+        <>
+          <label className="study-batch-size">
+            한 번에
+            <input
+              type="number"
+              min={1}
+              max={remaining}
+              value={batchSizeInput}
+              onChange={(e) => setBatchSizeInput(Number(e.target.value))}
+            />
+            개씩
+          </label>
+          <button type="button" className="study-start-button" onClick={startBatch}>
+            {completedCount > 0 ? '이어하기' : '시작하기'}
+          </button>
+        </>
+      )}
+    </div>
+  )
+}

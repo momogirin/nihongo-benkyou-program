@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Sidebar from './components/Sidebar'
 import HomePage from './pages/HomePage'
+import StudyPage from './pages/StudyPage'
 import QuizPage from './pages/QuizPage'
 import WrongNotePage from './pages/WrongNotePage'
 import RadicalsPage from './pages/RadicalsPage'
@@ -20,6 +21,8 @@ function App() {
     switch (page) {
       case 'home':
         return <HomePage onStartQuiz={startQuiz} />
+      case 'study':
+        return <StudyPage onStartQuiz={startQuiz} />
       case 'quiz':
         return (
           <QuizPage

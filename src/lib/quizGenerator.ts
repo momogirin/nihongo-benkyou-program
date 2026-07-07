@@ -8,9 +8,10 @@ export interface QuizQuestion {
 
 export const SEGMENT_SIZE = 50
 
-// shared by HomePage's "오답 재도전" card and WrongNotePage's retry button,
-// so the two entry points can't drift apart on question type/order/count
-export function wrongNoteQuizConfig(kanjiIds: string[]): QuizConfig {
+// shared by every entry point that jumps straight into a quiz over a fixed
+// set of kanji (오답 재도전, 학습 배치 퀴즈) instead of a level+segment pick,
+// so they can't drift apart on question type/order/count
+export function kanjiIdsQuizConfig(kanjiIds: string[]): QuizConfig {
   return {
     levels: [],
     levelSegments: {},

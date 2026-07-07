@@ -1,3 +1,4 @@
+import type { KanjiLevel } from '../data/kanji'
 import type { QuizConfig } from '../types'
 
 export interface WrongNoteEntry {
@@ -7,6 +8,9 @@ export interface WrongNoteEntry {
 
 const WRONG_NOTES_KEY = 'kanjiApp.wrongNotes'
 const LAST_QUIZ_CONFIG_KEY = 'kanjiApp.lastQuizConfig'
+const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
+const STUDY_BATCH_SIZE_KEY = 'kanjiApp.studyBatchSize'
+const DEFAULT_STUDY_BATCH_SIZE = 10
 
 export function getWrongNotes(): WrongNoteEntry[] {
   try {
@@ -58,4 +62,38 @@ export function importWrongNotes(entries: WrongNoteEntry[]) {
     }
   }
   localStorage.setItem(WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
+}
+
+// how many kanji (in `num` order) have been completed in the study flow for
+// a given level, so "이어하기" can resume past what's already been studied
+export function getStudyProgress(level: KanjiLevel): number {
+  try {
+    const raw = localStorage.getItem(STUDY_PROGRESS_KEY)
+    const all = raw ? JSON.parse(raw) : {}
+    return typeof all[level] === 'number' ? all[level] : 0
+  } catch {
+    return 0
+  }
+}
+
+export function setStudyProgress(level: KanjiLevel, completedCount: number) {
+  let all: Record<string, number> = {}
+  try {
+    const raw = localStorage.getItem(STUDY_PROGRESS_KEY)
+    all = raw ? JSON.parse(raw) : {}
+  } catch {
+    all = {}
+  }
+  all[level] = completedCount
+  localStorage.setItem(STUDY_PROGRESS_KEY, JSON.stringify(all))
+}
+
+export function getStudyBatchSize(): number {
+  const raw = localStorage.getItem(STUDY_BATCH_SIZE_KEY)
+  const n = raw ? Number(raw) : NaN
+  return Number.isFinite(n) && n > 0 ? n : DEFAULT_STUDY_BATCH_SIZE
+}
+
+export function setStudyBatchSize(size: number) {
+  localStorage.setItem(STUDY_BATCH_SIZE_KEY, String(size))
 }

@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { kanjiList } from '../data/kanji'
-import { wrongNoteQuizConfig } from '../lib/quizGenerator'
+import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import { getLastQuizConfig, getWrongNotes } from '../lib/storage'
 import type { QuizConfig } from '../types'
 import './HomePage.css'
@@ -52,7 +52,7 @@ export default function HomePage({ onStartQuiz }: Props) {
           <button
             type="button"
             className="home-entry-card"
-            onClick={() => onStartQuiz(wrongNoteQuizConfig(wrongNoteIds))}
+            onClick={() => onStartQuiz(kanjiIdsQuizConfig(wrongNoteIds))}
           >
             <span className="home-entry-title">오답 재도전</span>
             <span className="home-entry-detail">{wrongNoteIds.length}자</span>
