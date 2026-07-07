@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
@@ -32,6 +32,14 @@ export default function StudyPage({ onStartQuiz }: Props) {
   const [phase, setPhase] = useState<Phase>('setup')
   const [batch, setBatch] = useState<Kanji[]>([])
   const [cardIndex, setCardIndex] = useState(0)
+  const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
+
+  // "done" lands on a fresh screen with nothing focused (the last study-nav
+  // button belongs to the previous phase), so Enter/Space wouldn't do
+  // anything without a mouse click first
+  useEffect(() => {
+    if (phase === 'done') donePrimaryButtonRef.current?.focus()
+  }, [phase])
 
   function startBatch() {
     if (!level) return
@@ -145,6 +153,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
         <div className="study-done-actions">
           <button
             type="button"
+            ref={donePrimaryButtonRef}
             className="study-nav-primary"
             onClick={() => onStartQuiz(kanjiIdsQuizConfig(batch.map((k) => k.id)))}
           >

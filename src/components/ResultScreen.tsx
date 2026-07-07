@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { correctAnswerLabel } from '../lib/answerMatching'
 import { addWrongNotes, removeWrongNote } from '../lib/storage'
 import type { AnsweredQuestion, QuestionType } from '../types'
@@ -28,12 +28,16 @@ export default function ResultScreen({ answers, elapsedMs, questionType, onResta
   const correctCount = answers.filter((a) => a.isCorrect).length
   const total = answers.length
   const rate = total > 0 ? Math.round((correctCount / total) * 100) : 0
+  const restartButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const wrongIds = answers.filter((a) => !a.isCorrect).map((a) => a.kanji.id)
     addWrongNotes(wrongIds)
     // a kanji answered correctly this round is no longer a standing weak point
     answers.filter((a) => a.isCorrect).forEach((a) => removeWrongNote(a.kanji.id))
+    // focus the restart button so Enter/Space works right away — the quiz's
+    // last choice button was disabled/unmounted, so nothing carries focus over
+    restartButtonRef.current?.focus()
     // run once when results are shown
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -62,7 +66,7 @@ export default function ResultScreen({ answers, elapsedMs, questionType, onResta
         ))}
       </ul>
 
-      <button type="button" className="restart-button" onClick={onRestart}>
+      <button type="button" ref={restartButtonRef} className="restart-button" onClick={onRestart}>
         다시 설정하기
       </button>
     </div>
