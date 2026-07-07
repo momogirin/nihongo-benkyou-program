@@ -1,20 +1,17 @@
 import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
-import type { LevelSegment, QuizConfig } from '../types'
+import type { QuizConfig } from '../types'
 
 export interface QuizQuestion {
   kanji: Kanji
   choices?: Kanji[]
 }
 
-export const SEGMENT_SIZE = 50
-
 // shared by every entry point that jumps straight into a quiz over a fixed
-// set of kanji (오답 재도전, 학습 배치 퀴즈) instead of a level+segment pick,
-// so they can't drift apart on question type/order/count
+// set of kanji (오답 재도전, 학습 배치 퀴즈) instead of a level pick, so they
+// can't drift apart on question type/order/count
 export function kanjiIdsQuizConfig(kanjiIds: string[]): QuizConfig {
   return {
     levels: [],
-    levelSegments: {},
     kanjiIds,
     questionType: 'promptToAnswer',
     order: 'random',
@@ -24,17 +21,6 @@ export function kanjiIdsQuizConfig(kanjiIds: string[]): QuizConfig {
 
 export function levelPool(level: KanjiLevel): Kanji[] {
   return kanjiList.filter((k) => k.level === level).sort((a, b) => a.num - b.num)
-}
-
-export function segmentCount(level: KanjiLevel): number {
-  return Math.ceil(levelPool(level).length / SEGMENT_SIZE)
-}
-
-export function segmentPool(level: KanjiLevel, segment: LevelSegment | undefined): Kanji[] {
-  const pool = levelPool(level)
-  if (!segment || segment === 'all') return pool
-  const start = (segment - 1) * SEGMENT_SIZE
-  return pool.slice(start, start + SEGMENT_SIZE)
 }
 
 function shuffle<T>(items: T[]): T[] {
@@ -86,7 +72,7 @@ const KANJI_CHOICE_TYPES = new Set<QuizConfig['questionType']>([
 export function generateQuestions(config: QuizConfig): QuizQuestion[] {
   const basePool = config.kanjiIds
     ? config.kanjiIds.map((id) => kanjiList.find((k) => k.id === id)).filter((k): k is Kanji => k !== undefined)
-    : config.levels.flatMap((level) => segmentPool(level, config.levelSegments[level]))
+    : config.levels.flatMap((level) => levelPool(level))
   const field = READING_FIELD[config.questionType]
   const pool = field ? basePool.filter((k) => hasReading(k, field)) : basePool
 

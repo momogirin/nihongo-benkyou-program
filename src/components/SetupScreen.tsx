@@ -1,7 +1,7 @@
 import { Fragment, useMemo, useState } from 'react'
 import { kanjiList, type KanjiLevel } from '../data/kanji'
-import { segmentCount, segmentPool } from '../lib/quizGenerator'
-import type { LevelSegment, QuestionCount, QuestionType, QuizConfig, QuizOrder } from '../types'
+import { levelPool } from '../lib/quizGenerator'
+import type { QuestionCount, QuestionType, QuizConfig, QuizOrder } from '../types'
 import './SetupScreen.css'
 
 const ALL_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
@@ -10,8 +10,6 @@ const COUNT_OPTIONS: QuestionCount[] = [10, 20, 30, 50, 'all']
 const LEVEL_COUNTS: Record<KanjiLevel, number> = Object.fromEntries(
   ALL_LEVELS.map((level) => [level, kanjiList.filter((k) => k.level === level).length]),
 ) as Record<KanjiLevel, number>
-
-const TOTAL_COUNT = kanjiList.length
 
 // rows of the 문제 유형 grid: which reading is being tested, and the question
 // type for each of the two directions (한자→정답 / 정답→한자)
@@ -32,30 +30,19 @@ interface Props {
 
 export default function SetupScreen({ onStart }: Props) {
   const [levels, setLevels] = useState<KanjiLevel[]>([])
-  const [levelSegments, setLevelSegments] = useState<Partial<Record<KanjiLevel, LevelSegment>>>({})
   const [questionType, setQuestionType] = useState<QuestionType | null>(null)
   const [order, setOrder] = useState<QuizOrder | null>(null)
   const [count, setCount] = useState<QuestionCount | null>(null)
 
   const availableCount = useMemo(
-    () => levels.reduce((sum, level) => sum + segmentPool(level, levelSegments[level]).length, 0),
-    [levels, levelSegments],
+    () => levels.reduce((sum, level) => sum + levelPool(level).length, 0),
+    [levels],
   )
-
-  const allSelected = levels.length === ALL_LEVELS.length
 
   function toggleLevel(level: KanjiLevel) {
     setLevels((prev) =>
       prev.includes(level) ? prev.filter((l) => l !== level) : [...prev, level],
     )
-  }
-
-  function toggleAll() {
-    setLevels(allSelected ? [] : ALL_LEVELS)
-  }
-
-  function setSegment(level: KanjiLevel, segment: LevelSegment) {
-    setLevelSegments((prev) => ({ ...prev, [level]: segment }))
   }
 
   const canStart =
@@ -67,11 +54,7 @@ export default function SetupScreen({ onStart }: Props) {
 
       <fieldset>
         <legend>급수</legend>
-        <div className="option-grid option-grid-6">
-          <label className="option">
-            <input type="checkbox" checked={allSelected} onChange={toggleAll} />
-            전체 ({TOTAL_COUNT}자)
-          </label>
+        <div className="option-grid option-grid-5">
           {ALL_LEVELS.map((level) => (
             <label className="option" key={level}>
               <input
@@ -83,36 +66,6 @@ export default function SetupScreen({ onStart }: Props) {
             </label>
           ))}
         </div>
-
-        {ALL_LEVELS.map((level) => {
-          const total = segmentCount(level)
-          const segment = levelSegments[level] ?? 'all'
-          const active = levels.includes(level)
-          return (
-            <div className={`segment-picker${active ? '' : ' segment-picker-disabled'}`} key={level}>
-              <span className="segment-label">{level} 구간</span>
-              <button
-                type="button"
-                disabled={!active}
-                className={`segment-btn${segment === 'all' ? ' active' : ''}`}
-                onClick={() => setSegment(level, 'all')}
-              >
-                전체
-              </button>
-              {Array.from({ length: total }, (_, i) => i + 1).map((n) => (
-                <button
-                  type="button"
-                  key={n}
-                  disabled={!active}
-                  className={`segment-btn${segment === n ? ' active' : ''}`}
-                  onClick={() => setSegment(level, n)}
-                >
-                  {n}
-                </button>
-              ))}
-            </div>
-          )
-        })}
 
         <p className="hint">
           {availableCount > 0 ? `${availableCount}자 해당` : '급수를 하나 이상 선택하세요'}
@@ -198,7 +151,7 @@ export default function SetupScreen({ onStart }: Props) {
         disabled={!canStart}
         onClick={() =>
           canStart &&
-          onStart({ levels, levelSegments, questionType: questionType!, order: order!, count: count! })
+          onStart({ levels, questionType: questionType!, order: order!, count: count! })
         }
       >
         시작하기
