@@ -58,6 +58,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish }: Pro
   const startedAtRef = useRef(resume?.startedAt ?? new Date().toISOString())
   const startTimeRef = useRef(new Date(startedAtRef.current).getTime())
   const inputRef = useRef<HTMLInputElement>(null)
+  const choicesRef = useRef<HTMLDivElement>(null)
   // Guards against a question being submitted twice (e.g. a fast double
   // Enter press landing before the feedback delay advances to the next question).
   const lastSubmittedIndexRef = useRef(-1)
@@ -70,11 +71,18 @@ export default function QuizRunner({ config, resume, onProgress, onFinish }: Pro
   // flash the previous question's correct/incorrect coloring.
   const activeFeedback = feedback && lastSubmittedIndexRef.current === index ? feedback : null
 
+  // keeps keyboard focus inside the quiz across questions — without this,
+  // each new question left nothing focused (the previous choice button was
+  // disabled/unmounted), forcing a mouse click just to continue
   useEffect(() => {
     setInputValue('')
     setFeedback(null)
-    inputRef.current?.focus()
-  }, [index])
+    if (isChoiceMode) {
+      choicesRef.current?.querySelector('button')?.focus()
+    } else {
+      inputRef.current?.focus()
+    }
+  }, [index, isChoiceMode])
 
   function submit(rawAnswer: string) {
     if (lastSubmittedIndexRef.current === index) return
@@ -163,7 +171,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish }: Pro
           ) : (
             <div className="quiz-prompt">{promptText(config.questionType, question)}</div>
           )}
-          <div className="quiz-choices">
+          <div className="quiz-choices" ref={choicesRef}>
             {question.choices?.map((choice, i) => {
               const label = choiceLabel(config.questionType, choice)
               const answerLabel = correctAnswerLabel(config.questionType, question.kanji)
