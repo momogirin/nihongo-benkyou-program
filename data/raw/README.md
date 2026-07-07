@@ -15,7 +15,9 @@ scripts/build-data.ts (예정)가 이 파일을 읽어 src/data/kanji.ts, src/da
   3. `kunKrSource: "wiktionary-traditional"` — 신자체 한자라 위키낱말사전에 훈음 항목이 없는 경우, 구자체(전통 한자)로 재조회해서 추출 (80자)
   4. `kunKrSource: "generated"` / `"generated-uncertain"` — 두 방법 다 실패한 125자는 모델이 직접 생성. 음(소리)은 Unihan/강희자전 기반 `suminb/hanja` 테이블로 검증했지만, 훈(뜻)은 출처 없이 생성한 것이라 틀릴 수 있다. 그중 卸·唄·寮·拶·捗·桁·桟·酪·酵·詮 10자는 전통 옥편에서도 훈이 갈리거나 특히 불확실해 `"generated-uncertain"`로 별도 표시했다.
 
-새로 추가된 1340자는 원래 exampleKanji/exampleKr/exampleJp/exampleRefKanji/exampleRefNum(예문)이 전부 없었다. 2026-07-07, 그중 1337자는 `scripts/parse-jmdict-examples.mjs`/`apply-jmdict-examples.mjs`로 JMdict.xml에서 해당 한자가 쓰인 단어 중 우선순위 태그(ichi1/news1/spec1 > gai1 > nfXX > 그 외)가 가장 높고 2음절에 가까운 것을 뽑아 `exampleKanji`/`exampleJp`만 채웠다. `exampleKr`(한국어 뜻)은 JMdict엔 영어 뜻만 있어서 여전히 `null`로 남아있다 — 이걸 모델이 번역해서 채우면 이 파이프라인의 "AI가 데이터를 생성하지 않는다"는 원칙에 어긋나므로, 사람이 나중에 채워야 한다. 塡·朕·頰 3자만 JMdict에 마땅한 예문이 없어 여전히 전부 `null`이다.
+새로 추가된 1340자는 원래 exampleKanji/exampleKr/exampleJp/exampleRefKanji/exampleRefNum(예문)이 전부 없었다. 2026-07-07, 그중 1337자는 `scripts/parse-jmdict-examples.mjs`/`apply-jmdict-examples.mjs`로 JMdict.xml에서 해당 한자가 쓰인 단어 중 우선순위 태그(ichi1/news1/spec1 > gai1 > nfXX > 그 외)가 가장 높고 2음절에 가까운 것을 뽑아 `exampleKanji`/`exampleJp`를 채웠다. 塡·朕·頰 3자만 JMdict에 마땅한 예문이 없어 여전히 전부 `null`이다.
+
+`exampleKr`(한국어 뜻)은 JMdict엔 영어 뜻만 있어서 원칙상 사람이 채워야 했지만, 2026-07-07에 사용자가 직접 "번역해서라도 채워라"고 승인해서 모델이 exampleJp/exampleKanji를 보고 직접 번역했다 (1337건, `exampleKrSource: "generated"`로 표시 — 원본 798자의 `exampleKrSource: "curated"`와 구분됨). 사전 대조 없이 모델이 번역한 값이라 개별 오역 가능성은 있다.
 
 동사/형용사류 훈(예: "어지럽다") 중 일부는 위키낱말사전 원문을 그대로 가져와 사전형(-다) 그대로이고, 전통 옥편처럼 관형형(-(으)ㄹ, 예: "어지러울")으로 다듬지는 않았다 — 불규칙 활용 변환 과정에서 오히려 오류가 생길 위험이 있어 그대로 두었다.
 

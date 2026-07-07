@@ -21,6 +21,12 @@ export type KanjiLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
 // source had an entry (see data/raw/README.md for the generation notes)
 export type KunKrSource = 'curated' | 'wiktionary' | 'wiktionary-traditional' | 'generated' | 'generated-uncertain'
 
+// where exampleKr (Korean gloss for the example word) came from: hand-curated
+// alongside the original 798, or translated by the model from the Japanese
+// example word JMdict supplied (JMdict itself only has English glosses, so
+// this field is never sourced from JMdict directly — see data/raw/README.md)
+export type ExampleKrSource = 'curated' | 'generated'
+
 export interface Kanji {
   id: string
   level: KanjiLevel
@@ -35,6 +41,7 @@ export interface Kanji {
   exampleRefKanji: string | null
   exampleRefNum: string | null
   kunKrSource: KunKrSource
+  exampleKrSource?: ExampleKrSource
 }
 
 // Parsed from a JSON string (rather than a literal array) because TS's
