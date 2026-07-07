@@ -5,6 +5,7 @@ import StudyPage from './pages/StudyPage'
 import QuizPage from './pages/QuizPage'
 import WrongNotePage from './pages/WrongNotePage'
 import RadicalsPage from './pages/RadicalsPage'
+import VocabPage from './pages/VocabPage'
 import BackupPage from './pages/BackupPage'
 import type { PageId, QuizConfig } from './types'
 
@@ -76,6 +77,8 @@ function App() {
         return <WrongNotePage onStartQuiz={startQuiz} />
       case 'radicals':
         return <RadicalsPage />
+      case 'vocab':
+        return <VocabPage />
       case 'backup':
         return <BackupPage />
     }

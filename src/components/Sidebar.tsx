@@ -10,6 +10,7 @@ const JAPANESE_ITEMS: { id: PageId; label: string }[] = [
   { id: 'quiz', label: '퀴즈' },
   { id: 'wrongNote', label: '오답노트' },
   { id: 'radicals', label: '부수' },
+  { id: 'vocab', label: '단어' },
 ]
 const JAPANESE_PAGE_IDS = new Set(JAPANESE_ITEMS.map((item) => item.id))
 
