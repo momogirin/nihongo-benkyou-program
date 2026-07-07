@@ -58,6 +58,11 @@ export default function QuizRunner({ config, onFinish }: Props) {
 
   const question = questions[index]
   const isChoiceMode = config.questionType !== 'promptToAnswer'
+  // feedback lingers one extra render after setIndex() advances (the effect
+  // below that clears it hasn't run yet), so gate its display on the
+  // question it was actually recorded for — otherwise the new question can
+  // flash the previous question's correct/incorrect coloring.
+  const activeFeedback = feedback && lastSubmittedIndexRef.current === index ? feedback : null
 
   useEffect(() => {
     setInputValue('')
@@ -119,16 +124,16 @@ export default function QuizRunner({ config, onFinish }: Props) {
             className="quiz-input"
             type="text"
             value={inputValue}
-            disabled={feedback !== null}
+            disabled={activeFeedback !== null}
             placeholder="훈음을 입력하세요 (예: 날 일)"
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === 'Enter' && !e.repeat && inputValue.trim() !== '') submit(inputValue)
             }}
           />
-          {feedback && (
-            <p className={`quiz-feedback ${feedback.isCorrect ? 'correct' : 'incorrect'}`}>
-              {feedback.isCorrect
+          {activeFeedback && (
+            <p className={`quiz-feedback ${activeFeedback.isCorrect ? 'correct' : 'incorrect'}`}>
+              {activeFeedback.isCorrect
                 ? '정답입니다'
                 : `오답 · 정답: ${correctAnswerLabel(config.questionType, question.kanji)}`}
             </p>
@@ -146,10 +151,10 @@ export default function QuizRunner({ config, onFinish }: Props) {
               const label = choiceLabel(config.questionType, choice)
               const answerLabel = correctAnswerLabel(config.questionType, question.kanji)
               let className = 'quiz-choice'
-              if (feedback) {
-                if (label === feedback.selectedLabel) {
-                  className += feedback.isCorrect ? ' correct' : ' incorrect'
-                } else if (!feedback.isCorrect && label === answerLabel) {
+              if (activeFeedback) {
+                if (label === activeFeedback.selectedLabel) {
+                  className += activeFeedback.isCorrect ? ' correct' : ' incorrect'
+                } else if (!activeFeedback.isCorrect && label === answerLabel) {
                   className += ' reveal-correct'
                 }
               }
@@ -158,7 +163,7 @@ export default function QuizRunner({ config, onFinish }: Props) {
                   key={choice.id}
                   type="button"
                   className={className}
-                  disabled={feedback !== null}
+                  disabled={activeFeedback !== null}
                   onClick={() => submit(label)}
                 >
                   <span className="quiz-choice-num">{i + 1}</span>
