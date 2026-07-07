@@ -43,5 +43,5 @@ JLPT 급수별 단어(N5~N1). `word`/`reading`/`level`/`meaningEn`은 [elzup/jlp
 
 `meaningKr`은 소스에 한국어 뜻이 없어서(영어 뜻만 있음) 모델이 `word`(일본어 단어) 자체를 보고 직접 번역했다 — exampleKr과 마찬가지로 사용자가 "번역해서라도 채워라"고 승인한 건. 사전 대조 없이 번역한 값이라 개별 오역 가능성이 있다. `meaningEn`은 원본 영어 뜻을 그대로 보존해서, 나중에 `meaningKr`을 검증/재번역할 때 대조할 수 있게 남겨뒀다.
 
-2026-07-07 기준 **N5만 완료**. N4~N1은 `data/cache/vocab-raw.json`(전체 7972단어 원본 파싱 결과)에 이미 있으니, 같은 방식(단어별로 `meaningKr` 번역 → `data/vocab-{level}.json` 생성)으로 이어서 채우면 된다.
+2026-07-08 기준 **N5~N1 전부 완료** (7972단어 전체 `meaningKr` 번역 완료).
 
