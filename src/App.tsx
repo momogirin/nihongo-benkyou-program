@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar'
 import HomePage from './pages/HomePage'
 import QuizPage from './pages/QuizPage'
 import WrongNotePage from './pages/WrongNotePage'
+import RadicalsPage from './pages/RadicalsPage'
 import BackupPage from './pages/BackupPage'
 import type { PageId, QuizConfig } from './types'
 
@@ -28,6 +29,8 @@ function App() {
         )
       case 'wrongNote':
         return <WrongNotePage onStartQuiz={startQuiz} />
+      case 'radicals':
+        return <RadicalsPage />
       case 'backup':
         return <BackupPage />
     }

@@ -18,3 +18,12 @@ scripts/build-data.ts (예정)가 이 파일을 읽어 src/data/kanji.ts, src/da
 새로 추가된 1340자는 exampleKanji/exampleKr/exampleJp/exampleRefKanji/exampleRefNum(예문)이 없다 (`null`) — 원본 엑셀 수준의 예문 큐레이션은 하지 않았다.
 
 동사/형용사류 훈(예: "어지럽다") 중 일부는 위키낱말사전 원문을 그대로 가져와 사전형(-다) 그대로이고, 전통 옥편처럼 관형형(-(으)ㄹ, 예: "어지러울")으로 다듬지는 않았다 — 불규칙 활용 변환 과정에서 오히려 오류가 생길 위험이 있어 그대로 두었다.
+
+## 부수(部首) 데이터 (data/radicals.json → src/data/radicals.ts)
+
+강희부수(康熙部首) 214개 전체. `number`/`strokeCount`/`radical`은 강희자전 표준 순서(위키백과 Kangxi radical 문서로 대조)라 고정값으로 신뢰도 높음.
+
+`meaningKr`(한국식 훈음)은 두 경로로 채워진다 (build-radical-data.mjs가 빌드 시점에 처리):
+1. `meaningKrSource: "kanji-data"` — 해당 부수 글자가 기존 상용한자 데이터(kanji.json)에도 독립된 한자로 존재하면, 그 항목의 `kunKr`을 그대로 가져다 씀 (122자) — 같은 글자가 화면마다 다른 훈음으로 보이는 걸 방지.
+2. `meaningKrSource: "generated-uncertain"` — 위 매칭이 안 되는 92자(丨丶丿 등 단독 한자로 안 쓰이는 부수)는 모델이 직접 생성한 훈음이라 다른 소스로 교차 검증되지 않았다. 획수 그룹별 배열 순서(1획 6자 · 2획 23자 · 3획 31자 · … 17획 1자, 합계 214)는 위키백과 목록과 대조해 확인했다.
+

@@ -1,6 +1,6 @@
 import type { Kanji, KanjiLevel } from './data/kanji'
 
-export type PageId = 'home' | 'quiz' | 'wrongNote' | 'backup'
+export type PageId = 'home' | 'quiz' | 'wrongNote' | 'radicals' | 'backup'
 
 export type QuestionType =
   | 'promptToAnswer'

@@ -5,6 +5,7 @@ const NAV_ITEMS: { id: PageId; label: string }[] = [
   { id: 'home', label: '홈' },
   { id: 'quiz', label: '퀴즈' },
   { id: 'wrongNote', label: '오답노트' },
+  { id: 'radicals', label: '부수' },
   { id: 'backup', label: '백업' },
 ]
 
