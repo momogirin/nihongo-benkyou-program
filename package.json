@@ -12,7 +12,8 @@
     "data:build": "node scripts/build-kanji-data.mjs",
     "data:build:radicals": "node scripts/build-radical-data.mjs",
     "data:build:study": "node scripts/build-study-data.mjs",
-    "data:build:vocab": "node scripts/build-vocab-data.mjs"
+    "data:build:vocab": "node scripts/build-vocab-data.mjs",
+    "data:build:grammar": "node scripts/build-grammar-data.mjs"
   },
   "dependencies": {
     "@fontsource/noto-sans-jp": "^5.2.9",
