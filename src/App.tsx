@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Sidebar from './components/Sidebar'
 import HomePage from './pages/HomePage'
 import StudyPage from './pages/StudyPage'
@@ -8,13 +8,41 @@ import RadicalsPage from './pages/RadicalsPage'
 import BackupPage from './pages/BackupPage'
 import type { PageId, QuizConfig } from './types'
 
+const MOBILE_QUERY = '(max-width: 768px)'
+
 function App() {
   const [page, setPage] = useState<PageId>('home')
   const [pendingQuizConfig, setPendingQuizConfig] = useState<QuizConfig | null>(null)
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia(MOBILE_QUERY).matches)
+  const [sidebarOpen, setSidebarOpen] = useState(() => !window.matchMedia(MOBILE_QUERY).matches)
+
+  useEffect(() => {
+    const mq = window.matchMedia(MOBILE_QUERY)
+    function handleChange(e: MediaQueryListEvent) {
+      setIsMobile(e.matches)
+      setSidebarOpen(!e.matches)
+    }
+    mq.addEventListener('change', handleChange)
+    return () => mq.removeEventListener('change', handleChange)
+  }, [])
+
+  useEffect(() => {
+    if (!isMobile || !sidebarOpen) return
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') setSidebarOpen(false)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isMobile, sidebarOpen])
 
   function startQuiz(config: QuizConfig) {
     setPendingQuizConfig(config)
     setPage('quiz')
+  }
+
+  function handleNavigate(nextPage: PageId) {
+    setPage(nextPage)
+    if (isMobile) setSidebarOpen(false)
   }
 
   function renderPage() {
@@ -41,7 +69,25 @@ function App() {
 
   return (
     <div className="app-shell">
-      <Sidebar active={page} onNavigate={setPage} />
+      {sidebarOpen && (
+        <div className="sidebar-backdrop" onClick={() => setSidebarOpen(false)} />
+      )}
+      <Sidebar
+        active={page}
+        onNavigate={handleNavigate}
+        open={sidebarOpen}
+        onToggle={() => setSidebarOpen((v) => !v)}
+      />
+      {!sidebarOpen && (
+        <button
+          type="button"
+          className="sidebar-open-button"
+          aria-label="메뉴 열기"
+          onClick={() => setSidebarOpen(true)}
+        >
+          ☰
+        </button>
+      )}
       <main className="content">{renderPage()}</main>
     </div>
   )

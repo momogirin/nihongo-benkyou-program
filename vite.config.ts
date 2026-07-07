@@ -13,12 +13,12 @@ export default defineConfig({
       manifest: {
         name: '한자 학습',
         short_name: '한자 학습',
-        description: 'JLPT N5-N3 한자·부수 학습 앱',
+        description: 'JLPT 한자·부수 학습 앱',
         lang: 'ko',
         start_url: '.',
         display: 'standalone',
-        background_color: '#FAF8F3',
-        theme_color: '#B24F1E',
+        background_color: '#F5F5F7',
+        theme_color: '#FF6C37',
         icons: [
           { src: 'icons/pwa-192x192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icons/pwa-512x512.png', sizes: '512x512', type: 'image/png' },

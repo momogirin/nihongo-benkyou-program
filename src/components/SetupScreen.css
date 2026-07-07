@@ -169,3 +169,30 @@
   color: var(--color-ink-muted);
   cursor: not-allowed;
 }
+
+@media (max-width: 600px) {
+  .setup-screen {
+    padding: 16px 12px 32px;
+  }
+
+  .option-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .option-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .segment-picker {
+    margin-left: 0;
+  }
+
+  .type-grid-label {
+    font-size: 13px;
+  }
+
+  .type-btn {
+    font-size: 13px;
+    padding: 10px 4px;
+  }
+}
