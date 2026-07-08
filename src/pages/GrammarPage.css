@@ -1,3 +1,10 @@
+.grammar-pattern-label {
+  text-align: center;
+  color: var(--color-ink-muted);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
 .grammar-pattern {
   font-size: 24px;
   font-weight: 600;
@@ -8,6 +15,32 @@
 .grammar-example-kr {
   color: var(--color-ink-muted);
   font-size: 13px;
+}
+
+.grammar-used-kanji {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.grammar-used-kanji-chip {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+}
+
+.grammar-used-kanji-char {
+  font-family: var(--font-display);
+  font-size: 16px;
+}
+
+.grammar-used-kanji-info {
+  font-size: 12px;
+  color: var(--color-ink-muted);
 }
 
 .grammar-quiz-button {

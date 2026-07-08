@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { grammarList, type GrammarPoint } from '../data/grammar'
-import type { KanjiLevel } from '../data/kanji'
+import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
 import {
   generateGrammarQuestions,
   generateGrammarQuestionsFromIds,
@@ -24,6 +24,16 @@ import './GrammarPage.css'
 
 const QUIZ_QUESTION_COUNT = 20
 const FEEDBACK_DELAY_MS = 550
+
+// 예문에 등장하는 한자를 뽑아 kanjiList와 대조 — 문법 급수는 N5인데 예문에
+// N2~N1 한자가 섞여 나오는 경우가 많아서(교재 문장이 원래 그럼), 무슨
+// 한자인지 바로 옆에서 보여줘 학습 겸 난이도 체감을 낮춘다
+const KANJI_CHAR_RE = /[一-龯々]/g
+
+function usedKanji(text: string): Kanji[] {
+  const chars = [...new Set(text.match(KANJI_CHAR_RE) ?? [])]
+  return chars.map((c) => kanjiList.find((k) => k.kanji === c)).filter((k): k is Kanji => k !== undefined)
+}
 
 type Phase = 'setup' | 'studying' | 'done' | 'browse' | 'quiz' | 'quizResult'
 
@@ -198,6 +208,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             {cardIndex + 1} / {batch.length}
           </div>
           <div className="study-card">
+            <div className="grammar-pattern-label">문형</div>
             <div className="grammar-pattern">{point.pattern}</div>
             <dl className="study-fields">
               <div className="study-field">
@@ -220,6 +231,23 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
                   <span className="grammar-example-kr">{point.exampleKr}</span>
                 </dd>
               </div>
+              {usedKanji(point.exampleJp).length > 0 && (
+                <div className="study-field">
+                  <dt>예문 한자</dt>
+                  <dd>
+                    <div className="grammar-used-kanji">
+                      {usedKanji(point.exampleJp).map((k) => (
+                        <span key={k.id} className="grammar-used-kanji-chip">
+                          <span className="grammar-used-kanji-char">{k.kanji}</span>
+                          <span className="grammar-used-kanji-info">
+                            {k.level} · {k.kunKr}
+                          </span>
+                        </span>
+                      ))}
+                    </div>
+                  </dd>
+                </div>
+              )}
             </dl>
           </div>
         </div>
