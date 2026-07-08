@@ -6,6 +6,7 @@ import QuizPage from './pages/QuizPage'
 import WrongNotePage from './pages/WrongNotePage'
 import RadicalsPage from './pages/RadicalsPage'
 import VocabPage from './pages/VocabPage'
+import GrammarPage from './pages/GrammarPage'
 import BackupPage from './pages/BackupPage'
 import type { PageId, QuizConfig } from './types'
 
@@ -79,6 +80,8 @@ function App() {
         return <RadicalsPage />
       case 'vocab':
         return <VocabPage />
+      case 'grammar':
+        return <GrammarPage />
       case 'backup':
         return <BackupPage />
     }

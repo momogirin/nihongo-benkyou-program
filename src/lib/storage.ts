@@ -28,6 +28,8 @@ const RADICAL_STUDY_PROGRESS_KEY = 'kanjiApp.radicalStudyProgress'
 const RADICAL_STUDY_BATCH_SIZE_KEY = 'kanjiApp.radicalStudyBatchSize'
 const VOCAB_STUDY_PROGRESS_KEY = 'kanjiApp.vocabStudyProgress'
 const VOCAB_STUDY_BATCH_SIZE_KEY = 'kanjiApp.vocabStudyBatchSize'
+const GRAMMAR_STUDY_PROGRESS_KEY = 'kanjiApp.grammarStudyProgress'
+const GRAMMAR_STUDY_BATCH_SIZE_KEY = 'kanjiApp.grammarStudyBatchSize'
 const DEFAULT_STUDY_BATCH_SIZE = 10
 
 export function getWrongNotes(): WrongNoteEntry[] {
@@ -223,4 +225,29 @@ export function getVocabStudyBatchSize(): number {
 
 export function setVocabStudyBatchSize(size: number) {
   localStorage.setItem(VOCAB_STUDY_BATCH_SIZE_KEY, String(size))
+}
+
+// same shape again, but for the 문법(grammar) 학습 flow
+export function getGrammarStudyProgress(level: KanjiLevel): number {
+  return getLevelProgressMap(GRAMMAR_STUDY_PROGRESS_KEY)[level] ?? 0
+}
+
+export function setGrammarStudyProgress(level: KanjiLevel, completedCount: number) {
+  setLevelProgress(GRAMMAR_STUDY_PROGRESS_KEY, level, completedCount)
+}
+
+export function getAllGrammarStudyProgress(): Record<string, number> {
+  return getLevelProgressMap(GRAMMAR_STUDY_PROGRESS_KEY)
+}
+
+export function importGrammarStudyProgress(progress: Record<string, number>) {
+  importLevelProgress(GRAMMAR_STUDY_PROGRESS_KEY, progress)
+}
+
+export function getGrammarStudyBatchSize(): number {
+  return getBatchSize(GRAMMAR_STUDY_BATCH_SIZE_KEY)
+}
+
+export function setGrammarStudyBatchSize(size: number) {
+  localStorage.setItem(GRAMMAR_STUDY_BATCH_SIZE_KEY, String(size))
 }
