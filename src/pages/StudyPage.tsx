@@ -38,7 +38,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
   // button belongs to the previous phase), so Enter/Space wouldn't do
   // anything without a mouse click first
   useEffect(() => {
-    if (phase === 'done') donePrimaryButtonRef.current?.focus()
+    if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
 
   function startBatch() {

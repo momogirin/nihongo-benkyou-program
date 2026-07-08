@@ -36,8 +36,11 @@ export default function ResultScreen({ answers, elapsedMs, questionType, onResta
     // a kanji answered correctly this round is no longer a standing weak point
     answers.filter((a) => a.isCorrect).forEach((a) => removeWrongNote(a.kanji.id))
     // focus the restart button so Enter/Space works right away — the quiz's
-    // last choice button was disabled/unmounted, so nothing carries focus over
-    restartButtonRef.current?.focus()
+    // last choice button was disabled/unmounted, so nothing carries focus over.
+    // preventScroll: true because this button sits at the end of the answer
+    // list, and a long list (20/30/50/all) would otherwise get scrolled past
+    // the score summary right as the results screen appears.
+    restartButtonRef.current?.focus({ preventScroll: true })
     // run once when results are shown
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

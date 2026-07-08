@@ -31,7 +31,7 @@ export default function RadicalsPage() {
   const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    if (phase === 'done') donePrimaryButtonRef.current?.focus()
+    if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
 
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
@@ -102,25 +102,27 @@ export default function RadicalsPage() {
 
     return (
       <div className="page study-page">
-        <div className="quiz-progress">
-          {cardIndex + 1} / {batch.length}
-        </div>
-        <div className="study-card">
-          <div className="study-kanji">{radical.radical}</div>
-          <dl className="study-fields">
-            <div className="study-field">
-              <dt>훈음</dt>
-              <dd>{radical.meaningKr}</dd>
-            </div>
-            <div className="study-field">
-              <dt>영문 뜻</dt>
-              <dd>{radical.meaningEn}</dd>
-            </div>
-            <div className="study-field">
-              <dt>획수</dt>
-              <dd>{radical.strokeCount}획</dd>
-            </div>
-          </dl>
+        <div className="study-content">
+          <div className="quiz-progress">
+            {cardIndex + 1} / {batch.length}
+          </div>
+          <div className="study-card">
+            <div className="study-kanji">{radical.radical}</div>
+            <dl className="study-fields">
+              <div className="study-field">
+                <dt>훈음</dt>
+                <dd>{radical.meaningKr}</dd>
+              </div>
+              <div className="study-field">
+                <dt>영문 뜻</dt>
+                <dd>{radical.meaningEn}</dd>
+              </div>
+              <div className="study-field">
+                <dt>획수</dt>
+                <dd>{radical.strokeCount}획</dd>
+              </div>
+            </dl>
+          </div>
         </div>
         <div className="study-nav">
           <button type="button" onClick={() => setCardIndex((i) => i - 1)} disabled={cardIndex === 0}>

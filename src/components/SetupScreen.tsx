@@ -29,10 +29,12 @@ interface Props {
 }
 
 export default function SetupScreen({ onStart }: Props) {
-  const [levels, setLevels] = useState<KanjiLevel[]>([])
+  // 급수(첫 레벨)/순서/문제수는 거의 항상 같은 값을 고르게 되므로 기본값을 채워
+  // 두고, 매번 실제로 달라질 만한 문제 유형만 매번 직접 고르게 둔다
+  const [levels, setLevels] = useState<KanjiLevel[]>([ALL_LEVELS[0]])
   const [questionType, setQuestionType] = useState<QuestionType | null>(null)
-  const [order, setOrder] = useState<QuizOrder | null>(null)
-  const [count, setCount] = useState<QuestionCount | null>(null)
+  const [order, setOrder] = useState<QuizOrder | null>('random')
+  const [count, setCount] = useState<QuestionCount | null>(20)
 
   const availableCount = useMemo(
     () => levels.reduce((sum, level) => sum + levelPool(level).length, 0),

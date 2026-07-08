@@ -57,8 +57,8 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const restartButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    if (phase === 'done') donePrimaryButtonRef.current?.focus()
-    if (phase === 'quizResult') restartButtonRef.current?.focus()
+    if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
+    if (phase === 'quizResult') restartButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
 
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
