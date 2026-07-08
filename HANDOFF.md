@@ -25,8 +25,8 @@ JLPT 한자·단어·문법 학습 PWA. **궁극적 목표는 "학습 플랫폼"
 2. ~~문법 N3 데이터~~ — **완료.** `data/grammar-n3.json` 71개 항목 신규 작성(모델이 직접 작성, README에 캐비어트 기록됨). わけだ/ざるを得ない/にすぎない/につれて 등 TRY!/新完全マスター 수준에서 여러 교재가 공통으로 다루는 항목 위주로 선정, 급수 경계 애매한 건 제외. `npm run data:build:grammar`로 빌드 완료(총 215개 = N5 85+N4 59+N3 71). playwright로 N3 학습/브라우즈/퀴즈 전부 브라우저 검증 완료.
 3. 문법 N2~N1 데이터 (남은 급수, N3와 같은 방식으로 이어서 작업하면 됨 — 단 급수 올라갈수록 뉘앙스 이견이 커지니 표현 수위를 더 보수적으로)
 4. **한자 학습 콘텐츠(etymology) N4~N1 — 진행 중.** 2058자 전체를 목표로 급수 순서(N4→N3→N2→N1)·num 순서대로 100자씩 배치 작업 중, 배치마다 즉시 commit+push(세션이 언제 끊길지 몰라 진행상황을 계속 저장해두기로 함).
-   - **완료**: N4 전체(166/166), N3 1~200/367
-   - **다음 재개 지점**: N3-201부터 (`data/kanji.json`에서 `level==='N3'`, `num` 오름차순 정렬 후 201번째부터)
+   - **완료**: N4 전체(166/166), N3 전체(367/367) — playwright로 둘 다 브라우저 검증 완료
+   - **다음 재개 지점**: N2-1부터 (`data/kanji.json`에서 `level==='N2'`, `num` 오름차순 정렬)
    - **작업 방법**: `scripts/append-study-batch.mjs <level(소문자)> <batch-file.json>` — `[{"kanjiId": "N3-201", "etymology": "..."}, ...]` 형태의 배치 파일을 넘기면 `radicalNumber`는 `data/cache/kanjidic2-parsed.json`(KANJIDIC2)에서 자동으로 채워줌. etymology만 직접 작성하면 됨. 이후 `npm run data:build:study`로 `src/data/studyContent.ts` 재생성.
    - **radicalNumber 정확도 주의**: N5와 달리 N4~N1은 KANJIDIC2 값을 그대로 쓰고 개별 교차검증 안 함(2000자 넘어서 비현실적이라 타협, `data/raw/README.md`에 기록됨) — 고전 분류라 일본 사전이 가르치는 부수와 가끔 다를 수 있음.
    - **etymology 스타일**: N5/N4와 동일하게 "상형자/지사자/회의자/형성자, [설명]." 형식, 정설이 갈리는 경우 "~라는 설이 있음"으로 단정 피함. 형성자 비중이 높은 걸 감안해 대부분 "뜻 부분+소리 부분" 설명 위주로 작성 중.
