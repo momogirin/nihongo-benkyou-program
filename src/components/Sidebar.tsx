@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
 import type { PageId } from '../types'
 import './Sidebar.css'
 
 // "일본어" is a subject group today; other subjects (다른 언어) would become
 // sibling groups alongside it later, so its children live in their own list
-// instead of being flattened into the top-level nav.
+// instead of being flattened into the top-level nav. It's always expanded
+// since it's the only subject group right now.
 const JAPANESE_ITEMS: { id: PageId; label: string }[] = [
   { id: 'study', label: '학습' },
   { id: 'quiz', label: '퀴즈' },
@@ -13,7 +13,6 @@ const JAPANESE_ITEMS: { id: PageId; label: string }[] = [
   { id: 'vocab', label: '단어' },
   { id: 'grammar', label: '문법' },
 ]
-const JAPANESE_PAGE_IDS = new Set(JAPANESE_ITEMS.map((item) => item.id))
 
 interface Props {
   active: PageId
@@ -23,14 +22,6 @@ interface Props {
 }
 
 export default function Sidebar({ active, onNavigate, open, onToggle }: Props) {
-  const [japaneseExpanded, setJapaneseExpanded] = useState(() => JAPANESE_PAGE_IDS.has(active))
-
-  // if navigation to a 일본어 sub-page happens from elsewhere (e.g. HomePage
-  // quick links), expand the group so the active item is visible
-  useEffect(() => {
-    if (JAPANESE_PAGE_IDS.has(active)) setJapaneseExpanded(true)
-  }, [active])
-
   return (
     <aside className={`sidebar${open ? ' open' : ' closed'}`}>
       <div className="brand">
@@ -49,31 +40,19 @@ export default function Sidebar({ active, onNavigate, open, onToggle }: Props) {
           홈
         </button>
 
-        <button
-          type="button"
-          className={`nav-group-toggle${japaneseExpanded ? ' expanded' : ''}`}
-          aria-expanded={japaneseExpanded}
-          onClick={() => setJapaneseExpanded((v) => !v)}
-        >
-          일본어
-          <span className="nav-group-chevron" aria-hidden="true">
-            ▾
-          </span>
-        </button>
-        {japaneseExpanded && (
-          <div className="nav-subgroup">
-            {JAPANESE_ITEMS.map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                className={`nav-item nav-subitem${active === item.id ? ' active' : ''}`}
-                onClick={() => onNavigate(item.id)}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
-        )}
+        <div className="nav-group-label">일본어</div>
+        <div className="nav-subgroup">
+          {JAPANESE_ITEMS.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              className={`nav-item nav-subitem${active === item.id ? ' active' : ''}`}
+              onClick={() => onNavigate(item.id)}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
 
         <button
           type="button"

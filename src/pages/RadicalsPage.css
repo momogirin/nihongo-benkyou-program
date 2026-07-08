@@ -25,6 +25,15 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-bg-elevated);
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.radical-tile:hover,
+.radical-tile:focus-visible {
+  border-color: var(--color-primary);
+  background: var(--color-selected-bg);
 }
 
 .radical-char {
