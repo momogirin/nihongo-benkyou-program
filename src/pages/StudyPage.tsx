@@ -86,47 +86,49 @@ export default function StudyPage({ onStartQuiz }: Props) {
 
     return (
       <div className="page study-page">
-        <div className="quiz-progress">
-          {cardIndex + 1} / {batch.length}
-        </div>
-        <div className="study-card">
-          <div className="study-kanji">{kanji.kanji}</div>
-          <dl className="study-fields">
-            <div className="study-field">
-              <dt>한국 훈음</dt>
-              <dd>{kanji.kunKr}</dd>
-            </div>
-            <div className="study-field">
-              <dt>일본 훈독</dt>
-              <dd>{kanji.kunJp}</dd>
-            </div>
-            <div className="study-field">
-              <dt>일본 음독</dt>
-              <dd>{kanji.onJp}</dd>
-            </div>
-            {radical && (
+        <div className="study-content">
+          <div className="quiz-progress">
+            {cardIndex + 1} / {batch.length}
+          </div>
+          <div className="study-card">
+            <div className="study-kanji">{kanji.kanji}</div>
+            <dl className="study-fields">
               <div className="study-field">
-                <dt>부수</dt>
-                <dd>
-                  {radical.radical} ({radical.meaningKr})
-                </dd>
+                <dt>한국 훈음</dt>
+                <dd>{kanji.kunKr}</dd>
               </div>
-            )}
-            <div className="study-field">
-              <dt>유래</dt>
-              <dd>{content.etymology}</dd>
-            </div>
-            {kanji.exampleKanji && (
               <div className="study-field">
-                <dt>예문</dt>
-                <dd>
-                  {kanji.exampleKanji}
-                  {kanji.exampleJp && `(${kanji.exampleJp})`}
-                  {kanji.exampleKr && ` · ${kanji.exampleKr}`}
-                </dd>
+                <dt>일본 훈독</dt>
+                <dd>{kanji.kunJp}</dd>
               </div>
-            )}
-          </dl>
+              <div className="study-field">
+                <dt>일본 음독</dt>
+                <dd>{kanji.onJp}</dd>
+              </div>
+              {radical && (
+                <div className="study-field">
+                  <dt>부수</dt>
+                  <dd>
+                    {radical.radical} ({radical.meaningKr})
+                  </dd>
+                </div>
+              )}
+              <div className="study-field">
+                <dt>유래</dt>
+                <dd>{content.etymology}</dd>
+              </div>
+              {kanji.exampleKanji && (
+                <div className="study-field">
+                  <dt>예문</dt>
+                  <dd>
+                    {kanji.exampleKanji}
+                    {kanji.exampleJp && `(${kanji.exampleJp})`}
+                    {kanji.exampleKr && ` · ${kanji.exampleKr}`}
+                  </dd>
+                </div>
+              )}
+            </dl>
+          </div>
         </div>
         <div className="study-nav">
           <button type="button" onClick={() => setCardIndex((i) => i - 1)} disabled={cardIndex === 0}>

@@ -181,33 +181,35 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
 
     return (
       <div className="page study-page">
-        <div className="quiz-progress">
-          {cardIndex + 1} / {batch.length}
-        </div>
-        <div className="study-card">
-          <div className="grammar-pattern">{point.pattern}</div>
-          <dl className="study-fields">
-            <div className="study-field">
-              <dt>뜻</dt>
-              <dd>{point.meaningKr}</dd>
-            </div>
-            <div className="study-field">
-              <dt>영문 뜻</dt>
-              <dd>{point.meaningEn}</dd>
-            </div>
-            <div className="study-field">
-              <dt>설명</dt>
-              <dd>{point.explanation}</dd>
-            </div>
-            <div className="study-field">
-              <dt>예문</dt>
-              <dd>
-                {point.exampleJp}
-                <br />
-                <span className="grammar-example-kr">{point.exampleKr}</span>
-              </dd>
-            </div>
-          </dl>
+        <div className="study-content">
+          <div className="quiz-progress">
+            {cardIndex + 1} / {batch.length}
+          </div>
+          <div className="study-card">
+            <div className="grammar-pattern">{point.pattern}</div>
+            <dl className="study-fields">
+              <div className="study-field">
+                <dt>뜻</dt>
+                <dd>{point.meaningKr}</dd>
+              </div>
+              <div className="study-field">
+                <dt>영문 뜻</dt>
+                <dd>{point.meaningEn}</dd>
+              </div>
+              <div className="study-field">
+                <dt>설명</dt>
+                <dd>{point.explanation}</dd>
+              </div>
+              <div className="study-field">
+                <dt>예문</dt>
+                <dd>
+                  {point.exampleJp}
+                  <br />
+                  <span className="grammar-example-kr">{point.exampleKr}</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
         </div>
         <div className="study-nav">
           <button type="button" onClick={() => setCardIndex((i) => i - 1)} disabled={cardIndex === 0}>

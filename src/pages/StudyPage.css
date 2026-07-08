@@ -74,6 +74,14 @@
   min-height: calc(100svh - 96px);
 }
 
+.study-content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .study-card {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
@@ -119,11 +127,11 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: auto;
-  padding-top: 16px;
+  padding: 16px 0;
   position: sticky;
   bottom: 0;
   background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
 }
 
 .study-nav button {

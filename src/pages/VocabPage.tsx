@@ -184,22 +184,24 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
     return (
       <div className="page study-page">
-        <div className="quiz-progress">
-          {cardIndex + 1} / {batch.length}
-        </div>
-        <div className="study-card">
-          <div className="vocab-word-jp">{word.word}</div>
-          <div className="vocab-word-reading">{word.reading}</div>
-          <dl className="study-fields">
-            <div className="study-field">
-              <dt>뜻</dt>
-              <dd>{word.meaningKr}</dd>
-            </div>
-            <div className="study-field">
-              <dt>영문 뜻</dt>
-              <dd>{word.meaningEn}</dd>
-            </div>
-          </dl>
+        <div className="study-content">
+          <div className="quiz-progress">
+            {cardIndex + 1} / {batch.length}
+          </div>
+          <div className="study-card">
+            <div className="vocab-word-jp">{word.word}</div>
+            <div className="vocab-word-reading">{word.reading}</div>
+            <dl className="study-fields">
+              <div className="study-field">
+                <dt>뜻</dt>
+                <dd>{word.meaningKr}</dd>
+              </div>
+              <div className="study-field">
+                <dt>영문 뜻</dt>
+                <dd>{word.meaningEn}</dd>
+              </div>
+            </dl>
+          </div>
         </div>
         <div className="study-nav">
           <button type="button" onClick={() => setCardIndex((i) => i - 1)} disabled={cardIndex === 0}>
