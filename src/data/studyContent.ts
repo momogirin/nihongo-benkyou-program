@@ -11,6 +11,256 @@ export interface StudyContent {
 }
 
 export const studyContentByKanjiId: Record<string, StudyContent> = {
+  "N4-1": {
+    "kanjiId": "N4-1",
+    "radicalNumber": 9,
+    "etymology": "회의자, 시루에 뚜껑을 덮어 합치는 모습에서 '모이다·합치다'는 뜻이 됨."
+  },
+  "N4-2": {
+    "kanjiId": "N4-2",
+    "radicalNumber": 30,
+    "etymology": "회의자, 여러 것을 하나로 모아 덮은 모습에서 '같다'는 뜻이 됨."
+  },
+  "N4-3": {
+    "kanjiId": "N4-3",
+    "radicalNumber": 6,
+    "etymology": "상형자, 손에 기록 도구를 든 모습을 본떠 '일, 사무'를 뜻하게 됨."
+  },
+  "N4-4": {
+    "kanjiId": "N4-4",
+    "radicalNumber": 132,
+    "etymology": "상형자, 사람의 코 모양을 본뜬 글자. 자신을 가리킬 때 코를 가리키는 습관에서 '스스로'라는 뜻으로 쓰이게 됨."
+  },
+  "N4-5": {
+    "kanjiId": "N4-5",
+    "radicalNumber": 113,
+    "etymology": "형성자, 제사 시(示)와 소리를 나타내는 土가 결합. 원래 토지신을 모시는 제단을 뜻하다가 '모임, 단체'로 뜻이 확장됨."
+  },
+  "N4-6": {
+    "kanjiId": "N4-6",
+    "radicalNumber": 105,
+    "etymology": "회의자, 활(弓)을 쏘는 모습에서 '(화살이) 나가다, 피어나다'는 뜻이 됨."
+  },
+  "N4-7": {
+    "kanjiId": "N4-7",
+    "radicalNumber": 125,
+    "etymology": "회의자, 본래 땔감을 모아 불을 피우는 모습에서 유래했다는 설이 있으며, 후에 사람·사물을 가리키는 말로 쓰이게 됨."
+  },
+  "N4-8": {
+    "kanjiId": "N4-8",
+    "radicalNumber": 32,
+    "etymology": "형성자, 흙 토(土)와 소리를 나타내는 也가 결합해 '땅'을 뜻함."
+  },
+  "N4-9": {
+    "kanjiId": "N4-9",
+    "radicalNumber": 75,
+    "etymology": "상형자, 원래 종을 걸어두는 받침대의 톱니 모양을 본뜬 글자였다가 '일, 업'의 뜻으로 쓰이게 됨."
+  },
+  "N4-10": {
+    "kanjiId": "N4-10",
+    "radicalNumber": 70,
+    "etymology": "상형자, 두 척의 배를 나란히 묶은 모습(또는 쟁기의 모양)을 본떴다는 설이 있으며 '모나다, 방향'을 뜻하게 됨."
+  },
+  "N4-11": {
+    "kanjiId": "N4-11",
+    "radicalNumber": 69,
+    "etymology": "회의자, 도끼(斤)로 나무(木)를 베어 땔감을 만드는 모습에서 유래했고, 후에 '새롭다'는 뜻으로 가차됨."
+  },
+  "N4-12": {
+    "kanjiId": "N4-12",
+    "radicalNumber": 32,
+    "etymology": "형성자, 흙 토(土)와 소리를 나타내는 昜이 결합해 '마당, 장소'를 뜻함."
+  },
+  "N4-13": {
+    "kanjiId": "N4-13",
+    "radicalNumber": 30,
+    "etymology": "회의자, 둥근 솥의 모습에서 '둥글다'는 뜻이었다가 사람 수를 세는 '인원'의 뜻으로 쓰이게 됨."
+  },
+  "N4-14": {
+    "kanjiId": "N4-14",
+    "radicalNumber": 117,
+    "etymology": "상형자, 사람이 땅 위에 두 팔을 벌리고 서 있는 모습을 본뜸."
+  },
+  "N4-15": {
+    "kanjiId": "N4-15",
+    "radicalNumber": 169,
+    "etymology": "회의자, 빗장이 걸린 문(門)을 두 손(廾)으로 여는 모습에서 '열다'는 뜻이 됨."
+  },
+  "N4-16": {
+    "kanjiId": "N4-16",
+    "radicalNumber": 64,
+    "etymology": "상형자, 다섯 손가락을 편 손의 모양을 본뜸."
+  },
+  "N4-17": {
+    "kanjiId": "N4-17",
+    "radicalNumber": 19,
+    "etymology": "상형자, 팔의 힘줄 또는 쟁기의 모양을 본떠 '힘'을 뜻하게 됨."
+  },
+  "N4-18": {
+    "kanjiId": "N4-18",
+    "radicalNumber": 30,
+    "etymology": "형성자, 입 구(口)와 소리를 나타내는 門이 결합해 '묻다'를 뜻함."
+  },
+  "N4-19": {
+    "kanjiId": "N4-19",
+    "radicalNumber": 9,
+    "etymology": "형성자, 사람 인(亻)과 소리를 나타내는 弋이 결합해 '대신하다, 세대'를 뜻함."
+  },
+  "N4-20": {
+    "kanjiId": "N4-20",
+    "radicalNumber": 72,
+    "etymology": "회의자, 해(日)와 달(月)이 나란히 있는 모습에서 '밝다'는 뜻이 됨."
+  },
+  "N4-21": {
+    "kanjiId": "N4-21",
+    "radicalNumber": 19,
+    "etymology": "형성자, 힘 력(力)과 소리를 나타내는 重이 결합해 '움직이다'를 뜻함."
+  },
+  "N4-22": {
+    "kanjiId": "N4-22",
+    "radicalNumber": 8,
+    "etymology": "상형자, 높이 지은 큰 건물(누각)의 모양을 본떠 '높은 언덕, 수도'를 뜻하게 됨."
+  },
+  "N4-23": {
+    "kanjiId": "N4-23",
+    "radicalNumber": 109,
+    "etymology": "상형자, 사람의 눈 모양을 본뜸."
+  },
+  "N4-24": {
+    "kanjiId": "N4-24",
+    "radicalNumber": 162,
+    "etymology": "형성자, 뜻을 나타내는 辵(辶, 가다)와 소리를 나타내는 甬이 결합해 '통하다'를 뜻함."
+  },
+  "N4-25": {
+    "kanjiId": "N4-25",
+    "radicalNumber": 149,
+    "etymology": "상형자, 혀에서 소리가 나오는 모습을 본떠 '말'을 뜻하게 됨."
+  },
+  "N4-26": {
+    "kanjiId": "N4-26",
+    "radicalNumber": 96,
+    "etymology": "형성자, 구슬 옥(王/玉)과 소리를 나타내는 里가 결합. 원래 옥의 결을 다듬는다는 뜻에서 '이치, 다스리다'로 확장됨."
+  },
+  "N4-27": {
+    "kanjiId": "N4-27",
+    "radicalNumber": 9,
+    "etymology": "회의자, 사람 인(亻)과 근본 본(本)이 결합해 '사람의 근본, 몸'을 뜻함."
+  },
+  "N4-28": {
+    "kanjiId": "N4-28",
+    "radicalNumber": 102,
+    "etymology": "상형자, 경계로 나뉜 밭의 모양을 본뜸."
+  },
+  "N4-29": {
+    "kanjiId": "N4-29",
+    "radicalNumber": 3,
+    "etymology": "상형자, 등잔의 심지에 불이 타는 모습을 본뜬 글자로, 중심이 되는 존재라는 뜻에서 '주인'을 뜻하게 됨."
+  },
+  "N4-30": {
+    "kanjiId": "N4-30",
+    "radicalNumber": 181,
+    "etymology": "형성자, 머리 혈(頁)과 소리를 나타내는 是가 결합해 원래 '이마'를 뜻하다가 글의 앞머리인 '제목'을 뜻하게 됨."
+  },
+  "N4-31": {
+    "kanjiId": "N4-31",
+    "radicalNumber": 61,
+    "etymology": "회의자, 소리 음(音)과 마음 심(心)이 결합해 마음속의 소리, 즉 '생각, 뜻'을 나타냄."
+  },
+  "N4-32": {
+    "kanjiId": "N4-32",
+    "radicalNumber": 1,
+    "etymology": "상형자, 꽃받침(또는 새가 날아오르는 모습)을 본뜬 글자였다가 부정을 나타내는 말로 가차됨."
+  },
+  "N4-33": {
+    "kanjiId": "N4-33",
+    "radicalNumber": 9,
+    "etymology": "형성자, 사람 인(亻)과 소리를 나타내는 乍가 결합해 '만들다, 짓다'를 뜻함."
+  },
+  "N4-34": {
+    "kanjiId": "N4-34",
+    "radicalNumber": 101,
+    "etymology": "상형자, 나무 통이나 종의 모양을 본떴다는 설이 있으며 '쓰다, 사용하다'는 뜻으로 쓰이게 됨."
+  },
+  "N4-35": {
+    "kanjiId": "N4-35",
+    "radicalNumber": 53,
+    "etymology": "회의자, 집 엄(广)과 손(又) 등이 결합해 손으로 길이를 재는 모습에서 '자, 법도, 정도'를 뜻하게 됨."
+  },
+  "N4-36": {
+    "kanjiId": "N4-36",
+    "radicalNumber": 57,
+    "etymology": "형성자, 벌레 충(虫)과 소리를 나타내는 弘의 변형이 결합. 원래 딱딱한 껍질의 벌레를 가리키다가 '강하다'는 뜻으로 쓰이게 됨."
+  },
+  "N4-37": {
+    "kanjiId": "N4-37",
+    "radicalNumber": 12,
+    "etymology": "회의자, 사사로움을 뜻하는 厶를 등지는(八) 모습에서 '공평하다, 공적인'이라는 뜻이 됨."
+  },
+  "N4-38": {
+    "kanjiId": "N4-38",
+    "radicalNumber": 64,
+    "etymology": "형성자, 손 수(扌)와 소리를 나타내는 寺가 결합해 '손에 쥐다, 가지다'를 뜻함."
+  },
+  "N4-39": {
+    "kanjiId": "N4-39",
+    "radicalNumber": 166,
+    "etymology": "형성자, 마을 리(里)와 소리를 나타내는 予가 결합해 '들판'을 뜻함."
+  },
+  "N4-40": {
+    "kanjiId": "N4-40",
+    "radicalNumber": 9,
+    "etymology": "상형자, 원래 쟁기 등의 농기구 모양을 본뜬 글자였다가 '~으로써'라는 뜻으로 가차됨."
+  },
+  "N4-41": {
+    "kanjiId": "N4-41",
+    "radicalNumber": 61,
+    "etymology": "회의자, 정수리(囟, 田으로 변형됨)와 마음 심(心)이 결합해 머리와 마음으로 '생각하다'는 뜻이 됨."
+  },
+  "N4-42": {
+    "kanjiId": "N4-42",
+    "radicalNumber": 40,
+    "etymology": "회의자, 집(宀) 안에 돼지(豕)가 있는 모습으로, 옛날 집 아래에 가축을 기르던 데서 '집'을 뜻하게 됨."
+  },
+  "N4-43": {
+    "kanjiId": "N4-43",
+    "radicalNumber": 1,
+    "etymology": "지사자, 十(열 십) 세 개를 이어 써서 '삼십 년', 즉 한 세대를 나타내다가 '세상, 시대'를 뜻하게 됨."
+  },
+  "N4-44": {
+    "kanjiId": "N4-44",
+    "radicalNumber": 36,
+    "etymology": "회의자, 고기 육(肉/夕)을 두 개 겹쳐 써서 '많다'는 뜻을 나타냄."
+  },
+  "N4-45": {
+    "kanjiId": "N4-45",
+    "radicalNumber": 77,
+    "etymology": "회의자, 목표(一)를 향해 발(止)이 똑바로 나아가는 모습에서 '바르다'는 뜻이 됨."
+  },
+  "N4-46": {
+    "kanjiId": "N4-46",
+    "radicalNumber": 40,
+    "etymology": "회의자, 집(宀) 안에 여자(女)가 있는 모습에서 '편안하다'는 뜻이 됨."
+  },
+  "N4-47": {
+    "kanjiId": "N4-47",
+    "radicalNumber": 170,
+    "etymology": "형성자, 언덕 부(阝)와 소리를 나타내는 完이 결합해 담으로 둘러싸인 큰 건물, 즉 '집, 관청'을 뜻함."
+  },
+  "N4-48": {
+    "kanjiId": "N4-48",
+    "radicalNumber": 61,
+    "etymology": "상형자, 심장의 모양을 본떠 '마음'을 뜻하게 됨."
+  },
+  "N4-49": {
+    "kanjiId": "N4-49",
+    "radicalNumber": 102,
+    "etymology": "형성자, 밭 전(田)과 소리를 나타내는 介가 결합해 밭과 밭 사이의 경계, 즉 '지경, 세계'를 뜻함."
+  },
+  "N4-50": {
+    "kanjiId": "N4-50",
+    "radicalNumber": 66,
+    "etymology": "회의자, 회초리를 든 손(攵)이 아이(子)에게 본받을 것을 가르치는 모습에서 '가르치다'는 뜻이 됨."
+  },
   "N5-1": {
     "kanjiId": "N5-1",
     "radicalNumber": 72,

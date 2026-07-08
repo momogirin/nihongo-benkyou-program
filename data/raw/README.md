@@ -36,6 +36,7 @@ scripts/build-data.ts (예정)가 이 파일을 읽어 src/data/kanji.ts, src/da
 
 - `radicalNumber`(이 한자에 쓰인 강희부수 번호): [yagays/kanjivg-radical](https://github.com/yagays/kanjivg-radical)의 `kanji2element.json`(KanjiVG 획 분해 데이터)에서 구성요소를 가져온 뒤, 그중 214개 강희부수 중 하나에 해당하는 걸 골라 매핑했다. 헷갈리는 경우(来·南·書·年·聞·毎 등)는 japandict.com에서 실제 사전 부수 표기를 대조해 확정함 — 예: 来는 木이 아니라 人部, 南은 十이 아니라 干部, 書는 曰이 아니라 日部.
 - `etymology`(유래·어원 설명): 모델이 직접 작성했고 다른 출처로 교차검증하지 않았다. N5 한자는 대부분 상형자/지사자로 비교적 정설이 확립된 기초 한자라 리스크가 낮지만, 東·六·九처럼 자형 유래에 이견이 있는 경우는 "~라는 설도 있음" 식으로 단정하지 않는 표현을 썼다. N4 이하로 내려갈수록(형성자 비중이 높아지고 유래가 더 불확실해짐) 같은 방식으로 신뢰도가 떨어질 수 있으니, 이후 급수 추가 시 표현 수위를 더 보수적으로 조정할 것.
+- N4~N1(2058자)의 `radicalNumber`는 N5처럼 KanjiVG 획 분해로 개별 교차검증하지 않고, `data/cache/kanjidic2-parsed.json`(KANJIDIC2)의 부수 필드를 그대로 썼다(2026-07-08부터, `scripts/append-study-batch.mjs`가 자동 매핑). 이 필드는 강희자전 기준 고전적 분류라 일본 사전이 가르치는 부수와 다를 수 있다(예: N5에서 수작업으로 바로잡았던 来/南/書/年/聞/毎 같은 사례) — 2000자 넘는 규모라 전부 수작업 대조는 비현실적이라고 판단해 이 정도 정확도로 타협함.
 
 ## 어휘(단어) 데이터 (data/vocab-{level}.json → src/data/vocab.ts)
 
