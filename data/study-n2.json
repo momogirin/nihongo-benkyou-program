@@ -998,5 +998,505 @@
     "kanjiId": "N2-200",
     "radicalNumber": 188,
     "etymology": "상형자, 살이 붙은 뼈마디의 모양을 본떠 '뼈'를 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-201",
+    "radicalNumber": 9,
+    "etymology": "형성자, 사람 인(亻)과 소리를 나타내는 頃이 결합해 '기울다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-202",
+    "radicalNumber": 44,
+    "etymology": "회의자, 주검 시(尸)와 이를 지(至)가 결합해 몸이 다다른다는 데서 '이르다, 신고하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-203",
+    "radicalNumber": 49,
+    "etymology": "형성자, 병부 절(卩)과 소리를 나타내는 부분이 결합해 둘둘 만다는 데서 '말다, 책'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-204",
+    "radicalNumber": 86,
+    "etymology": "형성자, 불 화(火)와 소리를 나타내는 然이 결합해 '태우다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-205",
+    "radicalNumber": 157,
+    "etymology": "형성자, 발 족(足)과 소리를 나타내는 亦이 결합해 발자국, 즉 '자취'를 뜻함."
+  },
+  {
+    "kanjiId": "N2-206",
+    "radicalNumber": 20,
+    "etymology": "상형자, 몸속에 아이를 감싸고 있는 모습을 본떠 '싸다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-207",
+    "radicalNumber": 187,
+    "etymology": "형성자, 말 마(馬)와 소리를 나타내는 主가 결합해 말을 세우고 머무른다는 데서 '머무르다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-208",
+    "radicalNumber": 57,
+    "etymology": "상형자, 부러지기 쉬운 활 두 개를 나란히 그려 '약하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-209",
+    "radicalNumber": 120,
+    "etymology": "형성자, 실 사(糸)와 소리를 나타내는 召가 결합해 실을 이어준다는 데서 '잇다, 소개하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-210",
+    "radicalNumber": 172,
+    "etymology": "형성자, 새 추(隹)와 소리를 나타내는 户가 결합. 원래 철새 이름을 뜻하다가 삯을 주고 부린다는 데서 '고용하다'로 가차됨."
+  },
+  {
+    "kanjiId": "N2-211",
+    "radicalNumber": 73,
+    "etymology": "회의자, 두 사람이 나란히 서 있는 모습과 가로 왈(曰)이 결합해 서로 자리를 바꾼다는 뜻을 나타냄."
+  },
+  {
+    "kanjiId": "N2-212",
+    "radicalNumber": 181,
+    "etymology": "형성자, 머리 혈(頁)과 소리를 나타내는 予가 결합해 '맡기다, 미리'라는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-213",
+    "radicalNumber": 86,
+    "etymology": "형성자, 불 화(火)와 소리를 나타내는 요소가 결합해 '불사르다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-214",
+    "radicalNumber": 118,
+    "etymology": "형성자, 대 죽(竹)과 소리를 나타내는 間이 결합해 대나무에 글을 적은 '죽간'을 뜻하다가 '간략하다'는 뜻으로 확장됨."
+  },
+  {
+    "kanjiId": "N2-215",
+    "radicalNumber": 117,
+    "etymology": "회의자, 소리 음(音)과 열 십(十)이 결합해 음악이 한 단락 끝난다는 데서 '문장, 단락'을 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-216",
+    "radicalNumber": 130,
+    "etymology": "형성자, 고기 육(肉)과 소리를 나타내는 요소가 결합해 몸속에 감추어진 기관, 즉 '내장'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-217",
+    "radicalNumber": 60,
+    "etymology": "형성자, 조금 걸을 척(彳)과 소리를 나타내는 聿이 결합해 모두가 따라야 할 '법률'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-218",
+    "radicalNumber": 154,
+    "etymology": "형성자, 조개 패(貝)와 소리를 나타내는 曾이 결합해 재물을 거듭 보탠다는 데서 '주다, 선물하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-219",
+    "radicalNumber": 86,
+    "etymology": "형성자, 불 화(灬)와 소리를 나타내는 昭가 결합해 '비추다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-220",
+    "radicalNumber": 140,
+    "etymology": "형성자, 풀 초(艹)와 소리를 나타내는 溥가 결합해 풀이 무성히 우거진 곳, 즉 '숲'을 뜻하다가 '엷다'는 뜻으로 가차됨."
+  },
+  {
+    "kanjiId": "N2-221",
+    "radicalNumber": 123,
+    "etymology": "형성자, 양 양(羊)과 소리를 나타내는 君이 결합해 양떼처럼 모인 '무리'를 뜻함."
+  },
+  {
+    "kanjiId": "N2-222",
+    "radicalNumber": 115,
+    "etymology": "형성자, 벼 화(禾)와 소리를 나타내는 少가 결합해 벼 이삭의 까끄라기처럼 매우 작은 단위, 즉 시간의 '초'를 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-223",
+    "radicalNumber": 37,
+    "etymology": "회의자, 집(宀)의 깊숙한 안쪽을 나타내는 글자로 '속, 깊숙하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-224",
+    "radicalNumber": 149,
+    "etymology": "형성자, 말씀 언(言)과 소리를 나타내는 吉이 결합해 말로 캐물어 다그친다는 데서 '묻다, 힐책하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-225",
+    "radicalNumber": 29,
+    "etymology": "회의자, 손(又) 두 개가 나란한 모습에서 '둘, 쌍'을 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-226",
+    "radicalNumber": 18,
+    "etymology": "회의자, 가시와 칼 도(刂)가 결합해 '찌르다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-227",
+    "radicalNumber": 120,
+    "etymology": "형성자, 실 사(糸)와 소리를 나타내는 屯이 결합. 원래 물들이지 않은 명주실을 뜻하다가 '순수하다'는 뜻으로 확장됨."
+  },
+  {
+    "kanjiId": "N2-228",
+    "radicalNumber": 124,
+    "etymology": "형성자, 깃 우(羽)와 소리를 나타내는 立이 결합해 '이튿날'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-229",
+    "radicalNumber": 61,
+    "etymology": "형성자, 마음 심(忄)과 소리를 나타내는 夬이 결합해 마음이 시원하다는 데서 '쾌하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-230",
+    "radicalNumber": 91,
+    "etymology": "상형자, 나무를 반으로 쪼갠 한쪽 조각의 모양을 본떠 '조각'을 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-231",
+    "radicalNumber": 66,
+    "etymology": "회의자, 진실로 구(苟)와 칠 복(攵)이 결합해 몸가짐을 삼가고 조심한다는 데서 '공경하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-232",
+    "radicalNumber": 61,
+    "etymology": "형성자, 마음 심(忄)과 정수리 모습이 결합해 '괴로워하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-233",
+    "radicalNumber": 85,
+    "etymology": "상형자, 바위틈에서 물이 솟아 나오는 모양을 본떠 '샘'을 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-234",
+    "radicalNumber": 107,
+    "etymology": "회의자, 손으로 짐승의 가죽을 벗기는 모습을 본떠 '가죽'을 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-235",
+    "radicalNumber": 85,
+    "etymology": "회의자, 물 수(氵)와 물고기 어(魚)가 결합해 물에서 물고기를 잡는다는 뜻을 나타냄."
+  },
+  {
+    "kanjiId": "N2-236",
+    "radicalNumber": 140,
+    "etymology": "형성자, 풀 초(艹)와 소리를 나타내는 巟이 결합해 풀이 우거져 거칠어진 땅, 즉 '거칠다, 황폐하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-237",
+    "radicalNumber": 154,
+    "etymology": "형성자, 조개 패(貝)와 소리를 나타내는 宁가 결합해 재물을 쌓아둔다는 데서 '쌓다, 저축하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-238",
+    "radicalNumber": 112,
+    "etymology": "형성자, 돌 석(石)과 소리를 나타내는 更이 결합해 돌처럼 '굳다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-239",
+    "radicalNumber": 32,
+    "etymology": "형성자, 흙 토(土)와 소리를 나타내는 里가 결합해 흙 속에 '묻다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-240",
+    "radicalNumber": 75,
+    "etymology": "형성자, 나무 목(木)과 소리를 나타내는 主가 결합해 '기둥'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-241",
+    "radicalNumber": 113,
+    "etymology": "회의자, 고기 육(肉)과 손(又), 보일 시(示)가 결합해 손으로 고기를 신께 바치는 모습에서 '제사'를 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-242",
+    "radicalNumber": 145,
+    "etymology": "형성자, 옷 의(衣)와 소리를 나타내는 代가 결합해 옷감으로 만든 '주머니, 자루'를 뜻함."
+  },
+  {
+    "kanjiId": "N2-243",
+    "radicalNumber": 118,
+    "etymology": "회의자, 대 죽(竹)과 붓을 손에 쥔 모습이 결합해 대나무로 만든 '붓'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-244",
+    "radicalNumber": 149,
+    "etymology": "형성자, 말씀 언(言)과 소리를 나타내는 川이 결합해 말로 물 흐르듯 풀어 '가르치다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-245",
+    "radicalNumber": 85,
+    "etymology": "형성자, 물 수(氵)와 소리를 나타내는 谷이 결합해 '목욕하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-246",
+    "radicalNumber": 117,
+    "etymology": "형성자, 설 립(立)과 마을 리(里), 소리를 나타내는 요소가 결합. 원래 종이나 죄인을 뜻하다가 '아이'를 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-247",
+    "radicalNumber": 40,
+    "etymology": "회의자, 집(宀) 안에 구슬(玉)과 재물이 있는 모습에서 '보배'를 뜻함."
+  },
+  {
+    "kanjiId": "N2-248",
+    "radicalNumber": 41,
+    "etymology": "회의자, 흙(土)을 손(寸)으로 쌓아 올린 모습에서 경계를 표시한다는 데서 '봉하다, 봉토'를 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-249",
+    "radicalNumber": 130,
+    "etymology": "형성자, 고기 육(肉)과 소리를 나타내는 匈이 결합해 '가슴'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-250",
+    "radicalNumber": 112,
+    "etymology": "형성자, 돌 석(石)과 소리를 나타내는 少가 결합해 잘게 부서진 돌, 즉 '모래'를 뜻함."
+  },
+  {
+    "kanjiId": "N2-251",
+    "radicalNumber": 32,
+    "etymology": "형성자, 흙 토(土)와 소리를 나타내는 요소가 결합해 소금밭에서 나는 '소금'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-252",
+    "radicalNumber": 154,
+    "etymology": "형성자, 조개 패(貝)와 소리를 나타내는 요소가 결합해 재물을 잘 다루는 사람, 즉 '어질다, 현명하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-253",
+    "radicalNumber": 130,
+    "etymology": "형성자, 고기 육(肉)과 소리를 나타내는 宛이 결합해 '팔'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-254",
+    "radicalNumber": 10,
+    "etymology": "상형자, 거북 등딱지를 불에 지져 갈라진 무늬의 모양을 본뜬 글자로, 점칠 때의 조짐을 뜻하다가 매우 큰 수 '조'로 가차됨."
+  },
+  {
+    "kanjiId": "N2-255",
+    "radicalNumber": 53,
+    "etymology": "형성자, 집 엄(广)과 나무 목(木)이 결합해 나무로 짠 '평상, 마루'를 뜻함."
+  },
+  {
+    "kanjiId": "N2-256",
+    "radicalNumber": 82,
+    "etymology": "상형자, 짐승의 털 또는 깃털의 모양을 본뜸."
+  },
+  {
+    "kanjiId": "N2-257",
+    "radicalNumber": 120,
+    "etymology": "형성자, 실 사(糸)와 소리를 나타내는 彔이 결합해 '초록빛'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-258",
+    "radicalNumber": 41,
+    "etymology": "회의자, 술 유(酉)와 두 손이 결합해 술 단지를 두 손으로 받들어 올리는 모습에서 '높이다, 귀하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-259",
+    "radicalNumber": 113,
+    "etymology": "회의자, 보일 시(示)와 형 형(兄, 원래 사람이 입을 벌려 기도하는 모습)이 결합해 신에게 '빌다, 축하하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-260",
+    "radicalNumber": 75,
+    "etymology": "형성자, 나무 목(木)과 소리를 나타내는 矛가 결합해 나무의 어린 가지처럼 '부드럽다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-261",
+    "radicalNumber": 79,
+    "etymology": "형성자, 창 수(殳)와 소리를 나타내는 요소가 결합해 크고 위엄 있는 '큰 집, 전각'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-262",
+    "radicalNumber": 85,
+    "etymology": "형성자, 물 수(氵)와 소리를 나타내는 農이 결합해 '짙다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-263",
+    "radicalNumber": 85,
+    "etymology": "형성자, 물 수(氵)와 소리를 나타내는 夜가 결합해 '액체, 즙'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-264",
+    "radicalNumber": 145,
+    "etymology": "상형자, 옷깃이 겹쳐진 저고리의 모양을 본뜸."
+  },
+  {
+    "kanjiId": "N2-265",
+    "radicalNumber": 130,
+    "etymology": "회의자, 지게 호(戶)와 고기 육(肉)이 결합해 몸에서 문처럼 넓적한 부위, 즉 '어깨'를 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-266",
+    "radicalNumber": 173,
+    "etymology": "형성자, 비 우(雨)와 소리를 나타내는 令이 결합해 비가 방울져 떨어진다는 데서 '떨어지다, 영(0)'을 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-267",
+    "radicalNumber": 52,
+    "etymology": "회의자, 작을 요(幺)와 힘 력(力)이 결합해 힘이 아직 작다는 데서 '어리다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-268",
+    "radicalNumber": 140,
+    "etymology": "형성자, 풀 초(艹)와 소리를 나타내는 何가 결합. 원래 연꽃을 뜻하다가 짊어진다는 뜻과 통용되어 '짐'을 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-269",
+    "radicalNumber": 85,
+    "etymology": "형성자, 물 수(氵)와 소리를 나타내는 白이 결합해 배를 물가에 대고 머문다는 데서 '머무르다, 정박하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-270",
+    "radicalNumber": 201,
+    "etymology": "상형자, 허리에 옥을 찬 사람의 모습을 본떴다는 설이 있으며 옥의 누런빛에서 '누렇다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-271",
+    "radicalNumber": 99,
+    "etymology": "지사자, 입 구(口) 안에 음식물을 나타내는 획을 더해 입에 문 것이 달다는 뜻을 나타냄."
+  },
+  {
+    "kanjiId": "N2-272",
+    "radicalNumber": 131,
+    "etymology": "상형자, 아래를 굽어보는 눈의 모양을 본떠 고개 숙여 섬기는 사람, 즉 '신하'를 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-273",
+    "radicalNumber": 85,
+    "etymology": "형성자, 물 수(氵)와 소리를 나타내는 요소가 결합해 '얕다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-274",
+    "radicalNumber": 64,
+    "etymology": "회의자, 손 수(扌)와 비 추(帚)가 결합해 손으로 빗자루를 들고 '쓸다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-275",
+    "radicalNumber": 173,
+    "etymology": "형성자, 비 우(雨)와 소리를 나타내는 云이 결합해 '구름'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-276",
+    "radicalNumber": 64,
+    "etymology": "형성자, 손 수(扌)와 소리를 나타내는 屈이 결합해 '파다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-277",
+    "radicalNumber": 64,
+    "etymology": "형성자, 손 수(扌)와 소리를 나타내는 舍가 결합해 손에서 놓아버린다는 데서 '버리다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-278",
+    "radicalNumber": 159,
+    "etymology": "형성자, 수레 거(車)와 소리를 나타내는 요소가 결합해 '연하다, 부드럽다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-279",
+    "radicalNumber": 85,
+    "etymology": "형성자, 물 수(氵)와 소리를 나타내는 요소가 결합해 물에 '잠기다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-280",
+    "radicalNumber": 15,
+    "etymology": "형성자, 얼음 빙(冫)과 소리를 나타내는 東이 결합해 '얼다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-281",
+    "radicalNumber": 5,
+    "etymology": "회의자, 손톱 조(爪)와 아이(子), 새 을(乙)이 결합해 어머니가 아이를 안고 젖을 먹이는 모습에서 '젖'을 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-282",
+    "radicalNumber": 61,
+    "etymology": "형성자, 마음 심(心)과 소리를 나타내는 요소가 결합해 '그리워하다, 사모하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-283",
+    "radicalNumber": 120,
+    "etymology": "형성자, 실 사(糸)와 소리를 나타내는 工이 결합해 붉게 물들인 실, 즉 '붉다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-284",
+    "radicalNumber": 163,
+    "etymology": "형성자, 고을 읍(阝)과 소리를 나타내는 交가 결합해 성 밖의 땅, 즉 '들, 교외'를 뜻함."
+  },
+  {
+    "kanjiId": "N2-285",
+    "radicalNumber": 130,
+    "etymology": "형성자, 고기 육(肉)과 소리를 나타내는 要가 결합해 몸의 중심부, 즉 '허리'를 뜻함."
+  },
+  {
+    "kanjiId": "N2-286",
+    "radicalNumber": 86,
+    "etymology": "회의자, 언덕(山) 아래에서 불(火)로 나무를 태워 만든 '숯'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-287",
+    "radicalNumber": 157,
+    "etymology": "형성자, 발 족(足)과 소리를 나타내는 甬이 결합해 '뛰다, 춤추다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-288",
+    "radicalNumber": 13,
+    "etymology": "상형자, 대나무나 나무 조각을 끈으로 엮은 죽간의 모양을 본떠 '책'을 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-289",
+    "radicalNumber": 19,
+    "etymology": "형성자, 힘 력(力)과 소리를 나타내는 甬이 결합해 '용감하다, 날래다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-290",
+    "radicalNumber": 75,
+    "etymology": "형성자, 나무 목(木)과 소리를 나타내는 戒가 결합해 원래 형틀을 뜻하다가 나무로 만든 도구, 즉 '기계'를 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-291",
+    "radicalNumber": 140,
+    "etymology": "형성자, 풀 초(艹)와 소리를 나타내는 采가 결합해 손으로 따는 나물, 즉 '채소'를 뜻함."
+  },
+  {
+    "kanjiId": "N2-292",
+    "radicalNumber": 96,
+    "etymology": "형성자, 구슬 옥(王/玉)과 소리를 나타내는 요소가 결합해 진귀한 옥, 즉 '드물다, 진귀하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-293",
+    "radicalNumber": 26,
+    "etymology": "상형자, 물고기나 개구리의 알 덩어리 모양을 본떠 '알'을 뜻하게 됨."
+  },
+  {
+    "kanjiId": "N2-294",
+    "radicalNumber": 85,
+    "etymology": "형성자, 물 수(氵)와 소리를 나타내는 胡가 결합해 '호수'를 뜻함."
+  },
+  {
+    "kanjiId": "N2-295",
+    "radicalNumber": 30,
+    "etymology": "형성자, 입 구(口)와 소리를 나타내는 契가 결합해 '마시다, 먹다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-296",
+    "radicalNumber": 51,
+    "etymology": "상형자, 끝이 갈라진 방패 또는 사냥 도구의 모양을 본떠 '방패, 범하다'는 뜻이 됨."
+  },
+  {
+    "kanjiId": "N2-297",
+    "radicalNumber": 142,
+    "etymology": "상형자, 뱀의 모양을 본뜬 글자였다가 여러 벌레를 통칭하는 뜻으로 확장됨."
+  },
+  {
+    "kanjiId": "N2-298",
+    "radicalNumber": 18,
+    "etymology": "회의자, 수건 건(巾)과 칼 도(刂)가 결합해 원래 문질러 닦는다는 뜻이었다가 인쇄한다는 뜻으로 확장됨."
+  },
+  {
+    "kanjiId": "N2-299",
+    "radicalNumber": 85,
+    "etymology": "형성자, 물 수(氵)와 소리를 나타내는 昜이 결합해 '끓인 물, 목욕물'을 뜻함."
+  },
+  {
+    "kanjiId": "N2-300",
+    "radicalNumber": 85,
+    "etymology": "형성자, 물 수(氵)와 소리를 나타내는 容이 결합해 '녹다'는 뜻이 됨."
   }
 ]
