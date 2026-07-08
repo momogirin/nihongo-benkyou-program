@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { grammarList, type GrammarPoint } from '../data/grammar'
-import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
+import type { KanjiLevel } from '../data/kanji'
+import { usedKanji } from '../lib/kanjiUsage'
 import {
   generateGrammarQuestions,
   generateGrammarQuestionsFromIds,
@@ -24,16 +25,6 @@ import './GrammarPage.css'
 
 const QUIZ_QUESTION_COUNT = 20
 const FEEDBACK_DELAY_MS = 550
-
-// 예문에 등장하는 한자를 뽑아 kanjiList와 대조 — 문법 급수는 N5인데 예문에
-// N2~N1 한자가 섞여 나오는 경우가 많아서(교재 문장이 원래 그럼), 무슨
-// 한자인지 바로 옆에서 보여줘 학습 겸 난이도 체감을 낮춘다
-const KANJI_CHAR_RE = /[一-龯々]/g
-
-function usedKanji(text: string): Kanji[] {
-  const chars = [...new Set(text.match(KANJI_CHAR_RE) ?? [])]
-  return chars.map((c) => kanjiList.find((k) => k.kanji === c)).filter((k): k is Kanji => k !== undefined)
-}
 
 type Phase = 'setup' | 'studying' | 'done' | 'browse' | 'quiz' | 'quizResult'
 
@@ -235,11 +226,11 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
                 <div className="study-field">
                   <dt>예문 한자</dt>
                   <dd>
-                    <div className="grammar-used-kanji">
+                    <div className="study-used-kanji">
                       {usedKanji(point.exampleJp).map((k) => (
-                        <span key={k.id} className="grammar-used-kanji-chip">
-                          <span className="grammar-used-kanji-char">{k.kanji}</span>
-                          <span className="grammar-used-kanji-info">
+                        <span key={k.id} className="study-used-kanji-chip">
+                          <span className="study-used-kanji-char">{k.kanji}</span>
+                          <span className="study-used-kanji-info">
                             {k.level} · {k.kunKr}
                           </span>
                         </span>
