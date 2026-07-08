@@ -43,6 +43,20 @@ input {
   font-family: inherit;
 }
 
+/* every button/option in the app changes color/border instantly on
+   hover today — one shared transition instead of repeating it per
+   component. kept to color/border/transform only, no shadows or
+   decorative animation per the app's existing restraint. */
+button,
+.option {
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.97);
+  transition: transform 0.08s ease;
+}
+
 /* one focus-visible treatment for every plain button in the app (choice
    grids, level pickers, setup toggles, etc.) instead of repeating it per
    component; anything needing a different offset (e.g. Sidebar's edge-to-edge
