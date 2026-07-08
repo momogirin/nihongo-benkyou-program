@@ -8,6 +8,12 @@
      this shade doesn't clear 4.5:1 as small text on a light background */
   --color-primary: #FF6C37;
   --color-primary-dark: #B24F1E;
+  /* deep terracotta, used only as a solid fill behind white button text —
+     white on --color-primary is only ~2.6-2.8:1 (fails WCAG AA in both
+     themes), so solid CTAs need a darker fill than the vivid brand orange.
+     Same value in both themes since this is a local text/fill contrast,
+     not a page-background-relative one. */
+  --color-button-fill: #C2410C;
   --color-accent: #B23A2E;
   --color-correct: #1F9254;
   --color-incorrect: #E5484D;

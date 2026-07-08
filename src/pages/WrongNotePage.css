@@ -84,9 +84,9 @@
   padding: 10px 20px;
   border: none;
   border-radius: var(--radius-lg);
-  background: var(--color-primary);
+  background: var(--color-button-fill);
   color: #fff;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
 }
