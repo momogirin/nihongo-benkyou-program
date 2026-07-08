@@ -3,7 +3,15 @@ import { kanjiList } from '../data/kanji'
 import { vocabList } from '../data/vocab'
 import { grammarList } from '../data/grammar'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
-import { getGrammarWrongNotes, getInProgressQuiz, getQuizHistory, getVocabWrongNotes, getWrongNotes } from '../lib/storage'
+import {
+  getGrammarQuizHistory,
+  getGrammarWrongNotes,
+  getInProgressQuiz,
+  getQuizHistory,
+  getVocabQuizHistory,
+  getVocabWrongNotes,
+  getWrongNotes,
+} from '../lib/storage'
 import {
   getGrammarStudyProgressSummary,
   getStudyProgressSummary,
@@ -47,6 +55,43 @@ export default function HomePage({
   onRetryGrammar,
 }: Props) {
   const history = useMemo(() => getQuizHistory(), [])
+  const vocabHistory = useMemo(() => getVocabQuizHistory(), [])
+  const grammarHistory = useMemo(() => getGrammarQuizHistory(), [])
+
+  // merge all three domains' quiz history into one chronological feed —
+  // vocab/grammar entries don't carry a replayable config like kanji's, so
+  // clicking one just navigates to that domain's page instead of an exact re-run
+  const mergedHistory = useMemo(() => {
+    const kanjiItems = history.map((e) => ({
+      id: e.id,
+      finishedAt: e.finishedAt,
+      correct: e.correct,
+      total: e.total,
+      label: `${configSummary(e.config)} · ${countLabel(e.config.count)}`,
+      onClick: () => onStartQuiz(e.config),
+    }))
+    const vocabItems = vocabHistory.map((e) => ({
+      id: e.id,
+      finishedAt: e.finishedAt,
+      correct: e.correct,
+      total: e.total,
+      label: `단어 ${e.level} · ${e.total}문항`,
+      onClick: onGoToVocab,
+    }))
+    const grammarItems = grammarHistory.map((e) => ({
+      id: e.id,
+      finishedAt: e.finishedAt,
+      correct: e.correct,
+      total: e.total,
+      label: `문법 ${e.level} · ${e.total}문항`,
+      onClick: onGoToGrammar,
+    }))
+    return [...kanjiItems, ...vocabItems, ...grammarItems]
+      .sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
+      .slice(0, 20)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [history, vocabHistory, grammarHistory])
+
   const inProgress = useMemo(() => getInProgressQuiz(), [])
   const studyProgress = useMemo(() => getStudyProgressSummary(), [])
   const vocabStudyProgress = useMemo(() => getVocabStudyProgressSummary(), [])
@@ -81,7 +126,7 @@ export default function HomePage({
     wrongNoteIds.length > 0 ||
     vocabWrongIds.length > 0 ||
     grammarWrongIds.length > 0
-  if (!hasAnyEntry && history.length === 0) {
+  if (!hasAnyEntry && mergedHistory.length === 0) {
     return (
       <div className="page">
         <h1>홈</h1>
@@ -153,21 +198,15 @@ export default function HomePage({
         </div>
       )}
 
-      {history.length > 0 && (
+      {mergedHistory.length > 0 && (
         <section className="home-history">
           <h2 className="home-history-title">최근 기록</h2>
           <ul className="home-history-list">
-            {history.map((entry) => (
+            {mergedHistory.map((entry) => (
               <li key={entry.id}>
-                <button
-                  type="button"
-                  className="home-history-item"
-                  onClick={() => onStartQuiz(entry.config)}
-                >
+                <button type="button" className="home-history-item" onClick={entry.onClick}>
                   <span className="home-history-main">
-                    <span className="home-history-summary">
-                      {configSummary(entry.config)} · {countLabel(entry.config.count)}
-                    </span>
+                    <span className="home-history-summary">{entry.label}</span>
                     <span className="home-history-date">{formatDate(entry.finishedAt)}</span>
                   </span>
                   <span className="home-history-score">

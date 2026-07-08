@@ -4,17 +4,21 @@ import {
   getAllRadicalStudyProgress,
   getAllStudyProgress,
   getAllVocabStudyProgress,
+  getGrammarQuizHistory,
   getGrammarWrongNotes,
   getInProgressQuiz,
   getQuizHistory,
+  getVocabQuizHistory,
   getVocabWrongNotes,
   getWrongNotes,
+  importGrammarQuizHistory,
   importGrammarStudyProgress,
   importGrammarWrongNotes,
   importInProgressQuiz,
   importQuizHistory,
   importRadicalStudyProgress,
   importStudyProgress,
+  importVocabQuizHistory,
   importVocabStudyProgress,
   importVocabWrongNotes,
   importWrongNotes,
@@ -23,11 +27,11 @@ import {
   type VocabWrongNoteEntry,
   type WrongNoteEntry,
 } from '../lib/storage'
-import type { QuizHistoryEntry } from '../types'
+import type { QuizHistoryEntry, SimpleQuizHistoryEntry } from '../types'
 import './BackupPage.css'
 
 interface BackupFile {
-  version: 4 | 5 | 6 | 7
+  version: 4 | 5 | 6 | 7 | 8
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -37,6 +41,8 @@ interface BackupFile {
   grammarStudyProgress?: Record<string, number>
   vocabWrongNotes?: VocabWrongNoteEntry[]
   grammarWrongNotes?: GrammarWrongNoteEntry[]
+  vocabQuizHistory?: SimpleQuizHistoryEntry[]
+  grammarQuizHistory?: SimpleQuizHistoryEntry[]
   inProgressQuiz: InProgressQuiz | null
 }
 
@@ -55,7 +61,7 @@ export default function BackupPage() {
 
   function handleExport() {
     const payload: BackupFile = {
-      version: 7,
+      version: 8,
       exportedAt: new Date().toISOString(),
       wrongNotes: getWrongNotes(),
       quizHistory: getQuizHistory(),
@@ -65,6 +71,8 @@ export default function BackupPage() {
       grammarStudyProgress: getAllGrammarStudyProgress(),
       vocabWrongNotes: getVocabWrongNotes(),
       grammarWrongNotes: getGrammarWrongNotes(),
+      vocabQuizHistory: getVocabQuizHistory(),
+      grammarQuizHistory: getGrammarQuizHistory(),
       inProgressQuiz: getInProgressQuiz(),
     }
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
@@ -96,6 +104,8 @@ export default function BackupPage() {
         if (parsed.grammarStudyProgress) importGrammarStudyProgress(parsed.grammarStudyProgress)
         if (parsed.vocabWrongNotes) importVocabWrongNotes(parsed.vocabWrongNotes)
         if (parsed.grammarWrongNotes) importGrammarWrongNotes(parsed.grammarWrongNotes)
+        if (parsed.vocabQuizHistory) importVocabQuizHistory(parsed.vocabQuizHistory)
+        if (parsed.grammarQuizHistory) importGrammarQuizHistory(parsed.grammarQuizHistory)
         if (parsed.inProgressQuiz) importInProgressQuiz(parsed.inProgressQuiz)
         setStatus({ type: 'success', message: `가져오기 완료 (오답 ${parsed.wrongNotes.length}건)` })
       } catch {

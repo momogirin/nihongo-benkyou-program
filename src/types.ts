@@ -39,3 +39,14 @@ export interface QuizHistoryEntry {
   elapsedMs: number
   finishedAt: string
 }
+
+// simpler history shape for vocab/grammar quizzes — they only vary by
+// level, no questionType/order axis like kanji's QuizConfig
+export interface SimpleQuizHistoryEntry {
+  id: string
+  level: KanjiLevel
+  total: number
+  correct: number
+  elapsedMs: number
+  finishedAt: string
+}

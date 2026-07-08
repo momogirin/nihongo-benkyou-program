@@ -8,6 +8,7 @@ import {
   type VocabQuizQuestion,
 } from '../lib/vocabQuizGenerator'
 import {
+  addVocabQuizHistoryEntry,
   addVocabWrongNotes,
   getVocabStudyBatchSize,
   getVocabStudyProgress,
@@ -55,6 +56,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [quizFeedback, setQuizFeedback] = useState<{ isCorrect: boolean; selected: string } | null>(null)
   const choicesRef = useRef<HTMLDivElement>(null)
   const restartButtonRef = useRef<HTMLButtonElement>(null)
+  const quizStartRef = useRef(0)
 
   useEffect(() => {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
@@ -80,6 +82,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     setQuizIndex(0)
     setQuizAnswers([])
     setQuizFeedback(null)
+    quizStartRef.current = Date.now()
     setPhase('quiz')
   }
 
@@ -89,6 +92,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     setQuizIndex(0)
     setQuizAnswers([])
     setQuizFeedback(null)
+    quizStartRef.current = Date.now()
     setPhase('quiz')
     onRetryIdsConsumed?.()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -98,6 +102,14 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     if (phase !== 'quizResult') return
     const wrongIds = quizAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
     addVocabWrongNotes(wrongIds)
+    addVocabQuizHistoryEntry({
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      level,
+      total: quizAnswers.length,
+      correct: quizAnswers.filter((a) => a.isCorrect).length,
+      elapsedMs: Date.now() - quizStartRef.current,
+      finishedAt: new Date().toISOString(),
+    })
     // a word answered correctly this round is no longer a standing weak point
     quizAnswers.filter((a) => a.isCorrect).forEach((a) => removeVocabWrongNote(a.question.entry.id))
     // eslint-disable-next-line react-hooks/exhaustive-deps

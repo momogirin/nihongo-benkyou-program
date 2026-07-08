@@ -1,6 +1,6 @@
 import type { KanjiLevel } from '../data/kanji'
 import type { QuizQuestion } from './quizGenerator'
-import type { AnsweredQuestion, QuizConfig, QuizHistoryEntry } from '../types'
+import type { AnsweredQuestion, QuizConfig, QuizHistoryEntry, SimpleQuizHistoryEntry } from '../types'
 
 export interface WrongNoteEntry {
   kanjiId: string
@@ -32,6 +32,8 @@ const WRONG_NOTES_KEY = 'kanjiApp.wrongNotes'
 const VOCAB_WRONG_NOTES_KEY = 'kanjiApp.vocabWrongNotes'
 const GRAMMAR_WRONG_NOTES_KEY = 'kanjiApp.grammarWrongNotes'
 const QUIZ_HISTORY_KEY = 'kanjiApp.quizHistory'
+const VOCAB_QUIZ_HISTORY_KEY = 'kanjiApp.vocabQuizHistory'
+const GRAMMAR_QUIZ_HISTORY_KEY = 'kanjiApp.grammarQuizHistory'
 const QUIZ_HISTORY_LIMIT = 20
 const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
 const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
@@ -82,6 +84,50 @@ export function getQuizHistory(): QuizHistoryEntry[] {
 export function addQuizHistoryEntry(entry: QuizHistoryEntry) {
   const history = [entry, ...getQuizHistory()].slice(0, QUIZ_HISTORY_LIMIT)
   localStorage.setItem(QUIZ_HISTORY_KEY, JSON.stringify(history))
+}
+
+// same shape/cap as the kanji quiz history above, but for 단어(vocab) quizzes
+export function getVocabQuizHistory(): SimpleQuizHistoryEntry[] {
+  try {
+    const raw = localStorage.getItem(VOCAB_QUIZ_HISTORY_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function addVocabQuizHistoryEntry(entry: SimpleQuizHistoryEntry) {
+  const history = [entry, ...getVocabQuizHistory()].slice(0, QUIZ_HISTORY_LIMIT)
+  localStorage.setItem(VOCAB_QUIZ_HISTORY_KEY, JSON.stringify(history))
+}
+
+export function importVocabQuizHistory(entries: SimpleQuizHistoryEntry[]) {
+  const byId = new Map(getVocabQuizHistory().map((entry) => [entry.id, entry]))
+  for (const entry of entries) byId.set(entry.id, entry)
+  const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
+  localStorage.setItem(VOCAB_QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
+}
+
+// same again, for 문법(grammar) quizzes
+export function getGrammarQuizHistory(): SimpleQuizHistoryEntry[] {
+  try {
+    const raw = localStorage.getItem(GRAMMAR_QUIZ_HISTORY_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function addGrammarQuizHistoryEntry(entry: SimpleQuizHistoryEntry) {
+  const history = [entry, ...getGrammarQuizHistory()].slice(0, QUIZ_HISTORY_LIMIT)
+  localStorage.setItem(GRAMMAR_QUIZ_HISTORY_KEY, JSON.stringify(history))
+}
+
+export function importGrammarQuizHistory(entries: SimpleQuizHistoryEntry[]) {
+  const byId = new Map(getGrammarQuizHistory().map((entry) => [entry.id, entry]))
+  for (const entry of entries) byId.set(entry.id, entry)
+  const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
+  localStorage.setItem(GRAMMAR_QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
 }
 
 // merges by id (backup import), keeping the union sorted newest-first and
