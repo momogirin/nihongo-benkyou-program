@@ -73,6 +73,8 @@ function App() {
             onStartQuiz={startQuiz}
             onResumeQuiz={resumeQuiz}
             onGoToStudy={() => handleNavigate('study')}
+            onGoToVocab={() => handleNavigate('vocab')}
+            onGoToGrammar={() => handleNavigate('grammar')}
             onRetryVocab={retryVocab}
             onRetryGrammar={retryGrammar}
           />

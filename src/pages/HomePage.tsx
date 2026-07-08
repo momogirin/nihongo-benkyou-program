@@ -4,7 +4,11 @@ import { vocabList } from '../data/vocab'
 import { grammarList } from '../data/grammar'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import { getGrammarWrongNotes, getInProgressQuiz, getQuizHistory, getVocabWrongNotes, getWrongNotes } from '../lib/storage'
-import { getStudyProgressSummary } from '../lib/studyProgress'
+import {
+  getGrammarStudyProgressSummary,
+  getStudyProgressSummary,
+  getVocabStudyProgressSummary,
+} from '../lib/studyProgress'
 import type { QuizConfig } from '../types'
 import './HomePage.css'
 
@@ -12,6 +16,8 @@ interface Props {
   onStartQuiz: (config: QuizConfig) => void
   onResumeQuiz: () => void
   onGoToStudy: () => void
+  onGoToVocab: () => void
+  onGoToGrammar: () => void
   onRetryVocab: (ids: string[]) => void
   onRetryGrammar: (ids: string[]) => void
 }
@@ -31,10 +37,20 @@ function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
 }
 
-export default function HomePage({ onStartQuiz, onResumeQuiz, onGoToStudy, onRetryVocab, onRetryGrammar }: Props) {
+export default function HomePage({
+  onStartQuiz,
+  onResumeQuiz,
+  onGoToStudy,
+  onGoToVocab,
+  onGoToGrammar,
+  onRetryVocab,
+  onRetryGrammar,
+}: Props) {
   const history = useMemo(() => getQuizHistory(), [])
   const inProgress = useMemo(() => getInProgressQuiz(), [])
   const studyProgress = useMemo(() => getStudyProgressSummary(), [])
+  const vocabStudyProgress = useMemo(() => getVocabStudyProgressSummary(), [])
+  const grammarStudyProgress = useMemo(() => getGrammarStudyProgressSummary(), [])
 
   const wrongNoteIds = useMemo(() => {
     const validIds = new Set(kanjiList.map((k) => k.id))
@@ -58,7 +74,13 @@ export default function HomePage({ onStartQuiz, onResumeQuiz, onGoToStudy, onRet
   }, [])
 
   const hasAnyEntry =
-    studyProgress || inProgress || wrongNoteIds.length > 0 || vocabWrongIds.length > 0 || grammarWrongIds.length > 0
+    studyProgress ||
+    vocabStudyProgress ||
+    grammarStudyProgress ||
+    inProgress ||
+    wrongNoteIds.length > 0 ||
+    vocabWrongIds.length > 0 ||
+    grammarWrongIds.length > 0
   if (!hasAnyEntry && history.length === 0) {
     return (
       <div className="page">
@@ -76,9 +98,25 @@ export default function HomePage({ onStartQuiz, onResumeQuiz, onGoToStudy, onRet
         <div className="home-entry-grid">
           {studyProgress && (
             <button type="button" className="home-entry-card" onClick={onGoToStudy}>
-              <span className="home-entry-title">학습 진도</span>
+              <span className="home-entry-title">한자 학습 진도</span>
               <span className="home-entry-detail">
                 {studyProgress.level} {studyProgress.completed}/{studyProgress.total}자 학습함
+              </span>
+            </button>
+          )}
+          {vocabStudyProgress && (
+            <button type="button" className="home-entry-card" onClick={onGoToVocab}>
+              <span className="home-entry-title">단어 학습 진도</span>
+              <span className="home-entry-detail">
+                {vocabStudyProgress.level} {vocabStudyProgress.completed}/{vocabStudyProgress.total}개 학습함
+              </span>
+            </button>
+          )}
+          {grammarStudyProgress && (
+            <button type="button" className="home-entry-card" onClick={onGoToGrammar}>
+              <span className="home-entry-title">문법 학습 진도</span>
+              <span className="home-entry-detail">
+                {grammarStudyProgress.level} {grammarStudyProgress.completed}/{grammarStudyProgress.total}개 학습함
               </span>
             </button>
           )}
