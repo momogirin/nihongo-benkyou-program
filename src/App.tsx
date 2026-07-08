@@ -73,6 +73,8 @@ function App() {
             onStartQuiz={startQuiz}
             onResumeQuiz={resumeQuiz}
             onGoToStudy={() => handleNavigate('study')}
+            onRetryVocab={retryVocab}
+            onRetryGrammar={retryGrammar}
           />
         )
       case 'study':

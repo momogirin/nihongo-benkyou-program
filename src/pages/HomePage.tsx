@@ -1,7 +1,9 @@
 import { useMemo } from 'react'
 import { kanjiList } from '../data/kanji'
+import { vocabList } from '../data/vocab'
+import { grammarList } from '../data/grammar'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
-import { getInProgressQuiz, getQuizHistory, getWrongNotes } from '../lib/storage'
+import { getGrammarWrongNotes, getInProgressQuiz, getQuizHistory, getVocabWrongNotes, getWrongNotes } from '../lib/storage'
 import { getStudyProgressSummary } from '../lib/studyProgress'
 import type { QuizConfig } from '../types'
 import './HomePage.css'
@@ -10,6 +12,8 @@ interface Props {
   onStartQuiz: (config: QuizConfig) => void
   onResumeQuiz: () => void
   onGoToStudy: () => void
+  onRetryVocab: (ids: string[]) => void
+  onRetryGrammar: (ids: string[]) => void
 }
 
 // 오답 재도전/학습 배치/기록 재시도는 전부 levels 없이 kanjiIds로 직접 지정하니,
@@ -27,7 +31,7 @@ function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('ko-KR', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
 }
 
-export default function HomePage({ onStartQuiz, onResumeQuiz, onGoToStudy }: Props) {
+export default function HomePage({ onStartQuiz, onResumeQuiz, onGoToStudy, onRetryVocab, onRetryGrammar }: Props) {
   const history = useMemo(() => getQuizHistory(), [])
   const inProgress = useMemo(() => getInProgressQuiz(), [])
   const studyProgress = useMemo(() => getStudyProgressSummary(), [])
@@ -39,7 +43,22 @@ export default function HomePage({ onStartQuiz, onResumeQuiz, onGoToStudy }: Pro
       .filter((id) => validIds.has(id))
   }, [])
 
-  const hasAnyEntry = studyProgress || inProgress || wrongNoteIds.length > 0
+  const vocabWrongIds = useMemo(() => {
+    const validIds = new Set(vocabList.map((w) => w.id))
+    return getVocabWrongNotes()
+      .map((n) => n.vocabId)
+      .filter((id) => validIds.has(id))
+  }, [])
+
+  const grammarWrongIds = useMemo(() => {
+    const validIds = new Set(grammarList.map((g) => g.id))
+    return getGrammarWrongNotes()
+      .map((n) => n.grammarId)
+      .filter((id) => validIds.has(id))
+  }, [])
+
+  const hasAnyEntry =
+    studyProgress || inProgress || wrongNoteIds.length > 0 || vocabWrongIds.length > 0 || grammarWrongIds.length > 0
   if (!hasAnyEntry && history.length === 0) {
     return (
       <div className="page">
@@ -77,8 +96,20 @@ export default function HomePage({ onStartQuiz, onResumeQuiz, onGoToStudy }: Pro
               className="home-entry-card"
               onClick={() => onStartQuiz(kanjiIdsQuizConfig(wrongNoteIds))}
             >
-              <span className="home-entry-title">오답 재도전</span>
+              <span className="home-entry-title">한자 오답 재도전</span>
               <span className="home-entry-detail">{wrongNoteIds.length}자</span>
+            </button>
+          )}
+          {vocabWrongIds.length > 0 && (
+            <button type="button" className="home-entry-card" onClick={() => onRetryVocab(vocabWrongIds)}>
+              <span className="home-entry-title">단어 오답 재도전</span>
+              <span className="home-entry-detail">{vocabWrongIds.length}개</span>
+            </button>
+          )}
+          {grammarWrongIds.length > 0 && (
+            <button type="button" className="home-entry-card" onClick={() => onRetryGrammar(grammarWrongIds)}>
+              <span className="home-entry-title">문법 오답 재도전</span>
+              <span className="home-entry-detail">{grammarWrongIds.length}개</span>
             </button>
           )}
         </div>
