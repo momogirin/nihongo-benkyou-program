@@ -3,13 +3,16 @@ import { grammarList, type GrammarPoint } from '../data/grammar'
 import type { KanjiLevel } from '../data/kanji'
 import {
   generateGrammarQuestions,
+  generateGrammarQuestionsFromIds,
   grammarAvailableLevels,
   grammarLevelPool,
   type GrammarQuizQuestion,
 } from '../lib/grammarQuizGenerator'
 import {
+  addGrammarWrongNotes,
   getGrammarStudyBatchSize,
   getGrammarStudyProgress,
+  removeGrammarWrongNote,
   setGrammarStudyBatchSize,
   setGrammarStudyProgress,
 } from '../lib/storage'
@@ -29,7 +32,12 @@ interface QuizAnswer {
   isCorrect: boolean
 }
 
-export default function GrammarPage() {
+interface Props {
+  retryIds?: string[] | null
+  onRetryIdsConsumed?: () => void
+}
+
+export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [level, setLevel] = useState<KanjiLevel>(grammarAvailableLevels[0])
   const pool = useMemo(() => grammarLevelPool(level), [level])
   const completedCount = Math.min(getGrammarStudyProgress(level), pool.length)
@@ -74,6 +82,26 @@ export default function GrammarPage() {
     setQuizFeedback(null)
     setPhase('quiz')
   }
+
+  useEffect(() => {
+    if (!retryIds || retryIds.length === 0) return
+    setQuizQuestions(generateGrammarQuestionsFromIds(retryIds))
+    setQuizIndex(0)
+    setQuizAnswers([])
+    setQuizFeedback(null)
+    setPhase('quiz')
+    onRetryIdsConsumed?.()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [retryIds])
+
+  useEffect(() => {
+    if (phase !== 'quizResult') return
+    const wrongIds = quizAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
+    addGrammarWrongNotes(wrongIds)
+    // a grammar point answered correctly this round is no longer a standing weak point
+    quizAnswers.filter((a) => a.isCorrect).forEach((a) => removeGrammarWrongNote(a.question.entry.id))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase])
 
   useEffect(() => {
     if (phase !== 'studying') return

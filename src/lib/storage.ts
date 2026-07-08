@@ -7,6 +7,16 @@ export interface WrongNoteEntry {
   wrongAt: string
 }
 
+export interface VocabWrongNoteEntry {
+  vocabId: string
+  wrongAt: string
+}
+
+export interface GrammarWrongNoteEntry {
+  grammarId: string
+  wrongAt: string
+}
+
 // a quiz session that's been started but not finished yet, saved after every
 // answer so it can be resumed exactly (same questions/choices, same answers
 // so far) instead of restarting from scratch
@@ -19,6 +29,8 @@ export interface InProgressQuiz {
 }
 
 const WRONG_NOTES_KEY = 'kanjiApp.wrongNotes'
+const VOCAB_WRONG_NOTES_KEY = 'kanjiApp.vocabWrongNotes'
+const GRAMMAR_WRONG_NOTES_KEY = 'kanjiApp.grammarWrongNotes'
 const QUIZ_HISTORY_KEY = 'kanjiApp.quizHistory'
 const QUIZ_HISTORY_LIMIT = 20
 const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
@@ -117,6 +129,78 @@ export function importWrongNotes(entries: WrongNoteEntry[]) {
     }
   }
   localStorage.setItem(WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
+}
+
+// same shape as the kanji wrong notes above, but for the 단어(vocab) quiz
+export function getVocabWrongNotes(): VocabWrongNoteEntry[] {
+  try {
+    const raw = localStorage.getItem(VOCAB_WRONG_NOTES_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function addVocabWrongNotes(vocabIds: string[]) {
+  if (vocabIds.length === 0) return
+  const byId = new Map(getVocabWrongNotes().map((entry) => [entry.vocabId, entry]))
+  const wrongAt = new Date().toISOString()
+  for (const vocabId of vocabIds) {
+    byId.set(vocabId, { vocabId, wrongAt })
+  }
+  localStorage.setItem(VOCAB_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
+}
+
+export function removeVocabWrongNote(vocabId: string) {
+  const remaining = getVocabWrongNotes().filter((entry) => entry.vocabId !== vocabId)
+  localStorage.setItem(VOCAB_WRONG_NOTES_KEY, JSON.stringify(remaining))
+}
+
+export function importVocabWrongNotes(entries: VocabWrongNoteEntry[]) {
+  const byId = new Map(getVocabWrongNotes().map((entry) => [entry.vocabId, entry]))
+  for (const entry of entries) {
+    const existing = byId.get(entry.vocabId)
+    if (!existing || existing.wrongAt < entry.wrongAt) {
+      byId.set(entry.vocabId, entry)
+    }
+  }
+  localStorage.setItem(VOCAB_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
+}
+
+// same shape again, but for the 문법(grammar) quiz
+export function getGrammarWrongNotes(): GrammarWrongNoteEntry[] {
+  try {
+    const raw = localStorage.getItem(GRAMMAR_WRONG_NOTES_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function addGrammarWrongNotes(grammarIds: string[]) {
+  if (grammarIds.length === 0) return
+  const byId = new Map(getGrammarWrongNotes().map((entry) => [entry.grammarId, entry]))
+  const wrongAt = new Date().toISOString()
+  for (const grammarId of grammarIds) {
+    byId.set(grammarId, { grammarId, wrongAt })
+  }
+  localStorage.setItem(GRAMMAR_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
+}
+
+export function removeGrammarWrongNote(grammarId: string) {
+  const remaining = getGrammarWrongNotes().filter((entry) => entry.grammarId !== grammarId)
+  localStorage.setItem(GRAMMAR_WRONG_NOTES_KEY, JSON.stringify(remaining))
+}
+
+export function importGrammarWrongNotes(entries: GrammarWrongNoteEntry[]) {
+  const byId = new Map(getGrammarWrongNotes().map((entry) => [entry.grammarId, entry]))
+  for (const entry of entries) {
+    const existing = byId.get(entry.grammarId)
+    if (!existing || existing.wrongAt < entry.wrongAt) {
+      byId.set(entry.grammarId, entry)
+    }
+  }
+  localStorage.setItem(GRAMMAR_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
 }
 
 function getLevelProgressMap(key: string): Record<string, number> {

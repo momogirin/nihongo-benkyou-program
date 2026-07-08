@@ -39,3 +39,17 @@ export function generateGrammarQuestions(level: KanjiLevel, count: number): Gram
     return { entry, choices: shuffle([entry, ...distractors]) }
   })
 }
+
+// same pattern -> meaningKr shape, but for a fixed set of ids (오답노트
+// 재도전) instead of a level draw. Distractors still come from the entry's
+// own level pool so choices stay plausible even when ids span levels.
+export function generateGrammarQuestionsFromIds(ids: string[]): GrammarQuizQuestion[] {
+  const entries = ids.map((id) => grammarList.find((g) => g.id === id)).filter((g): g is GrammarPoint => g !== undefined)
+
+  return shuffle(entries).map((entry) => {
+    const pool = grammarLevelPool(entry.level)
+    const distractorPool = pool.filter((g) => g.id !== entry.id && g.meaningKr !== entry.meaningKr)
+    const distractors = shuffle(distractorPool).slice(0, 3)
+    return { entry, choices: shuffle([entry, ...distractors]) }
+  })
+}

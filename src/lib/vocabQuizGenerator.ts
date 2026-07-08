@@ -32,3 +32,17 @@ export function generateVocabQuestions(level: KanjiLevel, count: number): VocabQ
     return { entry, choices: shuffle([entry, ...distractors]) }
   })
 }
+
+// same word/reading -> meaningKr shape, but for a fixed set of ids (오답노트
+// 재도전) instead of a level draw. Distractors still come from the entry's
+// own level pool so choices stay plausible even when ids span levels.
+export function generateVocabQuestionsFromIds(ids: string[]): VocabQuizQuestion[] {
+  const entries = ids.map((id) => vocabList.find((w) => w.id === id)).filter((w): w is VocabWord => w !== undefined)
+
+  return shuffle(entries).map((entry) => {
+    const pool = vocabLevelPool(entry.level)
+    const distractorPool = pool.filter((w) => w.id !== entry.id && w.meaningKr !== entry.meaningKr)
+    const distractors = shuffle(distractorPool).slice(0, 3)
+    return { entry, choices: shuffle([entry, ...distractors]) }
+  })
+}

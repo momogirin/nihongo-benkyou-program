@@ -16,6 +16,8 @@ function App() {
   const [page, setPage] = useState<PageId>('home')
   const [pendingQuizConfig, setPendingQuizConfig] = useState<QuizConfig | null>(null)
   const [resumeRequested, setResumeRequested] = useState(false)
+  const [pendingVocabRetryIds, setPendingVocabRetryIds] = useState<string[] | null>(null)
+  const [pendingGrammarRetryIds, setPendingGrammarRetryIds] = useState<string[] | null>(null)
   const [isMobile, setIsMobile] = useState(() => window.matchMedia(MOBILE_QUERY).matches)
   const [sidebarOpen, setSidebarOpen] = useState(() => !window.matchMedia(MOBILE_QUERY).matches)
 
@@ -48,6 +50,16 @@ function App() {
     setPage('quiz')
   }
 
+  function retryVocab(ids: string[]) {
+    setPendingVocabRetryIds(ids)
+    setPage('vocab')
+  }
+
+  function retryGrammar(ids: string[]) {
+    setPendingGrammarRetryIds(ids)
+    setPage('grammar')
+  }
+
   function handleNavigate(nextPage: PageId) {
     setPage(nextPage)
     if (isMobile) setSidebarOpen(false)
@@ -75,13 +87,23 @@ function App() {
           />
         )
       case 'wrongNote':
-        return <WrongNotePage onStartQuiz={startQuiz} />
+        return <WrongNotePage onStartQuiz={startQuiz} onRetryVocab={retryVocab} onRetryGrammar={retryGrammar} />
       case 'radicals':
         return <RadicalsPage />
       case 'vocab':
-        return <VocabPage />
+        return (
+          <VocabPage
+            retryIds={pendingVocabRetryIds}
+            onRetryIdsConsumed={() => setPendingVocabRetryIds(null)}
+          />
+        )
       case 'grammar':
-        return <GrammarPage />
+        return (
+          <GrammarPage
+            retryIds={pendingGrammarRetryIds}
+            onRetryIdsConsumed={() => setPendingGrammarRetryIds(null)}
+          />
+        )
       case 'backup':
         return <BackupPage />
     }

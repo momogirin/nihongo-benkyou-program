@@ -4,24 +4,30 @@ import {
   getAllRadicalStudyProgress,
   getAllStudyProgress,
   getAllVocabStudyProgress,
+  getGrammarWrongNotes,
   getInProgressQuiz,
   getQuizHistory,
+  getVocabWrongNotes,
   getWrongNotes,
   importGrammarStudyProgress,
+  importGrammarWrongNotes,
   importInProgressQuiz,
   importQuizHistory,
   importRadicalStudyProgress,
   importStudyProgress,
   importVocabStudyProgress,
+  importVocabWrongNotes,
   importWrongNotes,
+  type GrammarWrongNoteEntry,
   type InProgressQuiz,
+  type VocabWrongNoteEntry,
   type WrongNoteEntry,
 } from '../lib/storage'
 import type { QuizHistoryEntry } from '../types'
 import './BackupPage.css'
 
 interface BackupFile {
-  version: 4 | 5 | 6
+  version: 4 | 5 | 6 | 7
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -29,6 +35,8 @@ interface BackupFile {
   radicalStudyProgress: Record<string, number>
   vocabStudyProgress?: Record<string, number>
   grammarStudyProgress?: Record<string, number>
+  vocabWrongNotes?: VocabWrongNoteEntry[]
+  grammarWrongNotes?: GrammarWrongNoteEntry[]
   inProgressQuiz: InProgressQuiz | null
 }
 
@@ -47,7 +55,7 @@ export default function BackupPage() {
 
   function handleExport() {
     const payload: BackupFile = {
-      version: 6,
+      version: 7,
       exportedAt: new Date().toISOString(),
       wrongNotes: getWrongNotes(),
       quizHistory: getQuizHistory(),
@@ -55,6 +63,8 @@ export default function BackupPage() {
       radicalStudyProgress: getAllRadicalStudyProgress(),
       vocabStudyProgress: getAllVocabStudyProgress(),
       grammarStudyProgress: getAllGrammarStudyProgress(),
+      vocabWrongNotes: getVocabWrongNotes(),
+      grammarWrongNotes: getGrammarWrongNotes(),
       inProgressQuiz: getInProgressQuiz(),
     }
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
@@ -84,6 +94,8 @@ export default function BackupPage() {
         if (parsed.radicalStudyProgress) importRadicalStudyProgress(parsed.radicalStudyProgress)
         if (parsed.vocabStudyProgress) importVocabStudyProgress(parsed.vocabStudyProgress)
         if (parsed.grammarStudyProgress) importGrammarStudyProgress(parsed.grammarStudyProgress)
+        if (parsed.vocabWrongNotes) importVocabWrongNotes(parsed.vocabWrongNotes)
+        if (parsed.grammarWrongNotes) importGrammarWrongNotes(parsed.grammarWrongNotes)
         if (parsed.inProgressQuiz) importInProgressQuiz(parsed.inProgressQuiz)
         setStatus({ type: 'success', message: `가져오기 완료 (오답 ${parsed.wrongNotes.length}건)` })
       } catch {

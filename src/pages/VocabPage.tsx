@@ -1,10 +1,17 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { vocabList, type VocabWord } from '../data/vocab'
 import type { KanjiLevel } from '../data/kanji'
-import { generateVocabQuestions, vocabLevelPool, type VocabQuizQuestion } from '../lib/vocabQuizGenerator'
 import {
+  generateVocabQuestions,
+  generateVocabQuestionsFromIds,
+  vocabLevelPool,
+  type VocabQuizQuestion,
+} from '../lib/vocabQuizGenerator'
+import {
+  addVocabWrongNotes,
   getVocabStudyBatchSize,
   getVocabStudyProgress,
+  removeVocabWrongNote,
   setVocabStudyBatchSize,
   setVocabStudyProgress,
 } from '../lib/storage'
@@ -25,7 +32,12 @@ interface QuizAnswer {
   isCorrect: boolean
 }
 
-export default function VocabPage() {
+interface Props {
+  retryIds?: string[] | null
+  onRetryIdsConsumed?: () => void
+}
+
+export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [level, setLevel] = useState<KanjiLevel>(ALL_LEVELS[0])
   const pool = useMemo(() => vocabLevelPool(level), [level])
   const completedCount = Math.min(getVocabStudyProgress(level), pool.length)
@@ -70,6 +82,26 @@ export default function VocabPage() {
     setQuizFeedback(null)
     setPhase('quiz')
   }
+
+  useEffect(() => {
+    if (!retryIds || retryIds.length === 0) return
+    setQuizQuestions(generateVocabQuestionsFromIds(retryIds))
+    setQuizIndex(0)
+    setQuizAnswers([])
+    setQuizFeedback(null)
+    setPhase('quiz')
+    onRetryIdsConsumed?.()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [retryIds])
+
+  useEffect(() => {
+    if (phase !== 'quizResult') return
+    const wrongIds = quizAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
+    addVocabWrongNotes(wrongIds)
+    // a word answered correctly this round is no longer a standing weak point
+    quizAnswers.filter((a) => a.isCorrect).forEach((a) => removeVocabWrongNote(a.question.entry.id))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase])
 
   useEffect(() => {
     if (phase !== 'studying') return
