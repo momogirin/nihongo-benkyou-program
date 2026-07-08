@@ -85,6 +85,7 @@ export default function SetupScreen({ onStart }: Props) {
               <div className="type-grid-cell type-grid-label">{row.label}</div>
               <button
                 type="button"
+                aria-pressed={questionType === row.kanjiToAnswer}
                 className={`type-grid-cell type-btn${questionType === row.kanjiToAnswer ? ' active' : ''}`}
                 onClick={() => setQuestionType(row.kanjiToAnswer)}
               >
@@ -92,6 +93,7 @@ export default function SetupScreen({ onStart }: Props) {
               </button>
               <button
                 type="button"
+                aria-pressed={questionType === row.answerToKanji}
                 className={`type-grid-cell type-btn${questionType === row.answerToKanji ? ' active' : ''}`}
                 onClick={() => setQuestionType(row.answerToKanji)}
               >
