@@ -43,6 +43,15 @@ input {
   font-family: inherit;
 }
 
+/* one focus-visible treatment for every plain button in the app (choice
+   grids, level pickers, setup toggles, etc.) instead of repeating it per
+   component; anything needing a different offset (e.g. Sidebar's edge-to-edge
+   nav items) declares its own :focus-visible, which wins on specificity */
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .app-shell {
   display: flex;
   min-height: 100svh;
