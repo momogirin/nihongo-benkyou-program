@@ -3,24 +3,19 @@
   --color-bg-elevated: #FFFFFF;
   --color-ink: #1E1E20;
   --color-ink-muted: #6B6B70;
-  /* Postman-orange brand color — for solid fills/borders (white text on top).
-     text/active-state usage should read --color-primary-dark instead, since
-     this shade doesn't clear 4.5:1 as small text on a light background */
-  --color-primary: #FF6C37;
-  --color-primary-dark: #B24F1E;
-  /* deep terracotta, used only as a solid fill behind white button text —
-     white on --color-primary is only ~2.6-2.8:1 (fails WCAG AA in both
-     themes), so solid CTAs need a darker fill than the vivid brand orange.
-     Same value in both themes since this is a local text/fill contrast,
-     not a page-background-relative one. */
-  --color-button-fill: #C2410C;
-  /* text color for small solid-orange badges (급수 배지 등) that use
-     --color-primary itself as the fill — white fails contrast here same
-     as --color-button-fill's note above, but darkening the fill (like
-     buttons do) reads as dull/muddy on a small badge, so this flips it:
-     keep the fill vivid and darken the text instead. One fixed value in
-     both themes since --color-primary is similarly bright/light in both. */
-  --color-on-primary: #1E1E20;
+  /* Brand color — violet, chosen deliberately away from the N5~N1 level
+     spectrum (green 142°~red 354°, see --color-level-* below) so the
+     brand accent never visually collides with a level badge the way the
+     old orange brand did with the N2 badge. --color-primary for
+     borders/rings/icons, --color-primary-dark for text/active-state on
+     top of --color-selected-bg (darkened so it clears 4.5:1 on a light
+     background — the vivid --color-primary itself doesn't). */
+  --color-primary: #8B5CF6;
+  --color-primary-dark: #5B3DBB;
+  /* solid fill behind white button text — verified ~5.7:1 white-text
+     contrast in both themes, so (unlike the old orange one) this one
+     value works for both without needing a separate light/dark shade. */
+  --color-button-fill: #7C3AED;
   --color-accent: #B23A2E;
   --color-correct: #1F9254;
   --color-incorrect: #E5484D;
@@ -30,7 +25,7 @@
      gray that still clears 3:1 against both. */
   --color-border: #8E8E8E;
   --color-radical-tag: #8A6D3B;
-  --color-selected-bg: rgba(255, 108, 55, 0.08);
+  --color-selected-bg: rgba(139, 92, 246, 0.08);
 
   /* JLPT has no official per-level color — this follows the common
      beginner(green)->advanced(red) convention seen in CEFR "language
@@ -59,17 +54,17 @@
   --radius-xl: 12px;
 }
 
-/* dark variants of the same Postman-orange palette; primary/primary-dark are
+/* dark variants of the same violet brand palette; primary/primary-dark are
    both bright here since dark backgrounds don't have the text-contrast
-   problem a vivid orange has on white */
+   problem a vivid violet has on white */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #1C1C1E;
     --color-bg-elevated: #262629;
     --color-ink: #EDEDEF;
     --color-ink-muted: #A6A6AA;
-    --color-primary: #FF7A45;
-    --color-primary-dark: #E8703D;
+    --color-primary: #A78BFA;
+    --color-primary-dark: #C4B5FD;
     --color-accent: #D9695C;
     --color-correct: #34C77B;
     --color-incorrect: #F0525A;
@@ -77,6 +72,6 @@
        neutral gray that clears 3:1 against both dark bg/bgElevated */
     --color-border: #6F6F6F;
     --color-radical-tag: #C9A464;
-    --color-selected-bg: rgba(255, 122, 69, 0.16);
+    --color-selected-bg: rgba(167, 139, 250, 0.16);
   }
 }
