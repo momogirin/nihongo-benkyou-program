@@ -57,7 +57,7 @@ export default function Sidebar({ active, onNavigate, open, onToggle }: Props) {
           className={`nav-item${active === 'backup' ? ' active' : ''}`}
           onClick={() => onNavigate('backup')}
         >
-          백업
+          계정
         </button>
       </nav>
     </aside>

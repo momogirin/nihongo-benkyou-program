@@ -17,7 +17,7 @@ function AccountSection() {
   if (!isFirebaseConfigured) {
     return (
       <section className="account-section">
-        <h2>계정 동기화</h2>
+        <h2>로그인</h2>
         <p className="page-placeholder">
           클라우드 동기화가 아직 설정되지 않았습니다. 설정 방법은 HANDOFF.md를 참고하세요. 설정 전에는 아래
           "내보내기/가져오기"로 기기를 옮길 수 있습니다.
@@ -101,7 +101,7 @@ export default function BackupPage() {
 
   return (
     <div className="page">
-      <h1>백업</h1>
+      <h1>계정</h1>
 
       <AccountSection />
 
