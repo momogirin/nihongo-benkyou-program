@@ -2,10 +2,11 @@ import { useState } from 'react'
 import StudyPage from './StudyPage'
 import QuizPage from './QuizPage'
 import RadicalsPage from './RadicalsPage'
+import KanjiListPage from './KanjiListPage'
 import type { QuizConfig } from '../types'
 import './KanjiPage.css'
 
-type SubTab = 'study' | 'quiz' | 'radicals'
+type SubTab = 'study' | 'quiz' | 'radicals' | 'list'
 
 interface Props {
   // preset config from 홈/오답노트 entry points, same contract QuizPage already had
@@ -57,6 +58,13 @@ export default function KanjiPage({
         >
           부수
         </button>
+        <button
+          type="button"
+          className={`kanji-tab${subTab === 'list' ? ' active' : ''}`}
+          onClick={() => setSubTab('list')}
+        >
+          전체보기
+        </button>
       </div>
 
       {subTab === 'study' && <StudyPage onStartQuiz={startQuizFromStudy} />}
@@ -72,6 +80,7 @@ export default function KanjiPage({
         />
       )}
       {subTab === 'radicals' && <RadicalsPage />}
+      {subTab === 'list' && <KanjiListPage />}
     </>
   )
 }

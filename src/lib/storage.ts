@@ -363,3 +363,61 @@ export function getAllGrammarStudyProgress(): Record<string, number> {
 export function importGrammarStudyProgress(progress: Record<string, number>) {
   importLevelProgress(GRAMMAR_STUDY_PROGRESS_KEY, progress)
 }
+
+// the full local-storage snapshot shared by BackupPage's file export/import
+// and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
+// and applies it, so the two stay in sync automatically
+export interface BackupPayload {
+  version: 8
+  exportedAt: string
+  wrongNotes: WrongNoteEntry[]
+  quizHistory: QuizHistoryEntry[]
+  studyProgress: Record<string, number>
+  radicalStudyProgress: Record<string, number>
+  vocabStudyProgress: Record<string, number>
+  grammarStudyProgress: Record<string, number>
+  vocabWrongNotes: VocabWrongNoteEntry[]
+  grammarWrongNotes: GrammarWrongNoteEntry[]
+  vocabQuizHistory: SimpleQuizHistoryEntry[]
+  grammarQuizHistory: SimpleQuizHistoryEntry[]
+  inProgressQuiz: InProgressQuiz | null
+}
+
+export function isBackupPayload(value: unknown): value is BackupPayload {
+  return typeof value === 'object' && value !== null && Array.isArray((value as BackupPayload).wrongNotes)
+}
+
+export function buildBackupPayload(): BackupPayload {
+  return {
+    version: 8,
+    exportedAt: new Date().toISOString(),
+    wrongNotes: getWrongNotes(),
+    quizHistory: getQuizHistory(),
+    studyProgress: getAllStudyProgress(),
+    radicalStudyProgress: getAllRadicalStudyProgress(),
+    vocabStudyProgress: getAllVocabStudyProgress(),
+    grammarStudyProgress: getAllGrammarStudyProgress(),
+    vocabWrongNotes: getVocabWrongNotes(),
+    grammarWrongNotes: getGrammarWrongNotes(),
+    vocabQuizHistory: getVocabQuizHistory(),
+    grammarQuizHistory: getGrammarQuizHistory(),
+    inProgressQuiz: getInProgressQuiz(),
+  }
+}
+
+// merges a payload into local storage — every import* below takes the union
+// (progress: max, notes/history: newest-wins by id), so applying a cloud
+// snapshot can never erase progress made locally since the last sync
+export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNotes: WrongNoteEntry[] }) {
+  importWrongNotes(payload.wrongNotes)
+  if (payload.quizHistory) importQuizHistory(payload.quizHistory)
+  if (payload.studyProgress) importStudyProgress(payload.studyProgress)
+  if (payload.radicalStudyProgress) importRadicalStudyProgress(payload.radicalStudyProgress)
+  if (payload.vocabStudyProgress) importVocabStudyProgress(payload.vocabStudyProgress)
+  if (payload.grammarStudyProgress) importGrammarStudyProgress(payload.grammarStudyProgress)
+  if (payload.vocabWrongNotes) importVocabWrongNotes(payload.vocabWrongNotes)
+  if (payload.grammarWrongNotes) importGrammarWrongNotes(payload.grammarWrongNotes)
+  if (payload.vocabQuizHistory) importVocabQuizHistory(payload.vocabQuizHistory)
+  if (payload.grammarQuizHistory) importGrammarQuizHistory(payload.grammarQuizHistory)
+  if (payload.inProgressQuiz) importInProgressQuiz(payload.inProgressQuiz)
+}

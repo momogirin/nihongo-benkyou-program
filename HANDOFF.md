@@ -15,6 +15,7 @@ JLPT 한자·단어·문법 학습 PWA. **궁극적 목표는 "학습 플랫폼"
 - **사이드바 메뉴 순서(2026-07-09 개편)**: 홈 / 한자·단어·문법·오답노트 / 백업. 예전엔 한자 관련 기능(학습/퀴즈/오답노트/부수)이 사이드바에 따로따로 있고 단어/문법만 자체적으로 학습+퀴즈+브라우즈를 갖는 불일치 구조였는데, "화면 따로따로 만들지 말 것"이라는 프로젝트 목표에 맞춰 한자도 하나의 메뉴로 통합함. 오답노트는 세 도메인을 다 아우르므로 계속 최상위 메뉴로 유지.
 - **한자**: `KanjiPage`(`src/pages/KanjiPage.tsx`) — 상단 탭(학습/퀴즈/부수)으로 기존 `StudyPage`/`QuizPage`/`RadicalsPage` 컴포넌트를 그대로 감싸서 전환하는 얇은 래퍼. 각 컴포넌트 내부 로직은 거의 안 건드림(단, 아래 학습 플로우 변경 참고). study content는 N5~N1 2138자 전부 완료. 부수는 급수 구분 없이 214개 전체를 획수별로 브라우즈+상세 카드로 보는 단일 뷰.
   - `StudyPage`에서 "학습 완료→퀴즈 풀기"를 누르면 `KanjiPage`가 내부적으로 퀴즈 설정을 만들어 퀴즈 탭으로 전환하고, 홈/오답노트에서 오는 `onStartQuiz`/`onResumeQuiz`(퀴즈 설정을 갖고 바로 퀴즈 탭으로 진입)도 그대로 `KanjiPage`가 받아서 처리함 — `App.tsx`의 페이지 상태는 `PageId`에서 `'study'/'quiz'/'radicals'`가 사라지고 `'kanji'` 하나로 합쳐짐.
+  - 탭 4개: 학습/퀴즈/부수/**전체보기**(`KanjiListPage.tsx`, 2026-07-09 추가). `RadicalsPage`와 완전히 같은 패턴 — 2138자를 급수별로 그룹핑한 브라우즈 그리드, 타일 클릭 시 부수 페이지와 같은 상세 카드(학습 카드와 동일 필드)로 prev/next 넘기며 볼 수 있음. 학습 진도와 무관하게 그냥 전부 훑어보는 용도(오답노트/퀴즈 기록에 영향 없음).
 - **학습 플로우(한자 학습/문법, 2026-07-09 변경)**: "한 번에 N개씩" 배치 크기 입력을 없애고, 시작하면 해당 급수의 남은 항목 전부를 훑는 방식으로 바뀜. 대신 학습 화면 상단에 "나가기" 버튼이 생겨서 언제든 중단할 수 있고, 나간 시점의 카드부터 "이어하기"로 재개됨(진행 중이던 카드를 건너뛰지 않고 그대로 다시 보여줌). 단어(`VocabPage`)는 이 변경에서 제외 — 아직 배치 크기 입력이 남아있음(사용자가 한자/문법만 지목해서 요청했음, 단어도 통일할지는 미정).
 - **단어(단어 2138→7972단어, N5~N1 전부)**: `VocabPage` — 학습/브라우즈/퀴즈, 오답노트 연동됨. 단어에 쓰인 한자 정보를 학습 카드에 자동으로 보여줌
 - **문법(N5~N1 전부, 총 470개: N5 85·N4 59·N3 71·N2 125·N1 130)**: `GrammarPage` — 학습/브라우즈/퀴즈, 오답노트 연동됨. 예문에 쓰인 한자 정보를 자동으로 보여줌
@@ -23,9 +24,29 @@ JLPT 한자·단어·문법 학습 PWA. **궁극적 목표는 "학습 플랫폼"
 - **백업**: 위 전부 export/import 지원, 현재 버전 8. localStorage 기반 — 아래 "로그인/계정" 항목 참고.
 - **학습 카드 레이아웃(2026-07-09 변경)**: 카드와 이전/다음 버튼 사이를 전체 화면 높이로 센터링하던 걸 없애고(짧은 카드일 때 간격이 과하게 벌어지는 문제), 버튼 영역의 구분선(border-top)도 제거해서 더 조밀하게 붙어 보이도록 함(`StudyPage.css`). 한자 학습/문법/부수/단어 학습 카드 전부 공용으로 영향받음.
 
-## 로그인/계정 전환 관련 (2026-07-09 사용자 질문에 답변, 아직 착수 안 함)
+## 로그인/계정 동기화 (2026-07-09 구현 완료, 단 Firebase 프로젝트 설정은 사용자가 직접 해야 함)
 
-지금은 **GitHub Pages 정적 배포**(`.github/workflows/deploy.yml`, 서버 없음)라 로그인 인증도 사용자별 서버 데이터 저장도 그 자체로는 안 됨 — 모든 데이터(진도/오답노트/퀴즈기록)는 localStorage에만 있고 "백업"은 JSON export/import일 뿐임. 로그인 단위로 전환하려면 인증+DB를 제공하는 백엔드가 필요한데, 프론트를 GitHub Pages에 그대로 두고 Firebase(Auth+Firestore) 또는 Supabase(Auth+Postgres) 같은 BaaS를 클라이언트에서 직접 호출하는 방식이 개인 프로젝트 규모에 가장 현실적(무료 티어로 충분, 별도 서버 호스팅 불필요). 자체 백엔드를 새로 짜는 것보다 작업량이 훨씬 적음. 다만 인증 플로우 추가, localStorage→클라우드 마이그레이션, PWA 오프라인 동작과의 동기화 등을 고려해야 해서 규모가 꽤 큼 — 착수하려면 설계부터 별도로 논의할 것.
+**왜 이 방식인가**: GitHub Pages는 정적 배포(`.github/workflows/deploy.yml`, 서버 없음)라 로그인 인증도 사용자별 서버 데이터 저장도 그 자체로는 안 됨. 자체 백엔드를 새로 짜는 대신, 프론트는 GitHub Pages에 그대로 두고 **Firebase(Auth+Firestore)를 클라이언트에서 직접 호출**하는 방식을 택함 — 무료 티어로 충분하고 별도 서버 호스팅이 필요 없어 개인 프로젝트 규모에 가장 현실적.
+
+**구현된 것** (`npm install firebase` 완료):
+- `src/lib/firebase.ts` — `VITE_FIREBASE_*` 4개 env var로 초기화. **env var가 하나라도 없으면 `isFirebaseConfigured=false`가 되고 로그인 기능 전체가 조용히 꺼짐**(기존 로컬 전용 동작은 그대로 유지) — 그래서 아래 Firebase 프로젝트 설정을 안 해도 앱은 정상 빌드/동작함.
+- `src/lib/storage.ts`의 `buildBackupPayload()`/`applyBackupPayload()`/`isBackupPayload()` — 기존 BackupPage의 export/import 로직을 그대로 뽑아내 공용화(진도는 max, 오답노트/기록은 최신 항목 우선으로 병합 — 원래 있던 로직 그대로라 안전).
+- `src/lib/useCloudSync.ts` — Google 로그인/로그아웃, 로그인 시 자동 pull→merge→push, 5분마다 + 탭이 백그라운드로 갈 때 자동 재동기화, `syncNow()` 수동 트리거. Firestore 문서 경로는 `users/{uid}` 하나에 `BackupPayload` 전체를 저장(파일 백업과 완전히 같은 포맷).
+- `src/pages/BackupPage.tsx` — 상단에 "계정 동기화" 섹션 추가(로그인 버튼/로그인 상태/마지막 동기화 시각/수동 동기화·로그아웃). 기존 "내보내기/가져오기"는 그대로 아래에 유지(로그인 없이 기기 옮길 때 여전히 유효).
+- `.github/workflows/deploy.yml` — 빌드 스텝에 `VITE_FIREBASE_*` 4개를 GitHub Secrets에서 주입하도록 추가.
+- `firestore.rules` — 사용자 본인 문서(`users/{uid}`)만 읽고 쓸 수 있게 제한하는 규칙. Firebase 콘솔 Rules 탭에 그대로 붙여넣으면 됨(CLI 불필요).
+- `.env.example` — 로컬 개발용 env var 템플릿(`.env.local`로 복사해서 채우기, `.gitignore`에 이미 등록됨).
+
+**사용자가 직접 해야 하는 것** (여기부터는 Claude가 대신 못 함 — Google/Firebase 계정 필요):
+1. [Firebase 콘솔](https://console.firebase.google.com)에서 새 프로젝트 생성 (무료 Spark 플랜으로 충분).
+2. **Authentication** → 로그인 방법에서 **Google** 제공업체 사용 설정.
+3. **Firestore Database** 생성(프로덕션 모드) → **규칙** 탭에 이 리포지토리의 `firestore.rules` 내용을 그대로 붙여넣고 게시.
+4. 프로젝트 설정(⚙️) → 일반 → "내 앱"에서 웹 앱 추가 → 나오는 설정값 중 `apiKey`/`authDomain`/`projectId`/`appId` 4개를 확인.
+5. **로컬 개발 확인용**: `.env.example`을 `.env.local`로 복사하고 4번 값을 채운 뒤 `npm run dev`로 로그인 버튼이 뜨는지 확인.
+6. **실제 배포용**: GitHub 리포지토리 Settings → Secrets and variables → Actions에 `VITE_FIREBASE_API_KEY`/`VITE_FIREBASE_AUTH_DOMAIN`/`VITE_FIREBASE_PROJECT_ID`/`VITE_FIREBASE_APP_ID` 4개를 같은 값으로 등록(그래야 GitHub Pages 빌드에도 적용됨).
+7. Authentication → Settings → 승인된 도메인에 GitHub Pages 도메인(`<사용자명>.github.io`)이 자동으로 없다면 추가.
+
+이 7단계를 안 하면(또는 부분적으로만 하면) 앱은 그냥 로그인 없이 지금처럼 동작함 — 망가지지 않음.
 
 ## 다음 할 일
 
