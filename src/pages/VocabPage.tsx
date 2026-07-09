@@ -11,10 +11,8 @@ import {
 import {
   addVocabQuizHistoryEntry,
   addVocabWrongNotes,
-  getVocabStudyBatchSize,
   getVocabStudyProgress,
   removeVocabWrongNote,
-  setVocabStudyBatchSize,
   setVocabStudyProgress,
 } from '../lib/storage'
 import '../components/QuizRunner.css'
@@ -45,7 +43,6 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const completedCount = Math.min(getVocabStudyProgress(level), pool.length)
   const remaining = pool.length - completedCount
 
-  const [batchSizeInput, setBatchSizeInput] = useState(() => getVocabStudyBatchSize())
   const [phase, setPhase] = useState<Phase>('setup')
   const [batch, setBatch] = useState<VocabWord[]>([])
   const [cardIndex, setCardIndex] = useState(0)
@@ -66,9 +63,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
     const fromPool = vocabLevelPool(fromLevel)
-    const size = Math.max(1, Math.min(batchSizeInput || 1, fromPool.length - fromCompleted))
-    setVocabStudyBatchSize(size)
-    setBatch(fromPool.slice(fromCompleted, fromCompleted + size))
+    setBatch(fromPool.slice(fromCompleted))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -76,6 +71,13 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function finishBatch() {
     setVocabStudyProgress(level, completedCount + batch.length)
     setPhase('done')
+  }
+
+  // saves progress up to (not including) the card being left, so 이어하기
+  // re-shows that same card rather than skipping it
+  function exitBatch() {
+    setVocabStudyProgress(level, completedCount + cardIndex)
+    setPhase('setup')
   }
 
   function startQuiz() {
@@ -198,8 +200,13 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     return (
       <div className="page study-page">
         <div className="study-content">
-          <div className="quiz-progress">
-            {cardIndex + 1} / {batch.length}
+          <div className="study-topbar">
+            <button type="button" className="study-exit-button" onClick={exitBatch}>
+              나가기
+            </button>
+            <div className="quiz-progress">
+              {cardIndex + 1} / {batch.length}
+            </div>
           </div>
           <div className="study-card">
             <div className="vocab-word-jp">{word.word}</div>
@@ -252,26 +259,15 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   }
 
   if (phase === 'done') {
-    const hasMore = completedCount < pool.length
     return (
       <div className="page">
         <h1>수고했어요!</h1>
         <p className="page-placeholder">단어 {batch.length}개를 학습했습니다.</p>
         <div className="study-done-actions">
-          {hasMore && (
-            <button
-              type="button"
-              ref={donePrimaryButtonRef}
-              className="study-nav-primary"
-              onClick={() => startBatch(level, completedCount)}
-            >
-              계속하기
-            </button>
-          )}
           <button
             type="button"
-            ref={hasMore ? undefined : donePrimaryButtonRef}
-            className={hasMore ? undefined : 'study-nav-primary'}
+            ref={donePrimaryButtonRef}
+            className="study-nav-primary"
             onClick={() => setPhase('setup')}
           >
             그만하기
@@ -385,22 +381,9 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
       {isLevelFinished ? (
         <p className="page-placeholder">이 급수 단어를 모두 학습했습니다.</p>
       ) : (
-        <>
-          <label className="study-batch-size">
-            한 번에
-            <input
-              type="number"
-              min={1}
-              max={remaining}
-              value={batchSizeInput}
-              onChange={(e) => setBatchSizeInput(Number(e.target.value))}
-            />
-            개씩
-          </label>
-          <button type="button" className="study-start-button" onClick={() => startBatch(level, completedCount)}>
-            {completedCount > 0 ? '이어하기' : '시작하기'}
-          </button>
-        </>
+        <button type="button" className="study-start-button" onClick={() => startBatch(level, completedCount)}>
+          {completedCount > 0 ? '이어하기' : '시작하기'}
+        </button>
       )}
 
       <button type="button" className="vocab-quiz-button" onClick={startQuiz}>

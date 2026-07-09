@@ -40,7 +40,6 @@ const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
 const RADICAL_STUDY_PROGRESS_KEY = 'kanjiApp.radicalStudyProgress'
 const RADICAL_STUDY_BATCH_SIZE_KEY = 'kanjiApp.radicalStudyBatchSize'
 const VOCAB_STUDY_PROGRESS_KEY = 'kanjiApp.vocabStudyProgress'
-const VOCAB_STUDY_BATCH_SIZE_KEY = 'kanjiApp.vocabStudyBatchSize'
 const GRAMMAR_STUDY_PROGRESS_KEY = 'kanjiApp.grammarStudyProgress'
 const DEFAULT_STUDY_BATCH_SIZE = 10
 
@@ -337,14 +336,6 @@ export function getAllVocabStudyProgress(): Record<string, number> {
 
 export function importVocabStudyProgress(progress: Record<string, number>) {
   importLevelProgress(VOCAB_STUDY_PROGRESS_KEY, progress)
-}
-
-export function getVocabStudyBatchSize(): number {
-  return getBatchSize(VOCAB_STUDY_BATCH_SIZE_KEY)
-}
-
-export function setVocabStudyBatchSize(size: number) {
-  localStorage.setItem(VOCAB_STUDY_BATCH_SIZE_KEY, String(size))
 }
 
 // same shape again, but for the 문법(grammar) 학습 flow
