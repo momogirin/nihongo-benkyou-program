@@ -14,6 +14,13 @@
      Same value in both themes since this is a local text/fill contrast,
      not a page-background-relative one. */
   --color-button-fill: #C2410C;
+  /* text color for small solid-orange badges (급수 배지 등) that use
+     --color-primary itself as the fill — white fails contrast here same
+     as --color-button-fill's note above, but darkening the fill (like
+     buttons do) reads as dull/muddy on a small badge, so this flips it:
+     keep the fill vivid and darken the text instead. One fixed value in
+     both themes since --color-primary is similarly bright/light in both. */
+  --color-on-primary: #1E1E20;
   --color-accent: #B23A2E;
   --color-correct: #1F9254;
   --color-incorrect: #E5484D;

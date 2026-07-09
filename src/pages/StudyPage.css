@@ -110,8 +110,8 @@
 .study-level-badge {
   padding: 3px 10px;
   border-radius: var(--radius-sm);
-  background: var(--color-button-fill);
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.02em;
