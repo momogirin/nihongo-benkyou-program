@@ -32,6 +32,20 @@
   --color-radical-tag: #8A6D3B;
   --color-selected-bg: rgba(255, 108, 55, 0.08);
 
+  /* JLPT has no official per-level color — this follows the common
+     beginner(green)->advanced(red) convention seen in CEFR "language
+     passport" self-assessment charts, which JLPT levels are often
+     mapped against (N5≈A1 ... N1≈C1). One value per level, same in
+     both themes (already bright enough not to need a dark-mode bump).
+     --color-on-level is the dark text color used on top of all five —
+     same rationale as --color-on-primary below. */
+  --color-level-n5: #22C55E;
+  --color-level-n4: #3B82F6;
+  --color-level-n3: #F59E0B;
+  --color-level-n2: #FB6B1D;
+  --color-level-n1: #F2555F;
+  --color-on-level: #1A1A1C;
+
   --font-display: 'Noto Serif JP', serif;
   --font-sans: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
   --font-caption: 'Noto Sans KR', sans-serif;

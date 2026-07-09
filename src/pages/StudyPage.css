@@ -110,12 +110,17 @@
 .study-level-badge {
   padding: 3px 10px;
   border-radius: var(--radius-sm);
-  background: var(--color-primary);
-  color: var(--color-on-primary);
+  color: var(--color-on-level);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
+
+.study-level-badge-n5 { background: var(--color-level-n5); }
+.study-level-badge-n4 { background: var(--color-level-n4); }
+.study-level-badge-n3 { background: var(--color-level-n3); }
+.study-level-badge-n2 { background: var(--color-level-n2); }
+.study-level-badge-n1 { background: var(--color-level-n1); }
 
 .study-radical-chip {
   padding: 3px 10px;

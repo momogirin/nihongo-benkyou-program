@@ -54,7 +54,7 @@ export default function KanjiListPage() {
           </div>
           <div className="study-card">
             <div className="study-top">
-              <span className="study-level-badge">{kanji.level}</span>
+              <span className={`study-level-badge study-level-badge-${kanji.level.toLowerCase()}`}>{kanji.level}</span>
               {radical && (
                 <span className="study-radical-chip">
                   부수 {radical.radical} · {radical.strokeCount}획

@@ -212,7 +212,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           </div>
           <div className="study-card">
             <div className="study-top">
-              <span className="study-level-badge">{word.level}</span>
+              <span className={`study-level-badge study-level-badge-${word.level.toLowerCase()}`}>{word.level}</span>
             </div>
             <div className="vocab-word-jp">{word.word}</div>
             <div className="vocab-word-reading">{word.reading}</div>

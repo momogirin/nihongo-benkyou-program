@@ -209,7 +209,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
           </div>
           <div className="study-card">
             <div className="study-top">
-              <span className="study-level-badge">{point.level}</span>
+              <span className={`study-level-badge study-level-badge-${point.level.toLowerCase()}`}>{point.level}</span>
             </div>
             <div className="grammar-pattern-label">문형</div>
             <div className="grammar-pattern">{point.pattern}</div>

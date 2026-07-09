@@ -33,7 +33,7 @@ export default function RadicalsPage() {
           </div>
           <div className="study-card">
             <div className="study-top">
-              <span className="study-level-badge">{radical.level}</span>
+              <span className={`study-level-badge study-level-badge-${radical.level.toLowerCase()}`}>{radical.level}</span>
               <span className="study-radical-chip">
                 제{radical.number}부수 · {radical.strokeCount}획
               </span>
