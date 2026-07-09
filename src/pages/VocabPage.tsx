@@ -12,6 +12,7 @@ import {
   addVocabQuizHistoryEntry,
   addVocabWrongNotes,
   getVocabStudyProgress,
+  recordSrsReview,
   removeVocabWrongNote,
   setVocabStudyProgress,
 } from '../lib/storage'
@@ -115,6 +116,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     })
     // a word answered correctly this round is no longer a standing weak point
     quizAnswers.filter((a) => a.isCorrect).forEach((a) => removeVocabWrongNote(a.question.entry.id))
+    quizAnswers.forEach((a) => recordSrsReview('vocab', a.question.entry.id, a.isCorrect))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 

@@ -4,6 +4,7 @@ import { vocabList } from '../data/vocab'
 import { grammarList } from '../data/grammar'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import {
+  getDueSrsIds,
   getGrammarQuizHistory,
   getGrammarWrongNotes,
   getInProgressQuiz,
@@ -118,6 +119,12 @@ export default function HomePage({
       .filter((id) => validIds.has(id))
   }, [])
 
+  // SRS(간격반복 복습) — 퀴즈에서 한 번이라도 다뤄진 항목 중 복습 시점이 된 것.
+  // 오답노트(항상 틀린 것)와 달리 "지금이 다시 볼 타이밍"이라는 시간 축 정보라 별도 카드로 둠
+  const dueKanjiIds = useMemo(() => getDueSrsIds('kanji', kanjiList.map((k) => k.id)), [])
+  const dueVocabIds = useMemo(() => getDueSrsIds('vocab', vocabList.map((w) => w.id)), [])
+  const dueGrammarIds = useMemo(() => getDueSrsIds('grammar', grammarList.map((g) => g.id)), [])
+
   const hasAnyEntry =
     studyProgress ||
     vocabStudyProgress ||
@@ -125,7 +132,10 @@ export default function HomePage({
     inProgress ||
     wrongNoteIds.length > 0 ||
     vocabWrongIds.length > 0 ||
-    grammarWrongIds.length > 0
+    grammarWrongIds.length > 0 ||
+    dueKanjiIds.length > 0 ||
+    dueVocabIds.length > 0 ||
+    dueGrammarIds.length > 0
   if (!hasAnyEntry && mergedHistory.length === 0) {
     return (
       <div className="page">
@@ -141,6 +151,36 @@ export default function HomePage({
 
       {hasAnyEntry && (
         <div className="home-entry-grid">
+          {dueKanjiIds.length > 0 && (
+            <button
+              type="button"
+              className="home-entry-card home-entry-card-review"
+              onClick={() => onStartQuiz(kanjiIdsQuizConfig(dueKanjiIds))}
+            >
+              <span className="home-entry-title">한자 복습</span>
+              <span className="home-entry-detail">{dueKanjiIds.length}자 복습할 시간이에요</span>
+            </button>
+          )}
+          {dueVocabIds.length > 0 && (
+            <button
+              type="button"
+              className="home-entry-card home-entry-card-review"
+              onClick={() => onRetryVocab(dueVocabIds)}
+            >
+              <span className="home-entry-title">단어 복습</span>
+              <span className="home-entry-detail">{dueVocabIds.length}개 복습할 시간이에요</span>
+            </button>
+          )}
+          {dueGrammarIds.length > 0 && (
+            <button
+              type="button"
+              className="home-entry-card home-entry-card-review"
+              onClick={() => onRetryGrammar(dueGrammarIds)}
+            >
+              <span className="home-entry-title">문법 복습</span>
+              <span className="home-entry-detail">{dueGrammarIds.length}개 복습할 시간이에요</span>
+            </button>
+          )}
           {studyProgress && (
             <button type="button" className="home-entry-card" onClick={onGoToStudy}>
               <span className="home-entry-title">한자 학습 진도</span>

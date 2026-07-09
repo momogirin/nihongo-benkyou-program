@@ -23,6 +23,14 @@
   background: var(--color-selected-bg);
 }
 
+.home-entry-card-review {
+  border-color: var(--color-primary);
+}
+
+.home-entry-card-review .home-entry-title {
+  color: var(--color-primary-dark);
+}
+
 .home-entry-title {
   font-family: var(--font-display);
   font-size: 18px;

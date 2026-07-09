@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { correctAnswerLabel } from '../lib/answerMatching'
-import { addWrongNotes, removeWrongNote } from '../lib/storage'
+import { addWrongNotes, recordSrsReview, removeWrongNote } from '../lib/storage'
 import type { AnsweredQuestion, QuestionType } from '../types'
 import './ResultScreen.css'
 
@@ -35,6 +35,7 @@ export default function ResultScreen({ answers, elapsedMs, questionType, onResta
     addWrongNotes(wrongIds)
     // a kanji answered correctly this round is no longer a standing weak point
     answers.filter((a) => a.isCorrect).forEach((a) => removeWrongNote(a.kanji.id))
+    answers.forEach((a) => recordSrsReview('kanji', a.kanji.id, a.isCorrect))
     // focus the restart button so Enter/Space works right away — the quiz's
     // last choice button was disabled/unmounted, so nothing carries focus over.
     // preventScroll: true because this button sits at the end of the answer

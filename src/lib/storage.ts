@@ -43,6 +43,32 @@ const VOCAB_STUDY_PROGRESS_KEY = 'kanjiApp.vocabStudyProgress'
 const GRAMMAR_STUDY_PROGRESS_KEY = 'kanjiApp.grammarStudyProgress'
 const DEFAULT_STUDY_BATCH_SIZE = 10
 
+// SRS(간격반복 복습, 라이트너 방식): 퀴즈에서 맞히면 박스가 하나 올라가고 다음
+// 복습일이 더 멀어지고, 틀리면 박스 0으로 돌아가 바로 다음날 다시 나옴.
+// 학습(flashcard)이 아니라 퀴즈로 실제 recall을 테스트했을 때만 갱신됨.
+export type SrsDomain = 'kanji' | 'vocab' | 'grammar'
+
+export interface SrsEntry {
+  box: number
+  dueAt: string
+  updatedAt: string
+}
+
+const SRS_STATE_KEY: Record<SrsDomain, string> = {
+  kanji: 'kanjiApp.srsKanji',
+  vocab: 'kanjiApp.srsVocab',
+  grammar: 'kanjiApp.srsGrammar',
+}
+
+const SRS_MAX_BOX = 4
+const SRS_BOX_INTERVAL_DAYS = [1, 3, 7, 14, 30]
+
+function addDaysIso(days: number): string {
+  const d = new Date()
+  d.setDate(d.getDate() + days)
+  return d.toISOString()
+}
+
 export function getWrongNotes(): WrongNoteEntry[] {
   try {
     const raw = localStorage.getItem(WRONG_NOTES_KEY)
@@ -355,11 +381,63 @@ export function importGrammarStudyProgress(progress: Record<string, number>) {
   importLevelProgress(GRAMMAR_STUDY_PROGRESS_KEY, progress)
 }
 
+function getSrsStateMap(domain: SrsDomain): Record<string, SrsEntry> {
+  try {
+    const raw = localStorage.getItem(SRS_STATE_KEY[domain])
+    return raw ? JSON.parse(raw) : {}
+  } catch {
+    return {}
+  }
+}
+
+export function getAllSrsState(domain: SrsDomain): Record<string, SrsEntry> {
+  return getSrsStateMap(domain)
+}
+
+// call once per quiz question answered (not on flashcard 학습) — correct
+// answers push the box up (further out next review), wrong answers reset to
+// box 0 (due again tomorrow)
+export function recordSrsReview(domain: SrsDomain, itemId: string, correct: boolean) {
+  const state = getSrsStateMap(domain)
+  const prevBox = state[itemId]?.box
+  const box = correct ? Math.min((prevBox ?? -1) + 1, SRS_MAX_BOX) : 0
+  state[itemId] = {
+    box,
+    // wrong answers resurface right away (dueAt = now) instead of waiting a
+    // full box-0 interval — only a correct answer earns the longer gap
+    dueAt: correct ? addDaysIso(SRS_BOX_INTERVAL_DAYS[box]) : new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  }
+  localStorage.setItem(SRS_STATE_KEY[domain], JSON.stringify(state))
+}
+
+// which of these ids are due for review right now — only ids that have been
+// quizzed at least once even show up (never-studied items aren't "due")
+export function getDueSrsIds(domain: SrsDomain, candidateIds: string[]): string[] {
+  const state = getSrsStateMap(domain)
+  const now = new Date().toISOString()
+  return candidateIds.filter((id) => {
+    const entry = state[id]
+    return entry !== undefined && entry.dueAt <= now
+  })
+}
+
+// merges by item id, keeping whichever side was updated more recently —
+// same "newest wins" rule used by wrong notes/quiz history above
+export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEntry>) {
+  const state = getSrsStateMap(domain)
+  for (const [id, entry] of Object.entries(entries)) {
+    const existing = state[id]
+    if (!existing || existing.updatedAt < entry.updatedAt) state[id] = entry
+  }
+  localStorage.setItem(SRS_STATE_KEY[domain], JSON.stringify(state))
+}
+
 // the full local-storage snapshot shared by BackupPage's file export/import
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8
+  version: 8 | 9
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -372,6 +450,10 @@ export interface BackupPayload {
   vocabQuizHistory: SimpleQuizHistoryEntry[]
   grammarQuizHistory: SimpleQuizHistoryEntry[]
   inProgressQuiz: InProgressQuiz | null
+  // added in version 9 — optional so older backup files (version 8) still validate
+  srsKanji?: Record<string, SrsEntry>
+  srsVocab?: Record<string, SrsEntry>
+  srsGrammar?: Record<string, SrsEntry>
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -380,7 +462,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 8,
+    version: 9,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -393,6 +475,9 @@ export function buildBackupPayload(): BackupPayload {
     vocabQuizHistory: getVocabQuizHistory(),
     grammarQuizHistory: getGrammarQuizHistory(),
     inProgressQuiz: getInProgressQuiz(),
+    srsKanji: getAllSrsState('kanji'),
+    srsVocab: getAllSrsState('vocab'),
+    srsGrammar: getAllSrsState('grammar'),
   }
 }
 
@@ -411,4 +496,7 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.vocabQuizHistory) importVocabQuizHistory(payload.vocabQuizHistory)
   if (payload.grammarQuizHistory) importGrammarQuizHistory(payload.grammarQuizHistory)
   if (payload.inProgressQuiz) importInProgressQuiz(payload.inProgressQuiz)
+  if (payload.srsKanji) importSrsState('kanji', payload.srsKanji)
+  if (payload.srsVocab) importSrsState('vocab', payload.srsVocab)
+  if (payload.srsGrammar) importSrsState('grammar', payload.srsGrammar)
 }

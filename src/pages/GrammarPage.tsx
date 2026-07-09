@@ -13,6 +13,7 @@ import {
   addGrammarQuizHistoryEntry,
   addGrammarWrongNotes,
   getGrammarStudyProgress,
+  recordSrsReview,
   removeGrammarWrongNote,
   setGrammarStudyProgress,
 } from '../lib/storage'
@@ -115,6 +116,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     })
     // a grammar point answered correctly this round is no longer a standing weak point
     quizAnswers.filter((a) => a.isCorrect).forEach((a) => removeGrammarWrongNote(a.question.entry.id))
+    quizAnswers.forEach((a) => recordSrsReview('grammar', a.question.entry.id, a.isCorrect))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 
