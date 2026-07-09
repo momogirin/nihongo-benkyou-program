@@ -99,6 +99,33 @@
   text-align: left;
 }
 
+.study-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.study-level-badge {
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-button-fill);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.study-radical-chip {
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-selected-bg);
+  color: var(--color-primary-dark);
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .study-kanji {
   font-family: var(--font-display);
   font-size: 72px;
@@ -111,6 +138,12 @@
   flex-direction: column;
   gap: 12px;
   margin: 0;
+}
+
+.study-fields-core {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .study-field {
@@ -129,6 +162,10 @@
 .study-field dd {
   margin: 0;
   font-size: 15px;
+}
+
+.study-example-reading {
+  font-weight: 700;
 }
 
 .study-used-kanji {
