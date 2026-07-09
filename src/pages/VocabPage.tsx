@@ -225,12 +225,39 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
                 <dt>영문 뜻</dt>
                 <dd>{word.meaningEn}</dd>
               </div>
+              {word.exampleJp && (
+                <div className="study-field">
+                  <dt>예문</dt>
+                  <dd>
+                    {word.exampleJp}
+                    <br />
+                    <span className="vocab-example-kr">{word.exampleKr}</span>
+                  </dd>
+                </div>
+              )}
               {usedKanji(word.word).length > 0 && (
                 <div className="study-field">
                   <dt>한자</dt>
                   <dd>
                     <div className="study-used-kanji">
                       {usedKanji(word.word).map((k) => (
+                        <span key={k.id} className="study-used-kanji-chip">
+                          <span className="study-used-kanji-char">{k.kanji}</span>
+                          <span className="study-used-kanji-info">
+                            {k.level} · {k.kunKr}
+                          </span>
+                        </span>
+                      ))}
+                    </div>
+                  </dd>
+                </div>
+              )}
+              {word.exampleJp && usedKanji(word.exampleJp).length > 0 && (
+                <div className="study-field">
+                  <dt>예문 한자</dt>
+                  <dd>
+                    <div className="study-used-kanji">
+                      {usedKanji(word.exampleJp).map((k) => (
                         <span key={k.id} className="study-used-kanji-chip">
                           <span className="study-used-kanji-char">{k.kanji}</span>
                           <span className="study-used-kanji-info">

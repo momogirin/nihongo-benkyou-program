@@ -12,6 +12,11 @@
   margin-bottom: 20px;
 }
 
+.vocab-example-kr {
+  color: var(--color-ink-muted);
+  font-size: 13px;
+}
+
 .vocab-quiz-button {
   display: block;
   width: 100%;
