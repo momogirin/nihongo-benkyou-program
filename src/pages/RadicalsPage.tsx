@@ -32,6 +32,12 @@ export default function RadicalsPage() {
             {selectedIndex + 1} / {sortedRadicals.length}
           </div>
           <div className="study-card">
+            <div className="study-top">
+              <span className="study-level-badge">{radical.level}</span>
+              <span className="study-radical-chip">
+                제{radical.number}부수 · {radical.strokeCount}획
+              </span>
+            </div>
             <div className="study-kanji">{radical.radical}</div>
             <dl className="study-fields">
               <div className="study-field">
@@ -41,14 +47,6 @@ export default function RadicalsPage() {
               <div className="study-field">
                 <dt>영문 뜻</dt>
                 <dd>{radical.meaningEn}</dd>
-              </div>
-              <div className="study-field">
-                <dt>획수</dt>
-                <dd>{radical.strokeCount}획</dd>
-              </div>
-              <div className="study-field">
-                <dt>번호</dt>
-                <dd>제{radical.number}부수</dd>
               </div>
             </dl>
           </div>

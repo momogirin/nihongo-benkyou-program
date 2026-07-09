@@ -53,12 +53,16 @@ export default function KanjiListPage() {
             </div>
           </div>
           <div className="study-card">
+            <div className="study-top">
+              <span className="study-level-badge">{kanji.level}</span>
+              {radical && (
+                <span className="study-radical-chip">
+                  부수 {radical.radical} · {radical.strokeCount}획
+                </span>
+              )}
+            </div>
             <div className="study-kanji">{kanji.kanji}</div>
-            <dl className="study-fields">
-              <div className="study-field">
-                <dt>급수</dt>
-                <dd>{kanji.level}</dd>
-              </div>
+            <dl className="study-fields study-fields-core">
               <div className="study-field">
                 <dt>한국 훈음</dt>
                 <dd>{kanji.kunKr}</dd>
@@ -71,14 +75,8 @@ export default function KanjiListPage() {
                 <dt>일본 음독</dt>
                 <dd>{kanji.onJp}</dd>
               </div>
-              {radical && (
-                <div className="study-field">
-                  <dt>부수</dt>
-                  <dd>
-                    {radical.radical} ({radical.meaningKr})
-                  </dd>
-                </div>
-              )}
+            </dl>
+            <dl className="study-fields study-fields-sub">
               <div className="study-field">
                 <dt>유래</dt>
                 <dd>{content.etymology}</dd>
@@ -88,7 +86,11 @@ export default function KanjiListPage() {
                   <dt>예문</dt>
                   <dd>
                     {kanji.exampleKanji}
-                    {kanji.exampleJp && `(${kanji.exampleJp})`}
+                    {kanji.exampleJp && (
+                      <>
+                        (<span className="study-example-reading">{kanji.exampleJp}</span>)
+                      </>
+                    )}
                     {kanji.exampleKr && ` · ${kanji.exampleKr}`}
                   </dd>
                 </div>
