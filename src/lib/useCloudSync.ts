@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { FirebaseError } from 'firebase/app'
 import {
   GoogleAuthProvider,
   onAuthStateChanged,
@@ -9,6 +10,25 @@ import {
 import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { auth, db, isFirebaseConfigured } from './firebase'
 import { applyBackupPayload, buildBackupPayload, isBackupPayload } from './storage'
+
+// surfaces the actual Firebase error code instead of a one-size-fits-all
+// message — "popup blocked" and "this domain isn't allowed to sign in" look
+// identical to the user otherwise, and only one of them is fixable by them
+function describeAuthError(err: unknown): string {
+  if (err instanceof FirebaseError) {
+    switch (err.code) {
+      case 'auth/popup-blocked':
+        return '로그인 실패 — 브라우저가 로그인 팝업을 차단했습니다. 팝업 차단을 해제하고 다시 시도하세요'
+      case 'auth/unauthorized-domain':
+        return '로그인 실패 — 이 사이트 도메인이 Firebase에 승인되지 않았습니다 (Firebase 콘솔 → Authentication → Settings → 승인된 도메인에 추가 필요)'
+      case 'auth/network-request-failed':
+        return '로그인 실패 — 네트워크 연결을 확인하세요'
+      default:
+        return `로그인 실패 (${err.code})`
+    }
+  }
+  return '로그인 실패 — 알 수 없는 오류'
+}
 
 // how often a logged-in session re-syncs in the background, on top of the
 // always-on login/logout/tab-hide/manual triggers below
@@ -53,8 +73,9 @@ export function useCloudSync(): CloudSyncState {
       const merged = buildBackupPayload()
       await setDoc(ref, merged)
       setLastSyncedAt(merged.exportedAt)
-    } catch {
-      setError('동기화 실패 — 네트워크를 확인하고 다시 시도하세요')
+    } catch (err) {
+      const code = err instanceof FirebaseError ? ` (${err.code})` : ''
+      setError(`동기화 실패${code} — 네트워크를 확인하고 다시 시도하세요`)
     } finally {
       setSyncing(false)
     }
@@ -90,10 +111,15 @@ export function useCloudSync(): CloudSyncState {
     if (!isFirebaseConfigured || !auth) return
     setLoading(true)
     setError(null)
-    signInWithPopup(auth, new GoogleAuthProvider()).catch(() => {
-      setError('로그인 실패 — 팝업이 차단되지 않았는지 확인하세요')
-      setLoading(false)
-    })
+    signInWithPopup(auth, new GoogleAuthProvider())
+      .catch((err) => {
+        // user closing the account picker themselves isn't a real error
+        const dismissed =
+          err instanceof FirebaseError &&
+          (err.code === 'auth/popup-closed-by-user' || err.code === 'auth/cancelled-popup-request')
+        if (!dismissed) setError(describeAuthError(err))
+      })
+      .finally(() => setLoading(false))
   }
 
   function signOut() {
