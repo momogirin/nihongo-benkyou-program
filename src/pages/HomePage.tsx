@@ -130,7 +130,7 @@ export default function HomePage({
     return (
       <div className="page">
         <h1>홈</h1>
-        <p className="page-placeholder">사이드바의 '퀴즈'에서 학습을 시작하세요.</p>
+        <p className="page-placeholder">사이드바의 '한자'에서 학습을 시작하세요.</p>
       </div>
     )
   }

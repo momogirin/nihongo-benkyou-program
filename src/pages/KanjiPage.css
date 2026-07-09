@@ -1,0 +1,31 @@
+.kanji-tabs {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .kanji-tabs {
+    padding: 32px 20px 0;
+  }
+}
+
+.kanji-tab {
+  padding: 8px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.kanji-tab.active {
+  background: var(--color-selected-bg);
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}

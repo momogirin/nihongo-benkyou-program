@@ -6,12 +6,10 @@ import './Sidebar.css'
 // instead of being flattened into the top-level nav. It's always expanded
 // since it's the only subject group right now.
 const JAPANESE_ITEMS: { id: PageId; label: string }[] = [
-  { id: 'study', label: '학습' },
-  { id: 'quiz', label: '퀴즈' },
-  { id: 'wrongNote', label: '오답노트' },
-  { id: 'radicals', label: '부수' },
+  { id: 'kanji', label: '한자' },
   { id: 'vocab', label: '단어' },
   { id: 'grammar', label: '문법' },
+  { id: 'wrongNote', label: '오답노트' },
 ]
 
 interface Props {

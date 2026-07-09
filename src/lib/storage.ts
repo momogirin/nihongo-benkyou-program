@@ -37,13 +37,11 @@ const GRAMMAR_QUIZ_HISTORY_KEY = 'kanjiApp.grammarQuizHistory'
 const QUIZ_HISTORY_LIMIT = 20
 const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
 const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
-const STUDY_BATCH_SIZE_KEY = 'kanjiApp.studyBatchSize'
 const RADICAL_STUDY_PROGRESS_KEY = 'kanjiApp.radicalStudyProgress'
 const RADICAL_STUDY_BATCH_SIZE_KEY = 'kanjiApp.radicalStudyBatchSize'
 const VOCAB_STUDY_PROGRESS_KEY = 'kanjiApp.vocabStudyProgress'
 const VOCAB_STUDY_BATCH_SIZE_KEY = 'kanjiApp.vocabStudyBatchSize'
 const GRAMMAR_STUDY_PROGRESS_KEY = 'kanjiApp.grammarStudyProgress'
-const GRAMMAR_STUDY_BATCH_SIZE_KEY = 'kanjiApp.grammarStudyBatchSize'
 const DEFAULT_STUDY_BATCH_SIZE = 10
 
 export function getWrongNotes(): WrongNoteEntry[] {
@@ -299,14 +297,6 @@ export function importStudyProgress(progress: Record<string, number>) {
   importLevelProgress(STUDY_PROGRESS_KEY, progress)
 }
 
-export function getStudyBatchSize(): number {
-  return getBatchSize(STUDY_BATCH_SIZE_KEY)
-}
-
-export function setStudyBatchSize(size: number) {
-  localStorage.setItem(STUDY_BATCH_SIZE_KEY, String(size))
-}
-
 // same shape as the kanji study progress above, but for the 부수 학습 flow
 export function getRadicalStudyProgress(level: KanjiLevel): number {
   return getLevelProgressMap(RADICAL_STUDY_PROGRESS_KEY)[level] ?? 0
@@ -372,12 +362,4 @@ export function getAllGrammarStudyProgress(): Record<string, number> {
 
 export function importGrammarStudyProgress(progress: Record<string, number>) {
   importLevelProgress(GRAMMAR_STUDY_PROGRESS_KEY, progress)
-}
-
-export function getGrammarStudyBatchSize(): number {
-  return getBatchSize(GRAMMAR_STUDY_BATCH_SIZE_KEY)
-}
-
-export function setGrammarStudyBatchSize(size: number) {
-  localStorage.setItem(GRAMMAR_STUDY_BATCH_SIZE_KEY, String(size))
 }

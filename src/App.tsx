@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
 import Sidebar from './components/Sidebar'
 import HomePage from './pages/HomePage'
-import StudyPage from './pages/StudyPage'
-import QuizPage from './pages/QuizPage'
+import KanjiPage from './pages/KanjiPage'
 import WrongNotePage from './pages/WrongNotePage'
-import RadicalsPage from './pages/RadicalsPage'
 import VocabPage from './pages/VocabPage'
 import GrammarPage from './pages/GrammarPage'
 import BackupPage from './pages/BackupPage'
@@ -42,12 +40,12 @@ function App() {
 
   function startQuiz(config: QuizConfig) {
     setPendingQuizConfig(config)
-    setPage('quiz')
+    setPage('kanji')
   }
 
   function resumeQuiz() {
     setResumeRequested(true)
-    setPage('quiz')
+    setPage('kanji')
   }
 
   function retryVocab(ids: string[]) {
@@ -72,28 +70,24 @@ function App() {
           <HomePage
             onStartQuiz={startQuiz}
             onResumeQuiz={resumeQuiz}
-            onGoToStudy={() => handleNavigate('study')}
+            onGoToStudy={() => handleNavigate('kanji')}
             onGoToVocab={() => handleNavigate('vocab')}
             onGoToGrammar={() => handleNavigate('grammar')}
             onRetryVocab={retryVocab}
             onRetryGrammar={retryGrammar}
           />
         )
-      case 'study':
-        return <StudyPage onStartQuiz={startQuiz} />
-      case 'quiz':
+      case 'kanji':
         return (
-          <QuizPage
-            initialConfig={pendingQuizConfig}
-            onInitialConfigConsumed={() => setPendingQuizConfig(null)}
+          <KanjiPage
+            quizConfig={pendingQuizConfig}
+            onQuizConfigConsumed={() => setPendingQuizConfig(null)}
             resumeRequested={resumeRequested}
             onResumeRequestConsumed={() => setResumeRequested(false)}
           />
         )
       case 'wrongNote':
         return <WrongNotePage onStartQuiz={startQuiz} onRetryVocab={retryVocab} onRetryGrammar={retryGrammar} />
-      case 'radicals':
-        return <RadicalsPage />
       case 'vocab':
         return (
           <VocabPage

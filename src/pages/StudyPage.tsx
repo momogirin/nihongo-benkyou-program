@@ -3,7 +3,7 @@ import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
-import { getStudyBatchSize, getStudyProgress, setStudyBatchSize, setStudyProgress } from '../lib/storage'
+import { getStudyProgress, setStudyProgress } from '../lib/storage'
 import type { QuizConfig } from '../types'
 import './StudyPage.css'
 
@@ -28,7 +28,6 @@ export default function StudyPage({ onStartQuiz }: Props) {
   const completedCount = level ? Math.min(getStudyProgress(level), pool.length) : 0
   const remaining = pool.length - completedCount
 
-  const [batchSizeInput, setBatchSizeInput] = useState(() => getStudyBatchSize())
   const [phase, setPhase] = useState<Phase>('setup')
   const [batch, setBatch] = useState<Kanji[]>([])
   const [cardIndex, setCardIndex] = useState(0)
@@ -43,9 +42,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
 
   function startBatch() {
     if (!level) return
-    const size = Math.max(1, Math.min(batchSizeInput || 1, remaining))
-    setStudyBatchSize(size)
-    setBatch(pool.slice(completedCount, completedCount + size))
+    setBatch(pool.slice(completedCount))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -54,6 +51,14 @@ export default function StudyPage({ onStartQuiz }: Props) {
     if (!level) return
     setStudyProgress(level, completedCount + batch.length)
     setPhase('done')
+  }
+
+  // saves progress up to (not including) the card being left, so 이어하기
+  // re-shows that same card rather than skipping it
+  function exitBatch() {
+    if (!level) return
+    setStudyProgress(level, completedCount + cardIndex)
+    setPhase('setup')
   }
 
   useEffect(() => {
@@ -87,8 +92,13 @@ export default function StudyPage({ onStartQuiz }: Props) {
     return (
       <div className="page study-page">
         <div className="study-content">
-          <div className="quiz-progress">
-            {cardIndex + 1} / {batch.length}
+          <div className="study-topbar">
+            <button type="button" className="study-exit-button" onClick={exitBatch}>
+              나가기
+            </button>
+            <div className="quiz-progress">
+              {cardIndex + 1} / {batch.length}
+            </div>
           </div>
           <div className="study-card">
             <div className="study-kanji">{kanji.kanji}</div>
@@ -199,17 +209,6 @@ export default function StudyPage({ onStartQuiz }: Props) {
         <p className="page-placeholder">이 급수를 모두 학습했습니다.</p>
       ) : (
         <>
-          <label className="study-batch-size">
-            한 번에
-            <input
-              type="number"
-              min={1}
-              max={remaining}
-              value={batchSizeInput}
-              onChange={(e) => setBatchSizeInput(Number(e.target.value))}
-            />
-            개씩
-          </label>
           <button type="button" className="study-start-button" onClick={startBatch}>
             {completedCount > 0 ? '이어하기' : '시작하기'}
           </button>

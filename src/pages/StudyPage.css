@@ -67,19 +67,27 @@
 
 .study-page {
   max-width: 560px;
-  display: flex;
-  flex-direction: column;
-  /* matches .page's 48px/64px+32px vertical padding (96px either way) so
-     this column always spans the full viewport height */
-  min-height: calc(100svh - 96px);
 }
 
-.study-content {
-  flex: 1;
-  min-height: 0;
+.study-topbar {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.study-exit-button {
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink-muted);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.study-topbar .quiz-progress {
+  margin-bottom: 0;
 }
 
 .study-card {
@@ -87,7 +95,7 @@
   border-radius: var(--radius-xl);
   background: var(--color-bg-elevated);
   padding: 32px 28px;
-  margin: 16px 0 24px;
+  margin: 12px 0 20px;
   text-align: left;
 }
 
@@ -153,11 +161,6 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  padding: 16px 0;
-  position: sticky;
-  bottom: 0;
-  background: var(--color-bg);
-  border-top: 1px solid var(--color-border);
 }
 
 .study-nav button {
