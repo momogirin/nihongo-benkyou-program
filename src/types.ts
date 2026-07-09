@@ -1,6 +1,7 @@
 import type { Kanji, KanjiLevel } from './data/kanji'
+import type { MockExamDomain } from './lib/mockExamGenerator'
 
-export type PageId = 'home' | 'kanji' | 'wrongNote' | 'vocab' | 'grammar' | 'backup'
+export type PageId = 'home' | 'kanji' | 'wrongNote' | 'vocab' | 'grammar' | 'mockExam' | 'backup'
 
 export type QuestionType =
   | 'promptToAnswer'
@@ -49,4 +50,16 @@ export interface SimpleQuizHistoryEntry {
   correct: number
   elapsedMs: number
   finishedAt: string
+}
+
+// 모의고사(한자/단어/문법 통합) 한 회차 기록 — SimpleQuizHistoryEntry에 도메인별
+// 정답/전체 브레이크다운만 추가된 형태
+export interface MockExamHistoryEntry {
+  id: string
+  level: KanjiLevel
+  total: number
+  correct: number
+  elapsedMs: number
+  finishedAt: string
+  breakdown: Record<MockExamDomain, { total: number; correct: number }>
 }

@@ -11,7 +11,12 @@
       "Bash(ls -la ~/.claude/projects/ 2>/dev/null | head -20)",
       "Bash(npm run build)",
       "Bash(npm run lint)",
+      "Bash(npm run dev *)",
       "Bash(npx tsc --noEmit)",
+      "Bash(npx tsc -b --noEmit)",
+      "Bash(npx tsc -b --noEmit *)",
+      "Bash(npx oxlint src)",
+      "Bash(npx oxlint src *)",
       "Read(//c/Users/cch16/.claude/projects/**)",
       "Read(//c/Users/cch16/.claude/projects/e--99-------99----------nihongo-benkyou-program/**)",
       "Read(//c/Users/cch16/.claude/projects/e--02-AxiQuant-1-AxiQuant2-Client/**)"

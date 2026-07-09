@@ -1,0 +1,132 @@
+.mock-exam-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.mock-exam-header-row .quiz-progress {
+  margin-bottom: 0;
+}
+
+.mock-exam-timer {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.mock-exam-timer.low {
+  color: var(--color-incorrect);
+}
+
+.mock-exam-domain-badge {
+  display: inline-block;
+  margin: 20px auto 0;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--color-selected-bg);
+  color: var(--color-primary-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mock-exam-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 16px 0 32px;
+}
+
+.mock-exam-prompt-main {
+  font-family: var(--font-display);
+  font-size: 40px;
+}
+
+.mock-exam-prompt-sub {
+  color: var(--color-ink-muted);
+  font-size: 16px;
+}
+
+.mock-exam-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mock-exam-choice {
+  position: relative;
+  padding: 16px 16px 16px 44px;
+  text-align: left;
+  font-size: 17px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.mock-exam-choice:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-selected-bg);
+}
+
+.mock-exam-choice:disabled {
+  cursor: default;
+}
+
+.mock-exam-choice.correct {
+  border-color: var(--color-correct);
+  background: rgba(63, 125, 87, 0.12);
+  color: var(--color-correct);
+}
+
+.mock-exam-choice.incorrect {
+  border-color: var(--color-incorrect);
+  background: var(--color-selected-bg);
+  color: var(--color-incorrect);
+}
+
+.mock-exam-choice.reveal-correct {
+  border-color: var(--color-correct);
+  color: var(--color-correct);
+}
+
+.mock-exam-breakdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.mock-exam-breakdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.mock-exam-breakdown-label {
+  font-size: 13px;
+  color: var(--color-ink-muted);
+}
+
+.mock-exam-breakdown-score {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mock-exam-result-domain {
+  flex: none;
+  width: 40px;
+  padding-top: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}

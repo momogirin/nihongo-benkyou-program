@@ -1,6 +1,12 @@
 import type { KanjiLevel } from '../data/kanji'
 import type { QuizQuestion } from './quizGenerator'
-import type { AnsweredQuestion, QuizConfig, QuizHistoryEntry, SimpleQuizHistoryEntry } from '../types'
+import type {
+  AnsweredQuestion,
+  MockExamHistoryEntry,
+  QuizConfig,
+  QuizHistoryEntry,
+  SimpleQuizHistoryEntry,
+} from '../types'
 
 export interface WrongNoteEntry {
   kanjiId: string
@@ -34,6 +40,7 @@ const GRAMMAR_WRONG_NOTES_KEY = 'kanjiApp.grammarWrongNotes'
 const QUIZ_HISTORY_KEY = 'kanjiApp.quizHistory'
 const VOCAB_QUIZ_HISTORY_KEY = 'kanjiApp.vocabQuizHistory'
 const GRAMMAR_QUIZ_HISTORY_KEY = 'kanjiApp.grammarQuizHistory'
+const MOCK_EXAM_HISTORY_KEY = 'kanjiApp.mockExamHistory'
 const QUIZ_HISTORY_LIMIT = 20
 const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
 const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
@@ -151,6 +158,28 @@ export function importGrammarQuizHistory(entries: SimpleQuizHistoryEntry[]) {
   for (const entry of entries) byId.set(entry.id, entry)
   const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
   localStorage.setItem(GRAMMAR_QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
+}
+
+// 모의고사(한자/단어/문법 통합) 기록 — 위 세 히스토리와 같은 패턴
+export function getMockExamHistory(): MockExamHistoryEntry[] {
+  try {
+    const raw = localStorage.getItem(MOCK_EXAM_HISTORY_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function addMockExamHistoryEntry(entry: MockExamHistoryEntry) {
+  const history = [entry, ...getMockExamHistory()].slice(0, QUIZ_HISTORY_LIMIT)
+  localStorage.setItem(MOCK_EXAM_HISTORY_KEY, JSON.stringify(history))
+}
+
+export function importMockExamHistory(entries: MockExamHistoryEntry[]) {
+  const byId = new Map(getMockExamHistory().map((entry) => [entry.id, entry]))
+  for (const entry of entries) byId.set(entry.id, entry)
+  const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
+  localStorage.setItem(MOCK_EXAM_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
 }
 
 // merges by id (backup import), keeping the union sorted newest-first and
@@ -437,7 +466,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9
+  version: 8 | 9 | 10
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -454,6 +483,8 @@ export interface BackupPayload {
   srsKanji?: Record<string, SrsEntry>
   srsVocab?: Record<string, SrsEntry>
   srsGrammar?: Record<string, SrsEntry>
+  // added in version 10 — optional so older backup files still validate
+  mockExamHistory?: MockExamHistoryEntry[]
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -462,7 +493,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 9,
+    version: 10,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -478,6 +509,7 @@ export function buildBackupPayload(): BackupPayload {
     srsKanji: getAllSrsState('kanji'),
     srsVocab: getAllSrsState('vocab'),
     srsGrammar: getAllSrsState('grammar'),
+    mockExamHistory: getMockExamHistory(),
   }
 }
 
@@ -499,4 +531,5 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.srsKanji) importSrsState('kanji', payload.srsKanji)
   if (payload.srsVocab) importSrsState('vocab', payload.srsVocab)
   if (payload.srsGrammar) importSrsState('grammar', payload.srsGrammar)
+  if (payload.mockExamHistory) importMockExamHistory(payload.mockExamHistory)
 }

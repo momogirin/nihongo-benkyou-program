@@ -5,6 +5,7 @@ import KanjiPage from './pages/KanjiPage'
 import WrongNotePage from './pages/WrongNotePage'
 import VocabPage from './pages/VocabPage'
 import GrammarPage from './pages/GrammarPage'
+import MockExamPage from './pages/MockExamPage'
 import BackupPage from './pages/BackupPage'
 import type { PageId, QuizConfig } from './types'
 
@@ -73,6 +74,7 @@ function App() {
             onGoToStudy={() => handleNavigate('kanji')}
             onGoToVocab={() => handleNavigate('vocab')}
             onGoToGrammar={() => handleNavigate('grammar')}
+            onGoToMockExam={() => handleNavigate('mockExam')}
             onRetryVocab={retryVocab}
             onRetryGrammar={retryGrammar}
           />
@@ -102,6 +104,8 @@ function App() {
             onRetryIdsConsumed={() => setPendingGrammarRetryIds(null)}
           />
         )
+      case 'mockExam':
+        return <MockExamPage />
       case 'backup':
         return <BackupPage />
     }

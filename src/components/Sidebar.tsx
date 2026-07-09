@@ -9,6 +9,7 @@ const JAPANESE_ITEMS: { id: PageId; label: string }[] = [
   { id: 'kanji', label: '한자' },
   { id: 'vocab', label: '단어' },
   { id: 'grammar', label: '문법' },
+  { id: 'mockExam', label: '모의고사' },
   { id: 'wrongNote', label: '오답노트' },
 ]
 

@@ -8,6 +8,7 @@ import {
   getGrammarQuizHistory,
   getGrammarWrongNotes,
   getInProgressQuiz,
+  getMockExamHistory,
   getQuizHistory,
   getVocabQuizHistory,
   getVocabWrongNotes,
@@ -27,6 +28,7 @@ interface Props {
   onGoToStudy: () => void
   onGoToVocab: () => void
   onGoToGrammar: () => void
+  onGoToMockExam: () => void
   onRetryVocab: (ids: string[]) => void
   onRetryGrammar: (ids: string[]) => void
 }
@@ -52,12 +54,14 @@ export default function HomePage({
   onGoToStudy,
   onGoToVocab,
   onGoToGrammar,
+  onGoToMockExam,
   onRetryVocab,
   onRetryGrammar,
 }: Props) {
   const history = useMemo(() => getQuizHistory(), [])
   const vocabHistory = useMemo(() => getVocabQuizHistory(), [])
   const grammarHistory = useMemo(() => getGrammarQuizHistory(), [])
+  const mockExamHistory = useMemo(() => getMockExamHistory(), [])
 
   // merge all three domains' quiz history into one chronological feed —
   // vocab/grammar entries don't carry a replayable config like kanji's, so
@@ -87,11 +91,19 @@ export default function HomePage({
       label: `문법 ${e.level} · ${e.total}문항`,
       onClick: onGoToGrammar,
     }))
-    return [...kanjiItems, ...vocabItems, ...grammarItems]
+    const mockExamItems = mockExamHistory.map((e) => ({
+      id: e.id,
+      finishedAt: e.finishedAt,
+      correct: e.correct,
+      total: e.total,
+      label: `모의고사 ${e.level} · ${e.total}문항`,
+      onClick: onGoToMockExam,
+    }))
+    return [...kanjiItems, ...vocabItems, ...grammarItems, ...mockExamItems]
       .sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
       .slice(0, 20)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [history, vocabHistory, grammarHistory])
+  }, [history, vocabHistory, grammarHistory, mockExamHistory])
 
   const inProgress = useMemo(() => getInProgressQuiz(), [])
   const studyProgress = useMemo(() => getStudyProgressSummary(), [])
