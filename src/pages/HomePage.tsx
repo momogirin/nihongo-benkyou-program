@@ -19,8 +19,11 @@ import {
   getStudyProgressSummary,
   getVocabStudyProgressSummary,
 } from '../lib/studyProgress'
+import { getDomainAccuracies, getSrsMastery, getWeakestDomain, getWeeklyStats } from '../lib/statsSummary'
 import type { QuizConfig } from '../types'
 import './HomePage.css'
+
+const DOMAIN_LABEL = { kanji: '한자', vocab: '단어', grammar: '문법' } as const
 
 interface Props {
   onStartQuiz: (config: QuizConfig) => void
@@ -137,6 +140,17 @@ export default function HomePage({
   const dueVocabIds = useMemo(() => getDueSrsIds('vocab', vocabList.map((w) => w.id)), [])
   const dueGrammarIds = useMemo(() => getDueSrsIds('grammar', grammarList.map((g) => g.id)), [])
 
+  // 학습 통계 — 진도/오답과 달리 "얼마나 잘 하고 있는지"를 보여주는 요약이라
+  // 액션 카드 그리드와는 별도 섹션으로 둠
+  const weeklyStats = useMemo(() => getWeeklyStats(), [])
+  const domainAccuracies = useMemo(() => getDomainAccuracies(), [])
+  const weakestDomain = useMemo(() => getWeakestDomain(domainAccuracies), [domainAccuracies])
+  const srsMasteryByDomain = useMemo(
+    () => ({ kanji: getSrsMastery('kanji'), vocab: getSrsMastery('vocab'), grammar: getSrsMastery('grammar') }),
+    [],
+  )
+  const hasStats = weeklyStats.total > 0 || domainAccuracies.some((a) => a.total > 0)
+
   const hasAnyEntry =
     studyProgress ||
     vocabStudyProgress ||
@@ -248,6 +262,53 @@ export default function HomePage({
             </button>
           )}
         </div>
+      )}
+
+      {hasStats && (
+        <section className="home-stats">
+          <h2 className="home-stats-title">학습 통계</h2>
+          <div className="home-stats-grid">
+            <div className="home-stats-card">
+              <span className="home-stats-label">이번 주 복습</span>
+              <span className="home-stats-value">{weeklyStats.total}문항</span>
+              <span className="home-stats-sub">
+                {weeklyStats.sessionCount}회
+                {weeklyStats.total > 0 && ` · 정답률 ${Math.round((weeklyStats.correct / weeklyStats.total) * 100)}%`}
+              </span>
+            </div>
+            {domainAccuracies
+              .filter((a) => a.total > 0)
+              .map((a) => (
+                <div className="home-stats-card" key={a.domain}>
+                  <span className="home-stats-label">{DOMAIN_LABEL[a.domain]} 누적 정답률</span>
+                  <span className="home-stats-value">{a.rate}%</span>
+                  <span className="home-stats-sub">
+                    {a.correct}/{a.total}문항
+                  </span>
+                </div>
+              ))}
+            {(['kanji', 'vocab', 'grammar'] as const)
+              .filter((domain) => srsMasteryByDomain[domain].mastered + srsMasteryByDomain[domain].reviewing > 0)
+              .map((domain) => {
+                const { mastered, reviewing } = srsMasteryByDomain[domain]
+                return (
+                  <div className="home-stats-card" key={domain}>
+                    <span className="home-stats-label">{DOMAIN_LABEL[domain]} 암기 정착도</span>
+                    <span className="home-stats-value">
+                      {mastered}/{mastered + reviewing}
+                    </span>
+                    <span className="home-stats-sub">완전히 외운 항목 (나머지 {reviewing}개는 복습 주기 도는 중)</span>
+                  </div>
+                )
+              })}
+          </div>
+          {weakestDomain && (
+            <p className="home-stats-weak">
+              가장 약한 영역: <strong>{DOMAIN_LABEL[weakestDomain.domain]}</strong> — 누적 정답률 {weakestDomain.rate}%
+              ({weakestDomain.correct}/{weakestDomain.total}문항)
+            </p>
+          )}
+        </section>
       )}
 
       {mergedHistory.length > 0 && (
