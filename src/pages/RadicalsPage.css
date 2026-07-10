@@ -17,6 +17,7 @@
 }
 
 .radical-tile {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +28,7 @@
   background: var(--color-bg-elevated);
   font-family: inherit;
   cursor: pointer;
+  overflow: hidden;
   transition: border-color 0.15s, background 0.15s;
 }
 
@@ -35,6 +37,28 @@
   border-color: var(--color-primary);
   background: var(--color-selected-bg);
 }
+
+.radical-tile::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+}
+
+/* 한자 전체보기(KanjiListPage)에서만 쓰는 급수색 표시 — 부수(RadicalsPage)는
+   급수 구분이 없어 이 모디파이어 클래스가 안 붙으므로 영향 없음 */
+.radical-tile-n5 { background: var(--color-level-n5-tint); }
+.radical-tile-n5::before { background: var(--color-level-n5); }
+.radical-tile-n4 { background: var(--color-level-n4-tint); }
+.radical-tile-n4::before { background: var(--color-level-n4); }
+.radical-tile-n3 { background: var(--color-level-n3-tint); }
+.radical-tile-n3::before { background: var(--color-level-n3); }
+.radical-tile-n2 { background: var(--color-level-n2-tint); }
+.radical-tile-n2::before { background: var(--color-level-n2); }
+.radical-tile-n1 { background: var(--color-level-n1-tint); }
+.radical-tile-n1::before { background: var(--color-level-n1); }
 
 .radical-char {
   font-family: var(--font-display);

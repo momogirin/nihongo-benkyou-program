@@ -302,7 +302,12 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         </div>
         <div className="vocab-browse-grid">
           {levelWords.map((w, i) => (
-            <button type="button" className="vocab-browse-tile" key={w.id} onClick={() => setBrowseIndex(i)}>
+            <button
+              type="button"
+              className={`vocab-browse-tile vocab-browse-tile-${w.level.toLowerCase()}`}
+              key={w.id}
+              onClick={() => setBrowseIndex(i)}
+            >
               <span className="vocab-browse-tile-word">{w.word}</span>
               <span className="vocab-browse-tile-reading">{w.reading}</span>
               <span className="vocab-browse-tile-meaning">{w.meaningKr}</span>
@@ -522,7 +527,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           <button
             key={l}
             type="button"
-            className={`study-level-btn${l === level ? ' active' : ''}`}
+            className={`study-level-btn study-level-btn-${l.toLowerCase()}${l === level ? ' active' : ''}`}
             onClick={() => setLevel(l)}
           >
             {l}

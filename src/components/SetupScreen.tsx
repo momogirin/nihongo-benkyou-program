@@ -58,7 +58,7 @@ export default function SetupScreen({ onStart }: Props) {
         <legend>급수</legend>
         <div className="option-grid option-grid-5">
           {ALL_LEVELS.map((level) => (
-            <label className="option" key={level}>
+            <label className={`option option-level option-level-${level.toLowerCase()}`} key={level}>
               <input
                 type="checkbox"
                 checked={levels.includes(level)}

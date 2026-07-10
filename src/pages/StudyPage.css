@@ -26,6 +26,15 @@
   font-weight: 600;
 }
 
+/* selected level picks up that level's own color instead of the generic
+   brand highlight, so N5~N1 read as visually distinct the same way their
+   study-level-badge already does */
+.study-level-btn-n5.active { border-color: var(--color-level-n5); background: var(--color-level-n5-tint); color: var(--color-ink); }
+.study-level-btn-n4.active { border-color: var(--color-level-n4); background: var(--color-level-n4-tint); color: var(--color-ink); }
+.study-level-btn-n3.active { border-color: var(--color-level-n3); background: var(--color-level-n3-tint); color: var(--color-ink); }
+.study-level-btn-n2.active { border-color: var(--color-level-n2); background: var(--color-level-n2-tint); color: var(--color-ink); }
+.study-level-btn-n1.active { border-color: var(--color-level-n1); background: var(--color-level-n1-tint); color: var(--color-ink); }
+
 .study-progress-summary {
   color: var(--color-ink-muted);
   font-size: 15px;

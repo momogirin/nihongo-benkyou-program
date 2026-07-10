@@ -102,7 +102,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
           </div>
           <ul className="wrong-note-list">
             {kanjiEntries.map(({ note, kanji }) => (
-              <li key={kanji.id} className="wrong-note-item">
+              <li key={kanji.id} className={`wrong-note-item wrong-note-item-${kanji.level.toLowerCase()}`}>
                 <span className="wrong-note-kanji">{kanji.kanji}</span>
                 <span className="wrong-note-detail">
                   {kanji.level} · {kanji.kunKr}
@@ -136,7 +136,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
           </div>
           <ul className="wrong-note-list">
             {vocabEntries.map(({ note, word }) => (
-              <li key={word.id} className="wrong-note-item">
+              <li key={word.id} className={`wrong-note-item wrong-note-item-${word.level.toLowerCase()}`}>
                 <span className="wrong-note-word">{word.word}</span>
                 <span className="wrong-note-detail">
                   {word.level} · {word.reading} · {word.meaningKr}
@@ -170,7 +170,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
           </div>
           <ul className="wrong-note-list">
             {grammarEntries.map(({ note, point }) => (
-              <li key={point.id} className="wrong-note-item">
+              <li key={point.id} className={`wrong-note-item wrong-note-item-${point.level.toLowerCase()}`}>
                 <span className="wrong-note-pattern">{point.pattern}</span>
                 <span className="wrong-note-detail">
                   {point.level} · {point.meaningKr}

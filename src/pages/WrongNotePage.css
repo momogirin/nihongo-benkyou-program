@@ -20,13 +20,20 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 12px 16px;
+  padding: 12px 16px 12px 13px;
   border-bottom: 1px solid var(--color-border);
+  border-left: 4px solid transparent;
 }
 
 .wrong-note-item:last-child {
   border-bottom: none;
 }
+
+.wrong-note-item-n5 { border-left-color: var(--color-level-n5); }
+.wrong-note-item-n4 { border-left-color: var(--color-level-n4); }
+.wrong-note-item-n3 { border-left-color: var(--color-level-n3); }
+.wrong-note-item-n2 { border-left-color: var(--color-level-n2); }
+.wrong-note-item-n1 { border-left-color: var(--color-level-n1); }
 
 .wrong-note-kanji {
   font-family: var(--font-display);

@@ -3,19 +3,14 @@
   --color-bg-elevated: #FFFFFF;
   --color-ink: #1E1E20;
   --color-ink-muted: #6B6B70;
-  /* Brand color — violet, chosen deliberately away from the N5~N1 level
-     spectrum (green 142°~red 354°, see --color-level-* below) so the
-     brand accent never visually collides with a level badge the way the
-     old orange brand did with the N2 badge. --color-primary for
-     borders/rings/icons, --color-primary-dark for text/active-state on
-     top of --color-selected-bg (darkened so it clears 4.5:1 on a light
-     background — the vivid --color-primary itself doesn't). */
-  --color-primary: #8B5CF6;
-  --color-primary-dark: #5B3DBB;
-  /* solid fill behind white button text — verified ~5.7:1 white-text
-     contrast in both themes, so (unlike the old orange one) this one
-     value works for both without needing a separate light/dark shade. */
-  --color-button-fill: #7C3AED;
+  /* Brand color — "네온 아주르", a vivid cyan-blue picked to sit clearly
+     apart (in both hue and vividness) from N4's softer indigo-blue badge
+     (see --color-level-* below) so the two don't read as the same blue.
+     --color-primary for borders/rings/icons/solid fills, --color-primary-dark
+     for text/active-state on top of --color-selected-bg. */
+  --color-primary: #00B2FF;
+  --color-primary-dark: #0075C4;
+  --color-button-fill: #00A0E9;
   --color-accent: #B23A2E;
   --color-correct: #1F9254;
   --color-incorrect: #E5484D;
@@ -25,7 +20,7 @@
      gray that still clears 3:1 against both. */
   --color-border: #8E8E8E;
   --color-radical-tag: #8A6D3B;
-  --color-selected-bg: rgba(139, 92, 246, 0.08);
+  --color-selected-bg: rgba(0, 178, 255, 0.1);
 
   /* JLPT has no official per-level color — this follows the common
      beginner(green)->advanced(red) convention seen in CEFR "language
@@ -40,6 +35,15 @@
   --color-level-n2: #FB6B1D;
   --color-level-n1: #F2555F;
   --color-on-level: #1A1A1C;
+  /* low-alpha tints of the five level colors above, for backgrounds
+     (tile/card fill, active level-picker state) that need to read as
+     "this level's color" without the full-saturation solid fill a badge
+     uses — same rgb triples as --color-level-*, alpha only. */
+  --color-level-n5-tint: rgba(34, 197, 94, 0.12);
+  --color-level-n4-tint: rgba(59, 130, 246, 0.12);
+  --color-level-n3-tint: rgba(245, 158, 11, 0.12);
+  --color-level-n2-tint: rgba(251, 107, 29, 0.12);
+  --color-level-n1-tint: rgba(242, 85, 95, 0.12);
 
   --font-display: 'Noto Serif JP', serif;
   --font-sans: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
@@ -54,17 +58,18 @@
   --radius-xl: 12px;
 }
 
-/* dark variants of the same violet brand palette; primary/primary-dark are
+/* dark variants of the same azure brand palette; primary/primary-dark are
    both bright here since dark backgrounds don't have the text-contrast
-   problem a vivid violet has on white */
+   problem a vivid cyan-blue has on white */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #1C1C1E;
     --color-bg-elevated: #262629;
     --color-ink: #EDEDEF;
     --color-ink-muted: #A6A6AA;
-    --color-primary: #A78BFA;
-    --color-primary-dark: #C4B5FD;
+    --color-primary: #3DCBFF;
+    --color-primary-dark: #9BE3FF;
+    --color-button-fill: #22B8FF;
     --color-accent: #D9695C;
     --color-correct: #34C77B;
     --color-incorrect: #F0525A;
@@ -72,6 +77,11 @@
        neutral gray that clears 3:1 against both dark bg/bgElevated */
     --color-border: #6F6F6F;
     --color-radical-tag: #C9A464;
-    --color-selected-bg: rgba(167, 139, 250, 0.16);
+    --color-selected-bg: rgba(61, 203, 255, 0.18);
+    --color-level-n5-tint: rgba(34, 197, 94, 0.18);
+    --color-level-n4-tint: rgba(59, 130, 246, 0.18);
+    --color-level-n3-tint: rgba(245, 158, 11, 0.18);
+    --color-level-n2-tint: rgba(251, 107, 29, 0.18);
+    --color-level-n1-tint: rgba(242, 85, 95, 0.18);
   }
 }

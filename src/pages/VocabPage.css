@@ -119,18 +119,29 @@
 }
 
 .vocab-browse-tile {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
-  padding: 12px 14px;
+  padding: 12px 14px 12px 17px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background: var(--color-bg-elevated);
   font-family: inherit;
   text-align: left;
   cursor: pointer;
+  overflow: hidden;
   transition: border-color 0.15s, background 0.15s;
+}
+
+.vocab-browse-tile::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
 }
 
 .vocab-browse-tile:hover,
@@ -138,6 +149,17 @@
   border-color: var(--color-primary);
   background: var(--color-selected-bg);
 }
+
+.vocab-browse-tile-n5 { background: var(--color-level-n5-tint); }
+.vocab-browse-tile-n5::before { background: var(--color-level-n5); }
+.vocab-browse-tile-n4 { background: var(--color-level-n4-tint); }
+.vocab-browse-tile-n4::before { background: var(--color-level-n4); }
+.vocab-browse-tile-n3 { background: var(--color-level-n3-tint); }
+.vocab-browse-tile-n3::before { background: var(--color-level-n3); }
+.vocab-browse-tile-n2 { background: var(--color-level-n2-tint); }
+.vocab-browse-tile-n2::before { background: var(--color-level-n2); }
+.vocab-browse-tile-n1 { background: var(--color-level-n1-tint); }
+.vocab-browse-tile-n1::before { background: var(--color-level-n1); }
 
 .vocab-browse-tile-word {
   font-family: var(--font-display);

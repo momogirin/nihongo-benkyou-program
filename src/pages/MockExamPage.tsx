@@ -210,7 +210,7 @@ export default function MockExamPage() {
           <legend>급수</legend>
           <div className="option-grid option-grid-5">
             {MOCK_EXAM_LEVELS.map((l) => (
-              <label className="option" key={l}>
+              <label className={`option option-level option-level-${l.toLowerCase()}`} key={l}>
                 <input type="radio" name="level" checked={level === l} onChange={() => setLevel(l)} />
                 {l}
               </label>

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { grammarList, type GrammarPoint } from '../data/grammar'
+import type { GrammarPoint } from '../data/grammar'
 import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
 import {
@@ -48,6 +48,8 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [batch, setBatch] = useState<GrammarPoint[]>([])
   const [cardIndex, setCardIndex] = useState(0)
   const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
+
+  const [browseIndex, setBrowseIndex] = useState<number | null>(null)
 
   const [quizQuestions, setQuizQuestions] = useState<GrammarQuizQuestion[]>([])
   const [quizIndex, setQuizIndex] = useState(0)
@@ -141,6 +143,21 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   }, [phase, batch.length])
 
   useEffect(() => {
+    if (phase !== 'browse' || browseIndex === null) return
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'ArrowRight') {
+        setBrowseIndex((i) => (i !== null && i + 1 < pool.length ? i + 1 : i))
+      } else if (e.key === 'ArrowLeft') {
+        setBrowseIndex((i) => (i !== null && i > 0 ? i - 1 : i))
+      } else if (e.key === 'Escape') {
+        setBrowseIndex(null)
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [phase, browseIndex, pool.length])
+
+  useEffect(() => {
     if (phase !== 'quiz') return
     setQuizFeedback(null)
     choicesRef.current?.querySelector('button')?.focus()
@@ -176,6 +193,86 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, quizIndex, quizFeedback])
 
+  if (phase === 'browse' && browseIndex !== null) {
+    const point = pool[browseIndex]
+    const isFirst = browseIndex === 0
+    const isLast = browseIndex + 1 === pool.length
+
+    return (
+      <div className="page study-page">
+        <div className="study-content">
+          <div className="study-topbar">
+            <button type="button" className="study-exit-button" onClick={() => setBrowseIndex(null)}>
+              ← 목록으로
+            </button>
+            <div className="quiz-progress">
+              {browseIndex + 1} / {pool.length}
+            </div>
+          </div>
+          <div className="study-card">
+            <div className="study-top">
+              <span className={`study-level-badge study-level-badge-${point.level.toLowerCase()}`}>{point.level}</span>
+            </div>
+            <div className="grammar-pattern-label">문형</div>
+            <div className="grammar-pattern">{point.pattern}</div>
+            <dl className="study-fields">
+              <div className="study-field">
+                <dt>뜻</dt>
+                <dd>{point.meaningKr}</dd>
+              </div>
+              <div className="study-field">
+                <dt>영문 뜻</dt>
+                <dd>{point.meaningEn}</dd>
+              </div>
+              <div className="study-field">
+                <dt>설명</dt>
+                <dd>{point.explanation}</dd>
+              </div>
+              <div className="study-field">
+                <dt>예문</dt>
+                <dd>
+                  {point.exampleJp}
+                  <br />
+                  <span className="grammar-example-kr">{point.exampleKr}</span>
+                </dd>
+              </div>
+              {usedKanji(point.exampleJp).length > 0 && (
+                <div className="study-field">
+                  <dt>예문 한자</dt>
+                  <dd>
+                    <div className="study-used-kanji">
+                      {usedKanji(point.exampleJp).map((k) => (
+                        <span key={k.id} className="study-used-kanji-chip">
+                          <span className="study-used-kanji-char">{k.kanji}</span>
+                          <span className="study-used-kanji-info">
+                            {k.level} · {k.kunKr}
+                          </span>
+                        </span>
+                      ))}
+                    </div>
+                  </dd>
+                </div>
+              )}
+            </dl>
+          </div>
+        </div>
+        <div className="study-nav">
+          <button type="button" onClick={() => setBrowseIndex((i) => (i !== null && i > 0 ? i - 1 : i))} disabled={isFirst}>
+            이전
+          </button>
+          <button
+            type="button"
+            className="study-nav-primary"
+            onClick={() => setBrowseIndex((i) => (i !== null && i + 1 < pool.length ? i + 1 : i))}
+            disabled={isLast}
+          >
+            다음
+          </button>
+        </div>
+      </div>
+    )
+  }
+
   if (phase === 'browse') {
     return (
       <div className="page">
@@ -185,16 +282,19 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             ← 학습으로
           </button>
         </div>
-        <ul className="grammar-browse-list">
-          {grammarList
-            .filter((g) => g.level === level)
-            .map((g) => (
-              <li key={g.id} className="grammar-browse-item">
-                <span className="grammar-browse-pattern">{g.pattern}</span>
-                <span className="grammar-browse-meaning">{g.meaningKr}</span>
-              </li>
-            ))}
-        </ul>
+        <div className="grammar-browse-grid">
+          {pool.map((g, i) => (
+            <button
+              type="button"
+              className={`grammar-browse-tile grammar-browse-tile-${g.level.toLowerCase()}`}
+              key={g.id}
+              onClick={() => setBrowseIndex(i)}
+            >
+              <span className="grammar-browse-tile-pattern">{g.pattern}</span>
+              <span className="grammar-browse-tile-meaning">{g.meaningKr}</span>
+            </button>
+          ))}
+        </div>
       </div>
     )
   }
@@ -374,7 +474,13 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     <div className="page study-setup">
       <div className="page-header">
         <h1>문법</h1>
-        <button type="button" onClick={() => setPhase('browse')}>
+        <button
+          type="button"
+          onClick={() => {
+            setBrowseIndex(null)
+            setPhase('browse')
+          }}
+        >
           전체 목록 보기
         </button>
       </div>
@@ -384,7 +490,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
           <button
             key={l}
             type="button"
-            className={`study-level-btn${l === level ? ' active' : ''}`}
+            className={`study-level-btn study-level-btn-${l.toLowerCase()}${l === level ? ' active' : ''}`}
             onClick={() => setLevel(l)}
           >
             {l}

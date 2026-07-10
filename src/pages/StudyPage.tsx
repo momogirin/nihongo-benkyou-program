@@ -205,7 +205,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
             <button
               key={l}
               type="button"
-              className={`study-level-btn${l === level ? ' active' : ''}`}
+              className={`study-level-btn study-level-btn-${l.toLowerCase()}${l === level ? ' active' : ''}`}
               onClick={() => setLevel(l)}
             >
               {l}

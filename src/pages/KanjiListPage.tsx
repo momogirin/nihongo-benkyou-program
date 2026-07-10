@@ -136,7 +136,7 @@ export default function KanjiListPage() {
             {(groups.get(level) ?? []).map((k) => (
               <button
                 type="button"
-                className="radical-tile"
+                className={`radical-tile radical-tile-${k.level.toLowerCase()}`}
                 key={k.id}
                 onClick={() => setSelectedIndex(sortedKanji.findIndex((x) => x.id === k.id))}
               >

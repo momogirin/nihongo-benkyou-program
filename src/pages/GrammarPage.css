@@ -104,34 +104,61 @@
   flex: none;
 }
 
-.grammar-browse-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
+.grammar-browse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 8px;
 }
 
-.grammar-browse-item {
+.grammar-browse-tile {
+  position: relative;
   display: flex;
-  align-items: baseline;
-  gap: 16px;
-  padding: 10px 16px;
-  border-bottom: 1px solid var(--color-border);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 10px 12px 10px 15px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.15s, background 0.15s;
 }
 
-.grammar-browse-item:last-child {
-  border-bottom: none;
+.grammar-browse-tile::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
 }
 
-.grammar-browse-pattern {
+.grammar-browse-tile:hover,
+.grammar-browse-tile:focus-visible {
+  border-color: var(--color-primary);
+  background: var(--color-selected-bg);
+}
+
+.grammar-browse-tile-n5 { background: var(--color-level-n5-tint); }
+.grammar-browse-tile-n5::before { background: var(--color-level-n5); }
+.grammar-browse-tile-n4 { background: var(--color-level-n4-tint); }
+.grammar-browse-tile-n4::before { background: var(--color-level-n4); }
+.grammar-browse-tile-n3 { background: var(--color-level-n3-tint); }
+.grammar-browse-tile-n3::before { background: var(--color-level-n3); }
+.grammar-browse-tile-n2 { background: var(--color-level-n2-tint); }
+.grammar-browse-tile-n2::before { background: var(--color-level-n2); }
+.grammar-browse-tile-n1 { background: var(--color-level-n1-tint); }
+.grammar-browse-tile-n1::before { background: var(--color-level-n1); }
+
+.grammar-browse-tile-pattern {
   font-size: 15px;
   font-weight: 600;
-  width: 220px;
-  flex: none;
 }
 
-.grammar-browse-meaning {
-  font-size: 14px;
+.grammar-browse-tile-meaning {
+  font-size: 12.5px;
+  color: var(--color-ink-muted);
 }
