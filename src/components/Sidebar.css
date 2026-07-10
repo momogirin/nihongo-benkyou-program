@@ -95,13 +95,13 @@
 }
 
 .nav-item:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-primary-dark);
   outline-offset: -2px;
 }
 
 .nav-item.active {
   background: var(--color-selected-bg);
-  border-left-color: var(--color-primary);
+  border-left-color: var(--color-primary-dark);
   color: var(--color-primary-dark);
   font-weight: 600;
 }

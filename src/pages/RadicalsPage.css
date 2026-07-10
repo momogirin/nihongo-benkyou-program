@@ -34,7 +34,7 @@
 
 .radical-tile:hover,
 .radical-tile:focus-visible {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
   background: var(--color-selected-bg);
 }
 

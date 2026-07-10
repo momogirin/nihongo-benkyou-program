@@ -34,7 +34,7 @@
 }
 
 .quiz-input:focus {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-primary-dark);
   outline-offset: 1px;
 }
 
@@ -75,7 +75,7 @@
 }
 
 .quiz-choice:hover:not(:disabled) {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
   background: var(--color-selected-bg);
 }
 

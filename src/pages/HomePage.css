@@ -19,12 +19,12 @@
 }
 
 .home-entry-card:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
   background: var(--color-selected-bg);
 }
 
 .home-entry-card-review {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
 }
 
 .home-entry-card-review .home-entry-title {
@@ -128,7 +128,7 @@
 }
 
 .home-history-item:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
   background: var(--color-selected-bg);
 }
 

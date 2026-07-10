@@ -62,7 +62,7 @@ button:active:not(:disabled) {
    component; anything needing a different offset (e.g. Sidebar's edge-to-edge
    nav items) declares its own :focus-visible, which wins on specificity */
 button:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-primary-dark);
   outline-offset: 2px;
 }
 

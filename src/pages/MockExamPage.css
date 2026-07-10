@@ -69,7 +69,7 @@
 }
 
 .mock-exam-choice:hover:not(:disabled) {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
   background: var(--color-selected-bg);
 }
 

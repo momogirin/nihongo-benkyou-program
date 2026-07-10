@@ -21,7 +21,7 @@
 
 .study-level-btn.active {
   background: var(--color-selected-bg);
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
   color: var(--color-primary-dark);
   font-weight: 600;
 }

@@ -6,12 +6,14 @@
   /* Brand color — "네온 아주르", a vivid cyan-blue picked to sit clearly
      apart (in both hue and vividness) from N4's softer indigo-blue badge
      (see --color-level-* below) so the two don't read as the same blue.
-     --color-primary-dark is a darker shade of the same hue for text sitting
-     on top of --color-selected-bg's light tint. --color-button-fill is the
-     SAME vivid color as --color-primary (not darkened) — solid-fill buttons
-     stay just as bright/saturated as the rest of the brand; the only thing
-     that changes for legibility is the text color on top (see
-     --color-on-primary below), never the fill itself. */
+     --color-primary is the canonical brand hex (mirrored literally by
+     --color-button-fill and --color-selected-bg below) but isn't used
+     directly by any rule anymore — every border/outline/active-text spot
+     that used to reference it moved to --color-primary-dark, because a
+     1-2px line in this vivid a color doesn't clear 3:1 against a light
+     page background. --color-button-fill stays the full-vividness color
+     (solid fills are a large-enough area that this isn't a problem) —
+     only its TEXT color changes for legibility, see --color-on-primary. */
   --color-primary: #00B2FF;
   --color-primary-dark: #0075C4;
   --color-button-fill: #00B2FF;

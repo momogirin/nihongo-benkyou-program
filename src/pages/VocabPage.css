@@ -32,7 +32,7 @@
 }
 
 .vocab-quiz-button:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
 }
 
 .vocab-quiz-prompt {
@@ -73,7 +73,7 @@
 }
 
 .vocab-quiz-choice:hover:not(:disabled) {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
   background: var(--color-selected-bg);
 }
 
@@ -148,7 +148,7 @@
 
 .vocab-browse-tile:hover,
 .vocab-browse-tile:focus-visible {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-dark);
   background: var(--color-selected-bg);
 }
 
