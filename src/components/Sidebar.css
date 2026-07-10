@@ -27,6 +27,7 @@
 .brand-mark {
   font-family: var(--font-display);
   font-size: 20px;
+  font-weight: 700;
   width: 32px;
   height: 32px;
   flex: none;
@@ -34,8 +35,12 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  background: var(--color-button-fill);
-  color: var(--color-on-primary);
+  /* same fill as the favicon (public/favicon.svg, generated from
+     src/assets/icon-source.svg) so the browser tab and sidebar show
+     the same "字" mark — fixed color, not theme-reactive, to match the
+     static favicon in both light and dark mode */
+  background: var(--color-brand-mark);
+  color: #fff;
 }
 
 .brand-name {

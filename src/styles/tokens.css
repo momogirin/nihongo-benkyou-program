@@ -18,9 +18,14 @@
   --color-primary-dark: #0075C4;
   --color-button-fill: #00B2FF;
   /* dark text for anything filled solid with --color-primary/--color-button-fill
-     (buttons, brand-mark icon) — per YIQ brightness (~134/255), this vivid
-     cyan reads as "light" so dark text wins, same logic as --color-on-level */
+     (buttons) — per YIQ brightness (~134/255), this vivid cyan reads as
+     "light" so dark text wins, same logic as --color-on-level */
   --color-on-primary: #142B36;
+  /* fixed (not redefined in the dark-mode block below) — the sidebar
+     brand-mark and public/favicon.svg (src/assets/icon-source.svg) both
+     use this exact hex so the "字" mark reads as the same logo in the
+     browser tab and the sidebar regardless of OS theme */
+  --color-brand-mark: #0577C2;
   --color-accent: #B23A2E;
   --color-correct: #1F9254;
   --color-incorrect: #E5484D;
