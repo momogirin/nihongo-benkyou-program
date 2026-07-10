@@ -186,6 +186,7 @@
 }
 
 .study-example-reading {
+  color: var(--color-primary-dark);
   font-weight: 700;
 }
 
@@ -212,7 +213,7 @@
 
 .study-used-kanji-info {
   font-size: 12px;
-  color: var(--color-ink);
+  color: var(--color-primary-dark);
 }
 
 .study-nav {
