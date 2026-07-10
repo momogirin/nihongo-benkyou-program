@@ -49,8 +49,15 @@ export default function StudyPage({ onStartQuiz }: Props) {
 
   function finishBatch() {
     if (!level) return
-    setStudyProgress(level, completedCount + batch.length)
+    setStudyProgress(level, Math.min(completedCount + batch.length, pool.length))
     setPhase('done')
+  }
+
+  function restartBatch() {
+    if (!level) return
+    setBatch(pool)
+    setCardIndex(0)
+    setPhase('studying')
   }
 
   // saves progress up to (not including) the card being left, so 이어하기
@@ -212,7 +219,12 @@ export default function StudyPage({ onStartQuiz }: Props) {
       </p>
 
       {isLevelFinished ? (
-        <p className="page-placeholder">이 급수를 모두 학습했습니다.</p>
+        <>
+          <p className="page-placeholder">이 급수를 모두 학습했습니다.</p>
+          <button type="button" className="study-start-button" onClick={restartBatch}>
+            처음부터 다시 학습하기
+          </button>
+        </>
       ) : (
         <>
           <button type="button" className="study-start-button" onClick={startBatch}>

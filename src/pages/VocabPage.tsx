@@ -49,6 +49,9 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [cardIndex, setCardIndex] = useState(0)
   const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
 
+  const levelWords = useMemo(() => vocabList.filter((w) => w.level === level), [level])
+  const [browseIndex, setBrowseIndex] = useState<number | null>(null)
+
   const [quizQuestions, setQuizQuestions] = useState<VocabQuizQuestion[]>([])
   const [quizIndex, setQuizIndex] = useState(0)
   const [quizAnswers, setQuizAnswers] = useState<QuizAnswer[]>([])
@@ -70,8 +73,15 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   }
 
   function finishBatch() {
-    setVocabStudyProgress(level, completedCount + batch.length)
+    setVocabStudyProgress(level, Math.min(completedCount + batch.length, pool.length))
     setPhase('done')
+  }
+
+  function restartBatch(fromLevel: KanjiLevel) {
+    const fromPool = vocabLevelPool(fromLevel)
+    setBatch(fromPool)
+    setCardIndex(0)
+    setPhase('studying')
   }
 
   // saves progress up to (not including) the card being left, so 이어하기
@@ -134,6 +144,21 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   }, [phase, batch.length])
 
   useEffect(() => {
+    if (phase !== 'browse' || browseIndex === null) return
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'ArrowRight') {
+        setBrowseIndex((i) => (i !== null && i + 1 < levelWords.length ? i + 1 : i))
+      } else if (e.key === 'ArrowLeft') {
+        setBrowseIndex((i) => (i !== null && i > 0 ? i - 1 : i))
+      } else if (e.key === 'Escape') {
+        setBrowseIndex(null)
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [phase, browseIndex, levelWords.length])
+
+  useEffect(() => {
     if (phase !== 'quiz') return
     setQuizFeedback(null)
     choicesRef.current?.querySelector('button')?.focus()
@@ -169,6 +194,101 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, quizIndex, quizFeedback])
 
+  if (phase === 'browse' && browseIndex !== null) {
+    const word = levelWords[browseIndex]
+    const isFirst = browseIndex === 0
+    const isLast = browseIndex + 1 === levelWords.length
+
+    return (
+      <div className="page study-page">
+        <div className="study-content">
+          <div className="study-topbar">
+            <button type="button" className="study-exit-button" onClick={() => setBrowseIndex(null)}>
+              ← 목록으로
+            </button>
+            <div className="quiz-progress">
+              {browseIndex + 1} / {levelWords.length}
+            </div>
+          </div>
+          <div className="study-card">
+            <div className="study-top">
+              <span className={`study-level-badge study-level-badge-${word.level.toLowerCase()}`}>{word.level}</span>
+            </div>
+            <div className="vocab-word-jp">{word.word}</div>
+            <div className="vocab-word-reading">{word.reading}</div>
+            <dl className="study-fields">
+              <div className="study-field">
+                <dt>뜻</dt>
+                <dd>{word.meaningKr}</dd>
+              </div>
+              <div className="study-field">
+                <dt>영문 뜻</dt>
+                <dd>{word.meaningEn}</dd>
+              </div>
+              {word.exampleJp && (
+                <div className="study-field">
+                  <dt>예문</dt>
+                  <dd>
+                    {word.exampleJp}
+                    <br />
+                    <span className="vocab-example-kr">{word.exampleKr}</span>
+                  </dd>
+                </div>
+              )}
+              {usedKanji(word.word).length > 0 && (
+                <div className="study-field">
+                  <dt>한자</dt>
+                  <dd>
+                    <div className="study-used-kanji">
+                      {usedKanji(word.word).map((k) => (
+                        <span key={k.id} className="study-used-kanji-chip">
+                          <span className="study-used-kanji-char">{k.kanji}</span>
+                          <span className="study-used-kanji-info">
+                            {k.level} · {k.kunKr}
+                          </span>
+                        </span>
+                      ))}
+                    </div>
+                  </dd>
+                </div>
+              )}
+              {word.exampleJp && usedKanji(word.exampleJp).length > 0 && (
+                <div className="study-field">
+                  <dt>예문 한자</dt>
+                  <dd>
+                    <div className="study-used-kanji">
+                      {usedKanji(word.exampleJp).map((k) => (
+                        <span key={k.id} className="study-used-kanji-chip">
+                          <span className="study-used-kanji-char">{k.kanji}</span>
+                          <span className="study-used-kanji-info">
+                            {k.level} · {k.kunKr}
+                          </span>
+                        </span>
+                      ))}
+                    </div>
+                  </dd>
+                </div>
+              )}
+            </dl>
+          </div>
+        </div>
+        <div className="study-nav">
+          <button type="button" onClick={() => setBrowseIndex((i) => (i !== null && i > 0 ? i - 1 : i))} disabled={isFirst}>
+            이전
+          </button>
+          <button
+            type="button"
+            className="study-nav-primary"
+            onClick={() => setBrowseIndex((i) => (i !== null && i + 1 < levelWords.length ? i + 1 : i))}
+            disabled={isLast}
+          >
+            다음
+          </button>
+        </div>
+      </div>
+    )
+  }
+
   if (phase === 'browse') {
     return (
       <div className="page">
@@ -180,17 +300,15 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             ← 학습으로
           </button>
         </div>
-        <ul className="vocab-browse-list">
-          {vocabList
-            .filter((w) => w.level === level)
-            .map((w) => (
-              <li key={w.id} className="vocab-browse-item">
-                <span className="vocab-browse-word">{w.word}</span>
-                <span className="vocab-browse-reading">{w.reading}</span>
-                <span className="vocab-browse-meaning">{w.meaningKr}</span>
-              </li>
-            ))}
-        </ul>
+        <div className="vocab-browse-grid">
+          {levelWords.map((w, i) => (
+            <button type="button" className="vocab-browse-tile" key={w.id} onClick={() => setBrowseIndex(i)}>
+              <span className="vocab-browse-tile-word">{w.word}</span>
+              <span className="vocab-browse-tile-reading">{w.reading}</span>
+              <span className="vocab-browse-tile-meaning">{w.meaningKr}</span>
+            </button>
+          ))}
+        </div>
       </div>
     )
   }
@@ -388,7 +506,13 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     <div className="page study-setup">
       <div className="page-header">
         <h1>단어</h1>
-        <button type="button" onClick={() => setPhase('browse')}>
+        <button
+          type="button"
+          onClick={() => {
+            setBrowseIndex(null)
+            setPhase('browse')
+          }}
+        >
           전체 목록 보기
         </button>
       </div>
@@ -411,7 +535,12 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
       </p>
 
       {isLevelFinished ? (
-        <p className="page-placeholder">이 급수 단어를 모두 학습했습니다.</p>
+        <>
+          <p className="page-placeholder">이 급수 단어를 모두 학습했습니다.</p>
+          <button type="button" className="study-start-button" onClick={() => restartBatch(level)}>
+            처음부터 다시 학습하기
+          </button>
+        </>
       ) : (
         <button type="button" className="study-start-button" onClick={() => startBatch(level, completedCount)}>
           {completedCount > 0 ? '이어하기' : '시작하기'}

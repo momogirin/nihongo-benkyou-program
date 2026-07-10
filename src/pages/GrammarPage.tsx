@@ -70,8 +70,15 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   }
 
   function finishBatch() {
-    setGrammarStudyProgress(level, completedCount + batch.length)
+    setGrammarStudyProgress(level, Math.min(completedCount + batch.length, pool.length))
     setPhase('done')
+  }
+
+  function restartBatch(fromLevel: KanjiLevel) {
+    const fromPool = grammarLevelPool(fromLevel)
+    setBatch(fromPool)
+    setCardIndex(0)
+    setPhase('studying')
   }
 
   // saves progress up to (not including) the card being left, so 이어하기
@@ -390,7 +397,12 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
       </p>
 
       {isLevelFinished ? (
-        <p className="page-placeholder">이 급수 문법을 모두 학습했습니다.</p>
+        <>
+          <p className="page-placeholder">이 급수 문법을 모두 학습했습니다.</p>
+          <button type="button" className="study-start-button" onClick={() => restartBatch(level)}>
+            처음부터 다시 학습하기
+          </button>
+        </>
       ) : (
         <button type="button" className="study-start-button" onClick={() => startBatch(level, completedCount)}>
           {completedCount > 0 ? '이어하기' : '시작하기'}
