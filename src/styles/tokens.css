@@ -6,11 +6,18 @@
   /* Brand color — "네온 아주르", a vivid cyan-blue picked to sit clearly
      apart (in both hue and vividness) from N4's softer indigo-blue badge
      (see --color-level-* below) so the two don't read as the same blue.
-     --color-primary for borders/rings/icons/solid fills, --color-primary-dark
-     for text/active-state on top of --color-selected-bg. */
+     --color-primary is deliberately light/bright for borders, rings, icon
+     strokes and low-alpha tints (--color-selected-bg) — none of those pair
+     it with fixed-color text, so its own low contrast against white doesn't
+     matter there. --color-primary-dark and --color-button-fill are darker
+     shades of the same hue reserved for anywhere text sits directly on a
+     solid fill (nav-active label, solid buttons) — --color-primary itself
+     is NOT dark enough for that; using it there was this session's bug. */
   --color-primary: #00B2FF;
   --color-primary-dark: #0075C4;
-  --color-button-fill: #00A0E9;
+  /* verified ~5.9:1 white-text contrast in light mode, ~4.7:1 in dark
+     (both same hue as --color-primary, just deep enough for AA) */
+  --color-button-fill: #0369A1;
   --color-accent: #B23A2E;
   --color-correct: #1F9254;
   --color-incorrect: #E5484D;
@@ -69,7 +76,7 @@
     --color-ink-muted: #A6A6AA;
     --color-primary: #3DCBFF;
     --color-primary-dark: #9BE3FF;
-    --color-button-fill: #22B8FF;
+    --color-button-fill: #0577C2;
     --color-accent: #D9695C;
     --color-correct: #34C77B;
     --color-incorrect: #F0525A;

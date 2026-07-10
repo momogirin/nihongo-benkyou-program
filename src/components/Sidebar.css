@@ -34,7 +34,9 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  background: var(--color-primary);
+  /* button-fill, not the brighter --color-primary — this is a solid fill
+     with fixed white text, and --color-primary isn't dark enough for that */
+  background: var(--color-button-fill);
   color: #fff;
 }
 
