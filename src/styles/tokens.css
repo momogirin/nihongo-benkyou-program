@@ -26,7 +26,6 @@
      use this exact hex so the "字" mark reads as the same logo in the
      browser tab and the sidebar regardless of OS theme */
   --color-brand-mark: #0577C2;
-  --color-accent: #B23A2E;
   --color-correct: #1F9254;
   --color-incorrect: #E5484D;
   /* darkened from #E2E2E6 — that only cleared ~1.2-1.3:1 against bg/
@@ -89,7 +88,6 @@
     --color-primary: #3DCBFF;
     --color-primary-dark: #9BE3FF;
     --color-button-fill: #3DCBFF;
-    --color-accent: #D9695C;
     --color-correct: #34C77B;
     --color-incorrect: #F0525A;
     /* same fix as light mode's --color-border, mirrored: darkest->brightest
