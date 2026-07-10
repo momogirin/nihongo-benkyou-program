@@ -7,13 +7,13 @@
 
 .vocab-word-reading {
   text-align: center;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   font-size: 16px;
   margin-bottom: 20px;
 }
 
 .vocab-example-kr {
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   font-size: 13px;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .vocab-quiz-prompt-reading {
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   font-size: 18px;
 }
 
@@ -109,7 +109,7 @@
 .vocab-result-reading {
   font-family: var(--font-sans);
   font-size: 12px;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
 }
 
 .vocab-browse-grid {
@@ -168,7 +168,7 @@
 }
 
 .vocab-browse-tile-reading {
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   font-size: 12px;
 }
 

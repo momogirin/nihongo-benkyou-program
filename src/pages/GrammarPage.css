@@ -13,7 +13,7 @@
 }
 
 .grammar-example-kr {
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   font-size: 13px;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .grammar-quiz-prompt-example {
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   font-size: 16px;
 }
 
@@ -160,5 +160,5 @@
 
 .grammar-browse-tile-meaning {
   font-size: 12.5px;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
 }

@@ -7,7 +7,7 @@
 
 .result-summary {
   font-size: 20px;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   margin-bottom: 24px;
 }
 
@@ -59,14 +59,13 @@
 }
 
 .result-detail-main {
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   font-size: 14px;
 }
 
 .result-example {
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   font-size: 13px;
-  opacity: 0.85;
 }
 
 .restart-button {

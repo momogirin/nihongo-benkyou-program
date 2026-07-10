@@ -59,7 +59,7 @@
 
 .wrong-note-detail {
   flex: 1;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   font-size: 14px;
 }
 
