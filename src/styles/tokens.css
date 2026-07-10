@@ -6,18 +6,19 @@
   /* Brand color — "네온 아주르", a vivid cyan-blue picked to sit clearly
      apart (in both hue and vividness) from N4's softer indigo-blue badge
      (see --color-level-* below) so the two don't read as the same blue.
-     --color-primary is deliberately light/bright for borders, rings, icon
-     strokes and low-alpha tints (--color-selected-bg) — none of those pair
-     it with fixed-color text, so its own low contrast against white doesn't
-     matter there. --color-primary-dark and --color-button-fill are darker
-     shades of the same hue reserved for anywhere text sits directly on a
-     solid fill (nav-active label, solid buttons) — --color-primary itself
-     is NOT dark enough for that; using it there was this session's bug. */
+     --color-primary-dark is a darker shade of the same hue for text sitting
+     on top of --color-selected-bg's light tint. --color-button-fill is the
+     SAME vivid color as --color-primary (not darkened) — solid-fill buttons
+     stay just as bright/saturated as the rest of the brand; the only thing
+     that changes for legibility is the text color on top (see
+     --color-on-primary below), never the fill itself. */
   --color-primary: #00B2FF;
   --color-primary-dark: #0075C4;
-  /* verified ~5.9:1 white-text contrast in light mode, ~4.7:1 in dark
-     (both same hue as --color-primary, just deep enough for AA) */
-  --color-button-fill: #0369A1;
+  --color-button-fill: #00B2FF;
+  /* dark text for anything filled solid with --color-primary/--color-button-fill
+     (buttons, brand-mark icon) — per YIQ brightness (~134/255), this vivid
+     cyan reads as "light" so dark text wins, same logic as --color-on-level */
+  --color-on-primary: #142B36;
   --color-accent: #B23A2E;
   --color-correct: #1F9254;
   --color-incorrect: #E5484D;
@@ -34,14 +35,18 @@
      passport" self-assessment charts, which JLPT levels are often
      mapped against (N5≈A1 ... N1≈C1). One value per level, same in
      both themes (already bright enough not to need a dark-mode bump).
-     --color-on-level is the dark text color used on top of all five —
-     same rationale as --color-on-primary below. */
+     --color-on-level is the default text color for badges built on top
+     of these — dark, since per YIQ brightness only N4 (~122/255) reads
+     dark enough to need white text instead; the other four (133-167)
+     stay with the dark default. --color-on-level-n4 overrides just that
+     one badge. */
   --color-level-n5: #22C55E;
   --color-level-n4: #3B82F6;
   --color-level-n3: #F59E0B;
   --color-level-n2: #FB6B1D;
   --color-level-n1: #F2555F;
   --color-on-level: #1A1A1C;
+  --color-on-level-n4: #FFFFFF;
   /* low-alpha tints of the five level colors above, for backgrounds
      (tile/card fill, active level-picker state) that need to read as
      "this level's color" without the full-saturation solid fill a badge
@@ -76,7 +81,7 @@
     --color-ink-muted: #A6A6AA;
     --color-primary: #3DCBFF;
     --color-primary-dark: #9BE3FF;
-    --color-button-fill: #0577C2;
+    --color-button-fill: #3DCBFF;
     --color-accent: #D9695C;
     --color-correct: #34C77B;
     --color-incorrect: #F0525A;

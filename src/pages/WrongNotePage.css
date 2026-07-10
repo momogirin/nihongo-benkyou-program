@@ -92,7 +92,7 @@
   border: none;
   border-radius: var(--radius-lg);
   background: var(--color-button-fill);
-  color: #fff;
+  color: var(--color-on-primary);
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
