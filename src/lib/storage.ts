@@ -6,6 +6,7 @@ import type { MockExamQuestion } from './mockExamGenerator'
 import type {
   AnsweredQuestion,
   MockExamHistoryEntry,
+  QuestionType,
   QuizConfig,
   QuizHistoryEntry,
   SimpleQuizHistoryEntry,
@@ -13,11 +14,16 @@ import type {
 
 // `source`: human-readable label for which test produced this wrong answer
 // (e.g. "한자 퀴즈 · N3 · 한국 훈음 입력", "모의고사 · N2") — optional so
-// entries written before this field existed still parse from localStorage
+// entries written before this field existed still parse from localStorage.
+// `questionType`: the kanji quiz question type that produced this wrong
+// answer, so 오답 재도전 can replay the same type instead of always defaulting
+// to 훈음 입력 — undefined for mock-exam-sourced entries, which don't map to
+// any single kanji quiz question type
 export interface WrongNoteEntry {
   kanjiId: string
   wrongAt: string
   source?: string
+  questionType?: QuestionType
 }
 
 export interface VocabWrongNoteEntry {
@@ -126,12 +132,12 @@ export function getWrongNotes(): WrongNoteEntry[] {
   }
 }
 
-export function addWrongNotes(kanjiIds: string[], source: string) {
+export function addWrongNotes(kanjiIds: string[], source: string, questionType?: QuestionType) {
   if (kanjiIds.length === 0) return
   const byId = new Map(getWrongNotes().map((entry) => [entry.kanjiId, entry]))
   const wrongAt = new Date().toISOString()
   for (const kanjiId of kanjiIds) {
-    byId.set(kanjiId, { kanjiId, wrongAt, source })
+    byId.set(kanjiId, { kanjiId, wrongAt, source, questionType })
   }
   localStorage.setItem(WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
 }

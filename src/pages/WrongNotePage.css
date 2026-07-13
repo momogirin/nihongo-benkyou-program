@@ -29,6 +29,22 @@
   color: var(--color-ink-muted);
 }
 
+.wrong-note-session-retry {
+  margin-left: auto;
+  padding: 3px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-primary-dark);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.wrong-note-session-retry:hover {
+  background: var(--color-selected-bg);
+}
+
 .wrong-note-list {
   list-style: none;
   margin: 0;

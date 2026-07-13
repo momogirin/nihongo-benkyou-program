@@ -8,12 +8,15 @@ export interface QuizQuestion {
 
 // shared by every entry point that jumps straight into a quiz over a fixed
 // set of kanji (오답 재도전, 학습 배치 퀴즈) instead of a level pick, so they
-// can't drift apart on question type/order/count
-export function kanjiIdsQuizConfig(kanjiIds: string[]): QuizConfig {
+// can't drift apart on question type/order/count. questionType defaults to
+// 훈음 입력 (the classic "review everything" mode) but callers that know the
+// original quiz type — e.g. 오답노트's per-세션 재도전 — can pass it through
+// so retrying actually replays the same kind of question that was missed.
+export function kanjiIdsQuizConfig(kanjiIds: string[], questionType: QuizConfig['questionType'] = 'promptToAnswer'): QuizConfig {
   return {
     levels: [],
     kanjiIds,
-    questionType: 'promptToAnswer',
+    questionType,
     order: 'random',
     count: 'all',
   }

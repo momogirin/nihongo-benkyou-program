@@ -166,6 +166,22 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
               <div className="wrong-note-session-header">
                 <span className="wrong-note-session-time">{formatDateTime(session.wrongAt)}</span>
                 <span className="wrong-note-session-source">{session.source ?? '기록 없음'}</span>
+                {session.items[0]?.note.questionType && (
+                  <button
+                    type="button"
+                    className="wrong-note-session-retry"
+                    onClick={() =>
+                      onStartQuiz(
+                        kanjiIdsQuizConfig(
+                          session.items.map(({ item }) => item.id),
+                          session.items[0].note.questionType,
+                        ),
+                      )
+                    }
+                  >
+                    이 유형으로 재도전
+                  </button>
+                )}
               </div>
               <ul className="wrong-note-list">
                 {session.items.map(({ note, item: kanji }) => (

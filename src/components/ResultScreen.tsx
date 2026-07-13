@@ -34,7 +34,7 @@ export default function ResultScreen({ answers, elapsedMs, config, onRestart }: 
 
   useEffect(() => {
     const wrongIds = answers.filter((a) => !a.isCorrect).map((a) => a.kanji.id)
-    addWrongNotes(wrongIds, quizConfigLabel(config))
+    addWrongNotes(wrongIds, quizConfigLabel(config), config.questionType)
     // a kanji answered correctly this round is no longer a standing weak point
     answers.filter((a) => a.isCorrect).forEach((a) => removeWrongNote(a.kanji.id))
     answers.forEach((a) => recordSrsReview('kanji', a.kanji.id, a.isCorrect))
