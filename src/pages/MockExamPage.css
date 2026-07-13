@@ -5,6 +5,12 @@
   margin-bottom: 4px;
 }
 
+.mock-exam-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .mock-exam-header-row .quiz-progress {
   margin-bottom: 0;
 }

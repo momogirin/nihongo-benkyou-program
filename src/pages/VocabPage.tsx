@@ -11,10 +11,14 @@ import {
 import {
   addVocabQuizHistoryEntry,
   addVocabWrongNotes,
+  clearVocabInProgressQuiz,
+  getVocabInProgressQuiz,
   getVocabStudyProgress,
   recordSrsReview,
   removeVocabWrongNote,
+  saveVocabInProgressQuiz,
   setVocabStudyProgress,
+  type VocabInProgressQuiz,
 } from '../lib/storage'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
@@ -62,6 +66,9 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   // guards handleNextQuiz so a rapid/repeat Enter can't advance twice past
   // the same wrong answer
   const lastAdvancedQuizIndexRef = useRef(-1)
+  // saved quiz session from a previous visit that was never finished — shown
+  // on the setup screen as an 이어하기 option instead of silently losing it
+  const [savedQuiz, setSavedQuiz] = useState(() => getVocabInProgressQuiz())
 
   useEffect(() => {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
@@ -95,20 +102,38 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   }
 
   function startQuiz() {
+    clearVocabInProgressQuiz()
+    setSavedQuiz(null)
     setQuizQuestions(generateVocabQuestions(level, QUIZ_QUESTION_COUNT))
     setQuizIndex(0)
     setQuizAnswers([])
     setQuizFeedback(null)
+    lastAdvancedQuizIndexRef.current = -1
     quizStartRef.current = Date.now()
+    setPhase('quiz')
+  }
+
+  // reloads the exact saved questions/choices/answers so resuming isn't a
+  // re-roll — same idea as the kanji quiz's 마무리못한 퀴즈 이어하기
+  function resumeQuiz(saved: VocabInProgressQuiz) {
+    setQuizQuestions(saved.questions)
+    setQuizIndex(saved.index)
+    setQuizAnswers(saved.answers)
+    setQuizFeedback(null)
+    lastAdvancedQuizIndexRef.current = -1
+    quizStartRef.current = new Date(saved.startedAt).getTime()
     setPhase('quiz')
   }
 
   useEffect(() => {
     if (!retryIds || retryIds.length === 0) return
+    clearVocabInProgressQuiz()
+    setSavedQuiz(null)
     setQuizQuestions(generateVocabQuestionsFromIds(retryIds))
     setQuizIndex(0)
     setQuizAnswers([])
     setQuizFeedback(null)
+    lastAdvancedQuizIndexRef.current = -1
     quizStartRef.current = Date.now()
     setPhase('quiz')
     onRetryIdsConsumed?.()
@@ -117,6 +142,8 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   useEffect(() => {
     if (phase !== 'quizResult') return
+    clearVocabInProgressQuiz()
+    setSavedQuiz(null)
     const wrongIds = quizAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
     addVocabWrongNotes(wrongIds, `단어 퀴즈 · ${level}`)
     addVocabQuizHistoryEntry({
@@ -188,12 +215,23 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     const question = quizQuestions[quizIndex]
     const isCorrect = selected === question.entry.meaningKr
     setQuizFeedback({ isCorrect, selected })
-    setQuizAnswers((prev) => [...prev, { question, selected, isCorrect }])
+    const updatedAnswers = [...quizAnswers, { question, selected, isCorrect }]
+    setQuizAnswers(updatedAnswers)
+
+    const nextIndex = quizIndex + 1
+    if (nextIndex < quizQuestions.length) {
+      saveVocabInProgressQuiz({
+        level,
+        questions: quizQuestions,
+        index: nextIndex,
+        answers: updatedAnswers,
+        startedAt: new Date(quizStartRef.current).toISOString(),
+      })
+    }
 
     // correct answers still auto-advance quickly; wrong answers stop and
     // wait for the 다음 button/Enter (see handleNextQuiz)
     if (isCorrect) {
-      const nextIndex = quizIndex + 1
       setTimeout(() => goNextQuiz(nextIndex), FEEDBACK_DELAY_MS)
     }
   }
@@ -458,8 +496,20 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     const question = quizQuestions[quizIndex]
     return (
       <div className="quiz-runner">
-        <div className="quiz-progress">
-          {quizIndex + 1} / {quizQuestions.length}
+        <div className="quiz-topbar">
+          <button
+            type="button"
+            className="quiz-exit-button"
+            onClick={() => {
+              setPhase('setup')
+              setSavedQuiz(getVocabInProgressQuiz())
+            }}
+          >
+            나가기
+          </button>
+          <div className="quiz-progress">
+            {quizIndex + 1} / {quizQuestions.length}
+          </div>
         </div>
         <div className="vocab-quiz-prompt">
           <span className="vocab-quiz-prompt-word">{question.entry.word}</span>
@@ -548,6 +598,17 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           전체 목록 보기
         </button>
       </div>
+
+      {savedQuiz && (
+        <>
+          <p className="page-placeholder">
+            진행 중이던 단어 퀴즈가 있어요 ({savedQuiz.level} · {savedQuiz.index}/{savedQuiz.questions.length}문제)
+          </p>
+          <button type="button" className="study-start-button" onClick={() => resumeQuiz(savedQuiz)}>
+            이어서 풀기
+          </button>
+        </>
+      )}
 
       <div className="study-level-picker">
         {ALL_LEVELS.map((l) => (

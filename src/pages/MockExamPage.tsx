@@ -11,10 +11,14 @@ import {
   addMockExamHistoryEntry,
   addVocabWrongNotes,
   addWrongNotes,
+  clearMockExamInProgressQuiz,
+  getMockExamInProgressQuiz,
   recordSrsReview,
   removeGrammarWrongNote,
   removeVocabWrongNote,
   removeWrongNote,
+  saveMockExamInProgressQuiz,
+  type MockExamInProgressQuiz,
 } from '../lib/storage'
 import type { MockExamHistoryEntry } from '../types'
 import '../components/QuizRunner.css'
@@ -74,6 +78,9 @@ export default function MockExamPage() {
   const finishedRef = useRef(false)
   const choicesRef = useRef<HTMLDivElement>(null)
   const restartButtonRef = useRef<HTMLButtonElement>(null)
+  // saved exam session from a previous visit that was never finished — shown
+  // on the setup screen as an 이어하기 option instead of silently losing it
+  const [savedQuiz, setSavedQuiz] = useState(() => getMockExamInProgressQuiz())
 
   function finish(finalAnswers: MockExamAnswer[]) {
     if (finishedRef.current) return
@@ -83,12 +90,15 @@ export default function MockExamPage() {
   }
 
   function startExam() {
+    clearMockExamInProgressQuiz()
+    setSavedQuiz(null)
     const qs = generateMockExamQuestions(level, count)
     questionsRef.current = qs
     answersRef.current = []
     indexRef.current = 0
     finishedRef.current = false
     lastSubmittedIndexRef.current = -1
+    lastAdvancedIndexRef.current = -1
     startTimeRef.current = Date.now()
     totalTimeRef.current = qs.length * SECONDS_PER_QUESTION * 1000
     setQuestions(qs)
@@ -96,6 +106,26 @@ export default function MockExamPage() {
     setFeedback(null)
     setResult(null)
     setRemainingMs(totalTimeRef.current)
+    setPhase('running')
+  }
+
+  // reloads the exact saved questions/choices/answers so resuming isn't a
+  // re-roll — startTimeRef stays at the ORIGINAL start time, so the
+  // countdown keeps counting real elapsed time same as a real exam would
+  function resumeExam(saved: MockExamInProgressQuiz) {
+    questionsRef.current = saved.questions
+    answersRef.current = saved.answers
+    indexRef.current = saved.index
+    finishedRef.current = false
+    lastSubmittedIndexRef.current = -1
+    lastAdvancedIndexRef.current = -1
+    startTimeRef.current = new Date(saved.startedAt).getTime()
+    totalTimeRef.current = saved.questions.length * SECONDS_PER_QUESTION * 1000
+    setQuestions(saved.questions)
+    setIndex(saved.index)
+    setFeedback(null)
+    setResult(null)
+    setRemainingMs(Math.max(0, totalTimeRef.current - (Date.now() - startTimeRef.current)))
     setPhase('running')
   }
 
@@ -154,6 +184,17 @@ export default function MockExamPage() {
     indexRef.current = index + 1
     setFeedback({ isCorrect, selectedLabel })
 
+    if (indexRef.current < questionsRef.current.length) {
+      saveMockExamInProgressQuiz({
+        level,
+        count,
+        questions: questionsRef.current,
+        index: indexRef.current,
+        answers: answersRef.current,
+        startedAt: new Date(startTimeRef.current).toISOString(),
+      })
+    }
+
     if (isCorrect) {
       const nextIndex = index + 1
       setTimeout(() => goNext(nextIndex), 550)
@@ -180,6 +221,8 @@ export default function MockExamPage() {
   // 결과 화면 진입 시 한 번: 오답노트/SRS/모의고사 기록 반영 — 일반 퀴즈와 동일한 파이프라인
   useEffect(() => {
     if (phase !== 'result' || !result) return
+    clearMockExamInProgressQuiz()
+    setSavedQuiz(null)
     const wrongByDomain: Record<MockExamDomain, string[]> = { kanji: [], vocab: [], grammar: [] }
     const correctByDomain: Record<MockExamDomain, string[]> = { kanji: [], vocab: [], grammar: [] }
     const breakdown = emptyBreakdown()
@@ -224,6 +267,18 @@ export default function MockExamPage() {
       <div className="setup-screen">
         <h1>모의고사</h1>
         <p className="hint">한자·단어·문법을 섞어 시간 안에 푸는 통합 테스트입니다.</p>
+
+        {savedQuiz && (
+          <>
+            <p className="hint">
+              진행 중이던 모의고사가 있어요 ({savedQuiz.level} · {savedQuiz.index}/{savedQuiz.questions.length}문항) —
+              나간 사이에도 시간은 계속 흘렀어요.
+            </p>
+            <button type="button" className="start-button" onClick={() => resumeExam(savedQuiz)}>
+              이어서 응시하기
+            </button>
+          </>
+        )}
 
         <fieldset>
           <legend>급수</legend>
@@ -271,8 +326,20 @@ export default function MockExamPage() {
     return (
       <div className="quiz-runner">
         <div className="mock-exam-header-row">
-          <div className="quiz-progress">
-            {index + 1} / {questions.length}
+          <div className="mock-exam-header-left">
+            <button
+              type="button"
+              className="quiz-exit-button"
+              onClick={() => {
+                setPhase('setup')
+                setSavedQuiz(getMockExamInProgressQuiz())
+              }}
+            >
+              나가기
+            </button>
+            <div className="quiz-progress">
+              {index + 1} / {questions.length}
+            </div>
           </div>
           <div className={`mock-exam-timer${timeLow ? ' low' : ''}`}>
             {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}

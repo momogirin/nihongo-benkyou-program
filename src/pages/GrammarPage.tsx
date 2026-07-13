@@ -12,10 +12,14 @@ import {
 import {
   addGrammarQuizHistoryEntry,
   addGrammarWrongNotes,
+  clearGrammarInProgressQuiz,
+  getGrammarInProgressQuiz,
   getGrammarStudyProgress,
   recordSrsReview,
   removeGrammarWrongNote,
+  saveGrammarInProgressQuiz,
   setGrammarStudyProgress,
+  type GrammarInProgressQuiz,
 } from '../lib/storage'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
@@ -61,6 +65,9 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   // guards handleNextQuiz so a rapid/repeat Enter can't advance twice past
   // the same wrong answer
   const lastAdvancedQuizIndexRef = useRef(-1)
+  // saved quiz session from a previous visit that was never finished — shown
+  // on the setup screen as an 이어하기 option instead of silently losing it
+  const [savedQuiz, setSavedQuiz] = useState(() => getGrammarInProgressQuiz())
 
   useEffect(() => {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
@@ -94,20 +101,38 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   }
 
   function startQuiz() {
+    clearGrammarInProgressQuiz()
+    setSavedQuiz(null)
     setQuizQuestions(generateGrammarQuestions(level, QUIZ_QUESTION_COUNT))
     setQuizIndex(0)
     setQuizAnswers([])
     setQuizFeedback(null)
+    lastAdvancedQuizIndexRef.current = -1
     quizStartRef.current = Date.now()
+    setPhase('quiz')
+  }
+
+  // reloads the exact saved questions/choices/answers so resuming isn't a
+  // re-roll — same idea as the kanji quiz's 마무리못한 퀴즈 이어하기
+  function resumeQuiz(saved: GrammarInProgressQuiz) {
+    setQuizQuestions(saved.questions)
+    setQuizIndex(saved.index)
+    setQuizAnswers(saved.answers)
+    setQuizFeedback(null)
+    lastAdvancedQuizIndexRef.current = -1
+    quizStartRef.current = new Date(saved.startedAt).getTime()
     setPhase('quiz')
   }
 
   useEffect(() => {
     if (!retryIds || retryIds.length === 0) return
+    clearGrammarInProgressQuiz()
+    setSavedQuiz(null)
     setQuizQuestions(generateGrammarQuestionsFromIds(retryIds))
     setQuizIndex(0)
     setQuizAnswers([])
     setQuizFeedback(null)
+    lastAdvancedQuizIndexRef.current = -1
     quizStartRef.current = Date.now()
     setPhase('quiz')
     onRetryIdsConsumed?.()
@@ -116,6 +141,8 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   useEffect(() => {
     if (phase !== 'quizResult') return
+    clearGrammarInProgressQuiz()
+    setSavedQuiz(null)
     const wrongIds = quizAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
     addGrammarWrongNotes(wrongIds, `문법 퀴즈 · ${level}`)
     addGrammarQuizHistoryEntry({
@@ -187,12 +214,23 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     const question = quizQuestions[quizIndex]
     const isCorrect = selected === question.entry.meaningKr
     setQuizFeedback({ isCorrect, selected })
-    setQuizAnswers((prev) => [...prev, { question, selected, isCorrect }])
+    const updatedAnswers = [...quizAnswers, { question, selected, isCorrect }]
+    setQuizAnswers(updatedAnswers)
+
+    const nextIndex = quizIndex + 1
+    if (nextIndex < quizQuestions.length) {
+      saveGrammarInProgressQuiz({
+        level,
+        questions: quizQuestions,
+        index: nextIndex,
+        answers: updatedAnswers,
+        startedAt: new Date(quizStartRef.current).toISOString(),
+      })
+    }
 
     // correct answers still auto-advance quickly; wrong answers stop and
     // wait for the 다음 button/Enter (see handleNextQuiz)
     if (isCorrect) {
-      const nextIndex = quizIndex + 1
       setTimeout(() => goNextQuiz(nextIndex), FEEDBACK_DELAY_MS)
     }
   }
@@ -424,8 +462,20 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     const question = quizQuestions[quizIndex]
     return (
       <div className="quiz-runner">
-        <div className="quiz-progress">
-          {quizIndex + 1} / {quizQuestions.length}
+        <div className="quiz-topbar">
+          <button
+            type="button"
+            className="quiz-exit-button"
+            onClick={() => {
+              setPhase('setup')
+              setSavedQuiz(getGrammarInProgressQuiz())
+            }}
+          >
+            나가기
+          </button>
+          <div className="quiz-progress">
+            {quizIndex + 1} / {quizQuestions.length}
+          </div>
         </div>
         <div className="grammar-quiz-prompt">
           <span className="grammar-quiz-prompt-pattern">{question.entry.pattern}</span>
@@ -511,6 +561,17 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
           전체 목록 보기
         </button>
       </div>
+
+      {savedQuiz && (
+        <>
+          <p className="page-placeholder">
+            진행 중이던 문법 퀴즈가 있어요 ({savedQuiz.level} · {savedQuiz.index}/{savedQuiz.questions.length}문제)
+          </p>
+          <button type="button" className="study-start-button" onClick={() => resumeQuiz(savedQuiz)}>
+            이어서 풀기
+          </button>
+        </>
+      )}
 
       <div className="study-level-picker">
         {grammarAvailableLevels.map((l) => (

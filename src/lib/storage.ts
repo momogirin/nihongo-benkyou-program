@@ -1,5 +1,8 @@
 import type { KanjiLevel } from '../data/kanji'
 import type { QuizQuestion } from './quizGenerator'
+import type { VocabQuizQuestion } from './vocabQuizGenerator'
+import type { GrammarQuizQuestion } from './grammarQuizGenerator'
+import type { MockExamQuestion } from './mockExamGenerator'
 import type {
   AnsweredQuestion,
   MockExamHistoryEntry,
@@ -40,6 +43,35 @@ export interface InProgressQuiz {
   startedAt: string
 }
 
+// same "resume where you left off" idea as InProgressQuiz above, but for the
+// 단어/문법/모의고사 quizzes — each keeps its own parallel state shape since
+// their question/answer types differ (matches this repo's existing
+// per-domain parallel-structure convention)
+export interface VocabInProgressQuiz {
+  level: KanjiLevel
+  questions: VocabQuizQuestion[]
+  index: number
+  answers: { question: VocabQuizQuestion; selected: string; isCorrect: boolean }[]
+  startedAt: string
+}
+
+export interface GrammarInProgressQuiz {
+  level: KanjiLevel
+  questions: GrammarQuizQuestion[]
+  index: number
+  answers: { question: GrammarQuizQuestion; selected: string; isCorrect: boolean }[]
+  startedAt: string
+}
+
+export interface MockExamInProgressQuiz {
+  level: KanjiLevel
+  count: number
+  questions: MockExamQuestion[]
+  index: number
+  answers: { question: MockExamQuestion; selectedLabel: string | null; isCorrect: boolean }[]
+  startedAt: string
+}
+
 const WRONG_NOTES_KEY = 'kanjiApp.wrongNotes'
 const VOCAB_WRONG_NOTES_KEY = 'kanjiApp.vocabWrongNotes'
 const GRAMMAR_WRONG_NOTES_KEY = 'kanjiApp.grammarWrongNotes'
@@ -49,6 +81,9 @@ const GRAMMAR_QUIZ_HISTORY_KEY = 'kanjiApp.grammarQuizHistory'
 const MOCK_EXAM_HISTORY_KEY = 'kanjiApp.mockExamHistory'
 const QUIZ_HISTORY_LIMIT = 20
 const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
+const VOCAB_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabInProgressQuiz'
+const GRAMMAR_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.grammarInProgressQuiz'
+const MOCK_EXAM_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.mockExamInProgressQuiz'
 const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
 const RADICAL_STUDY_PROGRESS_KEY = 'kanjiApp.radicalStudyProgress'
 const RADICAL_STUDY_BATCH_SIZE_KEY = 'kanjiApp.radicalStudyBatchSize'
@@ -220,6 +255,75 @@ export function clearInProgressQuiz() {
 // an active session on this device shouldn't be clobbered by an older backup
 export function importInProgressQuiz(quiz: InProgressQuiz | null) {
   if (quiz && !getInProgressQuiz()) saveInProgressQuiz(quiz)
+}
+
+// same "resume where you left off" pattern as above, for 단어 퀴즈
+export function getVocabInProgressQuiz(): VocabInProgressQuiz | null {
+  try {
+    const raw = localStorage.getItem(VOCAB_IN_PROGRESS_QUIZ_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
+export function saveVocabInProgressQuiz(state: VocabInProgressQuiz) {
+  localStorage.setItem(VOCAB_IN_PROGRESS_QUIZ_KEY, JSON.stringify(state))
+}
+
+export function clearVocabInProgressQuiz() {
+  localStorage.removeItem(VOCAB_IN_PROGRESS_QUIZ_KEY)
+}
+
+// same again, for 문법 퀴즈
+export function getGrammarInProgressQuiz(): GrammarInProgressQuiz | null {
+  try {
+    const raw = localStorage.getItem(GRAMMAR_IN_PROGRESS_QUIZ_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
+export function saveGrammarInProgressQuiz(state: GrammarInProgressQuiz) {
+  localStorage.setItem(GRAMMAR_IN_PROGRESS_QUIZ_KEY, JSON.stringify(state))
+}
+
+export function clearGrammarInProgressQuiz() {
+  localStorage.removeItem(GRAMMAR_IN_PROGRESS_QUIZ_KEY)
+}
+
+// same again, for 모의고사 — startedAt is real wall-clock time, so resuming
+// after a break naturally eats into the remaining countdown (matches how the
+// timer already works: elapsed = Date.now() - startTime)
+export function getMockExamInProgressQuiz(): MockExamInProgressQuiz | null {
+  try {
+    const raw = localStorage.getItem(MOCK_EXAM_IN_PROGRESS_QUIZ_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
+export function saveMockExamInProgressQuiz(state: MockExamInProgressQuiz) {
+  localStorage.setItem(MOCK_EXAM_IN_PROGRESS_QUIZ_KEY, JSON.stringify(state))
+}
+
+export function clearMockExamInProgressQuiz() {
+  localStorage.removeItem(MOCK_EXAM_IN_PROGRESS_QUIZ_KEY)
+}
+
+// same "don't clobber an active local session" rule as importInProgressQuiz
+export function importVocabInProgressQuiz(quiz: VocabInProgressQuiz | null) {
+  if (quiz && !getVocabInProgressQuiz()) saveVocabInProgressQuiz(quiz)
+}
+
+export function importGrammarInProgressQuiz(quiz: GrammarInProgressQuiz | null) {
+  if (quiz && !getGrammarInProgressQuiz()) saveGrammarInProgressQuiz(quiz)
+}
+
+export function importMockExamInProgressQuiz(quiz: MockExamInProgressQuiz | null) {
+  if (quiz && !getMockExamInProgressQuiz()) saveMockExamInProgressQuiz(quiz)
 }
 
 // merges by kanjiId, keeping whichever entry was marked wrong more recently —
@@ -472,7 +576,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9 | 10
+  version: 8 | 9 | 10 | 11
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -491,6 +595,10 @@ export interface BackupPayload {
   srsGrammar?: Record<string, SrsEntry>
   // added in version 10 — optional so older backup files still validate
   mockExamHistory?: MockExamHistoryEntry[]
+  // added in version 11 — optional so older backup files still validate
+  vocabInProgressQuiz?: VocabInProgressQuiz | null
+  grammarInProgressQuiz?: GrammarInProgressQuiz | null
+  mockExamInProgressQuiz?: MockExamInProgressQuiz | null
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -499,7 +607,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 10,
+    version: 11,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -516,6 +624,9 @@ export function buildBackupPayload(): BackupPayload {
     srsVocab: getAllSrsState('vocab'),
     srsGrammar: getAllSrsState('grammar'),
     mockExamHistory: getMockExamHistory(),
+    vocabInProgressQuiz: getVocabInProgressQuiz(),
+    grammarInProgressQuiz: getGrammarInProgressQuiz(),
+    mockExamInProgressQuiz: getMockExamInProgressQuiz(),
   }
 }
 
@@ -538,4 +649,7 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.srsVocab) importSrsState('vocab', payload.srsVocab)
   if (payload.srsGrammar) importSrsState('grammar', payload.srsGrammar)
   if (payload.mockExamHistory) importMockExamHistory(payload.mockExamHistory)
+  if (payload.vocabInProgressQuiz) importVocabInProgressQuiz(payload.vocabInProgressQuiz)
+  if (payload.grammarInProgressQuiz) importGrammarInProgressQuiz(payload.grammarInProgressQuiz)
+  if (payload.mockExamInProgressQuiz) importMockExamInProgressQuiz(payload.mockExamInProgressQuiz)
 }
