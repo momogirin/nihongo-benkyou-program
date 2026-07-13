@@ -334,6 +334,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             다음
           </button>
         </div>
+        <p className="shortcut-hint">← → 로 이전/다음 · Esc로 목록으로</p>
       </div>
     )
   }
@@ -460,6 +461,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             </button>
           )}
         </div>
+        <p className="shortcut-hint">← → 로 이전/다음 · Enter로 다음</p>
       </div>
     )
   }
@@ -535,6 +537,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             다음
           </button>
         )}
+        <p className="shortcut-hint">숫자키(1~4)로 선택 · 오답이면 Enter로 다음 문제</p>
       </div>
     )
   }

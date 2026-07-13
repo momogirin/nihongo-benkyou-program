@@ -167,6 +167,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
             </button>
           )}
         </div>
+        <p className="shortcut-hint">← → 로 이전/다음 · Enter로 다음</p>
       </div>
     )
   }

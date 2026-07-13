@@ -45,6 +45,13 @@
   margin-bottom: 8px;
 }
 
+.shortcut-hint {
+  margin-top: 16px;
+  color: var(--color-ink-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
 /* 한자/단어/문법 전체보기 상단 검색창 — 2000~8000개짜리 그리드를 스크롤만 해서
    찾아야 했던 문제라 추가됨 */
 .browse-search-input {

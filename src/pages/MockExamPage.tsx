@@ -381,6 +381,7 @@ export default function MockExamPage() {
             다음
           </button>
         )}
+        <p className="shortcut-hint">숫자키(1~4)로 선택 · 오답이면 Enter로 다음 문제</p>
       </div>
     )
   }

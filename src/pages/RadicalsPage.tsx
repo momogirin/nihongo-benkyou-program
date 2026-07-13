@@ -73,6 +73,7 @@ export default function RadicalsPage() {
             다음
           </button>
         </div>
+        <p className="shortcut-hint">← → 로 이전/다음 · Esc로 목록으로</p>
       </div>
     )
   }

@@ -200,6 +200,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
               다음
             </button>
           )}
+          <p className="shortcut-hint">Enter로 제출 · 오답이면 Enter로 다음 문제</p>
         </>
       ) : (
         <>
@@ -239,6 +240,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
               다음
             </button>
           )}
+          <p className="shortcut-hint">숫자키(1~4)로 선택 · 오답이면 Enter로 다음 문제</p>
         </>
       )}
     </div>
