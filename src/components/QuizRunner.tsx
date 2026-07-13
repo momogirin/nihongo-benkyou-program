@@ -60,7 +60,6 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
   const startTimeRef = useRef(new Date(startedAtRef.current).getTime())
   const inputRef = useRef<HTMLInputElement>(null)
   const choicesRef = useRef<HTMLDivElement>(null)
-  const nextButtonRef = useRef<HTMLButtonElement>(null)
   // Guards against a question being submitted twice (e.g. a fast double
   // Enter press landing before the feedback delay advances to the next question).
   const lastSubmittedIndexRef = useRef(-1)
@@ -91,6 +90,10 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
 
   function goNext(nextIndex: number) {
     if (nextIndex < questions.length) {
+      // cleared here (not just in the effect below) so a rapid-fire/repeat
+      // Enter landing right after this can't resubmit the previous
+      // question's leftover text against the new question
+      setInputValue('')
       setIndex(nextIndex)
     } else {
       onFinish(answersRef.current, Date.now() - startTimeRef.current)
@@ -140,33 +143,27 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
     }
   }
 
-  // number-key shortcuts (1-4) for choice-based question types, so repeated
-  // quiz-taking doesn't require reaching for the mouse
+  // single window-level keydown listener for the whole quiz interaction —
+  // number-key choice shortcuts, Enter-to-submit (input mode), and
+  // Enter-to-advance past a wrong answer all go through here
   useEffect(() => {
-    if (!isChoiceMode) return
     function handleKeyDown(e: KeyboardEvent) {
-      if (feedback) return
-      const choiceIndex = Number(e.key) - 1
-      const choice = question.choices?.[choiceIndex]
-      if (choice) submit(choiceLabel(config.questionType, choice))
+      if (activeFeedback) {
+        if (!activeFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNext()
+        return
+      }
+      if (isChoiceMode) {
+        const choiceIndex = Number(e.key) - 1
+        const choice = question.choices?.[choiceIndex]
+        if (choice) submit(choiceLabel(config.questionType, choice))
+      } else if (e.key === 'Enter' && !e.repeat && inputValue.trim() !== '') {
+        submit(inputValue)
+      }
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isChoiceMode, question, feedback])
-
-  // wrong-answer feedback waits for Enter (or a click) on the 다음 button —
-  // !e.repeat blocks a held-down key from firing this multiple times
-  useEffect(() => {
-    if (!activeFeedback || activeFeedback.isCorrect) return
-    nextButtonRef.current?.focus()
-    function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === 'Enter' && !e.repeat) handleNext()
-    }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeFeedback])
+  }, [isChoiceMode, question, activeFeedback, inputValue])
 
   return (
     <div className="quiz-runner">
@@ -190,9 +187,6 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
             disabled={activeFeedback !== null}
             placeholder="훈음을 입력하세요 (예: 날 일)"
             onChange={(e) => setInputValue(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' && !e.repeat && inputValue.trim() !== '') submit(inputValue)
-            }}
           />
           {activeFeedback && (
             <p className={`quiz-feedback ${activeFeedback.isCorrect ? 'correct' : 'incorrect'}`}>
@@ -202,7 +196,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
             </p>
           )}
           {activeFeedback && !activeFeedback.isCorrect && (
-            <button type="button" ref={nextButtonRef} className="quiz-next-button" onClick={handleNext}>
+            <button type="button" className="quiz-next-button" onClick={handleNext}>
               다음
             </button>
           )}
@@ -241,7 +235,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
             })}
           </div>
           {activeFeedback && !activeFeedback.isCorrect && (
-            <button type="button" ref={nextButtonRef} className="quiz-next-button" onClick={handleNext}>
+            <button type="button" className="quiz-next-button" onClick={handleNext}>
               다음
             </button>
           )}
