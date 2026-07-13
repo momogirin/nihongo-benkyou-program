@@ -194,12 +194,15 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   useEffect(() => {
     if (phase !== 'quiz') return
-    setQuizFeedback(null)
     choicesRef.current?.querySelector('button')?.focus()
   }, [phase, quizIndex])
 
   function goNextQuiz(nextIndex: number) {
     if (nextIndex < quizQuestions.length) {
+      // cleared here (synchronously with the index change, not in a
+      // separate effect) so the new question never renders one frame with
+      // the previous question's feedback/disabled state still applied
+      setQuizFeedback(null)
       setQuizIndex(nextIndex)
     } else {
       setPhase('quizResult')

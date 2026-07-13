@@ -154,13 +154,16 @@ export default function MockExamPage() {
   // 문제가 바뀔 때마다 첫 선택지에 포커스 (숫자키/엔터로 계속 진행 가능하도록)
   useEffect(() => {
     if (phase !== 'running') return
-    setFeedback(null)
     choicesRef.current?.querySelector('button')?.focus()
   }, [index, phase])
 
   function goNext(nextIndex: number) {
     if (finishedRef.current) return
     if (nextIndex < questionsRef.current.length) {
+      // cleared here (synchronously with the index change, not in a
+      // separate effect) so the new question never renders one frame with
+      // the previous question's feedback/disabled state still applied
+      setFeedback(null)
       setIndex(nextIndex)
     } else {
       finish(answersRef.current)

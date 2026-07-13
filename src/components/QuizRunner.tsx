@@ -79,8 +79,6 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
   // each new question left nothing focused (the previous choice button was
   // disabled/unmounted), forcing a mouse click just to continue
   useEffect(() => {
-    setInputValue('')
-    setFeedback(null)
     if (isChoiceMode) {
       choicesRef.current?.querySelector('button')?.focus()
     } else {
@@ -90,10 +88,11 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
 
   function goNext(nextIndex: number) {
     if (nextIndex < questions.length) {
-      // cleared here (not just in the effect below) so a rapid-fire/repeat
-      // Enter landing right after this can't resubmit the previous
-      // question's leftover text against the new question
+      // cleared here (synchronously with the index change, not in a
+      // separate effect) so the new question never renders one frame with
+      // the previous question's feedback/disabled state still applied
       setInputValue('')
+      setFeedback(null)
       setIndex(nextIndex)
     } else {
       onFinish(answersRef.current, Date.now() - startTimeRef.current)

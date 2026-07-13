@@ -72,7 +72,12 @@ function grammarQuestions(level: KanjiLevel, count: number): MockExamQuestion[] 
       label: g.meaningKr,
       isCorrect: g.id === entry.id,
     }))
-    return { domain: 'grammar', id: entry.id, prompt: entry.pattern, promptSub: entry.exampleJp, choices }
+    // the actual example sentence is the big prompt (real, well-formed
+    // Japanese) — entry.pattern is textbook shorthand ("場所で Vます", V/N
+    // as verb/noun placeholders) that reads like broken Japanese at the
+    // kanji/vocab questions' large display-font size, so it's the small
+    // sub-label instead, same as how vocab shows word before reading
+    return { domain: 'grammar', id: entry.id, prompt: entry.exampleJp, promptSub: entry.pattern, choices }
   })
 }
 
