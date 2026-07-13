@@ -121,17 +121,20 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
   const vocabCount = vocabIds.length
   const grammarCount = grammarIds.length
 
-  function handleRemoveKanji(kanjiId: string) {
+  function handleRemoveKanji(kanjiId: string, label: string) {
+    if (!window.confirm(`${label} 오답노트에서 제거할까요?`)) return
     removeWrongNote(kanjiId)
     setWrongNotes(getWrongNotes())
   }
 
-  function handleRemoveVocab(vocabId: string) {
+  function handleRemoveVocab(vocabId: string, label: string) {
+    if (!window.confirm(`${label} 오답노트에서 제거할까요?`)) return
     removeVocabWrongNote(vocabId)
     setVocabWrongNotes(getVocabWrongNotes())
   }
 
-  function handleRemoveGrammar(grammarId: string) {
+  function handleRemoveGrammar(grammarId: string, label: string) {
+    if (!window.confirm(`${label} 오답노트에서 제거할까요?`)) return
     removeGrammarWrongNote(grammarId)
     setGrammarWrongNotes(getGrammarWrongNotes())
   }
@@ -200,7 +203,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
                       type="button"
                       className="wrong-note-remove"
                       aria-label={`${kanji.kanji} 오답노트에서 제거`}
-                      onClick={() => handleRemoveKanji(note.kanjiId)}
+                      onClick={() => handleRemoveKanji(note.kanjiId, kanji.kanji)}
                     >
                       ✕
                     </button>
@@ -243,7 +246,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
                       type="button"
                       className="wrong-note-remove"
                       aria-label={`${word.word} 오답노트에서 제거`}
-                      onClick={() => handleRemoveVocab(note.vocabId)}
+                      onClick={() => handleRemoveVocab(note.vocabId, word.word)}
                     >
                       ✕
                     </button>
@@ -286,7 +289,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
                       type="button"
                       className="wrong-note-remove"
                       aria-label={`${point.pattern} 오답노트에서 제거`}
-                      onClick={() => handleRemoveGrammar(note.grammarId)}
+                      onClick={() => handleRemoveGrammar(note.grammarId, point.pattern)}
                     >
                       ✕
                     </button>
