@@ -58,6 +58,9 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const choicesRef = useRef<HTMLDivElement>(null)
   const restartButtonRef = useRef<HTMLButtonElement>(null)
   const quizStartRef = useRef(0)
+  // guards handleNextQuiz so a rapid/repeat Enter can't advance twice past
+  // the same wrong answer
+  const lastAdvancedQuizIndexRef = useRef(-1)
 
   useEffect(() => {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
@@ -163,6 +166,22 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     choicesRef.current?.querySelector('button')?.focus()
   }, [phase, quizIndex])
 
+  function goNextQuiz(nextIndex: number) {
+    if (nextIndex < quizQuestions.length) {
+      setQuizIndex(nextIndex)
+    } else {
+      setPhase('quizResult')
+    }
+  }
+
+  // wrong answers wait here for an explicit 다음 click/Enter instead of
+  // auto-advancing, so there's time to actually read the correct answer
+  function handleNextQuiz() {
+    if (lastAdvancedQuizIndexRef.current === quizIndex) return
+    lastAdvancedQuizIndexRef.current = quizIndex
+    goNextQuiz(quizIndex + 1)
+  }
+
   function submitQuizAnswer(selected: string) {
     if (quizFeedback) return
     const question = quizQuestions[quizIndex]
@@ -170,20 +189,23 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     setQuizFeedback({ isCorrect, selected })
     setQuizAnswers((prev) => [...prev, { question, selected, isCorrect }])
 
-    setTimeout(() => {
+    // correct answers still auto-advance quickly; wrong answers stop and
+    // wait for the 다음 button/Enter (see handleNextQuiz)
+    if (isCorrect) {
       const nextIndex = quizIndex + 1
-      if (nextIndex < quizQuestions.length) {
-        setQuizIndex(nextIndex)
-      } else {
-        setPhase('quizResult')
-      }
-    }, FEEDBACK_DELAY_MS)
+      setTimeout(() => goNextQuiz(nextIndex), FEEDBACK_DELAY_MS)
+    }
   }
 
+  // single window-level keydown listener for the quiz phase — number-key
+  // choice shortcuts and Enter-to-advance past a wrong answer
   useEffect(() => {
     if (phase !== 'quiz') return
     function handleKeyDown(e: KeyboardEvent) {
-      if (quizFeedback) return
+      if (quizFeedback) {
+        if (!quizFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextQuiz()
+        return
+      }
       const choiceIndex = Number(e.key) - 1
       const choice = quizQuestions[quizIndex]?.choices[choiceIndex]
       if (choice) submitQuizAnswer(choice.meaningKr)
@@ -433,6 +455,11 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {quizFeedback && !quizFeedback.isCorrect && (
+          <button type="button" className="quiz-next-button" onClick={handleNextQuiz}>
+            다음
+          </button>
+        )}
       </div>
     )
   }

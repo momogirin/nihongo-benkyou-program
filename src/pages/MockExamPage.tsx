@@ -68,6 +68,9 @@ export default function MockExamPage() {
   const startTimeRef = useRef(0)
   const totalTimeRef = useRef(0)
   const lastSubmittedIndexRef = useRef(-1)
+  // guards handleNext so a rapid/repeat Enter can't advance twice past the
+  // same wrong answer
+  const lastAdvancedIndexRef = useRef(-1)
   const finishedRef = useRef(false)
   const choicesRef = useRef<HTMLDivElement>(null)
   const restartButtonRef = useRef<HTMLButtonElement>(null)
@@ -125,6 +128,22 @@ export default function MockExamPage() {
     choicesRef.current?.querySelector('button')?.focus()
   }, [index, phase])
 
+  function goNext(nextIndex: number) {
+    if (finishedRef.current) return
+    if (nextIndex < questionsRef.current.length) {
+      setIndex(nextIndex)
+    } else {
+      finish(answersRef.current)
+    }
+  }
+
+  // 오답이면 자동으로 안 넘어가고 "다음" 클릭/Enter를 기다림 — 정답만 기존처럼 자동 진행
+  function handleNext() {
+    if (lastAdvancedIndexRef.current === index) return
+    lastAdvancedIndexRef.current = index
+    goNext(index + 1)
+  }
+
   function submit(selectedLabel: string) {
     if (lastSubmittedIndexRef.current === index) return
     lastSubmittedIndexRef.current = index
@@ -135,21 +154,20 @@ export default function MockExamPage() {
     indexRef.current = index + 1
     setFeedback({ isCorrect, selectedLabel })
 
-    setTimeout(() => {
-      if (finishedRef.current) return
-      if (indexRef.current < questionsRef.current.length) {
-        setIndex(indexRef.current)
-      } else {
-        finish(answersRef.current)
-      }
-    }, 550)
+    if (isCorrect) {
+      const nextIndex = index + 1
+      setTimeout(() => goNext(nextIndex), 550)
+    }
   }
 
-  // 숫자키(1-4) 단축키
+  // 숫자키(1-4) 단축키 + 오답일 때 Enter로 다음 문제 진행
   useEffect(() => {
     if (phase !== 'running') return
     function handleKeyDown(e: KeyboardEvent) {
-      if (feedback) return
+      if (feedback) {
+        if (!feedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNext()
+        return
+      }
       const choiceIndex = Number(e.key) - 1
       const choice = questionsRef.current[index]?.choices[choiceIndex]
       if (choice) submit(choice.label)
@@ -291,6 +309,11 @@ export default function MockExamPage() {
             )
           })}
         </div>
+        {feedback && !feedback.isCorrect && (
+          <button type="button" className="quiz-next-button" onClick={handleNext}>
+            다음
+          </button>
+        )}
       </div>
     )
   }
