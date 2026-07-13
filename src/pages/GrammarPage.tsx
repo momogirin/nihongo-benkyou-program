@@ -55,6 +55,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
 
   const [browseIndex, setBrowseIndex] = useState<number | null>(null)
+  const [browseQuery, setBrowseQuery] = useState('')
 
   const [quizCount, setQuizCount] = useState<(typeof QUIZ_COUNT_OPTIONS)[number]>(QUIZ_QUESTION_COUNT)
   const [quizOrder, setQuizOrder] = useState<'random' | 'sequential'>('random')
@@ -338,6 +339,15 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   }
 
   if (phase === 'browse') {
+    const normalizedBrowseQuery = browseQuery.trim().toLowerCase()
+    const filteredPool = normalizedBrowseQuery
+      ? pool.filter(
+          (g) =>
+            g.pattern.toLowerCase().includes(normalizedBrowseQuery) ||
+            g.meaningKr.toLowerCase().includes(normalizedBrowseQuery),
+        )
+      : pool
+
     return (
       <div className="page">
         <div className="page-header">
@@ -346,19 +356,30 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             ← 학습으로
           </button>
         </div>
-        <div className="grammar-browse-grid">
-          {pool.map((g, i) => (
-            <button
-              type="button"
-              className={`grammar-browse-tile grammar-browse-tile-${g.level.toLowerCase()}`}
-              key={g.id}
-              onClick={() => setBrowseIndex(i)}
-            >
-              <span className="grammar-browse-tile-pattern">{g.pattern}</span>
-              <span className="grammar-browse-tile-meaning">{g.meaningKr}</span>
-            </button>
-          ))}
-        </div>
+        <input
+          type="text"
+          className="browse-search-input"
+          placeholder="문형, 뜻으로 검색"
+          value={browseQuery}
+          onChange={(e) => setBrowseQuery(e.target.value)}
+        />
+        {normalizedBrowseQuery && filteredPool.length === 0 ? (
+          <p className="page-placeholder">검색 결과가 없습니다.</p>
+        ) : (
+          <div className="grammar-browse-grid">
+            {filteredPool.map((g) => (
+              <button
+                type="button"
+                className={`grammar-browse-tile grammar-browse-tile-${g.level.toLowerCase()}`}
+                key={g.id}
+                onClick={() => setBrowseIndex(pool.findIndex((x) => x.id === g.id))}
+              >
+                <span className="grammar-browse-tile-pattern">{g.pattern}</span>
+                <span className="grammar-browse-tile-meaning">{g.meaningKr}</span>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     )
   }
@@ -559,6 +580,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
           type="button"
           onClick={() => {
             setBrowseIndex(null)
+            setBrowseQuery('')
             setPhase('browse')
           }}
         >

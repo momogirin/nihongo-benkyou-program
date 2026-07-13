@@ -45,6 +45,27 @@
   margin-bottom: 8px;
 }
 
+/* 한자/단어/문법 전체보기 상단 검색창 — 2000~8000개짜리 그리드를 스크롤만 해서
+   찾아야 했던 문제라 추가됨 */
+.browse-search-input {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 24px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.browse-search-input:focus {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 1px;
+}
+
 /* selected level picks up that level's own color instead of the generic
    brand highlight, so N5~N1 read as visually distinct the same way their
    study-level-badge already does */

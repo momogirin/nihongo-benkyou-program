@@ -56,6 +56,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   const levelWords = useMemo(() => vocabList.filter((w) => w.level === level), [level])
   const [browseIndex, setBrowseIndex] = useState<number | null>(null)
+  const [browseQuery, setBrowseQuery] = useState('')
 
   const [quizCount, setQuizCount] = useState<(typeof QUIZ_COUNT_OPTIONS)[number]>(QUIZ_QUESTION_COUNT)
   const [quizOrder, setQuizOrder] = useState<'random' | 'sequential'>('random')
@@ -354,6 +355,16 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   }
 
   if (phase === 'browse') {
+    const normalizedBrowseQuery = browseQuery.trim().toLowerCase()
+    const filteredWords = normalizedBrowseQuery
+      ? levelWords.filter(
+          (w) =>
+            w.word.includes(normalizedBrowseQuery) ||
+            w.reading.toLowerCase().includes(normalizedBrowseQuery) ||
+            w.meaningKr.toLowerCase().includes(normalizedBrowseQuery),
+        )
+      : levelWords
+
     return (
       <div className="page">
         <div className="page-header">
@@ -364,20 +375,31 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             ← 학습으로
           </button>
         </div>
-        <div className="vocab-browse-grid">
-          {levelWords.map((w, i) => (
-            <button
-              type="button"
-              className={`vocab-browse-tile vocab-browse-tile-${w.level.toLowerCase()}`}
-              key={w.id}
-              onClick={() => setBrowseIndex(i)}
-            >
-              <span className="vocab-browse-tile-word">{w.word}</span>
-              <span className="vocab-browse-tile-reading">{w.reading}</span>
-              <span className="vocab-browse-tile-meaning">{w.meaningKr}</span>
-            </button>
-          ))}
-        </div>
+        <input
+          type="text"
+          className="browse-search-input"
+          placeholder="단어, 읽기, 뜻으로 검색"
+          value={browseQuery}
+          onChange={(e) => setBrowseQuery(e.target.value)}
+        />
+        {normalizedBrowseQuery && filteredWords.length === 0 ? (
+          <p className="page-placeholder">검색 결과가 없습니다.</p>
+        ) : (
+          <div className="vocab-browse-grid">
+            {filteredWords.map((w) => (
+              <button
+                type="button"
+                className={`vocab-browse-tile vocab-browse-tile-${w.level.toLowerCase()}`}
+                key={w.id}
+                onClick={() => setBrowseIndex(levelWords.findIndex((x) => x.id === w.id))}
+              >
+                <span className="vocab-browse-tile-word">{w.word}</span>
+                <span className="vocab-browse-tile-reading">{w.reading}</span>
+                <span className="vocab-browse-tile-meaning">{w.meaningKr}</span>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     )
   }
@@ -596,6 +618,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           type="button"
           onClick={() => {
             setBrowseIndex(null)
+            setBrowseQuery('')
             setPhase('browse')
           }}
         >

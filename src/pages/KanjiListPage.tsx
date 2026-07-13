@@ -20,6 +20,7 @@ export default function KanjiListPage() {
     [],
   )
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+  const [query, setQuery] = useState('')
 
   useEffect(() => {
     if (selectedIndex === null) return
@@ -119,8 +120,19 @@ export default function KanjiListPage() {
     )
   }
 
+  const normalizedQuery = query.trim().toLowerCase()
+  const filteredKanji = normalizedQuery
+    ? sortedKanji.filter(
+        (k) =>
+          k.kanji.includes(normalizedQuery) ||
+          k.kunKr.toLowerCase().includes(normalizedQuery) ||
+          k.kunJp.toLowerCase().includes(normalizedQuery) ||
+          k.onJp.toLowerCase().includes(normalizedQuery),
+      )
+    : sortedKanji
+
   const groups = new Map<KanjiLevel, Kanji[]>()
-  for (const k of sortedKanji) {
+  for (const k of filteredKanji) {
     const list = groups.get(k.level) ?? []
     list.push(k)
     groups.set(k.level, list)
@@ -129,24 +141,35 @@ export default function KanjiListPage() {
   return (
     <div className="page">
       <h1>한자 전체보기</h1>
-      {ALL_LEVELS.filter((level) => groups.has(level)).map((level) => (
-        <section key={level} className="radical-group">
-          <h2>{level}</h2>
-          <div className="radical-grid">
-            {(groups.get(level) ?? []).map((k) => (
-              <button
-                type="button"
-                className={`radical-tile radical-tile-${k.level.toLowerCase()}`}
-                key={k.id}
-                onClick={() => setSelectedIndex(sortedKanji.findIndex((x) => x.id === k.id))}
-              >
-                <span className="radical-char">{k.kanji}</span>
-                <span className="radical-label">{k.kunKr}</span>
-              </button>
-            ))}
-          </div>
-        </section>
-      ))}
+      <input
+        type="text"
+        className="browse-search-input"
+        placeholder="한자, 훈음, 훈독, 음독으로 검색"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      {normalizedQuery && filteredKanji.length === 0 ? (
+        <p className="page-placeholder">검색 결과가 없습니다.</p>
+      ) : (
+        ALL_LEVELS.filter((level) => groups.has(level)).map((level) => (
+          <section key={level} className="radical-group">
+            <h2>{level}</h2>
+            <div className="radical-grid">
+              {(groups.get(level) ?? []).map((k) => (
+                <button
+                  type="button"
+                  className={`radical-tile radical-tile-${k.level.toLowerCase()}`}
+                  key={k.id}
+                  onClick={() => setSelectedIndex(sortedKanji.findIndex((x) => x.id === k.id))}
+                >
+                  <span className="radical-char">{k.kanji}</span>
+                  <span className="radical-label">{k.kunKr}</span>
+                </button>
+              ))}
+            </div>
+          </section>
+        ))
+      )}
     </div>
   )
 }
