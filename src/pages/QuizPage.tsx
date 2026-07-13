@@ -70,6 +70,7 @@ export default function QuizPage({
         config={phase.config}
         resume={phase.resume}
         onProgress={saveInProgressQuiz}
+        onExit={() => setPhase({ step: 'setup' })}
         onFinish={(answers, elapsedMs) => {
           clearInProgressQuiz()
           addQuizHistoryEntry({
@@ -90,7 +91,7 @@ export default function QuizPage({
     <ResultScreen
       answers={phase.answers}
       elapsedMs={phase.elapsedMs}
-      questionType={phase.config.questionType}
+      config={phase.config}
       onRestart={() => setPhase({ step: 'setup' })}
     />
   )

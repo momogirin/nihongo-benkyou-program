@@ -176,9 +176,10 @@ export default function MockExamPage() {
       }
     }
 
-    addWrongNotes(wrongByDomain.kanji)
-    addVocabWrongNotes(wrongByDomain.vocab)
-    addGrammarWrongNotes(wrongByDomain.grammar)
+    const source = `모의고사 · ${level}`
+    addWrongNotes(wrongByDomain.kanji, source)
+    addVocabWrongNotes(wrongByDomain.vocab, source)
+    addGrammarWrongNotes(wrongByDomain.grammar, source)
     correctByDomain.kanji.forEach(removeWrongNote)
     correctByDomain.vocab.forEach(removeVocabWrongNote)
     correctByDomain.grammar.forEach(removeGrammarWrongNote)

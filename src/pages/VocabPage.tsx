@@ -115,7 +115,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'quizResult') return
     const wrongIds = quizAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
-    addVocabWrongNotes(wrongIds)
+    addVocabWrongNotes(wrongIds, `단어 퀴즈 · ${level}`)
     addVocabQuizHistoryEntry({
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
       level,

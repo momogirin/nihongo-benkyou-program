@@ -13,6 +13,7 @@ interface Props {
   resume?: InProgressQuiz
   onProgress: (state: InProgressQuiz) => void
   onFinish: (answers: AnsweredQuestion[], elapsedMs: number) => void
+  onExit: () => void
 }
 
 // how long the correct/incorrect state is shown before auto-advancing
@@ -49,7 +50,7 @@ function choiceLabel(questionType: QuizConfig['questionType'], choice: Kanji): s
   }
 }
 
-export default function QuizRunner({ config, resume, onProgress, onFinish }: Props) {
+export default function QuizRunner({ config, resume, onProgress, onFinish, onExit }: Props) {
   const [questions] = useState(() => resume?.questions ?? generateQuestions(config))
   const [index, setIndex] = useState(resume?.index ?? 0)
   const [inputValue, setInputValue] = useState('')
@@ -59,9 +60,13 @@ export default function QuizRunner({ config, resume, onProgress, onFinish }: Pro
   const startTimeRef = useRef(new Date(startedAtRef.current).getTime())
   const inputRef = useRef<HTMLInputElement>(null)
   const choicesRef = useRef<HTMLDivElement>(null)
+  const nextButtonRef = useRef<HTMLButtonElement>(null)
   // Guards against a question being submitted twice (e.g. a fast double
   // Enter press landing before the feedback delay advances to the next question).
   const lastSubmittedIndexRef = useRef(-1)
+  // Guards handleNext the same way — an incorrect answer waits for an explicit
+  // 다음/Enter, and a held-down or double-tapped Enter must not skip a question.
+  const lastAdvancedIndexRef = useRef(-1)
 
   const question = questions[index]
   const isChoiceMode = config.questionType !== 'promptToAnswer'
@@ -83,6 +88,22 @@ export default function QuizRunner({ config, resume, onProgress, onFinish }: Pro
       inputRef.current?.focus()
     }
   }, [index, isChoiceMode])
+
+  function goNext(nextIndex: number) {
+    if (nextIndex < questions.length) {
+      setIndex(nextIndex)
+    } else {
+      onFinish(answersRef.current, Date.now() - startTimeRef.current)
+    }
+  }
+
+  // wrong answers wait here for an explicit 다음 click/Enter instead of
+  // auto-advancing, so there's time to actually read the correct answer
+  function handleNext() {
+    if (lastAdvancedIndexRef.current === index) return
+    lastAdvancedIndexRef.current = index
+    goNext(index + 1)
+  }
 
   function submit(rawAnswer: string) {
     if (lastSubmittedIndexRef.current === index) return
@@ -111,13 +132,12 @@ export default function QuizRunner({ config, resume, onProgress, onFinish }: Pro
       })
     }
 
-    setTimeout(() => {
-      if (nextIndex < questions.length) {
-        setIndex(nextIndex)
-      } else {
-        onFinish(answersRef.current, Date.now() - startTimeRef.current)
-      }
-    }, FEEDBACK_DELAY_MS)
+    // correct answers still auto-advance quickly; wrong answers stop and
+    // wait for the 다음 button/Enter (see handleNext) so they're not skipped
+    // past before the correct answer can be read
+    if (isCorrect) {
+      setTimeout(() => goNext(nextIndex), FEEDBACK_DELAY_MS)
+    }
   }
 
   // number-key shortcuts (1-4) for choice-based question types, so repeated
@@ -135,10 +155,28 @@ export default function QuizRunner({ config, resume, onProgress, onFinish }: Pro
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isChoiceMode, question, feedback])
 
+  // wrong-answer feedback waits for Enter (or a click) on the 다음 button —
+  // !e.repeat blocks a held-down key from firing this multiple times
+  useEffect(() => {
+    if (!activeFeedback || activeFeedback.isCorrect) return
+    nextButtonRef.current?.focus()
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Enter' && !e.repeat) handleNext()
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeFeedback])
+
   return (
     <div className="quiz-runner">
-      <div className="quiz-progress">
-        {index + 1} / {questions.length}
+      <div className="quiz-topbar">
+        <button type="button" className="quiz-exit-button" onClick={onExit}>
+          나가기
+        </button>
+        <div className="quiz-progress">
+          {index + 1} / {questions.length}
+        </div>
       </div>
 
       {!isChoiceMode ? (
@@ -162,6 +200,11 @@ export default function QuizRunner({ config, resume, onProgress, onFinish }: Pro
                 ? '정답입니다'
                 : `오답 · 정답: ${correctAnswerLabel(config.questionType, question.kanji)}`}
             </p>
+          )}
+          {activeFeedback && !activeFeedback.isCorrect && (
+            <button type="button" ref={nextButtonRef} className="quiz-next-button" onClick={handleNext}>
+              다음
+            </button>
           )}
         </>
       ) : (
@@ -197,6 +240,11 @@ export default function QuizRunner({ config, resume, onProgress, onFinish }: Pro
               )
             })}
           </div>
+          {activeFeedback && !activeFeedback.isCorrect && (
+            <button type="button" ref={nextButtonRef} className="quiz-next-button" onClick={handleNext}>
+              다음
+            </button>
+          )}
         </>
       )}
     </div>

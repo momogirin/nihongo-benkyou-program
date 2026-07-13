@@ -23,6 +23,22 @@ export function levelPool(level: KanjiLevel): Kanji[] {
   return kanjiList.filter((k) => k.level === level).sort((a, b) => a.num - b.num)
 }
 
+const QUESTION_TYPE_LABELS: Record<QuizConfig['questionType'], string> = {
+  promptToAnswer: '한국 훈음 입력',
+  answerToPrompt: '한국 훈음 → 한자 고르기',
+  kunReading: '한자 → 일본어 훈독 고르기',
+  kunReadingToKanji: '일본어 훈독 → 한자 고르기',
+  onReading: '한자 → 일본어 음독 고르기',
+  onReadingToKanji: '일본어 음독 → 한자 고르기',
+}
+
+// human-readable "무슨 시험이었는지" label for a kanji quiz, stored alongside
+// wrong notes so WrongNotePage can group by what was actually taken
+export function quizConfigLabel(config: QuizConfig): string {
+  const scope = config.kanjiIds ? '선택한 한자' : config.levels.join('/')
+  return `한자 퀴즈 · ${scope} · ${QUESTION_TYPE_LABELS[config.questionType]}`
+}
+
 function shuffle<T>(items: T[]): T[] {
   const copy = [...items]
   for (let i = copy.length - 1; i > 0; i--) {

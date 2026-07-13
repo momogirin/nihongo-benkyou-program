@@ -1,13 +1,14 @@
 import { useEffect, useRef } from 'react'
 import { correctAnswerLabel } from '../lib/answerMatching'
+import { quizConfigLabel } from '../lib/quizGenerator'
 import { addWrongNotes, recordSrsReview, removeWrongNote } from '../lib/storage'
-import type { AnsweredQuestion, QuestionType } from '../types'
+import type { AnsweredQuestion, QuizConfig } from '../types'
 import './ResultScreen.css'
 
 interface Props {
   answers: AnsweredQuestion[]
   elapsedMs: number
-  questionType: QuestionType
+  config: QuizConfig
   onRestart: () => void
 }
 
@@ -24,7 +25,8 @@ function exampleLabel(a: AnsweredQuestion): string | null {
   return `${exampleKanji}${exampleJp ? `(${exampleJp})` : ''}${exampleKr ? ` · ${exampleKr}` : ''}`
 }
 
-export default function ResultScreen({ answers, elapsedMs, questionType, onRestart }: Props) {
+export default function ResultScreen({ answers, elapsedMs, config, onRestart }: Props) {
+  const questionType = config.questionType
   const correctCount = answers.filter((a) => a.isCorrect).length
   const total = answers.length
   const rate = total > 0 ? Math.round((correctCount / total) * 100) : 0
@@ -32,7 +34,7 @@ export default function ResultScreen({ answers, elapsedMs, questionType, onResta
 
   useEffect(() => {
     const wrongIds = answers.filter((a) => !a.isCorrect).map((a) => a.kanji.id)
-    addWrongNotes(wrongIds)
+    addWrongNotes(wrongIds, quizConfigLabel(config))
     // a kanji answered correctly this round is no longer a standing weak point
     answers.filter((a) => a.isCorrect).forEach((a) => removeWrongNote(a.kanji.id))
     answers.forEach((a) => recordSrsReview('kanji', a.kanji.id, a.isCorrect))

@@ -114,7 +114,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'quizResult') return
     const wrongIds = quizAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
-    addGrammarWrongNotes(wrongIds)
+    addGrammarWrongNotes(wrongIds, `문법 퀴즈 · ${level}`)
     addGrammarQuizHistoryEntry({
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
       level,

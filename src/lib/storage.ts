@@ -8,19 +8,25 @@ import type {
   SimpleQuizHistoryEntry,
 } from '../types'
 
+// `source`: human-readable label for which test produced this wrong answer
+// (e.g. "한자 퀴즈 · N3 · 한국 훈음 입력", "모의고사 · N2") — optional so
+// entries written before this field existed still parse from localStorage
 export interface WrongNoteEntry {
   kanjiId: string
   wrongAt: string
+  source?: string
 }
 
 export interface VocabWrongNoteEntry {
   vocabId: string
   wrongAt: string
+  source?: string
 }
 
 export interface GrammarWrongNoteEntry {
   grammarId: string
   wrongAt: string
+  source?: string
 }
 
 // a quiz session that's been started but not finished yet, saved after every
@@ -85,12 +91,12 @@ export function getWrongNotes(): WrongNoteEntry[] {
   }
 }
 
-export function addWrongNotes(kanjiIds: string[]) {
+export function addWrongNotes(kanjiIds: string[], source: string) {
   if (kanjiIds.length === 0) return
   const byId = new Map(getWrongNotes().map((entry) => [entry.kanjiId, entry]))
   const wrongAt = new Date().toISOString()
   for (const kanjiId of kanjiIds) {
-    byId.set(kanjiId, { kanjiId, wrongAt })
+    byId.set(kanjiId, { kanjiId, wrongAt, source })
   }
   localStorage.setItem(WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
 }
@@ -239,12 +245,12 @@ export function getVocabWrongNotes(): VocabWrongNoteEntry[] {
   }
 }
 
-export function addVocabWrongNotes(vocabIds: string[]) {
+export function addVocabWrongNotes(vocabIds: string[], source: string) {
   if (vocabIds.length === 0) return
   const byId = new Map(getVocabWrongNotes().map((entry) => [entry.vocabId, entry]))
   const wrongAt = new Date().toISOString()
   for (const vocabId of vocabIds) {
-    byId.set(vocabId, { vocabId, wrongAt })
+    byId.set(vocabId, { vocabId, wrongAt, source })
   }
   localStorage.setItem(VOCAB_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
 }
@@ -275,12 +281,12 @@ export function getGrammarWrongNotes(): GrammarWrongNoteEntry[] {
   }
 }
 
-export function addGrammarWrongNotes(grammarIds: string[]) {
+export function addGrammarWrongNotes(grammarIds: string[], source: string) {
   if (grammarIds.length === 0) return
   const byId = new Map(getGrammarWrongNotes().map((entry) => [entry.grammarId, entry]))
   const wrongAt = new Date().toISOString()
   for (const grammarId of grammarIds) {
-    byId.set(grammarId, { grammarId, wrongAt })
+    byId.set(grammarId, { grammarId, wrongAt, source })
   }
   localStorage.setItem(GRAMMAR_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
 }

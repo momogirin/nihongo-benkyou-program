@@ -6,6 +6,29 @@
   font-size: 18px;
 }
 
+.wrong-note-session:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.wrong-note-session-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 6px 2px;
+}
+
+.wrong-note-session-time {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.wrong-note-session-source {
+  font-size: 13px;
+  color: var(--color-ink-muted);
+}
+
 .wrong-note-list {
   list-style: none;
   margin: 0;
@@ -19,10 +42,30 @@
 .wrong-note-item {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 12px 16px 12px 13px;
+  gap: 8px;
+  padding: 8px 12px 8px 13px;
   border-bottom: 1px solid var(--color-border);
   border-left: 4px solid transparent;
+}
+
+.wrong-note-item-main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+}
+
+.wrong-note-item-main:hover {
+  background: var(--color-selected-bg);
 }
 
 .wrong-note-item:last-child {
@@ -63,12 +106,6 @@
   font-size: 14px;
 }
 
-.wrong-note-date {
-  color: var(--color-ink-muted);
-  font-size: 13px;
-  flex: none;
-}
-
 .wrong-note-remove {
   flex: none;
   width: 28px;
@@ -96,4 +133,33 @@
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.wrong-note-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.wrong-note-modal {
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.wrong-note-modal .study-topbar {
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.wrong-note-modal .study-card {
+  height: auto;
+  max-height: none;
+  margin: 0;
 }
