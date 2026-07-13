@@ -6564,7 +6564,7 @@
     "meaningKr": "주변(근처)",
     "meaningEn": "area, vicinity",
     "exampleJp": "この辺にコンビニがありますか。",
-    "exampleKr": "이 근처에 편의점이 있습니까."
+    "exampleKr": "이 근처에 편의점이 있습니까?"
   },
   {
     "id": "N5-598",
@@ -6629,8 +6629,8 @@
     "reading": "ほか",
     "meaningKr": "그 밖(다른 것)",
     "meaningEn": "other, the rest",
-    "exampleJp": "外に質問はありますか。",
-    "exampleKr": "그 밖에 질문이 있습니까."
+    "exampleJp": "ほかに質問はありますか。",
+    "exampleKr": "그 밖에 질문이 있습니까?"
   },
   {
     "id": "N5-604",
@@ -6740,7 +6740,7 @@
     "meaningKr": "정말(진짜)",
     "meaningEn": "real, true",
     "exampleJp": "それは本当ですか。",
-    "exampleKr": "그것은 정말입니까."
+    "exampleKr": "그것은 정말입니까?"
   },
   {
     "id": "N5-614",
@@ -7257,7 +7257,7 @@
     "meaningKr": "여보세요",
     "meaningEn": "Hello? (used on the phone)",
     "exampleJp": "もしもし、田中さんですか。",
-    "exampleKr": "여보세요, 다나카 씨입니까."
+    "exampleKr": "여보세요, 다나카 씨입니까?"
   },
   {
     "id": "N5-661",
@@ -7840,7 +7840,7 @@
     "meaningKr": "잊다",
     "meaningEn": "to forget",
     "exampleJp": "傘を電車に忘れました。",
-    "exampleKr": "우산을 전철에 두고 잊어버렸습니다."
+    "exampleKr": "우산을 전철에 두고 왔습니다."
   },
   {
     "id": "N5-714",

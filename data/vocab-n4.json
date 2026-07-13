@@ -1070,7 +1070,7 @@
     "id": "N4-98",
     "level": "N4",
     "num": 98,
-    "word": "落る",
+    "word": "落ちる",
     "reading": "おちる",
     "meaningKr": "떨어지다",
     "meaningEn": "to fall, to drop",
@@ -3314,7 +3314,7 @@
     "id": "N4-302",
     "level": "N4",
     "num": 302,
-    "word": "楽む",
+    "word": "楽しむ",
     "reading": "たのしむ",
     "meaningKr": "즐기다",
     "meaningEn": "to enjoy",
@@ -4990,8 +4990,8 @@
     "reading": "かのじょ",
     "meaningKr": "여자친구(그녀)",
     "meaningEn": "girlfriend; she",
-    "exampleJp": "彼女は今、大学で勉強しています。",
-    "exampleKr": "그의 여자친구는 지금 대학에서 공부하고 있습니다."
+    "exampleJp": "彼には優しい彼女がいます。",
+    "exampleKr": "그에게는 다정한 여자친구가 있습니다."
   },
   {
     "id": "N4-455",
@@ -5558,7 +5558,7 @@
     "id": "N4-506",
     "level": "N4",
     "num": 506,
-    "word": "下る",
+    "word": "下がる",
     "reading": "さがる",
     "meaningKr": "내려가다(낮아지다)",
     "meaningEn": "to descend, to drop, to fall",

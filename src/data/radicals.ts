@@ -1254,7 +1254,7 @@ export const radicalList: Radical[] = [
     "strokeCount": 6,
     "radical": "艮",
     "meaningEn": "stopping",
-    "meaningKr": "괘이름간",
+    "meaningKr": "괘이름 간",
     "meaningKrSource": "wiktionary",
     "level": "N3"
   },

@@ -4,7 +4,7 @@
     "level": "N1",
     "num": 1,
     "pattern": "～あっての",
-    "meaningKr": "~이 있어야 성립하는, ~あっての",
+    "meaningKr": "~이 있어야 성립하는",
     "meaningEn": "only possible because of ~",
     "explanation": "앞의 것이 있기 때문에 뒤의 것이 성립함을 나타냄. 그것이 없으면 성립하지 않는다는 뉘앙스.",
     "exampleJp": "健康あっての仕事だ。無理をしてはいけない。",
@@ -612,8 +612,8 @@
     "meaningKr": "~의 말로는, ~에게 말하게 하면",
     "meaningEn": "if you ask ~ / in ~'s opinion",
     "explanation": "특정 인물의 입장에서 본 의견을 인용할 때 사용.",
-    "exampleJp": "専門家に言わせれば、この方法は効果的ではないそうです。",
-    "exampleKr": "전문가의 말로는 이 방법은 효과적이지 않다고 합니다."
+    "exampleJp": "専門家に言わせれば、この方法は効果的ではありません。",
+    "exampleKr": "전문가의 말로는 이 방법은 효과적이지 않습니다."
   },
   {
     "id": "N1-57",
@@ -975,8 +975,8 @@
     "meaningKr": "~을 시작으로",
     "meaningEn": "starting with ~",
     "explanation": "그것을 시작으로 이후 잇달아 일이 이어짐을 나타냄.",
-    "exampleJp": "東京公演を皮切りに、全国ツアーが始まります。",
-    "exampleKr": "도쿄 공연을 시작으로 전국 투어가 시작됩니다."
+    "exampleJp": "彼の一言を皮切りにして、会議は白熱した議論になった。",
+    "exampleKr": "그의 한마디를 시작으로 회의는 뜨거운 논쟁이 되었다."
   },
   {
     "id": "N1-90",
