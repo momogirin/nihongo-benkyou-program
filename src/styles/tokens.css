@@ -102,3 +102,49 @@
     --color-level-n1-tint: rgba(242, 85, 95, 0.18);
   }
 }
+
+/* manual light/dark override (사이드바 테마 토글, src/lib/theme.ts) — an
+   attribute selector on :root outranks the bare `:root` inside the media
+   query above on specificity, so these win regardless of OS preference.
+   'system' (the default) sets no attribute and leaves the media query above
+   in control. Values are exact duplicates of the two blocks above since
+   plain CSS has no way to share them without repeating the properties. */
+:root[data-theme='dark'] {
+  --color-bg: #1C1C1E;
+  --color-bg-elevated: #262629;
+  --color-ink: #EDEDEF;
+  --color-ink-muted: #A6A6AA;
+  --color-primary: #3DCBFF;
+  --color-primary-dark: #9BE3FF;
+  --color-button-fill: #3DCBFF;
+  --color-correct: #34C77B;
+  --color-incorrect: #F0525A;
+  --color-border: #6F6F6F;
+  --color-radical-tag: #C9A464;
+  --color-selected-bg: rgba(61, 203, 255, 0.18);
+  --color-level-n5-tint: rgba(34, 197, 94, 0.18);
+  --color-level-n4-tint: rgba(59, 130, 246, 0.18);
+  --color-level-n3-tint: rgba(245, 158, 11, 0.18);
+  --color-level-n2-tint: rgba(251, 107, 29, 0.18);
+  --color-level-n1-tint: rgba(242, 85, 95, 0.18);
+}
+
+:root[data-theme='light'] {
+  --color-bg: #F5F5F7;
+  --color-bg-elevated: #FFFFFF;
+  --color-ink: #1E1E20;
+  --color-ink-muted: #6B6B70;
+  --color-primary: #00B2FF;
+  --color-primary-dark: #0075C4;
+  --color-button-fill: #00B2FF;
+  --color-correct: #1F9254;
+  --color-incorrect: #E5484D;
+  --color-border: #8E8E8E;
+  --color-radical-tag: #8A6D3B;
+  --color-selected-bg: rgba(0, 178, 255, 0.1);
+  --color-level-n5-tint: rgba(34, 197, 94, 0.12);
+  --color-level-n4-tint: rgba(59, 130, 246, 0.12);
+  --color-level-n3-tint: rgba(245, 158, 11, 0.12);
+  --color-level-n2-tint: rgba(251, 107, 29, 0.12);
+  --color-level-n1-tint: rgba(242, 85, 95, 0.12);
+}

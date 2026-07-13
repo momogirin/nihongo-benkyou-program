@@ -131,6 +131,39 @@
   font-size: 14px;
 }
 
+.theme-toggle {
+  display: flex;
+  gap: 4px;
+  margin-top: 20px;
+  padding: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.theme-toggle-btn {
+  flex: 1;
+  padding: 6px 4px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-ink-muted);
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--color-ink);
+}
+
+.theme-toggle-btn.active {
+  background: var(--color-selected-bg);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
 /* below this width the sidebar becomes an overlay drawer instead of a
    persistent column — same open/closed state, different mechanics */
 @media (max-width: 768px) {
