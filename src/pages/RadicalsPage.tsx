@@ -28,8 +28,13 @@ export default function RadicalsPage() {
     return (
       <div className="page study-page">
         <div className="study-content">
-          <div className="quiz-progress">
-            {selectedIndex + 1} / {sortedRadicals.length}
+          <div className="study-topbar">
+            <button type="button" className="study-exit-button" onClick={() => setSelectedIndex(null)}>
+              ← 목록으로
+            </button>
+            <div className="quiz-progress">
+              {selectedIndex + 1} / {sortedRadicals.length}
+            </div>
           </div>
           <div className="study-card">
             <div className="study-top">
@@ -52,9 +57,6 @@ export default function RadicalsPage() {
           </div>
         </div>
         <div className="study-nav">
-          <button type="button" onClick={() => setSelectedIndex(null)}>
-            ← 목록으로
-          </button>
           <button
             type="button"
             onClick={() => setSelectedIndex((i) => (i !== null && i > 0 ? i - 1 : i))}
