@@ -5,11 +5,14 @@ import { grammarList } from '../data/grammar'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import {
   getDueSrsIds,
+  getGrammarInProgressQuiz,
   getGrammarQuizHistory,
   getGrammarWrongNotes,
   getInProgressQuiz,
   getMockExamHistory,
+  getMockExamInProgressQuiz,
   getQuizHistory,
+  getVocabInProgressQuiz,
   getVocabQuizHistory,
   getVocabWrongNotes,
   getWrongNotes,
@@ -109,6 +112,9 @@ export default function HomePage({
   }, [history, vocabHistory, grammarHistory, mockExamHistory])
 
   const inProgress = useMemo(() => getInProgressQuiz(), [])
+  const vocabInProgress = useMemo(() => getVocabInProgressQuiz(), [])
+  const grammarInProgress = useMemo(() => getGrammarInProgressQuiz(), [])
+  const mockExamInProgress = useMemo(() => getMockExamInProgressQuiz(), [])
   const studyProgress = useMemo(() => getStudyProgressSummary(), [])
   const vocabStudyProgress = useMemo(() => getVocabStudyProgressSummary(), [])
   const grammarStudyProgress = useMemo(() => getGrammarStudyProgressSummary(), [])
@@ -156,6 +162,9 @@ export default function HomePage({
     vocabStudyProgress ||
     grammarStudyProgress ||
     inProgress ||
+    vocabInProgress ||
+    grammarInProgress ||
+    mockExamInProgress ||
     wrongNoteIds.length > 0 ||
     vocabWrongIds.length > 0 ||
     grammarWrongIds.length > 0 ||
@@ -233,9 +242,33 @@ export default function HomePage({
           )}
           {inProgress && (
             <button type="button" className="home-entry-card" onClick={onResumeQuiz}>
-              <span className="home-entry-title">마무리못한 퀴즈</span>
+              <span className="home-entry-title">마무리못한 한자 퀴즈</span>
               <span className="home-entry-detail">
                 {configSummary(inProgress.config)} · {inProgress.index}/{inProgress.questions.length} 진행 중
+              </span>
+            </button>
+          )}
+          {vocabInProgress && (
+            <button type="button" className="home-entry-card" onClick={onGoToVocab}>
+              <span className="home-entry-title">마무리못한 단어 퀴즈</span>
+              <span className="home-entry-detail">
+                {vocabInProgress.level} · {vocabInProgress.index}/{vocabInProgress.questions.length} 진행 중
+              </span>
+            </button>
+          )}
+          {grammarInProgress && (
+            <button type="button" className="home-entry-card" onClick={onGoToGrammar}>
+              <span className="home-entry-title">마무리못한 문법 퀴즈</span>
+              <span className="home-entry-detail">
+                {grammarInProgress.level} · {grammarInProgress.index}/{grammarInProgress.questions.length} 진행 중
+              </span>
+            </button>
+          )}
+          {mockExamInProgress && (
+            <button type="button" className="home-entry-card" onClick={onGoToMockExam}>
+              <span className="home-entry-title">마무리못한 모의고사</span>
+              <span className="home-entry-detail">
+                {mockExamInProgress.level} · {mockExamInProgress.index}/{mockExamInProgress.questions.length} 진행 중
               </span>
             </button>
           )}
