@@ -28,10 +28,17 @@ function shuffle<T>(items: T[]): T[] {
 }
 
 // pattern -> meaningKr multiple choice, drawn from the given level's full
-// pool so exam-style quizzing isn't limited to whatever's been studied so far
-export function generateGrammarQuestions(level: KanjiLevel, count: number): GrammarQuizQuestion[] {
+// pool so exam-style quizzing isn't limited to whatever's been studied so far.
+// order: 'random' shuffles the draw (default), 'sequential' keeps the
+// level's num order — same two options the kanji quiz already has.
+export function generateGrammarQuestions(
+  level: KanjiLevel,
+  count: number,
+  order: 'random' | 'sequential' = 'random',
+): GrammarQuizQuestion[] {
   const pool = grammarLevelPool(level)
-  const selected = shuffle(pool).slice(0, Math.min(count, pool.length))
+  const ordered = order === 'random' ? shuffle(pool) : pool
+  const selected = ordered.slice(0, Math.min(count, pool.length))
 
   return selected.map((entry) => {
     const distractorPool = pool.filter((g) => g.id !== entry.id && g.meaningKr !== entry.meaningKr)

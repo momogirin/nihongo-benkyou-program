@@ -27,6 +27,7 @@ import './VocabPage.css'
 
 const ALL_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
 const QUIZ_QUESTION_COUNT = 20
+const QUIZ_COUNT_OPTIONS = [10, 20, 30, 50, 'all'] as const
 const FEEDBACK_DELAY_MS = 550
 
 type Phase = 'setup' | 'studying' | 'done' | 'browse' | 'quiz' | 'quizResult'
@@ -56,6 +57,8 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const levelWords = useMemo(() => vocabList.filter((w) => w.level === level), [level])
   const [browseIndex, setBrowseIndex] = useState<number | null>(null)
 
+  const [quizCount, setQuizCount] = useState<(typeof QUIZ_COUNT_OPTIONS)[number]>(QUIZ_QUESTION_COUNT)
+  const [quizOrder, setQuizOrder] = useState<'random' | 'sequential'>('random')
   const [quizQuestions, setQuizQuestions] = useState<VocabQuizQuestion[]>([])
   const [quizIndex, setQuizIndex] = useState(0)
   const [quizAnswers, setQuizAnswers] = useState<QuizAnswer[]>([])
@@ -104,7 +107,8 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function startQuiz() {
     clearVocabInProgressQuiz()
     setSavedQuiz(null)
-    setQuizQuestions(generateVocabQuestions(level, QUIZ_QUESTION_COUNT))
+    const count = quizCount === 'all' ? pool.length : quizCount
+    setQuizQuestions(generateVocabQuestions(level, count, quizOrder))
     setQuizIndex(0)
     setQuizAnswers([])
     setQuizFeedback(null)
@@ -640,8 +644,48 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         </button>
       )}
 
+      <div className="quiz-option-group">
+        <span className="quiz-option-label">문항 수</span>
+        <div className="study-level-picker">
+          {QUIZ_COUNT_OPTIONS.map((opt) => {
+            const disabled = opt !== 'all' && opt > pool.length
+            return (
+              <button
+                key={opt}
+                type="button"
+                className={`study-level-btn${quizCount === opt ? ' active' : ''}`}
+                disabled={disabled}
+                onClick={() => setQuizCount(opt)}
+              >
+                {opt === 'all' ? `전체 (${pool.length})` : opt}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+
+      <div className="quiz-option-group">
+        <span className="quiz-option-label">순서</span>
+        <div className="study-level-picker">
+          <button
+            type="button"
+            className={`study-level-btn${quizOrder === 'random' ? ' active' : ''}`}
+            onClick={() => setQuizOrder('random')}
+          >
+            랜덤
+          </button>
+          <button
+            type="button"
+            className={`study-level-btn${quizOrder === 'sequential' ? ' active' : ''}`}
+            onClick={() => setQuizOrder('sequential')}
+          >
+            순차
+          </button>
+        </div>
+      </div>
+
       <button type="button" className="vocab-quiz-button" onClick={startQuiz}>
-        단어 퀴즈 풀기 ({Math.min(QUIZ_QUESTION_COUNT, pool.length)}문제)
+        단어 퀴즈 풀기 ({quizCount === 'all' ? pool.length : Math.min(quizCount, pool.length)}문제)
       </button>
     </div>
   )

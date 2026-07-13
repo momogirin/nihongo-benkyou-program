@@ -21,10 +21,16 @@ function shuffle<T>(items: T[]): T[] {
 
 // word+reading -> meaningKr multiple choice, drawn from the given level's
 // full word pool so exam-style quizzing isn't limited to whatever's been
-// studied so far
-export function generateVocabQuestions(level: KanjiLevel, count: number): VocabQuizQuestion[] {
+// studied so far. order: 'random' shuffles the draw (default), 'sequential'
+// keeps the level's num order — same two options the kanji quiz already has.
+export function generateVocabQuestions(
+  level: KanjiLevel,
+  count: number,
+  order: 'random' | 'sequential' = 'random',
+): VocabQuizQuestion[] {
   const pool = vocabLevelPool(level)
-  const selected = shuffle(pool).slice(0, Math.min(count, pool.length))
+  const ordered = order === 'random' ? shuffle(pool) : pool
+  const selected = ordered.slice(0, Math.min(count, pool.length))
 
   return selected.map((entry) => {
     const distractorPool = pool.filter((w) => w.id !== entry.id && w.meaningKr !== entry.meaningKr)

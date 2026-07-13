@@ -26,6 +26,25 @@
   font-weight: 600;
 }
 
+.study-level-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* 단어/문법 퀴즈 설정의 문항 수·순서 선택 — study-level-picker(.study-level-btn 칩)를
+   그대로 재사용하고, 그 위에 붙는 라벨만 이 두 클래스로 감싼다 */
+.quiz-option-group {
+  margin-bottom: 16px;
+}
+
+.quiz-option-label {
+  display: block;
+  text-align: center;
+  color: var(--color-ink-muted);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
 /* selected level picks up that level's own color instead of the generic
    brand highlight, so N5~N1 read as visually distinct the same way their
    study-level-badge already does */
