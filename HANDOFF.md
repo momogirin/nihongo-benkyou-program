@@ -141,9 +141,11 @@ JLPT 한자·단어·문법 학습 + (2026-07-14부터) 영어(TOEIC) 단어 학
 - `Sidebar.tsx` 브랜드 텍스트("한자 학습" → "모모링고") + 로고 글자(`src/assets/icon-source.svg`의 "字" → "M")
 - `npm run icons:generate`로 favicon/PWA 아이콘 전부 재생성
 
+**⚠️ 아직 하면 안 됨 — `vite.config.ts`의 `base` 경로**: 처음에 `/momolingo/`로 미리 바꿨다가, 실제 GitHub 리포지토리 이름이 아직 `nihongo-benkyou-program`인 상태라 다음 배포에서 GitHub Pages가 깨진(빈) 화면을 띄우는 사고가 남 → 즉시 `base: '/nihongo-benkyou-program/'`로 되돌림. **리포지토리 이름을 실제로 바꾸기 전까지 이 값을 절대 먼저 바꾸지 말 것** — 순서는 반드시 (1) GitHub에서 리포지토리 이름을 `momolingo`로 변경 → (2) `git remote set-url origin https://github.com/momogirin/momolingo.git` → (3) 그 다음에야 `vite.config.ts`의 `base`를 `/momolingo/`로 변경+커밋. 이 세 단계는 사용자가 (1)을 완료했다고 알려준 뒤에만 진행할 것.
+
 **아직 안 됨 — 사용자가 직접 해야 함(gh CLI가 이 환경에 없어서 Claude가 GitHub 리포지토리 이름 자체는 못 바꿈)**:
-- GitHub 리포지토리 이름을 `nihongo-benkyou-program` → **정확히 `momolingo`**로 변경(Settings → Repository name). `vite.config.ts`의 `base: '/momolingo/'`를 이미 이 이름에 맞춰뒀으니, 리포지토리 이름을 다른 문자열로 정하면 배포가 깨짐(GitHub Pages 빈 화면) — 꼭 `momolingo`로 맞출 것. GitHub이 자동으로 이전 이름 리다이렉트를 걸어주므로 기존 링크가 완전히 죽지는 않음.
-- 리포지토리 이름을 바꾼 뒤 로컬 git remote도 `git remote set-url origin https://github.com/momogirin/momolingo.git`로 맞춰야 계속 push 가능(로컬 폴더명 자체는 안 바꿔도 됨, 그냥 경로일 뿐이라 기능엔 영향 없음).
+- GitHub 리포지토리 이름을 `nihongo-benkyou-program` → **정확히 `momolingo`**로 변경(Settings → Repository name). GitHub이 자동으로 이전 이름 리다이렉트를 걸어주므로 기존 링크가 완전히 죽지는 않음.
+- 완료했다고 알려주면 위 "아직 하면 안 됨" 항목의 (2)(3)을 이어서 진행.
 
 ## 다음 할 일
 
