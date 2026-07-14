@@ -2,17 +2,21 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { kanjiList, type Kanji } from '../data/kanji'
 import { vocabList, type VocabWord } from '../data/vocab'
 import { grammarList, type GrammarPoint } from '../data/grammar'
+import { englishVocabList, type EnglishVocabWord } from '../data/englishVocab'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
 import { usedKanji } from '../lib/kanjiUsage'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import {
+  getEnglishVocabWrongNotes,
   getGrammarWrongNotes,
   getVocabWrongNotes,
   getWrongNotes,
+  removeEnglishVocabWrongNote,
   removeGrammarWrongNote,
   removeVocabWrongNote,
   removeWrongNote,
+  type EnglishVocabWrongNoteEntry,
   type GrammarWrongNoteEntry,
   type VocabWrongNoteEntry,
   type WrongNoteEntry,
@@ -27,14 +31,16 @@ interface Props {
   onStartQuiz: (config: QuizConfig) => void
   onRetryVocab: (ids: string[]) => void
   onRetryGrammar: (ids: string[]) => void
+  onRetryEnglishVocab: (ids: string[]) => void
 }
 
 type DetailTarget =
   | { kind: 'kanji'; kanji: Kanji }
   | { kind: 'vocab'; word: VocabWord }
   | { kind: 'grammar'; point: GrammarPoint }
+  | { kind: 'englishVocab'; word: EnglishVocabWord }
 
-type ConfirmTarget = { kind: 'kanji' | 'vocab' | 'grammar'; id: string; label: string }
+type ConfirmTarget = { kind: 'kanji' | 'vocab' | 'grammar' | 'englishVocab'; id: string; label: string }
 
 interface Session<TNote, TItem> {
   wrongAt: string
@@ -63,10 +69,11 @@ function groupBySession<TNote extends { wrongAt: string; source?: string }, TIte
   return [...map.values()].sort((a, b) => b.wrongAt.localeCompare(a.wrongAt))
 }
 
-export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGrammar }: Props) {
+export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGrammar, onRetryEnglishVocab }: Props) {
   const [wrongNotes, setWrongNotes] = useState(() => getWrongNotes())
   const [vocabWrongNotes, setVocabWrongNotes] = useState(() => getVocabWrongNotes())
   const [grammarWrongNotes, setGrammarWrongNotes] = useState(() => getGrammarWrongNotes())
+  const [englishVocabWrongNotes, setEnglishVocabWrongNotes] = useState(() => getEnglishVocabWrongNotes())
   const [detail, setDetail] = useState<DetailTarget | null>(null)
   const [confirmTarget, setConfirmTarget] = useState<ConfirmTarget | null>(null)
   const detailCloseButtonRef = useRef<HTMLButtonElement>(null)
@@ -75,6 +82,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
   const kanjiById = useMemo(() => new Map(kanjiList.map((k) => [k.id, k])), [])
   const vocabById = useMemo(() => new Map(vocabList.map((w) => [w.id, w])), [])
   const grammarById = useMemo(() => new Map(grammarList.map((g) => [g.id, g])), [])
+  const englishVocabById = useMemo(() => new Map(englishVocabList.map((w) => [w.id, w])), [])
 
   useEffect(() => {
     if (!detail) return
@@ -132,16 +140,31 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
     [grammarWrongNotes, grammarById],
   )
 
+  const englishVocabSessions = useMemo(
+    () =>
+      groupBySession<EnglishVocabWrongNoteEntry, EnglishVocabWord>(
+        englishVocabWrongNotes
+          .map((note) => ({ note, item: englishVocabById.get(note.englishVocabId) }))
+          .filter((e): e is { note: EnglishVocabWrongNoteEntry; item: EnglishVocabWord } => e.item !== undefined),
+      ),
+    [englishVocabWrongNotes, englishVocabById],
+  )
+
   const kanjiIds = useMemo(() => kanjiSessions.flatMap((s) => s.items.map(({ item }) => item.id)), [kanjiSessions])
   const vocabIds = useMemo(() => vocabSessions.flatMap((s) => s.items.map(({ item }) => item.id)), [vocabSessions])
   const grammarIds = useMemo(
     () => grammarSessions.flatMap((s) => s.items.map(({ item }) => item.id)),
     [grammarSessions],
   )
+  const englishVocabIds = useMemo(
+    () => englishVocabSessions.flatMap((s) => s.items.map(({ item }) => item.id)),
+    [englishVocabSessions],
+  )
 
   const kanjiCount = kanjiIds.length
   const vocabCount = vocabIds.length
   const grammarCount = grammarIds.length
+  const englishVocabCount = englishVocabIds.length
 
   function performRemove(target: ConfirmTarget) {
     if (target.kind === 'kanji') {
@@ -150,9 +173,12 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
     } else if (target.kind === 'vocab') {
       removeVocabWrongNote(target.id)
       setVocabWrongNotes(getVocabWrongNotes())
-    } else {
+    } else if (target.kind === 'grammar') {
       removeGrammarWrongNote(target.id)
       setGrammarWrongNotes(getGrammarWrongNotes())
+    } else {
+      removeEnglishVocabWrongNote(target.id)
+      setEnglishVocabWrongNotes(getEnglishVocabWrongNotes())
     }
     setConfirmTarget(null)
   }
@@ -161,7 +187,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
     onStartQuiz(kanjiIdsQuizConfig(kanjiIds))
   }
 
-  if (kanjiCount === 0 && vocabCount === 0 && grammarCount === 0) {
+  if (kanjiCount === 0 && vocabCount === 0 && grammarCount === 0 && englishVocabCount === 0) {
     return (
       <div className="page">
         <h1>오답노트</h1>
@@ -319,6 +345,49 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
         </section>
       )}
 
+      {englishVocabSessions.length > 0 && (
+        <section className="wrong-note-section">
+          <div className="page-header">
+            <h2>영어 단어</h2>
+            <button type="button" className="retry-button" onClick={() => onRetryEnglishVocab(englishVocabIds)}>
+              오답만 재도전 ({englishVocabCount})
+            </button>
+          </div>
+          {englishVocabSessions.map((session) => (
+            <div className="wrong-note-session" key={`englishVocab-${session.wrongAt}`}>
+              <div className="wrong-note-session-header">
+                <span className="wrong-note-session-time">{formatDateTime(session.wrongAt)}</span>
+                <span className="wrong-note-session-source">{session.source ?? '기록 없음'}</span>
+              </div>
+              <ul className="wrong-note-list">
+                {session.items.map(({ note, item: word }) => (
+                  <li key={word.id} className={`wrong-note-item wrong-note-item-${word.level}`}>
+                    <button
+                      type="button"
+                      className="wrong-note-item-main"
+                      onClick={() => setDetail({ kind: 'englishVocab', word })}
+                    >
+                      <span className="wrong-note-word">{word.word}</span>
+                      <span className="wrong-note-detail">
+                        {word.pos} · {word.meaningKr}
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      className="wrong-note-remove"
+                      aria-label={`${word.word} 오답노트에서 제거`}
+                      onClick={() => setConfirmTarget({ kind: 'englishVocab', id: note.englishVocabId, label: word.word })}
+                    >
+                      ✕
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
+      )}
+
       {detail && (
         <div className="wrong-note-modal-backdrop" onClick={() => setDetail(null)}>
           <div className="wrong-note-modal" onClick={(e) => e.stopPropagation()}>
@@ -331,6 +400,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
             {detail.kind === 'kanji' && <KanjiDetailCard kanji={detail.kanji} />}
             {detail.kind === 'vocab' && <VocabDetailCard word={detail.word} />}
             {detail.kind === 'grammar' && <GrammarDetailCard point={detail.point} />}
+            {detail.kind === 'englishVocab' && <EnglishVocabDetailCard word={detail.word} />}
           </div>
         </div>
       )}
@@ -458,6 +528,36 @@ function VocabDetailCard({ word }: { word: VocabWord }) {
             </dd>
           </div>
         )}
+      </dl>
+    </div>
+  )
+}
+
+function EnglishVocabDetailCard({ word }: { word: EnglishVocabWord }) {
+  return (
+    <div className="study-card">
+      <div className="study-top">
+        <span className={`study-level-badge study-level-badge-${word.level}`}>{word.level}</span>
+        <span className="study-radical-chip">{word.pos}</span>
+      </div>
+      <div className="vocab-word-jp">{word.word}</div>
+      <dl className="study-fields">
+        <div className="study-field">
+          <dt>뜻</dt>
+          <dd>{word.meaningKr}</dd>
+        </div>
+        <div className="study-field">
+          <dt>영문 뜻</dt>
+          <dd>{word.meaningEn}</dd>
+        </div>
+        <div className="study-field">
+          <dt>예문</dt>
+          <dd>
+            {word.exampleEn}
+            <br />
+            <span className="vocab-example-kr">{word.exampleKr}</span>
+          </dd>
+        </div>
       </dl>
     </div>
   )

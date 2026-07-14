@@ -86,6 +86,10 @@
 .study-level-btn-n3.active { border-color: var(--color-level-n3); background: var(--color-level-n3-tint); color: var(--color-ink); }
 .study-level-btn-n2.active { border-color: var(--color-level-n2); background: var(--color-level-n2-tint); color: var(--color-ink); }
 .study-level-btn-n1.active { border-color: var(--color-level-n1); background: var(--color-level-n1-tint); color: var(--color-ink); }
+.study-level-btn-core1.active { border-color: var(--color-level-core1); background: var(--color-level-core1-tint); color: var(--color-ink); }
+.study-level-btn-core2.active { border-color: var(--color-level-core2); background: var(--color-level-core2-tint); color: var(--color-ink); }
+.study-level-btn-core3.active { border-color: var(--color-level-core3); background: var(--color-level-core3-tint); color: var(--color-ink); }
+.study-level-btn-toeic.active { border-color: var(--color-level-toeic); background: var(--color-level-toeic-tint); color: var(--color-ink); }
 
 .study-progress-summary {
   color: var(--color-ink-muted);
@@ -198,6 +202,10 @@
 .study-level-badge-n3 { background: var(--color-level-n3); }
 .study-level-badge-n2 { background: var(--color-level-n2); }
 .study-level-badge-n1 { background: var(--color-level-n1); }
+.study-level-badge-core1 { background: var(--color-level-core1); }
+.study-level-badge-core2 { background: var(--color-level-core2); color: var(--color-on-level-core2); }
+.study-level-badge-core3 { background: var(--color-level-core3); color: var(--color-on-level-core3); }
+.study-level-badge-toeic { background: var(--color-level-toeic); color: var(--color-on-level-toeic); }
 
 .study-radical-chip {
   padding: 3px 10px;

@@ -93,6 +93,10 @@
 .wrong-note-item-n3 { border-left-color: var(--color-level-n3); }
 .wrong-note-item-n2 { border-left-color: var(--color-level-n2); }
 .wrong-note-item-n1 { border-left-color: var(--color-level-n1); }
+.wrong-note-item-core1 { border-left-color: var(--color-level-core1); }
+.wrong-note-item-core2 { border-left-color: var(--color-level-core2); }
+.wrong-note-item-core3 { border-left-color: var(--color-level-core3); }
+.wrong-note-item-toeic { border-left-color: var(--color-level-toeic); }
 
 .wrong-note-kanji {
   font-family: var(--font-display);

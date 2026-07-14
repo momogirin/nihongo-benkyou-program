@@ -6,6 +6,7 @@ import WrongNotePage from './pages/WrongNotePage'
 import VocabPage from './pages/VocabPage'
 import GrammarPage from './pages/GrammarPage'
 import MockExamPage from './pages/MockExamPage'
+import EnglishVocabPage from './pages/EnglishVocabPage'
 import BackupPage from './pages/BackupPage'
 import type { PageId, QuizConfig } from './types'
 
@@ -17,6 +18,7 @@ function App() {
   const [resumeRequested, setResumeRequested] = useState(false)
   const [pendingVocabRetryIds, setPendingVocabRetryIds] = useState<string[] | null>(null)
   const [pendingGrammarRetryIds, setPendingGrammarRetryIds] = useState<string[] | null>(null)
+  const [pendingEnglishVocabRetryIds, setPendingEnglishVocabRetryIds] = useState<string[] | null>(null)
   const [isMobile, setIsMobile] = useState(() => window.matchMedia(MOBILE_QUERY).matches)
   const [sidebarOpen, setSidebarOpen] = useState(() => !window.matchMedia(MOBILE_QUERY).matches)
 
@@ -59,6 +61,11 @@ function App() {
     setPage('grammar')
   }
 
+  function retryEnglishVocab(ids: string[]) {
+    setPendingEnglishVocabRetryIds(ids)
+    setPage('englishVocab')
+  }
+
   function handleNavigate(nextPage: PageId) {
     setPage(nextPage)
     if (isMobile) setSidebarOpen(false)
@@ -89,7 +96,14 @@ function App() {
           />
         )
       case 'wrongNote':
-        return <WrongNotePage onStartQuiz={startQuiz} onRetryVocab={retryVocab} onRetryGrammar={retryGrammar} />
+        return (
+          <WrongNotePage
+            onStartQuiz={startQuiz}
+            onRetryVocab={retryVocab}
+            onRetryGrammar={retryGrammar}
+            onRetryEnglishVocab={retryEnglishVocab}
+          />
+        )
       case 'vocab':
         return (
           <VocabPage
@@ -106,6 +120,13 @@ function App() {
         )
       case 'mockExam':
         return <MockExamPage />
+      case 'englishVocab':
+        return (
+          <EnglishVocabPage
+            retryIds={pendingEnglishVocabRetryIds}
+            onRetryIdsConsumed={() => setPendingEnglishVocabRetryIds(null)}
+          />
+        )
       case 'backup':
         return <BackupPage />
     }

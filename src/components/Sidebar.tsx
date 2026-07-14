@@ -21,6 +21,12 @@ const JAPANESE_ITEMS: { id: PageId; label: string }[] = [
   { id: 'wrongNote', label: '오답노트' },
 ]
 
+// 일본어의 형제 그룹 — 2026-07-14 추가(이 파일 위 주석이 예견했던 그대로).
+// 오답노트는 일본어 세 도메인+영어 단어를 전부 한 화면에서 다루므로, 여기서는
+// 따로 항목을 만들지 않고 일본어 쪽 오답노트 메뉴 하나만 계속 씀(두 그룹에
+// 중복 표시하면 같은 화면이 두 개로 보이는 혼란이 생김).
+const ENGLISH_ITEMS: { id: PageId; label: string }[] = [{ id: 'englishVocab', label: '단어' }]
+
 interface Props {
   active: PageId
   onNavigate: (page: PageId) => void
@@ -57,6 +63,20 @@ export default function Sidebar({ active, onNavigate, open, onToggle }: Props) {
         <div className="nav-group-label">일본어</div>
         <div className="nav-subgroup">
           {JAPANESE_ITEMS.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              className={`nav-item nav-subitem${active === item.id ? ' active' : ''}`}
+              onClick={() => onNavigate(item.id)}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="nav-group-label">영어</div>
+        <div className="nav-subgroup">
+          {ENGLISH_ITEMS.map((item) => (
             <button
               key={item.id}
               type="button"

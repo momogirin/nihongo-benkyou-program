@@ -162,6 +162,14 @@
 .vocab-browse-tile-n2::before { background: var(--color-level-n2); }
 .vocab-browse-tile-n1 { background: var(--color-level-n1-tint); }
 .vocab-browse-tile-n1::before { background: var(--color-level-n1); }
+.vocab-browse-tile-core1 { background: var(--color-level-core1-tint); }
+.vocab-browse-tile-core1::before { background: var(--color-level-core1); }
+.vocab-browse-tile-core2 { background: var(--color-level-core2-tint); }
+.vocab-browse-tile-core2::before { background: var(--color-level-core2); }
+.vocab-browse-tile-core3 { background: var(--color-level-core3-tint); }
+.vocab-browse-tile-core3::before { background: var(--color-level-core3); }
+.vocab-browse-tile-toeic { background: var(--color-level-toeic-tint); }
+.vocab-browse-tile-toeic::before { background: var(--color-level-toeic); }
 
 .vocab-browse-tile-word {
   font-family: var(--font-display);

@@ -39,8 +39,20 @@ JLPT 한자·단어·문법 학습 + (2026-07-14부터) 영어(TOEIC) 단어 학
    - **2026-07-14, core2 시도했다가 세션 한도(rate limit)로 중단됨**: 5개 서브에이전트 중 4개는 200단어씩 결과 파일을 썼지만(1개, 랭킹 601~800 구간은 아예 못 씀), "세션 한도로 중간에 끊김 + 세이프티 분류기 확인 불가" 경고가 붙었음. 처음엔 전부 폐기했다가, **이미 쓴 사용량을 낭비하지 말라는 사용자 지적**으로 재검토함 — 실제로 4개 청크를 직접 검증(JSON 유효성/품사값/빈 필드/중복단어)해보니 문제는 `email` 항목의 `meaningEn`이 원본 NGSL 소스 자체에 없던 값(null)이었던 것 하나뿐(모델 생성 문제 아님, 직접 채워넣음). 그래서 **랭킹 1~600·801~1000(800단어)은 살려서 `data/english-vocab-core2.json`에 반영**, **랭킹 601~800(200단어)만 다음 세션에서 생성**하면 됨. `src/data/englishVocab.ts`엔 현재 core1(1000)+core2(800, 601~800 구간 비어있음) = 1,800개 반영됨.
    - **core1~toeic 전체 재현에 필요한 원본 조인 데이터**: 이번 세션에서 만든 `joined-all.json`(NGSL/TSL CSV+정의 파일을 조인해서 급수별로 묶은 중간 산출물)은 세션 스크래치패드에만 있어서 다음 세션엔 사라짐 — 필요하면 이 문서의 "영어(TOEIC) 단어 데이터" 데이터 소스 섹션대로 NGSL/TSL stats CSV + definitions xlsx를 다시 받아서 재조인하면 됨(전부 재현 가능한 기계적 과정, 유실되는 정보 없음).
 2. 파생어 세트(품사 묶음, Part 5 대비) — 전체 리스트 완성 후 별도 후처리 단계로.
-3. `types.ts`에 페이지 상태 추가 → `EnglishVocabPage.tsx`(`VocabPage.tsx` 패턴 미러링: 학습/브라우즈/퀴즈) → `Sidebar.tsx`에 "영어" 형제 그룹 추가 → 퀴즈 생성기(뜻 맞히기 + 품사 변환 빈칸형) → 오답노트 스키마에 네 번째 도메인으로 편입.
-4. 급수 배지 색상 등 UI 토큰은 기존 JLPT 5단계(`--color-level-n5~n1`) 전용으로 하드코딩돼 있어서, 영어 4단계(`core1`/`core2`/`core3`/`toeic`)용 색상 토큰을 새로 추가해야 함 — 페이지 작업 시 확인할 것.
+3. ~~`types.ts`에 페이지 상태 추가 → `EnglishVocabPage.tsx` → `Sidebar.tsx` → 퀴즈 생성기 → 오답노트 스키마~~ **2026-07-14 전부 완료** (아래 "화면/UI 구현" 참고).
+4. ~~급수 배지 색상 토큰~~ **완료** — `--color-level-core1~toeic`(+tint/on-level) 추가, 브랜드 청록·JLPT 초록~빨강 스펙트럼과 안 겹치는 옛 브랜드 보라~마젠타 계열 재사용.
+5. **남은 것**: `HomePage.tsx` 연동(최근기록/이어하기 카드/통계 대시보드에 영어 도메인 미포함 — 컴파일 에러는 없지만 홈 화면에서 영어 단어 활동이 안 보임), 품사 변환 빈칸형 퀴즈(Part 5 유형, 파생어 세트 데이터 필요해서 보류), 파생어 세트 후처리 자체.
+
+## 화면/UI 구현 (2026-07-14 완료)
+
+`EnglishVocabPage.tsx`를 `VocabPage.tsx`와 동일한 구조(학습 배치/나가기·이어하기, 전체보기 검색+그리드+상세카드, 퀴즈 설정+실행+결과, 오답노트/SRS 연동)로 구현. 일본어 단어와 다른 점만 반영: `reading` 없음, `pos`(품사) 필드가 급수 배지 옆에 칩으로 표시됨, 예문은 `exampleEn`/`exampleKr`. 급수 라벨은 내부 id(`core1`~`toeic`)와 화면 표시 라벨(`필수 1000`/`필수 2000`/`확장 어휘`/`토익 특화`)을 분리(`LEVEL_LABELS` 맵).
+
+- `src/lib/englishVocabQuizGenerator.ts`: `vocabQuizGenerator.ts` 미러링(뜻 맞히기 4지선다, 레벨 뽑기/오답 재도전 ids 뽑기 둘 다).
+- `src/lib/storage.ts`: 영어를 4번째 병렬 도메인으로 추가 — `EnglishVocabWrongNoteEntry`/`EnglishVocabInProgressQuiz`, `SrsDomain`에 `'englishVocab'` 추가, 학습진도/오답노트/퀴즈기록/SRS/인프로그레스 CRUD 함수 전부, `BackupPayload` 버전 11→12(새 필드 전부 optional이라 구버전 백업도 그대로 유효).
+- `src/pages/WrongNotePage.tsx`: 4번째 섹션(`영어 단어`)으로 세션별 그룹핑 통합. `DetailTarget`/`ConfirmTarget` union에 `'englishVocab'` 추가, `EnglishVocabDetailCard` 컴포넌트 추가.
+- `src/components/Sidebar.tsx` / `src/App.tsx`: "일본어" 옆에 "영어" 형제 그룹(하위 메뉴 "단어" 하나) 추가, `PageId`에 `'englishVocab'` 추가. 오답노트는 네 도메인을 다 아우르므로 "영어" 그룹엔 중복 추가 안 함(일본어 쪽 오답노트 메뉴 하나만 계속 씀).
+- `src/styles/tokens.css` + `StudyPage.css`/`VocabPage.css`/`WrongNotePage.css`: 급수 배지/버튼/타일/오답노트 테두리에 `core1`/`core2`/`core3`/`toeic` 색상 클래스 추가.
+- **아직 core2(601~800)/core3/toeic 데이터가 비어있어서**, 그 급수를 선택하면 "이 급수는 아직 콘텐츠 작업 중입니다" 빈 상태만 뜨고 시작 버튼이 비활성화됨(레이아웃은 안 깨짐, 정상 동작) — 데이터 채우면 자동으로 활성화됨.
 
 ## 현재 구조
 

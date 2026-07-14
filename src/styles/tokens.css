@@ -63,6 +63,23 @@
   --color-level-n2-tint: rgba(251, 107, 29, 0.12);
   --color-level-n1-tint: rgba(242, 85, 95, 0.12);
 
+  /* 영어(TOEIC) 급수색 — JLPT 스펙트럼(초록~빨강)과 브랜드색(청록)을 모두
+     피해서 예전 브랜드색이 쓰던 보라~마젠타 계열(현재 안 쓰여서 비어있는
+     구간)을 재사용. core1(쉬움)->toeic(가장 특화)로 갈수록 진해짐.
+     --color-on-level-core2/3/toeic만 흰 텍스트인 이유는 --color-on-level-n4와
+     같음(YIQ 밝기 128 미만) — core1은 밝아서 기본 --color-on-level(어두운 값) 그대로 씀. */
+  --color-level-core1: #A78BFA;
+  --color-level-core2: #8B5CF6;
+  --color-level-core3: #7C3AED;
+  --color-level-toeic: #C026D3;
+  --color-on-level-core2: #FFFFFF;
+  --color-on-level-core3: #FFFFFF;
+  --color-on-level-toeic: #FFFFFF;
+  --color-level-core1-tint: rgba(167, 139, 250, 0.12);
+  --color-level-core2-tint: rgba(139, 92, 246, 0.12);
+  --color-level-core3-tint: rgba(124, 58, 237, 0.12);
+  --color-level-toeic-tint: rgba(192, 38, 211, 0.12);
+
   --font-display: 'Noto Serif JP', serif;
   --font-sans: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
   --font-caption: 'Noto Sans KR', sans-serif;
@@ -100,6 +117,10 @@
     --color-level-n3-tint: rgba(245, 158, 11, 0.18);
     --color-level-n2-tint: rgba(251, 107, 29, 0.18);
     --color-level-n1-tint: rgba(242, 85, 95, 0.18);
+    --color-level-core1-tint: rgba(167, 139, 250, 0.18);
+    --color-level-core2-tint: rgba(139, 92, 246, 0.18);
+    --color-level-core3-tint: rgba(124, 58, 237, 0.18);
+    --color-level-toeic-tint: rgba(192, 38, 211, 0.18);
   }
 }
 
@@ -127,6 +148,10 @@
   --color-level-n3-tint: rgba(245, 158, 11, 0.18);
   --color-level-n2-tint: rgba(251, 107, 29, 0.18);
   --color-level-n1-tint: rgba(242, 85, 95, 0.18);
+  --color-level-core1-tint: rgba(167, 139, 250, 0.18);
+  --color-level-core2-tint: rgba(139, 92, 246, 0.18);
+  --color-level-core3-tint: rgba(124, 58, 237, 0.18);
+  --color-level-toeic-tint: rgba(192, 38, 211, 0.18);
 }
 
 :root[data-theme='light'] {
@@ -147,4 +172,8 @@
   --color-level-n3-tint: rgba(245, 158, 11, 0.12);
   --color-level-n2-tint: rgba(251, 107, 29, 0.12);
   --color-level-n1-tint: rgba(242, 85, 95, 0.12);
+  --color-level-core1-tint: rgba(167, 139, 250, 0.12);
+  --color-level-core2-tint: rgba(139, 92, 246, 0.12);
+  --color-level-core3-tint: rgba(124, 58, 237, 0.12);
+  --color-level-toeic-tint: rgba(192, 38, 211, 0.12);
 }

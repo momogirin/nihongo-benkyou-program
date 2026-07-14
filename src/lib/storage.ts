@@ -3,6 +3,8 @@ import type { QuizQuestion } from './quizGenerator'
 import type { VocabQuizQuestion } from './vocabQuizGenerator'
 import type { GrammarQuizQuestion } from './grammarQuizGenerator'
 import type { MockExamQuestion } from './mockExamGenerator'
+import type { EnglishVocabQuizQuestion } from './englishVocabQuizGenerator'
+import type { EnglishLevel } from '../data/englishVocab'
 import type {
   AnsweredQuestion,
   MockExamHistoryEntry,
@@ -34,6 +36,12 @@ export interface VocabWrongNoteEntry {
 
 export interface GrammarWrongNoteEntry {
   grammarId: string
+  wrongAt: string
+  source?: string
+}
+
+export interface EnglishVocabWrongNoteEntry {
+  englishVocabId: string
   wrongAt: string
   source?: string
 }
@@ -78,29 +86,43 @@ export interface MockExamInProgressQuiz {
   startedAt: string
 }
 
+// same again, for 영어(TOEIC) 단어 퀴즈 — level is EnglishLevel (core1~3/toeic),
+// not KanjiLevel, since 영어는 JLPT 급수 축을 안 씀
+export interface EnglishVocabInProgressQuiz {
+  level: EnglishLevel
+  questions: EnglishVocabQuizQuestion[]
+  index: number
+  answers: { question: EnglishVocabQuizQuestion; selected: string; isCorrect: boolean }[]
+  startedAt: string
+}
+
 const WRONG_NOTES_KEY = 'kanjiApp.wrongNotes'
 const VOCAB_WRONG_NOTES_KEY = 'kanjiApp.vocabWrongNotes'
 const GRAMMAR_WRONG_NOTES_KEY = 'kanjiApp.grammarWrongNotes'
+const ENGLISH_VOCAB_WRONG_NOTES_KEY = 'kanjiApp.englishVocabWrongNotes'
 const QUIZ_HISTORY_KEY = 'kanjiApp.quizHistory'
 const VOCAB_QUIZ_HISTORY_KEY = 'kanjiApp.vocabQuizHistory'
 const GRAMMAR_QUIZ_HISTORY_KEY = 'kanjiApp.grammarQuizHistory'
+const ENGLISH_VOCAB_QUIZ_HISTORY_KEY = 'kanjiApp.englishVocabQuizHistory'
 const MOCK_EXAM_HISTORY_KEY = 'kanjiApp.mockExamHistory'
 const QUIZ_HISTORY_LIMIT = 20
 const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
 const VOCAB_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabInProgressQuiz'
 const GRAMMAR_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.grammarInProgressQuiz'
 const MOCK_EXAM_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.mockExamInProgressQuiz'
+const ENGLISH_VOCAB_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.englishVocabInProgressQuiz'
 const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
 const RADICAL_STUDY_PROGRESS_KEY = 'kanjiApp.radicalStudyProgress'
 const RADICAL_STUDY_BATCH_SIZE_KEY = 'kanjiApp.radicalStudyBatchSize'
 const VOCAB_STUDY_PROGRESS_KEY = 'kanjiApp.vocabStudyProgress'
 const GRAMMAR_STUDY_PROGRESS_KEY = 'kanjiApp.grammarStudyProgress'
+const ENGLISH_VOCAB_STUDY_PROGRESS_KEY = 'kanjiApp.englishVocabStudyProgress'
 const DEFAULT_STUDY_BATCH_SIZE = 10
 
 // SRS(간격반복 복습, 라이트너 방식): 퀴즈에서 맞히면 박스가 하나 올라가고 다음
 // 복습일이 더 멀어지고, 틀리면 박스 0으로 돌아가 바로 다음날 다시 나옴.
 // 학습(flashcard)이 아니라 퀴즈로 실제 recall을 테스트했을 때만 갱신됨.
-export type SrsDomain = 'kanji' | 'vocab' | 'grammar'
+export type SrsDomain = 'kanji' | 'vocab' | 'grammar' | 'englishVocab'
 
 export interface SrsEntry {
   box: number
@@ -112,6 +134,7 @@ const SRS_STATE_KEY: Record<SrsDomain, string> = {
   kanji: 'kanjiApp.srsKanji',
   vocab: 'kanjiApp.srsVocab',
   grammar: 'kanjiApp.srsGrammar',
+  englishVocab: 'kanjiApp.srsEnglishVocab',
 }
 
 const SRS_MAX_BOX = 4
@@ -205,6 +228,28 @@ export function importGrammarQuizHistory(entries: SimpleQuizHistoryEntry[]) {
   for (const entry of entries) byId.set(entry.id, entry)
   const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
   localStorage.setItem(GRAMMAR_QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
+}
+
+// 같은 다시, 영어(TOEIC) 단어 quizzes
+export function getEnglishVocabQuizHistory(): SimpleQuizHistoryEntry[] {
+  try {
+    const raw = localStorage.getItem(ENGLISH_VOCAB_QUIZ_HISTORY_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function addEnglishVocabQuizHistoryEntry(entry: SimpleQuizHistoryEntry) {
+  const history = [entry, ...getEnglishVocabQuizHistory()].slice(0, QUIZ_HISTORY_LIMIT)
+  localStorage.setItem(ENGLISH_VOCAB_QUIZ_HISTORY_KEY, JSON.stringify(history))
+}
+
+export function importEnglishVocabQuizHistory(entries: SimpleQuizHistoryEntry[]) {
+  const byId = new Map(getEnglishVocabQuizHistory().map((entry) => [entry.id, entry]))
+  for (const entry of entries) byId.set(entry.id, entry)
+  const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
+  localStorage.setItem(ENGLISH_VOCAB_QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
 }
 
 // 모의고사(한자/단어/문법 통합) 기록 — 위 세 히스토리와 같은 패턴
@@ -319,9 +364,31 @@ export function clearMockExamInProgressQuiz() {
   localStorage.removeItem(MOCK_EXAM_IN_PROGRESS_QUIZ_KEY)
 }
 
+// same again, for 영어(TOEIC) 단어 퀴즈
+export function getEnglishVocabInProgressQuiz(): EnglishVocabInProgressQuiz | null {
+  try {
+    const raw = localStorage.getItem(ENGLISH_VOCAB_IN_PROGRESS_QUIZ_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
+export function saveEnglishVocabInProgressQuiz(state: EnglishVocabInProgressQuiz) {
+  localStorage.setItem(ENGLISH_VOCAB_IN_PROGRESS_QUIZ_KEY, JSON.stringify(state))
+}
+
+export function clearEnglishVocabInProgressQuiz() {
+  localStorage.removeItem(ENGLISH_VOCAB_IN_PROGRESS_QUIZ_KEY)
+}
+
 // same "don't clobber an active local session" rule as importInProgressQuiz
 export function importVocabInProgressQuiz(quiz: VocabInProgressQuiz | null) {
   if (quiz && !getVocabInProgressQuiz()) saveVocabInProgressQuiz(quiz)
+}
+
+export function importEnglishVocabInProgressQuiz(quiz: EnglishVocabInProgressQuiz | null) {
+  if (quiz && !getEnglishVocabInProgressQuiz()) saveEnglishVocabInProgressQuiz(quiz)
 }
 
 export function importGrammarInProgressQuiz(quiz: GrammarInProgressQuiz | null) {
@@ -379,6 +446,42 @@ export function importVocabWrongNotes(entries: VocabWrongNoteEntry[]) {
     }
   }
   localStorage.setItem(VOCAB_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
+}
+
+// same shape again, but for the 영어(TOEIC) 단어 quiz
+export function getEnglishVocabWrongNotes(): EnglishVocabWrongNoteEntry[] {
+  try {
+    const raw = localStorage.getItem(ENGLISH_VOCAB_WRONG_NOTES_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function addEnglishVocabWrongNotes(englishVocabIds: string[], source: string) {
+  if (englishVocabIds.length === 0) return
+  const byId = new Map(getEnglishVocabWrongNotes().map((entry) => [entry.englishVocabId, entry]))
+  const wrongAt = new Date().toISOString()
+  for (const englishVocabId of englishVocabIds) {
+    byId.set(englishVocabId, { englishVocabId, wrongAt, source })
+  }
+  localStorage.setItem(ENGLISH_VOCAB_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
+}
+
+export function removeEnglishVocabWrongNote(englishVocabId: string) {
+  const remaining = getEnglishVocabWrongNotes().filter((entry) => entry.englishVocabId !== englishVocabId)
+  localStorage.setItem(ENGLISH_VOCAB_WRONG_NOTES_KEY, JSON.stringify(remaining))
+}
+
+export function importEnglishVocabWrongNotes(entries: EnglishVocabWrongNoteEntry[]) {
+  const byId = new Map(getEnglishVocabWrongNotes().map((entry) => [entry.englishVocabId, entry]))
+  for (const entry of entries) {
+    const existing = byId.get(entry.englishVocabId)
+    if (!existing || existing.wrongAt < entry.wrongAt) {
+      byId.set(entry.englishVocabId, entry)
+    }
+  }
+  localStorage.setItem(ENGLISH_VOCAB_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
 }
 
 // same shape again, but for the 문법(grammar) quiz
@@ -526,6 +629,29 @@ export function importGrammarStudyProgress(progress: Record<string, number>) {
   importLevelProgress(GRAMMAR_STUDY_PROGRESS_KEY, progress)
 }
 
+// same shape again, but for the 영어(TOEIC) 단어 학습 flow — level is
+// EnglishLevel(core1~3/toeic), so this doesn't reuse setLevelProgress/
+// importLevelProgress's KanjiLevel-typed setter (though it does reuse the
+// generic getLevelProgressMap/merge logic, which never actually depended on
+// KanjiLevel to begin with)
+export function getEnglishVocabStudyProgress(level: EnglishLevel): number {
+  return getLevelProgressMap(ENGLISH_VOCAB_STUDY_PROGRESS_KEY)[level] ?? 0
+}
+
+export function setEnglishVocabStudyProgress(level: EnglishLevel, completedCount: number) {
+  const all = getLevelProgressMap(ENGLISH_VOCAB_STUDY_PROGRESS_KEY)
+  all[level] = completedCount
+  localStorage.setItem(ENGLISH_VOCAB_STUDY_PROGRESS_KEY, JSON.stringify(all))
+}
+
+export function getAllEnglishVocabStudyProgress(): Record<string, number> {
+  return getLevelProgressMap(ENGLISH_VOCAB_STUDY_PROGRESS_KEY)
+}
+
+export function importEnglishVocabStudyProgress(progress: Record<string, number>) {
+  importLevelProgress(ENGLISH_VOCAB_STUDY_PROGRESS_KEY, progress)
+}
+
 function getSrsStateMap(domain: SrsDomain): Record<string, SrsEntry> {
   try {
     const raw = localStorage.getItem(SRS_STATE_KEY[domain])
@@ -582,7 +708,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9 | 10 | 11
+  version: 8 | 9 | 10 | 11 | 12
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -605,6 +731,12 @@ export interface BackupPayload {
   vocabInProgressQuiz?: VocabInProgressQuiz | null
   grammarInProgressQuiz?: GrammarInProgressQuiz | null
   mockExamInProgressQuiz?: MockExamInProgressQuiz | null
+  // added in version 12 (영어/TOEIC 단어 도메인) — optional so older backup files still validate
+  englishVocabStudyProgress?: Record<string, number>
+  englishVocabWrongNotes?: EnglishVocabWrongNoteEntry[]
+  englishVocabQuizHistory?: SimpleQuizHistoryEntry[]
+  srsEnglishVocab?: Record<string, SrsEntry>
+  englishVocabInProgressQuiz?: EnglishVocabInProgressQuiz | null
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -613,7 +745,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 11,
+    version: 12,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -633,6 +765,11 @@ export function buildBackupPayload(): BackupPayload {
     vocabInProgressQuiz: getVocabInProgressQuiz(),
     grammarInProgressQuiz: getGrammarInProgressQuiz(),
     mockExamInProgressQuiz: getMockExamInProgressQuiz(),
+    englishVocabStudyProgress: getAllEnglishVocabStudyProgress(),
+    englishVocabWrongNotes: getEnglishVocabWrongNotes(),
+    englishVocabQuizHistory: getEnglishVocabQuizHistory(),
+    srsEnglishVocab: getAllSrsState('englishVocab'),
+    englishVocabInProgressQuiz: getEnglishVocabInProgressQuiz(),
   }
 }
 
@@ -658,4 +795,9 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.vocabInProgressQuiz) importVocabInProgressQuiz(payload.vocabInProgressQuiz)
   if (payload.grammarInProgressQuiz) importGrammarInProgressQuiz(payload.grammarInProgressQuiz)
   if (payload.mockExamInProgressQuiz) importMockExamInProgressQuiz(payload.mockExamInProgressQuiz)
+  if (payload.englishVocabStudyProgress) importEnglishVocabStudyProgress(payload.englishVocabStudyProgress)
+  if (payload.englishVocabWrongNotes) importEnglishVocabWrongNotes(payload.englishVocabWrongNotes)
+  if (payload.englishVocabQuizHistory) importEnglishVocabQuizHistory(payload.englishVocabQuizHistory)
+  if (payload.srsEnglishVocab) importSrsState('englishVocab', payload.srsEnglishVocab)
+  if (payload.englishVocabInProgressQuiz) importEnglishVocabInProgressQuiz(payload.englishVocabInProgressQuiz)
 }
