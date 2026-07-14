@@ -23,6 +23,11 @@
   cursor: pointer;
 }
 
+.kanji-tab:hover {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+}
+
 .kanji-tab.active {
   background: var(--color-selected-bg);
   border-color: var(--color-primary-dark);

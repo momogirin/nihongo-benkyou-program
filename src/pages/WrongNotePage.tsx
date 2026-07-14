@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { kanjiList, type Kanji } from '../data/kanji'
 import { vocabList, type VocabWord } from '../data/vocab'
 import { grammarList, type GrammarPoint } from '../data/grammar'
@@ -34,6 +34,8 @@ type DetailTarget =
   | { kind: 'vocab'; word: VocabWord }
   | { kind: 'grammar'; point: GrammarPoint }
 
+type ConfirmTarget = { kind: 'kanji' | 'vocab' | 'grammar'; id: string; label: string }
+
 interface Session<TNote, TItem> {
   wrongAt: string
   source?: string
@@ -66,6 +68,9 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
   const [vocabWrongNotes, setVocabWrongNotes] = useState(() => getVocabWrongNotes())
   const [grammarWrongNotes, setGrammarWrongNotes] = useState(() => getGrammarWrongNotes())
   const [detail, setDetail] = useState<DetailTarget | null>(null)
+  const [confirmTarget, setConfirmTarget] = useState<ConfirmTarget | null>(null)
+  const detailCloseButtonRef = useRef<HTMLButtonElement>(null)
+  const confirmCancelButtonRef = useRef<HTMLButtonElement>(null)
 
   const kanjiById = useMemo(() => new Map(kanjiList.map((k) => [k.id, k])), [])
   const vocabById = useMemo(() => new Map(vocabList.map((w) => [w.id, w])), [])
@@ -73,12 +78,29 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
 
   useEffect(() => {
     if (!detail) return
+    // no next thing focused when the modal opens (the list button that
+    // triggered it sits behind the backdrop), so move focus onto the close
+    // button — same reasoning as the phase-transition focus effects elsewhere
+    // in the app (StudyPage/VocabPage/GrammarPage 완료·결과 화면)
+    detailCloseButtonRef.current?.focus({ preventScroll: true })
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'Escape') setDetail(null)
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [detail])
+
+  useEffect(() => {
+    if (!confirmTarget) return
+    confirmCancelButtonRef.current?.focus({ preventScroll: true })
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') setConfirmTarget(null)
+      else if (e.key === 'Enter' && !e.repeat) performRemove(confirmTarget)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [confirmTarget])
 
   const kanjiSessions = useMemo(
     () =>
@@ -121,22 +143,18 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
   const vocabCount = vocabIds.length
   const grammarCount = grammarIds.length
 
-  function handleRemoveKanji(kanjiId: string, label: string) {
-    if (!window.confirm(`${label} 오답노트에서 제거할까요?`)) return
-    removeWrongNote(kanjiId)
-    setWrongNotes(getWrongNotes())
-  }
-
-  function handleRemoveVocab(vocabId: string, label: string) {
-    if (!window.confirm(`${label} 오답노트에서 제거할까요?`)) return
-    removeVocabWrongNote(vocabId)
-    setVocabWrongNotes(getVocabWrongNotes())
-  }
-
-  function handleRemoveGrammar(grammarId: string, label: string) {
-    if (!window.confirm(`${label} 오답노트에서 제거할까요?`)) return
-    removeGrammarWrongNote(grammarId)
-    setGrammarWrongNotes(getGrammarWrongNotes())
+  function performRemove(target: ConfirmTarget) {
+    if (target.kind === 'kanji') {
+      removeWrongNote(target.id)
+      setWrongNotes(getWrongNotes())
+    } else if (target.kind === 'vocab') {
+      removeVocabWrongNote(target.id)
+      setVocabWrongNotes(getVocabWrongNotes())
+    } else {
+      removeGrammarWrongNote(target.id)
+      setGrammarWrongNotes(getGrammarWrongNotes())
+    }
+    setConfirmTarget(null)
   }
 
   function handleRetryKanji() {
@@ -203,7 +221,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
                       type="button"
                       className="wrong-note-remove"
                       aria-label={`${kanji.kanji} 오답노트에서 제거`}
-                      onClick={() => handleRemoveKanji(note.kanjiId, kanji.kanji)}
+                      onClick={() => setConfirmTarget({ kind: 'kanji', id: note.kanjiId, label: kanji.kanji })}
                     >
                       ✕
                     </button>
@@ -246,7 +264,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
                       type="button"
                       className="wrong-note-remove"
                       aria-label={`${word.word} 오답노트에서 제거`}
-                      onClick={() => handleRemoveVocab(note.vocabId, word.word)}
+                      onClick={() => setConfirmTarget({ kind: 'vocab', id: note.vocabId, label: word.word })}
                     >
                       ✕
                     </button>
@@ -289,7 +307,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
                       type="button"
                       className="wrong-note-remove"
                       aria-label={`${point.pattern} 오답노트에서 제거`}
-                      onClick={() => handleRemoveGrammar(note.grammarId, point.pattern)}
+                      onClick={() => setConfirmTarget({ kind: 'grammar', id: note.grammarId, label: point.pattern })}
                     >
                       ✕
                     </button>
@@ -305,7 +323,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
         <div className="wrong-note-modal-backdrop" onClick={() => setDetail(null)}>
           <div className="wrong-note-modal" onClick={(e) => e.stopPropagation()}>
             <div className="study-topbar">
-              <button type="button" className="study-exit-button" onClick={() => setDetail(null)}>
+              <button type="button" ref={detailCloseButtonRef} className="study-exit-button" onClick={() => setDetail(null)}>
                 ✕ 닫기
               </button>
             </div>
@@ -313,6 +331,27 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
             {detail.kind === 'kanji' && <KanjiDetailCard kanji={detail.kanji} />}
             {detail.kind === 'vocab' && <VocabDetailCard word={detail.word} />}
             {detail.kind === 'grammar' && <GrammarDetailCard point={detail.point} />}
+          </div>
+        </div>
+      )}
+
+      {confirmTarget && (
+        <div className="wrong-note-modal-backdrop" onClick={() => setConfirmTarget(null)}>
+          <div className="confirm-modal" onClick={(e) => e.stopPropagation()} role="alertdialog" aria-modal="true">
+            <p className="confirm-modal-message">{confirmTarget.label} 오답노트에서 제거할까요?</p>
+            <div className="confirm-modal-actions">
+              <button
+                type="button"
+                ref={confirmCancelButtonRef}
+                className="study-exit-button"
+                onClick={() => setConfirmTarget(null)}
+              >
+                취소
+              </button>
+              <button type="button" className="confirm-modal-danger" onClick={() => performRemove(confirmTarget)}>
+                제거
+              </button>
+            </div>
           </div>
         </div>
       )}

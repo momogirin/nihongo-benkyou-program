@@ -375,7 +375,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           <h1>
             단어 전체 목록 · {level}
           </h1>
-          <button type="button" onClick={() => setPhase('setup')}>
+          <button type="button" className="study-exit-button" onClick={() => setPhase('setup')}>
             ← 학습으로
           </button>
         </div>
@@ -622,6 +622,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         <h1>단어</h1>
         <button
           type="button"
+          className="study-exit-button"
           onClick={() => {
             setBrowseIndex(null)
             setBrowseQuery('')

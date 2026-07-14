@@ -23,6 +23,11 @@
   cursor: pointer;
 }
 
+.quiz-exit-button:hover {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+}
+
 .quiz-topbar .quiz-progress {
   margin-bottom: 0;
 }
@@ -51,6 +56,10 @@
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.quiz-next-button:hover {
+  filter: brightness(0.93);
 }
 
 .quiz-kanji {

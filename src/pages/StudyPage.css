@@ -19,6 +19,11 @@
   cursor: pointer;
 }
 
+.study-level-btn:hover:not(.active):not(:disabled) {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+}
+
 .study-level-btn.active {
   background: var(--color-selected-bg);
   border-color: var(--color-primary-dark);
@@ -121,6 +126,10 @@
   cursor: pointer;
 }
 
+.study-start-button:hover {
+  filter: brightness(0.93);
+}
+
 .study-page {
   max-width: 560px;
 }
@@ -140,6 +149,11 @@
   color: var(--color-ink-muted);
   font-size: 13px;
   cursor: pointer;
+}
+
+.study-exit-button:hover {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
 }
 
 .study-topbar .quiz-progress {
@@ -284,12 +298,22 @@
   cursor: not-allowed;
 }
 
+.study-nav button:hover:not(:disabled):not(.study-nav-primary) {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+}
+
 .study-nav button.study-nav-primary,
 .study-done-actions button.study-nav-primary {
   border-color: var(--color-button-fill);
   background: var(--color-button-fill);
   color: var(--color-on-primary);
   font-weight: 600;
+}
+
+.study-nav button.study-nav-primary:hover,
+.study-done-actions button.study-nav-primary:hover {
+  filter: brightness(0.93);
 }
 
 .study-done-actions {
@@ -307,4 +331,9 @@
   color: var(--color-ink);
   font-size: 15px;
   cursor: pointer;
+}
+
+.study-done-actions button:hover:not(.study-nav-primary) {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
 }

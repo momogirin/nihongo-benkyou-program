@@ -151,6 +151,10 @@
   cursor: pointer;
 }
 
+.retry-button:hover {
+  filter: brightness(0.93);
+}
+
 .wrong-note-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -178,4 +182,41 @@
   height: auto;
   max-height: none;
   margin: 0;
+}
+
+.confirm-modal {
+  width: 100%;
+  max-width: 340px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-elevated);
+  text-align: center;
+}
+
+.confirm-modal-message {
+  margin: 0 0 20px;
+  color: var(--color-ink);
+  font-size: 15px;
+}
+
+.confirm-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.confirm-modal-danger {
+  padding: 6px 12px;
+  border: 1px solid var(--color-incorrect);
+  border-radius: var(--radius-md);
+  background: var(--color-incorrect);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.confirm-modal-danger:hover {
+  filter: brightness(0.93);
 }

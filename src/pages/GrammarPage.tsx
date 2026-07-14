@@ -356,7 +356,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
       <div className="page">
         <div className="page-header">
           <h1>문법 전체 목록 · {level}</h1>
-          <button type="button" onClick={() => setPhase('setup')}>
+          <button type="button" className="study-exit-button" onClick={() => setPhase('setup')}>
             ← 학습으로
           </button>
         </div>
@@ -584,6 +584,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
         <h1>문법</h1>
         <button
           type="button"
+          className="study-exit-button"
           onClick={() => {
             setBrowseIndex(null)
             setBrowseQuery('')

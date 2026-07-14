@@ -47,6 +47,10 @@
   cursor: pointer;
 }
 
+.option:hover:not(.disabled):not(:has(input:checked)) {
+  background: var(--color-bg-elevated);
+}
+
 .option:has(input:checked) {
   background: var(--color-selected-bg);
   border-color: var(--color-primary-dark);
@@ -100,6 +104,11 @@
   cursor: pointer;
 }
 
+.type-btn:hover:not(.active) {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+}
+
 .type-btn.active {
   background: var(--color-selected-bg);
   border-color: var(--color-primary-dark);
@@ -124,6 +133,10 @@
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.start-button:hover:not(:disabled) {
+  filter: brightness(0.93);
 }
 
 .start-button:disabled {
