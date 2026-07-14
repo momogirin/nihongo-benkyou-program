@@ -32,7 +32,13 @@ JLPT 한자·단어·문법 학습 + (2026-07-14부터) 영어(TOEIC) 단어 학
 - **2단계(보류, 코어 검증 후)**: 주제 태그(사무/인사/여행/재무 등 — NGSL/TSL에 없어서 별도 소스나 수작업 태깅 필요), 콜로케이션/숙어, 딕테이션(듣고 쓰기), 문맥 속 유의어 퀴즈, 발음 듣기(TTS, Web Speech API로 무료 구현 가능).
 - 데이터 스키마 초안: 일본어 단어(`word/reading/meaningKr/meaningEn/exampleJp/exampleKr`)와 달리 `word`(단어)/`pos`(품사)/`meaningKr`(뜻)/`exampleEn`(예문)/`exampleKr`(예문 번역), `reading` 필드 불필요. 파생어 세트는 표제어 단위로 묶는 구조 필요(설계 시 확정).
 
-**다음 실제 작업(이 계획 다음에 이어갈 것)**: NGSL/TSL CSV를 `data/`에 받아 파싱 → 랭킹 분포 보고 구간 컷포인트 확정 → `scripts/build-english-vocab-data.mjs` → `src/data/englishVocab.ts` → 타입(`types.ts`)·페이지(`EnglishVocabPage.tsx`, `VocabPage.tsx` 미러링)·사이드바·퀴즈 생성기·오답노트 스키마 확장 순서로 진행.
+**진행 상태(2026-07-14)**: 데이터 파이프라인 1단계 완료 — NGSL/TSL 실제 다운로드·조인 확인(둘이 단어 하나도 안 겹침, TSL이 순수 보충 리스트라는 걸 확인해서 급수 설계 근거로 씀), `core1`(NGSL 랭킹 1~1000) 1,000단어를 5개 서브에이전트 병렬 작업으로 `pos`/`meaningKr`/`exampleEn`/`exampleKr` 전부 채워 `data/english-vocab-core1.json` → `scripts/build-english-vocab-data.mjs` → `src/data/englishVocab.ts`까지 완성. 상세 출처/설계 근거는 `data/raw/README.md`의 "영어(TOEIC) 단어 데이터" 섹션 참고.
+
+**남은 작업(이어서 진행)**:
+1. `core2`(NGSL 1001~2000)·`core3`(NGSL 2001~2809)·`toeic`(TSL 1250개) 콘텐츠도 core1과 같은 방식(서브에이전트 병렬 작성)으로 채우기 — 총 3,059단어 남음.
+2. 파생어 세트(품사 묶음, Part 5 대비) — 전체 리스트 완성 후 별도 후처리 단계로.
+3. `types.ts`에 페이지 상태 추가 → `EnglishVocabPage.tsx`(`VocabPage.tsx` 패턴 미러링: 학습/브라우즈/퀴즈) → `Sidebar.tsx`에 "영어" 형제 그룹 추가 → 퀴즈 생성기(뜻 맞히기 + 품사 변환 빈칸형) → 오답노트 스키마에 네 번째 도메인으로 편입.
+4. 급수 배지 색상 등 UI 토큰은 기존 JLPT 5단계(`--color-level-n5~n1`) 전용으로 하드코딩돼 있어서, 영어 4단계(`core1`/`core2`/`core3`/`toeic`)용 색상 토큰을 새로 추가해야 함 — 페이지 작업 시 확인할 것.
 
 ## 현재 구조
 
