@@ -131,15 +131,19 @@ JLPT 한자·단어·문법 학습 + (2026-07-14부터) 영어(TOEIC) 단어 학
 
 이 7단계를 안 하면(또는 부분적으로만 하면) 앱은 그냥 로그인 없이 지금처럼 동작함 — 망가지지 않음.
 
-## 프로젝트 이름 재정의 (2026-07-14, 결정만 됨 — 실제 반영은 아직 안 함)
+## 프로젝트 이름 재정의 (2026-07-14, "모모링고" 확정 + 코드 반영 완료, GitHub 리포지토리 이름만 남음)
 
-일본어 전용 앱에서 다국어(일본어+영어/TOEIC, 앞으로 더 늘어날 수 있음) 시험 준비 학습 플랫폼으로 성격이 바뀌면서, 기존 "한자 학습" 타이틀이 더 이상 안 맞음 → 사용자가 여러 후보(닉네임 배제/활용 두 갈래) 중 **"모모링고(MomoLingo)"**로 확정. 사용자 닉네임 momogi/momogirin + lingo(언어) 조합.
+일본어 전용 앱에서 다국어(일본어+영어/TOEIC, 앞으로 더 늘어날 수 있음) 시험 준비 학습 플랫폼으로 성격이 바뀌면서, 기존 "한자 학습" 타이틀이 더 이상 안 맞음 → 사용자가 여러 후보(닉네임 배제/활용 두 갈래) 중 **"모모링고(MomoLingo)"**로 확정(사용자 닉네임 momogi/momogirin + lingo). 처음엔 "실제 반영은 나중에"라고 했다가 바로 이어서 "진행해"라고 해서 코드 쪽은 전부 반영함.
 
-**아직 실제로 반영 안 한 것**(사용자가 "그건 나중에" 하자고 명시함 — 요청 전엔 건드리지 말 것):
-- GitHub 리포지토리 이름(`nihongo-benkyou-program` → 새 이름, `vite.config.ts`의 `base` 경로도 같이 맞춰야 함)
-- 사이드바 타이틀(`Sidebar.tsx`의 "한자 학습" 텍스트, `brand-mark` 로고 "字")
-- `index.html` title, PWA manifest(`vite.config.ts`)의 name/short_name
-- favicon/아이콘(`src/assets/icon-source.svg`)
+**반영 완료(2026-07-14)**:
+- `index.html` `<title>`, `vite.config.ts` PWA manifest `name`/`short_name`/`description`
+- `package.json`의 `name` 필드(`nihongo-benkyou-program` → `momolingo`)
+- `Sidebar.tsx` 브랜드 텍스트("한자 학습" → "모모링고") + 로고 글자(`src/assets/icon-source.svg`의 "字" → "M")
+- `npm run icons:generate`로 favicon/PWA 아이콘 전부 재생성
+
+**아직 안 됨 — 사용자가 직접 해야 함(gh CLI가 이 환경에 없어서 Claude가 GitHub 리포지토리 이름 자체는 못 바꿈)**:
+- GitHub 리포지토리 이름을 `nihongo-benkyou-program` → **정확히 `momolingo`**로 변경(Settings → Repository name). `vite.config.ts`의 `base: '/momolingo/'`를 이미 이 이름에 맞춰뒀으니, 리포지토리 이름을 다른 문자열로 정하면 배포가 깨짐(GitHub Pages 빈 화면) — 꼭 `momolingo`로 맞출 것. GitHub이 자동으로 이전 이름 리다이렉트를 걸어주므로 기존 링크가 완전히 죽지는 않음.
+- 리포지토리 이름을 바꾼 뒤 로컬 git remote도 `git remote set-url origin https://github.com/momogirin/momolingo.git`로 맞춰야 계속 push 가능(로컬 폴더명 자체는 안 바꿔도 됨, 그냥 경로일 뿐이라 기능엔 영향 없음).
 
 ## 다음 할 일
 

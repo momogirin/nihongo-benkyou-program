@@ -45,8 +45,8 @@ export default function Sidebar({ active, onNavigate, open, onToggle }: Props) {
   return (
     <aside className={`sidebar${open ? ' open' : ' closed'}`}>
       <div className="brand">
-        <span className="brand-mark">字</span>
-        <span className="brand-name">한자 학습</span>
+        <span className="brand-mark">M</span>
+        <span className="brand-name">모모링고</span>
         <button type="button" className="sidebar-close-button" aria-label="메뉴 닫기" onClick={onToggle}>
           ✕
         </button>
