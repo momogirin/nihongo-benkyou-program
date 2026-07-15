@@ -1,0 +1,1862 @@
+[
+  {
+    "id": "core1-457",
+    "wordFamilyId": "describe",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-492",
+    "wordFamilyId": "describe",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-673",
+    "wordFamilyId": "describe",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-441",
+    "wordFamilyId": "design",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-178",
+    "wordFamilyId": "design",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-291",
+    "wordFamilyId": "desire",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-969",
+    "wordFamilyId": "desire",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-447",
+    "wordFamilyId": "destroy",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-588",
+    "wordFamilyId": "destroy",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-708",
+    "wordFamilyId": "determine",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-677",
+    "wordFamilyId": "determine",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-350",
+    "wordFamilyId": "develop",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-202",
+    "wordFamilyId": "develop",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-363",
+    "wordFamilyId": "develop",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-709",
+    "wordFamilyId": "diagnose",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-1121",
+    "wordFamilyId": "diagnose",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-976",
+    "wordFamilyId": "differ",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-473",
+    "wordFamilyId": "differ",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-149",
+    "wordFamilyId": "differ",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-650",
+    "wordFamilyId": "differ",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core1-724",
+    "wordFamilyId": "direct",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-952",
+    "wordFamilyId": "direct",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-51",
+    "wordFamilyId": "direct",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core1-727",
+    "wordFamilyId": "direct",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-342",
+    "wordFamilyId": "direct",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-503",
+    "wordFamilyId": "disagree",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-763",
+    "wordFamilyId": "disagree",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-853",
+    "wordFamilyId": "disappoint",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-764",
+    "wordFamilyId": "disappoint",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-946",
+    "wordFamilyId": "discover",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-292",
+    "wordFamilyId": "discover",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-605",
+    "wordFamilyId": "discuss",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-764",
+    "wordFamilyId": "discuss",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-860",
+    "wordFamilyId": "dispose",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-343",
+    "wordFamilyId": "dispose",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-861",
+    "wordFamilyId": "disrupt",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-519",
+    "wordFamilyId": "disrupt",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-145",
+    "wordFamilyId": "distance",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-724",
+    "wordFamilyId": "distance",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-893",
+    "wordFamilyId": "distinguish",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-572",
+    "wordFamilyId": "distinguish",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-132",
+    "wordFamilyId": "distinguish",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-415",
+    "wordFamilyId": "distract",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-904",
+    "wordFamilyId": "distract",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-980",
+    "wordFamilyId": "distribute",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-215",
+    "wordFamilyId": "distribute",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-815",
+    "wordFamilyId": "distribute",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-316",
+    "wordFamilyId": "divide",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-522",
+    "wordFamilyId": "divide",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-882",
+    "wordFamilyId": "document",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-630",
+    "wordFamilyId": "document",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-675",
+    "wordFamilyId": "document",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-991",
+    "wordFamilyId": "drama",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-975",
+    "wordFamilyId": "drama",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-524",
+    "wordFamilyId": "drama",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core1-387",
+    "wordFamilyId": "drive",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-200",
+    "wordFamilyId": "drive",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-699",
+    "wordFamilyId": "economy",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-493",
+    "wordFamilyId": "economy",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-365",
+    "wordFamilyId": "economy",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-974",
+    "wordFamilyId": "economy",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "toeic-599",
+    "wordFamilyId": "economy",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-713",
+    "wordFamilyId": "economy",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-311",
+    "wordFamilyId": "edit",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-423",
+    "wordFamilyId": "edit",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-32",
+    "wordFamilyId": "edit",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-571",
+    "wordFamilyId": "edit",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-993",
+    "wordFamilyId": "educate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-531",
+    "wordFamilyId": "educate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-892",
+    "wordFamilyId": "educate",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-315",
+    "wordFamilyId": "effect",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-31",
+    "wordFamilyId": "effect",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-842",
+    "wordFamilyId": "effect",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "toeic-572",
+    "wordFamilyId": "effect",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-969",
+    "wordFamilyId": "efficient",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-254",
+    "wordFamilyId": "efficient",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-366",
+    "wordFamilyId": "efficient",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "toeic-1238",
+    "wordFamilyId": "efficient",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-578",
+    "wordFamilyId": "elect",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-757",
+    "wordFamilyId": "elect",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-420",
+    "wordFamilyId": "electric",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-98",
+    "wordFamilyId": "electric",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-520",
+    "wordFamilyId": "electric",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-14",
+    "wordFamilyId": "electric",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-722",
+    "wordFamilyId": "electric",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-1128",
+    "wordFamilyId": "electric",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "toeic-1129",
+    "wordFamilyId": "elevate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-45",
+    "wordFamilyId": "elevate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-294",
+    "wordFamilyId": "employ",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-624",
+    "wordFamilyId": "employ",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-702",
+    "wordFamilyId": "employ",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-607",
+    "wordFamilyId": "employ",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-984",
+    "wordFamilyId": "employ",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-1190",
+    "wordFamilyId": "employ",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-211",
+    "wordFamilyId": "emerge",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-891",
+    "wordFamilyId": "emerge",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-783",
+    "wordFamilyId": "emotion",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-831",
+    "wordFamilyId": "emotion",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-31",
+    "wordFamilyId": "emphasize",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-840",
+    "wordFamilyId": "emphasize",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-831",
+    "wordFamilyId": "energy",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-817",
+    "wordFamilyId": "energy",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-299",
+    "wordFamilyId": "engage",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-1130",
+    "wordFamilyId": "engage",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-504",
+    "wordFamilyId": "enjoy",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-766",
+    "wordFamilyId": "enjoy",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-353",
+    "wordFamilyId": "enroll",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-1131",
+    "wordFamilyId": "enroll",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-907",
+    "wordFamilyId": "enthusiasm",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-908",
+    "wordFamilyId": "enthusiasm",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-521",
+    "wordFamilyId": "enthusiasm",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-863",
+    "wordFamilyId": "enthusiasm",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-185",
+    "wordFamilyId": "entire",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-544",
+    "wordFamilyId": "entire",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core1-712",
+    "wordFamilyId": "environment",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-360",
+    "wordFamilyId": "environment",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-818",
+    "wordFamilyId": "environment",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-254",
+    "wordFamilyId": "equal",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-772",
+    "wordFamilyId": "equal",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "toeic-462",
+    "wordFamilyId": "equip",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-55",
+    "wordFamilyId": "equip",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-139",
+    "wordFamilyId": "evaluate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-454",
+    "wordFamilyId": "evaluate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-592",
+    "wordFamilyId": "evidence",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-909",
+    "wordFamilyId": "evidence",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-536",
+    "wordFamilyId": "evolve",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-422",
+    "wordFamilyId": "evolve",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-327",
+    "wordFamilyId": "exact",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-670",
+    "wordFamilyId": "exact",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-104",
+    "wordFamilyId": "examine",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-966",
+    "wordFamilyId": "examine",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-508",
+    "wordFamilyId": "exceed",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-643",
+    "wordFamilyId": "exceed",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-634",
+    "wordFamilyId": "exceed",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-908",
+    "wordFamilyId": "exception",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-677",
+    "wordFamilyId": "exception",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-142",
+    "wordFamilyId": "excite",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-741",
+    "wordFamilyId": "excite",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-88",
+    "wordFamilyId": "exclude",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-256",
+    "wordFamilyId": "exclude",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-977",
+    "wordFamilyId": "exclude",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-996",
+    "wordFamilyId": "exhibit",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-803",
+    "wordFamilyId": "exhibit",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-593",
+    "wordFamilyId": "exist",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-835",
+    "wordFamilyId": "exist",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-321",
+    "wordFamilyId": "expand",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-153",
+    "wordFamilyId": "expand",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-314",
+    "wordFamilyId": "expect",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-606",
+    "wordFamilyId": "expect",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-589",
+    "wordFamilyId": "expect",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-509",
+    "wordFamilyId": "expense",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-531",
+    "wordFamilyId": "expense",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-61",
+    "wordFamilyId": "expense",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-483",
+    "wordFamilyId": "expense",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-264",
+    "wordFamilyId": "experience",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-465",
+    "wordFamilyId": "experience",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-343",
+    "wordFamilyId": "experiment",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-744",
+    "wordFamilyId": "experiment",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-157",
+    "wordFamilyId": "expert",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-311",
+    "wordFamilyId": "expert",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-121",
+    "wordFamilyId": "expire",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-546",
+    "wordFamilyId": "expire",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-489",
+    "wordFamilyId": "explain",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-628",
+    "wordFamilyId": "explain",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-89",
+    "wordFamilyId": "explain",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-505",
+    "wordFamilyId": "explore",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-1212",
+    "wordFamilyId": "explore",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-773",
+    "wordFamilyId": "expose",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-307",
+    "wordFamilyId": "expose",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-818",
+    "wordFamilyId": "express",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-255",
+    "wordFamilyId": "express",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-950",
+    "wordFamilyId": "extend",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-186",
+    "wordFamilyId": "extend",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-231",
+    "wordFamilyId": "extend",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-202",
+    "wordFamilyId": "fact",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-1213",
+    "wordFamilyId": "fact",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-711",
+    "wordFamilyId": "fail",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-239",
+    "wordFamilyId": "fail",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-80",
+    "wordFamilyId": "fair",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-466",
+    "wordFamilyId": "fair",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-686",
+    "wordFamilyId": "faith",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-791",
+    "wordFamilyId": "faith",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-445",
+    "wordFamilyId": "familiar",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-1048",
+    "wordFamilyId": "familiar",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-678",
+    "wordFamilyId": "familiar",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-134",
+    "wordFamilyId": "favor",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-768",
+    "wordFamilyId": "favor",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-1000",
+    "wordFamilyId": "favor",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-698",
+    "wordFamilyId": "final",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-390",
+    "wordFamilyId": "final",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-499",
+    "wordFamilyId": "final",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-379",
+    "wordFamilyId": "finance",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-644",
+    "wordFamilyId": "finance",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-628",
+    "wordFamilyId": "firm",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-635",
+    "wordFamilyId": "firm",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core3-720",
+    "wordFamilyId": "flexible",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-910",
+    "wordFamilyId": "flexible",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-257",
+    "wordFamilyId": "form",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-700",
+    "wordFamilyId": "form",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-984",
+    "wordFamilyId": "form",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core3-312",
+    "wordFamilyId": "form",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-516",
+    "wordFamilyId": "fortunate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-800",
+    "wordFamilyId": "fortunate",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-912",
+    "wordFamilyId": "fortunate",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-269",
+    "wordFamilyId": "fortunate",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core3-807",
+    "wordFamilyId": "found",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-771",
+    "wordFamilyId": "found",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-177",
+    "wordFamilyId": "found",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-395",
+    "wordFamilyId": "free",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-399",
+    "wordFamilyId": "free",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-409",
+    "wordFamilyId": "frequent",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-295",
+    "wordFamilyId": "frequent",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-711",
+    "wordFamilyId": "frequent",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core1-208",
+    "wordFamilyId": "friend",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-538",
+    "wordFamilyId": "friend",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-486",
+    "wordFamilyId": "friend",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-702",
+    "wordFamilyId": "function",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-755",
+    "wordFamilyId": "function",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-527",
+    "wordFamilyId": "fund",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-881",
+    "wordFamilyId": "fund",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-772",
+    "wordFamilyId": "fund",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-418",
+    "wordFamilyId": "furnish",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-166",
+    "wordFamilyId": "furnish",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-972",
+    "wordFamilyId": "garden",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-719",
+    "wordFamilyId": "garden",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-404",
+    "wordFamilyId": "general",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-848",
+    "wordFamilyId": "general",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "toeic-822",
+    "wordFamilyId": "general",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-426",
+    "wordFamilyId": "generate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-998",
+    "wordFamilyId": "generate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-914",
+    "wordFamilyId": "generate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-750",
+    "wordFamilyId": "gentle",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-768",
+    "wordFamilyId": "gentle",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core3-471",
+    "wordFamilyId": "govern",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-216",
+    "wordFamilyId": "govern",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-54",
+    "wordFamilyId": "govern",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-548",
+    "wordFamilyId": "graduate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-522",
+    "wordFamilyId": "graduate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-335",
+    "wordFamilyId": "grow",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-678",
+    "wordFamilyId": "grow",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-823",
+    "wordFamilyId": "guide",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-146",
+    "wordFamilyId": "guide",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-655",
+    "wordFamilyId": "guide",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-828",
+    "wordFamilyId": "habit",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-866",
+    "wordFamilyId": "habit",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-513",
+    "wordFamilyId": "happy",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-697",
+    "wordFamilyId": "happy",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-239",
+    "wordFamilyId": "happy",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-236",
+    "wordFamilyId": "harm",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-602",
+    "wordFamilyId": "harm",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-475",
+    "wordFamilyId": "health",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-362",
+    "wordFamilyId": "health",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-1237",
+    "wordFamilyId": "health",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-776",
+    "wordFamilyId": "health",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-631",
+    "wordFamilyId": "hesitate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-825",
+    "wordFamilyId": "hesitate",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-1219",
+    "wordFamilyId": "hesitate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-495",
+    "wordFamilyId": "history",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-405",
+    "wordFamilyId": "history",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-385",
+    "wordFamilyId": "history",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-360",
+    "wordFamilyId": "history",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-35",
+    "wordFamilyId": "honest",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-1052",
+    "wordFamilyId": "honest",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core1-250",
+    "wordFamilyId": "hope",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-615",
+    "wordFamilyId": "hope",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core1-165",
+    "wordFamilyId": "house",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-746",
+    "wordFamilyId": "house",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-1053",
+    "wordFamilyId": "house",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-344",
+    "wordFamilyId": "house",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-804",
+    "wordFamilyId": "hunger",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-135",
+    "wordFamilyId": "hunger",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-674",
+    "wordFamilyId": "ideal",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-720",
+    "wordFamilyId": "ideal",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core1-805",
+    "wordFamilyId": "identify",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-74",
+    "wordFamilyId": "identify",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-587",
+    "wordFamilyId": "identify",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-817",
+    "wordFamilyId": "illustrate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-435",
+    "wordFamilyId": "illustrate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-924",
+    "wordFamilyId": "imagine",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-502",
+    "wordFamilyId": "imagine",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-806",
+    "wordFamilyId": "immediate",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-988",
+    "wordFamilyId": "immediate",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-740",
+    "wordFamilyId": "implement",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-648",
+    "wordFamilyId": "implement",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-818",
+    "wordFamilyId": "imply",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-871",
+    "wordFamilyId": "imply",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-243",
+    "wordFamilyId": "impress",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-717",
+    "wordFamilyId": "impress",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-421",
+    "wordFamilyId": "impress",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-508",
+    "wordFamilyId": "improve",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-226",
+    "wordFamilyId": "improve",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-163",
+    "wordFamilyId": "include",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-721",
+    "wordFamilyId": "include",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-230",
+    "wordFamilyId": "increase",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-612",
+    "wordFamilyId": "increase",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-6",
+    "wordFamilyId": "independent",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-233",
+    "wordFamilyId": "independent",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-819",
+    "wordFamilyId": "indicate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-575",
+    "wordFamilyId": "indicate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-826",
+    "wordFamilyId": "indicate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-409",
+    "wordFamilyId": "individual",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-827",
+    "wordFamilyId": "individual",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core1-530",
+    "wordFamilyId": "industry",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-494",
+    "wordFamilyId": "industry",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-39",
+    "wordFamilyId": "infer",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-68",
+    "wordFamilyId": "infer",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-920",
+    "wordFamilyId": "inflate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-494",
+    "wordFamilyId": "inflate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-680",
+    "wordFamilyId": "influence",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-778",
+    "wordFamilyId": "influence",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-70",
+    "wordFamilyId": "inform",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-213",
+    "wordFamilyId": "inform",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-603",
+    "wordFamilyId": "inform",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-282",
+    "wordFamilyId": "initial",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-146",
+    "wordFamilyId": "initial",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "core2-845",
+    "wordFamilyId": "initial",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-496",
+    "wordFamilyId": "injure",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-801",
+    "wordFamilyId": "injure",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-180",
+    "wordFamilyId": "innovation",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-172",
+    "wordFamilyId": "innovation",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-173",
+    "wordFamilyId": "inquire",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-565",
+    "wordFamilyId": "inquire",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-139",
+    "wordFamilyId": "inspect",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-136",
+    "wordFamilyId": "inspect",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-306",
+    "wordFamilyId": "inspect",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-92",
+    "wordFamilyId": "inspire",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-1224",
+    "wordFamilyId": "inspire",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-924",
+    "wordFamilyId": "install",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-227",
+    "wordFamilyId": "install",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-604",
+    "wordFamilyId": "institute",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-137",
+    "wordFamilyId": "institute",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-745",
+    "wordFamilyId": "institute",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-392",
+    "wordFamilyId": "instruct",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-672",
+    "wordFamilyId": "instruct",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-90",
+    "wordFamilyId": "instruct",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-314",
+    "wordFamilyId": "insure",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-805",
+    "wordFamilyId": "insure",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-1056",
+    "wordFamilyId": "integrate",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-955",
+    "wordFamilyId": "integrate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-981",
+    "wordFamilyId": "intelligence",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core2-673",
+    "wordFamilyId": "intelligence",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-114",
+    "wordFamilyId": "intend",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-764",
+    "wordFamilyId": "intend",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-877",
+    "wordFamilyId": "interaction",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-1057",
+    "wordFamilyId": "interaction",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-307",
+    "wordFamilyId": "intern",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-517",
+    "wordFamilyId": "intern",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core1-662",
+    "wordFamilyId": "intern",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "toeic-867",
+    "wordFamilyId": "intern",
+    "derivationPos": "부사"
+  },
+  {
+    "id": "toeic-345",
+    "wordFamilyId": "intern",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-232",
+    "wordFamilyId": "interpret",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-989",
+    "wordFamilyId": "interpret",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-1142",
+    "wordFamilyId": "interpret",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-772",
+    "wordFamilyId": "introduce",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-203",
+    "wordFamilyId": "introduce",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-723",
+    "wordFamilyId": "introduce",
+    "derivationPos": "형용사"
+  },
+  {
+    "id": "core3-627",
+    "wordFamilyId": "invent",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "toeic-681",
+    "wordFamilyId": "invent",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-366",
+    "wordFamilyId": "invest",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core1-822",
+    "wordFamilyId": "invest",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-597",
+    "wordFamilyId": "invest",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-533",
+    "wordFamilyId": "investigate",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-318",
+    "wordFamilyId": "investigate",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-28",
+    "wordFamilyId": "invite",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-194",
+    "wordFamilyId": "invite",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-379",
+    "wordFamilyId": "involve",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core3-306",
+    "wordFamilyId": "involve",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core3-429",
+    "wordFamilyId": "journal",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "toeic-1146",
+    "wordFamilyId": "journal",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core2-939",
+    "wordFamilyId": "journal",
+    "derivationPos": "명사"
+  },
+  {
+    "id": "core1-995",
+    "wordFamilyId": "judge",
+    "derivationPos": "동사"
+  },
+  {
+    "id": "core2-573",
+    "wordFamilyId": "judge",
+    "derivationPos": "명사"
+  }
+]

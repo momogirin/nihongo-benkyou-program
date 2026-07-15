@@ -1,0 +1,6252 @@
+[
+  {
+    "word": "mister",
+    "rank": 1,
+    "meaningEn": "a form of address for a man"
+  },
+  {
+    "word": "vacation",
+    "rank": 2,
+    "meaningEn": "a holiday or break from work"
+  },
+  {
+    "word": "client",
+    "rank": 3,
+    "meaningEn": "someone who pays for a service"
+  },
+  {
+    "word": "e-book",
+    "rank": 4,
+    "meaningEn": "a digital version of a book that can be read on a computer or electronic device"
+  },
+  {
+    "word": "airport",
+    "rank": 5,
+    "meaningEn": "the place where you go to get on a plane"
+  },
+  {
+    "word": "memo",
+    "rank": 6,
+    "meaningEn": "a written reminder to do somethng"
+  },
+  {
+    "word": "reservation",
+    "rank": 7,
+    "meaningEn": "to put something on hold for use later, e.g. car, hotel room"
+  },
+  {
+    "word": "logical",
+    "rank": 8,
+    "meaningEn": "to do with reason"
+  },
+  {
+    "word": "fax",
+    "rank": 9,
+    "meaningEn": "to send using a fax machine"
+  },
+  {
+    "word": "o'clock",
+    "rank": 10,
+    "meaningEn": "the hour of the day"
+  },
+  {
+    "word": "sincerely",
+    "rank": 11,
+    "meaningEn": "with honesty"
+  },
+  {
+    "word": "sometime",
+    "rank": 12,
+    "meaningEn": "at some unknown point in time"
+  },
+  {
+    "word": "supervisor",
+    "rank": 13,
+    "meaningEn": "the person who is in charge"
+  },
+  {
+    "word": "refund",
+    "rank": 14,
+    "meaningEn": "give back money that has already been paid"
+  },
+  {
+    "word": "goods",
+    "rank": 15,
+    "meaningEn": "resources or things bought or sold"
+  },
+  {
+    "word": "workshop",
+    "rank": 16,
+    "meaningEn": "a building or room where things are made or repaired"
+  },
+  {
+    "word": "downtown",
+    "rank": 17,
+    "meaningEn": "the business or central part of a city or town"
+  },
+  {
+    "word": "deadline",
+    "rank": 18,
+    "meaningEn": "when something must be finished"
+  },
+  {
+    "word": "invoice",
+    "rank": 19,
+    "meaningEn": "a written request for payment for the goods and services listed"
+  },
+  {
+    "word": "brochure",
+    "rank": 20,
+    "meaningEn": "a small paper book that gives information about a product or service"
+  },
+  {
+    "word": "noon",
+    "rank": 21,
+    "meaningEn": "the middle of the day"
+  },
+  {
+    "word": "accountant",
+    "rank": 22,
+    "meaningEn": "a person responsible for the money in a business"
+  },
+  {
+    "word": "clerk",
+    "rank": 23,
+    "meaningEn": "someone who works at a counter"
+  },
+  {
+    "word": "lobby",
+    "rank": 24,
+    "meaningEn": "the main area of a hotel just inside the entrance"
+  },
+  {
+    "word": "publish",
+    "rank": 25,
+    "meaningEn": "to print and distribute"
+  },
+  {
+    "word": "résumé",
+    "rank": 26,
+    "meaningEn": "a short document listing a person’s education, work experience, and skills"
+  },
+  {
+    "word": "enclose",
+    "rank": 27,
+    "meaningEn": "to surround fully"
+  },
+  {
+    "word": "applicant",
+    "rank": 28,
+    "meaningEn": "a person who submits papers in order to do something, e.g. job applicant"
+  },
+  {
+    "word": "seminar",
+    "rank": 29,
+    "meaningEn": "a discussion session or class led by a teacher, or expert"
+  },
+  {
+    "word": "technician",
+    "rank": 30,
+    "meaningEn": "someone who is trained with special skills to do practical work"
+  },
+  {
+    "word": "cloth",
+    "rank": 31,
+    "meaningEn": "a piece of thin material"
+  },
+  {
+    "word": "fare",
+    "rank": 32,
+    "meaningEn": "the cost for a ride, e.g. bus, or taxi"
+  },
+  {
+    "word": "receipt",
+    "rank": 33,
+    "meaningEn": "proof of payment"
+  },
+  {
+    "word": "traveler",
+    "rank": 34,
+    "meaningEn": "a tourist or adventurer who visits many countries"
+  },
+  {
+    "word": "caller",
+    "rank": 35,
+    "meaningEn": "the person that is phoning you"
+  },
+  {
+    "word": "subway",
+    "rank": 36,
+    "meaningEn": "a tunnel under the road for people to walk through"
+  },
+  {
+    "word": "luggage",
+    "rank": 37,
+    "meaningEn": "Bags and cases that you carry your clothes in when you go on a journey"
+  },
+  {
+    "word": "shipment",
+    "rank": 38,
+    "meaningEn": "delivery of goods, e.g. carried by a large vehicle"
+  },
+  {
+    "word": "infer",
+    "rank": 39,
+    "meaningEn": "to guess something with given information"
+  },
+  {
+    "word": "waiter",
+    "rank": 40,
+    "meaningEn": "a man whose job it is to bring meals to your table in a restaurant or cafe"
+  },
+  {
+    "word": "rental",
+    "rank": 41,
+    "meaningEn": "the act of paying for the use of something (as an apartment or house or car)"
+  },
+  {
+    "word": "warranty",
+    "rank": 42,
+    "meaningEn": "the promise to repair or replace a product if it ceases to work properly"
+  },
+  {
+    "word": "cafeteria",
+    "rank": 43,
+    "meaningEn": "a restaurant where you serve yourself and pay a cashier"
+  },
+  {
+    "word": "chef",
+    "rank": 44,
+    "meaningEn": "a person who cooks for a living"
+  },
+  {
+    "word": "elevator",
+    "rank": 45,
+    "meaningEn": "a machine that takes people to different floors in a building"
+  },
+  {
+    "word": "reception",
+    "rank": 46,
+    "meaningEn": "the act of greeting people"
+  },
+  {
+    "word": "correctly",
+    "rank": 47,
+    "meaningEn": "to do something the right way"
+  },
+  {
+    "word": "lease",
+    "rank": 48,
+    "meaningEn": "to rent"
+  },
+  {
+    "word": "bicycle",
+    "rank": 49,
+    "meaningEn": "a vehicle with two wheels and pedals"
+  },
+  {
+    "word": "notify",
+    "rank": 50,
+    "meaningEn": "officially tell someone some information"
+  },
+  {
+    "word": "preview",
+    "rank": 51,
+    "meaningEn": "a chance to see something before it becomes generally available"
+  },
+  {
+    "word": "attendant",
+    "rank": 52,
+    "meaningEn": "someone who waits on or tends to the needs of another"
+  },
+  {
+    "word": "subscription",
+    "rank": 53,
+    "meaningEn": "the amount of money that you pay to receive a service or product regularly"
+  },
+  {
+    "word": "convenient",
+    "rank": 54,
+    "meaningEn": "to be easy to do"
+  },
+  {
+    "word": "manual",
+    "rank": 55,
+    "meaningEn": "a book that explains how to do something"
+  },
+  {
+    "word": "clue",
+    "rank": 56,
+    "meaningEn": "a hint, a tip"
+  },
+  {
+    "word": "garage",
+    "rank": 57,
+    "meaningEn": "a place where you keep your car"
+  },
+  {
+    "word": "obtain",
+    "rank": 58,
+    "meaningEn": "to get"
+  },
+  {
+    "word": "oval",
+    "rank": 59,
+    "meaningEn": "A shape that looks like an egg"
+  },
+  {
+    "word": "inventory",
+    "rank": 60,
+    "meaningEn": "detailed list of everything included"
+  },
+  {
+    "word": "outdoor",
+    "rank": 61,
+    "meaningEn": "outside in the open air"
+  },
+  {
+    "word": "suitcase",
+    "rank": 62,
+    "meaningEn": "A large bag like container for carrying clothes when traveling"
+  },
+  {
+    "word": "destination",
+    "rank": 63,
+    "meaningEn": "the place you want to be at the end of a journey"
+  },
+  {
+    "word": "occupation",
+    "rank": 64,
+    "meaningEn": "profession or job"
+  },
+  {
+    "word": "postpone",
+    "rank": 65,
+    "meaningEn": "put off until a later time"
+  },
+  {
+    "word": "contradict",
+    "rank": 66,
+    "meaningEn": "to say the opposite of"
+  },
+  {
+    "word": "umbrella",
+    "rank": 67,
+    "meaningEn": "something, like an organization, that covers a  similar range of things"
+  },
+  {
+    "word": "inference",
+    "rank": 68,
+    "meaningEn": "the act of guessing something with given information"
+  },
+  {
+    "word": "cellphone",
+    "rank": 69,
+    "meaningEn": "phone that connects to the system by radio so that you can use it anywhere"
+  },
+  {
+    "word": "compact",
+    "rank": 70,
+    "meaningEn": "tightly packed in a small size"
+  },
+  {
+    "word": "merchandise",
+    "rank": 71,
+    "meaningEn": "goods for sale"
+  },
+  {
+    "word": "receptionist",
+    "rank": 72,
+    "meaningEn": "someone who works at the front desk, e.g. secretary"
+  },
+  {
+    "word": "dentist",
+    "rank": 73,
+    "meaningEn": "a person who looks after your teeth for a living"
+  },
+  {
+    "word": "identification",
+    "rank": 74,
+    "meaningEn": "a document that shows who a person is,  e.g. passport, driver's licence"
+  },
+  {
+    "word": "coupon",
+    "rank": 75,
+    "meaningEn": "a piece of paper that you can use to buy goods or to get them at a reduced price"
+  },
+  {
+    "word": "depart",
+    "rank": 76,
+    "meaningEn": "to leave"
+  },
+  {
+    "word": "reschedule",
+    "rank": 77,
+    "meaningEn": "to set a new time for something"
+  },
+  {
+    "word": "tactic",
+    "rank": 78,
+    "meaningEn": "like a plan or scheme"
+  },
+  {
+    "word": "renovation",
+    "rank": 79,
+    "meaningEn": "the process of being restored to a previous or better condition"
+  },
+  {
+    "word": "upgrade",
+    "rank": 80,
+    "meaningEn": "to improve what was old or outdated"
+  },
+  {
+    "word": "precede",
+    "rank": 81,
+    "meaningEn": "to happen before something else"
+  },
+  {
+    "word": "replacement",
+    "rank": 82,
+    "meaningEn": "to put something/someone in place of something/someone else"
+  },
+  {
+    "word": "dine",
+    "rank": 83,
+    "meaningEn": "have supper; eat dinner"
+  },
+  {
+    "word": "passport",
+    "rank": 84,
+    "meaningEn": "official document containing information about you, that allows you to enter other countries"
+  },
+  {
+    "word": "coworker",
+    "rank": 85,
+    "meaningEn": "a person that works with you in the same workplace"
+  },
+  {
+    "word": "upcoming",
+    "rank": 86,
+    "meaningEn": "happening soon"
+  },
+  {
+    "word": "cabinet",
+    "rank": 87,
+    "meaningEn": "a piece of furniture with shelves to store things"
+  },
+  {
+    "word": "appliance",
+    "rank": 88,
+    "meaningEn": "a machine or device that does a particular task"
+  },
+  {
+    "word": "explanatory",
+    "rank": 89,
+    "meaningEn": "to explain or make clear"
+  },
+  {
+    "word": "instructor",
+    "rank": 90,
+    "meaningEn": "someon who teaches for a living"
+  },
+  {
+    "word": "keyboard",
+    "rank": 91,
+    "meaningEn": "the part of computer that you type on"
+  },
+  {
+    "word": "media",
+    "rank": 92,
+    "meaningEn": "related to different forms of communication, e.g. radio, TV, newspapers etc."
+  },
+  {
+    "word": "supermarket",
+    "rank": 93,
+    "meaningEn": "a large self-service store selling food and household items"
+  },
+  {
+    "word": "valid",
+    "rank": 94,
+    "meaningEn": "just, fair, right"
+  },
+  {
+    "word": "admission",
+    "rank": 95,
+    "meaningEn": "entrance into something"
+  },
+  {
+    "word": "laptop",
+    "rank": 96,
+    "meaningEn": "a computer small enough to carry and to use in your lap"
+  },
+  {
+    "word": "underline",
+    "rank": 97,
+    "meaningEn": "to call attention to"
+  },
+  {
+    "word": "electrical",
+    "rank": 98,
+    "meaningEn": "to do with electricity"
+  },
+  {
+    "word": "airplane",
+    "rank": 99,
+    "meaningEn": "a powered vehicle that flys through the air to its destination"
+  },
+  {
+    "word": "assignment",
+    "rank": 100,
+    "meaningEn": "a project or task"
+  },
+  {
+    "word": "exit",
+    "rank": 101,
+    "meaningEn": "to leave"
+  },
+  {
+    "word": "attendee",
+    "rank": 102,
+    "meaningEn": "someone present (at a meeting or event)"
+  },
+  {
+    "word": "cruise",
+    "rank": 103,
+    "meaningEn": "a long, relaxing holiday on a ship"
+  },
+  {
+    "word": "birthday",
+    "rank": 104,
+    "meaningEn": "the day in the year on which a person was born"
+  },
+  {
+    "word": "café",
+    "rank": 105,
+    "meaningEn": "a small restaurant that sells drinks and light meals"
+  },
+  {
+    "word": "comprehension",
+    "rank": 106,
+    "meaningEn": "the act of understanding"
+  },
+  {
+    "word": "mall",
+    "rank": 107,
+    "meaningEn": "very large building containing lots of stores and restaurants"
+  },
+  {
+    "word": "medication",
+    "rank": 108,
+    "meaningEn": "a substance used to make an illness or condition get better"
+  },
+  {
+    "word": "recycle",
+    "rank": 109,
+    "meaningEn": "to find another use for something that is going to be put in the trash"
+  },
+  {
+    "word": "renew",
+    "rank": 110,
+    "meaningEn": "to make something new again"
+  },
+  {
+    "word": "tenant",
+    "rank": 111,
+    "meaningEn": "someone who pays rent for the use of property like land or rooms"
+  },
+  {
+    "word": "sandwich",
+    "rank": 112,
+    "meaningEn": "two pieces of bread with a filling inside, e.g. meat or jam"
+  },
+  {
+    "word": "departure",
+    "rank": 113,
+    "meaningEn": "the act of leaving"
+  },
+  {
+    "word": "mini",
+    "rank": 114,
+    "meaningEn": "smaller than is usual for a particular type of thing"
+  },
+  {
+    "word": "fitness",
+    "rank": 115,
+    "meaningEn": "the state of being healthy"
+  },
+  {
+    "word": "inconvenience",
+    "rank": 116,
+    "meaningEn": "something that causes trouble or discomfort"
+  },
+  {
+    "word": "banquet",
+    "rank": 117,
+    "meaningEn": "a formal meal given for a lot of people"
+  },
+  {
+    "word": "closet",
+    "rank": 118,
+    "meaningEn": "a small cupboard"
+  },
+  {
+    "word": "unreal",
+    "rank": 119,
+    "meaningEn": "not true to life"
+  },
+  {
+    "word": "distractor",
+    "rank": 120,
+    "meaningEn": "an incorrect option offered in a multiple choice question"
+  },
+  {
+    "word": "expire",
+    "rank": 121,
+    "meaningEn": "Come to an end"
+  },
+  {
+    "word": "folder",
+    "rank": 122,
+    "meaningEn": "a file or covering to keep papers in"
+  },
+  {
+    "word": "photocopy",
+    "rank": 123,
+    "meaningEn": "an exact copy of a document made with a photographic machine"
+  },
+  {
+    "word": "renovate",
+    "rank": 124,
+    "meaningEn": "restore to a previous or better condition"
+  },
+  {
+    "word": "sunny",
+    "rank": 125,
+    "meaningEn": "a day with no clouds or rain just sunshine"
+  },
+  {
+    "word": "calendar",
+    "rank": 126,
+    "meaningEn": "something you hang on the wall that has the months of the year on it"
+  },
+  {
+    "word": "donation",
+    "rank": 127,
+    "meaningEn": "the money that is given to a cause or charity"
+  },
+  {
+    "word": "feedback",
+    "rank": 128,
+    "meaningEn": "information given to the provider about how good or bad the goods or services were"
+  },
+  {
+    "word": "shortly",
+    "rank": 129,
+    "meaningEn": "very soon"
+  },
+  {
+    "word": "snack",
+    "rank": 130,
+    "meaningEn": "Small amount of food eaten between meals"
+  },
+  {
+    "word": "warehouse",
+    "rank": 131,
+    "meaningEn": "a building where a large number of things are stored while they are waiting to be sold"
+  },
+  {
+    "word": "copier",
+    "rank": 132,
+    "meaningEn": "a machine that makes paper copies"
+  },
+  {
+    "word": "provider",
+    "rank": 133,
+    "meaningEn": "someone who takes care of others with money, food, home"
+  },
+  {
+    "word": "beverage",
+    "rank": 134,
+    "meaningEn": "any liquid suitable for drinking"
+  },
+  {
+    "word": "hungry",
+    "rank": 135,
+    "meaningEn": "in need of food, needing to eat"
+  },
+  {
+    "word": "inspection",
+    "rank": 136,
+    "meaningEn": "a formal or official examination of something"
+  },
+  {
+    "word": "recipient",
+    "rank": 137,
+    "meaningEn": "the person who receives something"
+  },
+  {
+    "word": "aisle",
+    "rank": 138,
+    "meaningEn": "long narrow area for walking between rows of something"
+  },
+  {
+    "word": "inspect",
+    "rank": 139,
+    "meaningEn": "look over carefully"
+  },
+  {
+    "word": "mechanic",
+    "rank": 140,
+    "meaningEn": "a person who fixes machinery for a living"
+  },
+  {
+    "word": "merger",
+    "rank": 141,
+    "meaningEn": "when one company buys another company to create one big company"
+  },
+  {
+    "word": "soccer",
+    "rank": 142,
+    "meaningEn": "ball game played by two teams who try to score goals without handling the ball"
+  },
+  {
+    "word": "sweater",
+    "rank": 143,
+    "meaningEn": "a warm item of clothing worn over the arms and upper body, made of wool,"
+  },
+  {
+    "word": "ingredient",
+    "rank": 144,
+    "meaningEn": "something listed in a recipe, e.g. flour, sugar"
+  },
+  {
+    "word": "rewrite",
+    "rank": 145,
+    "meaningEn": "to write again differently"
+  },
+  {
+    "word": "itinerary",
+    "rank": 146,
+    "meaningEn": "a detailed plan of what will happen on a journey"
+  },
+  {
+    "word": "workplace",
+    "rank": 147,
+    "meaningEn": "the location where you do your job"
+  },
+  {
+    "word": "architect",
+    "rank": 148,
+    "meaningEn": "someone who designs buildings"
+  },
+  {
+    "word": "convenience",
+    "rank": 149,
+    "meaningEn": "the state of being easy"
+  },
+  {
+    "word": "eligible",
+    "rank": 150,
+    "meaningEn": "able to be chosen"
+  },
+  {
+    "word": "indoor",
+    "rank": 151,
+    "meaningEn": "inside a house or building"
+  },
+  {
+    "word": "baggage",
+    "rank": 152,
+    "meaningEn": "travel bags"
+  },
+  {
+    "word": "dial",
+    "rank": 153,
+    "meaningEn": "to make a phone call by pressing the buttons"
+  },
+  {
+    "word": "container",
+    "rank": 154,
+    "meaningEn": "something that holds things"
+  },
+  {
+    "word": "drawer",
+    "rank": 155,
+    "meaningEn": "a sliding compartment you keep things in"
+  },
+  {
+    "word": "lab",
+    "rank": 156,
+    "meaningEn": "where you do experiments"
+  },
+  {
+    "word": "submission",
+    "rank": 157,
+    "meaningEn": "the act of formally delivering a document, for a decision to be made about it"
+  },
+  {
+    "word": "bulletin",
+    "rank": 158,
+    "meaningEn": "a short news report"
+  },
+  {
+    "word": "certificate",
+    "rank": 159,
+    "meaningEn": "a piece of paper stating you did something"
+  },
+  {
+    "word": "gym",
+    "rank": 160,
+    "meaningEn": "building with equipment you can use to exercise your body"
+  },
+  {
+    "word": "highway",
+    "rank": 161,
+    "meaningEn": "a major road connecting cities"
+  },
+  {
+    "word": "respondent",
+    "rank": 162,
+    "meaningEn": "someone who replies to something"
+  },
+  {
+    "word": "jewelry",
+    "rank": 163,
+    "meaningEn": "gold, silver, stones etc. you wear for decoration, e.g. necklace"
+  },
+  {
+    "word": "overtime",
+    "rank": 164,
+    "meaningEn": "work done in addition to regular working hours"
+  },
+  {
+    "word": "battery",
+    "rank": 165,
+    "meaningEn": "something that produces electric energy"
+  },
+  {
+    "word": "donate",
+    "rank": 166,
+    "meaningEn": "to give money to a cause or charity"
+  },
+  {
+    "word": "outstanding",
+    "rank": 167,
+    "meaningEn": "not yet completed"
+  },
+  {
+    "word": "skim",
+    "rank": 168,
+    "meaningEn": "to move quickly above the surface without touching it"
+  },
+  {
+    "word": "briefcase",
+    "rank": 169,
+    "meaningEn": "a small case with a handle usually used for carrying business papers"
+  },
+  {
+    "word": "dessert",
+    "rank": 170,
+    "meaningEn": "sweet food you eat after your main meal"
+  },
+  {
+    "word": "impact",
+    "rank": 171,
+    "meaningEn": "the effect one thing makes on another"
+  },
+  {
+    "word": "innovative",
+    "rank": 172,
+    "meaningEn": "to be creative and come up with new ideas"
+  },
+  {
+    "word": "inquire",
+    "rank": 173,
+    "meaningEn": "to ask about"
+  },
+  {
+    "word": "overnight",
+    "rank": 174,
+    "meaningEn": "from one day to the next"
+  },
+  {
+    "word": "venue",
+    "rank": 175,
+    "meaningEn": "the place that an event is happening"
+  },
+  {
+    "word": "commuter",
+    "rank": 176,
+    "meaningEn": "someone who travels a long way to work and back"
+  },
+  {
+    "word": "logo",
+    "rank": 177,
+    "meaningEn": "a small design used by a company as its symbol"
+  },
+  {
+    "word": "newsletter",
+    "rank": 178,
+    "meaningEn": "report or open letter giving information of interest to a special group"
+  },
+  {
+    "word": "advisor",
+    "rank": 179,
+    "meaningEn": "someone who gives an opinion on what to do"
+  },
+  {
+    "word": "cartridge",
+    "rank": 180,
+    "meaningEn": "a piece of the equipment that is a sealed unit, and that can be taken out and replaced"
+  },
+  {
+    "word": "cloudy",
+    "rank": 181,
+    "meaningEn": "weather where the sky is filled with clouds"
+  },
+  {
+    "word": "photographer",
+    "rank": 182,
+    "meaningEn": "someone who takes pictures for a living"
+  },
+  {
+    "word": "shopper",
+    "rank": 183,
+    "meaningEn": "someone who buys things in a store"
+  },
+  {
+    "word": "tag",
+    "rank": 184,
+    "meaningEn": "a label"
+  },
+  {
+    "word": "announcer",
+    "rank": 185,
+    "meaningEn": "someone who gives a message publicly"
+  },
+  {
+    "word": "aspect",
+    "rank": 186,
+    "meaningEn": "a part or a feature"
+  },
+  {
+    "word": "audit",
+    "rank": 187,
+    "meaningEn": "to check something is correct, usually related to accounts in business"
+  },
+  {
+    "word": "contractor",
+    "rank": 188,
+    "meaningEn": "a builder"
+  },
+  {
+    "word": "download",
+    "rank": 189,
+    "meaningEn": "transfer a file or program onto your computer"
+  },
+  {
+    "word": "password",
+    "rank": 190,
+    "meaningEn": "a secret word or phrase needed to prove who you are"
+  },
+  {
+    "word": "prohibit",
+    "rank": 191,
+    "meaningEn": "not allowed"
+  },
+  {
+    "word": "stadium",
+    "rank": 192,
+    "meaningEn": "sports ground surrounded by rows of seats where people go to watch events"
+  },
+  {
+    "word": "terminal",
+    "rank": 193,
+    "meaningEn": "the place where a transport line ends, like the final train station on the line"
+  },
+  {
+    "word": "weekday",
+    "rank": 194,
+    "meaningEn": "All the working days in a week, usually Monday to Friday"
+  },
+  {
+    "word": "bonus",
+    "rank": 195,
+    "meaningEn": "extra, usually in the form of money"
+  },
+  {
+    "word": "cart",
+    "rank": 196,
+    "meaningEn": "a wagon or truck used to for transport"
+  },
+  {
+    "word": "delicious",
+    "rank": 197,
+    "meaningEn": "to taste good"
+  },
+  {
+    "word": "ink",
+    "rank": 198,
+    "meaningEn": "liquid found in pens"
+  },
+  {
+    "word": "supervise",
+    "rank": 199,
+    "meaningEn": "to watch over and manage"
+  },
+  {
+    "word": "waitress",
+    "rank": 200,
+    "meaningEn": "a woman whose job it is to bring meals to your the table in a restaurant or cafe"
+  },
+  {
+    "word": "cleaner",
+    "rank": 201,
+    "meaningEn": "someone who cleans  for a living"
+  },
+  {
+    "word": "developer",
+    "rank": 202,
+    "meaningEn": "someone who designs and builds properties"
+  },
+  {
+    "word": "headquarter",
+    "rank": 203,
+    "meaningEn": "the main office of an organization"
+  },
+  {
+    "word": "shuttle",
+    "rank": 204,
+    "meaningEn": "travel back and forth between two points"
+  },
+  {
+    "word": "stationery",
+    "rank": 205,
+    "meaningEn": "any materials needed for writing and printing"
+  },
+  {
+    "word": "subscribe",
+    "rank": 206,
+    "meaningEn": "to pay money to receive a service or product regularly"
+  },
+  {
+    "word": "alike",
+    "rank": 207,
+    "meaningEn": "similar, almost the same"
+  },
+  {
+    "word": "flavor",
+    "rank": 208,
+    "meaningEn": "the taste of something, e.g. sweet, sour"
+  },
+  {
+    "word": "picnic",
+    "rank": 209,
+    "meaningEn": "a packed meal to take with you and eaten in the open air"
+  },
+  {
+    "word": "recipe",
+    "rank": 210,
+    "meaningEn": "directions for baking or cooking something"
+  },
+  {
+    "word": "refreshment",
+    "rank": 211,
+    "meaningEn": "a small amount of food and drink served as a light meal"
+  },
+  {
+    "word": "administrative",
+    "rank": 212,
+    "meaningEn": "to do with the management of an office"
+  },
+  {
+    "word": "authorize",
+    "rank": 213,
+    "meaningEn": "to give permission for something"
+  },
+  {
+    "word": "commonly",
+    "rank": 214,
+    "meaningEn": "frequently, usually"
+  },
+  {
+    "word": "distribution",
+    "rank": 215,
+    "meaningEn": "the act of circulating things in a wide area"
+  },
+  {
+    "word": "sofa",
+    "rank": 216,
+    "meaningEn": "a long soft seat with a back, big enough for at least two people to sit on"
+  },
+  {
+    "word": "accommodate",
+    "rank": 217,
+    "meaningEn": "to give something that is needed"
+  },
+  {
+    "word": "affordable",
+    "rank": 218,
+    "meaningEn": "not expensive, one is able to pay easily"
+  },
+  {
+    "word": "annoy",
+    "rank": 219,
+    "meaningEn": "to bother or irritate"
+  },
+  {
+    "word": "commute",
+    "rank": 220,
+    "meaningEn": "to travel a long way to work and back"
+  },
+  {
+    "word": "coordinate",
+    "rank": 221,
+    "meaningEn": "to organize or manage"
+  },
+  {
+    "word": "paperwork",
+    "rank": 222,
+    "meaningEn": "the written work to do with any particular job"
+  },
+  {
+    "word": "quit",
+    "rank": 223,
+    "meaningEn": "to stop doing something"
+  },
+  {
+    "word": "authority",
+    "rank": 224,
+    "meaningEn": "the power to give orders and make decisions"
+  },
+  {
+    "word": "flu",
+    "rank": 225,
+    "meaningEn": "illness that you catch from other people, that gives you a fever for a few days"
+  },
+  {
+    "word": "captain",
+    "rank": 226,
+    "meaningEn": "the person in charge of a ship or airplane"
+  },
+  {
+    "word": "installation",
+    "rank": 227,
+    "meaningEn": "the act of connecting or inputting something"
+  },
+  {
+    "word": "trainer",
+    "rank": 228,
+    "meaningEn": "one who teaches a person or animal to do something"
+  },
+  {
+    "word": "availability",
+    "rank": 229,
+    "meaningEn": "Being present and able to be used"
+  },
+  {
+    "word": "bargain",
+    "rank": 230,
+    "meaningEn": "a good deal, a good price"
+  },
+  {
+    "word": "complimentary",
+    "rank": 231,
+    "meaningEn": "it does not cost anything, it is free"
+  },
+  {
+    "word": "hike",
+    "rank": 232,
+    "meaningEn": "walk a long way"
+  },
+  {
+    "word": "midnight",
+    "rank": 233,
+    "meaningEn": "12 o'clock at night"
+  },
+  {
+    "word": "productivity",
+    "rank": 234,
+    "meaningEn": "the amount of work done"
+  },
+  {
+    "word": "rainy",
+    "rank": 235,
+    "meaningEn": "water from the clouds, wet or showery"
+  },
+  {
+    "word": "relocate",
+    "rank": 236,
+    "meaningEn": "to move to a new location"
+  },
+  {
+    "word": "trainee",
+    "rank": 237,
+    "meaningEn": "someone who is learning on the job"
+  },
+  {
+    "word": "transaction",
+    "rank": 238,
+    "meaningEn": "an exchange between two people"
+  },
+  {
+    "word": "unhappy",
+    "rank": 239,
+    "meaningEn": "feeling little or no joy"
+  },
+  {
+    "word": "verify",
+    "rank": 240,
+    "meaningEn": "confirm the truth of"
+  },
+  {
+    "word": "automobile",
+    "rank": 241,
+    "meaningEn": "long name for 'car'"
+  },
+  {
+    "word": "courier",
+    "rank": 242,
+    "meaningEn": "Person paid to carry and deliver documents"
+  },
+  {
+    "word": "incomplete",
+    "rank": 243,
+    "meaningEn": "not yet finished"
+  },
+  {
+    "word": "questionnaire",
+    "rank": 244,
+    "meaningEn": "a set of questions to find out what people think about something"
+  },
+  {
+    "word": "baseball",
+    "rank": 245,
+    "meaningEn": "a sports game with a bat and ball"
+  },
+  {
+    "word": "dock",
+    "rank": 246,
+    "meaningEn": "the place where boats get tied up"
+  },
+  {
+    "word": "lamp",
+    "rank": 247,
+    "meaningEn": "an artificial source of light"
+  },
+  {
+    "word": "lately",
+    "rank": 248,
+    "meaningEn": "recently"
+  },
+  {
+    "word": "machinery",
+    "rank": 249,
+    "meaningEn": "tools, equipment"
+  },
+  {
+    "word": "presenter",
+    "rank": 250,
+    "meaningEn": "a person who shows and explains something to an audience"
+  },
+  {
+    "word": "seldom",
+    "rank": 251,
+    "meaningEn": "not very often"
+  },
+  {
+    "word": "signature",
+    "rank": 252,
+    "meaningEn": "your name written in your own handwriting"
+  },
+  {
+    "word": "worldwide",
+    "rank": 253,
+    "meaningEn": "Spanning or reaching across the whole earth"
+  },
+  {
+    "word": "carrier",
+    "rank": 254,
+    "meaningEn": "a person or thing that carries something"
+  },
+  {
+    "word": "designate",
+    "rank": 255,
+    "meaningEn": "to name or select someone for something"
+  },
+  {
+    "word": "exclusive",
+    "rank": 256,
+    "meaningEn": "only available to a certain group"
+  },
+  {
+    "word": "grocery",
+    "rank": 257,
+    "meaningEn": "a place that sells food items"
+  },
+  {
+    "word": "homework",
+    "rank": 258,
+    "meaningEn": "the work a teacher gives to students to be done outside of school"
+  },
+  {
+    "word": "memorandum",
+    "rank": 259,
+    "meaningEn": "A written note or message to remind you or someone else to do something"
+  },
+  {
+    "word": "photocopier",
+    "rank": 260,
+    "meaningEn": "a machine that makes exact copies of documents"
+  },
+  {
+    "word": "suite",
+    "rank": 261,
+    "meaningEn": "a set of connecting rooms, usually in a hotel"
+  },
+  {
+    "word": "thorough",
+    "rank": 262,
+    "meaningEn": "to be carefully and completely done, e.g. a thorough search"
+  },
+  {
+    "word": "bookstore",
+    "rank": 263,
+    "meaningEn": "A place where you go to buy books"
+  },
+  {
+    "word": "cater",
+    "rank": 264,
+    "meaningEn": "to make and deliver food"
+  },
+  {
+    "word": "dental",
+    "rank": 265,
+    "meaningEn": "relating to teeth"
+  },
+  {
+    "word": "duration",
+    "rank": 266,
+    "meaningEn": "how long something takes"
+  },
+  {
+    "word": "lounge",
+    "rank": 267,
+    "meaningEn": "a place to relax"
+  },
+  {
+    "word": "painter",
+    "rank": 268,
+    "meaningEn": "an artist who paints"
+  },
+  {
+    "word": "patron",
+    "rank": 269,
+    "meaningEn": "someone who gives support with time, money or effort"
+  },
+  {
+    "word": "prescription",
+    "rank": 270,
+    "meaningEn": "doctor's written order for medicine"
+  },
+  {
+    "word": "productive",
+    "rank": 271,
+    "meaningEn": "useful or worthwhile, e.g. a productive meeting"
+  },
+  {
+    "word": "salad",
+    "rank": 272,
+    "meaningEn": "food made of mainly leaves or lettuce and vegetables"
+  },
+  {
+    "word": "stack",
+    "rank": 273,
+    "meaningEn": "a pile of things placed one on top of the other"
+  },
+  {
+    "word": "delegate",
+    "rank": 274,
+    "meaningEn": "to give others tasks to do"
+  },
+  {
+    "word": "salesperson",
+    "rank": 275,
+    "meaningEn": "a man or woman whose job it is get people to buy things from their company"
+  },
+  {
+    "word": "calculator",
+    "rank": 276,
+    "meaningEn": "a device that does math for you"
+  },
+  {
+    "word": "completion",
+    "rank": 277,
+    "meaningEn": "the end, the finishing point"
+  },
+  {
+    "word": "defect",
+    "rank": 278,
+    "meaningEn": "something that is faulty"
+  },
+  {
+    "word": "garbage",
+    "rank": 279,
+    "meaningEn": "trash; something that is worthless"
+  },
+  {
+    "word": "omit",
+    "rank": 280,
+    "meaningEn": "to leave out or not say"
+  },
+  {
+    "word": "spite",
+    "rank": 281,
+    "meaningEn": "the desire to direct bad feeling towards someone"
+  },
+  {
+    "word": "bathroom",
+    "rank": 282,
+    "meaningEn": "a room where there is a bath and/or a shower"
+  },
+  {
+    "word": "cab",
+    "rank": 283,
+    "meaningEn": "taxi"
+  },
+  {
+    "word": "correspondence",
+    "rank": 284,
+    "meaningEn": "communication by letter"
+  },
+  {
+    "word": "ladder",
+    "rank": 285,
+    "meaningEn": "something you use to climb up high"
+  },
+  {
+    "word": "photography",
+    "rank": 286,
+    "meaningEn": "the art of taking pictures"
+  },
+  {
+    "word": "sculpture",
+    "rank": 287,
+    "meaningEn": "a figure or statue"
+  },
+  {
+    "word": "anniversary",
+    "rank": 288,
+    "meaningEn": "a date to remember"
+  },
+  {
+    "word": "buffet",
+    "rank": 289,
+    "meaningEn": "a meal consisting of a number of different dishes from which people serve themselves"
+  },
+  {
+    "word": "defective",
+    "rank": 290,
+    "meaningEn": "when something is not working"
+  },
+  {
+    "word": "ice cream",
+    "rank": 291,
+    "meaningEn": "Frozen food made of cream, very sweet and good to eat"
+  },
+  {
+    "word": "leak",
+    "rank": 292,
+    "meaningEn": "to drip water or other liquid"
+  },
+  {
+    "word": "occupancy",
+    "rank": 293,
+    "meaningEn": "the state of living in a place"
+  },
+  {
+    "word": "proficiency",
+    "rank": 294,
+    "meaningEn": "skill and experience"
+  },
+  {
+    "word": "renewal",
+    "rank": 295,
+    "meaningEn": "the act of making something new again"
+  },
+  {
+    "word": "urgent",
+    "rank": 296,
+    "meaningEn": "very important, needing attention now"
+  },
+  {
+    "word": "annually",
+    "rank": 297,
+    "meaningEn": "every 12 months"
+  },
+  {
+    "word": "basketball",
+    "rank": 298,
+    "meaningEn": "a game played by two teams who try to score goals by throwing the ball"
+  },
+  {
+    "word": "delete",
+    "rank": 299,
+    "meaningEn": "remove"
+  },
+  {
+    "word": "illogical",
+    "rank": 300,
+    "meaningEn": "not making any sense, lack of reasoning"
+  },
+  {
+    "word": "pet",
+    "rank": 301,
+    "meaningEn": "an animal you keep in the house to play with"
+  },
+  {
+    "word": "textbook",
+    "rank": 302,
+    "meaningEn": "a book of facts to be used for the study of a particular subject"
+  },
+  {
+    "word": "accurately",
+    "rank": 303,
+    "meaningEn": "when something is done correctly"
+  },
+  {
+    "word": "cabin",
+    "rank": 304,
+    "meaningEn": "a small house in the forest"
+  },
+  {
+    "word": "conductor",
+    "rank": 305,
+    "meaningEn": "a person who leads"
+  },
+  {
+    "word": "inspector",
+    "rank": 306,
+    "meaningEn": "a high ranking police officer"
+  },
+  {
+    "word": "intern",
+    "rank": 307,
+    "meaningEn": "a stuent or trainee who is doing a job, often without pay, to get work experience"
+  },
+  {
+    "word": "semester",
+    "rank": 308,
+    "meaningEn": "one of two divisions of the school year"
+  },
+  {
+    "word": "confirmation",
+    "rank": 309,
+    "meaningEn": "something that verifies something is true"
+  },
+  {
+    "word": "congratulation",
+    "rank": 310,
+    "meaningEn": "the act of congratulating"
+  },
+  {
+    "word": "expertise",
+    "rank": 311,
+    "meaningEn": "excellent knowledge on something"
+  },
+  {
+    "word": "graph",
+    "rank": 312,
+    "meaningEn": "an image that shows data"
+  },
+  {
+    "word": "taker",
+    "rank": 313,
+    "meaningEn": "someone who does not give but only takes"
+  },
+  {
+    "word": "utility",
+    "rank": 314,
+    "meaningEn": "usefulness"
+  },
+  {
+    "word": "voucher",
+    "rank": 315,
+    "meaningEn": "a piece of paper that you can use to buy goods or to get them at a reduced price"
+  },
+  {
+    "word": "banker",
+    "rank": 316,
+    "meaningEn": "someone who works for the bank"
+  },
+  {
+    "word": "behalf",
+    "rank": 317,
+    "meaningEn": "to speak or do something for someone else, e.g. on behalf of…"
+  },
+  {
+    "word": "minimize",
+    "rank": 318,
+    "meaningEn": "to make less important or smaller"
+  },
+  {
+    "word": "optional",
+    "rank": 319,
+    "meaningEn": "a choice, something you do not have to do"
+  },
+  {
+    "word": "paycheck",
+    "rank": 320,
+    "meaningEn": "the piece of paper that tells a worker how much they have earned"
+  },
+  {
+    "word": "polite",
+    "rank": 321,
+    "meaningEn": "being kind to others"
+  },
+  {
+    "word": "protective",
+    "rank": 322,
+    "meaningEn": "to want to keep safe"
+  },
+  {
+    "word": "seller",
+    "rank": 323,
+    "meaningEn": "someone who promotes or exchanges goods or services for money"
+  },
+  {
+    "word": "sidewalk",
+    "rank": 324,
+    "meaningEn": "the area that runs alonside a road for people to walk on"
+  },
+  {
+    "word": "sightsee",
+    "rank": 325,
+    "meaningEn": "go to visit places of interest"
+  },
+  {
+    "word": "soup",
+    "rank": 326,
+    "meaningEn": "a liquid meal, usually hot"
+  },
+  {
+    "word": "transit",
+    "rank": 327,
+    "meaningEn": "on the move from one place to another"
+  },
+  {
+    "word": "wallet",
+    "rank": 328,
+    "meaningEn": "a small case that can fit in a pocket, used by men to hold money  and credit cards"
+  },
+  {
+    "word": "cashier",
+    "rank": 329,
+    "meaningEn": "the person whose job it is to take the money you pay for goods or services"
+  },
+  {
+    "word": "casual",
+    "rank": 330,
+    "meaningEn": "uncertain, unplanned"
+  },
+  {
+    "word": "drill",
+    "rank": 331,
+    "meaningEn": "to bore a hole into something"
+  },
+  {
+    "word": "fountain",
+    "rank": 332,
+    "meaningEn": "a man-made spray of water that shoots upwards"
+  },
+  {
+    "word": "juice",
+    "rank": 333,
+    "meaningEn": "the natural liquid from a plant or fruit"
+  },
+  {
+    "word": "lane",
+    "rank": 334,
+    "meaningEn": "a narrow road"
+  },
+  {
+    "word": "popularity",
+    "rank": 335,
+    "meaningEn": "the state of being liked by many people"
+  },
+  {
+    "word": "poster",
+    "rank": 336,
+    "meaningEn": "a large printed picture or notice to stick on a wall"
+  },
+  {
+    "word": "promptly",
+    "rank": 337,
+    "meaningEn": "done right away, immediately"
+  },
+  {
+    "word": "retailer",
+    "rank": 338,
+    "meaningEn": "a store that sells something"
+  },
+  {
+    "word": "vacancy",
+    "rank": 339,
+    "meaningEn": "job or position that needs to be filled"
+  },
+  {
+    "word": "bench",
+    "rank": 340,
+    "meaningEn": "a long, usually wooden, seat found mainly in parks"
+  },
+  {
+    "word": "cumulative",
+    "rank": 341,
+    "meaningEn": "gets bigger by more and more being added to it"
+  },
+  {
+    "word": "directory",
+    "rank": 342,
+    "meaningEn": "an alphabetical list of names and addresses"
+  },
+  {
+    "word": "disposal",
+    "rank": 343,
+    "meaningEn": "the act of getting rid of something"
+  },
+  {
+    "word": "housekeeper",
+    "rank": 344,
+    "meaningEn": "someone whose job it is to take care of and clean another person's house"
+  },
+  {
+    "word": "internship",
+    "rank": 345,
+    "meaningEn": "a position or placement for someone to learn a job through work, sometimes without pay"
+  },
+  {
+    "word": "knowledgeable",
+    "rank": 346,
+    "meaningEn": "to know much about a topic"
+  },
+  {
+    "word": "organizer",
+    "rank": 347,
+    "meaningEn": "someone who plans things for a living"
+  },
+  {
+    "word": "overdue",
+    "rank": 348,
+    "meaningEn": "past the date you should do something; late"
+  },
+  {
+    "word": "prediction",
+    "rank": 349,
+    "meaningEn": "a guess about the future"
+  },
+  {
+    "word": "subscriber",
+    "rank": 350,
+    "meaningEn": "someone who pays money to receive a service or product regularly"
+  },
+  {
+    "word": "booklet",
+    "rank": 351,
+    "meaningEn": "a small book, leaflet, or brochure"
+  },
+  {
+    "word": "conditioner",
+    "rank": 352,
+    "meaningEn": "shampoo-like substance used after washing hair"
+  },
+  {
+    "word": "enroll",
+    "rank": 353,
+    "meaningEn": "to register for something"
+  },
+  {
+    "word": "frustrate",
+    "rank": 354,
+    "meaningEn": "to upset someone"
+  },
+  {
+    "word": "garment",
+    "rank": 355,
+    "meaningEn": "something made of material that you can wear, like pants or a dress"
+  },
+  {
+    "word": "orientation",
+    "rank": 356,
+    "meaningEn": "something that makes you familiar with a place"
+  },
+  {
+    "word": "outlet",
+    "rank": 357,
+    "meaningEn": "a store that sells things at a discount"
+  },
+  {
+    "word": "packet",
+    "rank": 358,
+    "meaningEn": "a small carton or package"
+  },
+  {
+    "word": "plumber",
+    "rank": 359,
+    "meaningEn": "someone connects and mends water pipes for a living"
+  },
+  {
+    "word": "specification",
+    "rank": 360,
+    "meaningEn": "a special detail or necessity for something"
+  },
+  {
+    "word": "auto",
+    "rank": 361,
+    "meaningEn": "car"
+  },
+  {
+    "word": "decorate",
+    "rank": 362,
+    "meaningEn": "make more attractive by adding ornament, colour, etc."
+  },
+  {
+    "word": "deduction",
+    "rank": 363,
+    "meaningEn": "the act of taking away, usually money"
+  },
+  {
+    "word": "definite",
+    "rank": 364,
+    "meaningEn": "for certain, exact"
+  },
+  {
+    "word": "economical",
+    "rank": 365,
+    "meaningEn": "of good value"
+  },
+  {
+    "word": "efficiently",
+    "rank": 366,
+    "meaningEn": "to do something well in a little amount of time"
+  },
+  {
+    "word": "flyer",
+    "rank": 367,
+    "meaningEn": "brochure, leaflet"
+  },
+  {
+    "word": "franchise",
+    "rank": 368,
+    "meaningEn": "one of many branches of a business you buy, e.g.KFC"
+  },
+  {
+    "word": "generous",
+    "rank": 369,
+    "meaningEn": "to give willingly and freely"
+  },
+  {
+    "word": "interrupt",
+    "rank": 370,
+    "meaningEn": "to stop something or someone in the middle of something"
+  },
+  {
+    "word": "oven",
+    "rank": 371,
+    "meaningEn": "kitchen appliance used for baking or roasting"
+  },
+  {
+    "word": "pant",
+    "rank": 372,
+    "meaningEn": "take short sharp breaths through your mouth, noisily"
+  },
+  {
+    "word": "profitable",
+    "rank": 373,
+    "meaningEn": "able to make money"
+  },
+  {
+    "word": "refrigerator",
+    "rank": 374,
+    "meaningEn": "an electric box that cools food"
+  },
+  {
+    "word": "reimburse",
+    "rank": 375,
+    "meaningEn": "give back the money for an expense that has been paid out"
+  },
+  {
+    "word": "showroom",
+    "rank": 376,
+    "meaningEn": "an area where goods for sale are set out so people can look at them"
+  },
+  {
+    "word": "vegetarian",
+    "rank": 377,
+    "meaningEn": "someone who does not eat meat or fish"
+  },
+  {
+    "word": "administrator",
+    "rank": 378,
+    "meaningEn": "the person who manages an office"
+  },
+  {
+    "word": "broker",
+    "rank": 379,
+    "meaningEn": "someone who buys and sells thing for a percentage of sales"
+  },
+  {
+    "word": "cancellation",
+    "rank": 380,
+    "meaningEn": "when something is not going to happen after all"
+  },
+  {
+    "word": "confidential",
+    "rank": 381,
+    "meaningEn": "something that needs to be kept secret"
+  },
+  {
+    "word": "jet",
+    "rank": 382,
+    "meaningEn": "an airplane"
+  },
+  {
+    "word": "realistic",
+    "rank": 383,
+    "meaningEn": "to be reasonable or be close to real life"
+  },
+  {
+    "word": "thoroughly",
+    "rank": 384,
+    "meaningEn": "to do something carefully with attention to detail"
+  },
+  {
+    "word": "trash",
+    "rank": 385,
+    "meaningEn": "garbage or waste; something worthless"
+  },
+  {
+    "word": "usage",
+    "rank": 386,
+    "meaningEn": "the usual or customary way in which something is used"
+  },
+  {
+    "word": "windy",
+    "rank": 387,
+    "meaningEn": "weather that is stormy or gusty"
+  },
+  {
+    "word": "automate",
+    "rank": 388,
+    "meaningEn": "To make a process that does a task over and over again by machine"
+  },
+  {
+    "word": "ferry",
+    "rank": 389,
+    "meaningEn": "a big boat that carries people and cars"
+  },
+  {
+    "word": "finalize",
+    "rank": 390,
+    "meaningEn": "to make final"
+  },
+  {
+    "word": "incur",
+    "rank": 391,
+    "meaningEn": "lay yourself open to something as a result of your actions"
+  },
+  {
+    "word": "instruct",
+    "rank": 392,
+    "meaningEn": "to teach"
+  },
+  {
+    "word": "loyal",
+    "rank": 393,
+    "meaningEn": "to stay true or faithful"
+  },
+  {
+    "word": "luncheon",
+    "rank": 394,
+    "meaningEn": "a formal meal eaten in the middle of the day"
+  },
+  {
+    "word": "microphone",
+    "rank": 395,
+    "meaningEn": "device used by singers and public speakers to make their voice louder"
+  },
+  {
+    "word": "overview",
+    "rank": 396,
+    "meaningEn": "a general summary of a subject"
+  },
+  {
+    "word": "projector",
+    "rank": 397,
+    "meaningEn": "an optical instrument that projects an enlarged image onto a screen"
+  },
+  {
+    "word": "shortage",
+    "rank": 398,
+    "meaningEn": "a lack of something"
+  },
+  {
+    "word": "spacious",
+    "rank": 399,
+    "meaningEn": "lots of room or space"
+  },
+  {
+    "word": "accomplishment",
+    "rank": 400,
+    "meaningEn": "something you achieve"
+  },
+  {
+    "word": "accustom",
+    "rank": 401,
+    "meaningEn": "to get used to"
+  },
+  {
+    "word": "clinic",
+    "rank": 402,
+    "meaningEn": "a place you go when sick, like a mini-hospital"
+  },
+  {
+    "word": "desktop",
+    "rank": 403,
+    "meaningEn": "the working area of a computer screen when no programs are open"
+  },
+  {
+    "word": "jog",
+    "rank": 404,
+    "meaningEn": "a gentle run"
+  },
+  {
+    "word": "leisure",
+    "rank": 405,
+    "meaningEn": "something for fun or relaxing"
+  },
+  {
+    "word": "nap",
+    "rank": 406,
+    "meaningEn": "a short sleep, often taken during the daytime"
+  },
+  {
+    "word": "reinforce",
+    "rank": 407,
+    "meaningEn": "to make stronger"
+  },
+  {
+    "word": "sender",
+    "rank": 408,
+    "meaningEn": "someone who transmits a message"
+  },
+  {
+    "word": "vacuum",
+    "rank": 409,
+    "meaningEn": "a completely empty space"
+  },
+  {
+    "word": "wireless",
+    "rank": 410,
+    "meaningEn": "a means of communication that uses radio waves instead of wires"
+  },
+  {
+    "word": "yearly",
+    "rank": 411,
+    "meaningEn": "happening every 12 months"
+  },
+  {
+    "word": "appreciation",
+    "rank": 412,
+    "meaningEn": "to show thanks for something or someone"
+  },
+  {
+    "word": "cargo",
+    "rank": 413,
+    "meaningEn": "the things carried in the hold of an airplane or on a truck"
+  },
+  {
+    "word": "cooperate",
+    "rank": 414,
+    "meaningEn": "to work together nicely"
+  },
+  {
+    "word": "distract",
+    "rank": 415,
+    "meaningEn": "to take your focus away from something"
+  },
+  {
+    "word": "dividend",
+    "rank": 416,
+    "meaningEn": "money received as a bonus"
+  },
+  {
+    "word": "exemption",
+    "rank": 417,
+    "meaningEn": "an exception to the rule"
+  },
+  {
+    "word": "furnish",
+    "rank": 418,
+    "meaningEn": "to put furniture in"
+  },
+  {
+    "word": "hourly",
+    "rank": 419,
+    "meaningEn": "happens every 60 minutes"
+  },
+  {
+    "word": "laundry",
+    "rank": 420,
+    "meaningEn": "dirty clothes that need washing"
+  },
+  {
+    "word": "mandatory",
+    "rank": 421,
+    "meaningEn": "something that has to be done"
+  },
+  {
+    "word": "mechanical",
+    "rank": 422,
+    "meaningEn": "to do with machines"
+  },
+  {
+    "word": "pharmacy",
+    "rank": 423,
+    "meaningEn": "a store where medicines are prepared and sold"
+  },
+  {
+    "word": "promotional",
+    "rank": 424,
+    "meaningEn": "to do with encouraging sales"
+  },
+  {
+    "word": "quarterly",
+    "rank": 425,
+    "meaningEn": "every 4 months"
+  },
+  {
+    "word": "residential",
+    "rank": 426,
+    "meaningEn": "an area where people live"
+  },
+  {
+    "word": "scholarship",
+    "rank": 427,
+    "meaningEn": "an amount of money given to an able student to help pay for their studies"
+  },
+  {
+    "word": "seeker",
+    "rank": 428,
+    "meaningEn": "someone looking for something"
+  },
+  {
+    "word": "temporarily",
+    "rank": 429,
+    "meaningEn": "not for ever, for a short while"
+  },
+  {
+    "word": "towel",
+    "rank": 430,
+    "meaningEn": "a big cloth used for drying after a shower or swim"
+  },
+  {
+    "word": "unattended",
+    "rank": 431,
+    "meaningEn": "when someone or something is not being watched"
+  },
+  {
+    "word": "accessible",
+    "rank": 432,
+    "meaningEn": "available, easy to reach"
+  },
+  {
+    "word": "afterward",
+    "rank": 433,
+    "meaningEn": "after an event or action"
+  },
+  {
+    "word": "apology",
+    "rank": 434,
+    "meaningEn": "saying you are sorry for something"
+  },
+  {
+    "word": "assemble",
+    "rank": 435,
+    "meaningEn": "to gather people together"
+  },
+  {
+    "word": "automatic",
+    "rank": 436,
+    "meaningEn": "done without thinking"
+  },
+  {
+    "word": "boardroom",
+    "rank": 437,
+    "meaningEn": "a room where the board of directors of a company hold meetings"
+  },
+  {
+    "word": "carpenter",
+    "rank": 438,
+    "meaningEn": "a person makes and mends things made of wood for a liviing"
+  },
+  {
+    "word": "caterer",
+    "rank": 439,
+    "meaningEn": "the person who makes food and delivers it for a living"
+  },
+  {
+    "word": "classify",
+    "rank": 440,
+    "meaningEn": "to put into a category"
+  },
+  {
+    "word": "consultation",
+    "rank": 441,
+    "meaningEn": "a meeting between two people"
+  },
+  {
+    "word": "durable",
+    "rank": 442,
+    "meaningEn": "very long lasting"
+  },
+  {
+    "word": "glove",
+    "rank": 443,
+    "meaningEn": "something you wear on your hand to keep warm"
+  },
+  {
+    "word": "hardware",
+    "rank": 444,
+    "meaningEn": "tools or equipment"
+  },
+  {
+    "word": "malfunction",
+    "rank": 445,
+    "meaningEn": "a breakdown or failure in the system"
+  },
+  {
+    "word": "outdated",
+    "rank": 446,
+    "meaningEn": "to be older than"
+  },
+  {
+    "word": "patience",
+    "rank": 447,
+    "meaningEn": "to accept suffering without getting angry"
+  },
+  {
+    "word": "postcard",
+    "rank": 448,
+    "meaningEn": "a card for sending messages by post without an envelope"
+  },
+  {
+    "word": "prospective",
+    "rank": 449,
+    "meaningEn": "possible in the future, e.g. prospective client"
+  },
+  {
+    "word": "revision",
+    "rank": 450,
+    "meaningEn": "to change or rewrite something"
+  },
+  {
+    "word": "strictly",
+    "rank": 451,
+    "meaningEn": "in a strong manner, in a manner that follows the rules"
+  },
+  {
+    "word": "tomato",
+    "rank": 452,
+    "meaningEn": "a round red fruit, usually thought of as a vegetable"
+  },
+  {
+    "word": "tray",
+    "rank": 453,
+    "meaningEn": "a flat plate used to carry things, usually coffee or tea"
+  },
+  {
+    "word": "vendor",
+    "rank": 454,
+    "meaningEn": "the person who is selling something"
+  },
+  {
+    "word": "withdrawal",
+    "rank": 455,
+    "meaningEn": "the act of taking something away or out of something, e.g. bank withdrawal"
+  },
+  {
+    "word": "anytime",
+    "rank": 456,
+    "meaningEn": "at a time you choose, it's not important when"
+  },
+  {
+    "word": "badge",
+    "rank": 457,
+    "meaningEn": "a small piece of material with your name and details on that you wear to show who you are"
+  },
+  {
+    "word": "brake",
+    "rank": 458,
+    "meaningEn": "to stop a vehicle by pressing a pedal"
+  },
+  {
+    "word": "calculation",
+    "rank": 459,
+    "meaningEn": "to add, subtract, multiply, divide etc."
+  },
+  {
+    "word": "coordinator",
+    "rank": 460,
+    "meaningEn": "someone whose job is to organize things"
+  },
+  {
+    "word": "costly",
+    "rank": 461,
+    "meaningEn": "to be expensive, to be of a high price"
+  },
+  {
+    "word": "equip",
+    "rank": 462,
+    "meaningEn": "provide with abilities or tools"
+  },
+  {
+    "word": "excursion",
+    "rank": 463,
+    "meaningEn": "a journey taken for pleasure"
+  },
+  {
+    "word": "graphic",
+    "rank": 464,
+    "meaningEn": "to do with a picture or image"
+  },
+  {
+    "word": "inexperience",
+    "rank": 465,
+    "meaningEn": "to not have much practice with something"
+  },
+  {
+    "word": "lengthy",
+    "rank": 466,
+    "meaningEn": "long in time or size"
+  },
+  {
+    "word": "librarian",
+    "rank": 467,
+    "meaningEn": "a person who works with books in a library"
+  },
+  {
+    "word": "meantime",
+    "rank": 468,
+    "meaningEn": "the time between two events"
+  },
+  {
+    "word": "merge",
+    "rank": 469,
+    "meaningEn": "to bring two things together to make one"
+  },
+  {
+    "word": "performer",
+    "rank": 470,
+    "meaningEn": "an entertainer  like an actor or a singer"
+  },
+  {
+    "word": "pharmacist",
+    "rank": 471,
+    "meaningEn": "a person whose job it is to prepare medicines"
+  },
+  {
+    "word": "pizza",
+    "rank": 472,
+    "meaningEn": "a round piece of baked dough, covered with tomato, cheese and other ingredients"
+  },
+  {
+    "word": "resignation",
+    "rank": 473,
+    "meaningEn": "to quit one's job"
+  },
+  {
+    "word": "reviewer",
+    "rank": 474,
+    "meaningEn": "someone who checks written work"
+  },
+  {
+    "word": "terminate",
+    "rank": 475,
+    "meaningEn": "bring to an end"
+  },
+  {
+    "word": "translation",
+    "rank": 476,
+    "meaningEn": "something that is changed into another language"
+  },
+  {
+    "word": "unfamiliar",
+    "rank": 477,
+    "meaningEn": "not well known"
+  },
+  {
+    "word": "actress",
+    "rank": 478,
+    "meaningEn": "a female actor"
+  },
+  {
+    "word": "adjacent",
+    "rank": 479,
+    "meaningEn": "next to, beside"
+  },
+  {
+    "word": "alternate",
+    "rank": 480,
+    "meaningEn": "another option"
+  },
+  {
+    "word": "congratulate",
+    "rank": 481,
+    "meaningEn": "to tell someone 'good job' on a happy occasion"
+  },
+  {
+    "word": "escort",
+    "rank": 482,
+    "meaningEn": "to go with someone"
+  },
+  {
+    "word": "inexpensive",
+    "rank": 483,
+    "meaningEn": "having a low price; cheap"
+  },
+  {
+    "word": "mask",
+    "rank": 484,
+    "meaningEn": "something that covers your face"
+  },
+  {
+    "word": "purchaser",
+    "rank": 485,
+    "meaningEn": "someone who buys things; buyer"
+  },
+  {
+    "word": "purse",
+    "rank": 486,
+    "meaningEn": "a small bag women use to carry personal items"
+  },
+  {
+    "word": "realtor",
+    "rank": 487,
+    "meaningEn": "a person who sells, rents out or manages property for a living"
+  },
+  {
+    "word": "rearrange",
+    "rank": 488,
+    "meaningEn": "to put into a new order"
+  },
+  {
+    "word": "reopen",
+    "rank": 489,
+    "meaningEn": "to open again"
+  },
+  {
+    "word": "soap",
+    "rank": 490,
+    "meaningEn": "a block of material used for washing or cleaning"
+  },
+  {
+    "word": "spokesperson",
+    "rank": 491,
+    "meaningEn": "one man or woman who speaks officially for the rest of the group"
+  },
+  {
+    "word": "superior",
+    "rank": 492,
+    "meaningEn": "the leader, someone higher than you in rank"
+  },
+  {
+    "word": "airfare",
+    "rank": 493,
+    "meaningEn": "the amount of money charged for traveling by airplane"
+  },
+  {
+    "word": "bake",
+    "rank": 494,
+    "meaningEn": "to cook things inside the oven"
+  },
+  {
+    "word": "businessperson",
+    "rank": 495,
+    "meaningEn": "a person who works in commercial or industrial business, especially an owner or executive"
+  },
+  {
+    "word": "considerably",
+    "rank": 496,
+    "meaningEn": "to a large degree"
+  },
+  {
+    "word": "faulty",
+    "rank": 497,
+    "meaningEn": "broken, not perfect"
+  },
+  {
+    "word": "hobby",
+    "rank": 498,
+    "meaningEn": "something you do in your spare time for fun"
+  },
+  {
+    "word": "informal",
+    "rank": 499,
+    "meaningEn": "relaxed, casual - often used to describe clothes or an event"
+  },
+  {
+    "word": "kilometer",
+    "rank": 500,
+    "meaningEn": "a metric unit of length equal to 1000 meters"
+  },
+  {
+    "word": "lawn",
+    "rank": 501,
+    "meaningEn": "the grassy area in your garden"
+  },
+  {
+    "word": "microscope",
+    "rank": 502,
+    "meaningEn": "a device that makes very small things look bigger so you can study them closer"
+  },
+  {
+    "word": "mislead",
+    "rank": 503,
+    "meaningEn": "to lead someone in the wrong direction or give someone wrong directions"
+  },
+  {
+    "word": "misplace",
+    "rank": 504,
+    "meaningEn": "forget where you have put it"
+  },
+  {
+    "word": "newsstand",
+    "rank": 505,
+    "meaningEn": "a small structure where newspapers and magazines are sold"
+  },
+  {
+    "word": "overhead",
+    "rank": 506,
+    "meaningEn": "the fixed cost of a business, e.g. rent"
+  },
+  {
+    "word": "portfolio",
+    "rank": 507,
+    "meaningEn": "a collection of investments that someone owns"
+  },
+  {
+    "word": "rack",
+    "rank": 508,
+    "meaningEn": "a stand or shelf to put things on"
+  },
+  {
+    "word": "remodel",
+    "rank": 509,
+    "meaningEn": "change or alter nearly everything to make it look different"
+  },
+  {
+    "word": "statistics",
+    "rank": 510,
+    "meaningEn": "math related to data collection"
+  },
+  {
+    "word": "tunnel",
+    "rank": 511,
+    "meaningEn": "a hole one can travel through"
+  },
+  {
+    "word": "unlimited",
+    "rank": 512,
+    "meaningEn": "without end"
+  },
+  {
+    "word": "vitamin",
+    "rank": 513,
+    "meaningEn": "a natural substance found in food and drink that your body needs to be healthy"
+  },
+  {
+    "word": "zoo",
+    "rank": 514,
+    "meaningEn": "a park where many different types of live animals are kept"
+  },
+  {
+    "word": "alert",
+    "rank": 515,
+    "meaningEn": "wide awake, aware"
+  },
+  {
+    "word": "auditorium",
+    "rank": 516,
+    "meaningEn": "the area of a theater or concert hall where the audience sits"
+  },
+  {
+    "word": "celebrity",
+    "rank": 517,
+    "meaningEn": "someone famous"
+  },
+  {
+    "word": "deduct",
+    "rank": 518,
+    "meaningEn": "to minus or take away"
+  },
+  {
+    "word": "disruption",
+    "rank": 519,
+    "meaningEn": "the act of interrupting and causing chaos"
+  },
+  {
+    "word": "electrician",
+    "rank": 520,
+    "meaningEn": "a person who installs or repairs electrical or telephone lines"
+  },
+  {
+    "word": "enthusiastic",
+    "rank": 521,
+    "meaningEn": "to show excitement for something"
+  },
+  {
+    "word": "graduation",
+    "rank": 522,
+    "meaningEn": "the ceremony upon finishing a degree or program"
+  },
+  {
+    "word": "icy",
+    "rank": 523,
+    "meaningEn": "made of ice"
+  },
+  {
+    "word": "irregular",
+    "rank": 524,
+    "meaningEn": "occuring at unexpected times"
+  },
+  {
+    "word": "login",
+    "rank": 525,
+    "meaningEn": "to enter a computer website account"
+  },
+  {
+    "word": "managerial",
+    "rank": 526,
+    "meaningEn": "to do with management or supervision"
+  },
+  {
+    "word": "mineral",
+    "rank": 527,
+    "meaningEn": "a type of substance found in nature"
+  },
+  {
+    "word": "motorcycle",
+    "rank": 528,
+    "meaningEn": "a motor vehicle with two wheels and a strong frame"
+  },
+  {
+    "word": "necessity",
+    "rank": 529,
+    "meaningEn": "something which you need"
+  },
+  {
+    "word": "planner",
+    "rank": 530,
+    "meaningEn": "a person who makes plans"
+  },
+  {
+    "word": "programmer",
+    "rank": 531,
+    "meaningEn": "a person who designs and writes and tests computer programs"
+  },
+  {
+    "word": "proofread",
+    "rank": 532,
+    "meaningEn": "read for errors"
+  },
+  {
+    "word": "recruiter",
+    "rank": 533,
+    "meaningEn": "a person who hires people for businesses"
+  },
+  {
+    "word": "remainder",
+    "rank": 534,
+    "meaningEn": "what is left over"
+  },
+  {
+    "word": "statue",
+    "rank": 535,
+    "meaningEn": "a work of art, usually a model of a person or animal, made from hard material"
+  },
+  {
+    "word": "steadily",
+    "rank": 536,
+    "meaningEn": "in a slow and even manner"
+  },
+  {
+    "word": "stockholder",
+    "rank": 537,
+    "meaningEn": "someone who holds shares of stock in a corporation"
+  },
+  {
+    "word": "vacant",
+    "rank": 538,
+    "meaningEn": "empty"
+  },
+  {
+    "word": "accessory",
+    "rank": 539,
+    "meaningEn": "partner in crime"
+  },
+  {
+    "word": "assembly",
+    "rank": 540,
+    "meaningEn": "when people are gathered together"
+  },
+  {
+    "word": "basket",
+    "rank": 541,
+    "meaningEn": "a container made of pieces of wood"
+  },
+  {
+    "word": "certification",
+    "rank": 542,
+    "meaningEn": "written proof that you did something or that something is good enough"
+  },
+  {
+    "word": "closure",
+    "rank": 543,
+    "meaningEn": "when something is closed for good"
+  },
+  {
+    "word": "dislike",
+    "rank": 544,
+    "meaningEn": "to not like, hate"
+  },
+  {
+    "word": "downstairs",
+    "rank": 545,
+    "meaningEn": "on a lower floor of a building"
+  },
+  {
+    "word": "expiration",
+    "rank": 546,
+    "meaningEn": "the end of a period of time"
+  },
+  {
+    "word": "headache",
+    "rank": 547,
+    "meaningEn": "pain in the head"
+  },
+  {
+    "word": "jam",
+    "rank": 548,
+    "meaningEn": "push down hard"
+  },
+  {
+    "word": "nail",
+    "rank": 549,
+    "meaningEn": "a long, thin piece of metal used to hold pieces of wood together banged in with a hammer"
+  },
+  {
+    "word": "optimistic",
+    "rank": 550,
+    "meaningEn": "being positive about the future"
+  },
+  {
+    "word": "pedestrian",
+    "rank": 551,
+    "meaningEn": "a person who is walking on the street"
+  },
+  {
+    "word": "projection",
+    "rank": 552,
+    "meaningEn": "a guess about future events, e.g. sales or income"
+  },
+  {
+    "word": "sleeve",
+    "rank": 553,
+    "meaningEn": "the part of a garment that covers some, or all, of the arm"
+  },
+  {
+    "word": "suburb",
+    "rank": 554,
+    "meaningEn": "living area outside the city"
+  },
+  {
+    "word": "takeover",
+    "rank": 555,
+    "meaningEn": "the buying out of one company by another"
+  },
+  {
+    "word": "unsure",
+    "rank": 556,
+    "meaningEn": "not certain or sure"
+  },
+  {
+    "word": "upstairs",
+    "rank": 557,
+    "meaningEn": "on a higher level of the building"
+  },
+  {
+    "word": "verbal",
+    "rank": 558,
+    "meaningEn": "spoken"
+  },
+  {
+    "word": "visa",
+    "rank": 559,
+    "meaningEn": "travel permit that allows you to enter a particular country for a period of time"
+  },
+  {
+    "word": "wildlife",
+    "rank": 560,
+    "meaningEn": "animals and plants that live in the natural world"
+  },
+  {
+    "word": "workforce",
+    "rank": 561,
+    "meaningEn": "all the people that a company employs"
+  },
+  {
+    "word": "absent",
+    "rank": 562,
+    "meaningEn": "missing, not present"
+  },
+  {
+    "word": "accumulate",
+    "rank": 563,
+    "meaningEn": "to slowly get more and more of something, e.g. wealth"
+  },
+  {
+    "word": "appraisal",
+    "rank": 564,
+    "meaningEn": "an evaluation"
+  },
+  {
+    "word": "apprentice",
+    "rank": 565,
+    "meaningEn": "someone who is learning a trade by working with an expert"
+  },
+  {
+    "word": "businessman",
+    "rank": 566,
+    "meaningEn": "a man who works in commercial or industrial business, especially an owner or executive"
+  },
+  {
+    "word": "ceiling",
+    "rank": 567,
+    "meaningEn": "the thing that covers the room up high"
+  },
+  {
+    "word": "colorful",
+    "rank": 568,
+    "meaningEn": "having many different colors"
+  },
+  {
+    "word": "compensate",
+    "rank": 569,
+    "meaningEn": "to give money for a service"
+  },
+  {
+    "word": "costume",
+    "rank": 570,
+    "meaningEn": "something unusual you dress up in, e.g. for Hallowe'en"
+  },
+  {
+    "word": "editorial",
+    "rank": 571,
+    "meaningEn": "a newspaper article written by the editor"
+  },
+  {
+    "word": "effectiveness",
+    "rank": 572,
+    "meaningEn": "the state of working properly or as expected"
+  },
+  {
+    "word": "facilitate",
+    "rank": 573,
+    "meaningEn": "to help or make easier"
+  },
+  {
+    "word": "firefighter",
+    "rank": 574,
+    "meaningEn": "someone whose job it is to put out fires or save people from dangerous situations"
+  },
+  {
+    "word": "gasoline",
+    "rank": 575,
+    "meaningEn": "fuel used in most motor vehicles"
+  },
+  {
+    "word": "inappropriate",
+    "rank": 576,
+    "meaningEn": "not suitable for use in a given situation"
+  },
+  {
+    "word": "internet",
+    "rank": 577,
+    "meaningEn": "the information highway, the worldwide web"
+  },
+  {
+    "word": "landlord",
+    "rank": 578,
+    "meaningEn": "the person who owns the place you rent"
+  },
+  {
+    "word": "layout",
+    "rank": 579,
+    "meaningEn": "the plan of how it is set out"
+  },
+  {
+    "word": "lunchtime",
+    "rank": 580,
+    "meaningEn": "The usual time for eating the midday meal"
+  },
+  {
+    "word": "payroll",
+    "rank": 581,
+    "meaningEn": "the total amount of money paid in wages"
+  },
+  {
+    "word": "pharmaceutical",
+    "rank": 582,
+    "meaningEn": "relating to the preparation and making of medicine"
+  },
+  {
+    "word": "plausible",
+    "rank": 583,
+    "meaningEn": "it sounds like it could be true"
+  },
+  {
+    "word": "premium",
+    "rank": 584,
+    "meaningEn": "an extra payment added to the cost"
+  },
+  {
+    "word": "safely",
+    "rank": 585,
+    "meaningEn": "in a way that is not dangerous"
+  },
+  {
+    "word": "simplify",
+    "rank": 586,
+    "meaningEn": "make easier to understand"
+  },
+  {
+    "word": "specialty",
+    "rank": 587,
+    "meaningEn": "something you are very good at"
+  },
+  {
+    "word": "tech",
+    "rank": 588,
+    "meaningEn": "short form of the word 'technology'"
+  },
+  {
+    "word": "unexpected",
+    "rank": 589,
+    "meaningEn": "to be a surprise"
+  },
+  {
+    "word": "unspecified",
+    "rank": 590,
+    "meaningEn": "not clearly marked or known"
+  },
+  {
+    "word": "adhere",
+    "rank": 591,
+    "meaningEn": "to stay with or follow , e.g. adhere to rules"
+  },
+  {
+    "word": "bankrupt",
+    "rank": 592,
+    "meaningEn": "to have no more money"
+  },
+  {
+    "word": "caution",
+    "rank": 593,
+    "meaningEn": "a warning to be careful"
+  },
+  {
+    "word": "clip",
+    "rank": 594,
+    "meaningEn": "to cut short, snip"
+  },
+  {
+    "word": "comply",
+    "rank": 595,
+    "meaningEn": "to obey a rule"
+  },
+  {
+    "word": "diner",
+    "rank": 596,
+    "meaningEn": "a small, informal restaurant"
+  },
+  {
+    "word": "duplicate",
+    "rank": 597,
+    "meaningEn": "make an exact copy"
+  },
+  {
+    "word": "eager",
+    "rank": 598,
+    "meaningEn": "to be excited to help or do something"
+  },
+  {
+    "word": "economist",
+    "rank": 599,
+    "meaningEn": "an expert in the science of economics"
+  },
+  {
+    "word": "embassy",
+    "rank": 600,
+    "meaningEn": "the office of an ambassador"
+  },
+  {
+    "word": "fasten",
+    "rank": 601,
+    "meaningEn": "fix together firmly"
+  },
+  {
+    "word": "harmful",
+    "rank": 602,
+    "meaningEn": "damaging, hurtful"
+  },
+  {
+    "word": "informative",
+    "rank": 603,
+    "meaningEn": "tells you a lot of useful facts about somethiing"
+  },
+  {
+    "word": "institute",
+    "rank": 604,
+    "meaningEn": "like a school or college"
+  },
+  {
+    "word": "kit",
+    "rank": 605,
+    "meaningEn": "a box of tools or equipment"
+  },
+  {
+    "word": "locally",
+    "rank": 606,
+    "meaningEn": "in a specific area"
+  },
+  {
+    "word": "mentor",
+    "rank": 607,
+    "meaningEn": "personal advisor or teacher"
+  },
+  {
+    "word": "nominate",
+    "rank": 608,
+    "meaningEn": "to suggest someone for to do or be something"
+  },
+  {
+    "word": "opt",
+    "rank": 609,
+    "meaningEn": "to make a choice"
+  },
+  {
+    "word": "parade",
+    "rank": 610,
+    "meaningEn": "walk or march"
+  },
+  {
+    "word": "physician",
+    "rank": 611,
+    "meaningEn": "A doctor of medicine"
+  },
+  {
+    "word": "polish",
+    "rank": 612,
+    "meaningEn": "to make something shine with a cloth"
+  },
+  {
+    "word": "postage",
+    "rank": 613,
+    "meaningEn": "the charge for mailing something"
+  },
+  {
+    "word": "recreational",
+    "rank": 614,
+    "meaningEn": "what you do for relaxation in your free time"
+  },
+  {
+    "word": "rehearse",
+    "rank": 615,
+    "meaningEn": "practise so that you get better at doing it"
+  },
+  {
+    "word": "removal",
+    "rank": 616,
+    "meaningEn": "to take away and put in another place"
+  },
+  {
+    "word": "satisfactory",
+    "rank": 617,
+    "meaningEn": "acceptable"
+  },
+  {
+    "word": "seasonal",
+    "rank": 618,
+    "meaningEn": "happening at a certain time of the year only"
+  },
+  {
+    "word": "separately",
+    "rank": 619,
+    "meaningEn": "to do things one at a time, not together"
+  },
+  {
+    "word": "turnover",
+    "rank": 620,
+    "meaningEn": "the amount of money that a business makes in an amount of time"
+  },
+  {
+    "word": "unnecessary",
+    "rank": 621,
+    "meaningEn": "not needed"
+  },
+  {
+    "word": "accordingly",
+    "rank": 622,
+    "meaningEn": "therefore, so"
+  },
+  {
+    "word": "apple",
+    "rank": 623,
+    "meaningEn": "a type of fruit from trees that is green, red, or yellow"
+  },
+  {
+    "word": "applicable",
+    "rank": 624,
+    "meaningEn": "relating to"
+  },
+  {
+    "word": "auction",
+    "rank": 625,
+    "meaningEn": "where things are sold to highest payer"
+  },
+  {
+    "word": "balcony",
+    "rank": 626,
+    "meaningEn": "a small floor area with a wall or fence round it that is joined to the outside of a building"
+  },
+  {
+    "word": "basement",
+    "rank": 627,
+    "meaningEn": "the level under the ground floor"
+  },
+  {
+    "word": "beforehand",
+    "rank": 628,
+    "meaningEn": "earlier in time"
+  },
+  {
+    "word": "culinary",
+    "rank": 629,
+    "meaningEn": "relating to cooking"
+  },
+  {
+    "word": "documentary",
+    "rank": 630,
+    "meaningEn": "a film about a real life or event"
+  },
+  {
+    "word": "downturn",
+    "rank": 631,
+    "meaningEn": "a drop in the success of a business or the economy"
+  },
+  {
+    "word": "earthquake",
+    "rank": 632,
+    "meaningEn": "when the ground shakes due to the natural movement of rocks underground"
+  },
+  {
+    "word": "elegant",
+    "rank": 633,
+    "meaningEn": "fine or beautiful"
+  },
+  {
+    "word": "excessive",
+    "rank": 634,
+    "meaningEn": "way too much of something"
+  },
+  {
+    "word": "generic",
+    "rank": 635,
+    "meaningEn": "general"
+  },
+  {
+    "word": "jazz",
+    "rank": 636,
+    "meaningEn": "a kind of music"
+  },
+  {
+    "word": "lifetime",
+    "rank": 637,
+    "meaningEn": "The time between when a person is born and when they die"
+  },
+  {
+    "word": "massage",
+    "rank": 638,
+    "meaningEn": "rub the body in a special way that makes it feel better"
+  },
+  {
+    "word": "maximize",
+    "rank": 639,
+    "meaningEn": "to make use of as much as possible"
+  },
+  {
+    "word": "mild",
+    "rank": 640,
+    "meaningEn": "soft, gentle, not strong in nature"
+  },
+  {
+    "word": "ongoing",
+    "rank": 641,
+    "meaningEn": "still happening"
+  },
+  {
+    "word": "periodically",
+    "rank": 642,
+    "meaningEn": "every so often, at regular times"
+  },
+  {
+    "word": "pie",
+    "rank": 643,
+    "meaningEn": "round, covered pastrywith a filling like cherry or apple"
+  },
+  {
+    "word": "plug",
+    "rank": 644,
+    "meaningEn": "to fill in a hole"
+  },
+  {
+    "word": "recruitment",
+    "rank": 645,
+    "meaningEn": "the act of hiring people for businesses"
+  },
+  {
+    "word": "referee",
+    "rank": 646,
+    "meaningEn": "the person who oversees something to make sure that the rules are followed"
+  },
+  {
+    "word": "referral",
+    "rank": 647,
+    "meaningEn": "the recommendation of someone or something"
+  },
+  {
+    "word": "renown",
+    "rank": 648,
+    "meaningEn": "the state of being well known"
+  },
+  {
+    "word": "runner",
+    "rank": 649,
+    "meaningEn": "someone who travels on foot by running"
+  },
+  {
+    "word": "sock",
+    "rank": 650,
+    "meaningEn": "something you wear on your foot to keep you warm"
+  },
+  {
+    "word": "spam",
+    "rank": 651,
+    "meaningEn": "unwanted e-mail, usually of a commercial nature sent out in bulk"
+  },
+  {
+    "word": "surf",
+    "rank": 652,
+    "meaningEn": "move from one website to another on the internet"
+  },
+  {
+    "word": "timetable",
+    "rank": 653,
+    "meaningEn": "a list of events and when they are going to happen"
+  },
+  {
+    "word": "vase",
+    "rank": 654,
+    "meaningEn": "a jug or urn to put cut flowers in, to make a room look pretty"
+  },
+  {
+    "word": "aboard",
+    "rank": 655,
+    "meaningEn": "on or in a moving vehicle, e.g. aboard the boat"
+  },
+  {
+    "word": "advancement",
+    "rank": 656,
+    "meaningEn": "gradual move forward"
+  },
+  {
+    "word": "advertiser",
+    "rank": 657,
+    "meaningEn": "someone who is selling something through media"
+  },
+  {
+    "word": "alternatively",
+    "rank": 658,
+    "meaningEn": "another option"
+  },
+  {
+    "word": "amuse",
+    "rank": 659,
+    "meaningEn": "to entertain"
+  },
+  {
+    "word": "attorney",
+    "rank": 660,
+    "meaningEn": "lawyer"
+  },
+  {
+    "word": "authorization",
+    "rank": 661,
+    "meaningEn": "the permission given to do something"
+  },
+  {
+    "word": "campus",
+    "rank": 662,
+    "meaningEn": "place where university buildings are"
+  },
+  {
+    "word": "candy",
+    "rank": 663,
+    "meaningEn": "a very sweet food, made from sugar and other things, that is good to eat"
+  },
+  {
+    "word": "certify",
+    "rank": 664,
+    "meaningEn": "to state something is real or correct"
+  },
+  {
+    "word": "checkout",
+    "rank": 665,
+    "meaningEn": "the latest time that you must vacate a hotel room"
+  },
+  {
+    "word": "chemistry",
+    "rank": 666,
+    "meaningEn": "the study of chemicals"
+  },
+  {
+    "word": "circulation",
+    "rank": 667,
+    "meaningEn": "to distribute in a wide area, e.g. newspaper"
+  },
+  {
+    "word": "concierge",
+    "rank": 668,
+    "meaningEn": "the person in a hotel whose job it is to arrange things for the guests"
+  },
+  {
+    "word": "consent",
+    "rank": 669,
+    "meaningEn": "to give permission"
+  },
+  {
+    "word": "consistently",
+    "rank": 670,
+    "meaningEn": "doing something the same way every time"
+  },
+  {
+    "word": "cookie",
+    "rank": 671,
+    "meaningEn": "a small, flat, round, dry, sweet cake-like snack"
+  },
+  {
+    "word": "deck",
+    "rank": 672,
+    "meaningEn": "like a patio or terrace"
+  },
+  {
+    "word": "descriptive",
+    "rank": 673,
+    "meaningEn": "something that tells you more about it"
+  },
+  {
+    "word": "detach",
+    "rank": 674,
+    "meaningEn": "to remove from something"
+  },
+  {
+    "word": "documentation",
+    "rank": 675,
+    "meaningEn": "the act of showing proof in writing"
+  },
+  {
+    "word": "entrepreneur",
+    "rank": 676,
+    "meaningEn": "a business person who starts companies"
+  },
+  {
+    "word": "exceptional",
+    "rank": 677,
+    "meaningEn": "beyond excellent"
+  },
+  {
+    "word": "familiarize",
+    "rank": 678,
+    "meaningEn": "to get to know better"
+  },
+  {
+    "word": "hotline",
+    "rank": 679,
+    "meaningEn": "telephone line that gives direct, fast access"
+  },
+  {
+    "word": "intonation",
+    "rank": 680,
+    "meaningEn": "the rise and fall of the voice when speaking"
+  },
+  {
+    "word": "invention",
+    "rank": 681,
+    "meaningEn": "the idea or creation of something new"
+  },
+  {
+    "word": "irritate",
+    "rank": 682,
+    "meaningEn": "to bother"
+  },
+  {
+    "word": "locker",
+    "rank": 683,
+    "meaningEn": "a small cupboard  you can store personal items in securely for a period of time"
+  },
+  {
+    "word": "overlook",
+    "rank": 684,
+    "meaningEn": "to ignore, to not notice"
+  },
+  {
+    "word": "patent",
+    "rank": 685,
+    "meaningEn": "the right to be the only one who is allowed to make a thing"
+  },
+  {
+    "word": "payable",
+    "rank": 686,
+    "meaningEn": "an amount of money due"
+  },
+  {
+    "word": "preliminary",
+    "rank": 687,
+    "meaningEn": "The first action that comes before a more important one"
+  },
+  {
+    "word": "salesman",
+    "rank": 688,
+    "meaningEn": "a man whose job it is to get people to buy things from his company"
+  },
+  {
+    "word": "sauna",
+    "rank": 689,
+    "meaningEn": "a Finnish steam bath; steam is produced by pouring water over heated rocks"
+  },
+  {
+    "word": "smoothly",
+    "rank": 690,
+    "meaningEn": "to do something easily with no trouble"
+  },
+  {
+    "word": "sunshine",
+    "rank": 691,
+    "meaningEn": "the warmth and light of the sun"
+  },
+  {
+    "word": "tow",
+    "rank": 692,
+    "meaningEn": "pull something along"
+  },
+  {
+    "word": "translator",
+    "rank": 693,
+    "meaningEn": "the person who changes something into another language"
+  },
+  {
+    "word": "tuition",
+    "rank": 694,
+    "meaningEn": "the sum of money charged for teaching by a college or university"
+  },
+  {
+    "word": "unavailable",
+    "rank": 695,
+    "meaningEn": "not ready for use"
+  },
+  {
+    "word": "violation",
+    "rank": 696,
+    "meaningEn": "the act of breaking a rule or law"
+  },
+  {
+    "word": "webpage",
+    "rank": 697,
+    "meaningEn": "information shown on the screen of an internet website about a particular subject"
+  },
+  {
+    "word": "acceptance",
+    "rank": 698,
+    "meaningEn": "state of being okay with something or someone"
+  },
+  {
+    "word": "allocate",
+    "rank": 699,
+    "meaningEn": "to assign (usually people or money) to something"
+  },
+  {
+    "word": "ambitious",
+    "rank": 700,
+    "meaningEn": "hard-working, wanting to achieve much"
+  },
+  {
+    "word": "appendix",
+    "rank": 701,
+    "meaningEn": "an extra bit of information at the end of a book or document"
+  },
+  {
+    "word": "booth",
+    "rank": 702,
+    "meaningEn": "an enclosed space like a cubicle, stall or stand"
+  },
+  {
+    "word": "clarify",
+    "rank": 703,
+    "meaningEn": "to explain or make clear"
+  },
+  {
+    "word": "classmate",
+    "rank": 704,
+    "meaningEn": "Someone studying in your class with you"
+  },
+  {
+    "word": "compile",
+    "rank": 705,
+    "meaningEn": "to collect or gather data"
+  },
+  {
+    "word": "correction",
+    "rank": 706,
+    "meaningEn": "the act of making something right"
+  },
+  {
+    "word": "customize",
+    "rank": 707,
+    "meaningEn": "make or change something to suit the customer's  particular needs"
+  },
+  {
+    "word": "dedication",
+    "rank": 708,
+    "meaningEn": "the act of being faithful to someone or something"
+  },
+  {
+    "word": "diagnose",
+    "rank": 709,
+    "meaningEn": "to figure out what is wrong"
+  },
+  {
+    "word": "discontinue",
+    "rank": 710,
+    "meaningEn": "stop doing it"
+  },
+  {
+    "word": "dishwasher",
+    "rank": 711,
+    "meaningEn": "a machine that cleans dirty dishes"
+  },
+  {
+    "word": "drought",
+    "rank": 712,
+    "meaningEn": "a period of time when there is very little rainfall"
+  },
+  {
+    "word": "economize",
+    "rank": 713,
+    "meaningEn": "to save money, avoid waste"
+  },
+  {
+    "word": "entrée",
+    "rank": 714,
+    "meaningEn": "the main dish of a meal"
+  },
+  {
+    "word": "firework",
+    "rank": 715,
+    "meaningEn": "a small stick-like object that, when lit with a flame, goes off with a bang and flashes of colored light"
+  },
+  {
+    "word": "freight",
+    "rank": 716,
+    "meaningEn": "goods that are transported from one place to another"
+  },
+  {
+    "word": "fry",
+    "rank": 717,
+    "meaningEn": "to cook in a pan"
+  },
+  {
+    "word": "gallon",
+    "rank": 718,
+    "meaningEn": "a type of measurement equal to 3.78 liters"
+  },
+  {
+    "word": "gardener",
+    "rank": 719,
+    "meaningEn": "a person who works with plants and flowers for a living"
+  },
+  {
+    "word": "ideally",
+    "rank": 720,
+    "meaningEn": "in a perfect world"
+  },
+  {
+    "word": "inclusive",
+    "rank": 721,
+    "meaningEn": "includes everything"
+  },
+  {
+    "word": "insufficient",
+    "rank": 722,
+    "meaningEn": "not enough"
+  },
+  {
+    "word": "introductory",
+    "rank": 723,
+    "meaningEn": "something that comes before the main event, e.g. introductory speech"
+  },
+  {
+    "word": "junk",
+    "rank": 724,
+    "meaningEn": "useless item; trash"
+  },
+  {
+    "word": "ma'am",
+    "rank": 725,
+    "meaningEn": "short for 'madam', a polite way to address a woman"
+  },
+  {
+    "word": "mileage",
+    "rank": 726,
+    "meaningEn": "distance travelled in miles"
+  },
+  {
+    "word": "noisy",
+    "rank": 727,
+    "meaningEn": "too loud"
+  },
+  {
+    "word": "pan",
+    "rank": 728,
+    "meaningEn": "a flat, round cooking container used for frying"
+  },
+  {
+    "word": "parcel",
+    "rank": 729,
+    "meaningEn": "something wrapped in paper so that it can be sent, or delivered somewhere"
+  },
+  {
+    "word": "pasta",
+    "rank": 730,
+    "meaningEn": "shaped and dried dough, made from flour and water, often used in Italian cooking"
+  },
+  {
+    "word": "periodical",
+    "rank": 731,
+    "meaningEn": "a magazine made and available on a regular basis"
+  },
+  {
+    "word": "pill",
+    "rank": 732,
+    "meaningEn": "medicine in the form of a capsule that you swallow"
+  },
+  {
+    "word": "portable",
+    "rank": 733,
+    "meaningEn": "something that is small and easy to carry"
+  },
+  {
+    "word": "punctual",
+    "rank": 734,
+    "meaningEn": "arriving on time"
+  },
+  {
+    "word": "recreation",
+    "rank": 735,
+    "meaningEn": "leisure"
+  },
+  {
+    "word": "relieve",
+    "rank": 736,
+    "meaningEn": "to take something away from someone"
+  },
+  {
+    "word": "reminder",
+    "rank": 737,
+    "meaningEn": "something that makes you remember something"
+  },
+  {
+    "word": "rumor",
+    "rank": 738,
+    "meaningEn": "something said by people but not necessarily true"
+  },
+  {
+    "word": "scarf",
+    "rank": 739,
+    "meaningEn": "a long, narrow piece of material you wear round your neck to keep you warm"
+  },
+  {
+    "word": "seaside",
+    "rank": 740,
+    "meaningEn": "a place right by the ocean where people can go to relax and have fun"
+  },
+  {
+    "word": "shorten",
+    "rank": 741,
+    "meaningEn": "to make smaller in length"
+  },
+  {
+    "word": "specially",
+    "rank": 742,
+    "meaningEn": "in particular"
+  },
+  {
+    "word": "spill",
+    "rank": 743,
+    "meaningEn": "to accidentally empty a container, e.g. spill a glass of milk"
+  },
+  {
+    "word": "spouse",
+    "rank": 744,
+    "meaningEn": "the person you are married to"
+  },
+  {
+    "word": "subtract",
+    "rank": 745,
+    "meaningEn": "take away from"
+  },
+  {
+    "word": "tablet",
+    "rank": 746,
+    "meaningEn": "a small flat solid cake of some substance"
+  },
+  {
+    "word": "ton",
+    "rank": 747,
+    "meaningEn": "a measurement equalling 2000 pounds"
+  },
+  {
+    "word": "vend",
+    "rank": 748,
+    "meaningEn": "To offer something for sale or to sell something"
+  },
+  {
+    "word": "yoga",
+    "rank": 749,
+    "meaningEn": "a system of exercise to give control over your mind and body"
+  },
+  {
+    "word": "accent",
+    "rank": 750,
+    "meaningEn": "special manner of oral expression"
+  },
+  {
+    "word": "advisory",
+    "rank": 751,
+    "meaningEn": "related to giving advice or an opinion on what to do"
+  },
+  {
+    "word": "asleep",
+    "rank": 752,
+    "meaningEn": "not awake, in sleep"
+  },
+  {
+    "word": "authentic",
+    "rank": 753,
+    "meaningEn": "real, not fake"
+  },
+  {
+    "word": "bakery",
+    "rank": 754,
+    "meaningEn": "a place where baked goods (breads and cakes and pastries) are made and sold"
+  },
+  {
+    "word": "carton",
+    "rank": 755,
+    "meaningEn": "a box made of cardboard or plastic in which things like milk and juice are sold"
+  },
+  {
+    "word": "compartment",
+    "rank": 756,
+    "meaningEn": "a part of a closed area that has been separated from a bigger one"
+  },
+  {
+    "word": "compatible",
+    "rank": 757,
+    "meaningEn": "to go well with"
+  },
+  {
+    "word": "consumption",
+    "rank": 758,
+    "meaningEn": "the act of eating"
+  },
+  {
+    "word": "conveniently",
+    "rank": 759,
+    "meaningEn": "in a manner that is easy"
+  },
+  {
+    "word": "cosmetic",
+    "rank": 760,
+    "meaningEn": "makes something look better without changing it too much"
+  },
+  {
+    "word": "courtesy",
+    "rank": 761,
+    "meaningEn": "a kindness to someone"
+  },
+  {
+    "word": "creativity",
+    "rank": 762,
+    "meaningEn": "the state of having talent and imagination"
+  },
+  {
+    "word": "disagreement",
+    "rank": 763,
+    "meaningEn": "the act of having a difference of opinion"
+  },
+  {
+    "word": "disappointment",
+    "rank": 764,
+    "meaningEn": "what is felt when someone does not fulfill your expectations"
+  },
+  {
+    "word": "dissatisfy",
+    "rank": 765,
+    "meaningEn": "to make someone not pleased with what you have done"
+  },
+  {
+    "word": "enjoyable",
+    "rank": 766,
+    "meaningEn": "not boring, fun"
+  },
+  {
+    "word": "faculty",
+    "rank": 767,
+    "meaningEn": "an instructor or professor at university"
+  },
+  {
+    "word": "favorable",
+    "rank": 768,
+    "meaningEn": "to be seen as good or positive"
+  },
+  {
+    "word": "foreman",
+    "rank": 769,
+    "meaningEn": "Senior worker who controls other workers"
+  },
+  {
+    "word": "forum",
+    "rank": 770,
+    "meaningEn": "a place for open discussion"
+  },
+  {
+    "word": "founder",
+    "rank": 771,
+    "meaningEn": "someone who starts a business or organization"
+  },
+  {
+    "word": "fundraise",
+    "rank": 772,
+    "meaningEn": "to get money from people for a partular project"
+  },
+  {
+    "word": "graphics",
+    "rank": 773,
+    "meaningEn": "images or pictures"
+  },
+  {
+    "word": "handy",
+    "rank": 774,
+    "meaningEn": "useful"
+  },
+  {
+    "word": "hazardous",
+    "rank": 775,
+    "meaningEn": "to be dangerous"
+  },
+  {
+    "word": "healthcare",
+    "rank": 776,
+    "meaningEn": "the business of providing medical services to a community or individuals"
+  },
+  {
+    "word": "humidity",
+    "rank": 777,
+    "meaningEn": "how much dampness their is in the air"
+  },
+  {
+    "word": "influential",
+    "rank": 778,
+    "meaningEn": "powerful"
+  },
+  {
+    "word": "nationwide",
+    "rank": 779,
+    "meaningEn": "all across the country"
+  },
+  {
+    "word": "pad",
+    "rank": 780,
+    "meaningEn": "many sheets of paper glued together for writing"
+  },
+  {
+    "word": "paraphrase",
+    "rank": 781,
+    "meaningEn": "saying it again but putting the same meaning into different words"
+  },
+  {
+    "word": "placement",
+    "rank": 782,
+    "meaningEn": "the act of placing someone in a job or the location of something"
+  },
+  {
+    "word": "postal",
+    "rank": 783,
+    "meaningEn": "of or relating to the system for delivering mail"
+  },
+  {
+    "word": "publicity",
+    "rank": 784,
+    "meaningEn": "the  advertising message to let people know about a product or event"
+  },
+  {
+    "word": "renter",
+    "rank": 785,
+    "meaningEn": "someone who pays money to have the use of something for a period of time"
+  },
+  {
+    "word": "repairperson",
+    "rank": 786,
+    "meaningEn": "Person whose job it is to fixe things when they are broken"
+  },
+  {
+    "word": "repeatedly",
+    "rank": 787,
+    "meaningEn": "many times"
+  },
+  {
+    "word": "restroom",
+    "rank": 788,
+    "meaningEn": "room in a building which contains one or more toilets for public use"
+  },
+  {
+    "word": "silently",
+    "rank": 789,
+    "meaningEn": "in a quiet manner"
+  },
+  {
+    "word": "spa",
+    "rank": 790,
+    "meaningEn": "a place you can go to relax and  improve your health, or how you look"
+  },
+  {
+    "word": "spreadsheet",
+    "rank": 791,
+    "meaningEn": "a computer program worksheet or table that you enter information onto"
+  },
+  {
+    "word": "stapler",
+    "rank": 792,
+    "meaningEn": "a small device used to fix papers together with a small thin piece of wire called a staple"
+  },
+  {
+    "word": "streamline",
+    "rank": 793,
+    "meaningEn": "make smoother and more efficient"
+  },
+  {
+    "word": "substantially",
+    "rank": 794,
+    "meaningEn": "a great deal, amount"
+  },
+  {
+    "word": "teller",
+    "rank": 795,
+    "meaningEn": "person who works in a bank, who pays out and takes in money"
+  },
+  {
+    "word": "tidy",
+    "rank": 796,
+    "meaningEn": "put things in their correct place"
+  },
+  {
+    "word": "toll",
+    "rank": 797,
+    "meaningEn": "a small cost or fee you pay to use a service"
+  },
+  {
+    "word": "toner",
+    "rank": 798,
+    "meaningEn": "the ink in the computer or printer"
+  },
+  {
+    "word": "urgently",
+    "rank": 799,
+    "meaningEn": "to do something right away"
+  },
+  {
+    "word": "walkway",
+    "rank": 800,
+    "meaningEn": "a connecting passage or path for pedestrians to move along"
+  },
+  {
+    "word": "absorb",
+    "rank": 801,
+    "meaningEn": "to take in or soak up"
+  },
+  {
+    "word": "administer",
+    "rank": 802,
+    "meaningEn": "to manage an office"
+  },
+  {
+    "word": "ample",
+    "rank": 803,
+    "meaningEn": "more than enough of"
+  },
+  {
+    "word": "antique",
+    "rank": 804,
+    "meaningEn": "very old item, usually furniture or jewellery"
+  },
+  {
+    "word": "bean",
+    "rank": 805,
+    "meaningEn": "a long thin green vegetable"
+  },
+  {
+    "word": "browse",
+    "rank": 806,
+    "meaningEn": "look or leaf through casually, like looking through a book without really reading it"
+  },
+  {
+    "word": "bye",
+    "rank": 807,
+    "meaningEn": "opposite of 'hello'"
+  },
+  {
+    "word": "careless",
+    "rank": 808,
+    "meaningEn": "to do something with little care or attention"
+  },
+  {
+    "word": "collector",
+    "rank": 809,
+    "meaningEn": "someone who buys and keeps old things"
+  },
+  {
+    "word": "conform",
+    "rank": 810,
+    "meaningEn": "to be like others"
+  },
+  {
+    "word": "congestion",
+    "rank": 811,
+    "meaningEn": "a blockage; something that blocks it up"
+  },
+  {
+    "word": "contradiction",
+    "rank": 812,
+    "meaningEn": "the opposite of something"
+  },
+  {
+    "word": "contrary",
+    "rank": 813,
+    "meaningEn": "opposite to"
+  },
+  {
+    "word": "diploma",
+    "rank": 814,
+    "meaningEn": "a document certifying the successful completion of a course of study"
+  },
+  {
+    "word": "distributor",
+    "rank": 815,
+    "meaningEn": "someone who sells or sends things to different areas"
+  },
+  {
+    "word": "dive",
+    "rank": 816,
+    "meaningEn": "jump in or swim under water"
+  },
+  {
+    "word": "energetic",
+    "rank": 817,
+    "meaningEn": "to be lively, full of energy"
+  },
+  {
+    "word": "environmentally",
+    "rank": 818,
+    "meaningEn": "related to natural surroundings"
+  },
+  {
+    "word": "escalator",
+    "rank": 819,
+    "meaningEn": "a moving stairway"
+  },
+  {
+    "word": "exotic",
+    "rank": 820,
+    "meaningEn": "from another country"
+  },
+  {
+    "word": "fabric",
+    "rank": 821,
+    "meaningEn": "material, cloth"
+  },
+  {
+    "word": "generalization",
+    "rank": 822,
+    "meaningEn": "an idea that is true most of the time but not all of the time"
+  },
+  {
+    "word": "guidance",
+    "rank": 823,
+    "meaningEn": "the act of showing the way"
+  },
+  {
+    "word": "gum",
+    "rank": 824,
+    "meaningEn": "stubstance that can be used to stick things together"
+  },
+  {
+    "word": "hesitant",
+    "rank": 825,
+    "meaningEn": "hold back from acting because you are uncertain or undecided"
+  },
+  {
+    "word": "indicator",
+    "rank": 826,
+    "meaningEn": "a signal or a warning"
+  },
+  {
+    "word": "individually",
+    "rank": 827,
+    "meaningEn": "apart from others"
+  },
+  {
+    "word": "junior",
+    "rank": 828,
+    "meaningEn": "younger, lower in rank"
+  },
+  {
+    "word": "lifestyle",
+    "rank": 829,
+    "meaningEn": "the way that you live; the things that you usually do"
+  },
+  {
+    "word": "likewise",
+    "rank": 830,
+    "meaningEn": "in the same way"
+  },
+  {
+    "word": "morale",
+    "rank": 831,
+    "meaningEn": "the confidence in how a group of people all feel, usually at a difficult time"
+  },
+  {
+    "word": "orchestra",
+    "rank": 832,
+    "meaningEn": "many musicians with different instruments playing one musical piece"
+  },
+  {
+    "word": "organizational",
+    "rank": 833,
+    "meaningEn": "to do with planning and managing"
+  },
+  {
+    "word": "outlook",
+    "rank": 834,
+    "meaningEn": "a view point"
+  },
+  {
+    "word": "physics",
+    "rank": 835,
+    "meaningEn": "the science of how things  like heat and light work"
+  },
+  {
+    "word": "pole",
+    "rank": 836,
+    "meaningEn": "a long, thin stick or post"
+  },
+  {
+    "word": "puzzle",
+    "rank": 837,
+    "meaningEn": "something you do not understand"
+  },
+  {
+    "word": "reflexive",
+    "rank": 838,
+    "meaningEn": "referring back to itself"
+  },
+  {
+    "word": "snowy",
+    "rank": 839,
+    "meaningEn": "cold weather with snow falling"
+  },
+  {
+    "word": "steak",
+    "rank": 840,
+    "meaningEn": "a big piece of meat or fish"
+  },
+  {
+    "word": "sticker",
+    "rank": 841,
+    "meaningEn": "a label with glue on the back"
+  },
+  {
+    "word": "telecommunication",
+    "rank": 842,
+    "meaningEn": "exchanging audio, visual or digital information at a distance, electronically"
+  },
+  {
+    "word": "timely",
+    "rank": 843,
+    "meaningEn": "to happen at the right time or good time"
+  },
+  {
+    "word": "uncomfortable",
+    "rank": 844,
+    "meaningEn": "not pleased or happy with a situation or thing"
+  },
+  {
+    "word": "amenity",
+    "rank": 845,
+    "meaningEn": "Something, like a swimming pool in a town, that makes life more comfortable and enjoyable."
+  },
+  {
+    "word": "approximate",
+    "rank": 846,
+    "meaningEn": "to give a general number as a guess"
+  },
+  {
+    "word": "await",
+    "rank": 847,
+    "meaningEn": "to wait for, or expect, something to happen"
+  },
+  {
+    "word": "barbecue",
+    "rank": 848,
+    "meaningEn": "meal that has been cooked on a grill, outdoors"
+  },
+  {
+    "word": "beginner",
+    "rank": 849,
+    "meaningEn": "to be new at something"
+  },
+  {
+    "word": "biology",
+    "rank": 850,
+    "meaningEn": "the study of nature"
+  },
+  {
+    "word": "blanket",
+    "rank": 851,
+    "meaningEn": "a large piece of cloth used to cover someone or something"
+  },
+  {
+    "word": "chairperson",
+    "rank": 852,
+    "meaningEn": "the person in charge of a meeting"
+  },
+  {
+    "word": "charitable",
+    "rank": 853,
+    "meaningEn": "giving free money or help of some kind to someone who needs it"
+  },
+  {
+    "word": "checkup",
+    "rank": 854,
+    "meaningEn": "a test to see that all is as it should be"
+  },
+  {
+    "word": "cooler",
+    "rank": 855,
+    "meaningEn": "a box (filled with ice) that keeps drinks cold"
+  },
+  {
+    "word": "crane",
+    "rank": 856,
+    "meaningEn": "a machine used to move and lift heavy things"
+  },
+  {
+    "word": "dealership",
+    "rank": 857,
+    "meaningEn": "a business that can buy and sell certain things"
+  },
+  {
+    "word": "dependable",
+    "rank": 858,
+    "meaningEn": "reliable, trustworthy"
+  },
+  {
+    "word": "disconnect",
+    "rank": 859,
+    "meaningEn": "cut off or detach"
+  },
+  {
+    "word": "dispose",
+    "rank": 860,
+    "meaningEn": "to get rid of something"
+  },
+  {
+    "word": "disrupt",
+    "rank": 861,
+    "meaningEn": "to interrupt and cause chaos"
+  },
+  {
+    "word": "dynamic",
+    "rank": 862,
+    "meaningEn": "energetic"
+  },
+  {
+    "word": "enthusiastically",
+    "rank": 863,
+    "meaningEn": "to do something with excitement and energy"
+  },
+  {
+    "word": "freelance",
+    "rank": 864,
+    "meaningEn": "working for yourself, not for an employer"
+  },
+  {
+    "word": "grill",
+    "rank": 865,
+    "meaningEn": "like a barbeque, something you cook on"
+  },
+  {
+    "word": "habitual",
+    "rank": 866,
+    "meaningEn": "regular, what you always do"
+  },
+  {
+    "word": "internationally",
+    "rank": 867,
+    "meaningEn": "around the world"
+  },
+  {
+    "word": "invaluable",
+    "rank": 868,
+    "meaningEn": "to be of great worth"
+  },
+  {
+    "word": "messenger",
+    "rank": 869,
+    "meaningEn": "person who carries a piece of information to someone else"
+  },
+  {
+    "word": "paperback",
+    "rank": 870,
+    "meaningEn": "a book that has a cover made of paper"
+  },
+  {
+    "word": "rebate",
+    "rank": 871,
+    "meaningEn": "an amount of money given back to you as part of the deal when you buy goods or services"
+  },
+  {
+    "word": "recur",
+    "rank": 872,
+    "meaningEn": "happens again"
+  },
+  {
+    "word": "reproduce",
+    "rank": 873,
+    "meaningEn": "to make one or more copies of something"
+  },
+  {
+    "word": "spray",
+    "rank": 874,
+    "meaningEn": "to send tiny drops of liquid into the air"
+  },
+  {
+    "word": "staple",
+    "rank": 875,
+    "meaningEn": "short thin piece of wire  that is punched through sheets of paper to fasten them together"
+  },
+  {
+    "word": "strategic",
+    "rank": 876,
+    "meaningEn": "in a way carefully thought about"
+  },
+  {
+    "word": "stripe",
+    "rank": 877,
+    "meaningEn": "a line or band of a different color"
+  },
+  {
+    "word": "teen",
+    "rank": 878,
+    "meaningEn": "someone aged between the ages of thirteen and nineteen"
+  },
+  {
+    "word": "tempt",
+    "rank": 879,
+    "meaningEn": "to try to get someone to do something they should not"
+  },
+  {
+    "word": "timer",
+    "rank": 880,
+    "meaningEn": "something that counts seconds and minutes"
+  },
+  {
+    "word": "unload",
+    "rank": 881,
+    "meaningEn": "to remove something (usually from a truck)"
+  },
+  {
+    "word": "unusually",
+    "rank": 882,
+    "meaningEn": "not normal or usual"
+  },
+  {
+    "word": "vacate",
+    "rank": 883,
+    "meaningEn": "leave empty; move out of"
+  },
+  {
+    "word": "whale",
+    "rank": 884,
+    "meaningEn": "a large mamal that lives in the sea"
+  },
+  {
+    "word": "wisely",
+    "rank": 885,
+    "meaningEn": "to do something that is the right thing to do"
+  },
+  {
+    "word": "amateur",
+    "rank": 886,
+    "meaningEn": "a beginner, not a professional, done for pleasure not for pay"
+  },
+  {
+    "word": "ambassador",
+    "rank": 887,
+    "meaningEn": "somebody who represents somehting, usually a country"
+  },
+  {
+    "word": "anew",
+    "rank": 888,
+    "meaningEn": "starting over again, a fresh start"
+  },
+  {
+    "word": "architectural",
+    "rank": 889,
+    "meaningEn": "to do with the design of buildings"
+  },
+  {
+    "word": "attain",
+    "rank": 890,
+    "meaningEn": "to get or achieve"
+  },
+  {
+    "word": "balloon",
+    "rank": 891,
+    "meaningEn": "a colorful round object made of rubber that is filled with air"
+  },
+  {
+    "word": "blueprint",
+    "rank": 892,
+    "meaningEn": "a drawing or plan to show what the finished thing will look like"
+  },
+  {
+    "word": "bug",
+    "rank": 893,
+    "meaningEn": "an insect"
+  },
+  {
+    "word": "cautious",
+    "rank": 894,
+    "meaningEn": "to be careful"
+  },
+  {
+    "word": "circuit",
+    "rank": 895,
+    "meaningEn": "a set path you move along"
+  },
+  {
+    "word": "clap",
+    "rank": 896,
+    "meaningEn": "hitting your hands together to make a noise to show you enjoyed something"
+  },
+  {
+    "word": "commerce",
+    "rank": 897,
+    "meaningEn": "trade, business, industry"
+  },
+  {
+    "word": "convey",
+    "rank": 898,
+    "meaningEn": "to give a message to someone"
+  },
+  {
+    "word": "cord",
+    "rank": 899,
+    "meaningEn": "electric cable"
+  },
+  {
+    "word": "counselor",
+    "rank": 900,
+    "meaningEn": "someone who helps people with problems for a living"
+  },
+  {
+    "word": "debit",
+    "rank": 901,
+    "meaningEn": "a record of an amount of money taken out of an account"
+  },
+  {
+    "word": "delicate",
+    "rank": 902,
+    "meaningEn": "need to handle with care"
+  },
+  {
+    "word": "dependence",
+    "rank": 903,
+    "meaningEn": "the state of needing someone"
+  },
+  {
+    "word": "distraction",
+    "rank": 904,
+    "meaningEn": "the act of taking your focus away from something"
+  },
+  {
+    "word": "downsize",
+    "rank": 905,
+    "meaningEn": "reduce in size or number"
+  },
+  {
+    "word": "elephant",
+    "rank": 906,
+    "meaningEn": "a large animal with a long trunk and big ears found in Africa and Asia"
+  },
+  {
+    "word": "enthusiasm",
+    "rank": 907,
+    "meaningEn": "the act of being excited about something"
+  },
+  {
+    "word": "enthusiast",
+    "rank": 908,
+    "meaningEn": "a person who is crazy about something, e.g. a sports enthusiast"
+  },
+  {
+    "word": "evident",
+    "rank": 909,
+    "meaningEn": "to be clear or obvious"
+  },
+  {
+    "word": "flexibility",
+    "rank": 910,
+    "meaningEn": "the ability to adapt or change easily"
+  },
+  {
+    "word": "flextime",
+    "rank": 911,
+    "meaningEn": "there is a choice about when to start and finish working a set number of hours"
+  },
+  {
+    "word": "fortunately",
+    "rank": 912,
+    "meaningEn": "happily, luckily"
+  },
+  {
+    "word": "freighter",
+    "rank": 913,
+    "meaningEn": "a large ship that is used to transport goods"
+  },
+  {
+    "word": "generator",
+    "rank": 914,
+    "meaningEn": "a machine that makes electricity"
+  },
+  {
+    "word": "hallway",
+    "rank": 915,
+    "meaningEn": "a passage or corridor that other rooms open out of"
+  },
+  {
+    "word": "hamburger",
+    "rank": 916,
+    "meaningEn": "a flat round cake of minced beef that is fried and then eaten in a bread roll"
+  },
+  {
+    "word": "hazard",
+    "rank": 917,
+    "meaningEn": "something that is dangerous"
+  },
+  {
+    "word": "homeowner",
+    "rank": 918,
+    "meaningEn": "someone who owns the house that they live in"
+  },
+  {
+    "word": "imperative",
+    "rank": 919,
+    "meaningEn": "very important and urgent"
+  },
+  {
+    "word": "inflate",
+    "rank": 920,
+    "meaningEn": "to make bigger"
+  },
+  {
+    "word": "insert",
+    "rank": 921,
+    "meaningEn": "to put into or add into"
+  },
+  {
+    "word": "lecturer",
+    "rank": 922,
+    "meaningEn": "an instructor or professor"
+  },
+  {
+    "word": "meaningful",
+    "rank": 923,
+    "meaningEn": "to have a meaning or purpose"
+  },
+  {
+    "word": "memorize",
+    "rank": 924,
+    "meaningEn": "to learn and remember things"
+  },
+  {
+    "word": "merchant",
+    "rank": 925,
+    "meaningEn": "a person who sells things for a living"
+  },
+  {
+    "word": "modification",
+    "rank": 926,
+    "meaningEn": "a change made on something"
+  },
+  {
+    "word": "occupant",
+    "rank": 927,
+    "meaningEn": "a person who lives in a place, e.g. renter, tenant"
+  },
+  {
+    "word": "overcharge",
+    "rank": 928,
+    "meaningEn": "to ask for too much money for goods or service"
+  },
+  {
+    "word": "oversee",
+    "rank": 929,
+    "meaningEn": "to supervise"
+  },
+  {
+    "word": "petition",
+    "rank": 930,
+    "meaningEn": "a demand for a particular action, usually signed by a lot of people"
+  },
+  {
+    "word": "pillow",
+    "rank": 931,
+    "meaningEn": "soft cushion to rest your head on when you go to bed"
+  },
+  {
+    "word": "popcorn",
+    "rank": 932,
+    "meaningEn": "grains of maize that have been heated up until they explode; good to eat as a snack"
+  },
+  {
+    "word": "pottery",
+    "rank": 933,
+    "meaningEn": "earthenware, stoneware, ceramics"
+  },
+  {
+    "word": "professionally",
+    "rank": 934,
+    "meaningEn": "to do with your work or job"
+  },
+  {
+    "word": "publicize",
+    "rank": 935,
+    "meaningEn": "make known generally"
+  },
+  {
+    "word": "ray",
+    "rank": 936,
+    "meaningEn": "a beam of light from the sun"
+  },
+  {
+    "word": "redecorate",
+    "rank": 937,
+    "meaningEn": "to redo the inside of a house with new colors and furniture"
+  },
+  {
+    "word": "refinery",
+    "rank": 938,
+    "meaningEn": "a factory where raw materials are taken to be made pure"
+  },
+  {
+    "word": "refresh",
+    "rank": 939,
+    "meaningEn": "to put new life or energy into"
+  },
+  {
+    "word": "refundable",
+    "rank": 940,
+    "meaningEn": "money that can be returned if you change your mind about a purchase"
+  },
+  {
+    "word": "reimbursement",
+    "rank": 941,
+    "meaningEn": "the money that is given to cover the cost of an expense that has been paid out"
+  },
+  {
+    "word": "reliability",
+    "rank": 942,
+    "meaningEn": "the state of being trustworthy"
+  },
+  {
+    "word": "reluctant",
+    "rank": 943,
+    "meaningEn": "not very willing to do something"
+  },
+  {
+    "word": "sewer",
+    "rank": 944,
+    "meaningEn": "the pipes that carry water and waste away from toilets"
+  },
+  {
+    "word": "skate",
+    "rank": 945,
+    "meaningEn": "glide over the surface as if you are sliding on ice"
+  },
+  {
+    "word": "skateboard",
+    "rank": 946,
+    "meaningEn": "a flat board with small wheels on the bottom that you move by pushing on the ground with one foot"
+  },
+  {
+    "word": "sleepy",
+    "rank": 947,
+    "meaningEn": "tired, ready for bed"
+  },
+  {
+    "word": "tailor",
+    "rank": 948,
+    "meaningEn": "adjust something to fit a specific need or market"
+  },
+  {
+    "word": "termination",
+    "rank": 949,
+    "meaningEn": "the  end of something"
+  },
+  {
+    "word": "theft",
+    "rank": 950,
+    "meaningEn": "the taking and keeping of something that does not belong to you"
+  },
+  {
+    "word": "thunderstorm",
+    "rank": 951,
+    "meaningEn": "an extreme weather condition with rain, wind, thunder and lightening"
+  },
+  {
+    "word": "transmission",
+    "rank": 952,
+    "meaningEn": "the message sent from one to another"
+  },
+  {
+    "word": "transmit",
+    "rank": 953,
+    "meaningEn": "to send a message to someone"
+  },
+  {
+    "word": "unused",
+    "rank": 954,
+    "meaningEn": "not yet put into use"
+  },
+  {
+    "word": "waive",
+    "rank": 955,
+    "meaningEn": "to give up or do without"
+  },
+  {
+    "word": "yen",
+    "rank": 956,
+    "meaningEn": "the basic unit of money in Japan"
+  },
+  {
+    "word": "activate",
+    "rank": 957,
+    "meaningEn": "to start or begin something"
+  },
+  {
+    "word": "additionally",
+    "rank": 958,
+    "meaningEn": "furthermore, also"
+  },
+  {
+    "word": "affirmative",
+    "rank": 959,
+    "meaningEn": "positive, meaning 'yes'"
+  },
+  {
+    "word": "baker",
+    "rank": 960,
+    "meaningEn": "someone who bakes for a living"
+  },
+  {
+    "word": "brainstorm",
+    "rank": 961,
+    "meaningEn": "a group discussion to come up with a lot of ideas very quickly"
+  },
+  {
+    "word": "cage",
+    "rank": 962,
+    "meaningEn": "a box-like crate usually made of steel"
+  },
+  {
+    "word": "cinema",
+    "rank": 963,
+    "meaningEn": "a movie theatre"
+  },
+  {
+    "word": "collaboration",
+    "rank": 964,
+    "meaningEn": "the act of working together"
+  },
+  {
+    "word": "condominium",
+    "rank": 965,
+    "meaningEn": "a building that has lots of apartments in it, all owned and lived in by different people"
+  },
+  {
+    "word": "consecutive",
+    "rank": 966,
+    "meaningEn": "following one after the other"
+  },
+  {
+    "word": "cordless",
+    "rank": 967,
+    "meaningEn": "no electric cable needed"
+  },
+  {
+    "word": "deluxe",
+    "rank": 968,
+    "meaningEn": "rich and superior in quality"
+  },
+  {
+    "word": "desirable",
+    "rank": 969,
+    "meaningEn": "worth having or wanting"
+  },
+  {
+    "word": "discrepancy",
+    "rank": 970,
+    "meaningEn": "an unexpected difference between two things that needs to be explained"
+  },
+  {
+    "word": "dispatch",
+    "rank": 971,
+    "meaningEn": "to send out"
+  },
+  {
+    "word": "drawback",
+    "rank": 972,
+    "meaningEn": "the downside of something"
+  },
+  {
+    "word": "dull",
+    "rank": 973,
+    "meaningEn": "boring; not exciting"
+  },
+  {
+    "word": "economically",
+    "rank": 974,
+    "meaningEn": "related to use of income and money"
+  },
+  {
+    "word": "evenly",
+    "rank": 975,
+    "meaningEn": "in equal ways"
+  },
+  {
+    "word": "excellence",
+    "rank": 976,
+    "meaningEn": "the state of being very, very good"
+  },
+  {
+    "word": "exclusively",
+    "rank": 977,
+    "meaningEn": "offered only to a certain group"
+  },
+  {
+    "word": "farewell",
+    "rank": 978,
+    "meaningEn": "goodbye"
+  },
+  {
+    "word": "fatigue",
+    "rank": 979,
+    "meaningEn": "what you feel when you are very, very tired"
+  },
+  {
+    "word": "fiscal",
+    "rank": 980,
+    "meaningEn": "to do with money"
+  },
+  {
+    "word": "fleet",
+    "rank": 981,
+    "meaningEn": "a group of ships travelling together"
+  },
+  {
+    "word": "flour",
+    "rank": 982,
+    "meaningEn": "white powder from wheat used in baking"
+  },
+  {
+    "word": "fog",
+    "rank": 983,
+    "meaningEn": "a cloud of white filled with small water droplets"
+  },
+  {
+    "word": "formally",
+    "rank": 984,
+    "meaningEn": "officially"
+  },
+  {
+    "word": "gram",
+    "rank": 985,
+    "meaningEn": "a small measurement of weight"
+  },
+  {
+    "word": "handbook",
+    "rank": 986,
+    "meaningEn": "a book that gives intructions on how to do something"
+  },
+  {
+    "word": "headphone",
+    "rank": 987,
+    "meaningEn": "a set of small speakers that fit into each ear so that only you can hear the sound"
+  },
+  {
+    "word": "heater",
+    "rank": 988,
+    "meaningEn": "something that warms a room"
+  },
+  {
+    "word": "helmet",
+    "rank": 989,
+    "meaningEn": "something you wear to protect your head"
+  },
+  {
+    "word": "hiker",
+    "rank": 990,
+    "meaningEn": "someone who likes to go for long walks in their leisure time"
+  },
+  {
+    "word": "homeless",
+    "rank": 991,
+    "meaningEn": "to be without a place to live"
+  },
+  {
+    "word": "lighter",
+    "rank": 992,
+    "meaningEn": "not as heavy as"
+  },
+  {
+    "word": "loudly",
+    "rank": 993,
+    "meaningEn": "in a manner that is not quiet"
+  },
+  {
+    "word": "loyalty",
+    "rank": 994,
+    "meaningEn": "the act of being faithful to someone or something"
+  },
+  {
+    "word": "microwave",
+    "rank": 995,
+    "meaningEn": "kitchen appliance that cooks food quickly"
+  },
+  {
+    "word": "misidentify",
+    "rank": 996,
+    "meaningEn": "to mistakenly recognise something; to think that it is something else"
+  },
+  {
+    "word": "neat",
+    "rank": 997,
+    "meaningEn": "tidy, clean"
+  },
+  {
+    "word": "nomination",
+    "rank": 998,
+    "meaningEn": "the state of being suggested for something"
+  },
+  {
+    "word": "officially",
+    "rank": 999,
+    "meaningEn": "done by the government or office in charge"
+  },
+  {
+    "word": "outfit",
+    "rank": 1000,
+    "meaningEn": "a set of clothes like a uniform"
+  },
+  {
+    "word": "pastry",
+    "rank": 1001,
+    "meaningEn": "a food made of flour, fat and water and baked with other food inside it"
+  },
+  {
+    "word": "personalize",
+    "rank": 1002,
+    "meaningEn": "change something so that it is tailored to a particular person's needs"
+  },
+  {
+    "word": "poorly",
+    "rank": 1003,
+    "meaningEn": "Badly; not enough; not sufficient"
+  },
+  {
+    "word": "prestigious",
+    "rank": 1004,
+    "meaningEn": "very important and well thought of"
+  },
+  {
+    "word": "purser",
+    "rank": 1005,
+    "meaningEn": "an officer aboard a ship who keeps accounts and attends to the passengers' needs"
+  },
+  {
+    "word": "reassure",
+    "rank": 1006,
+    "meaningEn": "to make someone feel certain of something"
+  },
+  {
+    "word": "resume",
+    "rank": 1007,
+    "meaningEn": "to continue or start again"
+  },
+  {
+    "word": "reunion",
+    "rank": 1008,
+    "meaningEn": "when people get together to meet up after not meeting for a long time"
+  },
+  {
+    "word": "revolutionize",
+    "rank": 1009,
+    "meaningEn": "to make a new, big change in society"
+  },
+  {
+    "word": "seafood",
+    "rank": 1010,
+    "meaningEn": "things you can eat as food that live in the sea"
+  },
+  {
+    "word": "signify",
+    "rank": 1011,
+    "meaningEn": "shows a sign that it has an important meaning"
+  },
+  {
+    "word": "slot",
+    "rank": 1012,
+    "meaningEn": "a narrow opening"
+  },
+  {
+    "word": "steer",
+    "rank": 1013,
+    "meaningEn": "guide the direction of"
+  },
+  {
+    "word": "sue",
+    "rank": 1014,
+    "meaningEn": "To take legal action against someone"
+  },
+  {
+    "word": "superb",
+    "rank": 1015,
+    "meaningEn": "very good"
+  },
+  {
+    "word": "traditionally",
+    "rank": 1016,
+    "meaningEn": "to do things the way they used to be done"
+  },
+  {
+    "word": "tremendous",
+    "rank": 1017,
+    "meaningEn": "extraordinary or excellent"
+  },
+  {
+    "word": "underway",
+    "rank": 1018,
+    "meaningEn": "happening now"
+  },
+  {
+    "word": "unpleasant",
+    "rank": 1019,
+    "meaningEn": "not nice, not comfortable"
+  },
+  {
+    "word": "violin",
+    "rank": 1020,
+    "meaningEn": "small wooden instrument with four strings for making music"
+  },
+  {
+    "word": "ward",
+    "rank": 1021,
+    "meaningEn": "an electoral district, a small area within which the people can all vote for the same thing"
+  },
+  {
+    "word": "worthwhile",
+    "rank": 1022,
+    "meaningEn": "useful; there is some value to it"
+  },
+  {
+    "word": "adapter",
+    "rank": 1023,
+    "meaningEn": "something that connects to something to make it usable"
+  },
+  {
+    "word": "advisable",
+    "rank": 1024,
+    "meaningEn": "something one should do, or is good to do"
+  },
+  {
+    "word": "archive",
+    "rank": 1025,
+    "meaningEn": "a place where documents are kept for a long time"
+  },
+  {
+    "word": "artistic",
+    "rank": 1026,
+    "meaningEn": "to be creative, good at art"
+  },
+  {
+    "word": "assurance",
+    "rank": 1027,
+    "meaningEn": "certainty or full confidence"
+  },
+  {
+    "word": "athletic",
+    "rank": 1028,
+    "meaningEn": "to do with sports"
+  },
+  {
+    "word": "attire",
+    "rank": 1029,
+    "meaningEn": "clothing"
+  },
+  {
+    "word": "auditor",
+    "rank": 1030,
+    "meaningEn": "a person who checks to make sure things are correct"
+  },
+  {
+    "word": "bankruptcy",
+    "rank": 1031,
+    "meaningEn": "the act of having no more money to pay bills"
+  },
+  {
+    "word": "bulk",
+    "rank": 1032,
+    "meaningEn": "in big amount"
+  },
+  {
+    "word": "butter",
+    "rank": 1033,
+    "meaningEn": "a kind of soft spread for bread, made from cow's milk"
+  },
+  {
+    "word": "centimeter",
+    "rank": 1034,
+    "meaningEn": "a form of measurement,  e.g. there are 100 cm in a meter"
+  },
+  {
+    "word": "circulate",
+    "rank": 1035,
+    "meaningEn": "to move around in a circle"
+  },
+  {
+    "word": "comb",
+    "rank": 1036,
+    "meaningEn": "make smooth by getting the knots out of"
+  },
+  {
+    "word": "comfortably",
+    "rank": 1037,
+    "meaningEn": "to do something easily"
+  },
+  {
+    "word": "compliance",
+    "rank": 1038,
+    "meaningEn": "the act of obeying rules"
+  },
+  {
+    "word": "contraction",
+    "rank": 1039,
+    "meaningEn": "a tightening or squeezing movement"
+  },
+  {
+    "word": "cookbook",
+    "rank": 1040,
+    "meaningEn": "a book that gives directions  on how to prepare and cook food"
+  },
+  {
+    "word": "cushion",
+    "rank": 1041,
+    "meaningEn": "a pad to make something more comfortable"
+  },
+  {
+    "word": "dose",
+    "rank": 1042,
+    "meaningEn": "the amount of medicine taken at one time"
+  },
+  {
+    "word": "drum",
+    "rank": 1043,
+    "meaningEn": "a musical instrument you hit with wooden sticks"
+  },
+  {
+    "word": "embed",
+    "rank": 1044,
+    "meaningEn": "to push something deep inside something else"
+  },
+  {
+    "word": "evacuate",
+    "rank": 1045,
+    "meaningEn": "to make people leave an area"
+  },
+  {
+    "word": "expedite",
+    "rank": 1046,
+    "meaningEn": "speed up the progress of"
+  },
+  {
+    "word": "extinguisher",
+    "rank": 1047,
+    "meaningEn": "Device used to put out fires"
+  },
+  {
+    "word": "familiarity",
+    "rank": 1048,
+    "meaningEn": "the state of being used to, or comfortable with something"
+  },
+  {
+    "word": "flaw",
+    "rank": 1049,
+    "meaningEn": "something that is faulty in otherwise perfect person/thing"
+  },
+  {
+    "word": "fluctuate",
+    "rank": 1050,
+    "meaningEn": "comes and goes stronger and weaker"
+  },
+  {
+    "word": "fluent",
+    "rank": 1051,
+    "meaningEn": "able to speak a language easily and with confidence"
+  },
+  {
+    "word": "honestly",
+    "rank": 1052,
+    "meaningEn": "really, truly"
+  },
+  {
+    "word": "housekeep",
+    "rank": 1053,
+    "meaningEn": "take care of all business related to a household"
+  },
+  {
+    "word": "hurricane",
+    "rank": 1054,
+    "meaningEn": "a strong often deadly storm that begins over the water"
+  },
+  {
+    "word": "hygiene",
+    "rank": 1055,
+    "meaningEn": "how you keep yourself and your surroundings clean and so that you stay healthy"
+  },
+  {
+    "word": "integral",
+    "rank": 1056,
+    "meaningEn": "very important, necessary as part of the whole thing"
+  },
+  {
+    "word": "interactive",
+    "rank": 1057,
+    "meaningEn": "to engage with others"
+  },
+  {
+    "word": "interfere",
+    "rank": 1058,
+    "meaningEn": "to take part in something that is not your business"
+  },
+  {
+    "word": "kilogram",
+    "rank": 1059,
+    "meaningEn": "a unit of weight; one kilogram is about the same weight as 2.2 pounds"
+  },
+  {
+    "word": "layoff",
+    "rank": 1060,
+    "meaningEn": "the act of ending a worker's job because there is not enough work, or not enough money to pay for it"
+  },
+  {
+    "word": "lightweight",
+    "rank": 1061,
+    "meaningEn": "someone or something that is not heavy"
+  },
+  {
+    "word": "merit",
+    "rank": 1062,
+    "meaningEn": "to deserve praise"
+  },
+  {
+    "word": "necklace",
+    "rank": 1063,
+    "meaningEn": "a piece of jewelery, or decoration, worn around the neck"
+  },
+  {
+    "word": "needy",
+    "rank": 1064,
+    "meaningEn": "people who are poor and do not have enough to live on"
+  },
+  {
+    "word": "overpay",
+    "rank": 1065,
+    "meaningEn": "to hand over too much money"
+  },
+  {
+    "word": "pamphlet",
+    "rank": 1066,
+    "meaningEn": "a small paper leaflet or booklet  that tells you about a single subject"
+  },
+  {
+    "word": "partial",
+    "rank": 1067,
+    "meaningEn": "to be a part of something whole"
+  },
+  {
+    "word": "penalize",
+    "rank": 1068,
+    "meaningEn": "to punish someone"
+  },
+  {
+    "word": "pollute",
+    "rank": 1069,
+    "meaningEn": "to make the environment dirty"
+  },
+  {
+    "word": "prescribe",
+    "rank": 1070,
+    "meaningEn": "to formally tell someone what to do"
+  },
+  {
+    "word": "probable",
+    "rank": 1071,
+    "meaningEn": "possible, but not certain to be or become true or real"
+  },
+  {
+    "word": "prominent",
+    "rank": 1072,
+    "meaningEn": "important, significant"
+  },
+  {
+    "word": "rainfall",
+    "rank": 1073,
+    "meaningEn": "Water that falls from the clouds in the sky, in little drops"
+  },
+  {
+    "word": "relocation",
+    "rank": 1074,
+    "meaningEn": "the act of moving something to a new location"
+  },
+  {
+    "word": "residence",
+    "rank": 1075,
+    "meaningEn": "the house or place you live"
+  },
+  {
+    "word": "retrieve",
+    "rank": 1076,
+    "meaningEn": "to go and get something back"
+  },
+  {
+    "word": "rider",
+    "rank": 1077,
+    "meaningEn": "someone who uses an animal or a bicycle or motorcycle for transport"
+  },
+  {
+    "word": "rubber",
+    "rank": 1078,
+    "meaningEn": "the stretchy material that elastic bands are made of"
+  },
+  {
+    "word": "rug",
+    "rank": 1079,
+    "meaningEn": "a small loose floor covering"
+  },
+  {
+    "word": "salespeople",
+    "rank": 1080,
+    "meaningEn": "men and women whose job it is get people to buy things from their company"
+  },
+  {
+    "word": "sharply",
+    "rank": 1081,
+    "meaningEn": "harshly"
+  },
+  {
+    "word": "similarity",
+    "rank": 1082,
+    "meaningEn": "the state of being almost the same"
+  },
+  {
+    "word": "someday",
+    "rank": 1083,
+    "meaningEn": "At some unspecified time in the future"
+  },
+  {
+    "word": "spectator",
+    "rank": 1084,
+    "meaningEn": "a person who watches something happening"
+  },
+  {
+    "word": "stereo",
+    "rank": 1085,
+    "meaningEn": "a device that plays sound through two or more speakers"
+  },
+  {
+    "word": "storeroom",
+    "rank": 1086,
+    "meaningEn": "a room where things can be kept when they are not being used"
+  },
+  {
+    "word": "subsidize",
+    "rank": 1087,
+    "meaningEn": "to give financial help"
+  },
+  {
+    "word": "suspicious",
+    "rank": 1088,
+    "meaningEn": "the feeling that something is not right"
+  },
+  {
+    "word": "tasty",
+    "rank": 1089,
+    "meaningEn": "delicious"
+  },
+  {
+    "word": "terrific",
+    "rank": 1090,
+    "meaningEn": "very great or wonderful"
+  },
+  {
+    "word": "underground",
+    "rank": 1091,
+    "meaningEn": "below the surface"
+  },
+  {
+    "word": "unpaid",
+    "rank": 1092,
+    "meaningEn": "working for no money"
+  },
+  {
+    "word": "volleyball",
+    "rank": 1093,
+    "meaningEn": "a ballgame for two teams who try to hit a large ball backwards and forwards across a central net"
+  },
+  {
+    "word": "wheelchair",
+    "rank": 1094,
+    "meaningEn": "a seat, that has wheels, that allows a person who cannot walk to move about"
+  },
+  {
+    "word": "whoever",
+    "rank": 1095,
+    "meaningEn": "anyone who"
+  },
+  {
+    "word": "wool",
+    "rank": 1096,
+    "meaningEn": "the fur of sheep"
+  },
+  {
+    "word": "wrinkle",
+    "rank": 1097,
+    "meaningEn": "a crease or fold"
+  },
+  {
+    "word": "accuracy",
+    "rank": 1098,
+    "meaningEn": "the state of being exact and correct"
+  },
+  {
+    "word": "anyhow",
+    "rank": 1099,
+    "meaningEn": "anyway, besides"
+  },
+  {
+    "word": "appetizer",
+    "rank": 1100,
+    "meaningEn": "small amount of food eaten before the main meal"
+  },
+  {
+    "word": "arc",
+    "rank": 1101,
+    "meaningEn": "a curved line, like part of a circle"
+  },
+  {
+    "word": "audition",
+    "rank": 1102,
+    "meaningEn": "a try out done by a performer to test whether they have the skills to do the job"
+  },
+  {
+    "word": "backpack",
+    "rank": 1103,
+    "meaningEn": "a bag with shoulder straps worn on the back"
+  },
+  {
+    "word": "ballroom",
+    "rank": 1104,
+    "meaningEn": "large room used mainly for dancing"
+  },
+  {
+    "word": "beneficial",
+    "rank": 1105,
+    "meaningEn": "good for you, positive effect"
+  },
+  {
+    "word": "biography",
+    "rank": 1106,
+    "meaningEn": "someone's life story"
+  },
+  {
+    "word": "bound",
+    "rank": 1107,
+    "meaningEn": "wrap around with something, so as to cover or enclose"
+  },
+  {
+    "word": "broom",
+    "rank": 1108,
+    "meaningEn": "a brush with a long handle used for sweeping the dirt from the floor"
+  },
+  {
+    "word": "cheeseburger",
+    "rank": 1109,
+    "meaningEn": "a hamburger with melted cheese on it"
+  },
+  {
+    "word": "chilly",
+    "rank": 1110,
+    "meaningEn": "when the weather is cold and causing you to shiver"
+  },
+  {
+    "word": "circus",
+    "rank": 1111,
+    "meaningEn": "a showy or noisy performance"
+  },
+  {
+    "word": "compliment",
+    "rank": 1112,
+    "meaningEn": "saying something nice about someone"
+  },
+  {
+    "word": "consignment",
+    "rank": 1113,
+    "meaningEn": "a shipment of goods for  delivery"
+  },
+  {
+    "word": "continental",
+    "rank": 1114,
+    "meaningEn": "to do with the mainland"
+  },
+  {
+    "word": "copyright",
+    "rank": 1115,
+    "meaningEn": "when you cannot copy work"
+  },
+  {
+    "word": "countryside",
+    "rank": 1116,
+    "meaningEn": "land outside of cities and towns, that does not have buildings on it"
+  },
+  {
+    "word": "demolish",
+    "rank": 1117,
+    "meaningEn": "knock down; completely destroy"
+  },
+  {
+    "word": "departmental",
+    "rank": 1118,
+    "meaningEn": "to do with a specific area or unit in an organization"
+  },
+  {
+    "word": "desperate",
+    "rank": 1119,
+    "meaningEn": "to be in urgent need of something"
+  },
+  {
+    "word": "devastate",
+    "rank": 1120,
+    "meaningEn": "to destroy completely"
+  },
+  {
+    "word": "diagnostic",
+    "rank": 1121,
+    "meaningEn": "how you solve problems by working out what is wrong"
+  },
+  {
+    "word": "diagram",
+    "rank": 1122,
+    "meaningEn": "a drawing explaining something"
+  },
+  {
+    "word": "diamond",
+    "rank": 1123,
+    "meaningEn": "a very valuable gem"
+  },
+  {
+    "word": "disable",
+    "rank": 1124,
+    "meaningEn": "to make something not work"
+  },
+  {
+    "word": "disgust",
+    "rank": 1125,
+    "meaningEn": "strong feelings of dislike"
+  },
+  {
+    "word": "donut",
+    "rank": 1126,
+    "meaningEn": "small, fried, very sweet piece of dough covered in sugar and good to eat"
+  },
+  {
+    "word": "doorman",
+    "rank": 1127,
+    "meaningEn": "Someone whose job it is to stand at entrance to a hotel to let people go in and out"
+  },
+  {
+    "word": "electronically",
+    "rank": 1128,
+    "meaningEn": "to do something using electronics"
+  },
+  {
+    "word": "elevate",
+    "rank": 1129,
+    "meaningEn": "to raise or make higher"
+  },
+  {
+    "word": "engagement",
+    "rank": 1130,
+    "meaningEn": "the act of participating in something"
+  },
+  {
+    "word": "enrollment",
+    "rank": 1131,
+    "meaningEn": "the act of registering for something"
+  },
+  {
+    "word": "euro",
+    "rank": 1132,
+    "meaningEn": "a unit of money used in a number of European countries"
+  },
+  {
+    "word": "forbid",
+    "rank": 1133,
+    "meaningEn": "to not allow"
+  },
+  {
+    "word": "fork",
+    "rank": 1134,
+    "meaningEn": "eating utensil"
+  },
+  {
+    "word": "foster",
+    "rank": 1135,
+    "meaningEn": "to promote or bring about"
+  },
+  {
+    "word": "getaway",
+    "rank": 1136,
+    "meaningEn": "escape or leave very quickly"
+  },
+  {
+    "word": "gossip",
+    "rank": 1137,
+    "meaningEn": "to talk about someone behind his/her back"
+  },
+  {
+    "word": "hacker",
+    "rank": 1138,
+    "meaningEn": "someone who gains access to a computer system without permission"
+  },
+  {
+    "word": "hardworking",
+    "rank": 1139,
+    "meaningEn": "always puts a lot of effort into the task or job"
+  },
+  {
+    "word": "impatient",
+    "rank": 1140,
+    "meaningEn": "in a hurry, not calm"
+  },
+  {
+    "word": "indirect",
+    "rank": 1141,
+    "meaningEn": "not in a straight way"
+  },
+  {
+    "word": "interpreter",
+    "rank": 1142,
+    "meaningEn": "someone who translates from one language to another"
+  },
+  {
+    "word": "intersection",
+    "rank": 1143,
+    "meaningEn": "where two paths cross each other"
+  },
+  {
+    "word": "irrelevant",
+    "rank": 1144,
+    "meaningEn": "not related to the topic, not important"
+  },
+  {
+    "word": "jeans",
+    "rank": 1145,
+    "meaningEn": "pants made from denim"
+  },
+  {
+    "word": "journalism",
+    "rank": 1146,
+    "meaningEn": "the reporting of news"
+  },
+  {
+    "word": "letterhead",
+    "rank": 1147,
+    "meaningEn": "the printing at the top of a letter that tells you the name and details of the company sending it"
+  },
+  {
+    "word": "lifeguard",
+    "rank": 1148,
+    "meaningEn": "the person whose job it is to keep people safe at the beach or at  pool"
+  },
+  {
+    "word": "modem",
+    "rank": 1149,
+    "meaningEn": "a device that lets you send information from one computer to another"
+  },
+  {
+    "word": "monument",
+    "rank": 1150,
+    "meaningEn": "something built to honor someone"
+  },
+  {
+    "word": "mosquito",
+    "rank": 1151,
+    "meaningEn": "a small winged insect that bites"
+  },
+  {
+    "word": "obligate",
+    "rank": 1152,
+    "meaningEn": "to have to do"
+  },
+  {
+    "word": "oblige",
+    "rank": 1153,
+    "meaningEn": "to make someone have to do something"
+  },
+  {
+    "word": "occurrence",
+    "rank": 1154,
+    "meaningEn": "something that happens"
+  },
+  {
+    "word": "operational",
+    "rank": 1155,
+    "meaningEn": "in working order"
+  },
+  {
+    "word": "outage",
+    "rank": 1156,
+    "meaningEn": "a failure in the power system so that there is no electricity available"
+  },
+  {
+    "word": "overcrowd",
+    "rank": 1157,
+    "meaningEn": "too many people in too small a space"
+  },
+  {
+    "word": "paralegal",
+    "rank": 1158,
+    "meaningEn": "someone who works in a law company but who has not trained as a lawyer"
+  },
+  {
+    "word": "partially",
+    "rank": 1159,
+    "meaningEn": "In part; in some degree; not wholly"
+  },
+  {
+    "word": "pepper",
+    "rank": 1160,
+    "meaningEn": "a strong spice (black or white)"
+  },
+  {
+    "word": "permanently",
+    "rank": 1161,
+    "meaningEn": "for ever"
+  },
+  {
+    "word": "plow",
+    "rank": 1162,
+    "meaningEn": "to force your way through something"
+  },
+  {
+    "word": "query",
+    "rank": 1163,
+    "meaningEn": "question, inquire"
+  },
+  {
+    "word": "railway",
+    "rank": 1164,
+    "meaningEn": "transport system of tracks ,stations and trains"
+  },
+  {
+    "word": "raincoat",
+    "rank": 1165,
+    "meaningEn": "a water-resistant coat"
+  },
+  {
+    "word": "reconsider",
+    "rank": 1166,
+    "meaningEn": "to think something over again"
+  },
+  {
+    "word": "redesign",
+    "rank": 1167,
+    "meaningEn": "change or improve the plan of how a thing is made"
+  },
+  {
+    "word": "rehearsal",
+    "rank": 1168,
+    "meaningEn": "a practice session in preparation for a public performance"
+  },
+  {
+    "word": "relaxation",
+    "rank": 1169,
+    "meaningEn": "the act of resting"
+  },
+  {
+    "word": "repetition",
+    "rank": 1170,
+    "meaningEn": "to do something over and over again"
+  },
+  {
+    "word": "retreat",
+    "rank": 1171,
+    "meaningEn": "to move back or withdraw from a place"
+  },
+  {
+    "word": "salon",
+    "rank": 1172,
+    "meaningEn": "a store where you can get a particular service, like getting your hair styled"
+  },
+  {
+    "word": "satellite",
+    "rank": 1173,
+    "meaningEn": "another branch of an office elsewhere"
+  },
+  {
+    "word": "scenery",
+    "rank": 1174,
+    "meaningEn": "the view of natural surroundings"
+  },
+  {
+    "word": "serial",
+    "rank": 1175,
+    "meaningEn": "ongoing, happening more than once in a particular order"
+  },
+  {
+    "word": "sew",
+    "rank": 1176,
+    "meaningEn": "to use a needle and thread"
+  },
+  {
+    "word": "sketch",
+    "rank": 1177,
+    "meaningEn": "a simple, quickly made drawing"
+  },
+  {
+    "word": "smartphone",
+    "rank": 1178,
+    "meaningEn": "a mobile phone that can also be used to access the internet and run apps"
+  },
+  {
+    "word": "soar",
+    "rank": 1179,
+    "meaningEn": "fly quickly up into the air"
+  },
+  {
+    "word": "stimulus",
+    "rank": 1180,
+    "meaningEn": "the reason or prompt that causes something to happen"
+  },
+  {
+    "word": "stockbroker",
+    "rank": 1181,
+    "meaningEn": "an agent whose job it is to buy and sell stocks and bonds"
+  },
+  {
+    "word": "tablecloth",
+    "rank": 1182,
+    "meaningEn": "a cover for a table"
+  },
+  {
+    "word": "thirsty",
+    "rank": 1183,
+    "meaningEn": "in need of water"
+  },
+  {
+    "word": "thrill",
+    "rank": 1184,
+    "meaningEn": "excitement"
+  },
+  {
+    "word": "tile",
+    "rank": 1185,
+    "meaningEn": "a thin slab of material, often made of clay, used for covering roofs and floors"
+  },
+  {
+    "word": "toiletry",
+    "rank": 1186,
+    "meaningEn": "articles used for washing and taking care of your body"
+  },
+  {
+    "word": "trademark",
+    "rank": 1187,
+    "meaningEn": "the trade or brand name"
+  },
+  {
+    "word": "tropical",
+    "rank": 1188,
+    "meaningEn": "hot and humid like the climate near the equator"
+  },
+  {
+    "word": "tuna",
+    "rank": 1189,
+    "meaningEn": "a type of fish that lives in the sea, and is good to eat"
+  },
+  {
+    "word": "unemployed",
+    "rank": 1190,
+    "meaningEn": "having no job"
+  },
+  {
+    "word": "validate",
+    "rank": 1191,
+    "meaningEn": "to confirm that something is acceptable"
+  },
+  {
+    "word": "vanilla",
+    "rank": 1192,
+    "meaningEn": "a flavoring used in ice cream and other sweet foods to make them taste good"
+  },
+  {
+    "word": "willingness",
+    "rank": 1193,
+    "meaningEn": "being happy to do something"
+  },
+  {
+    "word": "wristwatch",
+    "rank": 1194,
+    "meaningEn": "a small device for telling the time that you wear on your lower arm"
+  },
+  {
+    "word": "abide",
+    "rank": 1195,
+    "meaningEn": "put up with"
+  },
+  {
+    "word": "actively",
+    "rank": 1196,
+    "meaningEn": "in a way that takes effort and action"
+  },
+  {
+    "word": "allergy",
+    "rank": 1197,
+    "meaningEn": "condition that means you get ill if you come into contact with a particular material"
+  },
+  {
+    "word": "apprehensive",
+    "rank": 1198,
+    "meaningEn": "uneasy, worried"
+  },
+  {
+    "word": "automotive",
+    "rank": 1199,
+    "meaningEn": "of or relating to motor vehicles"
+  },
+  {
+    "word": "bacteria",
+    "rank": 1200,
+    "meaningEn": "small microbes that often make you sick"
+  },
+  {
+    "word": "broaden",
+    "rank": 1201,
+    "meaningEn": "to widen"
+  },
+  {
+    "word": "bulb",
+    "rank": 1202,
+    "meaningEn": "the shape of a teardrop, e.g. light bulb"
+  },
+  {
+    "word": "by-law",
+    "rank": 1203,
+    "meaningEn": "a rule made by a local authority, company, or organization to govern its own affairs"
+  },
+  {
+    "word": "cheer",
+    "rank": 1204,
+    "meaningEn": "to cheer on, shout encouragement"
+  },
+  {
+    "word": "complication",
+    "rank": 1205,
+    "meaningEn": "the act of making something more difficult"
+  },
+  {
+    "word": "considerate",
+    "rank": 1206,
+    "meaningEn": "showing concern for the rights and feelings of others"
+  },
+  {
+    "word": "daytime",
+    "rank": 1207,
+    "meaningEn": "The time between when the sun rises and when it  goes down; not nightime"
+  },
+  {
+    "word": "decoration",
+    "rank": 1208,
+    "meaningEn": "the act of decorating something (in the hope of making it more attractive)"
+  },
+  {
+    "word": "discard",
+    "rank": 1209,
+    "meaningEn": "to throw away"
+  },
+  {
+    "word": "drastically",
+    "rank": 1210,
+    "meaningEn": "very seriously"
+  },
+  {
+    "word": "erase",
+    "rank": 1211,
+    "meaningEn": "to remove or delete"
+  },
+  {
+    "word": "explorer",
+    "rank": 1212,
+    "meaningEn": "a person who travels to unknown places"
+  },
+  {
+    "word": "factual",
+    "rank": 1213,
+    "meaningEn": "based on true information"
+  },
+  {
+    "word": "fixture",
+    "rank": 1214,
+    "meaningEn": "a piece of equipment, like a bath, that is permanently fixed to a building"
+  },
+  {
+    "word": "footwear",
+    "rank": 1215,
+    "meaningEn": "something you wear on your feet, such as shoes or boots"
+  },
+  {
+    "word": "genre",
+    "rank": 1216,
+    "meaningEn": "type of art, literature, or film, e.g. romance"
+  },
+  {
+    "word": "gymnasium",
+    "rank": 1217,
+    "meaningEn": "building with equipment you can use to exercise your body"
+  },
+  {
+    "word": "hereby",
+    "rank": 1218,
+    "meaningEn": "a formal way of saying 'as a result of this'"
+  },
+  {
+    "word": "hesitation",
+    "rank": 1219,
+    "meaningEn": "the act of pausing uncertainly"
+  },
+  {
+    "word": "homemade",
+    "rank": 1220,
+    "meaningEn": "not bought from a store; made at home"
+  },
+  {
+    "word": "hospitality",
+    "rank": 1221,
+    "meaningEn": "welcoming, friendly behavior  you show to visitors or guests"
+  },
+  {
+    "word": "incoming",
+    "rank": 1222,
+    "meaningEn": "just arriving"
+  },
+  {
+    "word": "induction",
+    "rank": 1223,
+    "meaningEn": "the act of being introduced into"
+  },
+  {
+    "word": "inspiration",
+    "rank": 1224,
+    "meaningEn": "the thing or person that encourages you to do something"
+  },
+  {
+    "word": "intently",
+    "rank": 1225,
+    "meaningEn": "concentrate closely"
+  },
+  {
+    "word": "mower",
+    "rank": 1226,
+    "meaningEn": "machine used to cut grass"
+  },
+  {
+    "word": "nutrition",
+    "rank": 1227,
+    "meaningEn": "the study of food and health"
+  },
+  {
+    "word": "restatement",
+    "rank": 1228,
+    "meaningEn": "a statement that has been reworded"
+  },
+  {
+    "word": "sedan",
+    "rank": 1229,
+    "meaningEn": "a type of car that has seats for four people"
+  },
+  {
+    "word": "sunscreen",
+    "rank": 1230,
+    "meaningEn": "a cream spread on the skin that protects your skin from the sun"
+  },
+  {
+    "word": "wellness",
+    "rank": 1231,
+    "meaningEn": "State of being healthy; not ill"
+  },
+  {
+    "word": "workbook",
+    "rank": 1232,
+    "meaningEn": "a file containing information about a particular subject, and relatated problems to be solved by the student"
+  },
+  {
+    "word": "bookcase",
+    "rank": 1233,
+    "meaningEn": "a piece of furniture with shelves for storing books"
+  },
+  {
+    "word": "cleanliness",
+    "rank": 1234,
+    "meaningEn": "state of being not dirty, clean"
+  },
+  {
+    "word": "contestant",
+    "rank": 1235,
+    "meaningEn": "someone who is part of a contest"
+  },
+  {
+    "word": "ethics",
+    "rank": 1236,
+    "meaningEn": "morals or belief system"
+  },
+  {
+    "word": "healthful",
+    "rank": 1237,
+    "meaningEn": "helping to keep well in body and mind"
+  },
+  {
+    "word": "inefficient",
+    "rank": 1238,
+    "meaningEn": "not working well or quickly"
+  },
+  {
+    "word": "liter",
+    "rank": 1239,
+    "meaningEn": "a unit  of measurement for liquids"
+  },
+  {
+    "word": "recession",
+    "rank": 1240,
+    "meaningEn": "a less successful time in the economy"
+  },
+  {
+    "word": "timeline",
+    "rank": 1241,
+    "meaningEn": "a series of related events arranged in the order they happen, and displayed in a row"
+  },
+  {
+    "word": "unreliable",
+    "rank": 1242,
+    "meaningEn": "not trustworthy"
+  },
+  {
+    "word": "acclaim",
+    "rank": 1243,
+    "meaningEn": "approval and great praise"
+  },
+  {
+    "word": "chronic",
+    "rank": 1244,
+    "meaningEn": "for a long time"
+  },
+  {
+    "word": "deteriorate",
+    "rank": 1245,
+    "meaningEn": "to become worse in state"
+  },
+  {
+    "word": "resemble",
+    "rank": 1246,
+    "meaningEn": "to look like, similar to"
+  },
+  {
+    "word": "unauthorized",
+    "rank": 1247,
+    "meaningEn": "without official permission"
+  },
+  {
+    "word": "violate",
+    "rank": 1248,
+    "meaningEn": "to break the rule or law"
+  },
+  {
+    "word": "unplug",
+    "rank": 1249,
+    "meaningEn": "to pull out an electrical cord from its socket"
+  },
+  {
+    "word": "videoconference",
+    "rank": 1250,
+    "meaningEn": "meeting carried out over the internet"
+  }
+]

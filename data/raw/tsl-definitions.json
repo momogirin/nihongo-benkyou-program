@@ -1,0 +1,4986 @@
+[
+  {
+    "word": "acceptance",
+    "definition": "state of being okay with something or someone"
+  },
+  {
+    "word": "actress",
+    "definition": "a female actor "
+  },
+  {
+    "word": "additionally",
+    "definition": "furthermore, also"
+  },
+  {
+    "word": "advertiser",
+    "definition": "someone who is selling something through media"
+  },
+  {
+    "word": "affordable",
+    "definition": "not expensive, one is able to pay easily"
+  },
+  {
+    "word": "afterward",
+    "definition": "after an event or action"
+  },
+  {
+    "word": "anyhow",
+    "definition": "anyway, besides"
+  },
+  {
+    "word": "anytime",
+    "definition": "at a time you choose, it's not important when"
+  },
+  {
+    "word": "artistic",
+    "definition": "to be creative, good at art"
+  },
+  {
+    "word": "baggage",
+    "definition": "travel bags"
+  },
+  {
+    "word": "banker",
+    "definition": "someone who works for the bank"
+  },
+  {
+    "word": "beginner",
+    "definition": "to be new at something"
+  },
+  {
+    "word": "booklet",
+    "definition": "a small book, leaflet, or brochure"
+  },
+  {
+    "word": "born",
+    "definition": "brought to life"
+  },
+  {
+    "word": "bye",
+    "definition": "opposite of 'hello'"
+  },
+  {
+    "word": "caller",
+    "definition": "the person that is phoning you"
+  },
+  {
+    "word": "careless",
+    "definition": "to do something with little care or attention"
+  },
+  {
+    "word": "carrier",
+    "definition": "a person or thing that carries something"
+  },
+  {
+    "word": "cleaner",
+    "definition": "someone who cleans  for a living"
+  },
+  {
+    "word": "cleanliness",
+    "definition": "state of being not dirty, clean"
+  },
+  {
+    "word": "collector",
+    "definition": "someone who buys and keeps old things"
+  },
+  {
+    "word": "colorful",
+    "definition": "having many different colors"
+  },
+  {
+    "word": "comfortably",
+    "definition": "to do something easily"
+  },
+  {
+    "word": "completion",
+    "definition": "the end, the finishing point"
+  },
+  {
+    "word": "cooler",
+    "definition": "a box (filled with ice) that keeps drinks cold"
+  },
+  {
+    "word": "costly",
+    "definition": "to be expensive, to be of a high price"
+  },
+  {
+    "word": "dealership",
+    "definition": "a business that can buy and sell certain things"
+  },
+  {
+    "word": "definite",
+    "definition": "for certain, exact"
+  },
+  {
+    "word": "delicious",
+    "definition": "to taste good"
+  },
+  {
+    "word": "dependable",
+    "definition": "reliable, trustworthy"
+  },
+  {
+    "word": "dislike",
+    "definition": "to not like, hate"
+  },
+  {
+    "word": "enjoyable",
+    "definition": "not boring, fun"
+  },
+  {
+    "word": "explanatory",
+    "definition": " to explain or make clear"
+  },
+  {
+    "word": "finalize",
+    "definition": "to make final"
+  },
+  {
+    "word": "fitness",
+    "definition": "the state of being healthy"
+  },
+  {
+    "word": "flyer",
+    "definition": "brochure, leaflet"
+  },
+  {
+    "word": "fortunately",
+    "definition": "happily, luckily"
+  },
+  {
+    "word": "gardener",
+    "definition": "a person who works with plants and flowers for a living"
+  },
+  {
+    "word": "generalization",
+    "definition": "an idea that is true most of the time but not all of the time"
+  },
+  {
+    "word": "heater",
+    "definition": "something that warms a room"
+  },
+  {
+    "word": "homeless",
+    "definition": "to be without a place to live "
+  },
+  {
+    "word": "honestly",
+    "definition": "really, truly"
+  },
+  {
+    "word": "hourly",
+    "definition": "happens every 60 minutes"
+  },
+  {
+    "word": "hungry",
+    "definition": "in need of food, needing to eat"
+  },
+  {
+    "word": "icy",
+    "definition": "made of ice"
+  },
+  {
+    "word": "incomplete",
+    "definition": "not yet finished"
+  },
+  {
+    "word": "indoor",
+    "definition": "inside a house or building"
+  },
+  {
+    "word": "inexpensive",
+    "definition": "having a low price; cheap"
+  },
+  {
+    "word": "inexperience",
+    "definition": "to not have much practice with something"
+  },
+  {
+    "word": "internet",
+    "definition": "the information highway, the worldwide web"
+  },
+  {
+    "word": "lately",
+    "definition": "recently"
+  },
+  {
+    "word": "locally",
+    "definition": "in a specific area"
+  },
+  {
+    "word": "loudly",
+    "definition": "in a manner that is not quiet"
+  },
+  {
+    "word": "machinery",
+    "definition": "tools, equipment"
+  },
+  {
+    "word": "managerial",
+    "definition": "to do with management or supervision"
+  },
+  {
+    "word": "meaningful",
+    "definition": "to have a meaning or purpose"
+  },
+  {
+    "word": "mileage",
+    "definition": "distance travelled in miles"
+  },
+  {
+    "word": "mislead",
+    "definition": "to lead someone in the wrong direction or give someone wrong directions"
+  },
+  {
+    "word": "mister",
+    "definition": "a form of address for a man  "
+  },
+  {
+    "word": "nationwide",
+    "definition": "all across the country"
+  },
+  {
+    "word": "neat",
+    "definition": "tidy, clean"
+  },
+  {
+    "word": "noisy",
+    "definition": "too loud"
+  },
+  {
+    "word": "outdoor",
+    "definition": "outside in the open air"
+  },
+  {
+    "word": "painter",
+    "definition": "an artist who paints  "
+  },
+  {
+    "word": "partial",
+    "definition": "to be a part of something whole"
+  },
+  {
+    "word": "partially",
+    "definition": "In part; in some degree; not wholly"
+  },
+  {
+    "word": "payable",
+    "definition": "an amount of money due"
+  },
+  {
+    "word": "photographer",
+    "definition": "someone who takes pictures for a living  "
+  },
+  {
+    "word": "photography",
+    "definition": "the art of taking pictures"
+  },
+  {
+    "word": "placement",
+    "definition": "the act of placing someone in a job or the location of something"
+  },
+  {
+    "word": "planner",
+    "definition": "a person who makes plans  "
+  },
+  {
+    "word": "poorly",
+    "definition": "Badly; not enough; not sufficient"
+  },
+  {
+    "word": "postage",
+    "definition": "the charge for mailing something  "
+  },
+  {
+    "word": "postal",
+    "definition": "of or relating to the system for delivering mail"
+  },
+  {
+    "word": "pottery",
+    "definition": "earthenware, stoneware, ceramics"
+  },
+  {
+    "word": "presenter",
+    "definition": "a person who shows and explains something to an audience"
+  },
+  {
+    "word": "probable",
+    "definition": "possible, but not certain to be or become true or real"
+  },
+  {
+    "word": "programmer",
+    "definition": "a person who designs and writes and tests computer programs  "
+  },
+  {
+    "word": "protective",
+    "definition": "to want to keep safe"
+  },
+  {
+    "word": "quarterly",
+    "definition": "every 4 months"
+  },
+  {
+    "word": "rainy",
+    "definition": "water from the clouds, wet or showery"
+  },
+  {
+    "word": "realistic",
+    "definition": "to be reasonable or be close to real life"
+  },
+  {
+    "word": "reconsider",
+    "definition": "to think something over again"
+  },
+  {
+    "word": "renew",
+    "definition": "to make something new again"
+  },
+  {
+    "word": "renewal",
+    "definition": "the act of making something new again"
+  },
+  {
+    "word": "rental",
+    "definition": "the act of paying for the use of something (as an apartment or house or car)  "
+  },
+  {
+    "word": "reopen",
+    "definition": "to open again"
+  },
+  {
+    "word": "rewrite",
+    "definition": "to write again differently"
+  },
+  {
+    "word": "rider",
+    "definition": "someone who uses an animal or a bicycle or motorcycle for transport"
+  },
+  {
+    "word": "runner",
+    "definition": "someone who travels on foot by running  "
+  },
+  {
+    "word": "safely",
+    "definition": "in a way that is not dangerous "
+  },
+  {
+    "word": "seller",
+    "definition": "someone who promotes or exchanges goods or services for money  "
+  },
+  {
+    "word": "sender",
+    "definition": "someone who transmits a message"
+  },
+  {
+    "word": "shipment",
+    "definition": "delivery of goods, e.g. carried by a large vehicle"
+  },
+  {
+    "word": "shopper",
+    "definition": "someone who buys things in a store"
+  },
+  {
+    "word": "shortage",
+    "definition": "a lack of something "
+  },
+  {
+    "word": "shorten",
+    "definition": "to make smaller in length"
+  },
+  {
+    "word": "simplify",
+    "definition": "make easier to understand"
+  },
+  {
+    "word": "sleepy",
+    "definition": "tired, ready for bed"
+  },
+  {
+    "word": "snowy",
+    "definition": "cold weather with snow falling"
+  },
+  {
+    "word": "sometime",
+    "definition": "at some unknown point in time"
+  },
+  {
+    "word": "spacious",
+    "definition": "lots of room or space"
+  },
+  {
+    "word": "specially",
+    "definition": "in particular"
+  },
+  {
+    "word": "specialty",
+    "definition": "something you are very good at"
+  },
+  {
+    "word": "sticker",
+    "definition": "a label with glue on the back"
+  },
+  {
+    "word": "sunny",
+    "definition": "a day with no clouds or rain just sunshine"
+  },
+  {
+    "word": "sunshine",
+    "definition": "the warmth and light of the sun"
+  },
+  {
+    "word": "tablecloth",
+    "definition": "a cover for a table"
+  },
+  {
+    "word": "taker",
+    "definition": "someone who does not give but only takes"
+  },
+  {
+    "word": "tasty",
+    "definition": "delicious"
+  },
+  {
+    "word": "thirsty",
+    "definition": "in need of water"
+  },
+  {
+    "word": "timely",
+    "definition": "to happen at the right time or good time"
+  },
+  {
+    "word": "timer",
+    "definition": "something that counts seconds and minutes"
+  },
+  {
+    "word": "trainee",
+    "definition": "someone who is learning on the job "
+  },
+  {
+    "word": "trainer",
+    "definition": "one who teaches a person or animal to do something"
+  },
+  {
+    "word": "traveler",
+    "definition": "a tourist or adventurer who visits many countries"
+  },
+  {
+    "word": "uncomfortable",
+    "definition": "not pleased or happy with a situation or thing"
+  },
+  {
+    "word": "unemployed",
+    "definition": "having no job"
+  },
+  {
+    "word": "unexpected",
+    "definition": "to be a surprise"
+  },
+  {
+    "word": "unhappy",
+    "definition": "feeling little or no joy"
+  },
+  {
+    "word": "unload",
+    "definition": "to remove something (usually from a truck)"
+  },
+  {
+    "word": "unnecessary",
+    "definition": "not needed"
+  },
+  {
+    "word": "unpaid",
+    "definition": "working for no money"
+  },
+  {
+    "word": "unreal",
+    "definition": "not true to life"
+  },
+  {
+    "word": "unsure",
+    "definition": "not certain or sure"
+  },
+  {
+    "word": "unused",
+    "definition": "not yet put into use"
+  },
+  {
+    "word": "unusually",
+    "definition": "not normal or usual"
+  },
+  {
+    "word": "whoever",
+    "definition": "anyone who"
+  },
+  {
+    "word": "willingness",
+    "definition": "being happy to do something"
+  },
+  {
+    "word": "windy",
+    "definition": "weather that is stormy or gusty"
+  },
+  {
+    "word": "yearly",
+    "definition": "happening every 12 months"
+  },
+  {
+    "word": "accent",
+    "definition": "special manner of oral expression"
+  },
+  {
+    "word": "accessible",
+    "definition": "available, easy to reach"
+  },
+  {
+    "word": "accordingly",
+    "definition": "therefore, so"
+  },
+  {
+    "word": "actively",
+    "definition": "in a way that takes effort and action"
+  },
+  {
+    "word": "adapter",
+    "definition": "something that connects to something to make it usable"
+  },
+  {
+    "word": "advisable",
+    "definition": "something one should do, or is good to do"
+  },
+  {
+    "word": "advisor",
+    "definition": "someone who gives an opinion on what to do"
+  },
+  {
+    "word": "advisory",
+    "definition": "related to giving advice or an opinion on what to do"
+  },
+  {
+    "word": "amuse",
+    "definition": "to entertain"
+  },
+  {
+    "word": "announcer",
+    "definition": "someone who gives a message publicly  "
+  },
+  {
+    "word": "annoy",
+    "definition": "to bother or irritate"
+  },
+  {
+    "word": "apple",
+    "definition": "a type of fruit from trees that is green, red, or yellow"
+  },
+  {
+    "word": "appreciation",
+    "definition": "to show thanks for something or someone"
+  },
+  {
+    "word": "asleep",
+    "definition": "not awake, in sleep"
+  },
+  {
+    "word": "assurance",
+    "definition": "certainty or full confidence"
+  },
+  {
+    "word": "attendant",
+    "definition": "someone who waits on or tends to the needs of another  "
+  },
+  {
+    "word": "attendee",
+    "definition": "someone present (at a meeting or event)"
+  },
+  {
+    "word": "authority",
+    "definition": "the power to give orders and make decisions"
+  },
+  {
+    "word": "automatic",
+    "definition": "done without thinking"
+  },
+  {
+    "word": "availability",
+    "definition": "Being present and able to be used"
+  },
+  {
+    "word": "bake",
+    "definition": "to cook things inside the oven"
+  },
+  {
+    "word": "baker",
+    "definition": "someone who bakes for a living "
+  },
+  {
+    "word": "bakery",
+    "definition": "a place where baked goods (breads and cakes and pastries) are made and sold"
+  },
+  {
+    "word": "basket",
+    "definition": "a container made of pieces of wood"
+  },
+  {
+    "word": "battery",
+    "definition": "something that produces electric energy"
+  },
+  {
+    "word": "bean",
+    "definition": "a long thin green vegetable"
+  },
+  {
+    "word": "blanket",
+    "definition": "a large piece of cloth used to cover someone or something"
+  },
+  {
+    "word": "brake",
+    "definition": "to stop a vehicle by pressing a pedal"
+  },
+  {
+    "word": "broaden",
+    "definition": "to widen "
+  },
+  {
+    "word": "bug",
+    "definition": "an insect"
+  },
+  {
+    "word": "butter",
+    "definition": "a kind of soft spread for bread, made from cow's milk"
+  },
+  {
+    "word": "cage",
+    "definition": "a box-like crate usually made of steel"
+  },
+  {
+    "word": "calculation",
+    "definition": "to add, subtract, multiply, divide etc. "
+  },
+  {
+    "word": "calculator",
+    "definition": "a device that does math for you"
+  },
+  {
+    "word": "captain",
+    "definition": "the person in charge of a ship or airplane"
+  },
+  {
+    "word": "cart",
+    "definition": "a wagon or truck used to for transport"
+  },
+  {
+    "word": "casual",
+    "definition": "uncertain, unplanned"
+  },
+  {
+    "word": "ceiling",
+    "definition": "the thing that covers the room up high"
+  },
+  {
+    "word": "centimeter",
+    "definition": "a form of measurement,  e.g. there are 100 cm in a meter"
+  },
+  {
+    "word": "cheer",
+    "definition": "to cheer on, shout encouragement"
+  },
+  {
+    "word": "clip",
+    "definition": "to cut short, snip"
+  },
+  {
+    "word": "cloth",
+    "definition": "a piece of thin material"
+  },
+  {
+    "word": "cloudy",
+    "definition": "weather where the sky is filled with clouds"
+  },
+  {
+    "word": "clue",
+    "definition": "a hint, a tip"
+  },
+  {
+    "word": "commerce",
+    "definition": "trade, business, industry "
+  },
+  {
+    "word": "commonly",
+    "definition": "frequently, usually"
+  },
+  {
+    "word": "complication",
+    "definition": "the act of making something more difficult"
+  },
+  {
+    "word": "conditioner",
+    "definition": "shampoo-like substance used after washing hair"
+  },
+  {
+    "word": "container",
+    "definition": "something that holds things"
+  },
+  {
+    "word": "contractor",
+    "definition": "a builder"
+  },
+  {
+    "word": "copier",
+    "definition": "a machine that makes paper copies"
+  },
+  {
+    "word": "correction",
+    "definition": "the act of making something right"
+  },
+  {
+    "word": "correctly",
+    "definition": "to do something the right way"
+  },
+  {
+    "word": "creativity",
+    "definition": "the state of having talent and imagination"
+  },
+  {
+    "word": "deck",
+    "definition": "like a patio or terrace"
+  },
+  {
+    "word": "decorate",
+    "definition": "make more attractive by adding ornament, colour, etc."
+  },
+  {
+    "word": "decoration",
+    "definition": "the act of decorating something (in the hope of making it more attractive)  "
+  },
+  {
+    "word": "departmental",
+    "definition": "to do with a specific area or unit in an organization"
+  },
+  {
+    "word": "desirable",
+    "definition": "worth having or wanting"
+  },
+  {
+    "word": "desperate",
+    "definition": "to be in urgent need of something"
+  },
+  {
+    "word": "developer",
+    "definition": "someone who designs and builds properties"
+  },
+  {
+    "word": "dine",
+    "definition": "have supper; eat dinner"
+  },
+  {
+    "word": "diner",
+    "definition": "a small, informal restaurant"
+  },
+  {
+    "word": "directory",
+    "definition": "an alphabetical list of names and addresses  "
+  },
+  {
+    "word": "disappointment",
+    "definition": "what is felt when someone does not fulfill your expectations"
+  },
+  {
+    "word": "disgust",
+    "definition": "strong feelings of dislike  "
+  },
+  {
+    "word": "dive",
+    "definition": "jump in or swim under water"
+  },
+  {
+    "word": "drawer",
+    "definition": "a sliding compartment you keep things in"
+  },
+  {
+    "word": "drum",
+    "definition": "a musical instrument you hit with wooden sticks"
+  },
+  {
+    "word": "economical",
+    "definition": "of good value"
+  },
+  {
+    "word": "economically",
+    "definition": "related to use of income and money"
+  },
+  {
+    "word": "economist",
+    "definition": "an expert in the science of economics  "
+  },
+  {
+    "word": "economize",
+    "definition": "to save money, avoid waste"
+  },
+  {
+    "word": "editorial",
+    "definition": "a newspaper article written by the editor"
+  },
+  {
+    "word": "electrical",
+    "definition": "to do with electricity"
+  },
+  {
+    "word": "electrician",
+    "definition": "a person who installs or repairs electrical or telephone lines  "
+  },
+  {
+    "word": "elephant",
+    "definition": "a large animal with a long trunk and big ears found in Africa and Asia"
+  },
+  {
+    "word": "energetic",
+    "definition": "to be lively, full of energy"
+  },
+  {
+    "word": "engagement",
+    "definition": "the act of participating in something"
+  },
+  {
+    "word": "environmentally",
+    "definition": "related to natural surroundings"
+  },
+  {
+    "word": "equip",
+    "definition": "provide with abilities or tools"
+  },
+  {
+    "word": "excellence",
+    "definition": "the state of being very, very good"
+  },
+  {
+    "word": "familiarity",
+    "definition": "the state of being used to, or comfortable with something"
+  },
+  {
+    "word": "familiarize",
+    "definition": "to get to know better"
+  },
+  {
+    "word": "faulty",
+    "definition": "broken, not perfect"
+  },
+  {
+    "word": "favorable",
+    "definition": "to be seen as good or positive"
+  },
+  {
+    "word": "frustrate",
+    "definition": "to upset someone"
+  },
+  {
+    "word": "fry",
+    "definition": "to cook in a pan"
+  },
+  {
+    "word": "garage",
+    "definition": "a place where you keep your car"
+  },
+  {
+    "word": "grocery",
+    "definition": "a place that sells food items"
+  },
+  {
+    "word": "guidance",
+    "definition": "the act of showing the way "
+  },
+  {
+    "word": "handy",
+    "definition": "useful"
+  },
+  {
+    "word": "harmful",
+    "definition": "damaging, hurtful"
+  },
+  {
+    "word": "hesitation",
+    "definition": "the act of pausing uncertainly"
+  },
+  {
+    "word": "hobby",
+    "definition": "something you do in your spare time for fun"
+  },
+  {
+    "word": "identification",
+    "definition": "a document that shows who a person is,  e.g. passport, driver's licence"
+  },
+  {
+    "word": "indicator",
+    "definition": "a signal or a warning"
+  },
+  {
+    "word": "individually",
+    "definition": "apart from others"
+  },
+  {
+    "word": "influential",
+    "definition": "powerful"
+  },
+  {
+    "word": "inspect",
+    "definition": "look over carefully"
+  },
+  {
+    "word": "inspection",
+    "definition": "a formal or official examination of something"
+  },
+  {
+    "word": "inspector",
+    "definition": "a high ranking police officer  "
+  },
+  {
+    "word": "instruct",
+    "definition": "to teach"
+  },
+  {
+    "word": "instructor",
+    "definition": "someon who teaches for a living"
+  },
+  {
+    "word": "intently",
+    "definition": "concentrate closely"
+  },
+  {
+    "word": "interrupt",
+    "definition": "to stop something or someone in the middle of something"
+  },
+  {
+    "word": "introductory",
+    "definition": "something that comes before the main event, e.g. introductory speech"
+  },
+  {
+    "word": "invaluable",
+    "definition": "to be of great worth"
+  },
+  {
+    "word": "irregular",
+    "definition": "occuring at unexpected times"
+  },
+  {
+    "word": "jam",
+    "definition": "push down hard"
+  },
+  {
+    "word": "jeans",
+    "definition": "pants made from denim"
+  },
+  {
+    "word": "juice",
+    "definition": "the natural liquid from a plant or fruit"
+  },
+  {
+    "word": "junior",
+    "definition": "younger, lower in rank"
+  },
+  {
+    "word": "kilometer",
+    "definition": "a metric unit of length equal to 1000 meters"
+  },
+  {
+    "word": "knowledgeable",
+    "definition": "to know much about a topic"
+  },
+  {
+    "word": "lab",
+    "definition": "where you do experiments"
+  },
+  {
+    "word": "lamp",
+    "definition": "an artificial source of light "
+  },
+  {
+    "word": "lane",
+    "definition": "a narrow road"
+  },
+  {
+    "word": "lawn",
+    "definition": "the grassy area in your garden"
+  },
+  {
+    "word": "lengthy",
+    "definition": "long in time or size"
+  },
+  {
+    "word": "librarian",
+    "definition": "a person who works with books in a library"
+  },
+  {
+    "word": "lighter",
+    "definition": "not as heavy as"
+  },
+  {
+    "word": "lightweight",
+    "definition": "someone or something that is not heavy "
+  },
+  {
+    "word": "mask",
+    "definition": "something that covers your face"
+  },
+  {
+    "word": "memorize",
+    "definition": "to learn and remember things"
+  },
+  {
+    "word": "microwave",
+    "definition": "kitchen appliance that cooks food quickly"
+  },
+  {
+    "word": "mower",
+    "definition": "machine used to cut grass"
+  },
+  {
+    "word": "nail",
+    "definition": "a long, thin piece of metal used to hold pieces of wood together banged in with a hammer"
+  },
+  {
+    "word": "occurrence",
+    "definition": "something that happens"
+  },
+  {
+    "word": "officially",
+    "definition": "done by the government or office in charge"
+  },
+  {
+    "word": "operational",
+    "definition": "in working order"
+  },
+  {
+    "word": "optional",
+    "definition": "a choice, something you do not have to do"
+  },
+  {
+    "word": "organizational",
+    "definition": "to do with planning and managing "
+  },
+  {
+    "word": "organizer",
+    "definition": "someone who plans things for a living"
+  },
+  {
+    "word": "oven",
+    "definition": "kitchen appliance used for baking or roasting  "
+  },
+  {
+    "word": "pan",
+    "definition": "a flat, round cooking container used for frying"
+  },
+  {
+    "word": "performer",
+    "definition": "an entertainer  like an actor or a singer"
+  },
+  {
+    "word": "periodical",
+    "definition": "a magazine made and available on a regular basis"
+  },
+  {
+    "word": "periodically",
+    "definition": "every so often, at regular times"
+  },
+  {
+    "word": "pet",
+    "definition": "an animal you keep in the house to play with"
+  },
+  {
+    "word": "pie",
+    "definition": "round, covered pastrywith a filling like cherry or apple "
+  },
+  {
+    "word": "plug",
+    "definition": "to fill in a hole"
+  },
+  {
+    "word": "polish",
+    "definition": "to make something shine with a cloth"
+  },
+  {
+    "word": "polite",
+    "definition": "being kind to others"
+  },
+  {
+    "word": "pollute",
+    "definition": "to make the environment dirty"
+  },
+  {
+    "word": "popularity",
+    "definition": "the state of being liked by many people"
+  },
+  {
+    "word": "productive",
+    "definition": "useful or worthwhile, e.g. a productive meeting"
+  },
+  {
+    "word": "productivity",
+    "definition": "the amount of work done"
+  },
+  {
+    "word": "professionally",
+    "definition": "to do with your work or job"
+  },
+  {
+    "word": "projection",
+    "definition": "a guess about future events, e.g. sales or income"
+  },
+  {
+    "word": "provider",
+    "definition": "someone who takes care of others with money, food, home"
+  },
+  {
+    "word": "purchaser",
+    "definition": "someone who buys things; buyer"
+  },
+  {
+    "word": "quit",
+    "definition": "to stop doing something"
+  },
+  {
+    "word": "ray",
+    "definition": "a beam of light from the sun"
+  },
+  {
+    "word": "rearrange",
+    "definition": "to put into a new order "
+  },
+  {
+    "word": "reassure",
+    "definition": "to make someone feel certain of something"
+  },
+  {
+    "word": "recipe",
+    "definition": "directions for baking or cooking something  "
+  },
+  {
+    "word": "redecorate",
+    "definition": "to redo the inside of a house with new colors and furniture"
+  },
+  {
+    "word": "referral",
+    "definition": "the recommendation of someone or something"
+  },
+  {
+    "word": "refrigerator",
+    "definition": "an electric box that cools food"
+  },
+  {
+    "word": "relaxation",
+    "definition": "the act of resting "
+  },
+  {
+    "word": "reliability",
+    "definition": "the state of being trustworthy"
+  },
+  {
+    "word": "relocate",
+    "definition": "to move to a new location"
+  },
+  {
+    "word": "relocation",
+    "definition": "the act of moving something to a new location"
+  },
+  {
+    "word": "reminder",
+    "definition": "something that makes you remember something"
+  },
+  {
+    "word": "removal",
+    "definition": "to take away and put in another place"
+  },
+  {
+    "word": "repeatedly",
+    "definition": "many times"
+  },
+  {
+    "word": "repetition",
+    "definition": "to do something over and over again"
+  },
+  {
+    "word": "replacement",
+    "definition": "to put something/someone in place of something/someone else"
+  },
+  {
+    "word": "reschedule",
+    "definition": "to set a new time for something"
+  },
+  {
+    "word": "reservation",
+    "definition": "to put something on hold for use later, e.g. car, hotel room"
+  },
+  {
+    "word": "salad",
+    "definition": "food made of mainly leaves or lettuce and vegetables"
+  },
+  {
+    "word": "sandwich",
+    "definition": "two pieces of bread with a filling inside, e.g. meat or jam"
+  },
+  {
+    "word": "scenery",
+    "definition": "the view of natural surroundings"
+  },
+  {
+    "word": "seasonal",
+    "definition": "happening at a certain time of the year only"
+  },
+  {
+    "word": "seeker",
+    "definition": "someone looking for something "
+  },
+  {
+    "word": "separately",
+    "definition": "to do things one at a time, not together"
+  },
+  {
+    "word": "sew",
+    "definition": "to use a needle and thread"
+  },
+  {
+    "word": "similarity",
+    "definition": "the state of being almost the same"
+  },
+  {
+    "word": "smoothly",
+    "definition": "to do something easily with no trouble"
+  },
+  {
+    "word": "sock",
+    "definition": "something you wear on your foot to keep you warm"
+  },
+  {
+    "word": "soup",
+    "definition": "a liquid meal, usually hot"
+  },
+  {
+    "word": "specification",
+    "definition": "a special detail or necessity for something"
+  },
+  {
+    "word": "spray",
+    "definition": "to send tiny drops of liquid into the air"
+  },
+  {
+    "word": "steadily",
+    "definition": "in a slow and even manner"
+  },
+  {
+    "word": "steak",
+    "definition": "a big piece of meat or fish"
+  },
+  {
+    "word": "suspicious",
+    "definition": "the feeling that something is not right"
+  },
+  {
+    "word": "tech",
+    "definition": "short form of the word 'technology'"
+  },
+  {
+    "word": "tempt",
+    "definition": "to try to get someone to do something they should not"
+  },
+  {
+    "word": "tomato",
+    "definition": "a round red fruit, usually thought of as a vegetable"
+  },
+  {
+    "word": "toner",
+    "definition": "the ink in the computer or printer"
+  },
+  {
+    "word": "towel",
+    "definition": "a big cloth used for drying after a shower or swim"
+  },
+  {
+    "word": "traditionally",
+    "definition": "to do things the way they used to be done"
+  },
+  {
+    "word": "tray",
+    "definition": "a flat plate used to carry things, usually coffee or tea"
+  },
+  {
+    "word": "unattended",
+    "definition": "when someone or something is not being watched"
+  },
+  {
+    "word": "unavailable",
+    "definition": "not ready for use"
+  },
+  {
+    "word": "unfamiliar",
+    "definition": "not well known"
+  },
+  {
+    "word": "unlimited",
+    "definition": "without end"
+  },
+  {
+    "word": "unpleasant",
+    "definition": "not nice, not comfortable"
+  },
+  {
+    "word": "unplug",
+    "definition": "to pull out an electrical cord from its socket"
+  },
+  {
+    "word": "unreliable",
+    "definition": "not trustworthy"
+  },
+  {
+    "word": "wisely",
+    "definition": "to do something that is the right thing to do"
+  },
+  {
+    "word": "wool",
+    "definition": "the fur of sheep"
+  },
+  {
+    "word": "absorb",
+    "definition": "to take in or soak up"
+  },
+  {
+    "word": "accommodate",
+    "definition": "to give something that is needed"
+  },
+  {
+    "word": "accomplishment",
+    "definition": "something you achieve"
+  },
+  {
+    "word": "accumulate",
+    "definition": "to slowly get more and more of something, e.g. wealth"
+  },
+  {
+    "word": "accuracy",
+    "definition": "the state of being exact and correct"
+  },
+  {
+    "word": "accurately",
+    "definition": "when something is done correctly"
+  },
+  {
+    "word": "administrative",
+    "definition": "to do with the management of an office"
+  },
+  {
+    "word": "administrator",
+    "definition": "the person who manages an office"
+  },
+  {
+    "word": "admission",
+    "definition": "entrance into something"
+  },
+  {
+    "word": "affirmative",
+    "definition": "positive, meaning 'yes'"
+  },
+  {
+    "word": "alert",
+    "definition": "wide awake, aware"
+  },
+  {
+    "word": "allocate",
+    "definition": "to assign (usually people or money) to something"
+  },
+  {
+    "word": "alternatively",
+    "definition": "another option"
+  },
+  {
+    "word": "annually",
+    "definition": "every 12 months"
+  },
+  {
+    "word": "apology",
+    "definition": "saying you are sorry for something"
+  },
+  {
+    "word": "approximate",
+    "definition": "to give a general number as a guess"
+  },
+  {
+    "word": "architect",
+    "definition": "someone who designs buildings"
+  },
+  {
+    "word": "architectural",
+    "definition": "to do with the design of buildings"
+  },
+  {
+    "word": "aspect",
+    "definition": "a part or a feature "
+  },
+  {
+    "word": "assemble",
+    "definition": "to gather people together"
+  },
+  {
+    "word": "assembly",
+    "definition": "when people are gathered together"
+  },
+  {
+    "word": "assignment",
+    "definition": "a project or task"
+  },
+  {
+    "word": "athletic",
+    "definition": "to do with sports"
+  },
+  {
+    "word": "audit",
+    "definition": "to check something is correct, usually related to accounts in business"
+  },
+  {
+    "word": "auditor",
+    "definition": "a person who checks to make sure things are correct"
+  },
+  {
+    "word": "authorization",
+    "definition": "the permission given to do something"
+  },
+  {
+    "word": "authorize",
+    "definition": "to give permission for something"
+  },
+  {
+    "word": "bacteria",
+    "definition": "small microbes that often make you sick"
+  },
+  {
+    "word": "bargain",
+    "definition": "a good deal, a good price"
+  },
+  {
+    "word": "bench",
+    "definition": "a long, usually wooden, seat found mainly in parks"
+  },
+  {
+    "word": "cabinet",
+    "definition": "a piece of furniture with shelves to store things"
+  },
+  {
+    "word": "cancellation",
+    "definition": "when something is not going to happen after all"
+  },
+  {
+    "word": "chairperson",
+    "definition": "the person in charge of a meeting"
+  },
+  {
+    "word": "chilly",
+    "definition": "when the weather is cold and causing you to shiver"
+  },
+  {
+    "word": "circuit",
+    "definition": "a set path you move along"
+  },
+  {
+    "word": "circulate",
+    "definition": "to move around in a circle"
+  },
+  {
+    "word": "circulation",
+    "definition": "to distribute in a wide area, e.g. newspaper "
+  },
+  {
+    "word": "clarify",
+    "definition": "to explain or make clear"
+  },
+  {
+    "word": "client",
+    "definition": "someone who pays for a service"
+  },
+  {
+    "word": "clinic",
+    "definition": "a place you go when sick, like a mini-hospital"
+  },
+  {
+    "word": "collaboration",
+    "definition": "the act of working together"
+  },
+  {
+    "word": "compensate",
+    "definition": "to give money for a service"
+  },
+  {
+    "word": "conductor",
+    "definition": "a person who leads"
+  },
+  {
+    "word": "confirmation",
+    "definition": "something that verifies something is true"
+  },
+  {
+    "word": "consent",
+    "definition": "to give permission"
+  },
+  {
+    "word": "considerably",
+    "definition": "to a large degree"
+  },
+  {
+    "word": "consistently",
+    "definition": "doing something the same way every time"
+  },
+  {
+    "word": "consultation",
+    "definition": "a meeting between two people"
+  },
+  {
+    "word": "consumption",
+    "definition": "the act of eating"
+  },
+  {
+    "word": "contestant",
+    "definition": "someone who is part of a contest"
+  },
+  {
+    "word": "continental",
+    "definition": "to do with the mainland"
+  },
+  {
+    "word": "contradict",
+    "definition": "to say the opposite of"
+  },
+  {
+    "word": "contradiction",
+    "definition": "the opposite of something"
+  },
+  {
+    "word": "convey",
+    "definition": "to give a message to someone"
+  },
+  {
+    "word": "cooperate",
+    "definition": "to work together nicely"
+  },
+  {
+    "word": "coordinate",
+    "definition": "to organize or manage"
+  },
+  {
+    "word": "coordinator",
+    "definition": "someone whose job is to organize things "
+  },
+  {
+    "word": "correspondence",
+    "definition": "communication by letter"
+  },
+  {
+    "word": "counselor",
+    "definition": "someone who helps people with problems for a living"
+  },
+  {
+    "word": "criteria",
+    "definition": "details used to make a decision"
+  },
+  {
+    "word": "cruise",
+    "definition": "a long, relaxing holiday on a ship"
+  },
+  {
+    "word": "dedication",
+    "definition": "the act of being faithful to someone or something"
+  },
+  {
+    "word": "delegate",
+    "definition": "to give others tasks to do"
+  },
+  {
+    "word": "descriptive",
+    "definition": "something that tells you more about it"
+  },
+  {
+    "word": "designate",
+    "definition": "to name or select someone for something"
+  },
+  {
+    "word": "devastate",
+    "definition": "to destroy completely"
+  },
+  {
+    "word": "disable",
+    "definition": "to make something not work"
+  },
+  {
+    "word": "disagreement",
+    "definition": "the act of having a difference of opinion"
+  },
+  {
+    "word": "disposal",
+    "definition": "the act of getting rid of something"
+  },
+  {
+    "word": "dispose",
+    "definition": "to get rid of something"
+  },
+  {
+    "word": "disrupt",
+    "definition": "to interrupt and cause chaos"
+  },
+  {
+    "word": "disruption",
+    "definition": "the act of interrupting and causing chaos"
+  },
+  {
+    "word": "distribution",
+    "definition": "the act of circulating things in a wide area"
+  },
+  {
+    "word": "distributor",
+    "definition": "someone who sells or sends things to different areas"
+  },
+  {
+    "word": "documentation",
+    "definition": "the act of showing proof in writing"
+  },
+  {
+    "word": "donate",
+    "definition": "to give money to a cause or charity"
+  },
+  {
+    "word": "donation",
+    "definition": "the money that is given to a cause or charity"
+  },
+  {
+    "word": "dose",
+    "definition": "the amount of medicine taken at one time"
+  },
+  {
+    "word": "drill",
+    "definition": "to bore a hole into something"
+  },
+  {
+    "word": "eager",
+    "definition": "to be excited to help or do something"
+  },
+  {
+    "word": "effectiveness",
+    "definition": "the state of working properly or as expected"
+  },
+  {
+    "word": "efficiently",
+    "definition": "to do something well in a little amount of time"
+  },
+  {
+    "word": "electronically",
+    "definition": "to do something using electronics"
+  },
+  {
+    "word": "elevate",
+    "definition": "to raise or make higher"
+  },
+  {
+    "word": "elevator",
+    "definition": "a machine that takes people to different floors in a building"
+  },
+  {
+    "word": "enthusiasm",
+    "definition": "the act of being excited about something"
+  },
+  {
+    "word": "enthusiast",
+    "definition": "a person who is crazy about something, e.g. a sports enthusiast"
+  },
+  {
+    "word": "enthusiastic",
+    "definition": "to show excitement for something"
+  },
+  {
+    "word": "enthusiastically",
+    "definition": "to do something with excitement and energy"
+  },
+  {
+    "word": "evident",
+    "definition": "to be clear or obvious"
+  },
+  {
+    "word": "exceptional",
+    "definition": "beyond excellent"
+  },
+  {
+    "word": "excessive",
+    "definition": "way too much of something"
+  },
+  {
+    "word": "exclusive",
+    "definition": "only available to a certain group"
+  },
+  {
+    "word": "exclusively",
+    "definition": "offered only to a certain group"
+  },
+  {
+    "word": "explorer",
+    "definition": "a person who travels to unknown places "
+  },
+  {
+    "word": "fabric",
+    "definition": "material, cloth"
+  },
+  {
+    "word": "facilitate",
+    "definition": "to help or make easier"
+  },
+  {
+    "word": "faculty",
+    "definition": "an instructor or professor at university"
+  },
+  {
+    "word": "flavor",
+    "definition": "the taste of something, e.g. sweet, sour"
+  },
+  {
+    "word": "flexibility",
+    "definition": "the ability to adapt or change easily"
+  },
+  {
+    "word": "formally",
+    "definition": "officially"
+  },
+  {
+    "word": "foster",
+    "definition": "to promote or bring about"
+  },
+  {
+    "word": "founder",
+    "definition": "someone who starts a business or organization"
+  },
+  {
+    "word": "generous",
+    "definition": "to give willingly and freely"
+  },
+  {
+    "word": "goods",
+    "definition": "resources or things bought or sold"
+  },
+  {
+    "word": "graduation",
+    "definition": "the ceremony upon finishing a degree or program"
+  },
+  {
+    "word": "graphic",
+    "definition": "to do with a picture or image"
+  },
+  {
+    "word": "graphics",
+    "definition": "images or pictures "
+  },
+  {
+    "word": "hazard",
+    "definition": "something that is dangerous"
+  },
+  {
+    "word": "hazardous",
+    "definition": "to be dangerous"
+  },
+  {
+    "word": "highway",
+    "definition": "a major road connecting cities"
+  },
+  {
+    "word": "ideally",
+    "definition": "in a perfect world"
+  },
+  {
+    "word": "illogical",
+    "definition": "not making any sense, lack of reasoning"
+  },
+  {
+    "word": "impact",
+    "definition": "the effect one thing makes on another"
+  },
+  {
+    "word": "inappropriate",
+    "definition": "not suitable for use in a given situation"
+  },
+  {
+    "word": "inefficient",
+    "definition": "not working well or quickly"
+  },
+  {
+    "word": "inflate",
+    "definition": "to make bigger"
+  },
+  {
+    "word": "ingredient",
+    "definition": "something listed in a recipe, e.g. flour, sugar"
+  },
+  {
+    "word": "inquire",
+    "definition": "to ask about "
+  },
+  {
+    "word": "insert",
+    "definition": "to put into or add into"
+  },
+  {
+    "word": "inspiration",
+    "definition": "the thing or person that encourages you to do something"
+  },
+  {
+    "word": "installation",
+    "definition": "the act of connecting or inputting something "
+  },
+  {
+    "word": "institute",
+    "definition": "like a school or college"
+  },
+  {
+    "word": "insufficient",
+    "definition": "not enough"
+  },
+  {
+    "word": "interactive",
+    "definition": "to engage with others"
+  },
+  {
+    "word": "interfere",
+    "definition": "to take part in something that is not your business"
+  },
+  {
+    "word": "internationally",
+    "definition": "around the world"
+  },
+  {
+    "word": "interpreter",
+    "definition": "someone who translates from one language to another"
+  },
+  {
+    "word": "invention",
+    "definition": "the idea or creation of something new"
+  },
+  {
+    "word": "irrelevant",
+    "definition": "not related to the topic, not important"
+  },
+  {
+    "word": "jet",
+    "definition": "an airplane"
+  },
+  {
+    "word": "leak",
+    "definition": "to drip water or other liquid"
+  },
+  {
+    "word": "lease",
+    "definition": "to rent"
+  },
+  {
+    "word": "lecturer",
+    "definition": "an instructor or professor"
+  },
+  {
+    "word": "lobby",
+    "definition": "the main area of a hotel just inside the entrance"
+  },
+  {
+    "word": "logical",
+    "definition": "to do with reason"
+  },
+  {
+    "word": "loyal",
+    "definition": "to stay true or faithful"
+  },
+  {
+    "word": "loyalty",
+    "definition": "the act of being faithful to someone or something"
+  },
+  {
+    "word": "mechanic",
+    "definition": "a person who fixes machinery for a living"
+  },
+  {
+    "word": "mechanical",
+    "definition": "to do with machines"
+  },
+  {
+    "word": "media",
+    "definition": "related to different forms of communication, e.g. radio, TV, newspapers etc."
+  },
+  {
+    "word": "merge",
+    "definition": "to bring two things together to make one"
+  },
+  {
+    "word": "merger",
+    "definition": "when one company buys another company to create one big company"
+  },
+  {
+    "word": "mild",
+    "definition": "soft, gentle, not strong in nature"
+  },
+  {
+    "word": "modification",
+    "definition": "a change made on something"
+  },
+  {
+    "word": "nominate",
+    "definition": "to suggest someone for to do or be something"
+  },
+  {
+    "word": "nomination",
+    "definition": "the state of being suggested for something"
+  },
+  {
+    "word": "obligate",
+    "definition": "to have to do"
+  },
+  {
+    "word": "oblige",
+    "definition": "to make someone have to do something"
+  },
+  {
+    "word": "obtain",
+    "definition": "to get"
+  },
+  {
+    "word": "occupancy",
+    "definition": "the state of living in a place"
+  },
+  {
+    "word": "occupant",
+    "definition": "a person who lives in a place, e.g. renter, tenant"
+  },
+  {
+    "word": "occupation",
+    "definition": "profession or job"
+  },
+  {
+    "word": "orientation",
+    "definition": "something that makes you familiar with a place"
+  },
+  {
+    "word": "overlook",
+    "definition": "to ignore, to not notice "
+  },
+  {
+    "word": "pad",
+    "definition": "many sheets of paper glued together for writing"
+  },
+  {
+    "word": "pepper",
+    "definition": "a strong spice (black or white)"
+  },
+  {
+    "word": "permanently",
+    "definition": "for ever"
+  },
+  {
+    "word": "precede",
+    "definition": "to happen before something else"
+  },
+  {
+    "word": "prediction",
+    "definition": "a guess about the future"
+  },
+  {
+    "word": "profitable",
+    "definition": "able to make money"
+  },
+  {
+    "word": "prohibit",
+    "definition": "not allowed"
+  },
+  {
+    "word": "prominent",
+    "definition": "important, significant"
+  },
+  {
+    "word": "promotional",
+    "definition": "to do with encouraging sales"
+  },
+  {
+    "word": "promptly",
+    "definition": "done right away, immediately"
+  },
+  {
+    "word": "prospective",
+    "definition": "possible in the future, e.g. prospective client"
+  },
+  {
+    "word": "publish",
+    "definition": "to print and distribute"
+  },
+  {
+    "word": "puzzle",
+    "definition": "something you do not understand"
+  },
+  {
+    "word": "reception",
+    "definition": "the act of greeting people"
+  },
+  {
+    "word": "receptionist",
+    "definition": "someone who works at the front desk, e.g. secretary"
+  },
+  {
+    "word": "recession",
+    "definition": "a less successful time in the economy"
+  },
+  {
+    "word": "recruiter",
+    "definition": "a person who hires people for businesses"
+  },
+  {
+    "word": "recruitment",
+    "definition": "the act of hiring people for businesses"
+  },
+  {
+    "word": "reinforce",
+    "definition": "to make stronger"
+  },
+  {
+    "word": "relieve",
+    "definition": "to take something away from someone"
+  },
+  {
+    "word": "reluctant",
+    "definition": "not very willing to do something"
+  },
+  {
+    "word": "reproduce",
+    "definition": "to make one or more copies of something"
+  },
+  {
+    "word": "resemble",
+    "definition": "to look like, similar to"
+  },
+  {
+    "word": "residence",
+    "definition": "the house or place you live"
+  },
+  {
+    "word": "residential",
+    "definition": "an area where people live"
+  },
+  {
+    "word": "resignation",
+    "definition": "to quit one's job"
+  },
+  {
+    "word": "respondent",
+    "definition": "someone who replies to something"
+  },
+  {
+    "word": "resume",
+    "definition": "to continue or start again"
+  },
+  {
+    "word": "retailer",
+    "definition": "a store that sells something"
+  },
+  {
+    "word": "retreat",
+    "definition": "to move back or withdraw from a place"
+  },
+  {
+    "word": "reviewer",
+    "definition": "someone who checks written work"
+  },
+  {
+    "word": "revision",
+    "definition": "to change or rewrite something"
+  },
+  {
+    "word": "revolutionize",
+    "definition": "to make a new, big change in society"
+  },
+  {
+    "word": "rumor",
+    "definition": "something said by people but not necessarily true"
+  },
+  {
+    "word": "satellite",
+    "definition": "another branch of an office elsewhere"
+  },
+  {
+    "word": "sculpture",
+    "definition": "a figure or statue"
+  },
+  {
+    "word": "shortly",
+    "definition": "very soon"
+  },
+  {
+    "word": "silently",
+    "definition": "in a quiet manner"
+  },
+  {
+    "word": "spill",
+    "definition": "to accidentally empty a container, e.g. spill a glass of milk"
+  },
+  {
+    "word": "statistics",
+    "definition": "math related to data collection "
+  },
+  {
+    "word": "strategic",
+    "definition": "in a way carefully thought about"
+  },
+  {
+    "word": "strictly",
+    "definition": "in a strong manner, in a manner that follows the rules"
+  },
+  {
+    "word": "subsidize",
+    "definition": "to give financial help"
+  },
+  {
+    "word": "substantially",
+    "definition": "a great deal, amount"
+  },
+  {
+    "word": "suburb",
+    "definition": "living area outside the city"
+  },
+  {
+    "word": "superior",
+    "definition": "the leader, someone higher than you in rank"
+  },
+  {
+    "word": "supervise",
+    "definition": "to watch over and manage"
+  },
+  {
+    "word": "supervisor",
+    "definition": "the person who is in charge"
+  },
+  {
+    "word": "tactic",
+    "definition": "like a plan or scheme"
+  },
+  {
+    "word": "temporarily",
+    "definition": "not for ever, for a short while"
+  },
+  {
+    "word": "thorough",
+    "definition": "to be carefully and completely done, e.g. a thorough search"
+  },
+  {
+    "word": "thoroughly",
+    "definition": "to do something carefully with attention to detail"
+  },
+  {
+    "word": "thrill",
+    "definition": "excitement"
+  },
+  {
+    "word": "ton",
+    "definition": "a measurement equalling 2000 pounds"
+  },
+  {
+    "word": "transaction",
+    "definition": "an exchange between two people"
+  },
+  {
+    "word": "translation",
+    "definition": "something that is changed into another language"
+  },
+  {
+    "word": "translator",
+    "definition": "the person who changes something into another language"
+  },
+  {
+    "word": "transmission",
+    "definition": "the message sent from one to another"
+  },
+  {
+    "word": "transmit",
+    "definition": "to send a message to someone"
+  },
+  {
+    "word": "tremendous",
+    "definition": "extraordinary or excellent"
+  },
+  {
+    "word": "tunnel",
+    "definition": "a hole one can travel through"
+  },
+  {
+    "word": "unspecified",
+    "definition": "not clearly marked or known"
+  },
+  {
+    "word": "urgent",
+    "definition": "very important, needing attention now"
+  },
+  {
+    "word": "urgently",
+    "definition": "to do something right away"
+  },
+  {
+    "word": "utility",
+    "definition": "usefulness"
+  },
+  {
+    "word": "valid",
+    "definition": "just, fair, right"
+  },
+  {
+    "word": "violate",
+    "definition": "to break the rule or law"
+  },
+  {
+    "word": "violation",
+    "definition": "the act of breaking a rule or law"
+  },
+  {
+    "word": "withdrawal",
+    "definition": "the act of taking something away or out of something, e.g. bank withdrawal"
+  },
+  {
+    "word": "aboard",
+    "definition": "on or in a moving vehicle, e.g. aboard the boat"
+  },
+  {
+    "word": "absent",
+    "definition": "missing, not present"
+  },
+  {
+    "word": "accountant",
+    "definition": "a person responsible for the money in a business"
+  },
+  {
+    "word": "accustom",
+    "definition": "to get used to"
+  },
+  {
+    "word": "activate",
+    "definition": "to start or begin something"
+  },
+  {
+    "word": "adhere",
+    "definition": "to stay with or follow , e.g. adhere to rules"
+  },
+  {
+    "word": "adjacent",
+    "definition": "next to, beside"
+  },
+  {
+    "word": "administer",
+    "definition": "to manage an office"
+  },
+  {
+    "word": "alike",
+    "definition": "similar, almost the same"
+  },
+  {
+    "word": "alternate",
+    "definition": "another option"
+  },
+  {
+    "word": "amateur",
+    "definition": "a beginner, not a professional, done for pleasure not for pay"
+  },
+  {
+    "word": "ambassador",
+    "definition": "somebody who represents somehting, usually a country"
+  },
+  {
+    "word": "ambitious",
+    "definition": "hard-working, wanting to achieve much"
+  },
+  {
+    "word": "anniversary",
+    "definition": "a date to remember"
+  },
+  {
+    "word": "antique",
+    "definition": "very old item, usually furniture or jewellery"
+  },
+  {
+    "word": "applicable",
+    "definition": "relating to"
+  },
+  {
+    "word": "applicant",
+    "definition": "a person who submits papers in order to do something, e.g. job applicant"
+  },
+  {
+    "word": "appraisal",
+    "definition": "an evaluation "
+  },
+  {
+    "word": "archive",
+    "definition": "a place where documents are kept for a long time"
+  },
+  {
+    "word": "attain",
+    "definition": "to get or achieve"
+  },
+  {
+    "word": "attorney",
+    "definition": "lawyer"
+  },
+  {
+    "word": "auction",
+    "definition": "where things are sold to highest payer"
+  },
+  {
+    "word": "authentic",
+    "definition": "real, not fake"
+  },
+  {
+    "word": "auto",
+    "definition": "car"
+  },
+  {
+    "word": "automobile",
+    "definition": "long name for 'car'"
+  },
+  {
+    "word": "await",
+    "definition": "to wait for, or expect, something to happen"
+  },
+  {
+    "word": "balloon",
+    "definition": "a colorful round object made of rubber that is filled with air"
+  },
+  {
+    "word": "bankrupt",
+    "definition": "to have no more money"
+  },
+  {
+    "word": "bankruptcy",
+    "definition": "the act of having no more money to pay bills"
+  },
+  {
+    "word": "baseball",
+    "definition": "a sports game with a bat and ball"
+  },
+  {
+    "word": "basement",
+    "definition": "the level under the ground floor"
+  },
+  {
+    "word": "behalf",
+    "definition": "to speak or do something for someone else, e.g. on behalf of…"
+  },
+  {
+    "word": "beneficial",
+    "definition": "good for you, positive effect"
+  },
+  {
+    "word": "bicycle",
+    "definition": "a vehicle with two wheels and pedals "
+  },
+  {
+    "word": "biography",
+    "definition": "someone's life story"
+  },
+  {
+    "word": "biology",
+    "definition": "the study of nature"
+  },
+  {
+    "word": "bonus",
+    "definition": "extra, usually in the form of money"
+  },
+  {
+    "word": "broker",
+    "definition": "someone who buys and sells thing for a percentage of sales"
+  },
+  {
+    "word": "bulb",
+    "definition": "the shape of a teardrop, e.g. light bulb"
+  },
+  {
+    "word": "bulk",
+    "definition": "in big amount"
+  },
+  {
+    "word": "cab",
+    "definition": "taxi"
+  },
+  {
+    "word": "cabin",
+    "definition": "a small house in the forest"
+  },
+  {
+    "word": "calendar",
+    "definition": "something you hang on the wall that has the months of the year on it"
+  },
+  {
+    "word": "campus",
+    "definition": "place where university buildings are"
+  },
+  {
+    "word": "cargo",
+    "definition": "the things carried in the hold of an airplane or on a truck"
+  },
+  {
+    "word": "cater",
+    "definition": "to make and deliver food "
+  },
+  {
+    "word": "caterer",
+    "definition": "the person who makes food and delivers it for a living"
+  },
+  {
+    "word": "caution",
+    "definition": "a warning to be careful"
+  },
+  {
+    "word": "cautious",
+    "definition": "to be careful"
+  },
+  {
+    "word": "celebrity",
+    "definition": "someone famous"
+  },
+  {
+    "word": "certificate",
+    "definition": "a piece of paper stating you did something"
+  },
+  {
+    "word": "certification",
+    "definition": "written proof that you did something or that something is good enough"
+  },
+  {
+    "word": "certify",
+    "definition": "to state something is real or correct"
+  },
+  {
+    "word": "chef",
+    "definition": "a person who cooks for a living"
+  },
+  {
+    "word": "chemistry",
+    "definition": "the study of chemicals"
+  },
+  {
+    "word": "chronic",
+    "definition": "for a long time"
+  },
+  {
+    "word": "cinema",
+    "definition": "a movie theatre"
+  },
+  {
+    "word": "classify",
+    "definition": "to put into a category"
+  },
+  {
+    "word": "clerk",
+    "definition": "someone who works at a counter"
+  },
+  {
+    "word": "closure",
+    "definition": "when something is closed for good"
+  },
+  {
+    "word": "commute",
+    "definition": "to travel a long way to work and back"
+  },
+  {
+    "word": "commuter",
+    "definition": "someone who travels a long way to work and back"
+  },
+  {
+    "word": "compact",
+    "definition": "tightly packed in a small size"
+  },
+  {
+    "word": "compatible",
+    "definition": "to go well with"
+  },
+  {
+    "word": "compile",
+    "definition": "to collect or gather data"
+  },
+  {
+    "word": "compliance",
+    "definition": "the act of obeying rules"
+  },
+  {
+    "word": "comply",
+    "definition": "to obey a rule"
+  },
+  {
+    "word": "comprehension",
+    "definition": "the act of understanding"
+  },
+  {
+    "word": "confidential",
+    "definition": "something that needs to be kept secret"
+  },
+  {
+    "word": "conform",
+    "definition": "to be like others"
+  },
+  {
+    "word": "congratulate",
+    "definition": "to tell someone 'good job' on a happy occasion"
+  },
+  {
+    "word": "congratulation",
+    "definition": "the act of congratulating"
+  },
+  {
+    "word": "contrary",
+    "definition": "opposite to"
+  },
+  {
+    "word": "convenience",
+    "definition": "the state of being easy"
+  },
+  {
+    "word": "convenient",
+    "definition": "to be easy to do"
+  },
+  {
+    "word": "conveniently",
+    "definition": "in a manner that is easy"
+  },
+  {
+    "word": "copyright",
+    "definition": "when you cannot copy work"
+  },
+  {
+    "word": "cord",
+    "definition": "electric cable"
+  },
+  {
+    "word": "cordless",
+    "definition": "no electric cable needed"
+  },
+  {
+    "word": "costume",
+    "definition": "something unusual you dress up in, e.g. for Hallowe'en"
+  },
+  {
+    "word": "courtesy",
+    "definition": "a kindness to someone"
+  },
+  {
+    "word": "deadline",
+    "definition": "when something must be finished"
+  },
+  {
+    "word": "deduct",
+    "definition": "to minus or take away"
+  },
+  {
+    "word": "deduction",
+    "definition": "the act of taking away, usually money"
+  },
+  {
+    "word": "defect",
+    "definition": "something that is faulty"
+  },
+  {
+    "word": "defective",
+    "definition": "when something is not working"
+  },
+  {
+    "word": "delicate",
+    "definition": "need to handle with care"
+  },
+  {
+    "word": "depart",
+    "definition": "to leave"
+  },
+  {
+    "word": "departure",
+    "definition": "the act of leaving"
+  },
+  {
+    "word": "dependence",
+    "definition": "the state of needing someone"
+  },
+  {
+    "word": "destination",
+    "definition": "the place you want to be at the end of a journey"
+  },
+  {
+    "word": "detach",
+    "definition": "to remove from something"
+  },
+  {
+    "word": "deteriorate",
+    "definition": "to become worse in state"
+  },
+  {
+    "word": "diagnose",
+    "definition": "to figure out what is wrong"
+  },
+  {
+    "word": "diagram",
+    "definition": "a drawing explaining something"
+  },
+  {
+    "word": "dial",
+    "definition": "to make a phone call by pressing the buttons"
+  },
+  {
+    "word": "diamond",
+    "definition": "a very valuable gem"
+  },
+  {
+    "word": "discard",
+    "definition": "to throw away"
+  },
+  {
+    "word": "dispatch",
+    "definition": "to send out "
+  },
+  {
+    "word": "distract",
+    "definition": "to take your focus away from something "
+  },
+  {
+    "word": "distraction",
+    "definition": "the act of taking your focus away from something"
+  },
+  {
+    "word": "dividend",
+    "definition": "money received as a bonus "
+  },
+  {
+    "word": "dock",
+    "definition": "the place where boats get tied up"
+  },
+  {
+    "word": "documentary",
+    "definition": "a film about a real life or event"
+  },
+  {
+    "word": "dull",
+    "definition": "boring; not exciting"
+  },
+  {
+    "word": "duration",
+    "definition": "how long something takes"
+  },
+  {
+    "word": "dynamic",
+    "definition": "energetic"
+  },
+  {
+    "word": "elegant",
+    "definition": "fine or beautiful"
+  },
+  {
+    "word": "eligible",
+    "definition": "able to be chosen"
+  },
+  {
+    "word": "embassy",
+    "definition": "the office of an ambassador"
+  },
+  {
+    "word": "enclose",
+    "definition": "to surround fully"
+  },
+  {
+    "word": "enroll",
+    "definition": "to register for something"
+  },
+  {
+    "word": "enrollment",
+    "definition": "the act of registering for something"
+  },
+  {
+    "word": "entrepreneur",
+    "definition": "a business person who starts companies"
+  },
+  {
+    "word": "escort",
+    "definition": "to go with someone"
+  },
+  {
+    "word": "ethics",
+    "definition": "morals or belief system"
+  },
+  {
+    "word": "evacuate",
+    "definition": "to make people leave an area"
+  },
+  {
+    "word": "evenly",
+    "definition": "in equal ways"
+  },
+  {
+    "word": "exemption",
+    "definition": "an exception to the rule"
+  },
+  {
+    "word": "exit",
+    "definition": "to leave"
+  },
+  {
+    "word": "exotic",
+    "definition": "from another country"
+  },
+  {
+    "word": "expertise",
+    "definition": "excellent knowledge on something"
+  },
+  {
+    "word": "fare",
+    "definition": "the cost for a ride, e.g. bus, or taxi"
+  },
+  {
+    "word": "fax",
+    "definition": "to send using a fax machine"
+  },
+  {
+    "word": "ferry",
+    "definition": "a big boat that carries people and cars"
+  },
+  {
+    "word": "fiscal",
+    "definition": "to do with money"
+  },
+  {
+    "word": "flaw",
+    "definition": "something that is faulty in otherwise perfect person/thing"
+  },
+  {
+    "word": "fleet",
+    "definition": "a group of ships travelling together"
+  },
+  {
+    "word": "flour",
+    "definition": "white powder from wheat used in baking"
+  },
+  {
+    "word": "fog",
+    "definition": "a cloud of white filled with small water droplets"
+  },
+  {
+    "word": "forbid",
+    "definition": "to not allow"
+  },
+  {
+    "word": "fork",
+    "definition": "eating utensil"
+  },
+  {
+    "word": "forum",
+    "definition": "a place for open discussion"
+  },
+  {
+    "word": "franchise",
+    "definition": "one of many branches of a business you buy, e.g.KFC"
+  },
+  {
+    "word": "furnish",
+    "definition": "to put furniture in"
+  },
+  {
+    "word": "gallon",
+    "definition": "a type of measurement equal to 3.78 liters"
+  },
+  {
+    "word": "generic",
+    "definition": "general"
+  },
+  {
+    "word": "genre",
+    "definition": "type of art, literature, or film, e.g. romance"
+  },
+  {
+    "word": "glove",
+    "definition": "something you wear on your hand to keep warm"
+  },
+  {
+    "word": "gossip",
+    "definition": "to talk about someone behind his/her back"
+  },
+  {
+    "word": "graph",
+    "definition": "an image that shows data"
+  },
+  {
+    "word": "grill",
+    "definition": "like a barbeque, something you cook on"
+  },
+  {
+    "word": "hardware",
+    "definition": "tools or equipment"
+  },
+  {
+    "word": "helmet",
+    "definition": "something you wear to protect your head"
+  },
+  {
+    "word": "hurricane",
+    "definition": "a strong often deadly storm that begins over the water"
+  },
+  {
+    "word": "impatient",
+    "definition": "in a hurry, not calm"
+  },
+  {
+    "word": "inconvenience",
+    "definition": "something that causes trouble or discomfort"
+  },
+  {
+    "word": "indirect",
+    "definition": "not in a straight way"
+  },
+  {
+    "word": "infer",
+    "definition": "to guess something with given information"
+  },
+  {
+    "word": "inference",
+    "definition": "the act of guessing something with given information"
+  },
+  {
+    "word": "informal",
+    "definition": "relaxed, casual - often used to describe clothes or an event"
+  },
+  {
+    "word": "ink",
+    "definition": "liquid found in pens"
+  },
+  {
+    "word": "innovative",
+    "definition": "to be creative and come up with new ideas"
+  },
+  {
+    "word": "integral",
+    "definition": "very important, necessary as part of the whole thing"
+  },
+  {
+    "word": "irritate",
+    "definition": "to bother"
+  },
+  {
+    "word": "jazz",
+    "definition": "a kind of music"
+  },
+  {
+    "word": "jewelry",
+    "definition": "gold, silver, stones etc. you wear for decoration, e.g. necklace"
+  },
+  {
+    "word": "keyboard",
+    "definition": "the part of computer that you type on "
+  },
+  {
+    "word": "kit",
+    "definition": "a box of tools or equipment"
+  },
+  {
+    "word": "ladder",
+    "definition": "something you use to climb up high"
+  },
+  {
+    "word": "landlord",
+    "definition": "the person who owns the place you rent"
+  },
+  {
+    "word": "laundry",
+    "definition": "dirty clothes that need washing"
+  },
+  {
+    "word": "leisure",
+    "definition": "something for fun or relaxing"
+  },
+  {
+    "word": "likewise",
+    "definition": "in the same way"
+  },
+  {
+    "word": "lounge",
+    "definition": "a place to relax"
+  },
+  {
+    "word": "maximize",
+    "definition": "to make use of as much as possible"
+  },
+  {
+    "word": "meantime",
+    "definition": "the time between two events"
+  },
+  {
+    "word": "merchant",
+    "definition": "a person who sells things for a living"
+  },
+  {
+    "word": "merit",
+    "definition": "to deserve praise"
+  },
+  {
+    "word": "mineral",
+    "definition": "a type of substance found in nature"
+  },
+  {
+    "word": "minimize",
+    "definition": "to make less important or smaller"
+  },
+  {
+    "word": "monument",
+    "definition": "something built to honor someone"
+  },
+  {
+    "word": "necessity",
+    "definition": "something which you need"
+  },
+  {
+    "word": "nutrition",
+    "definition": "the study of food and health"
+  },
+  {
+    "word": "omit",
+    "definition": "to leave out or not say "
+  },
+  {
+    "word": "ongoing",
+    "definition": "still happening "
+  },
+  {
+    "word": "opt",
+    "definition": "to make a choice "
+  },
+  {
+    "word": "optimistic",
+    "definition": "being positive about the future"
+  },
+  {
+    "word": "orchestra",
+    "definition": "many musicians with different instruments playing one musical piece"
+  },
+  {
+    "word": "outfit",
+    "definition": "a set of clothes like a uniform"
+  },
+  {
+    "word": "outlet",
+    "definition": "a store that sells things at a discount"
+  },
+  {
+    "word": "outlook",
+    "definition": "a view point"
+  },
+  {
+    "word": "overhead",
+    "definition": "the fixed cost of a business, e.g. rent"
+  },
+  {
+    "word": "overnight",
+    "definition": "from one day to the next"
+  },
+  {
+    "word": "oversee",
+    "definition": "to supervise"
+  },
+  {
+    "word": "packet",
+    "definition": "a small carton or package"
+  },
+  {
+    "word": "parade",
+    "definition": "walk or march"
+  },
+  {
+    "word": "patent",
+    "definition": "the right to be the only one who is allowed to make a thing"
+  },
+  {
+    "word": "patience",
+    "definition": "to accept suffering without getting angry"
+  },
+  {
+    "word": "patron",
+    "definition": "someone who gives support with time, money or effort"
+  },
+  {
+    "word": "petition",
+    "definition": "a demand for a particular action, usually signed by a lot of people "
+  },
+  {
+    "word": "physician",
+    "definition": "A doctor of medicine"
+  },
+  {
+    "word": "physics",
+    "definition": "the science of how things  like heat and light work"
+  },
+  {
+    "word": "pill",
+    "definition": "medicine in the form of a capsule that you swallow "
+  },
+  {
+    "word": "pillow",
+    "definition": "soft cushion to rest your head on when you go to bed"
+  },
+  {
+    "word": "portfolio",
+    "definition": "a collection of investments that someone owns"
+  },
+  {
+    "word": "poster",
+    "definition": "a large printed picture or notice to stick on a wall"
+  },
+  {
+    "word": "postpone",
+    "definition": "put off until a later time"
+  },
+  {
+    "word": "preliminary",
+    "definition": "The first action that comes before a more important one"
+  },
+  {
+    "word": "premium",
+    "definition": "an extra payment added to the cost"
+  },
+  {
+    "word": "prescribe",
+    "definition": "to formally tell someone what to do"
+  },
+  {
+    "word": "prescription",
+    "definition": "doctor's written order for medicine"
+  },
+  {
+    "word": "prestigious",
+    "definition": "very important and well thought of"
+  },
+  {
+    "word": "publicity",
+    "definition": "the  advertising message to let people know about a product or event"
+  },
+  {
+    "word": "questionnaire",
+    "definition": "a set of questions to find out what people think about something"
+  },
+  {
+    "word": "rack",
+    "definition": "a stand or shelf to put things on"
+  },
+  {
+    "word": "receipt",
+    "definition": "proof of payment"
+  },
+  {
+    "word": "recipient",
+    "definition": "the person who receives something  "
+  },
+  {
+    "word": "recreation",
+    "definition": "leisure"
+  },
+  {
+    "word": "recreational",
+    "definition": "what you do for relaxation in your free time"
+  },
+  {
+    "word": "recur",
+    "definition": "happens again"
+  },
+  {
+    "word": "recycle",
+    "definition": "to find another use for something that is going to be put in the trash"
+  },
+  {
+    "word": "refinery",
+    "definition": "a factory where raw materials are taken to be made pure"
+  },
+  {
+    "word": "refresh",
+    "definition": "to put new life or energy into"
+  },
+  {
+    "word": "refreshment",
+    "definition": "a small amount of food and drink served as a light meal  "
+  },
+  {
+    "word": "rehearsal",
+    "definition": "a practice session in preparation for a public performance"
+  },
+  {
+    "word": "rehearse",
+    "definition": "practise so that you get better at doing it"
+  },
+  {
+    "word": "retrieve",
+    "definition": "to go and get something back"
+  },
+  {
+    "word": "rubber",
+    "definition": "the stretchy material that elastic bands are made of"
+  },
+  {
+    "word": "rug",
+    "definition": "a small loose floor covering"
+  },
+  {
+    "word": "satisfactory",
+    "definition": "acceptable"
+  },
+  {
+    "word": "scholarship",
+    "definition": "an amount of money given to an able student to help pay for their studies"
+  },
+  {
+    "word": "seldom",
+    "definition": "not very often"
+  },
+  {
+    "word": "seminar",
+    "definition": "a discussion session or class led by a teacher, or expert "
+  },
+  {
+    "word": "signature",
+    "definition": "your name written in your own handwriting  "
+  },
+  {
+    "word": "sincerely",
+    "definition": "with honesty"
+  },
+  {
+    "word": "sketch",
+    "definition": "a simple, quickly made drawing"
+  },
+  {
+    "word": "sleeve",
+    "definition": "the part of a garment that covers some, or all, of the arm"
+  },
+  {
+    "word": "slot",
+    "definition": "a narrow opening"
+  },
+  {
+    "word": "soap",
+    "definition": "a block of material used for washing or cleaning"
+  },
+  {
+    "word": "soar",
+    "definition": "fly quickly up into the air"
+  },
+  {
+    "word": "soccer",
+    "definition": "ball game played by two teams who try to score goals without handling the ball "
+  },
+  {
+    "word": "spouse",
+    "definition": "the person you are married to"
+  },
+  {
+    "word": "stack",
+    "definition": "a pile of things placed one on top of the other"
+  },
+  {
+    "word": "stadium",
+    "definition": "sports ground surrounded by rows of seats where people go to watch events"
+  },
+  {
+    "word": "statue",
+    "definition": "a work of art, usually a model of a person or animal, made from hard material"
+  },
+  {
+    "word": "steer",
+    "definition": "guide the direction of"
+  },
+  {
+    "word": "stimulus",
+    "definition": "the reason or prompt that causes something to happen"
+  },
+  {
+    "word": "stripe",
+    "definition": "a line or band of a different color"
+  },
+  {
+    "word": "subscribe",
+    "definition": "to pay money to receive a service or product regularly"
+  },
+  {
+    "word": "subscriber",
+    "definition": "someone who pays money to receive a service or product regularly"
+  },
+  {
+    "word": "subscription",
+    "definition": "the amount of money that you pay to receive a service or product regularly"
+  },
+  {
+    "word": "suite",
+    "definition": "a set of connecting rooms, usually in a hotel"
+  },
+  {
+    "word": "superb",
+    "definition": "very good"
+  },
+  {
+    "word": "tag",
+    "definition": "a label"
+  },
+  {
+    "word": "telecommunication",
+    "definition": "exchanging audio, visual or digital information at a distance, electronically"
+  },
+  {
+    "word": "tenant",
+    "definition": "someone who pays rent for the use of property like land or rooms"
+  },
+  {
+    "word": "terminal",
+    "definition": "the place where a transport line ends, like the final train station on the line"
+  },
+  {
+    "word": "terminate",
+    "definition": "bring to an end"
+  },
+  {
+    "word": "termination",
+    "definition": "the  end of something"
+  },
+  {
+    "word": "theft",
+    "definition": "the taking and keeping of something that does not belong to you"
+  },
+  {
+    "word": "tile",
+    "definition": "a thin slab of material, often made of clay, used for covering roofs and floors"
+  },
+  {
+    "word": "tropical",
+    "definition": "hot and humid like the climate near the equator"
+  },
+  {
+    "word": "turnover",
+    "definition": "the amount of money that a business makes in an amount of time"
+  },
+  {
+    "word": "upgrade",
+    "definition": "to improve what was old or outdated"
+  },
+  {
+    "word": "validate",
+    "definition": "to confirm that something is acceptable"
+  },
+  {
+    "word": "vendor",
+    "definition": "the person who is selling something"
+  },
+  {
+    "word": "venue",
+    "definition": "the place that an event is happening"
+  },
+  {
+    "word": "verbal",
+    "definition": "spoken"
+  },
+  {
+    "word": "verify",
+    "definition": "confirm the truth of"
+  },
+  {
+    "word": "vitamin",
+    "definition": "a natural substance found in food and drink that your body needs to be healthy"
+  },
+  {
+    "word": "waiter",
+    "definition": "a man whose job it is to bring meals to your table in a restaurant or cafe"
+  },
+  {
+    "word": "waitress",
+    "definition": "a woman whose job it is to bring meals to your the table in a restaurant or cafe "
+  },
+  {
+    "word": "ward",
+    "definition": "an electoral district, a small area within which the people can all vote for the same thing"
+  },
+  {
+    "word": "warehouse",
+    "definition": "a building where a large number of things are stored while they are waiting to be sold"
+  },
+  {
+    "word": "whale",
+    "definition": "a large mamal that lives in the sea"
+  },
+  {
+    "word": "accessory",
+    "definition": "partner in crime"
+  },
+  {
+    "word": "aisle",
+    "definition": "long narrow area for walking between rows of something"
+  },
+  {
+    "word": "allergy",
+    "definition": "condition that means you get ill if you come into contact with a particular material"
+  },
+  {
+    "word": "ample",
+    "definition": "more than enough of"
+  },
+  {
+    "word": "appendix",
+    "definition": "an extra bit of information at the end of a book or document"
+  },
+  {
+    "word": "appliance",
+    "definition": "a machine or device that does a particular task"
+  },
+  {
+    "word": "apprentice",
+    "definition": "someone who is learning a trade by working with an expert"
+  },
+  {
+    "word": "arc",
+    "definition": "a curved line, like part of a circle"
+  },
+  {
+    "word": "automate",
+    "definition": "To make a process that does a task over and over again by machine"
+  },
+  {
+    "word": "badge",
+    "definition": "a small piece of material with your name and details on that you wear to show who you are"
+  },
+  {
+    "word": "balcony",
+    "definition": "a small floor area with a wall or fence round it that is joined to the outside of a building"
+  },
+  {
+    "word": "basketball",
+    "definition": "a game played by two teams who try to score goals by throwing the ball"
+  },
+  {
+    "word": "brochure",
+    "definition": "a small paper book that gives information about a product or service"
+  },
+  {
+    "word": "bulletin",
+    "definition": "a short news report"
+  },
+  {
+    "word": "candy",
+    "definition": "a very sweet food, made from sugar and other things, that is good to eat"
+  },
+  {
+    "word": "charitable",
+    "definition": "giving free money or help of some kind to someone who needs it"
+  },
+  {
+    "word": "circus",
+    "definition": "a showy or noisy performance"
+  },
+  {
+    "word": "clap",
+    "definition": "hitting your hands together to make a noise to show you enjoyed something"
+  },
+  {
+    "word": "comb",
+    "definition": "make smooth by getting the knots out of"
+  },
+  {
+    "word": "compartment",
+    "definition": "a part of a closed area that has been separated from a bigger one"
+  },
+  {
+    "word": "compliment",
+    "definition": "saying something nice about someone"
+  },
+  {
+    "word": "complimentary",
+    "definition": "it does not cost anything, it is free"
+  },
+  {
+    "word": "congestion",
+    "definition": "a blockage; something that blocks it up"
+  },
+  {
+    "word": "consecutive",
+    "definition": "following one after the other "
+  },
+  {
+    "word": "cosmetic",
+    "definition": "makes something look better without changing it too much"
+  },
+  {
+    "word": "crane",
+    "definition": "a machine used to move and lift heavy things"
+  },
+  {
+    "word": "cushion",
+    "definition": "a pad to make something more comfortable"
+  },
+  {
+    "word": "delete",
+    "definition": "remove "
+  },
+  {
+    "word": "dentist",
+    "definition": "a person who looks after your teeth for a living"
+  },
+  {
+    "word": "dessert",
+    "definition": "sweet food you eat after your main meal"
+  },
+  {
+    "word": "diagnostic",
+    "definition": "how you solve problems by working out what is wrong "
+  },
+  {
+    "word": "discrepancy",
+    "definition": "an unexpected difference between two things that needs to be explained"
+  },
+  {
+    "word": "dissatisfy",
+    "definition": "to make someone not pleased with what you have done"
+  },
+  {
+    "word": "drastically",
+    "definition": "very seriously"
+  },
+  {
+    "word": "drought",
+    "definition": "a period of time when there is very little rainfall"
+  },
+  {
+    "word": "duplicate",
+    "definition": "make an exact copy"
+  },
+  {
+    "word": "durable",
+    "definition": "very long lasting"
+  },
+  {
+    "word": "earthquake",
+    "definition": "when the ground shakes due to the natural movement of rocks underground"
+  },
+  {
+    "word": "embed",
+    "definition": "to push something deep inside something else"
+  },
+  {
+    "word": "erase",
+    "definition": "to remove or delete"
+  },
+  {
+    "word": "expiration",
+    "definition": "the end of a period of time"
+  },
+  {
+    "word": "expire",
+    "definition": "Come to an end "
+  },
+  {
+    "word": "factual",
+    "definition": "based on true information"
+  },
+  {
+    "word": "farewell",
+    "definition": "goodbye"
+  },
+  {
+    "word": "fasten",
+    "definition": "fix together firmly"
+  },
+  {
+    "word": "fatigue",
+    "definition": "what you feel when you are very, very tired"
+  },
+  {
+    "word": "fixture",
+    "definition": "a piece of equipment, like a bath, that is permanently fixed to a building "
+  },
+  {
+    "word": "flu",
+    "definition": "illness that you catch from other people, that gives you a fever for a few days"
+  },
+  {
+    "word": "fluctuate",
+    "definition": "comes and goes stronger and weaker"
+  },
+  {
+    "word": "fountain",
+    "definition": "a man-made spray of water that shoots upwards"
+  },
+  {
+    "word": "freight",
+    "definition": "goods that are transported from one place to another"
+  },
+  {
+    "word": "freighter",
+    "definition": "a large ship that is used to transport goods"
+  },
+  {
+    "word": "garment",
+    "definition": "something made of material that you can wear, like pants or a dress"
+  },
+  {
+    "word": "generator",
+    "definition": "a machine that makes electricity"
+  },
+  {
+    "word": "gram",
+    "definition": "a small measurement of weight"
+  },
+  {
+    "word": "gum",
+    "definition": "stubstance that can be used to stick things together "
+  },
+  {
+    "word": "gym",
+    "definition": "building with equipment you can use to exercise your body"
+  },
+  {
+    "word": "gymnasium",
+    "definition": "building with equipment you can use to exercise your body"
+  },
+  {
+    "word": "hacker",
+    "definition": "someone who gains access to a computer system without permission"
+  },
+  {
+    "word": "hamburger",
+    "definition": "a flat round cake of minced beef that is fried and then eaten in a bread roll"
+  },
+  {
+    "word": "hike",
+    "definition": "walk a long way"
+  },
+  {
+    "word": "hiker",
+    "definition": "someone who likes to go for long walks in their leisure time"
+  },
+  {
+    "word": "imperative",
+    "definition": "very important and urgent"
+  },
+  {
+    "word": "incur",
+    "definition": "lay yourself open to something as a result of your actions"
+  },
+  {
+    "word": "intersection",
+    "definition": "where two paths cross each other"
+  },
+  {
+    "word": "inventory",
+    "definition": "detailed list of everything included"
+  },
+  {
+    "word": "jog",
+    "definition": "a gentle run"
+  },
+  {
+    "word": "journalism",
+    "definition": "the reporting of news"
+  },
+  {
+    "word": "junk",
+    "definition": "useless item; trash"
+  },
+  {
+    "word": "logo",
+    "definition": "a small design used by a company as its symbol"
+  },
+  {
+    "word": "mall",
+    "definition": "very large building containing lots of stores and restaurants"
+  },
+  {
+    "word": "mandatory",
+    "definition": "something that has to be done "
+  },
+  {
+    "word": "massage",
+    "definition": "rub the body in a special way that makes it feel better"
+  },
+  {
+    "word": "medication",
+    "definition": "a substance used to make an illness or condition get better"
+  },
+  {
+    "word": "memo",
+    "definition": "a written reminder to do somethng"
+  },
+  {
+    "word": "messenger",
+    "definition": "person who carries a piece of information to someone else  "
+  },
+  {
+    "word": "microphone",
+    "definition": "device used by singers and public speakers to make their voice louder"
+  },
+  {
+    "word": "microscope",
+    "definition": "a device that makes very small things look bigger so you can study them closer"
+  },
+  {
+    "word": "modem",
+    "definition": "a device that lets you send information from one computer to another"
+  },
+  {
+    "word": "morale",
+    "definition": "the confidence in how a group of people all feel, usually at a difficult time "
+  },
+  {
+    "word": "mosquito",
+    "definition": "a small winged insect that bites"
+  },
+  {
+    "word": "noon",
+    "definition": "the middle of the day  "
+  },
+  {
+    "word": "notify",
+    "definition": "officially tell someone some information"
+  },
+  {
+    "word": "oval",
+    "definition": "A shape that looks like an egg"
+  },
+  {
+    "word": "overview",
+    "definition": "a general summary of a subject"
+  },
+  {
+    "word": "parcel",
+    "definition": "something wrapped in paper so that it can be sent, or delivered somewhere"
+  },
+  {
+    "word": "passport",
+    "definition": "official document containing information about you, that allows you to enter other countries"
+  },
+  {
+    "word": "pasta",
+    "definition": "shaped and dried dough, made from flour and water, often used in Italian cooking"
+  },
+  {
+    "word": "pastry",
+    "definition": "a food made of flour, fat and water and baked with other food inside it"
+  },
+  {
+    "word": "pedestrian",
+    "definition": "a person who is walking on the street"
+  },
+  {
+    "word": "pharmaceutical",
+    "definition": "relating to the preparation and making of medicine"
+  },
+  {
+    "word": "picnic",
+    "definition": "a packed meal to take with you and eaten in the open air"
+  },
+  {
+    "word": "pizza",
+    "definition": "a round piece of baked dough, covered with tomato, cheese and other ingredients"
+  },
+  {
+    "word": "plausible",
+    "definition": "it sounds like it could be true"
+  },
+  {
+    "word": "plow",
+    "definition": "to force your way through something"
+  },
+  {
+    "word": "plumber",
+    "definition": "someone connects and mends water pipes for a living"
+  },
+  {
+    "word": "portable",
+    "definition": "something that is small and easy to carry"
+  },
+  {
+    "word": "publicize",
+    "definition": "make known generally"
+  },
+  {
+    "word": "purse",
+    "definition": "a small bag women use to carry personal items"
+  },
+  {
+    "word": "query",
+    "definition": "question, inquire"
+  },
+  {
+    "word": "referee",
+    "definition": "the person who oversees something to make sure that the rules are followed"
+  },
+  {
+    "word": "remainder",
+    "definition": "what is left over "
+  },
+  {
+    "word": "renovate",
+    "definition": "restore to a previous or better condition"
+  },
+  {
+    "word": "renovation",
+    "definition": "the process of being restored to a previous or better condition"
+  },
+  {
+    "word": "renown",
+    "definition": "the state of being well known"
+  },
+  {
+    "word": "reunion",
+    "definition": "when people get together to meet up after not meeting for a long time"
+  },
+  {
+    "word": "salon",
+    "definition": "a store where you can get a particular service, like getting your hair styled"
+  },
+  {
+    "word": "scarf",
+    "definition": "a long, narrow piece of material you wear round your neck to keep you warm"
+  },
+  {
+    "word": "serial",
+    "definition": "ongoing, happening more than once in a particular order"
+  },
+  {
+    "word": "shuttle",
+    "definition": "travel back and forth between two points  "
+  },
+  {
+    "word": "signify",
+    "definition": "shows a sign that it has an important meaning"
+  },
+  {
+    "word": "skate",
+    "definition": "glide over the surface as if you are sliding on ice"
+  },
+  {
+    "word": "snack",
+    "definition": "Small amount of food eaten between meals"
+  },
+  {
+    "word": "sofa",
+    "definition": "a long soft seat with a back, big enough for at least two people to sit on"
+  },
+  {
+    "word": "spa",
+    "definition": "a place you can go to relax and  improve your health, or how you look"
+  },
+  {
+    "word": "spectator",
+    "definition": "a person who watches something happening"
+  },
+  {
+    "word": "spite",
+    "definition": "the desire to direct bad feeling towards someone"
+  },
+  {
+    "word": "stereo",
+    "definition": "a device that plays sound through two or more speakers"
+  },
+  {
+    "word": "submission",
+    "definition": "the act of formally delivering a document, for a decision to be made about it"
+  },
+  {
+    "word": "surf",
+    "definition": "move from one website to another on the internet"
+  },
+  {
+    "word": "sweater",
+    "definition": "a warm item of clothing worn over the arms and upper body, made of wool, "
+  },
+  {
+    "word": "tablet",
+    "definition": "a small flat solid cake of some substance"
+  },
+  {
+    "word": "tailor",
+    "definition": "adjust something to fit a specific need or market"
+  },
+  {
+    "word": "technician",
+    "definition": "someone who is trained with special skills to do practical work"
+  },
+  {
+    "word": "teen",
+    "definition": "someone aged between the ages of thirteen and nineteen"
+  },
+  {
+    "word": "terrific",
+    "definition": "very great or wonderful"
+  },
+  {
+    "word": "tidy",
+    "definition": "put things in their correct place"
+  },
+  {
+    "word": "toll",
+    "definition": "a small cost or fee you pay to use a service"
+  },
+  {
+    "word": "tow",
+    "definition": "pull something along"
+  },
+  {
+    "word": "transit",
+    "definition": "on the move from one place to another"
+  },
+  {
+    "word": "umbrella",
+    "definition": "something, like an organization, that covers a  similar range of things "
+  },
+  {
+    "word": "underline",
+    "definition": "to call attention to  "
+  },
+  {
+    "word": "usage",
+    "definition": "the usual or customary way in which something is used"
+  },
+  {
+    "word": "vacant",
+    "definition": "empty"
+  },
+  {
+    "word": "vacation",
+    "definition": "a holiday or break from work"
+  },
+  {
+    "word": "vacuum",
+    "definition": "a completely empty space"
+  },
+  {
+    "word": "vase",
+    "definition": "a jug or urn to put cut flowers in, to make a room look pretty "
+  },
+  {
+    "word": "vegetarian",
+    "definition": "someone who does not eat meat or fish"
+  },
+  {
+    "word": "violin",
+    "definition": "small wooden instrument with four strings for making music "
+  },
+  {
+    "word": "visa",
+    "definition": "travel permit that allows you to enter a particular country for a period of time"
+  },
+  {
+    "word": "voucher",
+    "definition": "a piece of paper that you can use to buy goods or to get them at a reduced price"
+  },
+  {
+    "word": "wallet",
+    "definition": "a small case that can fit in a pocket, used by men to hold money  and credit cards"
+  },
+  {
+    "word": "wireless",
+    "definition": "a means of communication that uses radio waves instead of wires"
+  },
+  {
+    "word": "worthwhile",
+    "definition": "useful; there is some value to it"
+  },
+  {
+    "word": "wrinkle",
+    "definition": "a crease or fold"
+  },
+  {
+    "word": "zoo",
+    "definition": "a park where many different types of live animals are kept "
+  },
+  {
+    "word": "abide",
+    "definition": "put up with"
+  },
+  {
+    "word": "acclaim",
+    "definition": "approval and great praise"
+  },
+  {
+    "word": "amenity",
+    "definition": "Something, like a swimming pool in a town, that makes life more comfortable and enjoyable."
+  },
+  {
+    "word": "audition",
+    "definition": "a try out done by a performer to test whether they have the skills to do the job"
+  },
+  {
+    "word": "banquet",
+    "definition": "a formal meal given for a lot of people"
+  },
+  {
+    "word": "barbecue",
+    "definition": "meal that has been cooked on a grill, outdoors"
+  },
+  {
+    "word": "beforehand",
+    "definition": "earlier in time"
+  },
+  {
+    "word": "blueprint",
+    "definition": "a drawing or plan to show what the finished thing will look like"
+  },
+  {
+    "word": "booth",
+    "definition": "an enclosed space like a cubicle, stall or stand"
+  },
+  {
+    "word": "briefcase",
+    "definition": "a small case with a handle usually used for carrying business papers"
+  },
+  {
+    "word": "browse",
+    "definition": "look or leaf through casually, like looking through a book without really reading it"
+  },
+  {
+    "word": "buffet",
+    "definition": "a meal consisting of a number of different dishes from which people serve themselves"
+  },
+  {
+    "word": "carpenter",
+    "definition": "a person makes and mends things made of wood for a liviing"
+  },
+  {
+    "word": "cartridge",
+    "definition": "a piece of the equipment that is a sealed unit, and that can be taken out and replaced "
+  },
+  {
+    "word": "closet",
+    "definition": "a small cupboard"
+  },
+  {
+    "word": "contraction",
+    "definition": "a tightening or squeezing movement"
+  },
+  {
+    "word": "coupon",
+    "definition": "a piece of paper that you can use to buy goods or to get them at a reduced price"
+  },
+  {
+    "word": "cumulative",
+    "definition": "gets bigger by more and more being added to it"
+  },
+  {
+    "word": "demolish",
+    "definition": "knock down; completely destroy"
+  },
+  {
+    "word": "dental",
+    "definition": "relating to teeth"
+  },
+  {
+    "word": "diploma",
+    "definition": "a document certifying the successful completion of a course of study  "
+  },
+  {
+    "word": "disconnect",
+    "definition": "cut off or detach"
+  },
+  {
+    "word": "drawback",
+    "definition": "the downside of something"
+  },
+  {
+    "word": "euro",
+    "definition": "a unit of money used in a number of European countries"
+  },
+  {
+    "word": "excursion",
+    "definition": "a journey taken for pleasure"
+  },
+  {
+    "word": "firefighter",
+    "definition": "someone whose job it is to put out fires or save people from dangerous situations"
+  },
+  {
+    "word": "firework",
+    "definition": "a small stick-like object that, when lit with a flame, goes off with a bang and flashes of colored light "
+  },
+  {
+    "word": "fluent",
+    "definition": "able to speak a language easily and with confidence "
+  },
+  {
+    "word": "folder",
+    "definition": "a file or covering to keep papers in"
+  },
+  {
+    "word": "freelance",
+    "definition": "working for yourself, not for an employer  "
+  },
+  {
+    "word": "garbage",
+    "definition": "trash; something that is worthless"
+  },
+  {
+    "word": "handbook",
+    "definition": "a book that gives intructions on how to do something"
+  },
+  {
+    "word": "hesitant",
+    "definition": "hold back from acting because you are uncertain or undecided"
+  },
+  {
+    "word": "hospitality",
+    "definition": "welcoming, friendly behavior  you show to visitors or guests"
+  },
+  {
+    "word": "humidity",
+    "definition": "how much dampness their is in the air"
+  },
+  {
+    "word": "hygiene",
+    "definition": "how you keep yourself and your surroundings clean and so that you stay healthy"
+  },
+  {
+    "word": "inclusive",
+    "definition": "includes everything"
+  },
+  {
+    "word": "induction",
+    "definition": "the act of being introduced into"
+  },
+  {
+    "word": "informative",
+    "definition": "tells you a lot of useful facts about somethiing"
+  },
+  {
+    "word": "intern",
+    "definition": "a stuent or trainee who is doing a job, often without pay, to get work experience"
+  },
+  {
+    "word": "internship",
+    "definition": "a position or placement for someone to learn a job through work, sometimes without pay"
+  },
+  {
+    "word": "kilogram",
+    "definition": "a unit of weight; one kilogram is about the same weight as 2.2 pounds"
+  },
+  {
+    "word": "liter",
+    "definition": "a unit  of measurement for liquids"
+  },
+  {
+    "word": "locker",
+    "definition": "a small cupboard  you can store personal items in securely for a period of time"
+  },
+  {
+    "word": "luggage",
+    "definition": "Bags and cases that you carry your clothes in when you go on a journey"
+  },
+  {
+    "word": "memorandum",
+    "definition": "A written note or message to remind you or someone else to do something"
+  },
+  {
+    "word": "mentor",
+    "definition": "personal advisor or teacher"
+  },
+  {
+    "word": "merchandise",
+    "definition": "goods for sale"
+  },
+  {
+    "word": "mini",
+    "definition": "smaller than is usual for a particular type of thing"
+  },
+  {
+    "word": "nap",
+    "definition": "a short sleep, often taken during the daytime"
+  },
+  {
+    "word": "necklace",
+    "definition": "a piece of jewelery, or decoration, worn around the neck"
+  },
+  {
+    "word": "overcrowd",
+    "definition": "too many people in too small a space"
+  },
+  {
+    "word": "pamphlet",
+    "definition": "a small paper leaflet or booklet  that tells you about a single subject"
+  },
+  {
+    "word": "pant",
+    "definition": "take short sharp breaths through your mouth, noisily"
+  },
+  {
+    "word": "payroll",
+    "definition": "the total amount of money paid in wages"
+  },
+  {
+    "word": "pharmacist",
+    "definition": "a person whose job it is to prepare medicines"
+  },
+  {
+    "word": "pharmacy",
+    "definition": "a store where medicines are prepared and sold"
+  },
+  {
+    "word": "preview",
+    "definition": "a chance to see something before it becomes generally available"
+  },
+  {
+    "word": "reflexive",
+    "definition": "referring back to itself  "
+  },
+  {
+    "word": "refund",
+    "definition": "give back money that has already been paid"
+  },
+  {
+    "word": "refundable",
+    "definition": "money that can be returned if you change your mind about a purchase"
+  },
+  {
+    "word": "reimburse",
+    "definition": "give back the money for an expense that has been paid out"
+  },
+  {
+    "word": "reimbursement",
+    "definition": "the money that is given to cover the cost of an expense that has been paid out"
+  },
+  {
+    "word": "sewer",
+    "definition": " the pipes that carry water and waste away from toilets"
+  },
+  {
+    "word": "skim",
+    "definition": "to move quickly above the surface without touching it"
+  },
+  {
+    "word": "spreadsheet",
+    "definition": "a computer program worksheet or table that you enter information onto"
+  },
+  {
+    "word": "staple",
+    "definition": "short thin piece of wire  that is punched through sheets of paper to fasten them together"
+  },
+  {
+    "word": "streamline",
+    "definition": "make smoother and more efficient"
+  },
+  {
+    "word": "trash",
+    "definition": "garbage or waste; something worthless"
+  },
+  {
+    "word": "tuition",
+    "definition": "the sum of money charged for teaching by a college or university"
+  },
+  {
+    "word": "tuna",
+    "definition": "a type of fish that lives in the sea, and is good to eat"
+  },
+  {
+    "word": "underway",
+    "definition": "happening now"
+  },
+  {
+    "word": "vacancy",
+    "definition": "job or position that needs to be filled"
+  },
+  {
+    "word": "waive",
+    "definition": "to give up or do without"
+  },
+  {
+    "word": "warranty",
+    "definition": "the promise to repair or replace a product if it ceases to work properly"
+  },
+  {
+    "word": "yen",
+    "definition": "the basic unit of money in Japan "
+  },
+  {
+    "word": "auditorium",
+    "definition": "the area of a theater or concert hall where the audience sits  "
+  },
+  {
+    "word": "beverage",
+    "definition": "any liquid suitable for drinking"
+  },
+  {
+    "word": "broom",
+    "definition": "a brush with a long handle used for sweeping the dirt from the floor"
+  },
+  {
+    "word": "carton",
+    "definition": "a box made of cardboard or plastic in which things like milk and juice are sold"
+  },
+  {
+    "word": "consignment",
+    "definition": "a shipment of goods for  delivery"
+  },
+  {
+    "word": "culinary",
+    "definition": "relating to cooking  "
+  },
+  {
+    "word": "customize",
+    "definition": "make or change something to suit the customer's  particular needs"
+  },
+  {
+    "word": "discontinue",
+    "definition": "stop doing it"
+  },
+  {
+    "word": "extinguisher",
+    "definition": "Device used to put out fires"
+  },
+  {
+    "word": "foreman",
+    "definition": "Senior worker who controls other workers"
+  },
+  {
+    "word": "habitual",
+    "definition": "regular, what you always do"
+  },
+  {
+    "word": "intonation",
+    "definition": "the rise and fall of the voice when speaking"
+  },
+  {
+    "word": "invoice",
+    "definition": "a written request for payment for the goods and services listed"
+  },
+  {
+    "word": "luncheon",
+    "definition": "a formal meal eaten in the middle of the day"
+  },
+  {
+    "word": "misplace",
+    "definition": "forget where you have put it"
+  },
+  {
+    "word": "needy",
+    "definition": "people who are poor and do not have enough to live on"
+  },
+  {
+    "word": "overdue",
+    "definition": "past the date you should do something; late"
+  },
+  {
+    "word": "password",
+    "definition": "a secret word or phrase needed to prove who you are"
+  },
+  {
+    "word": "penalize",
+    "definition": "to punish someone"
+  },
+  {
+    "word": "personalize",
+    "definition": "change something so that it is tailored to a particular person's needs"
+  },
+  {
+    "word": "photocopier",
+    "definition": "a machine that makes exact copies of documents"
+  },
+  {
+    "word": "photocopy",
+    "definition": "an exact copy of a document made with a photographic machine"
+  },
+  {
+    "word": "proficiency",
+    "definition": "skill and experience"
+  },
+  {
+    "word": "rebate",
+    "definition": "an amount of money given back to you as part of the deal when you buy goods or services"
+  },
+  {
+    "word": "redesign",
+    "definition": "change or improve the plan of how a thing is made"
+  },
+  {
+    "word": "subtract",
+    "definition": "take away from"
+  },
+  {
+    "word": "subway",
+    "definition": "a tunnel under the road for people to walk through"
+  },
+  {
+    "word": "teller",
+    "definition": "person who works in a bank, who pays out and takes in money"
+  },
+  {
+    "word": "vanilla",
+    "definition": "a flavoring used in ice cream and other sweet foods to make them taste good"
+  },
+  {
+    "word": "anew",
+    "definition": "starting over again, a fresh start"
+  },
+  {
+    "word": "apprehensive",
+    "definition": "uneasy, worried"
+  },
+  {
+    "word": "attire",
+    "definition": "clothing"
+  },
+  {
+    "word": "automotive",
+    "definition": "of or relating to motor vehicles"
+  },
+  {
+    "word": "cafeteria",
+    "definition": "a restaurant where you serve yourself and pay a cashier  "
+  },
+  {
+    "word": "cashier",
+    "definition": "the person whose job it is to take the money you pay for goods or services"
+  },
+  {
+    "word": "cookie",
+    "definition": "a small, flat, round, dry, sweet cake-like snack "
+  },
+  {
+    "word": "courier",
+    "definition": "Person paid to carry and deliver documents"
+  },
+  {
+    "word": "debit",
+    "definition": "a record of an amount of money taken out of an account"
+  },
+  {
+    "word": "donut",
+    "definition": "small, fried, very sweet piece of dough covered in sugar and good to eat"
+  },
+  {
+    "word": "gasoline",
+    "definition": "fuel used in most motor vehicles"
+  },
+  {
+    "word": "hotline",
+    "definition": "telephone line that gives direct, fast access"
+  },
+  {
+    "word": "itinerary",
+    "definition": "a detailed plan of what will happen on a journey"
+  },
+  {
+    "word": "outdated",
+    "definition": "to be older than"
+  },
+  {
+    "word": "paraphrase",
+    "definition": "saying it again but putting the same meaning into different words"
+  },
+  {
+    "word": "projector",
+    "definition": "an optical instrument that projects an enlarged image onto a screen  "
+  },
+  {
+    "word": "remodel",
+    "definition": "change or alter nearly everything to make it look different"
+  },
+  {
+    "word": "restatement",
+    "definition": "a statement that has been reworded"
+  },
+  {
+    "word": "stationery",
+    "definition": "any materials needed for writing and printing"
+  },
+  {
+    "word": "stockbroker",
+    "definition": "an agent whose job it is to buy and sell stocks and bonds  "
+  },
+  {
+    "word": "upcoming",
+    "definition": "happening soon"
+  },
+  {
+    "word": "vacate",
+    "definition": "leave empty; move out of"
+  },
+  {
+    "word": "yoga",
+    "definition": "a system of exercise to give control over your mind and body"
+  },
+  {
+    "word": "considerate",
+    "definition": "showing concern for the rights and feelings of others"
+  },
+  {
+    "word": "malfunction",
+    "definition": "a breakdown or failure in the system"
+  },
+  {
+    "word": "sauna",
+    "definition": "a Finnish steam bath; steam is produced by pouring water over heated rocks  "
+  },
+  {
+    "word": "volleyball",
+    "definition": "a ballgame for two teams who try to hit a large ball backwards and forwards across a central net"
+  },
+  {
+    "word": "brainstorm",
+    "definition": "a group discussion to come up with a lot of ideas very quickly"
+  },
+  {
+    "word": "condominium",
+    "definition": "a building that has lots of apartments in it, all owned and lived in by different people"
+  },
+  {
+    "word": "deluxe",
+    "definition": "rich and superior in quality"
+  },
+  {
+    "word": "escalator",
+    "definition": "a moving stairway"
+  },
+  {
+    "word": "expedite",
+    "definition": "speed up the progress of"
+  },
+  {
+    "word": "hereby",
+    "definition": "a formal way of saying 'as a result of this'"
+  },
+  {
+    "word": "punctual",
+    "definition": "arriving on time"
+  },
+  {
+    "word": "sedan",
+    "definition": "a type of car that has seats for four people"
+  },
+  {
+    "word": "semester",
+    "definition": "one of two divisions of the school year  "
+  },
+  {
+    "word": "spam",
+    "definition": "unwanted e-mail, usually of a commercial nature sent out in bulk "
+  },
+  {
+    "word": "vend",
+    "definition": "To offer something for sale or to sell something"
+  },
+  {
+    "word": "cellphone",
+    "definition": "phone that connects to the system by radio so that you can use it anywhere"
+  },
+  {
+    "word": "overpay",
+    "definition": "to hand over too much money  "
+  },
+  {
+    "word": "realtor",
+    "definition": "a person who sells, rents out or manages property for a living"
+  },
+  {
+    "word": "toiletry",
+    "definition": "articles used for washing and taking care of your body"
+  },
+  {
+    "word": "concierge",
+    "definition": "the person in a hotel whose job it is to arrange things for the guests"
+  },
+  {
+    "word": "overcharge",
+    "definition": "to ask for too much money for goods or service"
+  },
+  {
+    "word": "outage",
+    "definition": "a failure in the power system so that there is no electricity available"
+  },
+  {
+    "word": "paralegal",
+    "definition": "someone who works in a law company but who has not trained as a lawyer"
+  },
+  {
+    "word": "purser",
+    "definition": "an officer aboard a ship who keeps accounts and attends to the passengers' needs  "
+  },
+  {
+    "word": "login",
+    "definition": "to enter a computer website account"
+  },
+  {
+    "word": "flextime",
+    "definition": "there is a choice about when to start and finish working a set number of hours"
+  },
+  {
+    "word": "sue",
+    "definition": "To take legal action against someone"
+  },
+  {
+    "word": "airfare",
+    "definition": "the amount of money charged for traveling by airplane  "
+  },
+  {
+    "word": "airplane",
+    "definition": "a powered vehicle that flys through the air to its destination"
+  },
+  {
+    "word": "airport",
+    "definition": "the place where you go to get on a plane"
+  },
+  {
+    "word": "backpack",
+    "definition": "a bag with shoulder straps worn on the back"
+  },
+  {
+    "word": "ballroom",
+    "definition": "large room used mainly for dancing  "
+  },
+  {
+    "word": "bathroom",
+    "definition": "a room where there is a bath and/or a shower"
+  },
+  {
+    "word": "birthday",
+    "definition": "the day in the year on which a person was born  "
+  },
+  {
+    "word": "boardroom",
+    "definition": "a room where the board of directors of a company hold meetings  "
+  },
+  {
+    "word": "bookcase",
+    "definition": "a piece of furniture with shelves for storing books  "
+  },
+  {
+    "word": "bookstore",
+    "definition": "A place where you go to buy books"
+  },
+  {
+    "word": "businessman",
+    "definition": "a man who works in commercial or industrial business, especially an owner or executive  "
+  },
+  {
+    "word": "businessperson",
+    "definition": "a person who works in commercial or industrial business, especially an owner or executive  "
+  },
+  {
+    "word": "checkout",
+    "definition": "the latest time that you must vacate a hotel room"
+  },
+  {
+    "word": "cheeseburger",
+    "definition": "a hamburger with melted cheese on it  "
+  },
+  {
+    "word": "classmate",
+    "definition": "Someone studying in your class with you"
+  },
+  {
+    "word": "cookbook",
+    "definition": "a book that gives directions  on how to prepare and cook food"
+  },
+  {
+    "word": "countryside",
+    "definition": "land outside of cities and towns, that does not have buildings on it"
+  },
+  {
+    "word": "daytime",
+    "definition": "The time between when the sun rises and when it  goes down; not nightime"
+  },
+  {
+    "word": "desktop",
+    "definition": "the working area of a computer screen when no programs are open"
+  },
+  {
+    "word": "dishwasher",
+    "definition": "a machine that cleans dirty dishes"
+  },
+  {
+    "word": "doorman",
+    "definition": "Someone whose job it is to stand at entrance to a hotel to let people go in and out"
+  },
+  {
+    "word": "download",
+    "definition": "transfer a file or program onto your computer"
+  },
+  {
+    "word": "downsize",
+    "definition": "reduce in size or number"
+  },
+  {
+    "word": "downstairs",
+    "definition": "on a lower floor of a building"
+  },
+  {
+    "word": "downtown",
+    "definition": "the business or central part of a city or town"
+  },
+  {
+    "word": "downturn",
+    "definition": "a drop in the success of a business or the economy"
+  },
+  {
+    "word": "feedback",
+    "definition": "information given to the provider about how good or bad the goods or services were"
+  },
+  {
+    "word": "footwear",
+    "definition": "something you wear on your feet, such as shoes or boots"
+  },
+  {
+    "word": "fundraise",
+    "definition": "to get money from people for a partular project"
+  },
+  {
+    "word": "getaway",
+    "definition": "escape or leave very quickly"
+  },
+  {
+    "word": "hallway",
+    "definition": "a passage or corridor that other rooms open out of "
+  },
+  {
+    "word": "hardworking",
+    "definition": "always puts a lot of effort into the task or job"
+  },
+  {
+    "word": "headache",
+    "definition": "pain in the head "
+  },
+  {
+    "word": "headphone",
+    "definition": "a set of small speakers that fit into each ear so that only you can hear the sound"
+  },
+  {
+    "word": "healthcare",
+    "definition": "the business of providing medical services to a community or individuals"
+  },
+  {
+    "word": "homemade",
+    "definition": "not bought from a store; made at home"
+  },
+  {
+    "word": "homeowner",
+    "definition": "someone who owns the house that they live in "
+  },
+  {
+    "word": "homework",
+    "definition": "the work a teacher gives to students to be done outside of school "
+  },
+  {
+    "word": "housekeeper",
+    "definition": "someone whose job it is to take care of and clean another person's house"
+  },
+  {
+    "word": "incoming",
+    "definition": "just arriving"
+  },
+  {
+    "word": "laptop",
+    "definition": "a computer small enough to carry and to use in your lap  "
+  },
+  {
+    "word": "layoff",
+    "definition": "the act of ending a worker's job because there is not enough work, or not enough money to pay for it"
+  },
+  {
+    "word": "layout",
+    "definition": "the plan of how it is set out"
+  },
+  {
+    "word": "letterhead",
+    "definition": "the printing at the top of a letter that tells you the name and details of the company sending it"
+  },
+  {
+    "word": "lifeguard",
+    "definition": "the person whose job it is to keep people safe at the beach or at  pool"
+  },
+  {
+    "word": "lifestyle",
+    "definition": "the way that you live; the things that you usually do"
+  },
+  {
+    "word": "lifetime",
+    "definition": "The time between when a person is born and when they die"
+  },
+  {
+    "word": "lunchtime",
+    "definition": "The usual time for eating the midday meal"
+  },
+  {
+    "word": "midnight",
+    "definition": "12 o'clock at night"
+  },
+  {
+    "word": "motorcycle",
+    "definition": "a motor vehicle with two wheels and a strong frame  "
+  },
+  {
+    "word": "newsletter",
+    "definition": "report or open letter giving information of interest to a special group  "
+  },
+  {
+    "word": "newsstand",
+    "definition": "a small structure where newspapers and magazines are sold  "
+  },
+  {
+    "word": "outstanding",
+    "definition": "not yet completed"
+  },
+  {
+    "word": "overtime",
+    "definition": "work done in addition to regular working hours  "
+  },
+  {
+    "word": "paperback",
+    "definition": "a book that has a cover made of paper"
+  },
+  {
+    "word": "paperwork",
+    "definition": "the written work to do with any particular job"
+  },
+  {
+    "word": "paycheck",
+    "definition": "the piece of paper that tells a worker how much they have earned "
+  },
+  {
+    "word": "popcorn",
+    "definition": "grains of maize that have been heated up until they explode; good to eat as a snack"
+  },
+  {
+    "word": "postcard",
+    "definition": "a card for sending messages by post without an envelope  "
+  },
+  {
+    "word": "proofread",
+    "definition": "read for errors"
+  },
+  {
+    "word": "railway",
+    "definition": "transport system of tracks ,stations and trains"
+  },
+  {
+    "word": "raincoat",
+    "definition": "a water-resistant coat  "
+  },
+  {
+    "word": "rainfall",
+    "definition": "Water that falls from the clouds in the sky, in little drops"
+  },
+  {
+    "word": "restroom",
+    "definition": "room in a building which contains one or more toilets for public use"
+  },
+  {
+    "word": "salesman",
+    "definition": "a man whose job it is to get people to buy things from his company "
+  },
+  {
+    "word": "salespeople",
+    "definition": "men and women whose job it is get people to buy things from their company "
+  },
+  {
+    "word": "salesperson",
+    "definition": "a man or woman whose job it is get people to buy things from their company"
+  },
+  {
+    "word": "seafood",
+    "definition": "things you can eat as food that live in the sea"
+  },
+  {
+    "word": "seaside",
+    "definition": "a place right by the ocean where people can go to relax and have fun"
+  },
+  {
+    "word": "showroom",
+    "definition": "an area where goods for sale are set out so people can look at them"
+  },
+  {
+    "word": "sidewalk",
+    "definition": "the area that runs alonside a road for people to walk on"
+  },
+  {
+    "word": "sightsee",
+    "definition": "go to visit places of interest"
+  },
+  {
+    "word": "skateboard",
+    "definition": "a flat board with small wheels on the bottom that you move by pushing on the ground with one foot"
+  },
+  {
+    "word": "someday",
+    "definition": "At some unspecified time in the future"
+  },
+  {
+    "word": "spokesperson",
+    "definition": "one man or woman who speaks officially for the rest of the group"
+  },
+  {
+    "word": "stockholder",
+    "definition": "someone who holds shares of stock in a corporation  "
+  },
+  {
+    "word": "storeroom",
+    "definition": "a room where things can be kept when they are not being used"
+  },
+  {
+    "word": "suitcase",
+    "definition": "A large bag like container for carrying clothes when traveling"
+  },
+  {
+    "word": "sunscreen",
+    "definition": "a cream spread on the skin that protects your skin from the sun"
+  },
+  {
+    "word": "supermarket",
+    "definition": "a large self-service store selling food and household items"
+  },
+  {
+    "word": "takeover",
+    "definition": "the buying out of one company by another"
+  },
+  {
+    "word": "textbook",
+    "definition": "a book of facts to be used for the study of a particular subject"
+  },
+  {
+    "word": "thunderstorm",
+    "definition": "an extreme weather condition with rain, wind, thunder and lightening"
+  },
+  {
+    "word": "timeline",
+    "definition": "a series of related events arranged in the order they happen, and displayed in a row "
+  },
+  {
+    "word": "timetable",
+    "definition": " a list of events and when they are going to happen"
+  },
+  {
+    "word": "trademark",
+    "definition": "the trade or brand name"
+  },
+  {
+    "word": "underground",
+    "definition": "below the surface"
+  },
+  {
+    "word": "upstairs",
+    "definition": "on a higher level of the building"
+  },
+  {
+    "word": "videoconference",
+    "definition": "meeting carried out over the internet"
+  },
+  {
+    "word": "walkway",
+    "definition": "a connecting passage or path for pedestrians to move along"
+  },
+  {
+    "word": "webpage",
+    "definition": "information shown on the screen of an internet website about a particular subject"
+  },
+  {
+    "word": "weekday",
+    "definition": "All the working days in a week, usually Monday to Friday"
+  },
+  {
+    "word": "wheelchair",
+    "definition": "a seat, that has wheels, that allows a person who cannot walk to move about"
+  },
+  {
+    "word": "wildlife",
+    "definition": "animals and plants that live in the natural world"
+  },
+  {
+    "word": "workbook",
+    "definition": "a file containing information about a particular subject, and relatated problems to be solved by the student"
+  },
+  {
+    "word": "workforce",
+    "definition": "all the people that a company employs"
+  },
+  {
+    "word": "workplace",
+    "definition": "the location where you do your job"
+  },
+  {
+    "word": "workshop",
+    "definition": "a building or room where things are made or repaired"
+  },
+  {
+    "word": "worldwide",
+    "definition": "Spanning or reaching across the whole earth"
+  },
+  {
+    "word": "wristwatch",
+    "definition": "a small device for telling the time that you wear on your lower arm"
+  },
+  {
+    "word": "pole",
+    "definition": "a long, thin stick or post"
+  },
+  {
+    "word": "coworker",
+    "definition": "a person that works with you in the same workplace"
+  },
+  {
+    "word": "headquarter",
+    "definition": "the main office of an organization"
+  },
+  {
+    "word": "wellness",
+    "definition": "State of being healthy; not ill"
+  },
+  {
+    "word": "sharply",
+    "definition": "harshly"
+  },
+  {
+    "word": "manual",
+    "definition": "a book that explains how to do something"
+  },
+  {
+    "word": "advancement",
+    "definition": "gradual move forward"
+  },
+  {
+    "word": "ma'am",
+    "definition": "short for 'madam', a polite way to address a woman"
+  },
+  {
+    "word": "appetizer",
+    "definition": "small amount of food eaten before the main meal"
+  },
+  {
+    "word": "checkup",
+    "definition": "a test to see that all is as it should be"
+  },
+  {
+    "word": "healthful",
+    "definition": "helping to keep well in body and mind"
+  },
+  {
+    "word": "housekeep",
+    "definition": "take care of all business related to a household"
+  },
+  {
+    "word": "o'clock",
+    "definition": "the hour of the day"
+  },
+  {
+    "word": "renter",
+    "definition": "someone who pays money to have the use of something for a period of time"
+  },
+  {
+    "word": "stapler",
+    "definition": "a small device used to fix papers together with a small thin piece of wire called a staple"
+  },
+  {
+    "word": "bound",
+    "definition": "wrap around with something, so as to cover or enclose  "
+  },
+  {
+    "word": "distractor",
+    "definition": "an incorrect option offered in a multiple choice question "
+  },
+  {
+    "word": "ice cream",
+    "definition": "Frozen food made of cream, very sweet and good to eat"
+  },
+  {
+    "word": "repairperson",
+    "definition": "Person whose job it is to fixe things when they are broken"
+  },
+  {
+    "word": "unauthorized",
+    "definition": "without official permission"
+  },
+  {
+    "word": "misidentify",
+    "definition": "to mistakenly recognise something; to think that it is something else"
+  }
+]
