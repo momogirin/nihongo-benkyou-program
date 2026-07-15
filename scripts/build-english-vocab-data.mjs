@@ -37,6 +37,8 @@ export interface EnglishVocabWord {
   meaningEn: string
   exampleEn: string
   exampleKr: string
+  wordFamilyId?: string
+  derivationPos?: string
 }
 
 // Parsed from a JSON string rather than a literal array — see the same

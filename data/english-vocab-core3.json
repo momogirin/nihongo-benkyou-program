@@ -8,7 +8,9 @@
     "meaningKr": "성취, 업적",
     "meaningEn": "something good that you have successfully done",
     "exampleEn": "Winning the Employee of the Year award was a major achievement for Ms. Park.",
-    "exampleKr": "올해의 직원상을 수상한 것은 박 씨에게 큰 성취였다."
+    "exampleKr": "올해의 직원상을 수상한 것은 박 씨에게 큰 성취였다.",
+    "wordFamilyId": "achieve",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-2",
@@ -19,7 +21,9 @@
     "meaningKr": "협상하다",
     "meaningEn": "to have a formal discussion to reach an agreement",
     "exampleEn": "The two companies negotiated for weeks before signing the merger agreement.",
-    "exampleKr": "두 회사는 합병 계약에 서명하기 전 몇 주간 협상했다."
+    "exampleKr": "두 회사는 합병 계약에 서명하기 전 몇 주간 협상했다.",
+    "wordFamilyId": "negotiate",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-3",
@@ -41,7 +45,9 @@
     "meaningKr": "공급업체",
     "meaningEn": "organization that provides a product or service",
     "exampleEn": "The factory switched suppliers after repeated delivery delays.",
-    "exampleKr": "공장은 반복된 배송 지연 이후 공급업체를 교체했다."
+    "exampleKr": "공장은 반복된 배송 지연 이후 공급업체를 교체했다.",
+    "wordFamilyId": "supply",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-5",
@@ -107,7 +113,9 @@
     "meaningKr": "인수, 취득",
     "meaningEn": "act of getting something",
     "exampleEn": "The acquisition of the smaller startup will be finalized by the end of the quarter.",
-    "exampleKr": "그 소규모 스타트업의 인수는 이번 분기 말까지 마무리될 것이다."
+    "exampleKr": "그 소규모 스타트업의 인수는 이번 분기 말까지 마무리될 것이다.",
+    "wordFamilyId": "acquire",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-11",
@@ -118,7 +126,9 @@
     "meaningKr": "웃음",
     "meaningEn": "action or sound of laughing",
     "exampleEn": "The keynote speaker's opening joke drew laughter from the entire audience.",
-    "exampleKr": "기조연설자의 첫 농담에 청중 전체가 웃음을 터뜨렸다."
+    "exampleKr": "기조연설자의 첫 농담에 청중 전체가 웃음을 터뜨렸다.",
+    "wordFamilyId": "laugh",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-12",
@@ -140,7 +150,9 @@
     "meaningKr": "인정",
     "meaningEn": "accepting that something is true or that it exists",
     "exampleEn": "The manager gave public recognition to the team for completing the project ahead of schedule.",
-    "exampleKr": "매니저는 팀이 일정보다 앞서 프로젝트를 완료한 것에 대해 공개적으로 인정해 주었다."
+    "exampleKr": "매니저는 팀이 일정보다 앞서 프로젝트를 완료한 것에 대해 공개적으로 인정해 주었다.",
+    "wordFamilyId": "recognize",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-14",
@@ -151,7 +163,9 @@
     "meaningKr": "전기",
     "meaningEn": "energy generated positive and negative charges",
     "exampleEn": "The factory's electricity costs rose sharply after the new equipment was installed.",
-    "exampleKr": "새 장비를 설치한 후 공장의 전기 비용이 급격히 증가했다."
+    "exampleKr": "새 장비를 설치한 후 공장의 전기 비용이 급격히 증가했다.",
+    "wordFamilyId": "electric",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-15",
@@ -162,7 +176,9 @@
     "meaningKr": "도움, 지원",
     "meaningEn": "act of helping someone",
     "exampleEn": "Please contact the help desk if you require assistance with the new software.",
-    "exampleKr": "새 소프트웨어와 관련하여 도움이 필요하시면 헬프데스크에 문의해 주세요."
+    "exampleKr": "새 소프트웨어와 관련하여 도움이 필요하시면 헬프데스크에 문의해 주세요.",
+    "wordFamilyId": "assist",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-16",
@@ -184,7 +200,9 @@
     "meaningKr": "은퇴",
     "meaningEn": "time when someone has stopped working because of their age",
     "exampleEn": "The CEO announced her retirement at the annual shareholders' meeting.",
-    "exampleKr": "CEO는 연례 주주총회에서 자신의 은퇴를 발표했다."
+    "exampleKr": "CEO는 연례 주주총회에서 자신의 은퇴를 발표했다.",
+    "wordFamilyId": "retire",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-18",
@@ -228,7 +246,9 @@
     "meaningKr": "증거",
     "meaningEn": "information which shows that something is true or correct",
     "exampleEn": "The auditor asked for proof of purchase before approving the reimbursement.",
-    "exampleKr": "감사관은 환급을 승인하기 전에 구매 증거를 요청했다."
+    "exampleKr": "감사관은 환급을 승인하기 전에 구매 증거를 요청했다.",
+    "wordFamilyId": "prove",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-22",
@@ -261,7 +281,9 @@
     "meaningKr": "층",
     "meaningEn": "an amount of something that is spread over a surface",
     "exampleEn": "The report added an extra layer of detail that management found useful.",
-    "exampleKr": "그 보고서는 경영진에게 유용했던 세부 내용의 층을 더했다."
+    "exampleKr": "그 보고서는 경영진에게 유용했던 세부 내용의 층을 더했다.",
+    "wordFamilyId": "lay",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-25",
@@ -294,7 +316,9 @@
     "meaningKr": "대표, 표현",
     "meaningEn": "speaking or doing something officially for another person",
     "exampleEn": "The union demanded fair representation in the upcoming contract negotiations.",
-    "exampleKr": "노조는 다가오는 계약 협상에서 공정한 대표를 요구했다."
+    "exampleKr": "노조는 다가오는 계약 협상에서 공정한 대표를 요구했다.",
+    "wordFamilyId": "represent",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-28",
@@ -305,7 +329,9 @@
     "meaningKr": "준비",
     "meaningEn": "getting ready for something",
     "exampleEn": "The team spent the entire weekend on preparation for the client presentation.",
-    "exampleKr": "그 팀은 고객 발표 준비를 위해 주말 내내 시간을 보냈다."
+    "exampleKr": "그 팀은 고객 발표 준비를 위해 주말 내내 시간을 보냈다.",
+    "wordFamilyId": "prepare",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-29",
@@ -338,7 +364,9 @@
     "meaningKr": "강조",
     "meaningEn": "particular importance to the way something is said",
     "exampleEn": "The new training program places strong emphasis on customer service skills.",
-    "exampleKr": "새 교육 프로그램은 고객 서비스 기술을 강하게 강조한다."
+    "exampleKr": "새 교육 프로그램은 고객 서비스 기술을 강하게 강조한다.",
+    "wordFamilyId": "emphasize",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-32",
@@ -349,7 +377,9 @@
     "meaningKr": "(출판물의) 판",
     "meaningEn": "a particular version of something that is sold to the public",
     "exampleEn": "The updated edition of the employee handbook will be distributed next month.",
-    "exampleKr": "업데이트된 직원 안내서 최신판은 다음 달에 배포될 것이다."
+    "exampleKr": "업데이트된 직원 안내서 최신판은 다음 달에 배포될 것이다.",
+    "wordFamilyId": "edit",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-33",
@@ -382,7 +412,9 @@
     "meaningKr": "정직한",
     "meaningEn": "good; always telling the truth and not stealing",
     "exampleEn": "The manager asked employees to give honest feedback about the new policy.",
-    "exampleKr": "매니저는 직원들에게 새 정책에 대해 정직한 피드백을 달라고 요청했다."
+    "exampleKr": "매니저는 직원들에게 새 정책에 대해 정직한 피드백을 달라고 요청했다.",
+    "wordFamilyId": "honest",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-36",
@@ -404,7 +436,9 @@
     "meaningKr": "소매의",
     "meaningEn": "concerning the business of selling products to the public for personal use",
     "exampleEn": "The company plans to expand its retail operations into three new cities.",
-    "exampleKr": "그 회사는 소매 사업을 세 개의 새 도시로 확장할 계획이다."
+    "exampleKr": "그 회사는 소매 사업을 세 개의 새 도시로 확장할 계획이다.",
+    "wordFamilyId": "retail",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-38",
@@ -426,7 +460,9 @@
     "meaningKr": "~할 것 같지 않은",
     "meaningEn": "not being likely to happen or not likely to be the truth",
     "exampleEn": "It is unlikely that the shipment will arrive before the holiday weekend.",
-    "exampleKr": "그 배송이 연휴 전에 도착할 가능성은 낮다."
+    "exampleKr": "그 배송이 연휴 전에 도착할 가능성은 낮다.",
+    "wordFamilyId": "like",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-40",
@@ -448,7 +484,9 @@
     "meaningKr": "출판, 간행물",
     "meaningEn": "process of producing a book or magazine",
     "exampleEn": "The publication of the annual report was delayed by two weeks.",
-    "exampleKr": "연례 보고서의 출판이 2주 지연되었다."
+    "exampleKr": "연례 보고서의 출판이 2주 지연되었다.",
+    "wordFamilyId": "public",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-42",
@@ -459,7 +497,9 @@
     "meaningKr": "약간의, 근소한",
     "meaningEn": "very small in degree or amount",
     "exampleEn": "There was only a slight increase in sales compared to last quarter.",
-    "exampleKr": "지난 분기와 비교해 매출에 약간의 증가만 있었다."
+    "exampleKr": "지난 분기와 비교해 매출에 약간의 증가만 있었다.",
+    "wordFamilyId": "slight",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-43",
@@ -503,7 +543,9 @@
     "meaningKr": "제한하다",
     "meaningEn": "to prevent from doing something",
     "exampleEn": "The new policy restricts employees from using personal devices during work hours.",
-    "exampleKr": "새 정책은 근무 시간 동안 직원들의 개인 기기 사용을 제한한다."
+    "exampleKr": "새 정책은 근무 시간 동안 직원들의 개인 기기 사용을 제한한다.",
+    "wordFamilyId": "restrict",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-47",
@@ -591,7 +633,9 @@
     "meaningKr": "주지사",
     "meaningEn": "person who leads a state or province",
     "exampleEn": "The governor attended the ribbon-cutting ceremony for the new manufacturing plant.",
-    "exampleKr": "주지사는 새 제조 공장의 개소식에 참석했다."
+    "exampleKr": "주지사는 새 제조 공장의 개소식에 참석했다.",
+    "wordFamilyId": "govern",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-55",
@@ -635,7 +679,9 @@
     "meaningKr": "도착",
     "meaningEn": "when someone or something gets to a place",
     "exampleEn": "Please notify the front desk of your arrival time so we can arrange transportation.",
-    "exampleKr": "이동 수단을 준비할 수 있도록 도착 시간을 프런트 데스크에 알려주세요."
+    "exampleKr": "이동 수단을 준비할 수 있도록 도착 시간을 프런트 데스크에 알려주세요.",
+    "wordFamilyId": "arrive",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-59",
@@ -690,7 +736,9 @@
     "meaningKr": "전문가",
     "meaningEn": "person who works in one specific area of a field or profession",
     "exampleEn": "A marketing specialist was hired to lead the company's social media strategy.",
-    "exampleKr": "회사의 소셜 미디어 전략을 이끌기 위해 마케팅 전문가가 채용되었다."
+    "exampleKr": "회사의 소셜 미디어 전략을 이끌기 위해 마케팅 전문가가 채용되었다.",
+    "wordFamilyId": "special",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-64",
@@ -701,7 +749,9 @@
     "meaningKr": "보장하다, 확언하다",
     "meaningEn": "to make sure that something happens",
     "exampleEn": "The manager assured the client that the delivery would arrive on time.",
-    "exampleKr": "매니저는 고객에게 배송이 제시간에 도착할 것이라고 확언했다."
+    "exampleKr": "매니저는 고객에게 배송이 제시간에 도착할 것이라고 확언했다.",
+    "wordFamilyId": "assure",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-65",
@@ -767,7 +817,9 @@
     "meaningKr": "(윗선의 요구에) 따르다, 굴복하다",
     "meaningEn": "to accept a superior force has power over you",
     "exampleEn": "After lengthy negotiations, the smaller supplier had to submit to the retailer's pricing demands.",
-    "exampleKr": "긴 협상 끝에 그 소규모 공급업체는 대형 소매업체의 가격 요구에 따를 수밖에 없었다."
+    "exampleKr": "긴 협상 끝에 그 소규모 공급업체는 대형 소매업체의 가격 요구에 따를 수밖에 없었다.",
+    "wordFamilyId": "submit",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-71",
@@ -811,7 +863,9 @@
     "meaningKr": "보도",
     "meaningEn": "way a newspaper, television program, etc., reports an event or subject",
     "exampleEn": "The product launch received extensive media coverage.",
-    "exampleKr": "그 제품 출시는 광범위한 언론 보도를 받았다."
+    "exampleKr": "그 제품 출시는 광범위한 언론 보도를 받았다.",
+    "wordFamilyId": "cover",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-75",
@@ -844,7 +898,9 @@
     "meaningKr": "민감한",
     "meaningEn": "easily hurt or damaged",
     "exampleEn": "Employees must handle sensitive customer data in accordance with privacy regulations.",
-    "exampleKr": "직원들은 개인정보 보호 규정에 따라 민감한 고객 데이터를 다뤄야 한다."
+    "exampleKr": "직원들은 개인정보 보호 규정에 따라 민감한 고객 데이터를 다뤄야 한다.",
+    "wordFamilyId": "sense",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-78",
@@ -855,7 +911,9 @@
     "meaningKr": "불안한, 긴장한",
     "meaningEn": "having a tendency to become uneasy or anxious",
     "exampleEn": "She felt nervous before presenting the quarterly results to the board.",
-    "exampleKr": "그녀는 이사회에 분기 실적을 발표하기 전 긴장했다."
+    "exampleKr": "그녀는 이사회에 분기 실적을 발표하기 전 긴장했다.",
+    "wordFamilyId": "nerve",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-79",
@@ -888,7 +946,9 @@
     "meaningKr": "죄수",
     "meaningEn": "someone kept in a prison as punishment for a crime",
     "exampleEn": "The nonprofit organization runs a job training program for former prisoners.",
-    "exampleKr": "그 비영리 단체는 전과자들을 위한 직업 훈련 프로그램을 운영한다."
+    "exampleKr": "그 비영리 단체는 전과자들을 위한 직업 훈련 프로그램을 운영한다.",
+    "wordFamilyId": "prison",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-82",
@@ -954,7 +1014,9 @@
     "meaningKr": "채용하다, 모집하다",
     "meaningEn": "to get people to come and work, join, or study with you",
     "exampleEn": "The firm plans to recruit ten new engineers by the end of the year.",
-    "exampleKr": "그 회사는 연말까지 신입 엔지니어 10명을 채용할 계획이다."
+    "exampleKr": "그 회사는 연말까지 신입 엔지니어 10명을 채용할 계획이다.",
+    "wordFamilyId": "recruit",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-88",
@@ -965,7 +1027,9 @@
     "meaningKr": "제외하다",
     "meaningEn": "to prevent someone from access to a group",
     "exampleEn": "The warranty excludes damage caused by improper installation.",
-    "exampleKr": "그 보증은 잘못된 설치로 인한 손상을 제외한다."
+    "exampleKr": "그 보증은 잘못된 설치로 인한 손상을 제외한다.",
+    "wordFamilyId": "exclude",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-89",
@@ -1009,7 +1073,9 @@
     "meaningKr": "영감을 주다, 고취시키다",
     "meaningEn": "to make someone have the desire to do something",
     "exampleEn": "The CEO's speech inspired employees to work toward the company's new goals.",
-    "exampleKr": "CEO의 연설은 직원들이 회사의 새로운 목표를 향해 노력하도록 고취시켰다."
+    "exampleKr": "CEO의 연설은 직원들이 회사의 새로운 목표를 향해 노력하도록 고취시켰다.",
+    "wordFamilyId": "inspire",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-93",
@@ -1086,7 +1152,9 @@
     "meaningKr": "돕다",
     "meaningEn": "to help",
     "exampleEn": "A customer service representative will assist you with your order.",
-    "exampleKr": "고객 서비스 담당자가 주문을 도와드릴 것입니다."
+    "exampleKr": "고객 서비스 담당자가 주문을 도와드릴 것입니다.",
+    "wordFamilyId": "assist",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-100",
@@ -1119,7 +1187,9 @@
     "meaningKr": "변경하다",
     "meaningEn": "to make a change to something",
     "exampleEn": "The client requested to alter the terms of the contract before signing.",
-    "exampleKr": "고객은 서명 전에 계약 조건을 변경해 달라고 요청했다."
+    "exampleKr": "고객은 서명 전에 계약 조건을 변경해 달라고 요청했다.",
+    "wordFamilyId": "alter",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-103",
@@ -1130,7 +1200,9 @@
     "meaningKr": "인지하다, 인식하다",
     "meaningEn": "to notice or become aware of something",
     "exampleEn": "Customers perceive the brand as reliable and affordable.",
-    "exampleKr": "고객들은 그 브랜드를 신뢰할 수 있고 합리적인 가격으로 인식한다."
+    "exampleKr": "고객들은 그 브랜드를 신뢰할 수 있고 합리적인 가격으로 인식한다.",
+    "wordFamilyId": "perceive",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-104",
@@ -1196,7 +1268,9 @@
     "meaningKr": "지지자",
     "meaningEn": "someone who shows they are in favor of an idea/plan",
     "exampleEn": "The proposal gained many supporters among senior management.",
-    "exampleKr": "그 제안은 고위 경영진 사이에서 많은 지지자를 얻었다."
+    "exampleKr": "그 제안은 고위 경영진 사이에서 많은 지지자를 얻었다.",
+    "wordFamilyId": "support",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-110",
@@ -1405,7 +1479,9 @@
     "meaningKr": "우울(증)",
     "meaningEn": "a feeling of great sadness",
     "exampleEn": "The company launched a wellness program to help employees dealing with stress and depression.",
-    "exampleKr": "회사는 스트레스와 우울증을 겪는 직원들을 돕기 위한 건강 프로그램을 시작했다."
+    "exampleKr": "회사는 스트레스와 우울증을 겪는 직원들을 돕기 위한 건강 프로그램을 시작했다.",
+    "wordFamilyId": "depress",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-129",
@@ -1449,7 +1525,9 @@
     "meaningKr": "차이, 특별함",
     "meaningEn": "the special quality that makes something different",
     "exampleEn": "The manager made a clear distinction between full-time and contract employees' benefits.",
-    "exampleKr": "매니저는 정규직과 계약직 직원의 복리후생 간 명확한 차이를 두었다."
+    "exampleKr": "매니저는 정규직과 계약직 직원의 복리후생 간 명확한 차이를 두었다.",
+    "wordFamilyId": "distinguish",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-133",
@@ -1460,7 +1538,9 @@
     "meaningKr": "만족(감)",
     "meaningEn": "happy feeling because of something that you did",
     "exampleEn": "Customer satisfaction improved significantly after the new return policy was introduced.",
-    "exampleKr": "새 환불 정책이 도입된 후 고객 만족도가 크게 향상되었다."
+    "exampleKr": "새 환불 정책이 도입된 후 고객 만족도가 크게 향상되었다.",
+    "wordFamilyId": "satisfy",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-134",
@@ -1504,7 +1584,9 @@
     "meaningKr": "의무",
     "meaningEn": "something that you do because it is your duty or because you feel you have to",
     "exampleEn": "The contract outlines each party's obligations regarding delivery deadlines.",
-    "exampleKr": "그 계약서는 배송 마감일과 관련된 각 당사자의 의무를 명시한다."
+    "exampleKr": "그 계약서는 배송 마감일과 관련된 각 당사자의 의무를 명시한다.",
+    "wordFamilyId": "oblige",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-138",
@@ -1526,7 +1608,9 @@
     "meaningKr": "평가하다",
     "meaningEn": "to form an idea to judge something carefully",
     "exampleEn": "The committee will evaluate each proposal before selecting a vendor.",
-    "exampleKr": "위원회는 업체를 선정하기 전 각 제안서를 평가할 것이다."
+    "exampleKr": "위원회는 업체를 선정하기 전 각 제안서를 평가할 것이다.",
+    "wordFamilyId": "evaluate",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-140",
@@ -1537,7 +1621,9 @@
     "meaningKr": "화나게 하다",
     "meaningEn": "to make someone mad, upset, or annoyed",
     "exampleEn": "The delayed refund angered several customers who called the support line.",
-    "exampleKr": "환불 지연은 지원 센터에 전화한 여러 고객들을 화나게 했다."
+    "exampleKr": "환불 지연은 지원 센터에 전화한 여러 고객들을 화나게 했다.",
+    "wordFamilyId": "anger",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-141",
@@ -1559,7 +1645,9 @@
     "meaningKr": "인식",
     "meaningEn": "the way in which one sees or understands something",
     "exampleEn": "Positive customer perception of the brand grew after the advertising campaign.",
-    "exampleKr": "광고 캠페인 이후 브랜드에 대한 고객의 긍정적인 인식이 커졌다."
+    "exampleKr": "광고 캠페인 이후 브랜드에 대한 고객의 긍정적인 인식이 커졌다.",
+    "wordFamilyId": "perceive",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-143",
@@ -1570,7 +1658,9 @@
     "meaningKr": "당연히, 자연스럽게",
     "meaningEn": "as someone would expect; not surprising",
     "exampleEn": "Naturally, the client wanted a full explanation of the price increase.",
-    "exampleKr": "당연히 고객은 가격 인상에 대한 전체적인 설명을 원했다."
+    "exampleKr": "당연히 고객은 가격 인상에 대한 전체적인 설명을 원했다.",
+    "wordFamilyId": "natural",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-144",
@@ -1581,7 +1671,9 @@
     "meaningKr": "통화",
     "meaningEn": "a money system that a country uses",
     "exampleEn": "The invoice must specify the currency in which payment will be made.",
-    "exampleKr": "송장에는 대금을 지불할 통화를 명시해야 한다."
+    "exampleKr": "송장에는 대금을 지불할 통화를 명시해야 한다.",
+    "wordFamilyId": "currency",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-145",
@@ -1603,7 +1695,9 @@
     "meaningKr": "처음에",
     "meaningEn": "at the beginning",
     "exampleEn": "The project was initially scheduled to launch in March.",
-    "exampleKr": "그 프로젝트는 처음에 3월에 출시될 예정이었다."
+    "exampleKr": "그 프로젝트는 처음에 3월에 출시될 예정이었다.",
+    "wordFamilyId": "initial",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-147",
@@ -1636,7 +1730,9 @@
     "meaningKr": "좀처럼 ~않는, 드물게",
     "meaningEn": "in an infrequent manner",
     "exampleEn": "The manager rarely approves overtime without prior notice.",
-    "exampleKr": "매니저는 사전 통보 없이는 초과 근무를 좀처럼 승인하지 않는다."
+    "exampleKr": "매니저는 사전 통보 없이는 초과 근무를 좀처럼 승인하지 않는다.",
+    "wordFamilyId": "rare",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-150",
@@ -1658,7 +1754,9 @@
     "meaningKr": "분명한, 명백한",
     "meaningEn": "easy to see or clearly understand",
     "exampleEn": "It became apparent that the shipment would not arrive on time.",
-    "exampleKr": "그 배송이 제시간에 도착하지 않을 것이라는 점이 분명해졌다."
+    "exampleKr": "그 배송이 제시간에 도착하지 않을 것이라는 점이 분명해졌다.",
+    "wordFamilyId": "apparent",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-152",
@@ -1680,7 +1778,9 @@
     "meaningKr": "확장",
     "meaningEn": "act of expanding or becoming bigger",
     "exampleEn": "The board approved funding for the company's overseas expansion.",
-    "exampleKr": "이사회는 회사의 해외 확장을 위한 자금을 승인했다."
+    "exampleKr": "이사회는 회사의 해외 확장을 위한 자금을 승인했다.",
+    "wordFamilyId": "expand",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-154",
@@ -1691,7 +1791,9 @@
     "meaningKr": "끊임없이, 지속적으로",
     "meaningEn": "happening a lot or all the time",
     "exampleEn": "The market is constantly changing, so the strategy needs regular updates.",
-    "exampleKr": "시장은 끊임없이 변화하므로 전략을 정기적으로 업데이트해야 한다."
+    "exampleKr": "시장은 끊임없이 변화하므로 전략을 정기적으로 업데이트해야 한다.",
+    "wordFamilyId": "constant",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-155",
@@ -1801,7 +1903,9 @@
     "meaningKr": "오염, 공해",
     "meaningEn": "dirty or dangerous waste released into an environment",
     "exampleEn": "The factory invested in new filters to reduce air pollution near the residential area.",
-    "exampleKr": "그 공장은 주거 지역 인근의 대기 오염을 줄이기 위해 새 필터에 투자했다."
+    "exampleKr": "그 공장은 주거 지역 인근의 대기 오염을 줄이기 위해 새 필터에 투자했다.",
+    "wordFamilyId": "pollute",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-165",
@@ -1812,7 +1916,9 @@
     "meaningKr": "무질서, 혼란",
     "meaningEn": "a lack of organization",
     "exampleEn": "The audit revealed a general disorder in the company's filing system.",
-    "exampleKr": "감사 결과 회사의 문서 관리 체계에 전반적인 혼란이 있는 것으로 드러났다."
+    "exampleKr": "감사 결과 회사의 문서 관리 체계에 전반적인 혼란이 있는 것으로 드러났다.",
+    "wordFamilyId": "order",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-166",
@@ -1823,7 +1929,9 @@
     "meaningKr": "가구",
     "meaningEn": "items such as tables, chairs, beds, or closets",
     "exampleEn": "The office manager ordered new furniture for the reception area.",
-    "exampleKr": "사무실 관리자는 접수처를 위해 새 가구를 주문했다."
+    "exampleKr": "사무실 관리자는 접수처를 위해 새 가구를 주문했다.",
+    "wordFamilyId": "furnish",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-167",
@@ -1856,7 +1964,9 @@
     "meaningKr": "시연, 설명",
     "meaningEn": "explanation of how something works",
     "exampleEn": "The sales team gave a live demonstration of the new software to potential clients.",
-    "exampleKr": "영업팀은 잠재 고객들에게 새 소프트웨어의 실시간 시연을 보여주었다."
+    "exampleKr": "영업팀은 잠재 고객들에게 새 소프트웨어의 실시간 시연을 보여주었다.",
+    "wordFamilyId": "demonstrate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-170",
@@ -1867,7 +1977,9 @@
     "meaningKr": "분석가",
     "meaningEn": "someone who is skilled at studying the details of data",
     "exampleEn": "The financial analyst prepared a report on the company's quarterly earnings.",
-    "exampleKr": "그 금융 분석가는 회사의 분기 실적에 관한 보고서를 작성했다."
+    "exampleKr": "그 금융 분석가는 회사의 분기 실적에 관한 보고서를 작성했다.",
+    "wordFamilyId": "analyze",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-171",
@@ -1933,7 +2045,9 @@
     "meaningKr": "제한, 규제",
     "meaningEn": "a rule or law that limits what people can do",
     "exampleEn": "New travel restrictions have delayed several business trips this quarter.",
-    "exampleKr": "새로운 여행 제한 조치로 인해 이번 분기 여러 출장이 지연되었다."
+    "exampleKr": "새로운 여행 제한 조치로 인해 이번 분기 여러 출장이 지연되었다.",
+    "wordFamilyId": "restrict",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-177",
@@ -1944,7 +2058,9 @@
     "meaningKr": "기초, 토대",
     "meaningEn": "underground base on which a building is constructed",
     "exampleEn": "Inspectors checked the foundation of the new office building before construction continued.",
-    "exampleKr": "검사관들은 공사가 계속되기 전에 새 사무실 건물의 기초를 점검했다."
+    "exampleKr": "검사관들은 공사가 계속되기 전에 새 사무실 건물의 기초를 점검했다.",
+    "wordFamilyId": "found",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-178",
@@ -1955,7 +2071,9 @@
     "meaningKr": "디자이너",
     "meaningEn": "someone who creates plans to make something",
     "exampleEn": "The company hired a freelance designer to redesign its product packaging.",
-    "exampleKr": "회사는 제품 포장을 다시 디자인하기 위해 프리랜서 디자이너를 고용했다."
+    "exampleKr": "회사는 제품 포장을 다시 디자인하기 위해 프리랜서 디자이너를 고용했다.",
+    "wordFamilyId": "design",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-179",
@@ -1977,7 +2095,9 @@
     "meaningKr": "혁신",
     "meaningEn": "new invention or idea that is created",
     "exampleEn": "The firm's latest innovation earned it an award at the industry conference.",
-    "exampleKr": "그 회사의 최신 혁신은 업계 컨퍼런스에서 상을 받게 했다."
+    "exampleKr": "그 회사의 최신 혁신은 업계 컨퍼런스에서 상을 받게 했다.",
+    "wordFamilyId": "innovation",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-181",
@@ -2043,7 +2163,9 @@
     "meaningKr": "연장",
     "meaningEn": "extra time allowed to complete something",
     "exampleEn": "The client requested a two-week extension on the project deadline.",
-    "exampleKr": "고객은 프로젝트 마감일을 2주 연장해 달라고 요청했다."
+    "exampleKr": "고객은 프로젝트 마감일을 2주 연장해 달라고 요청했다.",
+    "wordFamilyId": "extend",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-187",
@@ -2098,7 +2220,9 @@
     "meaningKr": "놀라운, 주목할 만한",
     "meaningEn": "interesting and unexpected, worthy of notice",
     "exampleEn": "The team achieved remarkable results despite the tight deadline.",
-    "exampleKr": "그 팀은 촉박한 마감 기한에도 불구하고 놀라운 성과를 거두었다."
+    "exampleKr": "그 팀은 촉박한 마감 기한에도 불구하고 놀라운 성과를 거두었다.",
+    "wordFamilyId": "remark",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-192",
@@ -2131,7 +2255,9 @@
     "meaningKr": "초대, 초청",
     "meaningEn": "when someone asks you to do something or go somewhere",
     "exampleEn": "The company sent an invitation to all clients for the anniversary dinner.",
-    "exampleKr": "회사는 창립 기념일 만찬에 모든 고객을 초청하는 초대장을 보냈다."
+    "exampleKr": "회사는 창립 기념일 만찬에 모든 고객을 초청하는 초대장을 보냈다.",
+    "wordFamilyId": "invite",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-195",
@@ -2208,7 +2334,9 @@
     "meaningKr": "고문, 자문가",
     "meaningEn": "an expert who suggests what someone should do",
     "exampleEn": "The company hired a financial adviser to guide its investment strategy.",
-    "exampleKr": "회사는 투자 전략을 안내할 재무 고문을 채용했다."
+    "exampleKr": "회사는 투자 전략을 안내할 재무 고문을 채용했다.",
+    "wordFamilyId": "advice",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-202",
@@ -2296,7 +2424,9 @@
     "meaningKr": "창의적인",
     "meaningEn": "having the ability to make something new",
     "exampleEn": "The agency is known for producing creative advertising campaigns.",
-    "exampleKr": "그 대행사는 창의적인 광고 캠페인을 제작하는 것으로 유명하다."
+    "exampleKr": "그 대행사는 창의적인 광고 캠페인을 제작하는 것으로 유명하다.",
+    "wordFamilyId": "create",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-210",
@@ -2340,7 +2470,9 @@
     "meaningKr": "경쟁자, 경쟁업체",
     "meaningEn": "someone taking part in a race, business, etc.",
     "exampleEn": "The report compared the company's pricing with that of its major competitors.",
-    "exampleKr": "그 보고서는 회사의 가격을 주요 경쟁업체들의 가격과 비교했다."
+    "exampleKr": "그 보고서는 회사의 가격을 주요 경쟁업체들의 가격과 비교했다.",
+    "wordFamilyId": "compete",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-214",
@@ -2395,7 +2527,9 @@
     "meaningKr": "자신감 있는",
     "meaningEn": "feeling that you can do well at something",
     "exampleEn": "The manager is confident that the team will meet the quarterly sales target.",
-    "exampleKr": "매니저는 팀이 분기 매출 목표를 달성할 것이라고 자신한다."
+    "exampleKr": "매니저는 팀이 분기 매출 목표를 달성할 것이라고 자신한다.",
+    "wordFamilyId": "confide",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-219",
@@ -2527,7 +2661,9 @@
     "meaningKr": "물질",
     "meaningEn": "a particular type of material",
     "exampleEn": "The lab tested the substance used in the new packaging material.",
-    "exampleKr": "그 실험실은 새로운 포장재에 사용된 물질을 검사했다."
+    "exampleKr": "그 실험실은 새로운 포장재에 사용된 물질을 검사했다.",
+    "wordFamilyId": "substance",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-231",
@@ -2538,7 +2674,9 @@
     "meaningKr": "광범위한, 대규모의",
     "meaningEn": "large; full or complete",
     "exampleEn": "The company conducted extensive research before entering the overseas market.",
-    "exampleKr": "회사는 해외 시장에 진출하기 전에 광범위한 조사를 실시했다."
+    "exampleKr": "회사는 해외 시장에 진출하기 전에 광범위한 조사를 실시했다.",
+    "wordFamilyId": "extend",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-232",
@@ -2549,7 +2687,9 @@
     "meaningKr": "통역하다",
     "meaningEn": "to repeat what was said in another language",
     "exampleEn": "An interpreter was hired to interpret during the meeting with the overseas partner.",
-    "exampleKr": "해외 파트너와의 회의에서 통역하기 위해 통역사가 고용되었다."
+    "exampleKr": "해외 파트너와의 회의에서 통역하기 위해 통역사가 고용되었다.",
+    "wordFamilyId": "interpret",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-233",
@@ -2560,7 +2700,9 @@
     "meaningKr": "독립",
     "meaningEn": "having the freedom to make your own decisions",
     "exampleEn": "The subsidiary gained financial independence from its parent company last year.",
-    "exampleKr": "그 자회사는 작년에 모회사로부터 재정적 독립을 이루었다."
+    "exampleKr": "그 자회사는 작년에 모회사로부터 재정적 독립을 이루었다.",
+    "wordFamilyId": "independent",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-234",
@@ -2593,7 +2735,9 @@
     "meaningKr": "해를 끼치다, 손상시키다",
     "meaningEn": "to hurt, damage, or cause problems",
     "exampleEn": "The scandal could harm the company's reputation among investors.",
-    "exampleKr": "그 스캔들은 투자자들 사이에서 회사의 평판에 해를 끼칠 수 있다."
+    "exampleKr": "그 스캔들은 투자자들 사이에서 회사의 평판에 해를 끼칠 수 있다.",
+    "wordFamilyId": "harm",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-237",
@@ -2604,7 +2748,9 @@
     "meaningKr": "상담하다, 협의하다",
     "meaningEn": "to discuss something to make a decision",
     "exampleEn": "Employees should consult the HR department before requesting extended leave.",
-    "exampleKr": "직원들은 장기 휴가를 신청하기 전에 인사팀과 상담해야 한다."
+    "exampleKr": "직원들은 장기 휴가를 신청하기 전에 인사팀과 상담해야 한다.",
+    "wordFamilyId": "consult",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-238",
@@ -2648,7 +2794,9 @@
     "meaningKr": "매끄러운, 부드러운",
     "meaningEn": "something that feels pleasant and flat when you touch it; not rough",
     "exampleEn": "The design team chose a smooth finish for the tablet's aluminum casing.",
-    "exampleKr": "디자인팀은 태블릿의 알루미늄 케이스에 매끄러운 마감을 선택했다."
+    "exampleKr": "디자인팀은 태블릿의 알루미늄 케이스에 매끄러운 마감을 선택했다.",
+    "wordFamilyId": "smooth",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-242",
@@ -2670,7 +2818,9 @@
     "meaningKr": "깊은 인상을 주다",
     "meaningEn": "to make someone admire or respect another person or thing",
     "exampleEn": "The candidate impressed the interview panel with her presentation skills.",
-    "exampleKr": "그 지원자는 발표 능력으로 면접관들에게 깊은 인상을 주었다."
+    "exampleKr": "그 지원자는 발표 능력으로 면접관들에게 깊은 인상을 주었다.",
+    "wordFamilyId": "impress",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-244",
@@ -2714,7 +2864,9 @@
     "meaningKr": "마찬가지로, 비슷하게",
     "meaningEn": "in a way that is almost the same as something or someone else",
     "exampleEn": "Similarly, the branch office reported a decline in quarterly revenue.",
-    "exampleKr": "마찬가지로, 지사도 분기 매출 감소를 보고했다."
+    "exampleKr": "마찬가지로, 지사도 분기 매출 감소를 보고했다.",
+    "wordFamilyId": "similar",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-248",
@@ -2725,7 +2877,9 @@
     "meaningKr": "행동하다",
     "meaningEn": "to act in a particular way; to act correctly",
     "exampleEn": "Employees are expected to behave professionally during client meetings.",
-    "exampleKr": "직원들은 고객 미팅 중 전문적으로 행동할 것이 요구된다."
+    "exampleKr": "직원들은 고객 미팅 중 전문적으로 행동할 것이 요구된다.",
+    "wordFamilyId": "behave",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-249",
@@ -2736,7 +2890,9 @@
     "meaningKr": "시끄러운, 큰 소리의",
     "meaningEn": "making a lot of noise",
     "exampleEn": "The construction noise next door was too loud for the office to hold a conference call.",
-    "exampleKr": "옆 건물 공사 소음이 너무 시끄러워서 사무실에서 화상 회의를 진행하기 어려웠다."
+    "exampleKr": "옆 건물 공사 소음이 너무 시끄러워서 사무실에서 화상 회의를 진행하기 어려웠다.",
+    "wordFamilyId": "loud",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-250",
@@ -2758,7 +2914,9 @@
     "meaningKr": "그 다음의, 후속의",
     "meaningEn": "happening after",
     "exampleEn": "The subsequent meeting will cover the budget approval process.",
-    "exampleKr": "다음 회의에서는 예산 승인 절차를 다룰 것이다."
+    "exampleKr": "다음 회의에서는 예산 승인 절차를 다룰 것이다.",
+    "wordFamilyId": "subsequent",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-252",
@@ -2791,7 +2949,9 @@
     "meaningKr": "효율(성)",
     "meaningEn": "working well; producing something without waste",
     "exampleEn": "The new software improved efficiency in the order-processing department.",
-    "exampleKr": "새 소프트웨어는 주문 처리 부서의 효율성을 향상시켰다."
+    "exampleKr": "새 소프트웨어는 주문 처리 부서의 효율성을 향상시켰다.",
+    "wordFamilyId": "efficient",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-255",
@@ -2824,7 +2984,9 @@
     "meaningKr": "정기적으로",
     "meaningEn": "at the usual time each day, week, or month",
     "exampleEn": "The maintenance team regularly inspects the office elevators.",
-    "exampleKr": "유지보수팀은 사무실 엘리베이터를 정기적으로 점검한다."
+    "exampleKr": "유지보수팀은 사무실 엘리베이터를 정기적으로 점검한다.",
+    "wordFamilyId": "regular",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-258",
@@ -2857,7 +3019,9 @@
     "meaningKr": "방송하다",
     "meaningEn": "to send out signals by radio or television",
     "exampleEn": "The network agreed to broadcast the company's product launch live on television.",
-    "exampleKr": "그 방송사는 회사의 신제품 출시 행사를 텔레비전으로 생중계하기로 합의했다."
+    "exampleKr": "그 방송사는 회사의 신제품 출시 행사를 텔레비전으로 생중계하기로 합의했다.",
+    "wordFamilyId": "broad",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-261",
@@ -2868,7 +3032,9 @@
     "meaningKr": "회원 자격, 회원권",
     "meaningEn": "all the people who belong to a club or group",
     "exampleEn": "The gym offers a discounted membership to employees of nearby offices.",
-    "exampleKr": "그 헬스장은 인근 사무실 직원들에게 할인된 회원권을 제공한다."
+    "exampleKr": "그 헬스장은 인근 사무실 직원들에게 할인된 회원권을 제공한다.",
+    "wordFamilyId": "member",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-262",
@@ -2967,7 +3133,9 @@
     "meaningKr": "간단히, 짧게",
     "meaningEn": "happening in a short period of time; using few words",
     "exampleEn": "The manager briefly summarized the quarterly results before the Q&A session.",
-    "exampleKr": "매니저는 질의응답 시간 전에 분기 실적을 간단히 요약했다."
+    "exampleKr": "매니저는 질의응답 시간 전에 분기 실적을 간단히 요약했다.",
+    "wordFamilyId": "brief",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-271",
@@ -3022,7 +3190,9 @@
     "meaningKr": "빈곤",
     "meaningEn": "being poor",
     "exampleEn": "The foundation funds programs aimed at reducing poverty in developing regions.",
-    "exampleKr": "그 재단은 개발도상 지역의 빈곤을 줄이기 위한 프로그램에 자금을 지원한다."
+    "exampleKr": "그 재단은 개발도상 지역의 빈곤을 줄이기 위한 프로그램에 자금을 지원한다.",
+    "wordFamilyId": "poor",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-276",
@@ -3110,7 +3280,9 @@
     "meaningKr": "정확한",
     "meaningEn": "correct; not having mistakes or errors",
     "exampleEn": "The finance team double-checked the figures to ensure the report was accurate.",
-    "exampleKr": "재무팀은 보고서가 정확하도록 수치를 재차 확인했다."
+    "exampleKr": "재무팀은 보고서가 정확하도록 수치를 재차 확인했다.",
+    "wordFamilyId": "accurate",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-284",
@@ -3176,7 +3348,9 @@
     "meaningKr": "가끔, 이따금",
     "meaningEn": "not very often; sometimes; seldom",
     "exampleEn": "The manager occasionally allows the team to work from home.",
-    "exampleKr": "매니저는 가끔 팀원들이 재택근무를 하도록 허용한다."
+    "exampleKr": "매니저는 가끔 팀원들이 재택근무를 하도록 허용한다.",
+    "wordFamilyId": "occasion",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-290",
@@ -3209,7 +3383,9 @@
     "meaningKr": "발견",
     "meaningEn": "learning something for the first time",
     "exampleEn": "The research team's discovery led to a new patent for the company.",
-    "exampleKr": "연구팀의 발견은 회사의 새로운 특허로 이어졌다."
+    "exampleKr": "연구팀의 발견은 회사의 새로운 특허로 이어졌다.",
+    "wordFamilyId": "discover",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-293",
@@ -3220,7 +3396,9 @@
     "meaningKr": "저항, 반대",
     "meaningEn": "refusal to accept something new or different",
     "exampleEn": "The proposal met with resistance from employees worried about job security.",
-    "exampleKr": "그 제안은 고용 안정성을 우려하는 직원들의 반대에 부딪혔다."
+    "exampleKr": "그 제안은 고용 안정성을 우려하는 직원들의 반대에 부딪혔다.",
+    "wordFamilyId": "resist",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-294",
@@ -3242,7 +3420,9 @@
     "meaningKr": "빈도",
     "meaningEn": "how often something happens",
     "exampleEn": "The company increased the frequency of its shipments to meet rising demand.",
-    "exampleKr": "회사는 증가하는 수요를 충족시키기 위해 배송 빈도를 늘렸다."
+    "exampleKr": "회사는 증가하는 수요를 충족시키기 위해 배송 빈도를 늘렸다.",
+    "wordFamilyId": "frequent",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-296",
@@ -3253,7 +3433,9 @@
     "meaningKr": "비판하다",
     "meaningEn": "to say that someone or something is bad",
     "exampleEn": "Analysts criticized the company's decision to cut the research budget.",
-    "exampleKr": "분석가들은 회사가 연구 예산을 삭감한 결정을 비판했다."
+    "exampleKr": "분석가들은 회사가 연구 예산을 삭감한 결정을 비판했다.",
+    "wordFamilyId": "critic",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-297",
@@ -3308,7 +3490,9 @@
     "meaningKr": "사과하다",
     "meaningEn": "to say sorry because of a mistake or injury you made",
     "exampleEn": "The manager apologized to the client for the delayed shipment.",
-    "exampleKr": "매니저는 배송 지연에 대해 고객에게 사과했다."
+    "exampleKr": "매니저는 배송 지연에 대해 고객에게 사과했다.",
+    "wordFamilyId": "apologize",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-302",
@@ -3319,7 +3503,9 @@
     "meaningKr": "긍정적인 평가, 지지",
     "meaningEn": "positive opinion of something or someone",
     "exampleEn": "The redesigned logo received widespread approval from the marketing team.",
-    "exampleKr": "새로 디자인된 로고는 마케팅팀으로부터 폭넓은 지지를 받았다."
+    "exampleKr": "새로 디자인된 로고는 마케팅팀으로부터 폭넓은 지지를 받았다.",
+    "wordFamilyId": "approve",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-303",
@@ -3363,7 +3549,9 @@
     "meaningKr": "참여, 관여",
     "meaningEn": "act or process of joining in a particular activity",
     "exampleEn": "The director's involvement in the project boosted the team's morale.",
-    "exampleKr": "이사의 프로젝트 참여는 팀의 사기를 높였다."
+    "exampleKr": "이사의 프로젝트 참여는 팀의 사기를 높였다.",
+    "wordFamilyId": "involve",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-307",
@@ -3374,7 +3562,9 @@
     "meaningKr": "노출, (경험 등에) 접함",
     "meaningEn": "state of experiencing something directly",
     "exampleEn": "The internship gave the student valuable exposure to corporate finance.",
-    "exampleKr": "그 인턴십은 학생에게 기업 재무에 대한 값진 경험을 제공했다."
+    "exampleKr": "그 인턴십은 학생에게 기업 재무에 대한 값진 경험을 제공했다.",
+    "wordFamilyId": "expose",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-308",
@@ -3385,7 +3575,9 @@
     "meaningKr": "전통적인, 관습적인",
     "meaningEn": "following the common attitudes and practices",
     "exampleEn": "The startup abandoned conventional marketing methods for a digital-first approach.",
-    "exampleKr": "그 스타트업은 전통적인 마케팅 방식을 버리고 디지털 우선 접근법을 택했다."
+    "exampleKr": "그 스타트업은 전통적인 마케팅 방식을 버리고 디지털 우선 접근법을 택했다.",
+    "wordFamilyId": "convene",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-309",
@@ -3418,7 +3610,9 @@
     "meaningKr": "편집하다, 수정하다",
     "meaningEn": "to check and makes changes before publication",
     "exampleEn": "The editor edited the press release before it was sent to the media.",
-    "exampleKr": "편집자는 보도자료가 언론에 배포되기 전에 이를 수정했다."
+    "exampleKr": "편집자는 보도자료가 언론에 배포되기 전에 이를 수정했다.",
+    "wordFamilyId": "edit",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-312",
@@ -3429,7 +3623,9 @@
     "meaningKr": "형성, 구성",
     "meaningEn": "process of creating, or making into a particular shape",
     "exampleEn": "The formation of a new department will streamline customer support.",
-    "exampleKr": "새로운 부서의 구성은 고객 지원 업무를 간소화할 것이다."
+    "exampleKr": "새로운 부서의 구성은 고객 지원 업무를 간소화할 것이다.",
+    "wordFamilyId": "form",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-313",
@@ -3451,7 +3647,9 @@
     "meaningKr": "기분 좋은, 쾌적한",
     "meaningEn": "causing a good feeling",
     "exampleEn": "The receptionist greeted visitors with a pleasant smile.",
-    "exampleKr": "안내원은 기분 좋은 미소로 방문객들을 맞이했다."
+    "exampleKr": "안내원은 기분 좋은 미소로 방문객들을 맞이했다.",
+    "wordFamilyId": "pleasant",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-315",
@@ -3495,7 +3693,9 @@
     "meaningKr": "요약",
     "meaningEn": "a brief statement that gives the most important information",
     "exampleEn": "Please attach a brief summary of the quarterly report to the email.",
-    "exampleKr": "이메일에 분기 보고서에 대한 간단한 요약을 첨부해 주세요."
+    "exampleKr": "이메일에 분기 보고서에 대한 간단한 요약을 첨부해 주세요.",
+    "wordFamilyId": "summary",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-319",
@@ -3506,7 +3706,9 @@
     "meaningKr": "거친, 험한",
     "meaningEn": "not smooth, gentle, or careful",
     "exampleEn": "The delivery driver complained about the rough road leading to the new warehouse.",
-    "exampleKr": "배송 기사는 새 창고로 이어지는 험한 도로에 대해 불만을 제기했다."
+    "exampleKr": "배송 기사는 새 창고로 이어지는 험한 도로에 대해 불만을 제기했다.",
+    "wordFamilyId": "rough",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-320",
@@ -3528,7 +3730,9 @@
     "meaningKr": "회복",
     "meaningEn": "process of returning to a former state after problems",
     "exampleEn": "The economic recovery led to increased hiring across the industry.",
-    "exampleKr": "경기 회복은 업계 전반에 걸친 고용 증가로 이어졌다."
+    "exampleKr": "경기 회복은 업계 전반에 걸친 고용 증가로 이어졌다.",
+    "wordFamilyId": "recover",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-322",
@@ -3572,7 +3776,9 @@
     "meaningKr": "특징짓다, 특징을 나타내다",
     "meaningEn": "to describe the qualities of a person, place, thing",
     "exampleEn": "The consultant's report characterized the client's supply chain as inefficient and outdated.",
-    "exampleKr": "컨설턴트의 보고서는 고객사의 공급망을 비효율적이고 낡은 것으로 특징지었다."
+    "exampleKr": "컨설턴트의 보고서는 고객사의 공급망을 비효율적이고 낡은 것으로 특징지었다.",
+    "wordFamilyId": "characterize",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-326",
@@ -3583,7 +3789,9 @@
     "meaningKr": "명시하다, 구체적으로 밝히다",
     "meaningEn": "to state, name, or mention exactly and clearly",
     "exampleEn": "The contract specifies that all deliverables must be submitted by the end of the fiscal quarter.",
-    "exampleKr": "계약서에는 모든 산출물을 분기 말까지 제출해야 한다고 명시되어 있다."
+    "exampleKr": "계약서에는 모든 산출물을 분기 말까지 제출해야 한다고 명시되어 있다.",
+    "wordFamilyId": "specific",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-327",
@@ -3594,7 +3802,9 @@
     "meaningKr": "정확한",
     "meaningEn": "completely correct; accurate; specific",
     "exampleEn": "Could you tell me the exact time the shuttle bus departs for the airport?",
-    "exampleKr": "공항으로 가는 셔틀버스가 정확히 몇 시에 출발하는지 알려주시겠어요?"
+    "exampleKr": "공항으로 가는 셔틀버스가 정확히 몇 시에 출발하는지 알려주시겠어요?",
+    "wordFamilyId": "exact",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-328",
@@ -3616,7 +3826,9 @@
     "meaningKr": "(기계) 조작자, 운영자",
     "meaningEn": "someone who uses and controls something, usually equipment",
     "exampleEn": "New machine operators must complete a safety training course before working on the factory floor.",
-    "exampleKr": "신입 기계 조작자는 공장 현장에서 근무하기 전에 안전 교육 과정을 수료해야 한다."
+    "exampleKr": "신입 기계 조작자는 공장 현장에서 근무하기 전에 안전 교육 과정을 수료해야 한다.",
+    "wordFamilyId": "operate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-330",
@@ -3693,7 +3905,9 @@
     "meaningKr": "부양가족",
     "meaningEn": "someone who depends on another for (financial) support",
     "exampleEn": "Employees can add a dependent to their health insurance plan during the open enrollment period.",
-    "exampleKr": "직원들은 공개 등록 기간 동안 건강보험 플랜에 부양가족을 추가할 수 있다."
+    "exampleKr": "직원들은 공개 등록 기간 동안 건강보험 플랜에 부양가족을 추가할 수 있다.",
+    "wordFamilyId": "depend",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-337",
@@ -3704,7 +3918,9 @@
     "meaningKr": "전문으로 하다",
     "meaningEn": "to focus on one area of a field or profession",
     "exampleEn": "The law firm specializes in intellectual property disputes for technology companies.",
-    "exampleKr": "그 법률회사는 기술 기업의 지적재산권 분쟁을 전문으로 다룬다."
+    "exampleKr": "그 법률회사는 기술 기업의 지적재산권 분쟁을 전문으로 다룬다.",
+    "wordFamilyId": "special",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-338",
@@ -3737,7 +3953,9 @@
     "meaningKr": "불안, 걱정",
     "meaningEn": "fear about what might happen; worry",
     "exampleEn": "The upcoming merger has caused considerable anxiety among the staff about job security.",
-    "exampleKr": "다가오는 합병으로 인해 직원들 사이에서 고용 안정에 대한 상당한 불안감이 생겼다."
+    "exampleKr": "다가오는 합병으로 인해 직원들 사이에서 고용 안정에 대한 상당한 불안감이 생겼다.",
+    "wordFamilyId": "anxious",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-341",
@@ -3759,7 +3977,9 @@
     "meaningKr": "정확히",
     "meaningEn": "in an exact and accurate manner",
     "exampleEn": "The meeting is scheduled to begin precisely at nine o'clock, so please arrive early.",
-    "exampleKr": "회의는 정확히 9시에 시작될 예정이니 일찍 도착해 주시기 바랍니다."
+    "exampleKr": "회의는 정확히 9시에 시작될 예정이니 일찍 도착해 주시기 바랍니다.",
+    "wordFamilyId": "precise",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-343",
@@ -3858,7 +4078,9 @@
     "meaningKr": "중요성, 의의",
     "meaningEn": "importance of something; the potential for something to have a big effect",
     "exampleEn": "The manager explained the significance of meeting the deadline to the entire team.",
-    "exampleKr": "매니저는 마감일을 지키는 것의 중요성을 팀 전체에게 설명했다."
+    "exampleKr": "매니저는 마감일을 지키는 것의 중요성을 팀 전체에게 설명했다.",
+    "wordFamilyId": "significant",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-352",
@@ -3880,7 +4102,9 @@
     "meaningKr": "불법의",
     "meaningEn": "not allowed by the laws or rules",
     "exampleEn": "Employees are reminded that copying licensed software without permission is illegal.",
-    "exampleKr": "직원들은 허가 없이 라이선스 소프트웨어를 복제하는 것이 불법임을 다시 한번 안내받는다."
+    "exampleKr": "직원들은 허가 없이 라이선스 소프트웨어를 복제하는 것이 불법임을 다시 한번 안내받는다.",
+    "wordFamilyId": "legal",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-354",
@@ -3891,7 +4115,9 @@
     "meaningKr": "자선단체",
     "meaningEn": "organization providing help to the needy, the sick",
     "exampleEn": "The company donates a portion of its annual profits to a local charity.",
-    "exampleKr": "그 회사는 연간 수익의 일부를 지역 자선단체에 기부한다."
+    "exampleKr": "그 회사는 연간 수익의 일부를 지역 자선단체에 기부한다.",
+    "wordFamilyId": "charity",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-355",
@@ -3946,7 +4172,9 @@
     "meaningKr": "자문위원, 컨설턴트",
     "meaningEn": "expert who gives (paid) advice",
     "exampleEn": "The firm hired an outside consultant to review its supply chain strategy.",
-    "exampleKr": "그 회사는 공급망 전략을 검토하기 위해 외부 컨설턴트를 고용했다."
+    "exampleKr": "그 회사는 공급망 전략을 검토하기 위해 외부 컨설턴트를 고용했다.",
+    "wordFamilyId": "consult",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-360",
@@ -3957,7 +4185,9 @@
     "meaningKr": "역사가",
     "meaningEn": "someone who studies or writes about the course of history",
     "exampleEn": "The museum invited a corporate historian to document the company's fifty-year legacy.",
-    "exampleKr": "박물관은 그 회사의 50년 역사를 기록하기 위해 기업 역사가를 초청했다."
+    "exampleKr": "박물관은 그 회사의 50년 역사를 기록하기 위해 기업 역사가를 초청했다.",
+    "wordFamilyId": "history",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-361",
@@ -4034,7 +4264,9 @@
     "meaningKr": "임상의",
     "meaningEn": "related to the examination and treatment of patients",
     "exampleEn": "The pharmaceutical company reported positive results from its latest clinical trial.",
-    "exampleKr": "그 제약회사는 최근 임상시험에서 긍정적인 결과를 보고했다."
+    "exampleKr": "그 제약회사는 최근 임상시험에서 긍정적인 결과를 보고했다.",
+    "wordFamilyId": "clinic",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-368",
@@ -4078,7 +4310,9 @@
     "meaningKr": "관습, 관례",
     "meaningEn": "what is usual or normal",
     "exampleEn": "Sending a thank-you note after a business meeting is a common custom in many cultures.",
-    "exampleKr": "회의 후 감사 메모를 보내는 것은 여러 문화권에서 흔한 관습이다."
+    "exampleKr": "회의 후 감사 메모를 보내는 것은 여러 문화권에서 흔한 관습이다.",
+    "wordFamilyId": "custom",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-372",
@@ -4089,7 +4323,9 @@
     "meaningKr": "적응하다, 맞추다",
     "meaningEn": "to change something to fit or suit a new purpose",
     "exampleEn": "The sales team had to adapt its strategy quickly after the competitor lowered prices.",
-    "exampleKr": "영업팀은 경쟁사가 가격을 낮춘 후 전략을 빠르게 조정해야 했다."
+    "exampleKr": "영업팀은 경쟁사가 가격을 낮춘 후 전략을 빠르게 조정해야 했다.",
+    "wordFamilyId": "adapt",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-373",
@@ -4122,7 +4358,9 @@
     "meaningKr": "신속한, 즉각적인",
     "meaningEn": "being done quickly and with no delay",
     "exampleEn": "We appreciate your prompt response to our request for additional documentation.",
-    "exampleKr": "추가 서류 요청에 신속히 응답해 주셔서 감사합니다."
+    "exampleKr": "추가 서류 요청에 신속히 응답해 주셔서 감사합니다.",
+    "wordFamilyId": "prompt",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-376",
@@ -4144,7 +4382,9 @@
     "meaningKr": "반응하다",
     "meaningEn": "to behave or make a change in a particular way",
     "exampleEn": "Investors reacted quickly to the company's disappointing quarterly earnings report.",
-    "exampleKr": "투자자들은 회사의 실망스러운 분기 실적 보고서에 빠르게 반응했다."
+    "exampleKr": "투자자들은 회사의 실망스러운 분기 실적 보고서에 빠르게 반응했다.",
+    "wordFamilyId": "react",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-378",
@@ -4210,7 +4450,9 @@
     "meaningKr": "선호",
     "meaningEn": "something that is liked or wanted more than another",
     "exampleEn": "Please indicate your seating preference when booking your flight.",
-    "exampleKr": "항공편을 예약할 때 좌석 선호도를 표시해 주세요."
+    "exampleKr": "항공편을 예약할 때 좌석 선호도를 표시해 주세요.",
+    "wordFamilyId": "prefer",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-384",
@@ -4221,7 +4463,9 @@
     "meaningKr": "포괄적인, 종합적인",
     "meaningEn": "including most or all things",
     "exampleEn": "The consultant delivered a comprehensive report covering every aspect of the company's operations.",
-    "exampleKr": "그 컨설턴트는 회사 운영의 모든 측면을 다루는 포괄적인 보고서를 제출했다."
+    "exampleKr": "그 컨설턴트는 회사 운영의 모든 측면을 다루는 포괄적인 보고서를 제출했다.",
+    "wordFamilyId": "comprehend",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-385",
@@ -4276,7 +4520,9 @@
     "meaningKr": "빠른, 급속한",
     "meaningEn": "happening very quickly",
     "exampleEn": "The startup experienced rapid growth after securing its first round of funding.",
-    "exampleKr": "그 스타트업은 첫 투자 라운드를 확보한 후 급속한 성장을 경험했다."
+    "exampleKr": "그 스타트업은 첫 투자 라운드를 확보한 후 급속한 성장을 경험했다.",
+    "wordFamilyId": "rapid",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-390",
@@ -4287,7 +4533,9 @@
     "meaningKr": "취소하다",
     "meaningEn": "to stop a planned event from happening",
     "exampleEn": "The airline canceled the flight due to severe weather conditions.",
-    "exampleKr": "항공사는 악천후로 인해 항공편을 취소했다."
+    "exampleKr": "항공사는 악천후로 인해 항공편을 취소했다.",
+    "wordFamilyId": "cancel",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-391",
@@ -4353,7 +4601,9 @@
     "meaningKr": "저항하다, 버티다",
     "meaningEn": "to try to stop or prevent something",
     "exampleEn": "The union resisted the proposed cuts to employee benefits.",
-    "exampleKr": "노동조합은 제안된 직원 복지 삭감에 저항했다."
+    "exampleKr": "노동조합은 제안된 직원 복지 삭감에 저항했다.",
+    "wordFamilyId": "resist",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-397",
@@ -4364,7 +4614,9 @@
     "meaningKr": "능력, 역량",
     "meaningEn": "means, ability, or potential to do something",
     "exampleEn": "The new software greatly expands the company's data analysis capability.",
-    "exampleKr": "새 소프트웨어는 회사의 데이터 분석 역량을 크게 확장시킨다."
+    "exampleKr": "새 소프트웨어는 회사의 데이터 분석 역량을 크게 확장시킨다.",
+    "wordFamilyId": "capable",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-398",
@@ -4375,7 +4627,9 @@
     "meaningKr": "완전한, 절대적인",
     "meaningEn": "complete and total",
     "exampleEn": "The client demanded absolute confidentiality regarding the terms of the deal.",
-    "exampleKr": "고객은 거래 조건에 대해 완전한 기밀 유지를 요구했다."
+    "exampleKr": "고객은 거래 조건에 대해 완전한 기밀 유지를 요구했다.",
+    "wordFamilyId": "absolute",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-399",
@@ -4386,7 +4640,9 @@
     "meaningKr": "일치하다, 상응하다",
     "meaningEn": "to have similarity or equality with something",
     "exampleEn": "The invoice amount should correspond exactly to the figures listed in the purchase order.",
-    "exampleKr": "청구서 금액은 구매 주문서에 기재된 수치와 정확히 일치해야 한다."
+    "exampleKr": "청구서 금액은 구매 주문서에 기재된 수치와 정확히 일치해야 한다.",
+    "wordFamilyId": "correspond",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-400",
@@ -4474,7 +4730,9 @@
     "meaningKr": "조언하다, 상담하다",
     "meaningEn": "to listen and give expert advice to someone",
     "exampleEn": "The HR manager counseled the employee on how to improve her performance review.",
-    "exampleKr": "인사팀장은 그 직원에게 인사평가를 개선하는 방법에 대해 조언했다."
+    "exampleKr": "인사팀장은 그 직원에게 인사평가를 개선하는 방법에 대해 조언했다.",
+    "wordFamilyId": "counsel",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-408",
@@ -4496,7 +4754,9 @@
     "meaningKr": "빈번한, 잦은",
     "meaningEn": "happening often",
     "exampleEn": "Frequent business travelers can earn extra points through the airline's loyalty program.",
-    "exampleKr": "잦은 출장을 가는 이용객은 항공사의 멤버십 프로그램을 통해 추가 포인트를 적립할 수 있다."
+    "exampleKr": "잦은 출장을 가는 이용객은 항공사의 멤버십 프로그램을 통해 추가 포인트를 적립할 수 있다.",
+    "wordFamilyId": "frequent",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-410",
@@ -4507,7 +4767,9 @@
     "meaningKr": "모터, 엔진",
     "meaningEn": "a machine that uses energy to make something work or move",
     "exampleEn": "The factory replaced the motor in the assembly line machine after it broke down.",
-    "exampleKr": "공장은 고장 난 조립 라인 기계의 모터를 교체했다."
+    "exampleKr": "공장은 고장 난 조립 라인 기계의 모터를 교체했다.",
+    "wordFamilyId": "motor",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-411",
@@ -4518,7 +4780,9 @@
     "meaningKr": "생존",
     "meaningEn": "act of continuing to exist when facing difficulty",
     "exampleEn": "Cutting operating costs was essential for the company's survival during the recession.",
-    "exampleKr": "불황 동안 회사의 생존을 위해서는 운영 비용 절감이 필수적이었다."
+    "exampleKr": "불황 동안 회사의 생존을 위해서는 운영 비용 절감이 필수적이었다.",
+    "wordFamilyId": "survive",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-412",
@@ -4529,7 +4793,9 @@
     "meaningKr": "(매장·주방의) 계산대, 작업대",
     "meaningEn": "a long, flat surface in a shop or kitchen where work is done",
     "exampleEn": "Passengers should check in at the counter at least two hours before international flights.",
-    "exampleKr": "승객들은 국제선 항공편 이용 시 최소 2시간 전에 카운터에서 체크인해야 한다."
+    "exampleKr": "승객들은 국제선 항공편 이용 시 최소 2시간 전에 카운터에서 체크인해야 한다.",
+    "wordFamilyId": "count",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-413",
@@ -4540,7 +4806,9 @@
     "meaningKr": "소유하다, 지니다",
     "meaningEn": "to have or own something",
     "exampleEn": "The candidate possesses the technical skills required for the position.",
-    "exampleKr": "그 지원자는 해당 직무에 필요한 기술적 역량을 갖추고 있다."
+    "exampleKr": "그 지원자는 해당 직무에 필요한 기술적 역량을 갖추고 있다.",
+    "wordFamilyId": "possess",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-414",
@@ -4551,7 +4819,9 @@
     "meaningKr": "허가, 승인",
     "meaningEn": "right to do something as allowed by another",
     "exampleEn": "Employees must obtain permission from their supervisor before working overtime.",
-    "exampleKr": "직원들은 초과 근무를 하기 전에 상사의 승인을 받아야 한다."
+    "exampleKr": "직원들은 초과 근무를 하기 전에 상사의 승인을 받아야 한다.",
+    "wordFamilyId": "permit",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-415",
@@ -4617,7 +4887,9 @@
     "meaningKr": "전기의",
     "meaningEn": "using a particular type of energy carried through metal wire",
     "exampleEn": "The company is transitioning its delivery fleet to electric vehicles to reduce emissions.",
-    "exampleKr": "그 회사는 배출량을 줄이기 위해 배송 차량을 전기차로 전환하고 있다."
+    "exampleKr": "그 회사는 배출량을 줄이기 위해 배송 차량을 전기차로 전환하고 있다.",
+    "wordFamilyId": "electric",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-421",
@@ -4628,7 +4900,9 @@
     "meaningKr": "인상적인",
     "meaningEn": "something makes someone admire or respect",
     "exampleEn": "The candidate's presentation skills made an impressive impact on the interview panel.",
-    "exampleKr": "그 지원자의 발표 능력은 면접관들에게 인상적인 인상을 남겼다."
+    "exampleKr": "그 지원자의 발표 능력은 면접관들에게 인상적인 인상을 남겼다.",
+    "wordFamilyId": "impress",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-422",
@@ -4639,7 +4913,9 @@
     "meaningKr": "진화, 발전",
     "meaningEn": "slow, steady change or development",
     "exampleEn": "The report traces the evolution of the company's business model over the past decade.",
-    "exampleKr": "그 보고서는 지난 10년간 회사 비즈니스 모델의 발전 과정을 추적한다."
+    "exampleKr": "그 보고서는 지난 10년간 회사 비즈니스 모델의 발전 과정을 추적한다.",
+    "wordFamilyId": "evolve",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-423",
@@ -4650,7 +4926,9 @@
     "meaningKr": "인식, 자각",
     "meaningEn": "having knowledge of something",
     "exampleEn": "The campaign aims to raise awareness of the company's new sustainability initiatives.",
-    "exampleKr": "그 캠페인은 회사의 새로운 지속가능성 이니셔티브에 대한 인식을 높이는 것을 목표로 한다."
+    "exampleKr": "그 캠페인은 회사의 새로운 지속가능성 이니셔티브에 대한 인식을 높이는 것을 목표로 한다.",
+    "wordFamilyId": "aware",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-424",
@@ -4694,7 +4972,9 @@
     "meaningKr": "건축, 건축 양식",
     "meaningEn": "design and construction of buildings",
     "exampleEn": "The firm specializes in sustainable architecture for corporate office buildings.",
-    "exampleKr": "그 회사는 기업 사무용 건물을 위한 지속가능한 건축을 전문으로 한다."
+    "exampleKr": "그 회사는 기업 사무용 건물을 위한 지속가능한 건축을 전문으로 한다.",
+    "wordFamilyId": "architect",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-428",
@@ -4705,7 +4985,9 @@
     "meaningKr": "받아들일 수 있는, 용인되는",
     "meaningEn": "satisfactory; good enough",
     "exampleEn": "A two-day delay in delivery is generally acceptable under the terms of the contract.",
-    "exampleKr": "계약 조건상 배송이 이틀 지연되는 것은 일반적으로 용인 가능하다."
+    "exampleKr": "계약 조건상 배송이 이틀 지연되는 것은 일반적으로 용인 가능하다.",
+    "wordFamilyId": "accept",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-429",
@@ -4716,7 +4998,9 @@
     "meaningKr": "(사건·거래의) 기록, 일지",
     "meaningEn": "a written record of subjects or events",
     "exampleEn": "The accountant recorded every transaction in the company's financial journal for auditing purposes.",
-    "exampleKr": "그 회계사는 감사를 위해 회사의 재무 기록부에 모든 거래를 기록했다."
+    "exampleKr": "그 회계사는 감사를 위해 회사의 재무 기록부에 모든 거래를 기록했다.",
+    "wordFamilyId": "journal",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-430",
@@ -4738,7 +5022,9 @@
     "meaningKr": "측정, 치수",
     "meaningEn": "the finding of the size or amount of something or someone",
     "exampleEn": "Please provide accurate measurements of the shipping container before booking cargo space.",
-    "exampleKr": "화물 공간을 예약하기 전에 배송 컨테이너의 정확한 치수를 제공해 주세요."
+    "exampleKr": "화물 공간을 예약하기 전에 배송 컨테이너의 정확한 치수를 제공해 주세요.",
+    "wordFamilyId": "measure",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-432",
@@ -4760,7 +5046,9 @@
     "meaningKr": "성공적으로",
     "meaningEn": "in a manner that achieves a goal",
     "exampleEn": "The team successfully completed the merger negotiations ahead of schedule.",
-    "exampleKr": "그 팀은 예정보다 앞서 합병 협상을 성공적으로 마무리했다."
+    "exampleKr": "그 팀은 예정보다 앞서 합병 협상을 성공적으로 마무리했다.",
+    "wordFamilyId": "succeed",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-434",
@@ -4771,7 +5059,9 @@
     "meaningKr": "우울하게 만들다; (가치를) 하락시키다",
     "meaningEn": "to make someone feel very sad; to reduce the value of something",
     "exampleEn": "Weak consumer spending has depressed retail sales across the region.",
-    "exampleKr": "저조한 소비 지출이 지역 전반의 소매 판매를 하락시켰다."
+    "exampleKr": "저조한 소비 지출이 지역 전반의 소매 판매를 하락시켰다.",
+    "wordFamilyId": "depress",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-435",
@@ -4782,7 +5072,9 @@
     "meaningKr": "삽화, 도해",
     "meaningEn": "picture that helps explain something",
     "exampleEn": "The manual includes illustrations to help users assemble the equipment correctly.",
-    "exampleKr": "그 매뉴얼에는 사용자가 장비를 올바르게 조립할 수 있도록 삽화가 포함되어 있다."
+    "exampleKr": "그 매뉴얼에는 사용자가 장비를 올바르게 조립할 수 있도록 삽화가 포함되어 있다.",
+    "wordFamilyId": "illustrate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-436",
@@ -4848,7 +5140,9 @@
     "meaningKr": "동기를 부여하다",
     "meaningEn": "to make someone excited about doing something",
     "exampleEn": "The manager used performance bonuses to motivate the sales team.",
-    "exampleKr": "매니저는 영업팀에 동기를 부여하기 위해 성과급을 활용했다."
+    "exampleKr": "매니저는 영업팀에 동기를 부여하기 위해 성과급을 활용했다.",
+    "wordFamilyId": "motivate",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-442",
@@ -4881,7 +5175,9 @@
     "meaningKr": "승진",
     "meaningEn": "moving someone to a more important position",
     "exampleEn": "She received a promotion to senior manager after five years with the company.",
-    "exampleKr": "그녀는 회사에서 5년 근무한 후 수석 매니저로 승진했다."
+    "exampleKr": "그녀는 회사에서 5년 근무한 후 수석 매니저로 승진했다.",
+    "wordFamilyId": "promote",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-445",
@@ -4903,7 +5199,9 @@
     "meaningKr": "옹호자, 지지자",
     "meaningEn": "person who fights for or supports strongly",
     "exampleEn": "The vice president became a champion of the diversity initiative within the company.",
-    "exampleKr": "그 부사장은 사내 다양성 이니셔티브의 강력한 옹호자가 되었다."
+    "exampleKr": "그 부사장은 사내 다양성 이니셔티브의 강력한 옹호자가 되었다.",
+    "wordFamilyId": "champion",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-447",
@@ -4936,7 +5234,9 @@
     "meaningKr": "헌신하다, 바치다",
     "meaningEn": "to give your energy, time, etc., completely to someone",
     "exampleEn": "The team dedicated an entire week to preparing for the client's site visit.",
-    "exampleKr": "그 팀은 고객의 현장 방문 준비에 한 주 전체를 바쳤다."
+    "exampleKr": "그 팀은 고객의 현장 방문 준비에 한 주 전체를 바쳤다.",
+    "wordFamilyId": "dedicate",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-450",
@@ -4947,7 +5247,9 @@
     "meaningKr": "대략",
     "meaningEn": "in an inexact or imprecise manner",
     "exampleEn": "The project will cost roughly two hundred thousand dollars to complete.",
-    "exampleKr": "그 프로젝트를 완료하는 데 대략 20만 달러가 소요될 것이다."
+    "exampleKr": "그 프로젝트를 완료하는 데 대략 20만 달러가 소요될 것이다.",
+    "wordFamilyId": "rough",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-451",
@@ -4991,7 +5293,9 @@
     "meaningKr": "평가",
     "meaningEn": "judgment about the value or condition of something",
     "exampleEn": "Each employee undergoes a performance evaluation at the end of the fiscal year.",
-    "exampleKr": "각 직원은 회계연도 말에 성과 평가를 받는다."
+    "exampleKr": "각 직원은 회계연도 말에 성과 평가를 받는다.",
+    "wordFamilyId": "evaluate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-455",
@@ -5013,7 +5317,9 @@
     "meaningKr": "성취하다, 완수하다",
     "meaningEn": "to succeed in doing; complete successfully",
     "exampleEn": "The team accomplished its sales target three weeks ahead of the deadline.",
-    "exampleKr": "그 팀은 마감일보다 3주 앞서 판매 목표를 달성했다."
+    "exampleKr": "그 팀은 마감일보다 3주 앞서 판매 목표를 달성했다.",
+    "wordFamilyId": "accomplish",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-457",
@@ -5035,7 +5341,9 @@
     "meaningKr": "발표, 공지",
     "meaningEn": "act of informing people about something publicly",
     "exampleEn": "The CEO made an announcement regarding the company's expansion into new markets.",
-    "exampleKr": "CEO는 신규 시장 진출에 관한 발표를 했다."
+    "exampleKr": "CEO는 신규 시장 진출에 관한 발표를 했다.",
+    "wordFamilyId": "announce",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-459",
@@ -5079,7 +5387,9 @@
     "meaningKr": "대회, 경연",
     "meaningEn": "an event in which people try to win",
     "exampleEn": "The marketing department launched a photo contest to promote the new product line.",
-    "exampleKr": "마케팅부서는 신제품 라인을 홍보하기 위해 사진 대회를 시작했다."
+    "exampleKr": "마케팅부서는 신제품 라인을 홍보하기 위해 사진 대회를 시작했다.",
+    "wordFamilyId": "contest",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-463",
@@ -5167,7 +5477,9 @@
     "meaningKr": "문학의",
     "meaningEn": "concerned with written works",
     "exampleEn": "The publishing house hosted a literary event to celebrate its bestselling authors.",
-    "exampleKr": "그 출판사는 베스트셀러 작가들을 기념하기 위해 문학 행사를 개최했다."
+    "exampleKr": "그 출판사는 베스트셀러 작가들을 기념하기 위해 문학 행사를 개최했다.",
+    "wordFamilyId": "literary",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-471",
@@ -5178,7 +5490,9 @@
     "meaningKr": "통치하다, (규칙 등을) 규율하다",
     "meaningEn": "to officially control and lead an area",
     "exampleEn": "Strict regulations govern how pharmaceutical companies advertise their products.",
-    "exampleKr": "엄격한 규정이 제약회사들의 제품 광고 방식을 규율한다."
+    "exampleKr": "엄격한 규정이 제약회사들의 제품 광고 방식을 규율한다.",
+    "wordFamilyId": "govern",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-472",
@@ -5211,7 +5525,9 @@
     "meaningKr": "조용한, 침묵하는",
     "meaningEn": "not speaking or making noise",
     "exampleEn": "The room fell silent as the CEO announced the company's decision to downsize.",
-    "exampleKr": "CEO가 회사의 인력 감축 결정을 발표하자 회의실은 침묵에 잠겼다."
+    "exampleKr": "CEO가 회사의 인력 감축 결정을 발표하자 회의실은 침묵에 잠겼다.",
+    "wordFamilyId": "silence",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-475",
@@ -5233,7 +5549,9 @@
     "meaningKr": "출판사",
     "meaningEn": "business that produces books or magazines",
     "exampleEn": "The author signed a contract with a major publisher to release her next book.",
-    "exampleKr": "그 작가는 다음 책을 출간하기 위해 대형 출판사와 계약을 체결했다."
+    "exampleKr": "그 작가는 다음 책을 출간하기 위해 대형 출판사와 계약을 체결했다.",
+    "wordFamilyId": "public",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-477",
@@ -5244,7 +5562,9 @@
     "meaningKr": "축하 행사",
     "meaningEn": "special event where people show the importance of something",
     "exampleEn": "The office held a celebration to mark the company's twentieth anniversary.",
-    "exampleKr": "사무실에서는 회사 창립 20주년을 기념하는 축하 행사가 열렸다."
+    "exampleKr": "사무실에서는 회사 창립 20주년을 기념하는 축하 행사가 열렸다.",
+    "wordFamilyId": "celebrate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-478",
@@ -5266,7 +5586,9 @@
     "meaningKr": "보상, 배상금",
     "meaningEn": "money given or received as payment for loss",
     "exampleEn": "The airline offered compensation to passengers whose flights were canceled due to the mechanical issue.",
-    "exampleKr": "항공사는 기계 결함으로 항공편이 취소된 승객들에게 보상금을 제공했다."
+    "exampleKr": "항공사는 기계 결함으로 항공편이 취소된 승객들에게 보상금을 제공했다.",
+    "wordFamilyId": "compensate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-480",
@@ -5277,7 +5599,9 @@
     "meaningKr": "고전적인",
     "meaningEn": "concerning ideas considered to be traditional",
     "exampleEn": "The consulting firm still relies on classical economic theory when advising clients.",
-    "exampleKr": "그 컨설팅 회사는 고객에게 자문할 때 여전히 고전 경제 이론에 의존한다."
+    "exampleKr": "그 컨설팅 회사는 고객에게 자문할 때 여전히 고전 경제 이론에 의존한다.",
+    "wordFamilyId": "classic",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-481",
@@ -5321,7 +5645,9 @@
     "meaningKr": "수정하다, 변경하다",
     "meaningEn": "to make small changes to something",
     "exampleEn": "The engineering team modified the design to meet the client's new specifications.",
-    "exampleKr": "엔지니어링팀은 고객의 새로운 사양을 충족하기 위해 설계를 수정했다."
+    "exampleKr": "엔지니어링팀은 고객의 새로운 사양을 충족하기 위해 설계를 수정했다.",
+    "wordFamilyId": "modify",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-485",
@@ -5343,7 +5669,9 @@
     "meaningKr": "우정",
     "meaningEn": "feeling of liking someone; good relationship",
     "exampleEn": "Years of collaboration on joint projects developed into a lasting friendship between the two executives.",
-    "exampleKr": "공동 프로젝트에서의 수년간의 협업은 두 임원 사이에 오랜 우정으로 발전했다."
+    "exampleKr": "공동 프로젝트에서의 수년간의 협업은 두 임원 사이에 오랜 우정으로 발전했다.",
+    "wordFamilyId": "friend",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-487",
@@ -5354,7 +5682,9 @@
     "meaningKr": "직업, 전문직",
     "meaningEn": "job requiring special education or skills",
     "exampleEn": "Before joining our firm, she practiced law as her profession for ten years.",
-    "exampleKr": "우리 회사에 합류하기 전, 그녀는 10년 동안 변호사를 직업으로 삼았다."
+    "exampleKr": "우리 회사에 합류하기 전, 그녀는 10년 동안 변호사를 직업으로 삼았다.",
+    "wordFamilyId": "profession",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-488",
@@ -5365,7 +5695,9 @@
     "meaningKr": "문자 그대로, 말 그대로",
     "meaningEn": "in a way that expresses the exact meaning of something",
     "exampleEn": "The manager literally rewrote the entire proposal the night before the deadline.",
-    "exampleKr": "매니저는 마감 전날 밤 제안서를 말 그대로 처음부터 다시 작성했다."
+    "exampleKr": "매니저는 마감 전날 밤 제안서를 말 그대로 처음부터 다시 작성했다.",
+    "wordFamilyId": "literary",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-489",
@@ -5420,7 +5752,9 @@
     "meaningKr": "배정하다, 할당하다",
     "meaningEn": "to give someone a particular job or something to do",
     "exampleEn": "The supervisor assigned the new intern to the marketing department.",
-    "exampleKr": "상사는 새 인턴을 마케팅 부서에 배정했다."
+    "exampleKr": "상사는 새 인턴을 마케팅 부서에 배정했다.",
+    "wordFamilyId": "assign",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-494",
@@ -5431,7 +5765,9 @@
     "meaningKr": "인플레이션, 물가 상승",
     "meaningEn": "continual rise in the prices of products",
     "exampleEn": "Rising inflation has forced the company to raise the prices of its products.",
-    "exampleKr": "물가 상승으로 인해 회사는 제품 가격을 인상할 수밖에 없었다."
+    "exampleKr": "물가 상승으로 인해 회사는 제품 가격을 인상할 수밖에 없었다.",
+    "wordFamilyId": "inflate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-495",
@@ -5442,7 +5778,9 @@
     "meaningKr": "역사적인, 유서 깊은",
     "meaningEn": "belonging to the past; of what is important or famous in the past",
     "exampleEn": "The conference will be held in a historic building near the city hall.",
-    "exampleKr": "이번 컨퍼런스는 시청 근처의 유서 깊은 건물에서 열릴 예정이다."
+    "exampleKr": "이번 컨퍼런스는 시청 근처의 유서 깊은 건물에서 열릴 예정이다.",
+    "wordFamilyId": "history",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-496",
@@ -5453,7 +5791,9 @@
     "meaningKr": "부상을 입히다, 다치게 하다",
     "meaningEn": "do physical harm or damage",
     "exampleEn": "A warehouse worker was injured while operating the forklift without proper training.",
-    "exampleKr": "한 창고 직원이 적절한 교육 없이 지게차를 운전하다가 부상을 입었다."
+    "exampleKr": "한 창고 직원이 적절한 교육 없이 지게차를 운전하다가 부상을 입었다.",
+    "wordFamilyId": "injure",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-497",
@@ -5508,7 +5848,9 @@
     "meaningKr": "인원, 직원들",
     "meaningEn": "group of people who work for a company",
     "exampleEn": "All personnel must complete the safety training before entering the factory floor.",
-    "exampleKr": "모든 직원은 공장 작업 현장에 들어가기 전에 안전 교육을 이수해야 한다."
+    "exampleKr": "모든 직원은 공장 작업 현장에 들어가기 전에 안전 교육을 이수해야 한다.",
+    "wordFamilyId": "person",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-502",
@@ -5519,7 +5861,9 @@
     "meaningKr": "상상력",
     "meaningEn": "the ability to think of new ideas or things that are not real",
     "exampleEn": "The advertising campaign showed real imagination in how it presented the brand.",
-    "exampleKr": "그 광고 캠페인은 브랜드를 표현하는 방식에서 진정한 상상력을 보여주었다."
+    "exampleKr": "그 광고 캠페인은 브랜드를 표현하는 방식에서 진정한 상상력을 보여주었다.",
+    "wordFamilyId": "imagine",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-503",
@@ -5530,7 +5874,9 @@
     "meaningKr": "동의하지 않다, 의견이 다르다",
     "meaningEn": "to have a different opinion from someone",
     "exampleEn": "Two board members disagreed with the proposed budget cuts.",
-    "exampleKr": "이사회 두 명이 제안된 예산 삭감안에 동의하지 않았다."
+    "exampleKr": "이사회 두 명이 제안된 예산 삭감안에 동의하지 않았다.",
+    "wordFamilyId": "disagree",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-504",
@@ -5585,7 +5931,9 @@
     "meaningKr": "초과하다, 넘다",
     "meaningEn": "to be greater in number than something",
     "exampleEn": "Quarterly sales exceeded the target by nearly twenty percent.",
-    "exampleKr": "분기 매출이 목표치를 거의 20퍼센트 초과했다."
+    "exampleKr": "분기 매출이 목표치를 거의 20퍼센트 초과했다.",
+    "wordFamilyId": "exceed",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-509",
@@ -5596,7 +5944,9 @@
     "meaningKr": "지출, 비용",
     "meaningEn": "amount of money used during a certain time",
     "exampleEn": "The finance team reviewed the department's expenditure at the end of each quarter.",
-    "exampleKr": "재무팀은 매 분기 말 부서의 지출을 검토했다."
+    "exampleKr": "재무팀은 매 분기 말 부서의 지출을 검토했다.",
+    "wordFamilyId": "expense",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-510",
@@ -5618,7 +5968,9 @@
     "meaningKr": "임신한",
     "meaningEn": "when women carry a child inside them that is not yet born",
     "exampleEn": "The HR policy grants extended leave to employees who are pregnant.",
-    "exampleKr": "인사 정책은 임신한 직원에게 연장된 휴가를 제공한다."
+    "exampleKr": "인사 정책은 임신한 직원에게 연장된 휴가를 제공한다.",
+    "wordFamilyId": "pregnant",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-512",
@@ -5629,7 +5981,9 @@
     "meaningKr": "신뢰할 수 있는, 믿을 만한",
     "meaningEn": "deserving of your trust, dependable",
     "exampleEn": "The company chose the supplier known for reliable on-time delivery.",
-    "exampleKr": "회사는 정시 배송으로 신뢰할 수 있다고 알려진 공급업체를 선택했다."
+    "exampleKr": "회사는 정시 배송으로 신뢰할 수 있다고 알려진 공급업체를 선택했다.",
+    "wordFamilyId": "rely",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-513",
@@ -5673,7 +6027,9 @@
     "meaningKr": "행운, 재산",
     "meaningEn": "chance or luck, particularly good luck",
     "exampleEn": "The founder made a fortune after the company went public.",
-    "exampleKr": "창립자는 회사가 상장된 후 큰 재산을 모았다."
+    "exampleKr": "창립자는 회사가 상장된 후 큰 재산을 모았다.",
+    "wordFamilyId": "fortunate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-517",
@@ -5717,7 +6073,9 @@
     "meaningKr": "혼합물, 혼합",
     "meaningEn": "something made by combining two or more things",
     "exampleEn": "The success of the campaign was a mixture of good timing and strong design.",
-    "exampleKr": "그 캠페인의 성공은 좋은 타이밍과 뛰어난 디자인이 결합된 결과였다."
+    "exampleKr": "그 캠페인의 성공은 좋은 타이밍과 뛰어난 디자인이 결합된 결과였다.",
+    "wordFamilyId": "mix",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-521",
@@ -5728,7 +6086,9 @@
     "meaningKr": "자동으로",
     "meaningEn": "in a way not requiring control by a person",
     "exampleEn": "Invoices are automatically sent to clients once the order is shipped.",
-    "exampleKr": "주문이 발송되면 청구서는 자동으로 고객에게 전송된다."
+    "exampleKr": "주문이 발송되면 청구서는 자동으로 고객에게 전송된다.",
+    "wordFamilyId": "automate",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-522",
@@ -5739,7 +6099,9 @@
     "meaningKr": "학자",
     "meaningEn": "a person who studies and knows a lot about a particular subject",
     "exampleEn": "The research firm hired a visiting scholar to review its market analysis methods.",
-    "exampleKr": "그 리서치 회사는 시장 분석 방법을 검토하기 위해 방문 학자를 고용했다."
+    "exampleKr": "그 리서치 회사는 시장 분석 방법을 검토하기 위해 방문 학자를 고용했다.",
+    "wordFamilyId": "scholar",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-523",
@@ -5761,7 +6123,9 @@
     "meaningKr": "극적으로, 급격하게",
     "meaningEn": "in a sudden or extreme manner",
     "exampleEn": "Sales dropped dramatically after the competitor launched a cheaper product.",
-    "exampleKr": "경쟁사가 더 저렴한 제품을 출시한 후 매출이 급격하게 감소했다."
+    "exampleKr": "경쟁사가 더 저렴한 제품을 출시한 후 매출이 급격하게 감소했다.",
+    "wordFamilyId": "drama",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-525",
@@ -5783,7 +6147,9 @@
     "meaningKr": "생물, 동물",
     "meaningEn": "animal of any type",
     "exampleEn": "The nature documentary crew filmed creatures rarely seen by humans.",
-    "exampleKr": "자연 다큐멘터리 제작진은 사람들이 좀처럼 보지 못하는 생물들을 촬영했다."
+    "exampleKr": "자연 다큐멘터리 제작진은 사람들이 좀처럼 보지 못하는 생물들을 촬영했다.",
+    "wordFamilyId": "create",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-527",
@@ -5794,7 +6160,9 @@
     "meaningKr": "제휴, 동업, 파트너십",
     "meaningEn": "working with others for some purpose",
     "exampleEn": "The two companies announced a new partnership to develop the software together.",
-    "exampleKr": "두 회사는 소프트웨어를 공동 개발하기 위한 새로운 파트너십을 발표했다."
+    "exampleKr": "두 회사는 소프트웨어를 공동 개발하기 위한 새로운 파트너십을 발표했다.",
+    "wordFamilyId": "partner",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-528",
@@ -5805,7 +6173,9 @@
     "meaningKr": "참가, 참여",
     "meaningEn": "act of being involved in something",
     "exampleEn": "Employee participation in the training program was higher than expected.",
-    "exampleKr": "교육 프로그램에 대한 직원 참여율이 예상보다 높았다."
+    "exampleKr": "교육 프로그램에 대한 직원 참여율이 예상보다 높았다.",
+    "wordFamilyId": "participate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-529",
@@ -5827,7 +6197,9 @@
     "meaningKr": "벌금, 위약금, 처벌",
     "meaningEn": "punishment for committing a crime or offense",
     "exampleEn": "Late payment of the invoice will result in a penalty fee.",
-    "exampleKr": "청구서 대금 납부가 늦어지면 위약금이 부과된다."
+    "exampleKr": "청구서 대금 납부가 늦어지면 위약금이 부과된다.",
+    "wordFamilyId": "penalize",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-531",
@@ -5893,7 +6265,9 @@
     "meaningKr": "발전하다, 진화하다",
     "meaningEn": "to slowly change or develop into something better",
     "exampleEn": "The company's business model has evolved significantly over the past decade.",
-    "exampleKr": "그 회사의 비즈니스 모델은 지난 10년간 크게 발전해왔다."
+    "exampleKr": "그 회사의 비즈니스 모델은 지난 10년간 크게 발전해왔다.",
+    "wordFamilyId": "evolve",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-537",
@@ -5948,7 +6322,9 @@
     "meaningKr": "소유, 소유물",
     "meaningEn": "having or owning something",
     "exampleEn": "The contract states that the equipment remains the possession of the leasing company.",
-    "exampleKr": "계약서에는 해당 장비가 리스 회사의 소유로 남는다고 명시되어 있다."
+    "exampleKr": "계약서에는 해당 장비가 리스 회사의 소유로 남는다고 명시되어 있다.",
+    "wordFamilyId": "possess",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-542",
@@ -6014,7 +6390,9 @@
     "meaningKr": "민주적인",
     "meaningEn": "of democracy; entitling the people to power",
     "exampleEn": "The manager encouraged a more democratic process for choosing project leaders.",
-    "exampleKr": "매니저는 프로젝트 리더를 선정하는 데 더 민주적인 절차를 장려했다."
+    "exampleKr": "매니저는 프로젝트 리더를 선정하는 데 더 민주적인 절차를 장려했다.",
+    "wordFamilyId": "democracy",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-548",
@@ -6025,7 +6403,9 @@
     "meaningKr": "유지 보수, 정비",
     "meaningEn": "keeping (a machine) working by checking and fixing it",
     "exampleEn": "The factory schedules regular maintenance for all its machinery.",
-    "exampleKr": "그 공장은 모든 기계에 대해 정기적인 유지 보수 일정을 잡는다."
+    "exampleKr": "그 공장은 모든 기계에 대해 정기적인 유지 보수 일정을 잡는다.",
+    "wordFamilyId": "maintain",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-549",
@@ -6036,7 +6416,9 @@
     "meaningKr": "그 결과, 따라서",
     "meaningEn": "therefore; as a result of something",
     "exampleEn": "The shipment was delayed; consequently, the launch date was pushed back a week.",
-    "exampleKr": "배송이 지연되었고, 그 결과 출시일이 일주일 늦춰졌다."
+    "exampleKr": "배송이 지연되었고, 그 결과 출시일이 일주일 늦춰졌다.",
+    "wordFamilyId": "consequence",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-550",
@@ -6069,7 +6451,9 @@
     "meaningKr": "강화하다",
     "meaningEn": "to make something stronger",
     "exampleEn": "The new training program is designed to strengthen employees' negotiation skills.",
-    "exampleKr": "새 교육 프로그램은 직원들의 협상 능력을 강화하도록 설계되었다."
+    "exampleKr": "새 교육 프로그램은 직원들의 협상 능력을 강화하도록 설계되었다.",
+    "wordFamilyId": "strength",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-553",
@@ -6135,7 +6519,9 @@
     "meaningKr": "잠재적으로, 어쩌면",
     "meaningEn": "that could happen or become reality",
     "exampleEn": "The merger could potentially double the company's market share.",
-    "exampleKr": "그 합병은 잠재적으로 회사의 시장 점유율을 두 배로 늘릴 수 있다."
+    "exampleKr": "그 합병은 잠재적으로 회사의 시장 점유율을 두 배로 늘릴 수 있다.",
+    "wordFamilyId": "potential",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-559",
@@ -6190,7 +6576,9 @@
     "meaningKr": "자부심",
     "meaningEn": "when you respect yourself",
     "exampleEn": "The staff take great pride in delivering excellent customer service.",
-    "exampleKr": "직원들은 뛰어난 고객 서비스를 제공하는 데 큰 자부심을 느낀다."
+    "exampleKr": "직원들은 뛰어난 고객 서비스를 제공하는 데 큰 자부심을 느낀다.",
+    "wordFamilyId": "pride",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-564",
@@ -6212,7 +6600,9 @@
     "meaningKr": "문의",
     "meaningEn": "request for information",
     "exampleEn": "The customer service team responds to every inquiry within 24 hours.",
-    "exampleKr": "고객 서비스 팀은 모든 문의에 24시간 이내에 응답한다."
+    "exampleKr": "고객 서비스 팀은 모든 문의에 24시간 이내에 응답한다.",
+    "wordFamilyId": "inquire",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-566",
@@ -6223,7 +6613,9 @@
     "meaningKr": "사직하다, 사임하다",
     "meaningEn": "to leave a job because you want to",
     "exampleEn": "The vice president resigned after accepting a position at another firm.",
-    "exampleKr": "부사장은 다른 회사의 자리를 수락한 후 사임했다."
+    "exampleKr": "부사장은 다른 회사의 자리를 수락한 후 사임했다.",
+    "wordFamilyId": "resign",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-567",
@@ -6245,7 +6637,9 @@
     "meaningKr": "엄격한",
     "meaningEn": "must be obeyed",
     "exampleEn": "The airline enforces a strict policy on carry-on baggage size.",
-    "exampleKr": "그 항공사는 기내 수하물 크기에 대해 엄격한 정책을 시행한다."
+    "exampleKr": "그 항공사는 기내 수하물 크기에 대해 엄격한 정책을 시행한다.",
+    "wordFamilyId": "strict",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-569",
@@ -6289,7 +6683,9 @@
     "meaningKr": "뚜렷이 다른, 별개의",
     "meaningEn": "clearly different in nature from something else",
     "exampleEn": "The two product lines target distinct customer segments.",
-    "exampleKr": "그 두 제품 라인은 서로 뚜렷이 다른 고객층을 대상으로 한다."
+    "exampleKr": "그 두 제품 라인은 서로 뚜렷이 다른 고객층을 대상으로 한다.",
+    "wordFamilyId": "distinguish",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-573",
@@ -6311,7 +6707,9 @@
     "meaningKr": "한계, 제약",
     "meaningEn": "act of controlling or reducing the size of something",
     "exampleEn": "The report acknowledged the limitations of the current data collection method.",
-    "exampleKr": "그 보고서는 현재 데이터 수집 방법의 한계를 인정했다."
+    "exampleKr": "그 보고서는 현재 데이터 수집 방법의 한계를 인정했다.",
+    "wordFamilyId": "limit",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-575",
@@ -6322,7 +6720,9 @@
     "meaningKr": "조짐, 징후",
     "meaningEn": "something that signals that something else exists or will happen",
     "exampleEn": "Rising demand is a strong indication that the new product will succeed.",
-    "exampleKr": "수요 증가는 신제품이 성공할 것이라는 강력한 조짐이다."
+    "exampleKr": "수요 증가는 신제품이 성공할 것이라는 강력한 조짐이다.",
+    "wordFamilyId": "indicate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-576",
@@ -6333,7 +6733,9 @@
     "meaningKr": "안정성",
     "meaningEn": "quality of not being easily moved or changed",
     "exampleEn": "Investors value the financial stability of long-established companies.",
-    "exampleKr": "투자자들은 오래된 기업의 재정적 안정성을 중요하게 여긴다."
+    "exampleKr": "투자자들은 오래된 기업의 재정적 안정성을 중요하게 여긴다.",
+    "wordFamilyId": "stable",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-577",
@@ -6366,7 +6768,9 @@
     "meaningKr": "구성하다",
     "meaningEn": "to come together to form or make something",
     "exampleEn": "The committee is composed of representatives from each department.",
-    "exampleKr": "그 위원회는 각 부서의 대표들로 구성되어 있다."
+    "exampleKr": "그 위원회는 각 부서의 대표들로 구성되어 있다.",
+    "wordFamilyId": "compose",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-580",
@@ -6399,7 +6803,9 @@
     "meaningKr": "단지 ~에 불과한",
     "meaningEn": "small and unimportant",
     "exampleEn": "The delay was caused by a mere scheduling error, not a technical problem.",
-    "exampleKr": "그 지연은 기술적 문제가 아니라 단순한 일정 착오 때문이었다."
+    "exampleKr": "그 지연은 기술적 문제가 아니라 단순한 일정 착오 때문이었다.",
+    "wordFamilyId": "merely",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-583",
@@ -6421,7 +6827,9 @@
     "meaningKr": "규제하다, 관리하다",
     "meaningEn": "to make rules or laws to control something or someone",
     "exampleEn": "The agency regulates how financial institutions handle customer data.",
-    "exampleKr": "그 기관은 금융 기관이 고객 데이터를 다루는 방식을 규제한다."
+    "exampleKr": "그 기관은 금융 기관이 고객 데이터를 다루는 방식을 규제한다.",
+    "wordFamilyId": "regulate",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-585",
@@ -6465,7 +6873,9 @@
     "meaningKr": "파괴",
     "meaningEn": "damaging something so badly that it no longer exists",
     "exampleEn": "The fire caused significant destruction to the company's main warehouse.",
-    "exampleKr": "그 화재는 회사의 주요 창고에 상당한 파괴를 초래했다."
+    "exampleKr": "그 화재는 회사의 주요 창고에 상당한 파괴를 초래했다.",
+    "wordFamilyId": "destroy",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-589",
@@ -6663,7 +7073,9 @@
     "meaningKr": "협력",
     "meaningEn": "a situation where everyone works together to get something done",
     "exampleEn": "The project succeeded thanks to close cooperation between the two departments.",
-    "exampleKr": "그 프로젝트는 두 부서 간 긴밀한 협력 덕분에 성공했다."
+    "exampleKr": "그 프로젝트는 두 부서 간 긴밀한 협력 덕분에 성공했다.",
+    "wordFamilyId": "cooperate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-607",
@@ -6674,7 +7086,9 @@
     "meaningKr": "민간인",
     "meaningEn": "ordinary person who is not in the army",
     "exampleEn": "The defense contractor also hires civilian engineers for its research division.",
-    "exampleKr": "그 방위산업체는 연구 부서에 민간인 엔지니어도 채용한다."
+    "exampleKr": "그 방위산업체는 연구 부서에 민간인 엔지니어도 채용한다.",
+    "wordFamilyId": "civil",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-608",
@@ -6685,7 +7099,9 @@
     "meaningKr": "구성",
     "meaningEn": "something that is created from different parts to make something new",
     "exampleEn": "The report examines the composition of the company's board of directors.",
-    "exampleKr": "그 보고서는 회사 이사회의 구성을 살펴본다."
+    "exampleKr": "그 보고서는 회사 이사회의 구성을 살펴본다.",
+    "wordFamilyId": "compose",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-609",
@@ -6707,7 +7123,9 @@
     "meaningKr": "상관없이",
     "meaningEn": "without being affected or concerned by something difficult or troubling",
     "exampleEn": "The policy applies to all employees, regardless of their position.",
-    "exampleKr": "그 정책은 직급에 상관없이 모든 직원에게 적용된다."
+    "exampleKr": "그 정책은 직급에 상관없이 모든 직원에게 적용된다.",
+    "wordFamilyId": "regard",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-611",
@@ -6740,7 +7158,9 @@
     "meaningKr": "인종의, 인종적인",
     "meaningEn": "relating to a person's group based on inherited physical appearance",
     "exampleEn": "The company revised its policy to prevent racial discrimination in hiring.",
-    "exampleKr": "그 회사는 채용에서 인종 차별을 방지하기 위해 정책을 개정했다."
+    "exampleKr": "그 회사는 채용에서 인종 차별을 방지하기 위해 정책을 개정했다.",
+    "wordFamilyId": "race",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-614",
@@ -6762,7 +7182,9 @@
     "meaningKr": "바라건대",
     "meaningEn": "in a manner wishing something to happen",
     "exampleEn": "Hopefully, the new supplier will resolve the delivery delays.",
-    "exampleKr": "바라건대 새 공급업체가 배송 지연 문제를 해결해 주었으면 한다."
+    "exampleKr": "바라건대 새 공급업체가 배송 지연 문제를 해결해 주었으면 한다.",
+    "wordFamilyId": "hope",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-616",
@@ -6806,7 +7228,9 @@
     "meaningKr": "제조사, 제작자",
     "meaningEn": "person, company, or object that creates things",
     "exampleEn": "The furniture maker signed an exclusive deal with the retail chain.",
-    "exampleKr": "그 가구 제조사는 소매 체인점과 독점 계약을 체결했다."
+    "exampleKr": "그 가구 제조사는 소매 체인점과 독점 계약을 체결했다.",
+    "wordFamilyId": "make",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-620",
@@ -6894,7 +7318,9 @@
     "meaningKr": "발명하다",
     "meaningEn": "to create something useful for the first time",
     "exampleEn": "Her team invented a device that reduces packaging waste.",
-    "exampleKr": "그녀의 팀은 포장 폐기물을 줄이는 장치를 발명했다."
+    "exampleKr": "그녀의 팀은 포장 폐기물을 줄이는 장치를 발명했다.",
+    "wordFamilyId": "invent",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-628",
@@ -6938,7 +7364,9 @@
     "meaningKr": "주저하다, 망설이다",
     "meaningEn": "to stop before doing something because you are unsure what to do",
     "exampleEn": "Please do not hesitate to contact us if you have any questions.",
-    "exampleKr": "문의 사항이 있으시면 주저하지 마시고 저희에게 연락해 주십시오."
+    "exampleKr": "문의 사항이 있으시면 주저하지 마시고 저희에게 연락해 주십시오.",
+    "wordFamilyId": "hesitate",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-632",
@@ -6960,7 +7388,9 @@
     "meaningKr": "동기, 의욕",
     "meaningEn": "feeling in a person that makes him or her want to do something",
     "exampleEn": "Regular feedback sessions help boost employee motivation.",
-    "exampleKr": "정기적인 피드백 세션은 직원들의 동기 부여를 높이는 데 도움이 된다."
+    "exampleKr": "정기적인 피드백 세션은 직원들의 동기 부여를 높이는 데 도움이 된다.",
+    "wordFamilyId": "motivate",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-634",
@@ -6982,7 +7412,9 @@
     "meaningKr": "확고하게, 단호하게",
     "meaningEn": "in a hard, steady, unchanging way",
     "exampleEn": "The manager firmly rejected the request for a budget increase.",
-    "exampleKr": "매니저는 예산 증액 요청을 단호하게 거절했다."
+    "exampleKr": "매니저는 예산 증액 요청을 단호하게 거절했다.",
+    "wordFamilyId": "firm",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-636",
@@ -7037,7 +7469,9 @@
     "meaningKr": "선수권 대회, 챔피언십",
     "meaningEn": "sports competition to find the best player or team",
     "exampleEn": "The company sponsored the regional championship as part of its marketing strategy.",
-    "exampleKr": "그 회사는 마케팅 전략의 일환으로 지역 선수권 대회를 후원했다."
+    "exampleKr": "그 회사는 마케팅 전략의 일환으로 지역 선수권 대회를 후원했다.",
+    "wordFamilyId": "champion",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-641",
@@ -7048,7 +7482,9 @@
     "meaningKr": "하인, 고용인",
     "meaningEn": "a person who works in another person's house and takes care of them",
     "exampleEn": "The historic hotel once employed dozens of servants to care for its guests.",
-    "exampleKr": "그 유서 깊은 호텔은 한때 투숙객을 돌보기 위해 수십 명의 하인을 고용했었다."
+    "exampleKr": "그 유서 깊은 호텔은 한때 투숙객을 돌보기 위해 수십 명의 하인을 고용했었다.",
+    "wordFamilyId": "serve",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-642",
@@ -7070,7 +7506,9 @@
     "meaningKr": "초과, 과잉",
     "meaningEn": "amount that is more than necessary",
     "exampleEn": "Passengers must pay an additional fee for excess baggage.",
-    "exampleKr": "승객은 초과 수하물에 대해 추가 요금을 지불해야 한다."
+    "exampleKr": "승객은 초과 수하물에 대해 추가 요금을 지불해야 한다.",
+    "wordFamilyId": "exceed",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-644",
@@ -7081,7 +7519,9 @@
     "meaningKr": "복잡성",
     "meaningEn": "state of having many parts and not being simple",
     "exampleEn": "The complexity of the new tax law confused many small business owners.",
-    "exampleKr": "새로운 세법의 복잡성은 많은 소규모 사업주들을 혼란스럽게 만들었다."
+    "exampleKr": "새로운 세법의 복잡성은 많은 소규모 사업주들을 혼란스럽게 만들었다.",
+    "wordFamilyId": "complex",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-645",
@@ -7103,7 +7543,9 @@
     "meaningKr": "놀랍게도",
     "meaningEn": "in an unexpected way",
     "exampleEn": "Surprisingly, the smaller vendor offered a better price than the larger supplier.",
-    "exampleKr": "놀랍게도 더 작은 업체가 대형 공급업체보다 더 나은 가격을 제시했다."
+    "exampleKr": "놀랍게도 더 작은 업체가 대형 공급업체보다 더 나은 가격을 제시했다.",
+    "wordFamilyId": "surprise",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-647",
@@ -7125,7 +7567,9 @@
     "meaningKr": "시행, 실행",
     "meaningEn": "making a law, system, or plan start to happen or be used",
     "exampleEn": "The implementation of the new policy will begin next month.",
-    "exampleKr": "새 정책의 시행은 다음 달부터 시작될 것이다."
+    "exampleKr": "새 정책의 시행은 다음 달부터 시작될 것이다.",
+    "wordFamilyId": "implement",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-649",
@@ -7147,7 +7591,9 @@
     "meaningKr": "다르게",
     "meaningEn": "in a way that is not the same",
     "exampleEn": "The new manager handled customer complaints differently than her predecessor.",
-    "exampleKr": "새 매니저는 전임자와 다르게 고객 불만을 처리했다."
+    "exampleKr": "새 매니저는 전임자와 다르게 고객 불만을 처리했다.",
+    "wordFamilyId": "differ",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-651",
@@ -7169,7 +7615,9 @@
     "meaningKr": "지속적인, 끊임없는",
     "meaningEn": "happening without stops",
     "exampleEn": "The factory requires a continuous power supply to keep the assembly line running.",
-    "exampleKr": "그 공장은 조립 라인을 계속 가동하기 위해 지속적인 전력 공급이 필요하다."
+    "exampleKr": "그 공장은 조립 라인을 계속 가동하기 위해 지속적인 전력 공급이 필요하다.",
+    "wordFamilyId": "continue",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-653",
@@ -7202,7 +7650,9 @@
     "meaningKr": "지침, 가이드라인",
     "meaningEn": "rule, instruction, or principle",
     "exampleEn": "Employees must follow the company's guidelines when submitting expense reports.",
-    "exampleKr": "직원들은 경비 보고서를 제출할 때 회사의 지침을 따라야 한다."
+    "exampleKr": "직원들은 경비 보고서를 제출할 때 회사의 지침을 따라야 한다.",
+    "wordFamilyId": "guide",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-656",
@@ -7235,7 +7685,9 @@
     "meaningKr": "생물학적인",
     "meaningEn": "something related to life and living things",
     "exampleEn": "The pharmaceutical company invests heavily in biological research to develop new treatments.",
-    "exampleKr": "그 제약회사는 새로운 치료법 개발을 위해 생물학적 연구에 많은 투자를 하고 있다."
+    "exampleKr": "그 제약회사는 새로운 치료법 개발을 위해 생물학적 연구에 많은 투자를 하고 있다.",
+    "wordFamilyId": "biology",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-659",
@@ -7246,7 +7698,9 @@
     "meaningKr": "소비하다, 소모하다",
     "meaningEn": "to eat, drink, buy or use up something",
     "exampleEn": "The new data center is designed to consume less electricity than the old one.",
-    "exampleKr": "새 데이터센터는 기존보다 전력을 덜 소비하도록 설계되었다."
+    "exampleKr": "새 데이터센터는 기존보다 전력을 덜 소비하도록 설계되었다.",
+    "wordFamilyId": "consume",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-660",
@@ -7301,7 +7755,9 @@
     "meaningKr": "프린터, 인쇄기",
     "meaningEn": "machine that makes copies of papers and documents",
     "exampleEn": "The office printer ran out of toner right before the client presentation.",
-    "exampleKr": "고객 발표 직전에 사무실 프린터의 토너가 떨어졌다."
+    "exampleKr": "고객 발표 직전에 사무실 프린터의 토너가 떨어졌다.",
+    "wordFamilyId": "print",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-665",
@@ -7323,7 +7779,9 @@
     "meaningKr": "불안한, 걱정하는",
     "meaningEn": "afraid of what may happen; worried and nervous",
     "exampleEn": "The intern felt anxious before presenting the quarterly report to senior executives.",
-    "exampleKr": "인턴은 임원진 앞에서 분기 보고서를 발표하기 전에 불안했다."
+    "exampleKr": "인턴은 임원진 앞에서 분기 보고서를 발표하기 전에 불안했다.",
+    "wordFamilyId": "anxious",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-667",
@@ -7367,7 +7825,9 @@
     "meaningKr": "명소, 관광지",
     "meaningEn": "interesting place people want to visit",
     "exampleEn": "The concierge recommended several local attractions for guests attending the conference.",
-    "exampleKr": "컨시어지는 컨퍼런스에 참석하는 투숙객들에게 여러 지역 명소를 추천했다."
+    "exampleKr": "컨시어지는 컨퍼런스에 참석하는 투숙객들에게 여러 지역 명소를 추천했다.",
+    "wordFamilyId": "attract",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-671",
@@ -7389,7 +7849,9 @@
     "meaningKr": "조용히",
     "meaningEn": "making little sound",
     "exampleEn": "The assistant quietly left the meeting room to take an urgent call.",
-    "exampleKr": "비서는 긴급한 전화를 받기 위해 조용히 회의실을 나갔다."
+    "exampleKr": "비서는 긴급한 전화를 받기 위해 조용히 회의실을 나갔다.",
+    "wordFamilyId": "quiet",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-673",
@@ -7422,7 +7884,9 @@
     "meaningKr": "반사된 모습, (거울 등에 비친) 상",
     "meaningEn": "image that you see in a mirror, glass, or water",
     "exampleEn": "She checked her reflection in the elevator's glass door before entering the interview.",
-    "exampleKr": "그녀는 면접장에 들어가기 전 엘리베이터 유리문에 비친 자신의 모습을 확인했다."
+    "exampleKr": "그녀는 면접장에 들어가기 전 엘리베이터 유리문에 비친 자신의 모습을 확인했다.",
+    "wordFamilyId": "reflect",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-676",
@@ -7433,7 +7897,9 @@
     "meaningKr": "신경",
     "meaningEn": "long thin cells in the body that makes feeling and movement possible",
     "exampleEn": "The employee's hand injury damaged a nerve, requiring several weeks of medical leave.",
-    "exampleKr": "그 직원은 손 부상으로 신경이 손상되어 몇 주간 병가를 내야 했다."
+    "exampleKr": "그 직원은 손 부상으로 신경이 손상되어 몇 주간 병가를 내야 했다.",
+    "wordFamilyId": "nerve",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-677",
@@ -7444,7 +7910,9 @@
     "meaningKr": "결단력, 결의",
     "meaningEn": "will to achieve a goal despite difficulties",
     "exampleEn": "The startup founder's determination impressed the investors during the pitch meeting.",
-    "exampleKr": "스타트업 창업자의 결단력은 피칭 회의에서 투자자들에게 깊은 인상을 남겼다."
+    "exampleKr": "스타트업 창업자의 결단력은 피칭 회의에서 투자자들에게 깊은 인상을 남겼다.",
+    "wordFamilyId": "determine",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-678",
@@ -7499,7 +7967,9 @@
     "meaningKr": "혼란, 혼동",
     "meaningEn": "not knowing what to do",
     "exampleEn": "The last-minute schedule change caused confusion among the conference attendees.",
-    "exampleKr": "막판 일정 변경은 컨퍼런스 참석자들 사이에 혼란을 일으켰다."
+    "exampleKr": "막판 일정 변경은 컨퍼런스 참석자들 사이에 혼란을 일으켰다.",
+    "wordFamilyId": "confuse",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-683",
@@ -7521,7 +7991,9 @@
     "meaningKr": "논리",
     "meaningEn": "a way of thinking by using facts and reasoning",
     "exampleEn": "The consultant explained the logic behind the proposed cost-cutting measures.",
-    "exampleKr": "컨설턴트는 제안된 비용 절감 조치의 논리를 설명했다."
+    "exampleKr": "컨설턴트는 제안된 비용 절감 조치의 논리를 설명했다.",
+    "wordFamilyId": "logic",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-685",
@@ -7565,7 +8037,9 @@
     "meaningKr": "수정하다, 개정하다",
     "meaningEn": "to make changes to improve something",
     "exampleEn": "The legal team revised the contract to include the updated payment terms.",
-    "exampleKr": "법무팀은 업데이트된 지불 조건을 포함하도록 계약서를 수정했다."
+    "exampleKr": "법무팀은 업데이트된 지불 조건을 포함하도록 계약서를 수정했다.",
+    "wordFamilyId": "revise",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-689",
@@ -7664,7 +8138,9 @@
     "meaningKr": "행복",
     "meaningEn": "state of feeling pleased; feeling of satisfaction",
     "exampleEn": "The company survey measures employee happiness alongside productivity levels.",
-    "exampleKr": "그 회사의 설문조사는 생산성 수준과 함께 직원 행복도를 측정한다."
+    "exampleKr": "그 회사의 설문조사는 생산성 수준과 함께 직원 행복도를 측정한다.",
+    "wordFamilyId": "happy",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-698",
@@ -7818,7 +8294,9 @@
     "meaningKr": "애호가, 연인",
     "meaningEn": "a person who likes someone or something very strongly",
     "exampleEn": "The travel magazine targets readers who are lovers of adventure and culture.",
-    "exampleKr": "그 여행 잡지는 모험과 문화를 사랑하는 독자층을 대상으로 한다."
+    "exampleKr": "그 여행 잡지는 모험과 문화를 사랑하는 독자층을 대상으로 한다.",
+    "wordFamilyId": "love",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-712",
@@ -7895,7 +8373,9 @@
     "meaningKr": "합리적으로, 적당히",
     "meaningEn": "in a fair and just manner",
     "exampleEn": "The vendor priced the equipment reasonably compared to its competitors.",
-    "exampleKr": "그 공급업체는 경쟁사들에 비해 장비 가격을 합리적으로 책정했다."
+    "exampleKr": "그 공급업체는 경쟁사들에 비해 장비 가격을 합리적으로 책정했다.",
+    "wordFamilyId": "reason",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-719",
@@ -7917,7 +8397,9 @@
     "meaningKr": "유연한",
     "meaningEn": "capable of being easily bent or changed without breaking",
     "exampleEn": "The company offers flexible working hours to accommodate employees' schedules.",
-    "exampleKr": "회사는 직원들의 일정을 수용하기 위해 유연 근무 시간을 제공한다."
+    "exampleKr": "회사는 직원들의 일정을 수용하기 위해 유연 근무 시간을 제공한다.",
+    "wordFamilyId": "flexible",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-721",
@@ -7950,7 +8432,9 @@
     "meaningKr": "정확한",
     "meaningEn": "very accurate and exact expression or detail",
     "exampleEn": "The engineer provided precise measurements for the new office renovation.",
-    "exampleKr": "엔지니어는 새 사무실 리모델링을 위한 정확한 치수를 제공했다."
+    "exampleKr": "엔지니어는 새 사무실 리모델링을 위한 정확한 치수를 제공했다.",
+    "wordFamilyId": "precise",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-724",
@@ -7961,7 +8445,9 @@
     "meaningKr": "먼, 멀리 떨어진",
     "meaningEn": "existing or happening far away in space",
     "exampleEn": "The company opened a branch office in a distant region to expand its market reach.",
-    "exampleKr": "회사는 시장 범위를 확대하기 위해 먼 지역에 지사를 열었다."
+    "exampleKr": "회사는 시장 범위를 확대하기 위해 먼 지역에 지사를 열었다.",
+    "wordFamilyId": "distance",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-725",
@@ -8005,7 +8491,9 @@
     "meaningKr": "위치시키다, 자리잡게 하다",
     "meaningEn": "to place someone or something in a particular place or position",
     "exampleEn": "The new factory is situated near the port to reduce shipping costs.",
-    "exampleKr": "새 공장은 운송비를 줄이기 위해 항구 근처에 위치해 있다."
+    "exampleKr": "새 공장은 운송비를 줄이기 위해 항구 근처에 위치해 있다.",
+    "wordFamilyId": "situate",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-729",
@@ -8016,7 +8504,9 @@
     "meaningKr": "요약하다",
     "meaningEn": "to state the main or most important ideas of something",
     "exampleEn": "The analyst summarized the quarterly results in a two-page report for the board.",
-    "exampleKr": "분석가는 이사회를 위해 분기 실적을 두 페이지 보고서로 요약했다."
+    "exampleKr": "분석가는 이사회를 위해 분기 실적을 두 페이지 보고서로 요약했다.",
+    "wordFamilyId": "summary",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-730",
@@ -8049,7 +8539,9 @@
     "meaningKr": "확률, 가능성",
     "meaningEn": "what the chances are that something will happen",
     "exampleEn": "The analyst calculated the probability of the merger being approved by regulators.",
-    "exampleKr": "분석가는 규제 당국이 합병을 승인할 확률을 계산했다."
+    "exampleKr": "분석가는 규제 당국이 합병을 승인할 확률을 계산했다.",
+    "wordFamilyId": "probable",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-733",
@@ -8148,7 +8640,9 @@
     "meaningKr": "흥분, 신남",
     "meaningEn": "when people feel very happy and enthusiastic",
     "exampleEn": "There was a sense of excitement among staff when the new product launch was announced.",
-    "exampleKr": "신제품 출시가 발표되자 직원들 사이에 흥분감이 감돌았다."
+    "exampleKr": "신제품 출시가 발표되자 직원들 사이에 흥분감이 감돌았다.",
+    "wordFamilyId": "excite",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-742",
@@ -8170,7 +8664,9 @@
     "meaningKr": "임신",
     "meaningEn": "time when a female is going to have a baby",
     "exampleEn": "The HR department reviewed its policy on pregnancy leave for employees.",
-    "exampleKr": "인사부서는 직원들의 임신 휴가 정책을 검토했다."
+    "exampleKr": "인사부서는 직원들의 임신 휴가 정책을 검토했다.",
+    "wordFamilyId": "pregnant",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-744",
@@ -8181,7 +8677,9 @@
     "meaningKr": "실험적인",
     "meaningEn": "using techniques that are different or untried before",
     "exampleEn": "The lab is testing an experimental method to speed up production.",
-    "exampleKr": "그 실험실은 생산 속도를 높이기 위한 실험적인 방법을 시험하고 있다."
+    "exampleKr": "그 실험실은 생산 속도를 높이기 위한 실험적인 방법을 시험하고 있다.",
+    "wordFamilyId": "experiment",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-745",
@@ -8192,7 +8690,9 @@
     "meaningKr": "기관의, 제도적인",
     "meaningEn": "concerning a large organization such as a hospital or university",
     "exampleEn": "The fund attracted institutional investors such as pension funds and insurance companies.",
-    "exampleKr": "그 펀드는 연기금과 보험사 같은 기관 투자자들을 유치했다."
+    "exampleKr": "그 펀드는 연기금과 보험사 같은 기관 투자자들을 유치했다.",
+    "wordFamilyId": "institute",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-746",
@@ -8236,7 +8736,9 @@
     "meaningKr": "그 후에, 그 다음에",
     "meaningEn": "after something else has happened",
     "exampleEn": "The vendor missed the deadline and subsequently lost the contract.",
-    "exampleKr": "그 공급업체는 마감을 놓쳤고 그 후 계약을 잃었다."
+    "exampleKr": "그 공급업체는 마감을 놓쳤고 그 후 계약을 잃었다.",
+    "wordFamilyId": "subsequent",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-750",
@@ -8247,7 +8749,9 @@
     "meaningKr": "온화한, 부드러운",
     "meaningEn": "kind and quiet in nature; not harsh or violent",
     "exampleEn": "The manager gave gentle feedback to help the new employee improve.",
-    "exampleKr": "매니저는 신입 직원이 발전할 수 있도록 온화한 피드백을 주었다."
+    "exampleKr": "매니저는 신입 직원이 발전할 수 있도록 온화한 피드백을 주었다.",
+    "wordFamilyId": "gentle",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-751",
@@ -8258,7 +8762,9 @@
     "meaningKr": "출석, 참석",
     "meaningEn": "state of being present at a place or event",
     "exampleEn": "The company tracks attendance at mandatory training sessions.",
-    "exampleKr": "회사는 필수 교육 세션의 출석을 관리한다."
+    "exampleKr": "회사는 필수 교육 세션의 출석을 관리한다.",
+    "wordFamilyId": "attend",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-752",
@@ -8269,7 +8775,9 @@
     "meaningKr": "소유권",
     "meaningEn": "legal right to have something belong to you",
     "exampleEn": "The contract clearly defines ownership of the intellectual property.",
-    "exampleKr": "그 계약서는 지적 재산권의 소유권을 명확히 규정한다."
+    "exampleKr": "그 계약서는 지적 재산권의 소유권을 명확히 규정한다.",
+    "wordFamilyId": "own",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-753",
@@ -8280,7 +8788,9 @@
     "meaningKr": "자격, 자격증",
     "meaningEn": "official record proving a certain standard or level",
     "exampleEn": "Applicants must submit proof of their qualifications before the interview.",
-    "exampleKr": "지원자는 면접 전에 자격을 증명하는 서류를 제출해야 한다."
+    "exampleKr": "지원자는 면접 전에 자격을 증명하는 서류를 제출해야 한다.",
+    "wordFamilyId": "qualify",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-754",
@@ -8302,7 +8812,9 @@
     "meaningKr": "기능적인, 실용적인",
     "meaningEn": "useful; not just for decoration",
     "exampleEn": "The new office furniture is both functional and stylish.",
-    "exampleKr": "새 사무용 가구는 기능적이면서도 세련되었다."
+    "exampleKr": "새 사무용 가구는 기능적이면서도 세련되었다.",
+    "wordFamilyId": "function",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-756",
@@ -8346,7 +8858,9 @@
     "meaningKr": "운동선수",
     "meaningEn": "person trained to compete in sports",
     "exampleEn": "The sportswear company signed a famous athlete to endorse its new shoe line.",
-    "exampleKr": "그 스포츠웨어 회사는 새 신발 라인을 홍보하기 위해 유명 운동선수와 계약했다."
+    "exampleKr": "그 스포츠웨어 회사는 새 신발 라인을 홍보하기 위해 유명 운동선수와 계약했다.",
+    "wordFamilyId": "athlete",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-760",
@@ -8390,7 +8904,9 @@
     "meaningKr": "구조적인",
     "meaningEn": "related to the way something is built or organized",
     "exampleEn": "The inspection revealed structural issues that delayed the building's opening.",
-    "exampleKr": "점검 결과 구조적인 문제가 발견되어 건물 개장이 지연되었다."
+    "exampleKr": "점검 결과 구조적인 문제가 발견되어 건물 개장이 지연되었다.",
+    "wordFamilyId": "structure",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-764",
@@ -8445,7 +8961,9 @@
     "meaningKr": "부드럽게, 조심스럽게",
     "meaningEn": "in a mild, careful, and soft manner",
     "exampleEn": "The supervisor gently reminded the team about the upcoming compliance deadline.",
-    "exampleKr": "상사는 팀에게 다가오는 컴플라이언스 마감일을 조심스럽게 상기시켰다."
+    "exampleKr": "상사는 팀에게 다가오는 컴플라이언스 마감일을 조심스럽게 상기시켰다.",
+    "wordFamilyId": "gentle",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-769",
@@ -8456,7 +8974,9 @@
     "meaningKr": "계산하다, 산출하다",
     "meaningEn": "to find out by calculating or estimating",
     "exampleEn": "The software automatically computes the total shipping cost at checkout.",
-    "exampleKr": "그 소프트웨어는 결제 시 총 배송비를 자동으로 계산한다."
+    "exampleKr": "그 소프트웨어는 결제 시 총 배송비를 자동으로 계산한다.",
+    "wordFamilyId": "compute",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-770",
@@ -8610,7 +9130,9 @@
     "meaningKr": "등록",
     "meaningEn": "act of recording information on an official list",
     "exampleEn": "Registration for the annual trade show closes at the end of this month.",
-    "exampleKr": "연례 무역 박람회 등록은 이번 달 말에 마감된다."
+    "exampleKr": "연례 무역 박람회 등록은 이번 달 말에 마감된다.",
+    "wordFamilyId": "register",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-784",
@@ -8632,7 +9154,9 @@
     "meaningKr": "청취자, 경청하는 사람",
     "meaningEn": "someone who pays attention to what is said",
     "exampleEn": "A good listener, the manager let each team member voice their concerns during the review.",
-    "exampleKr": "매니저는 훌륭한 경청자로서 평가 회의에서 팀원 각자의 의견을 말하게 했다."
+    "exampleKr": "매니저는 훌륭한 경청자로서 평가 회의에서 팀원 각자의 의견을 말하게 했다.",
+    "wordFamilyId": "listen",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-786",
@@ -8698,7 +9222,9 @@
     "meaningKr": "충실하게, 성실하게",
     "meaningEn": "in a trustworthy manner",
     "exampleEn": "He signed the letter \"Yours faithfully\" to close the formal business correspondence.",
-    "exampleKr": "그는 공식 업무 서신을 마무리하며 \"Yours faithfully\"라고 서명했다."
+    "exampleKr": "그는 공식 업무 서신을 마무리하며 \"Yours faithfully\"라고 서명했다.",
+    "wordFamilyId": "faith",
+    "derivationPos": "부사"
   },
   {
     "id": "core3-792",
@@ -8731,7 +9257,9 @@
     "meaningKr": "애착",
     "meaningEn": "strong affection for someone",
     "exampleEn": "After years at the company, she developed a strong attachment to her original team.",
-    "exampleKr": "수년간 근무하면서 그녀는 원래 소속 팀에 강한 애착을 갖게 되었다."
+    "exampleKr": "수년간 근무하면서 그녀는 원래 소속 팀에 강한 애착을 갖게 되었다.",
+    "wordFamilyId": "attach",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-795",
@@ -8797,7 +9325,9 @@
     "meaningKr": "운이 좋은",
     "meaningEn": "having good luck",
     "exampleEn": "The company was fortunate to secure the contract despite tough competition.",
-    "exampleKr": "회사는 치열한 경쟁 속에서도 운 좋게 계약을 따냈다."
+    "exampleKr": "회사는 치열한 경쟁 속에서도 운 좋게 계약을 따냈다.",
+    "wordFamilyId": "fortunate",
+    "derivationPos": "형용사"
   },
   {
     "id": "core3-801",
@@ -8841,7 +9371,9 @@
     "meaningKr": "배고픔, 허기",
     "meaningEn": "feeling of needing to eat food",
     "exampleEn": "The charity event raised funds to fight hunger in developing countries.",
-    "exampleKr": "그 자선 행사는 개발도상국의 기아 퇴치를 위한 기금을 모금했다."
+    "exampleKr": "그 자선 행사는 개발도상국의 기아 퇴치를 위한 기금을 모금했다.",
+    "wordFamilyId": "hunger",
+    "derivationPos": "명사"
   },
   {
     "id": "core3-805",
@@ -8852,7 +9384,9 @@
     "meaningKr": "보험에 들다, 보증하다",
     "meaningEn": "to buy protection against possible loss or injury",
     "exampleEn": "The company insured its new office equipment against theft and damage.",
-    "exampleKr": "회사는 새 사무 장비를 도난 및 파손에 대비해 보험에 가입했다."
+    "exampleKr": "회사는 새 사무 장비를 도난 및 파손에 대비해 보험에 가입했다.",
+    "wordFamilyId": "insure",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-806",
@@ -8874,7 +9408,9 @@
     "meaningKr": "설립하다, 창립하다",
     "meaningEn": "to start something such as a company or organization",
     "exampleEn": "She founded the consulting firm after leaving her corporate job.",
-    "exampleKr": "그녀는 회사를 그만둔 후 컨설팅 회사를 설립했다."
+    "exampleKr": "그녀는 회사를 그만둔 후 컨설팅 회사를 설립했다.",
+    "wordFamilyId": "found",
+    "derivationPos": "동사"
   },
   {
     "id": "core3-808",
