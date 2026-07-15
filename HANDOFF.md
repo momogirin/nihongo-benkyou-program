@@ -32,16 +32,16 @@ JLPT 한자·단어·문법 학습 + (2026-07-14부터) 영어(TOEIC) 단어 학
 - **2단계(보류, 코어 검증 후)**: 주제 태그(사무/인사/여행/재무 등 — NGSL/TSL에 없어서 별도 소스나 수작업 태깅 필요), 콜로케이션/숙어, 딕테이션(듣고 쓰기), 문맥 속 유의어 퀴즈, 발음 듣기(TTS, Web Speech API로 무료 구현 가능).
 - 데이터 스키마 초안: 일본어 단어(`word/reading/meaningKr/meaningEn/exampleJp/exampleKr`)와 달리 `word`(단어)/`pos`(품사)/`meaningKr`(뜻)/`exampleEn`(예문)/`exampleKr`(예문 번역), `reading` 필드 불필요. 파생어 세트는 표제어 단위로 묶는 구조 필요(설계 시 확정).
 
-**진행 상태(2026-07-14)**: 데이터 파이프라인 1단계 완료 — NGSL/TSL 실제 다운로드·조인 확인(둘이 단어 하나도 안 겹침, TSL이 순수 보충 리스트라는 걸 확인해서 급수 설계 근거로 씀), `core1`(NGSL 랭킹 1~1000) 1,000단어를 5개 서브에이전트 병렬 작업으로 `pos`/`meaningKr`/`exampleEn`/`exampleKr` 전부 채워 `data/english-vocab-core1.json` → `scripts/build-english-vocab-data.mjs` → `src/data/englishVocab.ts`까지 완성. 상세 출처/설계 근거는 `data/raw/README.md`의 "영어(TOEIC) 단어 데이터" 섹션 참고.
+**진행 상태(2026-07-15 기준)**: **NGSL+TSL 데이터 콘텐츠 전량(4,059단어) 완성.** core1(1000)+core2(1000)+core3(809)+toeic(1250) 전부 `pos`/`meaningKr`/`exampleEn`/`exampleKr` 채워서 `data/english-vocab-*.json` → `scripts/build-english-vocab-data.mjs` → `src/data/englishVocab.ts`까지 반영됨. 상세 출처/설계 근거는 `data/raw/README.md`의 "영어(TOEIC) 단어 데이터" 섹션 참고.
 
-**남은 작업(이어서 진행)**:
-1. `core2`(NGSL 1001~2000)·`core3`(NGSL 2001~2809)·`toeic`(TSL 1250개) 콘텐츠도 core1과 같은 방식(서브에이전트 병렬 작성)으로 채우기 — 총 3,059단어 남음.
-   - **2026-07-14, core2 시도했다가 세션 한도(rate limit)로 중단됨**: 5개 서브에이전트 중 4개는 200단어씩 결과 파일을 썼지만(1개, 랭킹 601~800 구간은 아예 못 씀), "세션 한도로 중간에 끊김 + 세이프티 분류기 확인 불가" 경고가 붙었음. 처음엔 전부 폐기했다가, **이미 쓴 사용량을 낭비하지 말라는 사용자 지적**으로 재검토함 — 실제로 4개 청크를 직접 검증(JSON 유효성/품사값/빈 필드/중복단어)해보니 문제는 `email` 항목의 `meaningEn`이 원본 NGSL 소스 자체에 없던 값(null)이었던 것 하나뿐(모델 생성 문제 아님, 직접 채워넣음). 그래서 **랭킹 1~600·801~1000(800단어)은 살려서 `data/english-vocab-core2.json`에 반영**, **랭킹 601~800(200단어)만 다음 세션에서 생성**하면 됨. `src/data/englishVocab.ts`엔 현재 core1(1000)+core2(800, 601~800 구간 비어있음) = 1,800개 반영됨.
-   - **core1~toeic 전체 재현에 필요한 원본 조인 데이터**: 이번 세션에서 만든 `joined-all.json`(NGSL/TSL CSV+정의 파일을 조인해서 급수별로 묶은 중간 산출물)은 세션 스크래치패드에만 있어서 다음 세션엔 사라짐 — 필요하면 이 문서의 "영어(TOEIC) 단어 데이터" 데이터 소스 섹션대로 NGSL/TSL stats CSV + definitions xlsx를 다시 받아서 재조인하면 됨(전부 재현 가능한 기계적 과정, 유실되는 정보 없음).
-2. 파생어 세트(품사 묶음, Part 5 대비) — 전체 리스트 완성 후 별도 후처리 단계로.
-3. ~~`types.ts`에 페이지 상태 추가 → `EnglishVocabPage.tsx` → `Sidebar.tsx` → 퀴즈 생성기 → 오답노트 스키마~~ **2026-07-14 전부 완료** (아래 "화면/UI 구현" 참고).
-4. ~~급수 배지 색상 토큰~~ **완료** — `--color-level-core1~toeic`(+tint/on-level) 추가, 브랜드 청록·JLPT 초록~빨강 스펙트럼과 안 겹치는 옛 브랜드 보라~마젠타 계열 재사용.
-5. **남은 것**: `HomePage.tsx` 연동(최근기록/이어하기 카드/통계 대시보드에 영어 도메인 미포함 — 컴파일 에러는 없지만 홈 화면에서 영어 단어 활동이 안 보임), 품사 변환 빈칸형 퀴즈(Part 5 유형, 파생어 세트 데이터 필요해서 보류), 파생어 세트 후처리 자체.
+- **toeic(TSL 1,250단어) 완성 경위(2026-07-15)**: 이전 세션에서 만든 조인 중간산출물(`joined-all.json`)이 스크래치패드 한정이라 유실됨 → TSL_12_stats.csv(랭킹, latin1 인코딩 주의)와 TSL_12_definitions.xlsx(영문 정의, `/s/TSL_12_definitions.xlsx`)를 재다운로드해 재조인. **원본 데이터셋 자체 결측 확인됨**: definitions.xlsx에 정의가 없는 단어 4개(smartphone/by-law/e-book/résumé/café/entrée — 이 중 café/entrée/résumé/e-book은 xlsx 인코딩 문제가 아니라 진짜 결측)는 meaningEn을 직접 작성(사용자 확인 후 진행), stats.csv에 랭킹이 없는 단어 2개(born/criteria)는 최종 1,250개 리스트에서 제외(사용자 확인 후 진행). 50단어씩 25개 청크로 나눠 로컬 커밋하며 진행(세션 한도 대비) — 1~100은 직접 작성, 101~1250(23개 청크)은 서브에이전트에 위임. 전체 완료 후 word/num/meaningEn을 원본 조인 데이터와 전수 대조 검증(사소한 오타·공백 정리 외 왜곡 없음 확인) → `npm run data:build:englishVocab` 실행 → 로컬 커밋 25개를 그대로 두고 마지막에 한 번에 push.
+- core2(601~800)·core3(NGSL 2001~2809) 완성 경위는 git log 참고(878b3e2, e00737a).
+
+**남은 작업**:
+1. 파생어 세트(품사 묶음, Part 5 대비) — 아직 미착수, 전체 단어 리스트는 완성됐으니 이제 후처리 단계로 진행 가능.
+2. ~~`types.ts`에 페이지 상태 추가 → `EnglishVocabPage.tsx` → `Sidebar.tsx` → 퀴즈 생성기 → 오답노트 스키마~~ **2026-07-14 전부 완료** (아래 "화면/UI 구현" 참고).
+3. ~~급수 배지 색상 토큰~~ **완료** — `--color-level-core1~toeic`(+tint/on-level) 추가, 브랜드 청록·JLPT 초록~빨강 스펙트럼과 안 겹치는 옛 브랜드 보라~마젠타 계열 재사용.
+4. **남은 것**: `HomePage.tsx` 연동(최근기록/이어하기 카드/통계 대시보드에 영어 도메인 미포함 — 컴파일 에러는 없지만 홈 화면에서 영어 단어 활동이 안 보임), 품사 변환 빈칸형 퀴즈(Part 5 유형, 파생어 세트 데이터 필요해서 보류), 파생어 세트 후처리 자체.
 
 ## 화면/UI 구현 (2026-07-14 완료)
 
