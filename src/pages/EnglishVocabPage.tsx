@@ -3,20 +3,27 @@ import { englishVocabList, type EnglishVocabWord, type EnglishLevel } from '../d
 import {
   generateEnglishVocabQuestions,
   generateEnglishVocabQuestionsFromIds,
+  generateEnglishVocabDerivationQuestions,
   englishVocabLevelPool,
+  englishVocabDerivationLevelPool,
   type EnglishVocabQuizQuestion,
+  type EnglishVocabDerivationQuestion,
 } from '../lib/englishVocabQuizGenerator'
 import {
   addEnglishVocabQuizHistoryEntry,
   addEnglishVocabWrongNotes,
   clearEnglishVocabInProgressQuiz,
+  clearEnglishVocabDerivationInProgressQuiz,
   getEnglishVocabInProgressQuiz,
+  getEnglishVocabDerivationInProgressQuiz,
   getEnglishVocabStudyProgress,
   recordSrsReview,
   removeEnglishVocabWrongNote,
   saveEnglishVocabInProgressQuiz,
+  saveEnglishVocabDerivationInProgressQuiz,
   setEnglishVocabStudyProgress,
   type EnglishVocabInProgressQuiz,
+  type EnglishVocabDerivationInProgressQuiz,
 } from '../lib/storage'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
@@ -34,11 +41,19 @@ const QUIZ_QUESTION_COUNT = 20
 const QUIZ_COUNT_OPTIONS = [10, 20, 30, 50, 'all'] as const
 const FEEDBACK_DELAY_MS = 550
 
-type Phase = 'setup' | 'studying' | 'done' | 'browse' | 'quiz' | 'quizResult'
+type Phase = 'setup' | 'studying' | 'done' | 'browse' | 'quiz' | 'quizResult' | 'derivationQuiz' | 'derivationQuizResult'
+type QuizType = 'meaning' | 'derivation'
+const QUIZ_TYPE_LABELS: Record<QuizType, string> = { meaning: '뜻 맞히기', derivation: '품사 변환 빈칸형' }
 
 interface QuizAnswer {
   question: EnglishVocabQuizQuestion
   selected: string
+  isCorrect: boolean
+}
+
+interface DerivationAnswer {
+  question: EnglishVocabDerivationQuestion
+  selectedId: string
   isCorrect: boolean
 }
 
@@ -50,6 +65,7 @@ interface Props {
 export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [level, setLevel] = useState<EnglishLevel>(ALL_LEVELS[0])
   const pool = useMemo(() => englishVocabLevelPool(level), [level])
+  const derivationPool = useMemo(() => englishVocabDerivationLevelPool(level), [level])
   const completedCount = Math.min(getEnglishVocabStudyProgress(level), pool.length)
   const remaining = pool.length - completedCount
 
@@ -74,13 +90,38 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   // guards handleNextQuiz so a rapid/repeat Enter can't advance twice past
   // the same wrong answer
   const lastAdvancedQuizIndexRef = useRef(-1)
+  // when the next question is reached via the 다음-button/Enter path (as
+  // opposed to a fresh quiz start or a correct-answer auto-advance), skip
+  // the next choicesRef auto-focus once — otherwise the still-in-flight
+  // keyup of that same Enter press natively "clicks" whichever choice
+  // button the focus effect just moved focus to, silently auto-answering
+  // the new question (same root cause the 오답 "다음" button's own auto-focus
+  // was removed for, see StudyPage/QuizRunner history — this is the same
+  // race showing up via the per-question choice-focus effect instead)
+  const skipNextChoiceFocusRef = useRef(false)
   // saved quiz session from a previous visit that was never finished — shown
   // on the setup screen as an 이어하기 option instead of silently losing it
   const [savedQuiz, setSavedQuiz] = useState(() => getEnglishVocabInProgressQuiz())
 
+  // 품사 변환 빈칸형 퀴즈(파생어 세트) — 뜻 맞히기 퀴즈와 질문/정답 shape이 달라
+  // 상태를 따로 둠(이 페이지 안에서도, storage.ts에서도 나란한 병렬 구조)
+  const [quizType, setQuizType] = useState<QuizType>('meaning')
+  const [derivationQuestions, setDerivationQuestions] = useState<EnglishVocabDerivationQuestion[]>([])
+  const [derivationIndex, setDerivationIndex] = useState(0)
+  const [derivationAnswers, setDerivationAnswers] = useState<DerivationAnswer[]>([])
+  const [derivationFeedback, setDerivationFeedback] = useState<{ isCorrect: boolean; selectedId: string } | null>(
+    null,
+  )
+  const derivationChoicesRef = useRef<HTMLDivElement>(null)
+  const derivationRestartButtonRef = useRef<HTMLButtonElement>(null)
+  const derivationStartRef = useRef(0)
+  const lastAdvancedDerivationIndexRef = useRef(-1)
+  const [savedDerivationQuiz, setSavedDerivationQuiz] = useState(() => getEnglishVocabDerivationInProgressQuiz())
+
   useEffect(() => {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'quizResult') restartButtonRef.current?.focus({ preventScroll: true })
+    if (phase === 'derivationQuizResult') derivationRestartButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
 
   function startBatch(fromLevel: EnglishLevel, fromCompleted: number) {
@@ -134,6 +175,29 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
     setPhase('quiz')
   }
 
+  function startDerivationQuiz() {
+    clearEnglishVocabDerivationInProgressQuiz()
+    setSavedDerivationQuiz(null)
+    const count = quizCount === 'all' ? derivationPool.length : quizCount
+    setDerivationQuestions(generateEnglishVocabDerivationQuestions(level, count, quizOrder))
+    setDerivationIndex(0)
+    setDerivationAnswers([])
+    setDerivationFeedback(null)
+    lastAdvancedDerivationIndexRef.current = -1
+    derivationStartRef.current = Date.now()
+    setPhase('derivationQuiz')
+  }
+
+  function resumeDerivationQuiz(saved: EnglishVocabDerivationInProgressQuiz) {
+    setDerivationQuestions(saved.questions)
+    setDerivationIndex(saved.index)
+    setDerivationAnswers(saved.answers)
+    setDerivationFeedback(null)
+    lastAdvancedDerivationIndexRef.current = -1
+    derivationStartRef.current = new Date(saved.startedAt).getTime()
+    setPhase('derivationQuiz')
+  }
+
   useEffect(() => {
     if (!retryIds || retryIds.length === 0) return
     clearEnglishVocabInProgressQuiz()
@@ -170,6 +234,25 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   }, [phase])
 
   useEffect(() => {
+    if (phase !== 'derivationQuizResult') return
+    clearEnglishVocabDerivationInProgressQuiz()
+    setSavedDerivationQuiz(null)
+    const wrongIds = derivationAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
+    addEnglishVocabWrongNotes(wrongIds, `영어 단어 품사 변환 퀴즈 · ${LEVEL_LABELS[level]}`)
+    addEnglishVocabQuizHistoryEntry({
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      level,
+      total: derivationAnswers.length,
+      correct: derivationAnswers.filter((a) => a.isCorrect).length,
+      elapsedMs: Date.now() - derivationStartRef.current,
+      finishedAt: new Date().toISOString(),
+    })
+    derivationAnswers.filter((a) => a.isCorrect).forEach((a) => removeEnglishVocabWrongNote(a.question.entry.id))
+    derivationAnswers.forEach((a) => recordSrsReview('englishVocab', a.question.entry.id, a.isCorrect))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase])
+
+  useEffect(() => {
     if (phase !== 'studying') return
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'ArrowRight' || e.key === 'Enter') {
@@ -199,8 +282,21 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
 
   useEffect(() => {
     if (phase !== 'quiz') return
+    if (skipNextChoiceFocusRef.current) {
+      skipNextChoiceFocusRef.current = false
+      return
+    }
     choicesRef.current?.querySelector('button')?.focus()
   }, [phase, quizIndex])
+
+  useEffect(() => {
+    if (phase !== 'derivationQuiz') return
+    if (skipNextChoiceFocusRef.current) {
+      skipNextChoiceFocusRef.current = false
+      return
+    }
+    derivationChoicesRef.current?.querySelector('button')?.focus()
+  }, [phase, derivationIndex])
 
   function goNextQuiz(nextIndex: number) {
     if (nextIndex < quizQuestions.length) {
@@ -219,6 +315,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   function handleNextQuiz() {
     if (lastAdvancedQuizIndexRef.current === quizIndex) return
     lastAdvancedQuizIndexRef.current = quizIndex
+    skipNextChoiceFocusRef.current = true
     goNextQuiz(quizIndex + 1)
   }
 
@@ -265,6 +362,62 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
     return () => window.removeEventListener('keydown', handleKeyDown)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, quizIndex, quizFeedback])
+
+  function goNextDerivation(nextIndex: number) {
+    if (nextIndex < derivationQuestions.length) {
+      setDerivationFeedback(null)
+      setDerivationIndex(nextIndex)
+    } else {
+      setPhase('derivationQuizResult')
+    }
+  }
+
+  function handleNextDerivation() {
+    if (lastAdvancedDerivationIndexRef.current === derivationIndex) return
+    lastAdvancedDerivationIndexRef.current = derivationIndex
+    skipNextChoiceFocusRef.current = true
+    goNextDerivation(derivationIndex + 1)
+  }
+
+  function submitDerivationAnswer(selectedId: string) {
+    if (derivationFeedback) return
+    const question = derivationQuestions[derivationIndex]
+    const isCorrect = selectedId === question.entry.id
+    setDerivationFeedback({ isCorrect, selectedId })
+    const updatedAnswers = [...derivationAnswers, { question, selectedId, isCorrect }]
+    setDerivationAnswers(updatedAnswers)
+
+    const nextIndex = derivationIndex + 1
+    if (nextIndex < derivationQuestions.length) {
+      saveEnglishVocabDerivationInProgressQuiz({
+        level,
+        questions: derivationQuestions,
+        index: nextIndex,
+        answers: updatedAnswers,
+        startedAt: new Date(derivationStartRef.current).toISOString(),
+      })
+    }
+
+    if (isCorrect) {
+      setTimeout(() => goNextDerivation(nextIndex), FEEDBACK_DELAY_MS)
+    }
+  }
+
+  useEffect(() => {
+    if (phase !== 'derivationQuiz') return
+    function handleKeyDown(e: KeyboardEvent) {
+      if (derivationFeedback) {
+        if (!derivationFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextDerivation()
+        return
+      }
+      const choiceIndex = Number(e.key) - 1
+      const choice = derivationQuestions[derivationIndex]?.choices[choiceIndex]
+      if (choice) submitDerivationAnswer(choice.id)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, derivationIndex, derivationFeedback])
 
   if (phase === 'browse' && browseIndex !== null) {
     const word = levelWords[browseIndex]
@@ -543,6 +696,110 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
     )
   }
 
+  if (phase === 'derivationQuiz') {
+    const question = derivationQuestions[derivationIndex]
+    return (
+      <div className="quiz-runner">
+        <div className="quiz-topbar">
+          <button
+            type="button"
+            className="quiz-exit-button"
+            onClick={() => {
+              setPhase('setup')
+              setSavedDerivationQuiz(getEnglishVocabDerivationInProgressQuiz())
+            }}
+          >
+            나가기
+          </button>
+          <div className="quiz-progress">
+            {derivationIndex + 1} / {derivationQuestions.length}
+          </div>
+        </div>
+        <div className="vocab-quiz-prompt">
+          <span className="vocab-derivation-sentence">{question.blankedSentence}</span>
+        </div>
+        <div className="vocab-quiz-choices" ref={derivationChoicesRef}>
+          {question.choices.map((choice, i) => {
+            let className = 'vocab-quiz-choice'
+            if (derivationFeedback) {
+              if (choice.id === derivationFeedback.selectedId) {
+                className += derivationFeedback.isCorrect ? ' correct' : ' incorrect'
+              } else if (!derivationFeedback.isCorrect && choice.id === question.entry.id) {
+                className += ' reveal-correct'
+              }
+            }
+            return (
+              <button
+                key={choice.id}
+                type="button"
+                className={className}
+                disabled={derivationFeedback !== null}
+                onClick={() => submitDerivationAnswer(choice.id)}
+              >
+                <span className="quiz-choice-num">{i + 1}</span>
+                {choice.word}
+                <span className="quiz-choice-pos">{choice.derivationPos}</span>
+              </button>
+            )
+          })}
+        </div>
+        {derivationFeedback && !derivationFeedback.isCorrect && (
+          <button type="button" className="quiz-next-button" onClick={handleNextDerivation}>
+            다음
+          </button>
+        )}
+        <p className="shortcut-hint">숫자키로 선택 · 오답이면 Enter로 다음 문제</p>
+      </div>
+    )
+  }
+
+  if (phase === 'derivationQuizResult') {
+    const correctCount = derivationAnswers.filter((a) => a.isCorrect).length
+    const total = derivationAnswers.length
+    const rate = total > 0 ? Math.round((correctCount / total) * 100) : 0
+
+    return (
+      <div className="result-screen">
+        <h1>영어 단어 품사 변환 퀴즈 결과</h1>
+        <p className="result-summary">
+          {correctCount} / {total} 정답 ({rate}%)
+        </p>
+        <ul className="result-list">
+          {derivationAnswers.map((a, i) => {
+            const selectedChoice = a.question.choices.find((c) => c.id === a.selectedId)
+            return (
+              <li key={`${a.question.entry.id}-${i}`} className={a.isCorrect ? 'correct' : 'incorrect'}>
+                <span className="vocab-result-word">
+                  {a.question.entry.word}
+                  <span className="vocab-result-reading">{a.question.entry.derivationPos}</span>
+                </span>
+                <span className="result-detail">
+                  <span className="result-detail-main">
+                    정답: {a.question.entry.word} ({a.question.entry.derivationPos})
+                    {!a.isCorrect && selectedChoice && (
+                      <>
+                        {' '}
+                        · 내 답: {selectedChoice.word} ({selectedChoice.derivationPos})
+                      </>
+                    )}
+                  </span>
+                </span>
+              </li>
+            )
+          })}
+        </ul>
+        <button
+          type="button"
+          ref={derivationRestartButtonRef}
+          className="restart-button"
+          onClick={() => setPhase('setup')}
+        >
+          다시 설정하기
+        </button>
+      </div>
+    )
+  }
+
   const isLevelFinished = pool.length > 0 && remaining <= 0
 
   return (
@@ -568,6 +825,18 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
             진행 중이던 영어 단어 퀴즈가 있어요 ({LEVEL_LABELS[savedQuiz.level]} · {savedQuiz.index}/{savedQuiz.questions.length}문제)
           </p>
           <button type="button" className="study-start-button" onClick={() => resumeQuiz(savedQuiz)}>
+            이어서 풀기
+          </button>
+        </>
+      )}
+
+      {savedDerivationQuiz && (
+        <>
+          <p className="page-placeholder">
+            진행 중이던 품사 변환 퀴즈가 있어요 ({LEVEL_LABELS[savedDerivationQuiz.level]} · {savedDerivationQuiz.index}/
+            {savedDerivationQuiz.questions.length}문제)
+          </p>
+          <button type="button" className="study-start-button" onClick={() => resumeDerivationQuiz(savedDerivationQuiz)}>
             이어서 풀기
           </button>
         </>
@@ -606,10 +875,27 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
       )}
 
       <div className="quiz-option-group">
+        <span className="quiz-option-label">퀴즈 종류</span>
+        <div className="study-level-picker">
+          {(['meaning', 'derivation'] as const).map((t) => (
+            <button
+              key={t}
+              type="button"
+              className={`study-level-btn${quizType === t ? ' active' : ''}`}
+              onClick={() => setQuizType(t)}
+            >
+              {QUIZ_TYPE_LABELS[t]}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="quiz-option-group">
         <span className="quiz-option-label">문항 수</span>
         <div className="study-level-picker">
           {QUIZ_COUNT_OPTIONS.map((opt) => {
-            const disabled = opt !== 'all' && opt > pool.length
+            const activePool = quizType === 'meaning' ? pool : derivationPool
+            const disabled = opt !== 'all' && opt > activePool.length
             return (
               <button
                 key={opt}
@@ -618,7 +904,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
                 disabled={disabled}
                 onClick={() => setQuizCount(opt)}
               >
-                {opt === 'all' ? `전체 (${pool.length})` : opt}
+                {opt === 'all' ? `전체 (${activePool.length})` : opt}
               </button>
             )
           })}
@@ -645,9 +931,22 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
         </div>
       </div>
 
-      <button type="button" className="vocab-quiz-button" onClick={startQuiz} disabled={pool.length === 0}>
-        단어 퀴즈 풀기 ({quizCount === 'all' ? pool.length : Math.min(quizCount, pool.length)}문제)
-      </button>
+      {quizType === 'derivation' && derivationPool.length === 0 ? (
+        <p className="page-placeholder">이 급수는 아직 파생어 세트가 있는 단어가 없습니다.</p>
+      ) : quizType === 'meaning' ? (
+        <button type="button" className="vocab-quiz-button" onClick={startQuiz} disabled={pool.length === 0}>
+          단어 퀴즈 풀기 ({quizCount === 'all' ? pool.length : Math.min(quizCount, pool.length)}문제)
+        </button>
+      ) : (
+        <button
+          type="button"
+          className="vocab-quiz-button"
+          onClick={startDerivationQuiz}
+          disabled={derivationPool.length === 0}
+        >
+          품사 변환 퀴즈 풀기 ({quizCount === 'all' ? derivationPool.length : Math.min(quizCount, derivationPool.length)}문제)
+        </button>
+      )}
     </div>
   )
 }

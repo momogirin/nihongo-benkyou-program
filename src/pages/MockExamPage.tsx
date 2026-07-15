@@ -75,6 +75,13 @@ export default function MockExamPage() {
   // guards handleNext so a rapid/repeat Enter can't advance twice past the
   // same wrong answer
   const lastAdvancedIndexRef = useRef(-1)
+  // when the next question is reached via the 다음-button/Enter path, skip
+  // the next choicesRef auto-focus once — otherwise the still-in-flight
+  // keyup of that same Enter press can natively "click" whichever choice
+  // button the focus effect just moved focus to, silently auto-submitting
+  // the new question (see EnglishVocabPage.tsx for the full writeup of how
+  // this was found)
+  const skipNextChoiceFocusRef = useRef(false)
   const finishedRef = useRef(false)
   const choicesRef = useRef<HTMLDivElement>(null)
   const restartButtonRef = useRef<HTMLButtonElement>(null)
@@ -154,6 +161,10 @@ export default function MockExamPage() {
   // 문제가 바뀔 때마다 첫 선택지에 포커스 (숫자키/엔터로 계속 진행 가능하도록)
   useEffect(() => {
     if (phase !== 'running') return
+    if (skipNextChoiceFocusRef.current) {
+      skipNextChoiceFocusRef.current = false
+      return
+    }
     choicesRef.current?.querySelector('button')?.focus()
   }, [index, phase])
 
@@ -174,6 +185,7 @@ export default function MockExamPage() {
   function handleNext() {
     if (lastAdvancedIndexRef.current === index) return
     lastAdvancedIndexRef.current = index
+    skipNextChoiceFocusRef.current = true
     goNext(index + 1)
   }
 

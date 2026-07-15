@@ -70,6 +70,13 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   // guards handleNextQuiz so a rapid/repeat Enter can't advance twice past
   // the same wrong answer
   const lastAdvancedQuizIndexRef = useRef(-1)
+  // when the next question is reached via the 다음-button/Enter path, skip
+  // the next choicesRef auto-focus once — otherwise the still-in-flight
+  // keyup of that same Enter press can natively "click" whichever choice
+  // button the focus effect just moved focus to, silently auto-submitting
+  // the new question (see EnglishVocabPage.tsx for the full writeup of how
+  // this was found)
+  const skipNextChoiceFocusRef = useRef(false)
   // saved quiz session from a previous visit that was never finished — shown
   // on the setup screen as an 이어하기 option instead of silently losing it
   const [savedQuiz, setSavedQuiz] = useState(() => getVocabInProgressQuiz())
@@ -195,6 +202,10 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   useEffect(() => {
     if (phase !== 'quiz') return
+    if (skipNextChoiceFocusRef.current) {
+      skipNextChoiceFocusRef.current = false
+      return
+    }
     choicesRef.current?.querySelector('button')?.focus()
   }, [phase, quizIndex])
 
@@ -215,6 +226,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function handleNextQuiz() {
     if (lastAdvancedQuizIndexRef.current === quizIndex) return
     lastAdvancedQuizIndexRef.current = quizIndex
+    skipNextChoiceFocusRef.current = true
     goNextQuiz(quizIndex + 1)
   }
 

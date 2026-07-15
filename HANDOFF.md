@@ -53,7 +53,26 @@ JLPT 한자·단어·문법 학습 + (2026-07-14부터) 영어(TOEIC) 단어 학
    - **다음 단계(미착수)**: 화면 반영(학습 카드에 파생어 묶음 표시 등)과 품사 변환 빈칸형 퀴즈(Part 5 유형) — 아래 4번 참고.
 2. ~~`types.ts`에 페이지 상태 추가 → `EnglishVocabPage.tsx` → `Sidebar.tsx` → 퀴즈 생성기 → 오답노트 스키마~~ **2026-07-14 전부 완료** (아래 "화면/UI 구현" 참고).
 3. ~~급수 배지 색상 토큰~~ **완료** — `--color-level-core1~toeic`(+tint/on-level) 추가, 브랜드 청록·JLPT 초록~빨강 스펙트럼과 안 겹치는 옛 브랜드 보라~마젠타 계열 재사용.
-4. **남은 것**: `HomePage.tsx` 연동(최근기록/이어하기 카드/통계 대시보드에 영어 도메인 미포함 — 컴파일 에러는 없지만 홈 화면에서 영어 단어 활동이 안 보임), 품사 변환 빈칸형 퀴즈(Part 5 유형, 이제 파생어 세트 데이터가 준비됐으니 바로 진행 가능), 파생어 세트 화면 반영(학습 카드에 같은 `wordFamilyId`를 가진 단어들을 묶어서 보여주는 UI, 아직 미착수).
+4. ~~품사 변환 빈칸형 퀴즈(Part 5 유형)~~ **2026-07-16 완료** — 아래 "품사 변환 빈칸형 퀴즈 구현" 섹션 참고.
+5. **남은 것**: `HomePage.tsx` 연동(최근기록/이어하기 카드에 영어 도메인 미포함 — 통계 섹션의 도메인별 누적 정답률/암기 정착도에는 2026-07-16에 englishVocab이 반영됐지만, 이어하기·최근기록·오답 재도전 카드는 아직 한자/단어/문법 세 도메인만 있음), 파생어 세트 학습 카드 화면 반영(학습 카드에 같은 `wordFamilyId`를 가진 단어들을 묶어서 보여주는 UI 자체는 아직 미착수 — 퀴즈에서는 씀).
+
+## 품사 변환 빈칸형 퀴즈 구현 (2026-07-16 완료)
+
+파생어 세트(`wordFamilyId`/`derivationPos`) 데이터를 실제로 쓰는 두 번째 퀴즈 유형. `EnglishVocabPage.tsx`의 기존 "뜻 맞히기" 퀴즈와 나란히 "퀴즈 종류" 선택기로 전환하는 구조로 추가(요청 시 사용자가 "데이터 가공작업"이라고 표현한 것 = 이 생성기 구현을 가리켰음, 확인 후 진행).
+
+- **문제 형태**: family(같은 `wordFamilyId`, 2~8개 단어)의 한 표제어를 골라 그 단어의 `exampleEn` 문장에서 그 단어를 `_____`로 가리고, 선택지는 **같은 family의 단어 전부**(품사별 파생형). 정답은 문맥에 맞는 품사 형태 고르기. 선택지 개수를 4개로 강제하지 않고 family 크기 그대로 씀(기존 UI가 이미 가변 개수 선택지를 지원 — `.vocab-quiz-choices`가 flex column이라 레이아웃 안 깨짐).
+- **blank 처리**: `exampleEn`은 항상 그 단어 자신의 표제어 형태를 문장에 그대로 씀(예: "decide" 항목의 exampleEn엔 "decide"가, "decision" 항목엔 "decision"이 들어있음 — 데이터 생성 시부터 그랬음) → 정규식으로 단어 경계(`\b`) 기준 대소문자 무시 치환. 단, 전체 1,403개 파생어 단어 중 **약 15%(212개)는 exampleEn에 그 단어가 활용형(예: "decides")으로만 있어서 원형 그대로 찾지 못함** — 이런 항목은 blank 생성 실패로 조용히 제외(추측해서 자르지 않음). 급수별로 여전히 215~373문항 확보되어 콘텐츠는 충분함.
+- `src/lib/englishVocabQuizGenerator.ts`: `generateEnglishVocabDerivationQuestions`/`...FromIds`/`englishVocabDerivationLevelPool` 추가. 기존 뜻맞히기 생성기와 나란한 구조(같은 파일).
+- `src/lib/storage.ts`: `EnglishVocabDerivationInProgressQuiz` 타입 + CRUD 함수 세트를 기존 `EnglishVocabInProgressQuiz`와 나란히 추가(질문/정답 shape이 달라 합칠 수 없음 — 모의고사가 단어/문법과 별도 InProgressQuiz를 쓰는 것과 같은 이유). `BackupPayload` 버전 12→13. 오답노트/퀴즈기록은 기존 `EnglishVocabWrongNoteEntry`/`SimpleQuizHistoryEntry`를 그대로 재사용(퀴즈 종류를 구분하는 필드는 없음 — 단어/문법 퀴즈도 원래 그런 심플한 shape이라 일관성 유지, `source` 라벨 문자열로만 "영어 단어 품사 변환 퀴즈 · ..."처럼 구분).
+- `src/pages/EnglishVocabPage.tsx`: `phase`에 `derivationQuiz`/`derivationQuizResult` 추가, 상태/함수/렌더 전부 기존 뜻맞히기 퀴즈와 나란히 중복 구현(이 레포 컨벤션). 설정 화면에 "퀴즈 종류"(뜻 맞히기/품사 변환 빈칸형) 선택기 추가, 문항수 옵션이 선택된 종류의 풀 크기를 따라가도록 수정. **주의**: 초안에서 CTA 버튼 문구를 실수로 "단어 퀴즈 풀기" → "{종류} 풀기"로 바꿨다가, 기존 화면 문구를 불필요하게 건드리는 최소 diff 위반이라 되돌림 — 뜻맞히기는 원래 문구("단어 퀴즈 풀기") 그대로, 품사 변환만 새 문구("품사 변환 퀴즈 풀기") 씀.
+- `src/pages/VocabPage.css`: `.vocab-derivation-sentence`(빈칸 문장 표시), `.quiz-choice-pos`(선택지 옆 품사 라벨) 클래스 추가.
+- 오답노트/SRS/퀴즈기록은 뜻맞히기와 동일하게 연동(정답 여부는 `entry.id` 기준 비교, meaningKr 기준이 아님).
+- Playwright로 실제 검증: 급수 core1 기준 빈칸 문장·4~6개 선택지 렌더링, 오답→다음버튼→Enter 진행, 나가기→이어하기(진행 인덱스 정확히 보존), 결과 화면까지 20문항 전체 진행, 375px 모바일+다크모드 가로스크롤·콘솔에러 0건 확인.
+
+### 부수 발견: Enter-다음 진행 시 다음 문제가 몰래 자동 채점되는 버그 (2026-07-16 발견+수정)
+
+품사 변환 퀴즈의 나가기→이어하기를 검증하던 중, localStorage에 저장된 진행 인덱스가 매번 기대보다 1 앞서 있는 걸 발견. 원인 재현: 오답 제출 후 뜬 "다음" 버튼을 Enter로 누르면 `handleNextQuiz`가 다음 문제로 넘어가고, 그 직후 `useEffect`가 새 문제의 첫 선택지 버튼에 `.focus()`를 호출하는데, **아직 처리 중이던 같은 Enter 키의 keyup이 그 방금 포커스된 선택지 버튼을 네이티브로 클릭**해버려서 새 문제가 사용자 모르게 자동으로(포커스된 첫 선택지로) 채점됨 — 2026-07-13에 "다음" 버튼 자체의 자동포커스를 없애서 고쳤던 것과 완전히 같은 메커니즘이 **선택지 자동포커스 effect**에도 그대로 존재했던 것(그때는 "다음" 버튼만 고치고 이 effect는 안 건드렸음). 실제 사용자가 Enter를 빠르게 눌렀을 때 재현 가능한, 퀴즈 채점 정확도에 영향을 주는 진짜 버그로 판단해 다음 5개 파일 전부에 동일 패턴으로 수정(`skipNextFocusRef`/`skipNextChoiceFocusRef`: `handleNext`류 함수에서 true로 세팅 → 포커스 effect가 그 값을 보고 한 번만 건너뜀):
+`src/components/QuizRunner.tsx`(한자), `src/pages/VocabPage.tsx`(단어), `src/pages/GrammarPage.tsx`(문법), `src/pages/MockExamPage.tsx`(모의고사), `src/pages/EnglishVocabPage.tsx`(영어단어, 뜻맞히기+품사변환 둘 다). Playwright로 4곳(한자/문법/영어단어 뜻맞히기/영어단어 품사변환) 직접 재현 후 수정 확인 — 수정 전 index가 답변 1회당 2씩 늘던 것이 수정 후 정확히 1씩만 증가.
 
 ## 화면/UI 구현 (2026-07-14 완료)
 

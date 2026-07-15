@@ -54,6 +54,21 @@
   font-size: 18px;
 }
 
+.vocab-derivation-sentence {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 520px;
+}
+
+.quiz-choice-pos {
+  margin-left: 8px;
+  color: var(--color-primary-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
 .vocab-quiz-choices {
   display: flex;
   flex-direction: column;
