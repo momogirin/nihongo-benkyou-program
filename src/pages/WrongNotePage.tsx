@@ -103,7 +103,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
     confirmCancelButtonRef.current?.focus({ preventScroll: true })
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'Escape') setConfirmTarget(null)
-      else if (e.key === 'Enter' && !e.repeat) performRemove(confirmTarget)
+      else if (e.key === 'Enter' && !e.repeat && confirmTarget) performRemove(confirmTarget)
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)

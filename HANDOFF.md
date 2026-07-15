@@ -1,6 +1,15 @@
-# 작업 인계 (2026-07-14 기준, 영어(TOEIC) 카테고리 추가 작업 진행 중)
+# 작업 인계 (2026-07-16 기준, 영어(TOEIC) 카테고리 추가 작업 진행 중)
 
 다음 Claude 세션이 이어서 작업할 때 참고할 현재 상태/맥락 요약. 이 파일은 매번 최신 상태로 덮어써서 유지한다(누적 히스토리 아님 — 히스토리는 git log 참고).
+
+## ⚠️ 배포 빌드 깨짐 발견 및 수정 (2026-07-16)
+
+새 세션 시작 시 `npx tsc -b --noEmit`으로 베이스라인을 확인해보니, **`20e82e8`(2026-07-14 11:13, 오답노트 삭제 확인 모달을 커스텀으로 바꾼 커밋)부터 이번 세션 시작 시점(`eed89d5`)까지 GitHub Actions 배포가 16회 연속 실패 중**이었음(`gh` CLI가 없어서 GitHub REST API로 직접 확인: `curl https://api.github.com/repos/momogirin/nihongo-benkyou-program/actions/runs`). 즉 그 사이 커밋된 영어(TOEIC) 단어 기능(데이터 4,059단어+파생어 세트+화면) 전체가 **실제 라이브 사이트엔 하나도 반영 안 된 채로 하루 넘게 방치**돼 있었음. 원인 4가지, 전부 수정 완료:
+1. `WrongNotePage.tsx`: `confirmTarget`(널 가능)을 `performRemove(confirmTarget: ConfirmTarget)`에 그대로 넘기던 것 — `useEffect` 안 `handleKeyDown` 콜백에서는 바깥의 `if (!confirmTarget) return` 가드가 타입 내로잉으로 이어지지 않아서 생긴 문제. `confirmTarget &&` 조건을 같은 `if`문 안으로 옮겨 해결(20e82e8, 최초 원인).
+2. `types.ts`의 `SimpleQuizHistoryEntry.level`이 `KanjiLevel`로만 타입돼 있었는데 `EnglishVocabPage.tsx`가 이 인터페이스를 그대로 재사용하면서 `EnglishLevel`을 넘기고 있었음 → `level: KanjiLevel | EnglishLevel`로 확장.
+3. `SrsDomain`에 `'englishVocab'`이 추가된 뒤 `statsSummary.ts`의 `getWeeklyStats()`/`getDomainAccuracies()`가 영어 도메인을 안 챙기고 있었고(타입 에러 + 실제로도 통계에서 영어가 빠짐), `HomePage.tsx`의 `DOMAIN_LABEL`에도 `englishVocab` 키가 없었음 → 둘 다 추가.
+   - **주의**: 이번에 고친 건 "통계(도메인별 누적 정답률/암기 정착도) 섹션이 englishVocab을 포함해서 타입 에러 없이 렌더링되게" 하는 것까지만. `HomePage.tsx`는 여전히 영어 단어의 이어하기 카드/최근 기록/오답 재도전 카드가 없음(아래 "남은 작업" 참고, 이건 원래도 별도 항목으로 남아있던 것이라 이번엔 범위를 넓히지 않음).
+4. `npm run build`(`tsc -b && vite build`) 로컬 재현 성공 + Playwright로 실제 회귀 확인(오답노트 삭제 모달 Enter로 실제 삭제됨, 영어 단어 퀴즈 4지선다 응답 정상, 홈 통계에 영어단어 정답률 표시) — 콘솔 에러 0건. 커밋 후 push 완료, 다음 GitHub Actions 배포가 성공하는지는 사용자가 확인.
 
 ## 프로젝트 목표
 

@@ -1,5 +1,6 @@
 import {
   getAllSrsState,
+  getEnglishVocabQuizHistory,
   getGrammarQuizHistory,
   getMockExamHistory,
   getQuizHistory,
@@ -20,7 +21,13 @@ export interface WeeklyStats {
 // 도메인 구분 없이 지난 7일간 전부 합산 — "이번 주 얼마나 복습했는지" 동기부여용
 export function getWeeklyStats(): WeeklyStats {
   const cutoff = Date.now() - WEEK_MS
-  const sessions = [...getQuizHistory(), ...getVocabQuizHistory(), ...getGrammarQuizHistory(), ...getMockExamHistory()]
+  const sessions = [
+    ...getQuizHistory(),
+    ...getVocabQuizHistory(),
+    ...getGrammarQuizHistory(),
+    ...getEnglishVocabQuizHistory(),
+    ...getMockExamHistory(),
+  ]
   const recent = sessions.filter((s) => new Date(s.finishedAt).getTime() >= cutoff)
   return {
     total: recent.reduce((sum, s) => sum + s.total, 0),
@@ -54,6 +61,7 @@ export function getDomainAccuracies(): DomainAccuracy[] {
     kanji: { total: 0, correct: 0 },
     vocab: { total: 0, correct: 0 },
     grammar: { total: 0, correct: 0 },
+    englishVocab: { total: 0, correct: 0 },
   }
   for (const e of getQuizHistory()) {
     totals.kanji.total += e.total
@@ -67,13 +75,18 @@ export function getDomainAccuracies(): DomainAccuracy[] {
     totals.grammar.total += e.total
     totals.grammar.correct += e.correct
   }
+  // 모의고사는 한자/단어/문법 세 도메인만 섞음 — 영어는 대상 밖(HANDOFF 참고)
+  for (const e of getEnglishVocabQuizHistory()) {
+    totals.englishVocab.total += e.total
+    totals.englishVocab.correct += e.correct
+  }
   for (const e of getMockExamHistory()) {
     for (const domain of ['kanji', 'vocab', 'grammar'] as const) {
       totals[domain].total += e.breakdown[domain].total
       totals[domain].correct += e.breakdown[domain].correct
     }
   }
-  return (['kanji', 'vocab', 'grammar'] as const).map((domain) => ({
+  return (['kanji', 'vocab', 'grammar', 'englishVocab'] as const).map((domain) => ({
     domain,
     total: totals[domain].total,
     correct: totals[domain].correct,

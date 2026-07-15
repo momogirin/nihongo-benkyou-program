@@ -26,7 +26,9 @@ import { getDomainAccuracies, getSrsMastery, getWeakestDomain, getWeeklyStats } 
 import type { QuizConfig } from '../types'
 import './HomePage.css'
 
-const DOMAIN_LABEL = { kanji: '한자', vocab: '단어', grammar: '문법' } as const
+// englishVocab은 모의고사 대상이 아니고 이어하기/최근기록 카드도 아직 없어서
+// (HANDOFF.md "남은 작업" 참고) 여기 라벨은 domainAccuracies 통계 섹션 전용으로만 쓰임
+const DOMAIN_LABEL = { kanji: '한자', vocab: '단어', grammar: '문법', englishVocab: '영어단어' } as const
 
 interface Props {
   onStartQuiz: (config: QuizConfig) => void

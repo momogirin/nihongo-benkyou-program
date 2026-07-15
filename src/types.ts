@@ -1,4 +1,5 @@
 import type { Kanji, KanjiLevel } from './data/kanji'
+import type { EnglishLevel } from './data/englishVocab'
 import type { MockExamDomain } from './lib/mockExamGenerator'
 
 export type PageId = 'home' | 'kanji' | 'wrongNote' | 'vocab' | 'grammar' | 'mockExam' | 'englishVocab' | 'backup'
@@ -41,11 +42,12 @@ export interface QuizHistoryEntry {
   finishedAt: string
 }
 
-// simpler history shape for vocab/grammar quizzes — they only vary by
-// level, no questionType/order axis like kanji's QuizConfig
+// simpler history shape for vocab/grammar/영어단어 quizzes — they only vary by
+// level, no questionType/order axis like kanji's QuizConfig. level is
+// KanjiLevel (N5~N1) for 한자/단어/문법, EnglishLevel (core1~toeic) for 영어단어
 export interface SimpleQuizHistoryEntry {
   id: string
-  level: KanjiLevel
+  level: KanjiLevel | EnglishLevel
   total: number
   correct: number
   elapsedMs: number
