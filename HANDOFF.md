@@ -2,6 +2,18 @@
 
 다음 Claude 세션이 이어서 작업할 때 참고할 현재 상태/맥락 요약. 이 파일은 매번 최신 상태로 덮어써서 유지한다(누적 히스토리 아님 — 히스토리는 git log 참고).
 
+## 주제 태그(topicTags) 추가 (2026-07-16 완료, toeic 티어만)
+
+영어(TOEIC) 2단계(보류) 후보 중 하나. HANDOFF.md에 "주제 태그(사무/인사/여행/재무 등 — NGSL/TSL에 없어서 별도 소스나 수작업 태깅 필요)"라고 적혀있던 것 그대로, 원본 데이터셋에 없는 정보라 수작업(서브에이전트 위임) 태깅으로 진행.
+
+- **범위**: toeic 티어(1,250개)만 — core1~3(NGSL 일반어휘 2,809개)은 the/be/and 같은 기능어·범용어 비중이 높아 주제 태그 효과가 낮다고 판단해 제외. 나중에 필요해지면 같은 패턴으로 확장 가능.
+- **카테고리 12개(고정)**: office(사무)/hr(인사)/meeting(회의·발표)/marketing(마케팅)/finance(재정·회계)/contract(계약·법률)/tech(IT·기술)/manufacturing(제조·물류)/travel(여행)/dining(식당·행사)/realestate(부동산·시설)/health(의료·건강) — 토익 Part 7 지문에서 반복되는 소재 기준.
+- **진행 방식**: 1,250개를 313개씩 4등분(a~d)해서 서브에이전트 4개에 병렬 위임, 각자 word/pos/meaningKr만 보고 12개 카테고리 중 명확히 관련 있는 것만(최대 2개, 없으면 빈 배열) 판단해 `data/raw/topic-tags-chunk-{a,b,c,d}.json`에 저장 → 병합 검증(1,250개 전량 매칭, 중복 0건, 잘못된 태그명 0건) → `data/english-vocab-toeic.json`에 `topicTags` 필드 반영(빈 배열은 기존 optional 필드 컨벤션대로 필드 자체 생략) → 730개 단어에 태그 적용, 520개는 태그 없음(순수 일상어/기능어/스포츠 등 — 억지로 끼워맞추지 않음, 이 프로젝트 "데이터를 지어내지 않는다" 원칙).
+- `scripts/build-english-vocab-data.mjs`: `EnglishTopicTag` union 타입 + `EnglishVocabWord.topicTags?: EnglishTopicTag[]` 추가 → `npm run data:build:englishVocab` 재실행해서 `src/data/englishVocab.ts`까지 반영 완료.
+- **화면 반영**: `EnglishVocabPage.tsx`의 전체보기(`browse`)에 주제 태그 필터 칩 추가(멀티셀렉트, OR 조건 — 하나라도 겹치면 표시). `hasTopicTagsInLevel` 가드로 태그가 없는 급수(core1~3)에서는 필터 UI 자체가 안 뜸(빈 필터를 보여주지 않기 위함). 학습 카드/전체보기 상세 카드의 급수·품사 칩 옆에도 주제 태그 배지 표시.
+- `data/raw/topic-tags-chunk-{a,b,c,d}.json`/`topic-tags-merged.json`은 재현 가능한 원자료로 커밋에 남김(이 프로젝트가 `word-families-chunk-*.json` 등 이전에도 이런 중간 산출물을 원자료로 보존해온 관례를 따름). 순수 입력 분할본(`topic-tag-input-*.json`)은 원본에서 재생성 가능해 삭제.
+- **남은 것**: core1~3 확장 여부는 미정(필요성 재논의 필요), 유의어 퀴즈/콜로케이션은 여전히 미착수.
+
 ## 한자 데이터 결측치 11자 수정 (2026-07-16) — "일본어 다했어?" 재검증
 
 사용자가 "일본어 다했어?"라고 물어서 실제로 `data/kanji.json`(2138자)·`vocab-*.json`(7972개)·`grammar-*.json`(470개)의 핵심 필드 결측 여부를 스크립트로 직접 재검증 → **아래 "데이터 품질 감사" 섹션의 "전수 검토 완료" 서술과 달리 한자 11자에 진짜 결측치가 있었음**(그 감사는 이미 채워진 필드의 *내용 정확성*만 봤고, 필드 자체가 비어있는지는 별도로 안 살펴봤던 것으로 보임). vocab의 2건(N4-309 ごらんになる/N4-552 かまう)은 결측이 아니라 `word` 자체가 순수 히라가나라 `reading`이 원래 빈 게 맞음(정상 데이터).

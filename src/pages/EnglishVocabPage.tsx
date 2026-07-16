@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import SpeakerButton from '../components/SpeakerButton'
-import { englishVocabList, type EnglishVocabWord, type EnglishLevel } from '../data/englishVocab'
+import { englishVocabList, type EnglishVocabWord, type EnglishLevel, type EnglishTopicTag } from '../data/englishVocab'
 import { speak } from '../lib/tts'
 import { normalizeAnswer } from '../lib/answerMatching'
 import {
@@ -66,6 +66,37 @@ const LEVEL_LABELS: Record<EnglishLevel, string> = {
   core3: '확장 어휘',
   toeic: '토익 특화',
 }
+// 토익 Part 7 지문에서 반복되는 소재 기준 12개 고정 카테고리(현재 toeic 티어만
+// 태깅됨 — core1~3은 the/be/and처럼 기능어·범용어 비중이 높아 태그 효과가
+// 낮다고 판단해 제외, HANDOFF.md 참고)
+const ALL_TOPIC_TAGS: EnglishTopicTag[] = [
+  'office',
+  'hr',
+  'meeting',
+  'marketing',
+  'finance',
+  'contract',
+  'tech',
+  'manufacturing',
+  'travel',
+  'dining',
+  'realestate',
+  'health',
+]
+const TOPIC_TAG_LABELS: Record<EnglishTopicTag, string> = {
+  office: '사무',
+  hr: '인사',
+  meeting: '회의·발표',
+  marketing: '마케팅',
+  finance: '재정·회계',
+  contract: '계약·법률',
+  tech: 'IT·기술',
+  manufacturing: '제조·물류',
+  travel: '여행',
+  dining: '식당·행사',
+  realestate: '부동산·시설',
+  health: '의료·건강',
+}
 const QUIZ_QUESTION_COUNT = 20
 const QUIZ_COUNT_OPTIONS = [10, 20, 30, 50, 'all'] as const
 const FEEDBACK_DELAY_MS = 550
@@ -127,6 +158,10 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   const levelWords = useMemo(() => englishVocabList.filter((w) => w.level === level), [level])
   const [browseIndex, setBrowseIndex] = useState<number | null>(null)
   const [browseQuery, setBrowseQuery] = useState('')
+  // 주제 태그 필터 — 여러 개 선택 시 OR(하나라도 겹치면 포함). 급수를 바꾸면
+  // 초기화하지 않음(예: toeic에서 골라둔 태그로 다른 급수를 봐도 자연스러움 —
+  // 다만 toeic 외 급수는 태그가 없어 항상 빈 결과가 됨, 아래 안내문 참고)
+  const [browseTopicFilter, setBrowseTopicFilter] = useState<EnglishTopicTag[]>([])
 
   const [quizCount, setQuizCount] = useState<(typeof QUIZ_COUNT_OPTIONS)[number]>(QUIZ_QUESTION_COUNT)
   const [quizOrder, setQuizOrder] = useState<'random' | 'sequential'>('random')
@@ -630,6 +665,11 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
             <div className="study-top">
               <span className={`study-level-badge study-level-badge-${word.level}`}>{LEVEL_LABELS[word.level]}</span>
               <span className="study-radical-chip">{word.pos}</span>
+              {word.topicTags?.map((tag) => (
+                <span key={tag} className="vocab-topic-badge">
+                  {TOPIC_TAG_LABELS[tag]}
+                </span>
+              ))}
             </div>
             <div className="vocab-word-jp vocab-word-with-speaker">
               {word.word}
@@ -697,13 +737,17 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
 
   if (phase === 'browse') {
     const normalizedBrowseQuery = browseQuery.trim().toLowerCase()
-    const filteredWords = normalizedBrowseQuery
-      ? levelWords.filter(
-          (w) =>
-            w.word.toLowerCase().includes(normalizedBrowseQuery) ||
-            w.meaningKr.toLowerCase().includes(normalizedBrowseQuery),
-        )
-      : levelWords
+    const hasTopicTagsInLevel = levelWords.some((w) => w.topicTags && w.topicTags.length > 0)
+    const filteredWords = levelWords.filter((w) => {
+      const matchesQuery =
+        !normalizedBrowseQuery ||
+        w.word.toLowerCase().includes(normalizedBrowseQuery) ||
+        w.meaningKr.toLowerCase().includes(normalizedBrowseQuery)
+      const matchesTopic =
+        browseTopicFilter.length === 0 || (w.topicTags?.some((t) => browseTopicFilter.includes(t)) ?? false)
+      return matchesQuery && matchesTopic
+    })
+    const isFiltered = normalizedBrowseQuery !== '' || browseTopicFilter.length > 0
 
     return (
       <div className="page">
@@ -720,7 +764,25 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
           value={browseQuery}
           onChange={(e) => setBrowseQuery(e.target.value)}
         />
-        {normalizedBrowseQuery && filteredWords.length === 0 ? (
+        {hasTopicTagsInLevel && (
+          <div className="vocab-topic-filter">
+            {ALL_TOPIC_TAGS.map((tag) => (
+              <button
+                key={tag}
+                type="button"
+                className={`vocab-topic-chip${browseTopicFilter.includes(tag) ? ' active' : ''}`}
+                onClick={() =>
+                  setBrowseTopicFilter((current) =>
+                    current.includes(tag) ? current.filter((t) => t !== tag) : [...current, tag],
+                  )
+                }
+              >
+                {TOPIC_TAG_LABELS[tag]}
+              </button>
+            ))}
+          </div>
+        )}
+        {isFiltered && filteredWords.length === 0 ? (
           <p className="page-placeholder">검색 결과가 없습니다.</p>
         ) : (
           <div className="vocab-browse-grid">
@@ -761,6 +823,11 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
             <div className="study-top">
               <span className={`study-level-badge study-level-badge-${word.level}`}>{LEVEL_LABELS[word.level]}</span>
               <span className="study-radical-chip">{word.pos}</span>
+              {word.topicTags?.map((tag) => (
+                <span key={tag} className="vocab-topic-badge">
+                  {TOPIC_TAG_LABELS[tag]}
+                </span>
+              ))}
             </div>
             <div className="vocab-word-jp vocab-word-with-speaker">
               {word.word}

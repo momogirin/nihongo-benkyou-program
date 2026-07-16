@@ -18,6 +18,46 @@
   font-size: 13px;
 }
 
+/* 주제 태그(토익 Part 7 소재별 분류) — 전체보기 필터 칩 + 학습/상세 카드
+   배지 두 군데서 씀. 필터 칩은 study-level-btn(급수 선택기)과 같은
+   토글 버튼 패턴, 배지는 study-radical-chip과 같은 정보 표시 칩 패턴 */
+.vocab-topic-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 20px;
+}
+
+.vocab-topic-chip {
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.vocab-topic-chip:hover {
+  border-color: var(--color-primary-dark);
+}
+
+.vocab-topic-chip.active {
+  border-color: var(--color-primary-dark);
+  background: var(--color-selected-bg);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.vocab-topic-badge {
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-selected-bg);
+  color: var(--color-primary-dark);
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .vocab-quiz-button {
   display: block;
   width: 100%;
