@@ -2,12 +2,14 @@ import { kanjiList, type KanjiLevel } from '../data/kanji'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { vocabList } from '../data/vocab'
 import { grammarList } from '../data/grammar'
-import { getGrammarStudyProgress, getStudyProgress, getVocabStudyProgress } from './storage'
+import { englishVocabList, type EnglishLevel } from '../data/englishVocab'
+import { getEnglishVocabStudyProgress, getGrammarStudyProgress, getStudyProgress, getVocabStudyProgress } from './storage'
 
 const ALL_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+const ALL_ENGLISH_LEVELS: EnglishLevel[] = ['core1', 'core2', 'core3', 'toeic']
 
 export interface StudyProgressSummary {
-  level: KanjiLevel
+  level: KanjiLevel | EnglishLevel
   completed: number
   total: number
 }
@@ -46,6 +48,19 @@ export function getGrammarStudyProgressSummary(): StudyProgressSummary | null {
     const total = grammarList.filter((g) => g.level === level).length
     if (total === 0) continue
     const completed = Math.min(getGrammarStudyProgress(level), total)
+    if (completed < total) return { level, completed, total }
+  }
+  return null
+}
+
+// same again, for the 영어(TOEIC) 단어 study flow — level order is core1→toeic
+// (easy→specialized) instead of JLPT's N5→N1, and core2/core3/toeic can be
+// empty (still being filled in) so the total===0 skip matters here too
+export function getEnglishVocabStudyProgressSummary(): StudyProgressSummary | null {
+  for (const level of ALL_ENGLISH_LEVELS) {
+    const total = englishVocabList.filter((w) => w.level === level).length
+    if (total === 0) continue
+    const completed = Math.min(getEnglishVocabStudyProgress(level), total)
     if (completed < total) return { level, completed, total }
   }
   return null

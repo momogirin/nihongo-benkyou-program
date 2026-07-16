@@ -82,8 +82,10 @@ function App() {
             onGoToVocab={() => handleNavigate('vocab')}
             onGoToGrammar={() => handleNavigate('grammar')}
             onGoToMockExam={() => handleNavigate('mockExam')}
+            onGoToEnglishVocab={() => handleNavigate('englishVocab')}
             onRetryVocab={retryVocab}
             onRetryGrammar={retryGrammar}
+            onRetryEnglishVocab={retryEnglishVocab}
           />
         )
       case 'kanji':

@@ -8,7 +8,7 @@
 1. `WrongNotePage.tsx`: `confirmTarget`(널 가능)을 `performRemove(confirmTarget: ConfirmTarget)`에 그대로 넘기던 것 — `useEffect` 안 `handleKeyDown` 콜백에서는 바깥의 `if (!confirmTarget) return` 가드가 타입 내로잉으로 이어지지 않아서 생긴 문제. `confirmTarget &&` 조건을 같은 `if`문 안으로 옮겨 해결(20e82e8, 최초 원인).
 2. `types.ts`의 `SimpleQuizHistoryEntry.level`이 `KanjiLevel`로만 타입돼 있었는데 `EnglishVocabPage.tsx`가 이 인터페이스를 그대로 재사용하면서 `EnglishLevel`을 넘기고 있었음 → `level: KanjiLevel | EnglishLevel`로 확장.
 3. `SrsDomain`에 `'englishVocab'`이 추가된 뒤 `statsSummary.ts`의 `getWeeklyStats()`/`getDomainAccuracies()`가 영어 도메인을 안 챙기고 있었고(타입 에러 + 실제로도 통계에서 영어가 빠짐), `HomePage.tsx`의 `DOMAIN_LABEL`에도 `englishVocab` 키가 없었음 → 둘 다 추가.
-   - **주의**: 이번에 고친 건 "통계(도메인별 누적 정답률/암기 정착도) 섹션이 englishVocab을 포함해서 타입 에러 없이 렌더링되게" 하는 것까지만. `HomePage.tsx`는 여전히 영어 단어의 이어하기 카드/최근 기록/오답 재도전 카드가 없음(아래 "남은 작업" 참고, 이건 원래도 별도 항목으로 남아있던 것이라 이번엔 범위를 넓히지 않음).
+   - **주의**: 이번에 고친 건 "통계(도메인별 누적 정답률/암기 정착도) 섹션이 englishVocab을 포함해서 타입 에러 없이 렌더링되게" 하는 것까지만이었음. **2026-07-16 같은 날 이어서 나머지도 완료** — `HomePage.tsx`에 영어단어 복습(SRS)/학습 진도/마무리못한 퀴즈/오답 재도전/최근 기록 카드를 나머지 세 도메인과 나란히 추가(`onGoToEnglishVocab`/`onRetryEnglishVocab` prop 추가, `App.tsx`에서 연결 — `retryEnglishVocab`은 이미 오답노트 페이지용으로 존재해서 재사용). `studyProgress.ts`에 `getEnglishVocabStudyProgressSummary()` 추가(기존 세 도메인과 같은 패턴), `StudyProgressSummary.level` 타입을 `KanjiLevel | EnglishLevel`로 확장.
 4. `npm run build`(`tsc -b && vite build`) 로컬 재현 성공 + Playwright로 실제 회귀 확인(오답노트 삭제 모달 Enter로 실제 삭제됨, 영어 단어 퀴즈 4지선다 응답 정상, 홈 통계에 영어단어 정답률 표시) — 콘솔 에러 0건. 커밋 후 push 완료, 다음 GitHub Actions 배포가 성공하는지는 사용자가 확인.
 
 ## 프로젝트 목표
@@ -55,7 +55,7 @@ JLPT 한자·단어·문법 학습 + (2026-07-14부터) 영어(TOEIC) 단어 학
 3. ~~급수 배지 색상 토큰~~ **완료** — `--color-level-core1~toeic`(+tint/on-level) 추가, 브랜드 청록·JLPT 초록~빨강 스펙트럼과 안 겹치는 옛 브랜드 보라~마젠타 계열 재사용.
 4. ~~품사 변환 빈칸형 퀴즈(Part 5 유형)~~ **2026-07-16 완료** — 아래 "품사 변환 빈칸형 퀴즈 구현" 섹션 참고.
 5. ~~파생어 세트 학습 카드 화면 반영~~ **2026-07-16 완료** — `EnglishVocabPage.tsx`의 학습(플래시카드)/전체보기 상세 화면 둘 다에 "파생어" 필드 추가, 같은 `wordFamilyId`를 가진 다른 단어들을 `study-used-kanji-chip` 스타일(단어/한자 화면의 "쓰인 한자" 칩과 동일 패턴 재사용)로 표시. 전체보기 상세에서는 칩이 버튼이라 클릭하면 그 단어로 바로 이동(파생어 세트 절반 이상이 급수 경계를 넘나들어서 — 564세트 중 443세트가 cross-level — 클릭 시 `jumpToWord()`가 그 단어의 급수로 전환한 뒤 인덱스를 다시 찾음). 학습 카드 쪽은 학습 흐름을 안 끊기 위해 클릭 불가능한 정보 표시 칩만.
-6. **남은 것**: `HomePage.tsx` 연동(최근기록/이어하기 카드에 영어 도메인 미포함 — 통계 섹션의 도메인별 누적 정답률/암기 정착도에는 2026-07-16에 englishVocab이 반영됐지만, 이어하기·최근기록·오답 재도전 카드는 아직 한자/단어/문법 세 도메인만 있음).
+6. ~~`HomePage.tsx` 영어단어 도메인 연동~~ **2026-07-16 완료** — 위 "⚠️ 배포 빌드 깨짐" 섹션 참고. 영어(TOEIC) 카테고리의 MVP 범위(1단계) 작업이 이걸로 전부 끝남.
 
 ## 품사 변환 빈칸형 퀴즈 구현 (2026-07-16 완료)
 

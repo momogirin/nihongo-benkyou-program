@@ -2,9 +2,13 @@ import { useMemo } from 'react'
 import { kanjiList } from '../data/kanji'
 import { vocabList } from '../data/vocab'
 import { grammarList } from '../data/grammar'
+import { englishVocabList } from '../data/englishVocab'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import {
   getDueSrsIds,
+  getEnglishVocabInProgressQuiz,
+  getEnglishVocabQuizHistory,
+  getEnglishVocabWrongNotes,
   getGrammarInProgressQuiz,
   getGrammarQuizHistory,
   getGrammarWrongNotes,
@@ -18,6 +22,7 @@ import {
   getWrongNotes,
 } from '../lib/storage'
 import {
+  getEnglishVocabStudyProgressSummary,
   getGrammarStudyProgressSummary,
   getStudyProgressSummary,
   getVocabStudyProgressSummary,
@@ -26,8 +31,6 @@ import { getDomainAccuracies, getSrsMastery, getWeakestDomain, getWeeklyStats } 
 import type { QuizConfig } from '../types'
 import './HomePage.css'
 
-// englishVocab은 모의고사 대상이 아니고 이어하기/최근기록 카드도 아직 없어서
-// (HANDOFF.md "남은 작업" 참고) 여기 라벨은 domainAccuracies 통계 섹션 전용으로만 쓰임
 const DOMAIN_LABEL = { kanji: '한자', vocab: '단어', grammar: '문법', englishVocab: '영어단어' } as const
 
 interface Props {
@@ -37,8 +40,10 @@ interface Props {
   onGoToVocab: () => void
   onGoToGrammar: () => void
   onGoToMockExam: () => void
+  onGoToEnglishVocab: () => void
   onRetryVocab: (ids: string[]) => void
   onRetryGrammar: (ids: string[]) => void
+  onRetryEnglishVocab: (ids: string[]) => void
 }
 
 // 오답 재도전/학습 배치/기록 재시도는 전부 levels 없이 kanjiIds로 직접 지정하니,
@@ -63,13 +68,16 @@ export default function HomePage({
   onGoToVocab,
   onGoToGrammar,
   onGoToMockExam,
+  onGoToEnglishVocab,
   onRetryVocab,
   onRetryGrammar,
+  onRetryEnglishVocab,
 }: Props) {
   const history = useMemo(() => getQuizHistory(), [])
   const vocabHistory = useMemo(() => getVocabQuizHistory(), [])
   const grammarHistory = useMemo(() => getGrammarQuizHistory(), [])
   const mockExamHistory = useMemo(() => getMockExamHistory(), [])
+  const englishVocabHistory = useMemo(() => getEnglishVocabQuizHistory(), [])
 
   // merge all three domains' quiz history into one chronological feed —
   // vocab/grammar entries don't carry a replayable config like kanji's, so
@@ -107,19 +115,29 @@ export default function HomePage({
       label: `모의고사 ${e.level} · ${e.total}문항`,
       onClick: onGoToMockExam,
     }))
-    return [...kanjiItems, ...vocabItems, ...grammarItems, ...mockExamItems]
+    const englishVocabItems = englishVocabHistory.map((e) => ({
+      id: e.id,
+      finishedAt: e.finishedAt,
+      correct: e.correct,
+      total: e.total,
+      label: `영어단어 ${e.level} · ${e.total}문항`,
+      onClick: onGoToEnglishVocab,
+    }))
+    return [...kanjiItems, ...vocabItems, ...grammarItems, ...mockExamItems, ...englishVocabItems]
       .sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
       .slice(0, 20)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [history, vocabHistory, grammarHistory, mockExamHistory])
+  }, [history, vocabHistory, grammarHistory, mockExamHistory, englishVocabHistory])
 
   const inProgress = useMemo(() => getInProgressQuiz(), [])
   const vocabInProgress = useMemo(() => getVocabInProgressQuiz(), [])
   const grammarInProgress = useMemo(() => getGrammarInProgressQuiz(), [])
   const mockExamInProgress = useMemo(() => getMockExamInProgressQuiz(), [])
+  const englishVocabInProgress = useMemo(() => getEnglishVocabInProgressQuiz(), [])
   const studyProgress = useMemo(() => getStudyProgressSummary(), [])
   const vocabStudyProgress = useMemo(() => getVocabStudyProgressSummary(), [])
   const grammarStudyProgress = useMemo(() => getGrammarStudyProgressSummary(), [])
+  const englishVocabStudyProgress = useMemo(() => getEnglishVocabStudyProgressSummary(), [])
 
   const wrongNoteIds = useMemo(() => {
     const validIds = new Set(kanjiList.map((k) => k.id))
@@ -142,11 +160,22 @@ export default function HomePage({
       .filter((id) => validIds.has(id))
   }, [])
 
+  const englishVocabWrongIds = useMemo(() => {
+    const validIds = new Set(englishVocabList.map((w) => w.id))
+    return getEnglishVocabWrongNotes()
+      .map((n) => n.englishVocabId)
+      .filter((id) => validIds.has(id))
+  }, [])
+
   // SRS(간격반복 복습) — 퀴즈에서 한 번이라도 다뤄진 항목 중 복습 시점이 된 것.
   // 오답노트(항상 틀린 것)와 달리 "지금이 다시 볼 타이밍"이라는 시간 축 정보라 별도 카드로 둠
   const dueKanjiIds = useMemo(() => getDueSrsIds('kanji', kanjiList.map((k) => k.id)), [])
   const dueVocabIds = useMemo(() => getDueSrsIds('vocab', vocabList.map((w) => w.id)), [])
   const dueGrammarIds = useMemo(() => getDueSrsIds('grammar', grammarList.map((g) => g.id)), [])
+  const dueEnglishVocabIds = useMemo(
+    () => getDueSrsIds('englishVocab', englishVocabList.map((w) => w.id)),
+    [],
+  )
 
   // 학습 통계 — 진도/오답과 달리 "얼마나 잘 하고 있는지"를 보여주는 요약이라
   // 액션 카드 그리드와는 별도 섹션으로 둠
@@ -154,7 +183,12 @@ export default function HomePage({
   const domainAccuracies = useMemo(() => getDomainAccuracies(), [])
   const weakestDomain = useMemo(() => getWeakestDomain(domainAccuracies), [domainAccuracies])
   const srsMasteryByDomain = useMemo(
-    () => ({ kanji: getSrsMastery('kanji'), vocab: getSrsMastery('vocab'), grammar: getSrsMastery('grammar') }),
+    () => ({
+      kanji: getSrsMastery('kanji'),
+      vocab: getSrsMastery('vocab'),
+      grammar: getSrsMastery('grammar'),
+      englishVocab: getSrsMastery('englishVocab'),
+    }),
     [],
   )
   const hasStats = weeklyStats.total > 0 || domainAccuracies.some((a) => a.total > 0)
@@ -163,16 +197,20 @@ export default function HomePage({
     studyProgress ||
     vocabStudyProgress ||
     grammarStudyProgress ||
+    englishVocabStudyProgress ||
     inProgress ||
     vocabInProgress ||
     grammarInProgress ||
+    englishVocabInProgress ||
     mockExamInProgress ||
     wrongNoteIds.length > 0 ||
     vocabWrongIds.length > 0 ||
     grammarWrongIds.length > 0 ||
+    englishVocabWrongIds.length > 0 ||
     dueKanjiIds.length > 0 ||
     dueVocabIds.length > 0 ||
-    dueGrammarIds.length > 0
+    dueGrammarIds.length > 0 ||
+    dueEnglishVocabIds.length > 0
   if (!hasAnyEntry && mergedHistory.length === 0) {
     return (
       <div className="page">
@@ -218,6 +256,16 @@ export default function HomePage({
               <span className="home-entry-detail">{dueGrammarIds.length}개 복습할 시간이에요</span>
             </button>
           )}
+          {dueEnglishVocabIds.length > 0 && (
+            <button
+              type="button"
+              className="home-entry-card home-entry-card-review"
+              onClick={() => onRetryEnglishVocab(dueEnglishVocabIds)}
+            >
+              <span className="home-entry-title">영어단어 복습</span>
+              <span className="home-entry-detail">{dueEnglishVocabIds.length}개 복습할 시간이에요</span>
+            </button>
+          )}
           {studyProgress && (
             <button type="button" className="home-entry-card" onClick={onGoToStudy}>
               <span className="home-entry-title">한자 학습 진도</span>
@@ -239,6 +287,15 @@ export default function HomePage({
               <span className="home-entry-title">문법 학습 진도</span>
               <span className="home-entry-detail">
                 {grammarStudyProgress.level} {grammarStudyProgress.completed}/{grammarStudyProgress.total}개 학습함
+              </span>
+            </button>
+          )}
+          {englishVocabStudyProgress && (
+            <button type="button" className="home-entry-card" onClick={onGoToEnglishVocab}>
+              <span className="home-entry-title">영어단어 학습 진도</span>
+              <span className="home-entry-detail">
+                {englishVocabStudyProgress.level} {englishVocabStudyProgress.completed}/
+                {englishVocabStudyProgress.total}개 학습함
               </span>
             </button>
           )}
@@ -274,6 +331,15 @@ export default function HomePage({
               </span>
             </button>
           )}
+          {englishVocabInProgress && (
+            <button type="button" className="home-entry-card" onClick={onGoToEnglishVocab}>
+              <span className="home-entry-title">마무리못한 영어단어 퀴즈</span>
+              <span className="home-entry-detail">
+                {englishVocabInProgress.level} · {englishVocabInProgress.index}/
+                {englishVocabInProgress.questions.length} 진행 중
+              </span>
+            </button>
+          )}
           {wrongNoteIds.length > 0 && (
             <button
               type="button"
@@ -294,6 +360,16 @@ export default function HomePage({
             <button type="button" className="home-entry-card" onClick={() => onRetryGrammar(grammarWrongIds)}>
               <span className="home-entry-title">문법 오답 재도전</span>
               <span className="home-entry-detail">{grammarWrongIds.length}개</span>
+            </button>
+          )}
+          {englishVocabWrongIds.length > 0 && (
+            <button
+              type="button"
+              className="home-entry-card"
+              onClick={() => onRetryEnglishVocab(englishVocabWrongIds)}
+            >
+              <span className="home-entry-title">영어단어 오답 재도전</span>
+              <span className="home-entry-detail">{englishVocabWrongIds.length}개</span>
             </button>
           )}
         </div>
@@ -322,7 +398,7 @@ export default function HomePage({
                   </span>
                 </div>
               ))}
-            {(['kanji', 'vocab', 'grammar'] as const)
+            {(['kanji', 'vocab', 'grammar', 'englishVocab'] as const)
               .filter((domain) => srsMasteryByDomain[domain].mastered + srsMasteryByDomain[domain].reviewing > 0)
               .map((domain) => {
                 const { mastered, reviewing } = srsMasteryByDomain[domain]
