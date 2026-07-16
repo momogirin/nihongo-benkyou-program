@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import SpeakerButton from '../components/SpeakerButton'
 import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
+import { primaryReading } from '../lib/kanjiUsage'
 import { getStudyProgress, setStudyProgress } from '../lib/storage'
 import type { QuizConfig } from '../types'
 import './StudyPage.css'
@@ -116,7 +118,10 @@ export default function StudyPage({ onStartQuiz }: Props) {
                 </span>
               )}
             </div>
-            <div className="study-kanji">{kanji.kanji}</div>
+            <div className="study-kanji vocab-word-with-speaker">
+              {kanji.kanji}
+              <SpeakerButton text={primaryReading(kanji)} lang="ja-JP" />
+            </div>
             <dl className="study-fields study-fields-core">
               <div className="study-field">
                 <dt>한국 훈음</dt>

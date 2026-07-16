@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import SpeakerButton from '../components/SpeakerButton'
 import { englishVocabList, type EnglishVocabWord, type EnglishLevel } from '../data/englishVocab'
 import {
   generateEnglishVocabQuestions,
@@ -47,18 +48,6 @@ function jumpToWord(target: EnglishVocabWord, setLevel: (l: EnglishLevel) => voi
   setLevel(target.level)
   const siblings = englishVocabList.filter((w) => w.level === target.level)
   setBrowseIndex(siblings.findIndex((w) => w.id === target.id))
-}
-
-// 발음 듣기(2단계 후보였던 TTS) — 브라우저 내장 Web Speech API라 데이터/서버
-// 추가 없이 구현 가능. 미지원 브라우저에서도 조용히 실패하지 않게 speak()
-// 호출 전 지원 여부를 UI 쪽(canSpeak)에서 먼저 걸러 버튼 자체를 숨김
-const canSpeak = typeof window !== 'undefined' && 'speechSynthesis' in window
-function speak(word: string) {
-  if (!canSpeak) return
-  window.speechSynthesis.cancel()
-  const utterance = new SpeechSynthesisUtterance(word)
-  utterance.lang = 'en-US'
-  window.speechSynthesis.speak(utterance)
 }
 
 const ALL_LEVELS: EnglishLevel[] = ['core1', 'core2', 'core3', 'toeic']
@@ -473,21 +462,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
             </div>
             <div className="vocab-word-jp vocab-word-with-speaker">
               {word.word}
-              {canSpeak && (
-                <button
-                  type="button"
-                  className="vocab-speaker-button"
-                  onClick={() => speak(word.word)}
-                  aria-label={`${word.word} 발음 듣기`}
-                >
-                  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                    <path
-                      fill="currentColor"
-                      d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-.77-3.29-2-4.24v8.47c1.23-.94 2-2.46 2-4.23zM18 4.55v1.63c2.89 1.16 5 3.98 5 7.32s-2.11 6.16-5 7.32v1.63c3.78-1.19 6.5-4.71 6.5-8.95S21.78 5.74 18 4.55z"
-                    />
-                  </svg>
-                </button>
-              )}
+              <SpeakerButton text={word.word} lang="en-US" />
             </div>
             <dl className="study-fields">
               <div className="study-field">
@@ -618,21 +593,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
             </div>
             <div className="vocab-word-jp vocab-word-with-speaker">
               {word.word}
-              {canSpeak && (
-                <button
-                  type="button"
-                  className="vocab-speaker-button"
-                  onClick={() => speak(word.word)}
-                  aria-label={`${word.word} 발음 듣기`}
-                >
-                  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                    <path
-                      fill="currentColor"
-                      d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-.77-3.29-2-4.24v8.47c1.23-.94 2-2.46 2-4.23zM18 4.55v1.63c2.89 1.16 5 3.98 5 7.32s-2.11 6.16-5 7.32v1.63c3.78-1.19 6.5-4.71 6.5-8.95S21.78 5.74 18 4.55z"
-                    />
-                  </svg>
-                </button>
-              )}
+              <SpeakerButton text={word.word} lang="en-US" />
             </div>
             <dl className="study-fields">
               <div className="study-field">
@@ -731,21 +692,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
         <div className="vocab-quiz-prompt">
           <span className="vocab-quiz-prompt-word vocab-word-with-speaker">
             {question.entry.word}
-            {canSpeak && (
-              <button
-                type="button"
-                className="vocab-speaker-button"
-                onClick={() => speak(question.entry.word)}
-                aria-label={`${question.entry.word} 발음 듣기`}
-              >
-                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-.77-3.29-2-4.24v8.47c1.23-.94 2-2.46 2-4.23zM18 4.55v1.63c2.89 1.16 5 3.98 5 7.32s-2.11 6.16-5 7.32v1.63c3.78-1.19 6.5-4.71 6.5-8.95S21.78 5.74 18 4.55z"
-                  />
-                </svg>
-              </button>
-            )}
+            <SpeakerButton text={question.entry.word} lang="en-US" size={16} />
           </span>
           <span className="vocab-quiz-prompt-reading">{question.entry.pos}</span>
         </div>

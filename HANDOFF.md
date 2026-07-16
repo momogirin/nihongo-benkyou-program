@@ -2,6 +2,19 @@
 
 다음 Claude 세션이 이어서 작업할 때 참고할 현재 상태/맥락 요약. 이 파일은 매번 최신 상태로 덮어써서 유지한다(누적 히스토리 아님 — 히스토리는 git log 참고).
 
+## 발음 듣기(TTS) 전 도메인 확장 (2026-07-16, 영어 다음 이어서 완료)
+
+영어 단어에 TTS를 넣은 직후 사용자가 "일본어에 그런거 없지않나?"라고 지적 → 맞는 지적이라 세 도메인(한자/일본어 단어/문법) 전부에 같은 패턴으로 확장. 저장되는 음성 파일이 없는 브라우저 내장 API라 데이터 용량 걱정은 없음(사용자가 "데이터양이 꽤 많지 않나" 물어봄 → 실시간 합성이라 데이터 추가 없다고 확인).
+
+- **공용화**: 기존에 `EnglishVocabPage.tsx`에 인라인으로 있던 `canSpeak`/`speak()`를 `src/lib/tts.ts`로, 반복되던 스피커 아이콘 버튼 마크업을 `src/components/SpeakerButton.tsx`(`text`/`lang`/`size` prop)로 뽑아 공용 컴포넌트화. `vocab-word-with-speaker`/`vocab-speaker-button` CSS는 원래 `VocabPage.css`(영어 전용인 줄 알고 넣었던 것)에 있었는데 전 도메인 공용이 되면서 모든 학습 화면이 import하는 `StudyPage.css`로 이동.
+- **어떤 텍스트를 읽어줄지 도메인별로 판단**:
+  - 일본어 단어(`VocabPage.tsx`/`WrongNotePage.tsx`의 VocabDetailCard): 한자 표기(`word`)가 아니라 `reading`(히라가나)을 읽음 — 한자 단독은 TTS가 어느 음/훈으로 읽을지 모호함.
+  - 한자(`StudyPage.tsx`/`KanjiListPage.tsx`/`WrongNotePage.tsx`의 KanjiDetailCard): `kunJp`(훈독) 우선, 없으면 `onJp`(음독)로 대체하는 `primaryReading()` 헬퍼를 `lib/kanjiUsage.ts`에 추가(`usedKanji`와 같은 파일, 같은 성격의 한자 유틸). `kunJp`/`onJp`가 "ひ・か"처럼 중점(・)으로 여러 읽기를 묶어 저장하므로 첫 번째 읽기만 뽑음.
+  - 문법(`GrammarPage.tsx`/`WrongNotePage.tsx`의 GrammarDetailCard): 표제어(`pattern`, 예: "～あっての")는 조사만 있어 단독 발음이 부자연스러워서 대신 `exampleJp`(완전한 예문 문장)를 읽음.
+  - 영어 단어: 기존 그대로 `word`를 en-US로 읽음(변경 없음).
+- **적용 범위**: 학습(플래시카드)/전체보기 상세/오답노트 상세 모달/뜻맞히기(또는 대응하는) 퀴즈 프롬프트 — 즉 표제어가 눈에 보이는 곳마다 스피커 버튼. **모의고사(`MockExamPage.tsx`)는 제외** — 세 도메인 문제가 `MockExamQuestion{domain, prompt}`로 이미 통일된 shape인데, `prompt` 필드가 도메인별로 다른 성격의 텍스트라(한자 글자/단어/문법 패턴) "무엇을 읽어줄지"가 도메인마다 다시 판단이 필요해서 범위 밖으로 미룸. 영어 단어의 품사 변환 빈칸형 퀴즈도 기존처럼 미적용 상태(문장이 빈칸으로 가려져 있어 설계 필요).
+- 미지원 브라우저에서는 `SpeakerButton`이 `canSpeak === false`일 때 `null`을 반환해 버튼 자체가 안 보임(조용히 실패하는 게 아니라 애초에 안 뜸).
+
 ## 홈 화면 재구성 (2026-07-16 완료)
 
 사용자가 "홈 화면이 난잡하다"고 지적 → 기존엔 복습(SRS due)/학습 진도/마무리못한 퀴즈(이어하기)/오답 재도전, 성격이 다른 네 종류 항목이 `home-entry-grid` 하나에 같은 카드 스타일·같은 균일 그리드로 뒤섞여 있었음(영어단어 도메인까지 연동되면서 최대 17개 카드까지 늘어날 수 있는 상태였음 — 우선순위가 전혀 안 보이는 문제). Artifact로 "긴급도 우선 그룹핑 + 섹션당 압축" 시안을 먼저 보여주고 반영:
@@ -11,15 +24,6 @@
 - **학습 통계**/**최근 기록**: 기존 레이아웃 그대로 유지, 섹션 제목 클래스만 `home-section-title`로 통일(대문자+letter-spacing, 기존 `home-stats-title`/`home-history-title`과 시각적으로 통일).
 - `HomePage.tsx`는 기존에 JSX로 직접 나열하던 카드들을 `priorityItems`/`progressItems`/`retryItems` 배열로 먼저 구성한 뒤 `.map()`으로 렌더링하는 구조로 바꿈(도메인 4개×항목 종류가 늘어날수록 JSX 반복이 심해지던 걸 정리). `home-entry-grid`/`home-entry-card` 클래스는 완전히 제거(대체됨).
 - 시안: https://claude.ai/code/artifact/be2579c8-873b-4a4f-ad1b-3c4d2315df2b
-
-## 발음 듣기(TTS) 구현 (2026-07-16 완료)
-
-영어(TOEIC) 2단계 후보 중 하나. "영어 파트 끝난 거 아니지 않냐"는 지적으로, 1단계(MVP)만 끝났고 2단계는 전부 보류 상태였던 걸 재확인 → 2단계 중 별도 데이터/서버 없이 브라우저 내장 기능만으로 바로 구현 가능한 이 항목부터 착수(나머지 네 항목은 데이터 소스가 없거나(주제 태그) 범위가 커서(콜로케이션/딕테이션/유의어 퀴즈) 여전히 미착수).
-
-- 브라우저 내장 Web Speech API(`SpeechSynthesisUtterance`, `lang: 'en-US'`) 사용 — 새 라이브러리 추가 없음, 서버/API 키 불필요.
-- `EnglishVocabPage.tsx`: `canSpeak`(`'speechSynthesis' in window`)로 미지원 브라우저에서 버튼 자체를 숨김, `speak(word)` 헬퍼가 `speechSynthesis.cancel()`로 이전 발음을 끊고 새로 재생(연타 시 겹쳐 읽지 않게). 학습(플래시카드)/전체보기 상세/뜻맞히기 퀴즈 프롬프트, 세 곳의 표제어 옆에 스피커 아이콘 버튼 추가.
-- `VocabPage.css`: `vocab-word-with-speaker`(단어 텍스트+버튼 flex 정렬)/`vocab-speaker-button`(원형 아이콘 버튼, SVG 스피커 아이콘 인라인 — 프로젝트 이모지 미사용 원칙) 추가. `vocab-word-jp`/`vocab-quiz-prompt-word`는 일본어 단어 화면과 공유하는 클래스라 안 건드리고 wrapper만 새로 추가(최소 diff).
-- 품사 변환 빈칸형 퀴즈에는 아직 미적용(문장에 단어가 빈칸으로 가려져 있어서 "무엇을 읽어줄지"가 애매함 — 표제어 word를 읽어줄지 정답 선택지 각각을 읽어줄지 설계 필요, 다음에 붙일 것).
 
 ## ⚠️ 배포 빌드 깨짐 발견 및 수정 (2026-07-16)
 

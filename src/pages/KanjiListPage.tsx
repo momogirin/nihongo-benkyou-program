@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
+import SpeakerButton from '../components/SpeakerButton'
 import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
+import { primaryReading } from '../lib/kanjiUsage'
 import './RadicalsPage.css'
 import './StudyPage.css'
 
@@ -62,7 +64,10 @@ export default function KanjiListPage() {
                 </span>
               )}
             </div>
-            <div className="study-kanji">{kanji.kanji}</div>
+            <div className="study-kanji vocab-word-with-speaker">
+              {kanji.kanji}
+              <SpeakerButton text={primaryReading(kanji)} lang="ja-JP" />
+            </div>
             <dl className="study-fields study-fields-core">
               <div className="study-field">
                 <dt>한국 훈음</dt>

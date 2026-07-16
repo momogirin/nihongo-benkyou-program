@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import SpeakerButton from '../components/SpeakerButton'
 import { kanjiList, type Kanji } from '../data/kanji'
 import { vocabList, type VocabWord } from '../data/vocab'
 import { grammarList, type GrammarPoint } from '../data/grammar'
 import { englishVocabList, type EnglishVocabWord } from '../data/englishVocab'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
-import { usedKanji } from '../lib/kanjiUsage'
+import { primaryReading, usedKanji } from '../lib/kanjiUsage'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import {
   getEnglishVocabWrongNotes,
@@ -443,7 +444,10 @@ function KanjiDetailCard({ kanji }: { kanji: Kanji }) {
           </span>
         )}
       </div>
-      <div className="study-kanji">{kanji.kanji}</div>
+      <div className="study-kanji vocab-word-with-speaker">
+        {kanji.kanji}
+        <SpeakerButton text={primaryReading(kanji)} lang="ja-JP" />
+      </div>
       <dl className={`study-fields ${content ? 'study-fields-core' : ''}`}>
         <div className="study-field">
           <dt>한국 훈음</dt>
@@ -490,7 +494,10 @@ function VocabDetailCard({ word }: { word: VocabWord }) {
       <div className="study-top">
         <span className={`study-level-badge study-level-badge-${word.level.toLowerCase()}`}>{word.level}</span>
       </div>
-      <div className="vocab-word-jp">{word.word}</div>
+      <div className="vocab-word-jp vocab-word-with-speaker">
+        {word.word}
+        <SpeakerButton text={word.reading} lang="ja-JP" />
+      </div>
       <div className="vocab-word-reading">{word.reading}</div>
       <dl className="study-fields">
         <div className="study-field">
@@ -540,7 +547,10 @@ function EnglishVocabDetailCard({ word }: { word: EnglishVocabWord }) {
         <span className={`study-level-badge study-level-badge-${word.level}`}>{word.level}</span>
         <span className="study-radical-chip">{word.pos}</span>
       </div>
-      <div className="vocab-word-jp">{word.word}</div>
+      <div className="vocab-word-jp vocab-word-with-speaker">
+        {word.word}
+        <SpeakerButton text={word.word} lang="en-US" />
+      </div>
       <dl className="study-fields">
         <div className="study-field">
           <dt>뜻</dt>
@@ -587,7 +597,10 @@ function GrammarDetailCard({ point }: { point: GrammarPoint }) {
         <div className="study-field">
           <dt>예문</dt>
           <dd>
-            {point.exampleJp}
+            <span className="grammar-example-with-speaker">
+              {point.exampleJp}
+              <SpeakerButton text={point.exampleJp} lang="ja-JP" size={15} />
+            </span>
             <br />
             <span className="grammar-example-kr">{point.exampleKr}</span>
           </dd>

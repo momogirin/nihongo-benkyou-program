@@ -18,36 +18,6 @@
   font-size: 13px;
 }
 
-/* 영어 단어 화면 전용 — 표제어 발음 듣기(TTS) 버튼. vocab-word-jp/
-   vocab-quiz-prompt-word는 일본어 단어 화면과 공유하는 블록 텍스트라
-   버튼을 나란히 놓기 위한 flex 정렬만 이 클래스로 추가 */
-.vocab-word-with-speaker {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.vocab-speaker-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  border: 1px solid var(--color-border);
-  border-radius: 50%;
-  background: var(--color-bg-elevated);
-  color: var(--color-primary-dark);
-  cursor: pointer;
-  flex: none;
-}
-
-.vocab-speaker-button:hover {
-  background: var(--color-selected-bg);
-  border-color: var(--color-primary-dark);
-}
-
 .vocab-quiz-button {
   display: block;
   width: 100%;
