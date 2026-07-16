@@ -121,3 +121,25 @@ export function generateEnglishVocabDerivationQuestionsFromIds(ids: string[]): E
     choices: shuffle(wordFamilyMembers(entry)),
   }))
 }
+
+// 딕테이션(듣고 쓰기) 퀴즈 — TTS로 단어 발음을 들려주고 철자를 입력받음.
+// 4지선다가 아니라 QuizRunner(한자)의 promptToAnswer 입력 모드와 같은
+// shape. 선택지가 없어 파생어 퀴즈처럼 별도 pool 필터가 필요 없음(모든
+// 단어가 대상) — 대신 화면 쪽에서 발음을 먼저 재생해야 하니 entry만 있으면 됨.
+export interface EnglishVocabDictationQuestion {
+  entry: EnglishVocabWord
+}
+
+export function englishVocabDictationLevelPool(level: EnglishLevel): EnglishVocabWord[] {
+  return englishVocabLevelPool(level)
+}
+
+export function generateEnglishVocabDictationQuestions(
+  level: EnglishLevel,
+  count: number,
+  order: 'random' | 'sequential' = 'random',
+): EnglishVocabDictationQuestion[] {
+  const pool = englishVocabLevelPool(level)
+  const ordered = order === 'random' ? shuffle(pool) : pool
+  return ordered.slice(0, Math.min(count, pool.length)).map((entry) => ({ entry }))
+}

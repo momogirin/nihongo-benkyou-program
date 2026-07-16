@@ -54,6 +54,26 @@
   font-size: 18px;
 }
 
+/* 딕테이션 퀴즈 — 단어 텍스트 대신 스피커 버튼만 크게 보여줌(정답을
+   미리 노출하면 안 되므로), 품사만 힌트로 표시 */
+.vocab-dictation-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 24px 0 32px;
+}
+
+.vocab-dictation-prompt .vocab-speaker-button {
+  width: 56px;
+  height: 56px;
+}
+
+.vocab-dictation-pos {
+  color: var(--color-ink-muted);
+  font-size: 14px;
+}
+
 .vocab-derivation-sentence {
   font-family: var(--font-display);
   font-size: 22px;

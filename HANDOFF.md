@@ -2,6 +2,16 @@
 
 다음 Claude 세션이 이어서 작업할 때 참고할 현재 상태/맥락 요약. 이 파일은 매번 최신 상태로 덮어써서 유지한다(누적 히스토리 아님 — 히스토리는 git log 참고).
 
+## 딕테이션(듣고 쓰기) 퀴즈 추가 (2026-07-16 완료)
+
+영어(TOEIC) 2단계(보류) 후보 중 발음 듣기(TTS) 다음으로 착수 — TTS 인프라가 이미 있어서 추가 데이터 없이 바로 구현 가능했음(주제 태그/콜로케이션/유의어 퀴즈는 여전히 미착수, 데이터 소스나 범위 문제로 보류 유지). 뜻맞히기/품사변환에 이은 **세 번째 퀴즈 종류**로, 4지선다가 아니라 발음을 듣고 철자를 텍스트로 입력하는 방식(한자 퀴즈 `QuizRunner.tsx`의 promptToAnswer 입력 모드와 같은 패턴).
+
+- `lib/englishVocabQuizGenerator.ts`: `EnglishVocabDictationQuestion{entry}` + `generateEnglishVocabDictationQuestions`/`englishVocabDictationLevelPool` 추가. 선택지가 없어 파생어 퀴즈처럼 별도 pool 필터가 필요 없음(급수 전체가 대상).
+- `storage.ts`: `EnglishVocabDictationInProgressQuiz` 타입 + CRUD 세트를 기존 두 퀴즈 타입과 나란히 추가(질문 shape이 달라 합칠 수 없음 — 이 레포 기존 컨벤션). `BackupPayload` 버전 13→14.
+- `EnglishVocabPage.tsx`: `quizType`에 `'dictation'` 추가, "퀴즈 종류" 선택기가 이제 3종. 문제 진입 시 자동으로 발음 재생(`speak()`) + 입력창 포커스 — 단어 텍스트는 안 보여주고 스피커 버튼(56px, 큼직하게)만 표시, 다시 듣고 싶으면 버튼 재클릭. 정답 비교는 `normalizeAnswer()`(공백 제거) + 소문자 변환으로 대소문자 무시(딕테이션 목적이 철자 암기지 대소문자 표기법 암기가 아니므로).
+- **재도전 범위**: 오답노트 "오답 재도전"은 기존에도 영어단어가 도메인 전체 뜻맞히기로만 재도전됐음(파생어 퀴즈 오답도 마찬가지 — `questionType` 유형별 재도전은 한자 퀴즈에만 있는 기능). 딕테이션도 같은 기존 제약을 그대로 따름 — `generateEnglishVocabDictationQuestionsFromIds`류는 지금 쓸 곳이 없어 만들지 않음(필요해지면 재도전 유형 확장과 함께 추가).
+- `VocabPage.css`: `vocab-dictation-prompt`/`vocab-dictation-pos` 추가.
+
 ## 발음 듣기(TTS) 전 도메인 확장 (2026-07-16, 영어 다음 이어서 완료)
 
 영어 단어에 TTS를 넣은 직후 사용자가 "일본어에 그런거 없지않나?"라고 지적 → 맞는 지적이라 세 도메인(한자/일본어 단어/문법) 전부에 같은 패턴으로 확장. 저장되는 음성 파일이 없는 브라우저 내장 API라 데이터 용량 걱정은 없음(사용자가 "데이터양이 꽤 많지 않나" 물어봄 → 실시간 합성이라 데이터 추가 없다고 확인).
