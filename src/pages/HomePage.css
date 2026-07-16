@@ -1,56 +1,160 @@
-.home-entry-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  text-align: left;
+.home-section {
+  margin-top: 28px;
 }
 
-.home-entry-card {
+.home-section:first-of-type {
+  margin-top: 0;
+}
+
+.home-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+/* 지금 할 일 — 복습(긴급)과 이어하기(재개)를 긴급도순 세로 리스트로.
+   왼쪽 색 띠로 성격 구분(urgent=긴급 복습, 기본=이어서 하기) */
+.home-priority-list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 20px;
+  gap: 10px;
+}
+
+.home-priority-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  padding: 16px 18px;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
+  border-left: 4px solid var(--color-primary-dark);
+  border-radius: var(--radius-lg);
   background: var(--color-bg-elevated);
   color: var(--color-ink);
   text-align: left;
   cursor: pointer;
 }
 
-.home-entry-card:hover {
+.home-priority-card:hover {
+  background: var(--color-selected-bg);
+}
+
+.home-priority-card.urgent {
+  border-left-color: var(--color-incorrect);
+}
+
+.home-priority-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.home-priority-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.home-priority-detail {
+  font-size: 13px;
+  color: var(--color-ink-muted);
+}
+
+.home-priority-chip {
+  flex: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.home-priority-card.urgent .home-priority-chip {
+  color: var(--color-incorrect);
+}
+
+/* 학습 진도 — 막대 그래프로 압축 표시 */
+.home-progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.home-progress-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.home-progress-card:hover {
   border-color: var(--color-primary-dark);
   background: var(--color-selected-bg);
 }
 
-.home-entry-card-review {
-  border-color: var(--color-primary-dark);
-}
-
-.home-entry-card-review .home-entry-title {
-  color: var(--color-primary-dark);
-}
-
-.home-entry-title {
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.home-entry-detail {
-  color: var(--color-ink-muted);
-  font-size: 14px;
-}
-
-.home-stats {
-  margin-top: 28px;
-}
-
-.home-stats-title {
-  font-size: 15px;
+.home-progress-title {
+  font-size: 13px;
   font-weight: 600;
   color: var(--color-ink-muted);
-  margin: 0 0 10px;
+}
+
+.home-progress-bar {
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--color-selected-bg);
+  overflow: hidden;
+}
+
+.home-progress-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--color-primary-dark);
+}
+
+.home-progress-detail {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 오답 재도전 — 알약형 칩 한 줄로 압축 */
+.home-retry-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.home-retry-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.home-retry-chip:hover {
+  border-color: var(--color-incorrect);
+  color: var(--color-incorrect);
+}
+
+.home-retry-count {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-incorrect);
 }
 
 .home-stats-grid {
@@ -90,17 +194,6 @@
   margin: 14px 2px 0;
   font-size: 14px;
   color: var(--color-incorrect);
-}
-
-.home-history {
-  margin-top: 28px;
-}
-
-.home-history-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--color-ink-muted);
-  margin: 0 0 10px;
 }
 
 .home-history-list {

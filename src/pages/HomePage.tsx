@@ -220,164 +220,197 @@ export default function HomePage({
     )
   }
 
+  // "지금 할 일" — 복습(SRS due, 긴급)과 이어하기(마무리 못한 퀴즈, 재개)를
+  // 긴급도순으로 한 리스트에 합침. 학습 진도/오답 재도전은 참고 정보라 아래
+  // 별도 섹션으로 분리(카드 그리드 하나에 성격이 다른 항목이 다 섞여있으면
+  // "지금 뭘 해야 하는지"가 안 보인다는 지적 반영, 2026-07-16)
+  const priorityItems = [
+    dueKanjiIds.length > 0 && {
+      key: 'due-kanji',
+      urgent: true,
+      title: '한자 복습',
+      detail: `${dueKanjiIds.length}자 복습할 시간이에요`,
+      onClick: () => onStartQuiz(kanjiIdsQuizConfig(dueKanjiIds)),
+    },
+    dueVocabIds.length > 0 && {
+      key: 'due-vocab',
+      urgent: true,
+      title: '단어 복습',
+      detail: `${dueVocabIds.length}개 복습할 시간이에요`,
+      onClick: () => onRetryVocab(dueVocabIds),
+    },
+    dueGrammarIds.length > 0 && {
+      key: 'due-grammar',
+      urgent: true,
+      title: '문법 복습',
+      detail: `${dueGrammarIds.length}개 복습할 시간이에요`,
+      onClick: () => onRetryGrammar(dueGrammarIds),
+    },
+    dueEnglishVocabIds.length > 0 && {
+      key: 'due-english',
+      urgent: true,
+      title: '영어단어 복습',
+      detail: `${dueEnglishVocabIds.length}개 복습할 시간이에요`,
+      onClick: () => onRetryEnglishVocab(dueEnglishVocabIds),
+    },
+    inProgress && {
+      key: 'resume-kanji',
+      urgent: false,
+      title: '마무리못한 한자 퀴즈',
+      detail: `${configSummary(inProgress.config)} · ${inProgress.index}/${inProgress.questions.length} 진행 중`,
+      onClick: onResumeQuiz,
+    },
+    vocabInProgress && {
+      key: 'resume-vocab',
+      urgent: false,
+      title: '마무리못한 단어 퀴즈',
+      detail: `${vocabInProgress.level} · ${vocabInProgress.index}/${vocabInProgress.questions.length} 진행 중`,
+      onClick: onGoToVocab,
+    },
+    grammarInProgress && {
+      key: 'resume-grammar',
+      urgent: false,
+      title: '마무리못한 문법 퀴즈',
+      detail: `${grammarInProgress.level} · ${grammarInProgress.index}/${grammarInProgress.questions.length} 진행 중`,
+      onClick: onGoToGrammar,
+    },
+    mockExamInProgress && {
+      key: 'resume-mockExam',
+      urgent: false,
+      title: '마무리못한 모의고사',
+      detail: `${mockExamInProgress.level} · ${mockExamInProgress.index}/${mockExamInProgress.questions.length} 진행 중`,
+      onClick: onGoToMockExam,
+    },
+    englishVocabInProgress && {
+      key: 'resume-english',
+      urgent: false,
+      title: '마무리못한 영어단어 퀴즈',
+      detail: `${englishVocabInProgress.level} · ${englishVocabInProgress.index}/${englishVocabInProgress.questions.length} 진행 중`,
+      onClick: onGoToEnglishVocab,
+    },
+  ].filter((item): item is Exclude<typeof item, false | null> => Boolean(item))
+
+  const progressItems = [
+    studyProgress && {
+      key: 'progress-kanji',
+      title: '한자 학습',
+      detail: `${studyProgress.level} · ${studyProgress.completed}/${studyProgress.total}자`,
+      rate: studyProgress.completed / studyProgress.total,
+      onClick: onGoToStudy,
+    },
+    vocabStudyProgress && {
+      key: 'progress-vocab',
+      title: '단어 학습',
+      detail: `${vocabStudyProgress.level} · ${vocabStudyProgress.completed}/${vocabStudyProgress.total}개`,
+      rate: vocabStudyProgress.completed / vocabStudyProgress.total,
+      onClick: onGoToVocab,
+    },
+    grammarStudyProgress && {
+      key: 'progress-grammar',
+      title: '문법 학습',
+      detail: `${grammarStudyProgress.level} · ${grammarStudyProgress.completed}/${grammarStudyProgress.total}개`,
+      rate: grammarStudyProgress.completed / grammarStudyProgress.total,
+      onClick: onGoToGrammar,
+    },
+    englishVocabStudyProgress && {
+      key: 'progress-english',
+      title: '영어단어 학습',
+      detail: `${englishVocabStudyProgress.level} · ${englishVocabStudyProgress.completed}/${englishVocabStudyProgress.total}개`,
+      rate: englishVocabStudyProgress.completed / englishVocabStudyProgress.total,
+      onClick: onGoToEnglishVocab,
+    },
+  ].filter((item): item is Exclude<typeof item, false | null> => Boolean(item))
+
+  const retryItems = [
+    wrongNoteIds.length > 0 && {
+      key: 'retry-kanji',
+      title: '한자',
+      count: wrongNoteIds.length,
+      unit: '자',
+      onClick: () => onStartQuiz(kanjiIdsQuizConfig(wrongNoteIds)),
+    },
+    vocabWrongIds.length > 0 && {
+      key: 'retry-vocab',
+      title: '단어',
+      count: vocabWrongIds.length,
+      unit: '개',
+      onClick: () => onRetryVocab(vocabWrongIds),
+    },
+    grammarWrongIds.length > 0 && {
+      key: 'retry-grammar',
+      title: '문법',
+      count: grammarWrongIds.length,
+      unit: '개',
+      onClick: () => onRetryGrammar(grammarWrongIds),
+    },
+    englishVocabWrongIds.length > 0 && {
+      key: 'retry-english',
+      title: '영어단어',
+      count: englishVocabWrongIds.length,
+      unit: '개',
+      onClick: () => onRetryEnglishVocab(englishVocabWrongIds),
+    },
+  ].filter((item): item is Exclude<typeof item, false | null> => Boolean(item))
+
   return (
     <div className="page">
       <h1>홈</h1>
 
-      {hasAnyEntry && (
-        <div className="home-entry-grid">
-          {dueKanjiIds.length > 0 && (
-            <button
-              type="button"
-              className="home-entry-card home-entry-card-review"
-              onClick={() => onStartQuiz(kanjiIdsQuizConfig(dueKanjiIds))}
-            >
-              <span className="home-entry-title">한자 복습</span>
-              <span className="home-entry-detail">{dueKanjiIds.length}자 복습할 시간이에요</span>
-            </button>
-          )}
-          {dueVocabIds.length > 0 && (
-            <button
-              type="button"
-              className="home-entry-card home-entry-card-review"
-              onClick={() => onRetryVocab(dueVocabIds)}
-            >
-              <span className="home-entry-title">단어 복습</span>
-              <span className="home-entry-detail">{dueVocabIds.length}개 복습할 시간이에요</span>
-            </button>
-          )}
-          {dueGrammarIds.length > 0 && (
-            <button
-              type="button"
-              className="home-entry-card home-entry-card-review"
-              onClick={() => onRetryGrammar(dueGrammarIds)}
-            >
-              <span className="home-entry-title">문법 복습</span>
-              <span className="home-entry-detail">{dueGrammarIds.length}개 복습할 시간이에요</span>
-            </button>
-          )}
-          {dueEnglishVocabIds.length > 0 && (
-            <button
-              type="button"
-              className="home-entry-card home-entry-card-review"
-              onClick={() => onRetryEnglishVocab(dueEnglishVocabIds)}
-            >
-              <span className="home-entry-title">영어단어 복습</span>
-              <span className="home-entry-detail">{dueEnglishVocabIds.length}개 복습할 시간이에요</span>
-            </button>
-          )}
-          {studyProgress && (
-            <button type="button" className="home-entry-card" onClick={onGoToStudy}>
-              <span className="home-entry-title">한자 학습 진도</span>
-              <span className="home-entry-detail">
-                {studyProgress.level} {studyProgress.completed}/{studyProgress.total}자 학습함
-              </span>
-            </button>
-          )}
-          {vocabStudyProgress && (
-            <button type="button" className="home-entry-card" onClick={onGoToVocab}>
-              <span className="home-entry-title">단어 학습 진도</span>
-              <span className="home-entry-detail">
-                {vocabStudyProgress.level} {vocabStudyProgress.completed}/{vocabStudyProgress.total}개 학습함
-              </span>
-            </button>
-          )}
-          {grammarStudyProgress && (
-            <button type="button" className="home-entry-card" onClick={onGoToGrammar}>
-              <span className="home-entry-title">문법 학습 진도</span>
-              <span className="home-entry-detail">
-                {grammarStudyProgress.level} {grammarStudyProgress.completed}/{grammarStudyProgress.total}개 학습함
-              </span>
-            </button>
-          )}
-          {englishVocabStudyProgress && (
-            <button type="button" className="home-entry-card" onClick={onGoToEnglishVocab}>
-              <span className="home-entry-title">영어단어 학습 진도</span>
-              <span className="home-entry-detail">
-                {englishVocabStudyProgress.level} {englishVocabStudyProgress.completed}/
-                {englishVocabStudyProgress.total}개 학습함
-              </span>
-            </button>
-          )}
-          {inProgress && (
-            <button type="button" className="home-entry-card" onClick={onResumeQuiz}>
-              <span className="home-entry-title">마무리못한 한자 퀴즈</span>
-              <span className="home-entry-detail">
-                {configSummary(inProgress.config)} · {inProgress.index}/{inProgress.questions.length} 진행 중
-              </span>
-            </button>
-          )}
-          {vocabInProgress && (
-            <button type="button" className="home-entry-card" onClick={onGoToVocab}>
-              <span className="home-entry-title">마무리못한 단어 퀴즈</span>
-              <span className="home-entry-detail">
-                {vocabInProgress.level} · {vocabInProgress.index}/{vocabInProgress.questions.length} 진행 중
-              </span>
-            </button>
-          )}
-          {grammarInProgress && (
-            <button type="button" className="home-entry-card" onClick={onGoToGrammar}>
-              <span className="home-entry-title">마무리못한 문법 퀴즈</span>
-              <span className="home-entry-detail">
-                {grammarInProgress.level} · {grammarInProgress.index}/{grammarInProgress.questions.length} 진행 중
-              </span>
-            </button>
-          )}
-          {mockExamInProgress && (
-            <button type="button" className="home-entry-card" onClick={onGoToMockExam}>
-              <span className="home-entry-title">마무리못한 모의고사</span>
-              <span className="home-entry-detail">
-                {mockExamInProgress.level} · {mockExamInProgress.index}/{mockExamInProgress.questions.length} 진행 중
-              </span>
-            </button>
-          )}
-          {englishVocabInProgress && (
-            <button type="button" className="home-entry-card" onClick={onGoToEnglishVocab}>
-              <span className="home-entry-title">마무리못한 영어단어 퀴즈</span>
-              <span className="home-entry-detail">
-                {englishVocabInProgress.level} · {englishVocabInProgress.index}/
-                {englishVocabInProgress.questions.length} 진행 중
-              </span>
-            </button>
-          )}
-          {wrongNoteIds.length > 0 && (
-            <button
-              type="button"
-              className="home-entry-card"
-              onClick={() => onStartQuiz(kanjiIdsQuizConfig(wrongNoteIds))}
-            >
-              <span className="home-entry-title">한자 오답 재도전</span>
-              <span className="home-entry-detail">{wrongNoteIds.length}자</span>
-            </button>
-          )}
-          {vocabWrongIds.length > 0 && (
-            <button type="button" className="home-entry-card" onClick={() => onRetryVocab(vocabWrongIds)}>
-              <span className="home-entry-title">단어 오답 재도전</span>
-              <span className="home-entry-detail">{vocabWrongIds.length}개</span>
-            </button>
-          )}
-          {grammarWrongIds.length > 0 && (
-            <button type="button" className="home-entry-card" onClick={() => onRetryGrammar(grammarWrongIds)}>
-              <span className="home-entry-title">문법 오답 재도전</span>
-              <span className="home-entry-detail">{grammarWrongIds.length}개</span>
-            </button>
-          )}
-          {englishVocabWrongIds.length > 0 && (
-            <button
-              type="button"
-              className="home-entry-card"
-              onClick={() => onRetryEnglishVocab(englishVocabWrongIds)}
-            >
-              <span className="home-entry-title">영어단어 오답 재도전</span>
-              <span className="home-entry-detail">{englishVocabWrongIds.length}개</span>
-            </button>
-          )}
-        </div>
+      {priorityItems.length > 0 && (
+        <section className="home-section">
+          <h2 className="home-section-title">지금 할 일</h2>
+          <div className="home-priority-list">
+            {priorityItems.map((item) => (
+              <button
+                key={item.key}
+                type="button"
+                className={`home-priority-card${item.urgent ? ' urgent' : ''}`}
+                onClick={item.onClick}
+              >
+                <span className="home-priority-body">
+                  <span className="home-priority-title">{item.title}</span>
+                  <span className="home-priority-detail">{item.detail}</span>
+                </span>
+                <span className="home-priority-chip">{item.urgent ? '시작' : '이어하기'} →</span>
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {progressItems.length > 0 && (
+        <section className="home-section">
+          <h2 className="home-section-title">학습 진도</h2>
+          <div className="home-progress-grid">
+            {progressItems.map((item) => (
+              <button key={item.key} type="button" className="home-progress-card" onClick={item.onClick}>
+                <span className="home-progress-title">{item.title}</span>
+                <span className="home-progress-bar">
+                  <span className="home-progress-bar-fill" style={{ width: `${Math.round(item.rate * 100)}%` }} />
+                </span>
+                <span className="home-progress-detail">{item.detail}</span>
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {retryItems.length > 0 && (
+        <section className="home-section">
+          <h2 className="home-section-title">오답 재도전</h2>
+          <div className="home-retry-row">
+            {retryItems.map((item) => (
+              <button key={item.key} type="button" className="home-retry-chip" onClick={item.onClick}>
+                {item.title} <span className="home-retry-count">{item.count}{item.unit}</span>
+              </button>
+            ))}
+          </div>
+        </section>
       )}
 
       {hasStats && (
-        <section className="home-stats">
-          <h2 className="home-stats-title">학습 통계</h2>
+        <section className="home-section">
+          <h2 className="home-section-title">학습 통계</h2>
           <div className="home-stats-grid">
             <div className="home-stats-card">
               <span className="home-stats-label">이번 주 복습</span>
@@ -423,8 +456,8 @@ export default function HomePage({
       )}
 
       {mergedHistory.length > 0 && (
-        <section className="home-history">
-          <h2 className="home-history-title">최근 기록</h2>
+        <section className="home-section">
+          <h2 className="home-section-title">최근 기록</h2>
           <ul className="home-history-list">
             {mergedHistory.map((entry) => (
               <li key={entry.id}>

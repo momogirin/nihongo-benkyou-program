@@ -2,6 +2,16 @@
 
 다음 Claude 세션이 이어서 작업할 때 참고할 현재 상태/맥락 요약. 이 파일은 매번 최신 상태로 덮어써서 유지한다(누적 히스토리 아님 — 히스토리는 git log 참고).
 
+## 홈 화면 재구성 (2026-07-16 완료)
+
+사용자가 "홈 화면이 난잡하다"고 지적 → 기존엔 복습(SRS due)/학습 진도/마무리못한 퀴즈(이어하기)/오답 재도전, 성격이 다른 네 종류 항목이 `home-entry-grid` 하나에 같은 카드 스타일·같은 균일 그리드로 뒤섞여 있었음(영어단어 도메인까지 연동되면서 최대 17개 카드까지 늘어날 수 있는 상태였음 — 우선순위가 전혀 안 보이는 문제). Artifact로 "긴급도 우선 그룹핑 + 섹션당 압축" 시안을 먼저 보여주고 반영:
+- **지금 할 일**: SRS 복습(긴급, 빨간 왼쪽 테두리)과 마무리못한 퀴즈(이어하기, 파란 테두리)를 긴급도순 세로 리스트 하나로 통합(`home-priority-list`/`home-priority-card`).
+- **학습 진도**: 카드+텍스트였던 걸 프로그레스 바 형태로 압축(`home-progress-grid`/`home-progress-card`).
+- **오답 재도전**: 도메인별 카드 3~4개였던 걸 알약형 칩 한 줄로 압축(`home-retry-row`/`home-retry-chip`).
+- **학습 통계**/**최근 기록**: 기존 레이아웃 그대로 유지, 섹션 제목 클래스만 `home-section-title`로 통일(대문자+letter-spacing, 기존 `home-stats-title`/`home-history-title`과 시각적으로 통일).
+- `HomePage.tsx`는 기존에 JSX로 직접 나열하던 카드들을 `priorityItems`/`progressItems`/`retryItems` 배열로 먼저 구성한 뒤 `.map()`으로 렌더링하는 구조로 바꿈(도메인 4개×항목 종류가 늘어날수록 JSX 반복이 심해지던 걸 정리). `home-entry-grid`/`home-entry-card` 클래스는 완전히 제거(대체됨).
+- 시안: https://claude.ai/code/artifact/be2579c8-873b-4a4f-ad1b-3c4d2315df2b
+
 ## ⚠️ 배포 빌드 깨짐 발견 및 수정 (2026-07-16)
 
 새 세션 시작 시 `npx tsc -b --noEmit`으로 베이스라인을 확인해보니, **`20e82e8`(2026-07-14 11:13, 오답노트 삭제 확인 모달을 커스텀으로 바꾼 커밋)부터 이번 세션 시작 시점(`eed89d5`)까지 GitHub Actions 배포가 16회 연속 실패 중**이었음(`gh` CLI가 없어서 GitHub REST API로 직접 확인: `curl https://api.github.com/repos/momogirin/nihongo-benkyou-program/actions/runs`). 즉 그 사이 커밋된 영어(TOEIC) 단어 기능(데이터 4,059단어+파생어 세트+화면) 전체가 **실제 라이브 사이트엔 하나도 반영 안 된 채로 하루 넘게 방치**돼 있었음. 원인 4가지, 전부 수정 완료:
