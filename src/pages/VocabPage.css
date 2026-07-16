@@ -69,6 +69,15 @@
   font-weight: 600;
 }
 
+/* 전체보기 상세 카드의 파생어 칩 — study-used-kanji-chip(span)과 같은 자리에 쓰이지만
+   클릭 시 그 파생어로 이동하는 버튼이라 배경 없는 기본 button 스타일을 지우고 맞춤 */
+.study-used-kanji-chip-button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .vocab-quiz-choices {
   display: flex;
   flex-direction: column;

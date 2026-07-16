@@ -30,6 +30,25 @@ import '../components/ResultScreen.css'
 import './StudyPage.css'
 import './VocabPage.css'
 
+// wordFamilyId가 같은 단어들을 표제어 순서(word 알파벳순)로 묶어 학습/상세 카드에
+// "파생어 세트"로 보여주기 위한 헬퍼 — 새 인덱스를 만들지 않고 매번 필터링(단어 수가
+// 4,059개라 렌더당 필터 비용이 무시할 만한 수준, kanjiUsage.ts의 usedKanji와 같은 패턴)
+function wordFamilyMembers(word: EnglishVocabWord): EnglishVocabWord[] {
+  if (!word.wordFamilyId) return []
+  return englishVocabList
+    .filter((w) => w.wordFamilyId === word.wordFamilyId && w.id !== word.id)
+    .sort((a, b) => a.word.localeCompare(b.word))
+}
+
+// 파생어 세트는 절반 이상이 급수 경계를 넘나들어서(예: core1 표제어의 파생형이
+// core3에 있는 경우) 전체보기 상세 화면에서 다른 파생어를 클릭하면 지금 보고 있는
+// 급수 밖의 단어일 수 있음 — 그 단어의 급수로 전환한 뒤 그 급수 목록 기준 인덱스로 이동
+function jumpToWord(target: EnglishVocabWord, setLevel: (l: EnglishLevel) => void, setBrowseIndex: (i: number) => void) {
+  setLevel(target.level)
+  const siblings = englishVocabList.filter((w) => w.level === target.level)
+  setBrowseIndex(siblings.findIndex((w) => w.id === target.id))
+}
+
 const ALL_LEVELS: EnglishLevel[] = ['core1', 'core2', 'core3', 'toeic']
 const LEVEL_LABELS: Record<EnglishLevel, string> = {
   core1: '필수 1000',
@@ -458,6 +477,28 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
                   <span className="vocab-example-kr">{word.exampleKr}</span>
                 </dd>
               </div>
+              {wordFamilyMembers(word).length > 0 && (
+                <div className="study-field">
+                  <dt>파생어</dt>
+                  <dd>
+                    <div className="study-used-kanji">
+                      {wordFamilyMembers(word).map((w) => (
+                        <button
+                          key={w.id}
+                          type="button"
+                          className="study-used-kanji-chip study-used-kanji-chip-button"
+                          onClick={() => jumpToWord(w, setLevel, setBrowseIndex)}
+                        >
+                          <span className="study-used-kanji-char">{w.word}</span>
+                          <span className="study-used-kanji-info">
+                            {LEVEL_LABELS[w.level]} · {w.derivationPos}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </dd>
+                </div>
+              )}
             </dl>
           </div>
         </div>
@@ -564,6 +605,23 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
                   <span className="vocab-example-kr">{word.exampleKr}</span>
                 </dd>
               </div>
+              {wordFamilyMembers(word).length > 0 && (
+                <div className="study-field">
+                  <dt>파생어</dt>
+                  <dd>
+                    <div className="study-used-kanji">
+                      {wordFamilyMembers(word).map((w) => (
+                        <span key={w.id} className="study-used-kanji-chip">
+                          <span className="study-used-kanji-char">{w.word}</span>
+                          <span className="study-used-kanji-info">
+                            {LEVEL_LABELS[w.level]} · {w.derivationPos}
+                          </span>
+                        </span>
+                      ))}
+                    </div>
+                  </dd>
+                </div>
+              )}
             </dl>
           </div>
         </div>
