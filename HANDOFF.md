@@ -12,6 +12,15 @@
 - `HomePage.tsx`는 기존에 JSX로 직접 나열하던 카드들을 `priorityItems`/`progressItems`/`retryItems` 배열로 먼저 구성한 뒤 `.map()`으로 렌더링하는 구조로 바꿈(도메인 4개×항목 종류가 늘어날수록 JSX 반복이 심해지던 걸 정리). `home-entry-grid`/`home-entry-card` 클래스는 완전히 제거(대체됨).
 - 시안: https://claude.ai/code/artifact/be2579c8-873b-4a4f-ad1b-3c4d2315df2b
 
+## 발음 듣기(TTS) 구현 (2026-07-16 완료)
+
+영어(TOEIC) 2단계 후보 중 하나. "영어 파트 끝난 거 아니지 않냐"는 지적으로, 1단계(MVP)만 끝났고 2단계는 전부 보류 상태였던 걸 재확인 → 2단계 중 별도 데이터/서버 없이 브라우저 내장 기능만으로 바로 구현 가능한 이 항목부터 착수(나머지 네 항목은 데이터 소스가 없거나(주제 태그) 범위가 커서(콜로케이션/딕테이션/유의어 퀴즈) 여전히 미착수).
+
+- 브라우저 내장 Web Speech API(`SpeechSynthesisUtterance`, `lang: 'en-US'`) 사용 — 새 라이브러리 추가 없음, 서버/API 키 불필요.
+- `EnglishVocabPage.tsx`: `canSpeak`(`'speechSynthesis' in window`)로 미지원 브라우저에서 버튼 자체를 숨김, `speak(word)` 헬퍼가 `speechSynthesis.cancel()`로 이전 발음을 끊고 새로 재생(연타 시 겹쳐 읽지 않게). 학습(플래시카드)/전체보기 상세/뜻맞히기 퀴즈 프롬프트, 세 곳의 표제어 옆에 스피커 아이콘 버튼 추가.
+- `VocabPage.css`: `vocab-word-with-speaker`(단어 텍스트+버튼 flex 정렬)/`vocab-speaker-button`(원형 아이콘 버튼, SVG 스피커 아이콘 인라인 — 프로젝트 이모지 미사용 원칙) 추가. `vocab-word-jp`/`vocab-quiz-prompt-word`는 일본어 단어 화면과 공유하는 클래스라 안 건드리고 wrapper만 새로 추가(최소 diff).
+- 품사 변환 빈칸형 퀴즈에는 아직 미적용(문장에 단어가 빈칸으로 가려져 있어서 "무엇을 읽어줄지"가 애매함 — 표제어 word를 읽어줄지 정답 선택지 각각을 읽어줄지 설계 필요, 다음에 붙일 것).
+
 ## ⚠️ 배포 빌드 깨짐 발견 및 수정 (2026-07-16)
 
 새 세션 시작 시 `npx tsc -b --noEmit`으로 베이스라인을 확인해보니, **`20e82e8`(2026-07-14 11:13, 오답노트 삭제 확인 모달을 커스텀으로 바꾼 커밋)부터 이번 세션 시작 시점(`eed89d5`)까지 GitHub Actions 배포가 16회 연속 실패 중**이었음(`gh` CLI가 없어서 GitHub REST API로 직접 확인: `curl https://api.github.com/repos/momogirin/nihongo-benkyou-program/actions/runs`). 즉 그 사이 커밋된 영어(TOEIC) 단어 기능(데이터 4,059단어+파생어 세트+화면) 전체가 **실제 라이브 사이트엔 하나도 반영 안 된 채로 하루 넘게 방치**돼 있었음. 원인 4가지, 전부 수정 완료:
@@ -48,7 +57,7 @@ JLPT 한자·단어·문법 학습 + (2026-07-14부터) 영어(TOEIC) 단어 학
 
 **기능 우선순위 (사용자 확인 완료, 2026-07-14)**: 토익 시험 구조상 단어는 두 갈래로 쓰임 — Part 5(문법/어휘 빈칸, 품사 파생어 구별이 핵심)와 Part 7/리스닝(문맥 속 유의어·비즈니스 어휘). 이를 반영해 아래 순서로 구현:
 - **1단계(MVP, 지금 만들 것)**: 기본 카드(단어/품사/뜻/예문) + 파생어 세트(명사/동사/형용사/부사 묶음, Part 5 대비) + 플래시카드 배치 학습(급수별, 나가기/이어하기 — 기존 패턴 재사용) + 퀴즈 2종(뜻 맞히기 + 품사 변환 빈칸형) + 오답노트/SRS 연동(기존 인프라 재사용).
-- **2단계(보류, 코어 검증 후)**: 주제 태그(사무/인사/여행/재무 등 — NGSL/TSL에 없어서 별도 소스나 수작업 태깅 필요), 콜로케이션/숙어, 딕테이션(듣고 쓰기), 문맥 속 유의어 퀴즈, 발음 듣기(TTS, Web Speech API로 무료 구현 가능).
+- **2단계(보류, 코어 검증 후)**: 주제 태그(사무/인사/여행/재무 등 — NGSL/TSL에 없어서 별도 소스나 수작업 태깅 필요), 콜로케이션/숙어, 딕테이션(듣고 쓰기), 문맥 속 유의어 퀴즈, ~~발음 듣기(TTS, Web Speech API로 무료 구현 가능)~~ **2026-07-16 완료** — 아래 "발음 듣기(TTS) 구현" 섹션 참고. 나머지 네 항목은 여전히 미착수.
 - 데이터 스키마 초안: 일본어 단어(`word/reading/meaningKr/meaningEn/exampleJp/exampleKr`)와 달리 `word`(단어)/`pos`(품사)/`meaningKr`(뜻)/`exampleEn`(예문)/`exampleKr`(예문 번역), `reading` 필드 불필요. 파생어 세트는 표제어 단위로 묶는 구조 필요(설계 시 확정).
 
 **진행 상태(2026-07-15 기준)**: **NGSL+TSL 데이터 콘텐츠 전량(4,059단어) 완성.** core1(1000)+core2(1000)+core3(809)+toeic(1250) 전부 `pos`/`meaningKr`/`exampleEn`/`exampleKr` 채워서 `data/english-vocab-*.json` → `scripts/build-english-vocab-data.mjs` → `src/data/englishVocab.ts`까지 반영됨. 상세 출처/설계 근거는 `data/raw/README.md`의 "영어(TOEIC) 단어 데이터" 섹션 참고.
