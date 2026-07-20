@@ -13646,7 +13646,9 @@
     "word": "危ぶむ",
     "reading": "あやぶむ",
     "meaningKr": "위태롭게 여기다",
-    "meaningEn": "to fear, to have misgivings, to be doubtful"
+    "meaningEn": "to fear, to have misgivings, to be doubtful",
+    "exampleJp": "専門家たちはこの計画の実現性を危ぶんでいる。",
+    "exampleKr": "전문가들은 이 계획의 실현 가능성을 위태롭게 여기고 있다."
   },
   {
     "id": "N1-1242",
@@ -13655,7 +13657,9 @@
     "word": "あやふや",
     "reading": "あやふや",
     "meaningKr": "애매함",
-    "meaningEn": "uncertain, vague, ambiguous"
+    "meaningEn": "uncertain, vague, ambiguous",
+    "exampleJp": "彼の説明はあやふやで、何を言いたいのかよく分からなかった。",
+    "exampleKr": "그의 설명은 애매해서 무엇을 말하고 싶은지 잘 알 수 없었다."
   },
   {
     "id": "N1-1243",
@@ -13664,7 +13668,9 @@
     "word": "過ち",
     "reading": "あやまち",
     "meaningKr": "과실(잘못)",
-    "meaningEn": "fault, error, indiscretion"
+    "meaningEn": "fault, error, indiscretion",
+    "exampleJp": "若い頃の過ちを認め、心から反省している。",
+    "exampleKr": "젊은 시절의 잘못을 인정하고 진심으로 반성하고 있다."
   },
   {
     "id": "N1-1244",
@@ -13673,7 +13679,9 @@
     "word": "誤る",
     "reading": "あやまる",
     "meaningKr": "실수하다(잘못하다)",
-    "meaningEn": "to make a mistake"
+    "meaningEn": "to make a mistake",
+    "exampleJp": "判断を誤ると、取り返しのつかない結果を招きかねない。",
+    "exampleKr": "판단을 잘못하면 돌이킬 수 없는 결과를 초래할 수도 있다."
   },
   {
     "id": "N1-1245",
@@ -13682,7 +13690,9 @@
     "word": "歩み",
     "reading": "あゆみ",
     "meaningKr": "걸음(발자취)",
-    "meaningEn": "step, progress, history"
+    "meaningEn": "step, progress, history",
+    "exampleJp": "この本には会社創業からの歩みが詳しく記されている。",
+    "exampleKr": "이 책에는 회사 창업 이후의 발자취가 자세히 기록되어 있다."
   },
   {
     "id": "N1-1246",
@@ -13691,7 +13701,9 @@
     "word": "歩む",
     "reading": "あゆむ",
     "meaningKr": "걷다",
-    "meaningEn": "to walk"
+    "meaningEn": "to walk",
+    "exampleJp": "彼女は自分の信念に従い、独自の道を歩んできた。",
+    "exampleKr": "그녀는 자신의 신념에 따라 독자적인 길을 걸어왔다."
   },
   {
     "id": "N1-1247",
@@ -13700,7 +13712,9 @@
     "word": "予め",
     "reading": "あらかじめ",
     "meaningKr": "미리",
-    "meaningEn": "in advance, previously"
+    "meaningEn": "in advance, previously",
+    "exampleJp": "会議に出席する場合は、予め資料に目を通しておいてください。",
+    "exampleKr": "회의에 참석할 경우에는 미리 자료를 훑어봐 두세요."
   },
   {
     "id": "N1-1248",
@@ -13709,7 +13723,9 @@
     "word": "荒らす",
     "reading": "あらす",
     "meaningKr": "황폐하게 하다(침입하다)",
-    "meaningEn": "to damage; to invade"
+    "meaningEn": "to damage; to invade",
+    "exampleJp": "野生動物が畑を荒らす被害が相次いでいる。",
+    "exampleKr": "야생동물이 밭을 헤집는 피해가 잇따르고 있다."
   },
   {
     "id": "N1-1249",
@@ -13718,7 +13734,9 @@
     "word": "争い",
     "reading": "あらそい",
     "meaningKr": "다툼",
-    "meaningEn": "dispute, quarrel, conflict"
+    "meaningEn": "dispute, quarrel, conflict",
+    "exampleJp": "領土をめぐる争いが長年にわたって続いている。",
+    "exampleKr": "영토를 둘러싼 다툼이 오랜 세월 계속되고 있다."
   },
   {
     "id": "N1-1250",
@@ -13727,7 +13745,9 @@
     "word": "改まる",
     "reading": "あらたまる",
     "meaningKr": "고쳐지다(격식차려지다)",
-    "meaningEn": "to be renewed; to be formal"
+    "meaningEn": "to be renewed; to be formal",
+    "exampleJp": "年が改まると、社内の規則も一部見直されるそうだ。",
+    "exampleKr": "새해가 되면 사내 규칙도 일부 재검토된다고 한다."
   },
   {
     "id": "N1-1251",
@@ -13736,7 +13756,9 @@
     "word": "荒っぽい",
     "reading": "あらっぽい",
     "meaningKr": "거칠다",
-    "meaningEn": "rough, rude"
+    "meaningEn": "rough, rude",
+    "exampleJp": "彼の荒っぽい運転にいつも冷や冷やさせられる。",
+    "exampleKr": "그의 거친 운전 때문에 항상 조마조마하다."
   },
   {
     "id": "N1-1252",
@@ -13745,7 +13767,9 @@
     "word": "アラブ",
     "reading": "アラブ",
     "meaningKr": "아랍",
-    "meaningEn": "Arab"
+    "meaningEn": "Arab",
+    "exampleJp": "アラブ諸国との貿易は年々拡大している。",
+    "exampleKr": "아랍 여러 나라와의 무역은 해마다 확대되고 있다."
   },
   {
     "id": "N1-1253",
@@ -13754,7 +13778,9 @@
     "word": "霰",
     "reading": "あられ",
     "meaningKr": "싸락눈(우박)",
-    "meaningEn": "hail (e.g., falling ice balls)"
+    "meaningEn": "hail (e.g., falling ice balls)",
+    "exampleJp": "屋根に霰が当たる音で目が覚めた。",
+    "exampleKr": "지붕에 싸락눈이 부딪히는 소리에 잠에서 깼다."
   },
   {
     "id": "N1-1254",
@@ -13763,7 +13789,9 @@
     "word": "有り様",
     "reading": "ありさま",
     "meaningKr": "모습(상태)",
-    "meaningEn": "state, condition"
+    "meaningEn": "state, condition",
+    "exampleJp": "災害後の街の有り様を見て、言葉を失った。",
+    "exampleKr": "재해 후 거리의 모습을 보고 말을 잃었다."
   },
   {
     "id": "N1-1255",
@@ -13772,7 +13800,9 @@
     "word": "ありのまま",
     "reading": "ありのまま",
     "meaningKr": "있는 그대로",
-    "meaningEn": "the truth, as it is, frankly"
+    "meaningEn": "the truth, as it is, frankly",
+    "exampleJp": "事件についてありのままを話してほしいと頼まれた。",
+    "exampleKr": "사건에 대해 있는 그대로 말해달라는 부탁을 받았다."
   },
   {
     "id": "N1-1256",
@@ -13781,7 +13811,9 @@
     "word": "ありふれる",
     "reading": "ありふれる",
     "meaningKr": "흔하다",
-    "meaningEn": "common, ordinary, routine"
+    "meaningEn": "common, ordinary, routine",
+    "exampleJp": "ありふれた日常の中にこそ幸せがあると彼女は言う。",
+    "exampleKr": "흔한 일상 속에야말로 행복이 있다고 그녀는 말한다."
   },
   {
     "id": "N1-1257",
@@ -13790,7 +13822,9 @@
     "word": "アルカリ",
     "reading": "アルカリ",
     "meaningKr": "알칼리",
-    "meaningEn": "alkali"
+    "meaningEn": "alkali",
+    "exampleJp": "この土壌はアルカリ性が強く、栽培には工夫が必要だ。",
+    "exampleKr": "이 토양은 알칼리성이 강해서 재배에는 궁리가 필요하다."
   },
   {
     "id": "N1-1258",
@@ -13799,7 +13833,9 @@
     "word": "アルミ",
     "reading": "アルミ",
     "meaningKr": "알루미늄",
-    "meaningEn": "aluminum (Al, aluminum)"
+    "meaningEn": "aluminum (Al, aluminum)",
+    "exampleJp": "軽量化のため、車体の一部にアルミが使われている。",
+    "exampleKr": "경량화를 위해 차체 일부에 알루미늄이 사용되고 있다."
   },
   {
     "id": "N1-1259",
@@ -13808,7 +13844,9 @@
     "word": "アワー",
     "reading": "アワー",
     "meaningKr": "아워(시간)",
-    "meaningEn": "hour"
+    "meaningEn": "hour",
+    "exampleJp": "ラッシュアワーの電車は毎日混雑を極める。",
+    "exampleKr": "러시아워의 전철은 매일 극심하게 붐빈다."
   },
   {
     "id": "N1-1260",
@@ -13817,7 +13855,9 @@
     "word": "合わす",
     "reading": "あわす",
     "meaningKr": "맞추다(합치다)",
-    "meaningEn": "to join together, to face, to unite"
+    "meaningEn": "to join together, to face, to unite",
+    "exampleJp": "みんなで力を合わして、この難局を乗り越えよう。",
+    "exampleKr": "모두 힘을 합쳐 이 어려운 국면을 극복하자."
   },
   {
     "id": "N1-1261",
@@ -13826,7 +13866,9 @@
     "word": "～合せ",
     "reading": "～あわせ",
     "meaningKr": "~합계(합쳐서)",
-    "meaningEn": "in all"
+    "meaningEn": "in all",
+    "exampleJp": "参加者は大人と子供合せて五十人になった。",
+    "exampleKr": "참가자는 어른과 아이 합쳐서 오십 명이 되었다."
   },
   {
     "id": "N1-1262",
@@ -13835,7 +13877,9 @@
     "word": "アンコール",
     "reading": "アンコール",
     "meaningKr": "앙코르",
-    "meaningEn": "encore"
+    "meaningEn": "encore",
+    "exampleJp": "会場からアンコールの拍手が鳴りやまなかった。",
+    "exampleKr": "공연장에서 앙코르 박수가 멈추지 않았다."
   },
   {
     "id": "N1-1263",
@@ -13844,7 +13888,9 @@
     "word": "暗殺",
     "reading": "あんさつ",
     "meaningKr": "암살",
-    "meaningEn": "assassination"
+    "meaningEn": "assassination",
+    "exampleJp": "その政治家は暗殺の危険を常に警戒していた。",
+    "exampleKr": "그 정치가는 암살의 위험을 항상 경계하고 있었다."
   },
   {
     "id": "N1-1264",
@@ -13853,7 +13899,9 @@
     "word": "暗算",
     "reading": "あんざん",
     "meaningKr": "암산",
-    "meaningEn": "mental arithmetic"
+    "meaningEn": "mental arithmetic",
+    "exampleJp": "彼女は複雑な計算も暗算でこなしてしまう。",
+    "exampleKr": "그녀는 복잡한 계산도 암산으로 해내 버린다."
   },
   {
     "id": "N1-1265",
@@ -13862,7 +13910,9 @@
     "word": "暗示",
     "reading": "あんじ",
     "meaningKr": "암시",
-    "meaningEn": "hint, suggestion"
+    "meaningEn": "hint, suggestion",
+    "exampleJp": "小説の最後の一文が、意外な結末を暗示している。",
+    "exampleKr": "소설의 마지막 한 문장이 의외의 결말을 암시하고 있다."
   },
   {
     "id": "N1-1266",
@@ -13871,7 +13921,9 @@
     "word": "案じる",
     "reading": "あんじる",
     "meaningKr": "걱정하다",
-    "meaningEn": "to be anxious, to ponder"
+    "meaningEn": "to be anxious, to ponder",
+    "exampleJp": "母は一人暮らしを始めた息子の身を案じている。",
+    "exampleKr": "어머니는 자취를 시작한 아들의 안위를 걱정하고 있다."
   },
   {
     "id": "N1-1267",
@@ -13880,7 +13932,9 @@
     "word": "安静",
     "reading": "あんせい",
     "meaningKr": "안정(휴식)",
-    "meaningEn": "rest"
+    "meaningEn": "rest",
+    "exampleJp": "医師にしばらく安静にするよう指示された。",
+    "exampleKr": "의사로부터 당분간 안정을 취하라는 지시를 받았다."
   },
   {
     "id": "N1-1268",
@@ -13889,7 +13943,9 @@
     "word": "案の定",
     "reading": "あんのじょう",
     "meaningKr": "아니나 다를까",
-    "meaningEn": "sure enough, as usual"
+    "meaningEn": "sure enough, as usual",
+    "exampleJp": "案の定、彼は約束の時間に遅れてやって来た。",
+    "exampleKr": "아니나 다를까, 그는 약속 시간에 늦게 나타났다."
   },
   {
     "id": "N1-1269",
@@ -13898,7 +13954,9 @@
     "word": "いい加減",
     "reading": "いいかげん",
     "meaningKr": "적당함(무책임함)",
-    "meaningEn": "random, irresponsible"
+    "meaningEn": "random, irresponsible",
+    "exampleJp": "彼のいい加減な仕事ぶりに上司も呆れている。",
+    "exampleKr": "그의 무책임한 업무 태도에 상사도 어이없어하고 있다."
   },
   {
     "id": "N1-1270",
@@ -13907,7 +13965,9 @@
     "word": "言い訳",
     "reading": "いいわけ",
     "meaningKr": "변명",
-    "meaningEn": "excuse, explanation"
+    "meaningEn": "excuse, explanation",
+    "exampleJp": "遅刻の言い訳を並べる前に、まず謝るべきだ。",
+    "exampleKr": "지각에 대한 변명을 늘어놓기 전에 먼저 사과해야 한다."
   },
   {
     "id": "N1-1271",
@@ -13916,7 +13976,9 @@
     "word": "イェス",
     "reading": "イェス",
     "meaningKr": "예스(긍정)",
-    "meaningEn": "yes; Jesus"
+    "meaningEn": "yes; Jesus",
+    "exampleJp": "交渉の場でイェスかノーかをはっきり答えるよう求められた。",
+    "exampleKr": "협상 자리에서 예스인지 노인지 분명히 답하라는 요구를 받았다."
   },
   {
     "id": "N1-1272",
@@ -13925,7 +13987,9 @@
     "word": "家出",
     "reading": "いえで",
     "meaningKr": "가출",
-    "meaningEn": "running away from home"
+    "meaningEn": "running away from home",
+    "exampleJp": "少年は家出をして、三日後に無事保護された。",
+    "exampleKr": "소년은 가출을 했다가 사흘 후 무사히 보호되었다."
   },
   {
     "id": "N1-1273",
@@ -13934,7 +13998,9 @@
     "word": "生かす",
     "reading": "いかす",
     "meaningKr": "살리다(활용하다)",
-    "meaningEn": "to keep something alive; to make use of"
+    "meaningEn": "to keep something alive; to make use of",
+    "exampleJp": "これまでの経験を生かして、新しい事業に挑戦したい。",
+    "exampleKr": "지금까지의 경험을 살려 새로운 사업에 도전하고 싶다."
   },
   {
     "id": "N1-1274",
@@ -13943,7 +14009,9 @@
     "word": "いかに",
     "reading": "いかに",
     "meaningKr": "어떻게",
-    "meaningEn": "how, in what way"
+    "meaningEn": "how, in what way",
+    "exampleJp": "この困難な状況をいかに乗り越えるかが問われている。",
+    "exampleKr": "이 어려운 상황을 어떻게 극복할 것인가가 문제되고 있다."
   },
   {
     "id": "N1-1275",
@@ -13952,7 +14020,9 @@
     "word": "いかにも",
     "reading": "いかにも",
     "meaningKr": "정말로(과연)",
-    "meaningEn": "truly (same as 実に (じつに))"
+    "meaningEn": "truly (same as 実に (じつに))",
+    "exampleJp": "彼はいかにも自信ありげな態度で発表を始めた。",
+    "exampleKr": "그는 정말로 자신 있어 보이는 태도로 발표를 시작했다."
   },
   {
     "id": "N1-1276",
@@ -13961,7 +14031,9 @@
     "word": "異議",
     "reading": "いぎ",
     "meaningKr": "이의",
-    "meaningEn": "objection, dissent, protest"
+    "meaningEn": "objection, dissent, protest",
+    "exampleJp": "この決定に異議のある方は、期限内にお申し出ください。",
+    "exampleKr": "이 결정에 이의가 있으신 분은 기한 내에 신청해 주세요."
   },
   {
     "id": "N1-1277",
@@ -13970,7 +14042,9 @@
     "word": "生き甲斐",
     "reading": "いきがい",
     "meaningKr": "삶의 보람",
-    "meaningEn": "something one lives for, very important"
+    "meaningEn": "something one lives for, very important",
+    "exampleJp": "彼女にとって、絵を描くことが生き甲斐になっている。",
+    "exampleKr": "그녀에게 그림을 그리는 것이 삶의 보람이 되어 있다."
   },
   {
     "id": "N1-1278",
@@ -13979,7 +14053,9 @@
     "word": "行き違い",
     "reading": "いきちがい",
     "meaningKr": "엇갈림(오해)",
-    "meaningEn": "misunderstanding, disagreement"
+    "meaningEn": "misunderstanding, disagreement",
+    "exampleJp": "連絡の行き違いから、二人は空港ですれ違ってしまった。",
+    "exampleKr": "연락의 엇갈림으로 두 사람은 공항에서 서로 지나쳐 버렸다."
   },
   {
     "id": "N1-1279",
@@ -13988,7 +14064,9 @@
     "word": "意気込む",
     "reading": "いきごむ",
     "meaningKr": "의욕을 보이다",
-    "meaningEn": "to be enthusiastic about"
+    "meaningEn": "to be enthusiastic about",
+    "exampleJp": "新入社員たちは初日から意気込んで仕事に取り組んでいた。",
+    "exampleKr": "신입 사원들은 첫날부터 의욕을 보이며 일에 임하고 있었다."
   },
   {
     "id": "N1-1280",
@@ -13997,7 +14075,9 @@
     "word": "育成",
     "reading": "いくせい",
     "meaningKr": "육성",
-    "meaningEn": "rearing, training, cultivation"
+    "meaningEn": "rearing, training, cultivation",
+    "exampleJp": "若手選手の育成に力を入れているチームだ。",
+    "exampleKr": "젊은 선수 육성에 힘을 쏟고 있는 팀이다."
   },
   {
     "id": "N1-1281",
@@ -14006,7 +14086,9 @@
     "word": "幾多",
     "reading": "いくた",
     "meaningKr": "수많은",
-    "meaningEn": "many, numerous"
+    "meaningEn": "many, numerous",
+    "exampleJp": "この技術は幾多の試行錯誤を経て完成した。",
+    "exampleKr": "이 기술은 수많은 시행착오를 거쳐 완성되었다."
   },
   {
     "id": "N1-1282",
@@ -14015,7 +14097,9 @@
     "word": "(花を〜) 生ける, 活ける",
     "reading": "(はなを～) いける",
     "meaningKr": "(꽃을)꽂다",
-    "meaningEn": "to arrange (flowers)"
+    "meaningEn": "to arrange (flowers)",
+    "exampleJp": "祖母は毎朝、庭で摘んだ花を花瓶に生ける。",
+    "exampleKr": "할머니는 매일 아침 정원에서 꺾은 꽃을 꽃병에 꽂는다."
   },
   {
     "id": "N1-1283",
@@ -14024,7 +14108,9 @@
     "word": "異見",
     "reading": "いけん",
     "meaningKr": "이견(다른 의견)",
-    "meaningEn": "different opinion, objection"
+    "meaningEn": "different opinion, objection",
+    "exampleJp": "会議では役員たちの間で異見が対立した。",
+    "exampleKr": "회의에서는 임원들 사이에 이견이 대립했다."
   },
   {
     "id": "N1-1284",
@@ -14033,7 +14119,9 @@
     "word": "意向",
     "reading": "いこう",
     "meaningKr": "의향",
-    "meaningEn": "intention, idea, inclination"
+    "meaningEn": "intention, idea, inclination",
+    "exampleJp": "取引先の意向を確認してから契約を進めることにした。",
+    "exampleKr": "거래처의 의향을 확인한 후 계약을 진행하기로 했다."
   },
   {
     "id": "N1-1285",
@@ -14042,7 +14130,9 @@
     "word": "移行",
     "reading": "いこう",
     "meaningKr": "이행(옮겨감)",
-    "meaningEn": "switching over to"
+    "meaningEn": "switching over to",
+    "exampleJp": "新システムへの移行に伴い、一時的にサービスを停止いたします。",
+    "exampleKr": "새 시스템으로의 이행에 따라 일시적으로 서비스를 중단합니다."
   },
   {
     "id": "N1-1286",
@@ -14051,7 +14141,9 @@
     "word": "いざ",
     "reading": "いざ",
     "meaningKr": "막상(자, 이제)",
-    "meaningEn": "now, come (now), crucial moment"
+    "meaningEn": "now, come (now), crucial moment",
+    "exampleJp": "いざ本番となると、緊張で手が震えてしまった。",
+    "exampleKr": "막상 본번이 되니 긴장으로 손이 떨려 버렸다."
   },
   {
     "id": "N1-1287",
@@ -14060,7 +14152,9 @@
     "word": "移住",
     "reading": "いじゅう",
     "meaningKr": "이주",
-    "meaningEn": "migration, immigration"
+    "meaningEn": "migration, immigration",
+    "exampleJp": "彼らは定年後、田舎への移住を決意した。",
+    "exampleKr": "그들은 정년 후 시골로의 이주를 결심했다."
   },
   {
     "id": "N1-1288",
@@ -14069,7 +14163,9 @@
     "word": "衣装",
     "reading": "いしょう",
     "meaningKr": "의상",
-    "meaningEn": "clothing, costume, outfit"
+    "meaningEn": "clothing, costume, outfit",
+    "exampleJp": "舞台衣装のデザインは有名なデザイナーが手掛けた。",
+    "exampleKr": "무대 의상 디자인은 유명한 디자이너가 맡았다."
   },
   {
     "id": "N1-1289",
@@ -14078,7 +14174,9 @@
     "word": "いじる",
     "reading": "いじる",
     "meaningKr": "만지작거리다",
-    "meaningEn": "to touch, to tamper with"
+    "meaningEn": "to touch, to tamper with",
+    "exampleJp": "彼は緊張すると、無意識にペンをいじる癖がある。",
+    "exampleKr": "그는 긴장하면 무의식적으로 펜을 만지작거리는 버릇이 있다."
   },
   {
     "id": "N1-1290",
@@ -14087,7 +14185,9 @@
     "word": "異性",
     "reading": "いせい",
     "meaningKr": "이성(반대 성별)",
-    "meaningEn": "the opposite sex"
+    "meaningEn": "the opposite sex",
+    "exampleJp": "思春期になると、異性への興味が芽生え始める。",
+    "exampleKr": "사춘기가 되면 이성에 대한 관심이 싹트기 시작한다."
   },
   {
     "id": "N1-1291",
@@ -14096,7 +14196,9 @@
     "word": "遺跡",
     "reading": "いせき",
     "meaningKr": "유적",
-    "meaningEn": "historic ruins"
+    "meaningEn": "historic ruins",
+    "exampleJp": "この地域には古代文明の遺跡が数多く残されている。",
+    "exampleKr": "이 지역에는 고대 문명의 유적이 다수 남아 있다."
   },
   {
     "id": "N1-1292",
@@ -14105,7 +14207,9 @@
     "word": "依存",
     "reading": "いぞん",
     "meaningKr": "의존",
-    "meaningEn": "dependence, dependent, reliance"
+    "meaningEn": "dependence, dependent, reliance",
+    "exampleJp": "輸入に依存している資源の価格変動が経済を左右する。",
+    "exampleKr": "수입에 의존하는 자원의 가격 변동이 경제를 좌우한다."
   },
   {
     "id": "N1-1293",
@@ -14114,7 +14218,9 @@
     "word": "委託",
     "reading": "いたく",
     "meaningKr": "위탁",
-    "meaningEn": "consign (goods (for sale) to a firm), entrust"
+    "meaningEn": "consign (goods (for sale) to a firm), entrust",
+    "exampleJp": "業務の一部を外部の企業に委託することにした。",
+    "exampleKr": "업무의 일부를 외부 기업에 위탁하기로 했다."
   },
   {
     "id": "N1-1294",
@@ -14123,7 +14229,9 @@
     "word": "いたって",
     "reading": "いたって",
     "meaningKr": "매우",
-    "meaningEn": "very much, exceedingly, extremely"
+    "meaningEn": "very much, exceedingly, extremely",
+    "exampleJp": "手術後の経過はいたって順調だと医師に言われた。",
+    "exampleKr": "수술 후 경과는 매우 순조롭다고 의사에게 들었다."
   },
   {
     "id": "N1-1295",
@@ -14132,7 +14240,9 @@
     "word": "出世",
     "reading": "しゅっせ",
     "meaningKr": "출세",
-    "meaningEn": "promotion, successful career, eminence"
+    "meaningEn": "promotion, successful career, eminence",
+    "exampleJp": "彼は同期の中でも出世が早いと評判だ。",
+    "exampleKr": "그는 입사 동기 중에서도 출세가 빠르다고 평판이 나 있다."
   },
   {
     "id": "N1-1296",
@@ -14141,7 +14251,9 @@
     "word": "出題",
     "reading": "しゅつだい",
     "meaningKr": "출제",
-    "meaningEn": "proposing a question"
+    "meaningEn": "proposing a question",
+    "exampleJp": "今年の試験は例年より出題傾向が変わった。",
+    "exampleKr": "올해 시험은 예년보다 출제 경향이 바뀌었다."
   },
   {
     "id": "N1-1297",
@@ -14150,7 +14262,9 @@
     "word": "出動",
     "reading": "しゅつどう",
     "meaningKr": "출동",
-    "meaningEn": "mobilization, action"
+    "meaningEn": "mobilization, action",
+    "exampleJp": "火災の通報を受け、消防車が現場に出動した。",
+    "exampleKr": "화재 신고를 받고 소방차가 현장에 출동했다."
   },
   {
     "id": "N1-1298",
@@ -14159,7 +14273,9 @@
     "word": "出費",
     "reading": "しゅっぴ",
     "meaningKr": "출비(지출)",
-    "meaningEn": "expenses, disbursements"
+    "meaningEn": "expenses, disbursements",
+    "exampleJp": "引っ越しには思ったより多くの出費がかさんだ。",
+    "exampleKr": "이사에는 생각보다 많은 지출이 늘어났다."
   },
   {
     "id": "N1-1299",
@@ -14168,7 +14284,9 @@
     "word": "出品",
     "reading": "しゅっぴん",
     "meaningKr": "출품",
-    "meaningEn": "exhibit, display"
+    "meaningEn": "exhibit, display",
+    "exampleJp": "彼女の作品が美術展に出品されることになった。",
+    "exampleKr": "그녀의 작품이 미술전에 출품되게 되었다."
   },
   {
     "id": "N1-1300",
@@ -14177,7 +14295,9 @@
     "word": "主導",
     "reading": "しゅどう",
     "meaningKr": "주도",
-    "meaningEn": "main leadership"
+    "meaningEn": "main leadership",
+    "exampleJp": "政府主導のプロジェクトとして地域再生が進められている。",
+    "exampleKr": "정부 주도의 프로젝트로 지역 재생이 추진되고 있다."
   },
   {
     "id": "N1-1301",
@@ -14186,7 +14306,9 @@
     "word": "主任",
     "reading": "しゅにん",
     "meaningKr": "주임",
-    "meaningEn": "person in charge, responsible official"
+    "meaningEn": "person in charge, responsible official",
+    "exampleJp": "彼女は入社五年目で主任に昇格した。",
+    "exampleKr": "그녀는 입사 오 년 만에 주임으로 승격했다."
   },
   {
     "id": "N1-1302",
@@ -14195,7 +14317,9 @@
     "word": "首脳",
     "reading": "しゅのう",
     "meaningKr": "수뇌",
-    "meaningEn": "head, leader"
+    "meaningEn": "head, leader",
+    "exampleJp": "両国の首脳が会談し、経済協力について話し合った。",
+    "exampleKr": "양국 수뇌가 회담하여 경제 협력에 대해 논의했다."
   },
   {
     "id": "N1-1303",
@@ -14204,7 +14328,9 @@
     "word": "守備",
     "reading": "しゅび",
     "meaningKr": "수비",
-    "meaningEn": "defense"
+    "meaningEn": "defense",
+    "exampleJp": "このチームは攻撃力に比べて守備が弱いと言われている。",
+    "exampleKr": "이 팀은 공격력에 비해 수비가 약하다는 평가를 받고 있다."
   },
   {
     "id": "N1-1304",
@@ -14213,7 +14339,9 @@
     "word": "手法",
     "reading": "しゅほう",
     "meaningKr": "수법(기법)",
-    "meaningEn": "technique"
+    "meaningEn": "technique",
+    "exampleJp": "この画家は独特な手法で光の表現を追求している。",
+    "exampleKr": "이 화가는 독특한 기법으로 빛의 표현을 추구하고 있다."
   },
   {
     "id": "N1-1305",
@@ -14222,7 +14350,9 @@
     "word": "樹木",
     "reading": "じゅもく",
     "meaningKr": "수목",
-    "meaningEn": "trees and shrubs, arbor"
+    "meaningEn": "trees and shrubs, arbor",
+    "exampleJp": "公園には様々な種類の樹木が植えられている。",
+    "exampleKr": "공원에는 다양한 종류의 수목이 심어져 있다."
   },
   {
     "id": "N1-1306",
@@ -14231,7 +14361,9 @@
     "word": "樹立",
     "reading": "じゅりつ",
     "meaningKr": "수립",
-    "meaningEn": "establish, create"
+    "meaningEn": "establish, create",
+    "exampleJp": "選手は世界新記録を樹立し、大きな喝采を浴びた。",
+    "exampleKr": "선수는 세계 신기록을 수립하여 큰 갈채를 받았다."
   },
   {
     "id": "N1-1307",
@@ -14240,7 +14372,9 @@
     "word": "準急",
     "reading": "じゅんきゅう",
     "meaningKr": "준급행",
-    "meaningEn": "local express (train, slower than an express)"
+    "meaningEn": "local express (train, slower than an express)",
+    "exampleJp": "この駅には準急しか停まらないので、乗り換えが必要だ。",
+    "exampleKr": "이 역에는 준급행만 정차하므로 환승이 필요하다."
   },
   {
     "id": "N1-1308",
@@ -14249,7 +14383,9 @@
     "word": "準じる",
     "reading": "じゅんじる",
     "meaningKr": "준하다(따르다)",
-    "meaningEn": "to follow, to conform, to apply to"
+    "meaningEn": "to follow, to conform, to apply to",
+    "exampleJp": "契約社員の待遇は正社員に準じるものとする。",
+    "exampleKr": "계약직 직원의 대우는 정규직에 준하는 것으로 한다."
   },
   {
     "id": "N1-1309",
@@ -14258,7 +14394,9 @@
     "word": "～署",
     "reading": "～しょ",
     "meaningKr": "~서(관공서)",
-    "meaningEn": "department"
+    "meaningEn": "department",
+    "exampleJp": "落とし物を届けるため、最寄りの警察署へ向かった。",
+    "exampleKr": "분실물을 신고하기 위해 가까운 경찰서로 향했다."
   },
   {
     "id": "N1-1310",
@@ -14267,7 +14405,9 @@
     "word": "～症",
     "reading": "～しょう",
     "meaningKr": "~증(질환)",
-    "meaningEn": "disease"
+    "meaningEn": "disease",
+    "exampleJp": "花粉症の症状が今年は特にひどいと感じる。",
+    "exampleKr": "화분증(꽃가루 알레르기) 증상이 올해는 특히 심하다고 느낀다."
   },
   {
     "id": "N1-1311",
@@ -14276,7 +14416,9 @@
     "word": "～証",
     "reading": "～しょう",
     "meaningKr": "~증(증명서)",
-    "meaningEn": "proof, certificate"
+    "meaningEn": "proof, certificate",
+    "exampleJp": "海外旅行に行くには、パスポートの他に保険証も必要だ。",
+    "exampleKr": "해외여행을 가려면 여권 외에 보험증도 필요하다."
   },
   {
     "id": "N1-1312",
@@ -14285,7 +14427,9 @@
     "word": "～嬢",
     "reading": "～じょう",
     "meaningKr": "~양(젊은 여성)",
-    "meaningEn": "young woman"
+    "meaningEn": "young woman",
+    "exampleJp": "受付嬢が丁寧な言葉遣いで来客を案内していた。",
+    "exampleKr": "접수 담당 여성이 정중한 말투로 손님을 안내하고 있었다."
   },
   {
     "id": "N1-1313",
@@ -14294,7 +14438,9 @@
     "word": "上位",
     "reading": "じょうい",
     "meaningKr": "상위",
-    "meaningEn": "superior, higher order"
+    "meaningEn": "superior, higher order",
+    "exampleJp": "彼はテストでいつも学年上位の成績を収めている。",
+    "exampleKr": "그는 시험에서 항상 학년 상위 성적을 거두고 있다."
   },
   {
     "id": "N1-1314",
@@ -14303,7 +14449,9 @@
     "word": "上演",
     "reading": "じょうえん",
     "meaningKr": "상연",
-    "meaningEn": "art performance"
+    "meaningEn": "art performance",
+    "exampleJp": "この劇場では来月から新作の舞台が上演される予定だ。",
+    "exampleKr": "이 극장에서는 다음 달부터 신작 무대가 상연될 예정이다."
   },
   {
     "id": "N1-1315",
@@ -14312,7 +14460,9 @@
     "word": "城下",
     "reading": "じょうか",
     "meaningKr": "성 아래(성곽 마을)",
-    "meaningEn": "land near the castle"
+    "meaningEn": "land near the castle",
+    "exampleJp": "この町は江戸時代の城下として栄えた歴史を持つ。",
+    "exampleKr": "이 마을은 에도 시대의 성곽 마을로 번영한 역사를 가지고 있다."
   },
   {
     "id": "N1-1316",
@@ -14321,7 +14471,9 @@
     "word": "消去",
     "reading": "しょうきょ",
     "meaningKr": "소거",
-    "meaningEn": "elimination, erasing"
+    "meaningEn": "elimination, erasing",
+    "exampleJp": "不要になったファイルはすべて消去しておいた。",
+    "exampleKr": "필요 없어진 파일은 모두 삭제해 두었다."
   },
   {
     "id": "N1-1317",
@@ -14330,7 +14482,9 @@
     "word": "上空",
     "reading": "じょうくう",
     "meaningKr": "상공",
-    "meaningEn": "sky, high-altitude sky, upper air"
+    "meaningEn": "sky, high-altitude sky, upper air",
+    "exampleJp": "都市の上空を旋回するヘリコプターの音が聞こえた。",
+    "exampleKr": "도시 상공을 선회하는 헬리콥터 소리가 들렸다."
   },
   {
     "id": "N1-1318",
@@ -14339,7 +14493,9 @@
     "word": "衝撃",
     "reading": "しょうげき",
     "meaningKr": "충격",
-    "meaningEn": "shock, crash, impact, ballistic"
+    "meaningEn": "shock, crash, impact, ballistic",
+    "exampleJp": "彼の突然の辞任は業界に大きな衝撃を与えた。",
+    "exampleKr": "그의 갑작스러운 사임은 업계에 큰 충격을 주었다."
   },
   {
     "id": "N1-1319",
@@ -14348,7 +14504,9 @@
     "word": "証言",
     "reading": "しょうげん",
     "meaningKr": "증언",
-    "meaningEn": "evidence, testimony"
+    "meaningEn": "evidence, testimony",
+    "exampleJp": "目撃者の証言が事件解決の決め手となった。",
+    "exampleKr": "목격자의 증언이 사건 해결의 결정적 단서가 되었다."
   },
   {
     "id": "N1-1320",
@@ -14357,7 +14515,9 @@
     "word": "証拠",
     "reading": "しょうこ",
     "meaningKr": "증거",
-    "meaningEn": "evidence, proof"
+    "meaningEn": "evidence, proof",
+    "exampleJp": "警察は現場に残された証拠を丹念に調べた。",
+    "exampleKr": "경찰은 현장에 남겨진 증거를 꼼꼼히 조사했다."
   },
   {
     "id": "N1-1321",
@@ -14366,7 +14526,9 @@
     "word": "照合",
     "reading": "しょうごう",
     "meaningKr": "조회(대조)",
-    "meaningEn": "check, verification"
+    "meaningEn": "check, verification",
+    "exampleJp": "提出された書類とデータベースの情報を照合した。",
+    "exampleKr": "제출된 서류와 데이터베이스 정보를 대조했다."
   },
   {
     "id": "N1-1322",
@@ -14375,7 +14537,9 @@
     "word": "詳細",
     "reading": "しょうさい",
     "meaningKr": "상세",
-    "meaningEn": "detail, particulars"
+    "meaningEn": "detail, particulars",
+    "exampleJp": "詳細については、後日改めてご連絡いたします。",
+    "exampleKr": "상세한 내용에 대해서는 추후 다시 연락드리겠습니다."
   },
   {
     "id": "N1-1323",
@@ -14384,7 +14548,9 @@
     "word": "上昇",
     "reading": "じょうしょう",
     "meaningKr": "상승",
-    "meaningEn": "rising, ascending, climbing"
+    "meaningEn": "rising, ascending, climbing",
+    "exampleJp": "気温の上昇に伴い、熱中症の患者が増えている。",
+    "exampleKr": "기온 상승에 따라 열사병 환자가 늘고 있다."
   },
   {
     "id": "N1-1324",
@@ -14393,7 +14559,9 @@
     "word": "昇進",
     "reading": "しょうしん",
     "meaningKr": "승진",
-    "meaningEn": "promotion"
+    "meaningEn": "promotion",
+    "exampleJp": "彼は長年の努力が認められ、部長に昇進した。",
+    "exampleKr": "그는 오랜 노력을 인정받아 부장으로 승진했다."
   },
   {
     "id": "N1-1325",
@@ -14402,7 +14570,9 @@
     "word": "称する",
     "reading": "しょうする",
     "meaningKr": "칭하다",
-    "meaningEn": "to take the name of, to call oneself"
+    "meaningEn": "to take the name of, to call oneself",
+    "exampleJp": "彼は専門家と称して、根拠のない情報を発信していた。",
+    "exampleKr": "그는 전문가라고 칭하며 근거 없는 정보를 퍼뜨리고 있었다."
   },
   {
     "id": "N1-1326",
@@ -14411,7 +14581,9 @@
     "word": "情勢",
     "reading": "じょうせい",
     "meaningKr": "정세",
-    "meaningEn": "state of things, condition, situation"
+    "meaningEn": "state of things, condition, situation",
+    "exampleJp": "国際情勢の変化が、国内の経済にも影響を及ぼしている。",
+    "exampleKr": "국제 정세의 변화가 국내 경제에도 영향을 미치고 있다."
   },
   {
     "id": "N1-1327",
@@ -14420,7 +14592,9 @@
     "word": "消息",
     "reading": "しょうそく",
     "meaningKr": "소식",
-    "meaningEn": "news, letter, circumstances"
+    "meaningEn": "news, letter, circumstances",
+    "exampleJp": "卒業以来、彼女からの消息が途絶えたままだ。",
+    "exampleKr": "졸업 이후 그녀로부터의 소식이 끊긴 채로 있다."
   },
   {
     "id": "N1-1328",
@@ -14429,7 +14603,9 @@
     "word": "承諾",
     "reading": "しょうだく",
     "meaningKr": "승낙",
-    "meaningEn": "consent, agreement"
+    "meaningEn": "consent, agreement",
+    "exampleJp": "契約内容の変更には、双方の承諾が必要だ。",
+    "exampleKr": "계약 내용 변경에는 양측의 승낙이 필요하다."
   },
   {
     "id": "N1-1329",
@@ -14438,7 +14614,9 @@
     "word": "情緒",
     "reading": "じょうちょ",
     "meaningKr": "정서",
-    "meaningEn": "emotion, feeling"
+    "meaningEn": "emotion, feeling",
+    "exampleJp": "この街には昔ながらの情緒が今も残っている。",
+    "exampleKr": "이 거리에는 옛날부터의 정서가 지금도 남아 있다."
   },
   {
     "id": "N1-1330",
@@ -14447,7 +14625,9 @@
     "word": "情緒",
     "reading": "じょうしょ",
     "meaningKr": "정서",
-    "meaningEn": "emotion, feeling"
+    "meaningEn": "emotion, feeling",
+    "exampleJp": "幼少期に情緒が安定していることは、成長に大切だとされる。",
+    "exampleKr": "유소년기에 정서가 안정되어 있는 것은 성장에 중요하다고 여겨진다."
   },
   {
     "id": "N1-1331",
@@ -14456,7 +14636,9 @@
     "word": "象徴",
     "reading": "しょうちょう",
     "meaningKr": "상징",
-    "meaningEn": "symbol"
+    "meaningEn": "symbol",
+    "exampleJp": "鳩は平和の象徴として世界中で親しまれている。",
+    "exampleKr": "비둘기는 평화의 상징으로서 전 세계에서 친숙하게 여겨지고 있다."
   },
   {
     "id": "N1-1332",
@@ -14465,7 +14647,9 @@
     "word": "小児科",
     "reading": "しょうにか",
     "meaningKr": "소아과",
-    "meaningEn": "pediatrics"
+    "meaningEn": "pediatrics",
+    "exampleJp": "子供が熱を出したので、急いで小児科に連れて行った。",
+    "exampleKr": "아이가 열이 나서 서둘러 소아과에 데려갔다."
   },
   {
     "id": "N1-1333",
@@ -14474,7 +14658,9 @@
     "word": "使用人",
     "reading": "しようにん",
     "meaningKr": "고용인(하인)",
-    "meaningEn": "employee, servant"
+    "meaningEn": "employee, servant",
+    "exampleJp": "その屋敷には長年仕えている使用人が何人もいる。",
+    "exampleKr": "그 저택에는 오랫동안 섬겨온 고용인이 여러 명 있다."
   },
   {
     "id": "N1-1334",
@@ -14483,7 +14669,9 @@
     "word": "情熱",
     "reading": "じょうねつ",
     "meaningKr": "정열(열정)",
-    "meaningEn": "passion, enthusiasm, zeal"
+    "meaningEn": "passion, enthusiasm, zeal",
+    "exampleJp": "彼は音楽に対する情熱を一度も失ったことがない。",
+    "exampleKr": "그는 음악에 대한 열정을 한 번도 잃은 적이 없다."
   },
   {
     "id": "N1-1335",
@@ -14492,7 +14680,9 @@
     "word": "譲歩",
     "reading": "じょうほ",
     "meaningKr": "양보",
-    "meaningEn": "concession, conciliation, compromise"
+    "meaningEn": "concession, conciliation, compromise",
+    "exampleJp": "双方が譲歩しなければ、交渉はまとまらないだろう。",
+    "exampleKr": "양측이 양보하지 않으면 협상은 타결되지 않을 것이다."
   },
   {
     "id": "N1-1336",
@@ -14501,7 +14691,9 @@
     "word": "条約",
     "reading": "じょうやく",
     "meaningKr": "조약",
-    "meaningEn": "treaty, pact"
+    "meaningEn": "treaty, pact",
+    "exampleJp": "両国は平和条約に正式に調印した。",
+    "exampleKr": "양국은 평화 조약에 정식으로 조인했다."
   },
   {
     "id": "N1-1337",
@@ -14510,7 +14702,9 @@
     "word": "勝利",
     "reading": "しょうり",
     "meaningKr": "승리",
-    "meaningEn": "victory, triumph, win"
+    "meaningEn": "victory, triumph, win",
+    "exampleJp": "延長戦の末、我がチームがついに勝利を収めた。",
+    "exampleKr": "연장전 끝에 우리 팀이 마침내 승리를 거두었다."
   },
   {
     "id": "N1-1338",
@@ -14519,7 +14713,9 @@
     "word": "上陸",
     "reading": "じょうりく",
     "meaningKr": "상륙",
-    "meaningEn": "landing, disembarkation"
+    "meaningEn": "landing, disembarkation",
+    "exampleJp": "台風が明日の朝、九州南部に上陸する見込みだ。",
+    "exampleKr": "태풍이 내일 아침 규슈 남부에 상륙할 전망이다."
   },
   {
     "id": "N1-1339",
@@ -14528,7 +14724,9 @@
     "word": "蒸溜",
     "reading": "じょうりゅう",
     "meaningKr": "증류",
-    "meaningEn": "distillation"
+    "meaningEn": "distillation",
+    "exampleJp": "このウイスキーは伝統的な製法で蒸溜されている。",
+    "exampleKr": "이 위스키는 전통적인 제법으로 증류되고 있다."
   },
   {
     "id": "N1-1340",
@@ -14537,7 +14735,9 @@
     "word": "奨励",
     "reading": "しょうれい",
     "meaningKr": "장려",
-    "meaningEn": "encouragement, promotion"
+    "meaningEn": "encouragement, promotion",
+    "exampleJp": "政府は再生可能エネルギーの導入を奨励している。",
+    "exampleKr": "정부는 재생 가능 에너지의 도입을 장려하고 있다."
   },
   {
     "id": "N1-1341",
@@ -14546,7 +14746,9 @@
     "word": "ショー",
     "reading": "ショー",
     "meaningKr": "쇼",
-    "meaningEn": "show"
+    "meaningEn": "show",
+    "exampleJp": "会場では最新の技術を紹介するショーが開催されていた。",
+    "exampleKr": "행사장에서는 최신 기술을 소개하는 쇼가 개최되고 있었다."
   },
   {
     "id": "N1-1342",
@@ -14555,7 +14757,9 @@
     "word": "除外",
     "reading": "じょがい",
     "meaningKr": "제외",
-    "meaningEn": "exception, exclusion"
+    "meaningEn": "exception, exclusion",
+    "exampleJp": "未成年者はこのキャンペーンの対象から除外される。",
+    "exampleKr": "미성년자는 이 캠페인 대상에서 제외된다."
   },
   {
     "id": "N1-1343",
@@ -14564,7 +14768,9 @@
     "word": "職員",
     "reading": "しょくいん",
     "meaningKr": "직원",
-    "meaningEn": "staff member, personnel"
+    "meaningEn": "staff member, personnel",
+    "exampleJp": "市役所の職員が住民の相談に丁寧に応じてくれた。",
+    "exampleKr": "시청 직원이 주민의 상담에 정중하게 응해 주었다."
   },
   {
     "id": "N1-1344",
@@ -14573,7 +14779,9 @@
     "word": "植民地",
     "reading": "しょくみんち",
     "meaningKr": "식민지",
-    "meaningEn": "colony"
+    "meaningEn": "colony",
+    "exampleJp": "この国はかつて植民地として支配されていた歴史を持つ。",
+    "exampleKr": "이 나라는 예전에 식민지로 지배받았던 역사를 가지고 있다."
   },
   {
     "id": "N1-1345",
@@ -14582,7 +14790,9 @@
     "word": "職務",
     "reading": "しょくむ",
     "meaningKr": "직무",
-    "meaningEn": "professional duties"
+    "meaningEn": "professional duties",
+    "exampleJp": "彼は与えられた職務を誠実に果たしている。",
+    "exampleKr": "그는 주어진 직무를 성실히 수행하고 있다."
   },
   {
     "id": "N1-1346",
@@ -14591,7 +14801,9 @@
     "word": "諸君",
     "reading": "しょくん",
     "meaningKr": "제군(여러분)",
-    "meaningEn": "Gentlemen!, Ladies!"
+    "meaningEn": "Gentlemen!, Ladies!",
+    "exampleJp": "校長は「諸君の努力を誇りに思う」と卒業生に語りかけた。",
+    "exampleKr": "교장은 \"제군들의 노력을 자랑스럽게 생각한다\"고 졸업생들에게 말했다."
   },
   {
     "id": "N1-1347",
@@ -14600,7 +14812,9 @@
     "word": "助言",
     "reading": "じょげん",
     "meaningKr": "조언",
-    "meaningEn": "advice, suggestion"
+    "meaningEn": "advice, suggestion",
+    "exampleJp": "先輩からの助言のおかげで、無事にプロジェクトを進められた。",
+    "exampleKr": "선배의 조언 덕분에 무사히 프로젝트를 진행할 수 있었다."
   },
   {
     "id": "N1-1348",
@@ -14609,7 +14823,9 @@
     "word": "徐行",
     "reading": "じょこう",
     "meaningKr": "서행",
-    "meaningEn": "going slowly"
+    "meaningEn": "going slowly",
+    "exampleJp": "この先は工事中のため、徐行運転をお願いします。",
+    "exampleKr": "이 앞은 공사 중이므로 서행 운전을 부탁드립니다."
   },
   {
     "id": "N1-1349",
@@ -14618,7 +14834,9 @@
     "word": "所在",
     "reading": "しょざい",
     "meaningKr": "소재(있는 곳)",
-    "meaningEn": "whereabouts"
+    "meaningEn": "whereabouts",
+    "exampleJp": "容疑者の所在は依然としてつかめていない。",
+    "exampleKr": "용의자의 소재는 여전히 파악되지 않고 있다."
   },
   {
     "id": "N1-1350",
@@ -14627,7 +14845,9 @@
     "word": "所持",
     "reading": "しょじ",
     "meaningKr": "소지",
-    "meaningEn": "possession, owning"
+    "meaningEn": "possession, owning",
+    "exampleJp": "空港では危険物の所持がないか厳しく検査される。",
+    "exampleKr": "공항에서는 위험물 소지 여부를 엄격하게 검사받는다."
   },
   {
     "id": "N1-1351",
@@ -14636,7 +14856,9 @@
     "word": "所属",
     "reading": "しょぞく",
     "meaningKr": "소속",
-    "meaningEn": "attached to, belong to"
+    "meaningEn": "attached to, belong to",
+    "exampleJp": "彼女は現在、営業部に所属している。",
+    "exampleKr": "그녀는 현재 영업부에 소속되어 있다."
   },
   {
     "id": "N1-1352",
@@ -14645,7 +14867,9 @@
     "word": "処置",
     "reading": "しょち",
     "meaningKr": "처치(조치)",
-    "meaningEn": "treatment"
+    "meaningEn": "treatment",
+    "exampleJp": "医師は傷口に適切な処置を施した。",
+    "exampleKr": "의사는 상처에 적절한 처치를 시행했다."
   },
   {
     "id": "N1-1353",
@@ -14654,7 +14878,9 @@
     "word": "しょっちゅう",
     "reading": "しょっちゅう",
     "meaningKr": "항상",
-    "meaningEn": "always, constantly"
+    "meaningEn": "always, constantly",
+    "exampleJp": "彼はしょっちゅう遅刻するので、周囲から呆れられている。",
+    "exampleKr": "그는 항상 지각을 해서 주변 사람들이 어이없어한다."
   },
   {
     "id": "N1-1354",
@@ -14663,7 +14889,9 @@
     "word": "所定",
     "reading": "しょてい",
     "meaningKr": "소정(정해진)",
-    "meaningEn": "fixed, prescribed"
+    "meaningEn": "fixed, prescribed",
+    "exampleJp": "応募書類は所定の用紙に記入してください。",
+    "exampleKr": "응모 서류는 소정의 양식에 기입해 주십시오."
   },
   {
     "id": "N1-1355",
@@ -14672,7 +14900,9 @@
     "word": "所得",
     "reading": "しょとく",
     "meaningKr": "소득",
-    "meaningEn": "income"
+    "meaningEn": "income",
+    "exampleJp": "所得が増えるにつれて税率も上がる仕組みになっている。",
+    "exampleKr": "소득이 늘어남에 따라 세율도 올라가는 구조로 되어 있다."
   },
   {
     "id": "N1-1356",
@@ -14681,7 +14911,9 @@
     "word": "処罰",
     "reading": "しょばつ",
     "meaningKr": "처벌",
-    "meaningEn": "punishment"
+    "meaningEn": "punishment",
+    "exampleJp": "規則を破った者は厳しく処罰されることになっている。",
+    "exampleKr": "규칙을 어긴 사람은 엄격하게 처벌받게 되어 있다."
   },
   {
     "id": "N1-1357",
@@ -14690,7 +14922,9 @@
     "word": "初版",
     "reading": "しょはん",
     "meaningKr": "초판",
-    "meaningEn": "first edition"
+    "meaningEn": "first edition",
+    "exampleJp": "この小説の初版は発売と同時に完売した。",
+    "exampleKr": "이 소설의 초판은 발매와 동시에 매진되었다."
   },
   {
     "id": "N1-1358",
@@ -14699,7 +14933,9 @@
     "word": "書評",
     "reading": "しょひょう",
     "meaningKr": "서평",
-    "meaningEn": "book review"
+    "meaningEn": "book review",
+    "exampleJp": "新聞に掲載された書評を読んで、この本を買うことにした。",
+    "exampleKr": "신문에 실린 서평을 읽고 이 책을 사기로 했다."
   },
   {
     "id": "N1-1359",
@@ -14708,7 +14944,9 @@
     "word": "処分",
     "reading": "しょぶん",
     "meaningKr": "처분",
-    "meaningEn": "disposal, dealing, punishment"
+    "meaningEn": "disposal, dealing, punishment",
+    "exampleJp": "不要になった家具はまとめて処分することにした。",
+    "exampleKr": "필요 없어진 가구는 한꺼번에 처분하기로 했다."
   },
   {
     "id": "N1-1360",
@@ -14717,7 +14955,9 @@
     "word": "庶民",
     "reading": "しょみん",
     "meaningKr": "서민",
-    "meaningEn": "masses, common people"
+    "meaningEn": "masses, common people",
+    "exampleJp": "この店は庶民の味方として長年愛されている。",
+    "exampleKr": "이 가게는 서민의 편으로서 오랫동안 사랑받고 있다."
   },
   {
     "id": "N1-1361",
@@ -14726,7 +14966,9 @@
     "word": "庶務",
     "reading": "しょむ",
     "meaningKr": "서무(일반사무)",
-    "meaningEn": "general affairs"
+    "meaningEn": "general affairs",
+    "exampleJp": "彼女は庶務課で書類の整理や備品の管理を担当している。",
+    "exampleKr": "그녀는 서무과에서 서류 정리와 비품 관리를 담당하고 있다."
   },
   {
     "id": "N1-1362",
@@ -14735,7 +14977,9 @@
     "word": "所有",
     "reading": "しょゆう",
     "meaningKr": "소유",
-    "meaningEn": "one's possessions, ownership"
+    "meaningEn": "one's possessions, ownership",
+    "exampleJp": "この土地は祖父の代から一族が所有している。",
+    "exampleKr": "이 땅은 할아버지 대부터 일족이 소유하고 있다."
   },
   {
     "id": "N1-1363",
@@ -14744,7 +14988,9 @@
     "word": "調べ",
     "reading": "しらべ",
     "meaningKr": "조사",
-    "meaningEn": "investigation, inspection"
+    "meaningEn": "investigation, inspection",
+    "exampleJp": "警察は事件の調べを慎重に進めている。",
+    "exampleKr": "경찰은 사건 조사를 신중하게 진행하고 있다."
   },
   {
     "id": "N1-1364",
@@ -14753,7 +14999,9 @@
     "word": "自立",
     "reading": "じりつ",
     "meaningKr": "자립",
-    "meaningEn": "independence, self-reliance"
+    "meaningEn": "independence, self-reliance",
+    "exampleJp": "彼女は高校を卒業してすぐに親元を離れ、自立した生活を送っている。",
+    "exampleKr": "그녀는 고등학교를 졸업하자마자 부모 곁을 떠나 자립한 생활을 하고 있다."
   },
   {
     "id": "N1-1365",
@@ -14762,7 +15010,9 @@
     "word": "記す",
     "reading": "しるす",
     "meaningKr": "적다(기록하다)",
-    "meaningEn": "to note, to write down"
+    "meaningEn": "to note, to write down",
+    "exampleJp": "彼はその日の出来事を日記に詳しく記した。",
+    "exampleKr": "그는 그날의 사건을 일기에 자세히 적었다."
   },
   {
     "id": "N1-1366",
@@ -14771,7 +15021,9 @@
     "word": "指令",
     "reading": "しれい",
     "meaningKr": "지령",
-    "meaningEn": "orders, instructions, directive"
+    "meaningEn": "orders, instructions, directive",
+    "exampleJp": "本部からの指令を受け、部隊はただちに出動した。",
+    "exampleKr": "본부의 지령을 받아 부대는 즉시 출동했다."
   },
   {
     "id": "N1-1367",
@@ -14780,7 +15032,9 @@
     "word": "～心",
     "reading": "～しん",
     "meaningKr": "~심(마음)",
-    "meaningEn": "mind of ~"
+    "meaningEn": "mind of ~",
+    "exampleJp": "彼の言葉には向上心が感じられる。",
+    "exampleKr": "그의 말에는 향상심(발전하려는 마음)이 느껴진다."
   },
   {
     "id": "N1-1368",
@@ -14789,7 +15043,9 @@
     "word": "陣",
     "reading": "じん",
     "meaningKr": "진(진영)",
-    "meaningEn": "battle formation, camp, encampment"
+    "meaningEn": "battle formation, camp, encampment",
+    "exampleJp": "敵軍は山のふもとに陣を敷いた。",
+    "exampleKr": "적군은 산기슭에 진을 쳤다."
   },
   {
     "id": "N1-1369",
@@ -14798,7 +15054,9 @@
     "word": "進化",
     "reading": "しんか",
     "meaningKr": "진화",
-    "meaningEn": "evolution, progress"
+    "meaningEn": "evolution, progress",
+    "exampleJp": "スマートフォンの技術は驚くべき速さで進化している。",
+    "exampleKr": "스마트폰 기술은 놀라운 속도로 진화하고 있다."
   },
   {
     "id": "N1-1370",
@@ -14807,7 +15065,9 @@
     "word": "人格",
     "reading": "じんかく",
     "meaningKr": "인격",
-    "meaningEn": "personality, character"
+    "meaningEn": "personality, character",
+    "exampleJp": "彼は困難な状況でも冷静さを失わない、優れた人格の持ち主だ。",
+    "exampleKr": "그는 어려운 상황에서도 냉정함을 잃지 않는, 뛰어난 인격의 소유자이다."
   },
   {
     "id": "N1-1371",
@@ -14816,7 +15076,9 @@
     "word": "審議",
     "reading": "しんぎ",
     "meaningKr": "심의",
-    "meaningEn": "deliberation"
+    "meaningEn": "deliberation",
+    "exampleJp": "この法案は国会で慎重に審議されている。",
+    "exampleKr": "이 법안은 국회에서 신중하게 심의되고 있다."
   },
   {
     "id": "N1-1372",
@@ -14825,7 +15087,9 @@
     "word": "新婚",
     "reading": "しんこん",
     "meaningKr": "신혼",
-    "meaningEn": "newly-wed"
+    "meaningEn": "newly-wed",
+    "exampleJp": "新婚夫婦はハワイへ新婚旅行に出かけた。",
+    "exampleKr": "신혼부부는 하와이로 신혼여행을 떠났다."
   },
   {
     "id": "N1-1373",
@@ -14834,7 +15098,9 @@
     "word": "審査",
     "reading": "しんさ",
     "meaningKr": "심사",
-    "meaningEn": "judging, inspection, examination"
+    "meaningEn": "judging, inspection, examination",
+    "exampleJp": "応募作品は専門家による厳正な審査を経て選ばれる。",
+    "exampleKr": "응모 작품은 전문가에 의한 엄정한 심사를 거쳐 선정된다."
   },
   {
     "id": "N1-1374",
@@ -14843,7 +15109,9 @@
     "word": "人材",
     "reading": "じんざい",
     "meaningKr": "인재",
-    "meaningEn": "man of talent"
+    "meaningEn": "man of talent",
+    "exampleJp": "この会社は優秀な人材の確保に力を入れている。",
+    "exampleKr": "이 회사는 우수한 인재 확보에 힘을 쏟고 있다."
   },
   {
     "id": "N1-1375",
@@ -14852,7 +15120,9 @@
     "word": "紳士",
     "reading": "しんし",
     "meaningKr": "신사",
-    "meaningEn": "gentleman"
+    "meaningEn": "gentleman",
+    "exampleJp": "彼はいつも礼儀正しく、まさに紳士と呼ぶにふさわしい人物だ。",
+    "exampleKr": "그는 항상 예의 바르며, 그야말로 신사라고 부르기에 걸맞은 인물이다."
   },
   {
     "id": "N1-1376",
@@ -14861,7 +15131,9 @@
     "word": "真実",
     "reading": "しんじつ",
     "meaningKr": "진실",
-    "meaningEn": "truth, reality"
+    "meaningEn": "truth, reality",
+    "exampleJp": "彼女はついに事件の真実を打ち明けた。",
+    "exampleKr": "그녀는 마침내 사건의 진실을 털어놓았다."
   },
   {
     "id": "N1-1377",
@@ -14870,7 +15142,9 @@
     "word": "信者",
     "reading": "しんじゃ",
     "meaningKr": "신자",
-    "meaningEn": "believer, devotee"
+    "meaningEn": "believer, devotee",
+    "exampleJp": "この寺院には全国から多くの信者が参拝に訪れる。",
+    "exampleKr": "이 사찰에는 전국에서 많은 신자들이 참배하러 찾아온다."
   },
   {
     "id": "N1-1378",
@@ -14879,7 +15153,9 @@
     "word": "真珠",
     "reading": "しんじゅ",
     "meaningKr": "진주",
-    "meaningEn": "pearl"
+    "meaningEn": "pearl",
+    "exampleJp": "祖母は結婚式で真珠のネックレスを身につけていた。",
+    "exampleKr": "할머니는 결혼식에서 진주 목걸이를 착용하고 계셨다."
   },
   {
     "id": "N1-1379",
@@ -14888,7 +15164,9 @@
     "word": "進出",
     "reading": "しんしゅつ",
     "meaningKr": "진출",
-    "meaningEn": "advancement"
+    "meaningEn": "advancement",
+    "exampleJp": "この企業は海外市場への進出を積極的に進めている。",
+    "exampleKr": "이 기업은 해외 시장 진출을 적극적으로 추진하고 있다."
   },
   {
     "id": "N1-1380",
@@ -14897,7 +15175,9 @@
     "word": "心情",
     "reading": "しんじょう",
     "meaningKr": "심정",
-    "meaningEn": "mentality"
+    "meaningEn": "mentality",
+    "exampleJp": "被害者の家族の心情を思うと、言葉が見つからない。",
+    "exampleKr": "피해자 가족의 심정을 생각하면 말이 나오지 않는다."
   },
   {
     "id": "N1-1381",
@@ -14906,7 +15186,9 @@
     "word": "新人",
     "reading": "しんじん",
     "meaningKr": "신인",
-    "meaningEn": "new face, newcomer"
+    "meaningEn": "new face, newcomer",
+    "exampleJp": "今年の新人は仕事の飲み込みが早いと評判だ。",
+    "exampleKr": "올해 신입 사원은 일을 빨리 익힌다고 평판이 좋다."
   },
   {
     "id": "N1-1382",
@@ -14915,7 +15197,9 @@
     "word": "神聖",
     "reading": "しんせい",
     "meaningKr": "신성",
-    "meaningEn": "holiness, sacredness, dignity"
+    "meaningEn": "holiness, sacredness, dignity",
+    "exampleJp": "この山は古くから神聖な場所として崇められてきた。",
+    "exampleKr": "이 산은 예로부터 신성한 장소로 숭배받아 왔다."
   },
   {
     "id": "N1-1383",
@@ -14924,7 +15208,9 @@
     "word": "親善",
     "reading": "しんぜん",
     "meaningKr": "친선",
-    "meaningEn": "friendship"
+    "meaningEn": "friendship",
+    "exampleJp": "両国のサッカーチームが親善試合を行った。",
+    "exampleKr": "양국의 축구팀이 친선 경기를 치렀다."
   },
   {
     "id": "N1-1384",
@@ -14933,7 +15219,9 @@
     "word": "真相",
     "reading": "しんそう",
     "meaningKr": "진상",
-    "meaningEn": "truth, real situation"
+    "meaningEn": "truth, real situation",
+    "exampleJp": "記者たちは事件の真相を明らかにしようと取材を続けた。",
+    "exampleKr": "기자들은 사건의 진상을 밝히려고 취재를 계속했다."
   },
   {
     "id": "N1-1385",
@@ -14942,7 +15230,9 @@
     "word": "迅速",
     "reading": "じんそく",
     "meaningKr": "신속",
-    "meaningEn": "quick, fast, prompt"
+    "meaningEn": "quick, fast, prompt",
+    "exampleJp": "災害発生時には迅速な対応が求められる。",
+    "exampleKr": "재해 발생 시에는 신속한 대응이 요구된다."
   },
   {
     "id": "N1-1386",
@@ -14951,7 +15241,9 @@
     "word": "人体",
     "reading": "じんたい",
     "meaningKr": "인체",
-    "meaningEn": "human body"
+    "meaningEn": "human body",
+    "exampleJp": "この薬品は人体に有害な成分を含んでいる。",
+    "exampleKr": "이 약품은 인체에 유해한 성분을 포함하고 있다."
   },
   {
     "id": "N1-1387",
@@ -14960,7 +15252,9 @@
     "word": "新築",
     "reading": "しんちく",
     "meaningKr": "신축",
-    "meaningEn": "new building, new construction"
+    "meaningEn": "new building, new construction",
+    "exampleJp": "来月、新築のマンションに引っ越す予定だ。",
+    "exampleKr": "다음 달 신축 아파트로 이사할 예정이다."
   },
   {
     "id": "N1-1388",
@@ -14969,7 +15263,9 @@
     "word": "心中",
     "reading": "しんじゅう",
     "meaningKr": "동반자살(정사)",
-    "meaningEn": "double suicide"
+    "meaningEn": "double suicide",
+    "exampleJp": "その悲劇的な心中事件は当時大きく報道された。",
+    "exampleKr": "그 비극적인 동반자살 사건은 당시 크게 보도되었다."
   },
   {
     "id": "N1-1389",
@@ -14978,7 +15274,9 @@
     "word": "進呈",
     "reading": "しんてい",
     "meaningKr": "증정",
-    "meaningEn": "presentation"
+    "meaningEn": "presentation",
+    "exampleJp": "先着100名様には記念品を進呈いたします。",
+    "exampleKr": "선착순 100명에게는 기념품을 증정합니다."
   },
   {
     "id": "N1-1390",
@@ -14987,7 +15285,9 @@
     "word": "進展",
     "reading": "しんてん",
     "meaningKr": "진전",
-    "meaningEn": "progress, development"
+    "meaningEn": "progress, development",
+    "exampleJp": "交渉は思ったほど進展していない。",
+    "exampleKr": "협상은 생각만큼 진전되지 않고 있다."
   },
   {
     "id": "N1-1391",
@@ -14996,7 +15296,9 @@
     "word": "神殿",
     "reading": "しんでん",
     "meaningKr": "신전",
-    "meaningEn": "temple, sacred place"
+    "meaningEn": "temple, sacred place",
+    "exampleJp": "古代の神殿の遺跡が発掘調査によって発見された。",
+    "exampleKr": "고대 신전의 유적이 발굴 조사를 통해 발견되었다."
   },
   {
     "id": "N1-1392",
@@ -15005,7 +15307,9 @@
     "word": "進度",
     "reading": "しんど",
     "meaningKr": "진도",
-    "meaningEn": "progress"
+    "meaningEn": "progress",
+    "exampleJp": "授業の進度が速すぎて、ついていけない生徒もいる。",
+    "exampleKr": "수업 진도가 너무 빨라서 따라가지 못하는 학생도 있다."
   },
   {
     "id": "N1-1393",
@@ -15014,7 +15318,9 @@
     "word": "振動",
     "reading": "しんどう",
     "meaningKr": "진동",
-    "meaningEn": "oscillation, vibration"
+    "meaningEn": "oscillation, vibration",
+    "exampleJp": "地震による振動で棚の上の物が落ちてきた。",
+    "exampleKr": "지진으로 인한 진동으로 선반 위의 물건이 떨어졌다."
   },
   {
     "id": "N1-1394",
@@ -15023,7 +15329,9 @@
     "word": "新入生",
     "reading": "しんにゅうせい",
     "meaningKr": "신입생",
-    "meaningEn": "new student, first-year student, freshman"
+    "meaningEn": "new student, first-year student, freshman",
+    "exampleJp": "新入生歓迎会が来週の金曜日に開かれる。",
+    "exampleKr": "신입생 환영회가 다음 주 금요일에 열린다."
   },
   {
     "id": "N1-1395",
@@ -15032,7 +15340,9 @@
     "word": "信任",
     "reading": "しんにん",
     "meaningKr": "신임",
-    "meaningEn": "trust, confidence, credence"
+    "meaningEn": "trust, confidence, credence",
+    "exampleJp": "彼は上司の信任を得て、新しいプロジェクトを任された。",
+    "exampleKr": "그는 상사의 신임을 얻어 새로운 프로젝트를 맡게 되었다."
   },
   {
     "id": "N1-1396",
@@ -15041,7 +15351,9 @@
     "word": "神秘",
     "reading": "しんぴ",
     "meaningKr": "신비",
-    "meaningEn": "mystery"
+    "meaningEn": "mystery",
+    "exampleJp": "宇宙にはまだ解明されていない神秘が数多く残されている。",
+    "exampleKr": "우주에는 아직 해명되지 않은 신비가 많이 남아 있다."
   },
   {
     "id": "N1-1397",
@@ -15050,7 +15362,9 @@
     "word": "辛抱",
     "reading": "しんぼう",
     "meaningKr": "참을성(인내)",
-    "meaningEn": "patience, endurance"
+    "meaningEn": "patience, endurance",
+    "exampleJp": "成功するまでには辛抱強く努力を続ける必要がある。",
+    "exampleKr": "성공할 때까지는 참을성 있게 노력을 계속할 필요가 있다."
   },
   {
     "id": "N1-1398",
@@ -15059,7 +15373,9 @@
     "word": "人民",
     "reading": "じんみん",
     "meaningKr": "인민",
-    "meaningEn": "people, public"
+    "meaningEn": "people, public",
+    "exampleJp": "憲法は人民の権利を保障している。",
+    "exampleKr": "헌법은 인민의 권리를 보장하고 있다."
   },
   {
     "id": "N1-1399",
@@ -15068,7 +15384,9 @@
     "word": "侵略",
     "reading": "しんりゃく",
     "meaningKr": "침략",
-    "meaningEn": "aggression, invasion, raid"
+    "meaningEn": "aggression, invasion, raid",
+    "exampleJp": "隣国からの侵略に備えて国境の警備が強化された。",
+    "exampleKr": "이웃 나라의 침략에 대비해 국경 경비가 강화되었다."
   },
   {
     "id": "N1-1400",
@@ -15077,7 +15395,9 @@
     "word": "診療",
     "reading": "しんりょう",
     "meaningKr": "진료",
-    "meaningEn": "medical examination and treatment"
+    "meaningEn": "medical examination and treatment",
+    "exampleJp": "この病院は土曜日も診療を行っている。",
+    "exampleKr": "이 병원은 토요일에도 진료를 하고 있다."
   },
   {
     "id": "N1-1401",
@@ -15086,7 +15406,9 @@
     "word": "粋",
     "reading": "すい",
     "meaningKr": "정수(핵심)",
-    "meaningEn": "essence"
+    "meaningEn": "essence",
+    "exampleJp": "この庭園は日本の伝統美の粋を集めて作られている。",
+    "exampleKr": "이 정원은 일본 전통미의 정수를 모아 만들어졌다."
   },
   {
     "id": "N1-1402",
@@ -15095,7 +15417,9 @@
     "word": "水源",
     "reading": "すいげん",
     "meaningKr": "수원(물의 근원)",
-    "meaningEn": "source of river"
+    "meaningEn": "source of river",
+    "exampleJp": "この川の水源は遠く山奥の湧き水にある。",
+    "exampleKr": "이 강의 수원은 멀리 산속의 샘물에 있다."
   },
   {
     "id": "N1-1403",
@@ -15104,7 +15428,9 @@
     "word": "推進",
     "reading": "すいしん",
     "meaningKr": "추진",
-    "meaningEn": "propulsion, driving force"
+    "meaningEn": "propulsion, driving force",
+    "exampleJp": "政府は少子化対策を推進する方針を打ち出した。",
+    "exampleKr": "정부는 저출산 대책을 추진하는 방침을 내놓았다."
   },
   {
     "id": "N1-1404",
@@ -15113,7 +15439,9 @@
     "word": "吹奏",
     "reading": "すいそう",
     "meaningKr": "취주(관악기 연주)",
-    "meaningEn": "playing wind instruments"
+    "meaningEn": "playing wind instruments",
+    "exampleJp": "運動会では吹奏楽部が入場行進の演奏を担当した。",
+    "exampleKr": "운동회에서는 취주악부가 입장 행진 연주를 담당했다."
   },
   {
     "id": "N1-1405",
@@ -15122,7 +15450,9 @@
     "word": "推測",
     "reading": "すいそく",
     "meaningKr": "추측",
-    "meaningEn": "guess, conjecture"
+    "meaningEn": "guess, conjecture",
+    "exampleJp": "確たる証拠がないまま推測だけで結論を出すべきではない。",
+    "exampleKr": "확실한 증거가 없는 상태로 추측만으로 결론을 내려서는 안 된다."
   },
   {
     "id": "N1-1406",
@@ -15131,7 +15461,9 @@
     "word": "水田",
     "reading": "すいでん",
     "meaningKr": "논",
-    "meaningEn": "(water-filled) paddy field"
+    "meaningEn": "(water-filled) paddy field",
+    "exampleJp": "田舎の水田には夏になると蛙の鳴き声が響き渡る。",
+    "exampleKr": "시골 논에는 여름이 되면 개구리 울음소리가 울려 퍼진다."
   },
   {
     "id": "N1-1407",
@@ -15140,7 +15472,9 @@
     "word": "推理",
     "reading": "すいり",
     "meaningKr": "추리",
-    "meaningEn": "reasoning, inference, mystery or detective genre"
+    "meaningEn": "reasoning, inference, mystery or detective genre",
+    "exampleJp": "彼は推理小説を読むのが趣味で、休日はよく本屋に通う。",
+    "exampleKr": "그는 추리소설을 읽는 것이 취미라 휴일에는 자주 서점에 다닌다."
   },
   {
     "id": "N1-1408",
@@ -15149,7 +15483,9 @@
     "word": "数詞",
     "reading": "すうし",
     "meaningKr": "수사(품사)",
-    "meaningEn": "numeral"
+    "meaningEn": "numeral",
+    "exampleJp": "日本語の数詞は助数詞と組み合わさって複雑な体系を成す。",
+    "exampleKr": "일본어의 수사는 조수사와 결합하여 복잡한 체계를 이룬다."
   },
   {
     "id": "N1-1409",
@@ -15158,7 +15494,9 @@
     "word": "崇拝",
     "reading": "すうはい",
     "meaningKr": "숭배",
-    "meaningEn": "worship, adoration"
+    "meaningEn": "worship, adoration",
+    "exampleJp": "古代の人々は太陽を神として崇拝していた。",
+    "exampleKr": "고대 사람들은 태양을 신으로 숭배했다."
   },
   {
     "id": "N1-1410",
@@ -15167,7 +15505,9 @@
     "word": "据え付ける",
     "reading": "すえつける",
     "meaningKr": "설치하다",
-    "meaningEn": "to install, to equip, to mount"
+    "meaningEn": "to install, to equip, to mount",
+    "exampleJp": "新しいエアコンを部屋の壁に据え付けてもらった。",
+    "exampleKr": "새 에어컨을 방 벽에 설치해 받았다."
   },
   {
     "id": "N1-1411",
@@ -15176,7 +15516,9 @@
     "word": "据える",
     "reading": "すえる",
     "meaningKr": "놓다(설치하다)",
-    "meaningEn": "to set, to lay, to place"
+    "meaningEn": "to set, to lay, to place",
+    "exampleJp": "彼は入り口の脇に大きな石像を据えた。",
+    "exampleKr": "그는 입구 옆에 커다란 석상을 놓았다."
   },
   {
     "id": "N1-1412",
@@ -15185,7 +15527,9 @@
     "word": "すがすがしい",
     "reading": "すがすがしい",
     "meaningKr": "상쾌하다",
-    "meaningEn": "fresh, refreshing"
+    "meaningEn": "fresh, refreshing",
+    "exampleJp": "早朝の山道を歩くと、すがすがしい空気に心が洗われるようだ。",
+    "exampleKr": "이른 아침 산길을 걸으면 상쾌한 공기에 마음이 씻기는 듯하다."
   },
   {
     "id": "N1-1413",
@@ -15194,7 +15538,9 @@
     "word": "救い",
     "reading": "すくい",
     "meaningKr": "구원(도움)",
-    "meaningEn": "help, aid, relief"
+    "meaningEn": "help, aid, relief",
+    "exampleJp": "彼女の優しい言葉が、絶望していた私の唯一の救いだった。",
+    "exampleKr": "그녀의 다정한 말이 절망하고 있던 나의 유일한 구원이었다."
   },
   {
     "id": "N1-1414",
@@ -15203,7 +15549,9 @@
     "word": "すくう (みずを～)",
     "reading": "すくう (みずを～)",
     "meaningKr": "뜨다(퍼올리다)",
-    "meaningEn": "to scoop"
+    "meaningEn": "to scoop",
+    "exampleJp": "子供は両手で水をすくって顔を洗った。",
+    "exampleKr": "아이는 양손으로 물을 떠서 얼굴을 씻었다."
   },
   {
     "id": "N1-1415",
@@ -15212,7 +15560,9 @@
     "word": "健やか",
     "reading": "すこやか",
     "meaningKr": "건강함",
-    "meaningEn": "vigorous, healthy, sound"
+    "meaningEn": "vigorous, healthy, sound",
+    "exampleJp": "子供が健やかに育つことが親にとって何よりの願いだ。",
+    "exampleKr": "아이가 건강하게 자라는 것이 부모에게 무엇보다 큰 바람이다."
   },
   {
     "id": "N1-1416",
@@ -15221,7 +15571,9 @@
     "word": "濯ぐ",
     "reading": "すすぐ",
     "meaningKr": "헹구다",
-    "meaningEn": "to rinse, to wash out"
+    "meaningEn": "to rinse, to wash out",
+    "exampleJp": "洗剤をよく落とすため、衣類を何度も水で濯いだ。",
+    "exampleKr": "세제를 잘 없애기 위해 옷을 여러 번 물로 헹궜다."
   },
   {
     "id": "N1-1417",
@@ -15230,7 +15582,9 @@
     "word": "進み",
     "reading": "すすみ",
     "meaningKr": "진행(진척)",
-    "meaningEn": "progress"
+    "meaningEn": "progress",
+    "exampleJp": "工事の進みが遅れており、完成は来年にずれ込みそうだ。",
+    "exampleKr": "공사 진행이 지연되고 있어 완공은 내년으로 미뤄질 것 같다."
   },
   {
     "id": "N1-1418",
@@ -15239,7 +15593,9 @@
     "word": "裾",
     "reading": "すそ",
     "meaningKr": "옷단(밑자락)",
-    "meaningEn": "(trouser) cuff, (skirt) hem, cut edge of a hairdo"
+    "meaningEn": "(trouser) cuff, (skirt) hem, cut edge of a hairdo",
+    "exampleJp": "ズボンの裾が長すぎたので、店で直してもらった。",
+    "exampleKr": "바지 밑단이 너무 길어서 가게에서 수선을 받았다."
   },
   {
     "id": "N1-1419",
@@ -15248,7 +15604,9 @@
     "word": "スタジオ",
     "reading": "スタジオ",
     "meaningKr": "스튜디오",
-    "meaningEn": "studio"
+    "meaningEn": "studio",
+    "exampleJp": "彼女はこのスタジオで新しいアルバムの録音を行った。",
+    "exampleKr": "그녀는 이 스튜디오에서 새 앨범 녹음을 진행했다."
   },
   {
     "id": "N1-1420",
@@ -15257,7 +15615,9 @@
     "word": "スチーム",
     "reading": "スチーム",
     "meaningKr": "스팀(증기)",
-    "meaningEn": "steam"
+    "meaningEn": "steam",
+    "exampleJp": "この美容器具はスチームで肌の毛穴を開かせる仕組みだ。",
+    "exampleKr": "이 미용 기기는 스팀으로 피부 모공을 열게 하는 원리이다."
   },
   {
     "id": "N1-1421",
@@ -15266,7 +15626,9 @@
     "word": "ストライキ",
     "reading": "ストライキ",
     "meaningKr": "파업(스트라이크)",
-    "meaningEn": "strike"
+    "meaningEn": "strike",
+    "exampleJp": "労働組合はついにストライキに踏み切った。",
+    "exampleKr": "노동조합은 결국 파업에 돌입했다."
   },
   {
     "id": "N1-1422",
@@ -15275,7 +15637,9 @@
     "word": "スト",
     "reading": "スト",
     "meaningKr": "파업",
-    "meaningEn": "(abbr.) strike"
+    "meaningEn": "(abbr.) strike",
+    "exampleJp": "電車がストで止まり、通勤客が駅にあふれた。",
+    "exampleKr": "전철이 파업으로 멈춰서 통근객이 역에 넘쳐났다."
   },
   {
     "id": "N1-1423",
@@ -15284,7 +15648,9 @@
     "word": "ストロー",
     "reading": "ストロー",
     "meaningKr": "빨대",
-    "meaningEn": "straw"
+    "meaningEn": "straw",
+    "exampleJp": "環境への配慮から紙製のストローに切り替える店が増えている。",
+    "exampleKr": "환경을 고려해 종이 빨대로 바꾸는 가게가 늘고 있다."
   },
   {
     "id": "N1-1424",
@@ -15293,7 +15659,9 @@
     "word": "ストロボ",
     "reading": "ストロボ",
     "meaningKr": "스트로보(플래시)",
-    "meaningEn": "stroboscope (literally: strobo, strobe lamp, stroboscopic lamp)"
+    "meaningEn": "stroboscope (literally: strobo, strobe lamp, stroboscopic lamp)",
+    "exampleJp": "暗い会場ではストロボを焚かないと被写体がぶれてしまう。",
+    "exampleKr": "어두운 행사장에서는 플래시를 터뜨리지 않으면 피사체가 흔들려 버린다."
   },
   {
     "id": "N1-1425",
@@ -15302,7 +15670,9 @@
     "word": "すばしこい",
     "reading": "すばしこい",
     "meaningKr": "잽싸다",
-    "meaningEn": "nimble, smart, quick"
+    "meaningEn": "nimble, smart, quick",
+    "exampleJp": "あの子はすばしこくて、鬼ごっこでもなかなか捕まらない。",
+    "exampleKr": "그 아이는 잽싸서 술래잡기에서도 좀처럼 잡히지 않는다."
   },
   {
     "id": "N1-1426",
@@ -15311,7 +15681,9 @@
     "word": "素早い",
     "reading": "すばやい",
     "meaningKr": "재빠르다",
-    "meaningEn": "fast, quick"
+    "meaningEn": "fast, quick",
+    "exampleJp": "彼の素早い判断のおかげで事故を未然に防げた。",
+    "exampleKr": "그의 재빠른 판단 덕분에 사고를 미연에 방지할 수 있었다."
   },
   {
     "id": "N1-1427",
@@ -15320,7 +15692,9 @@
     "word": "ずばり",
     "reading": "ずばり",
     "meaningKr": "정확히(단호하게)",
-    "meaningEn": "decisively, unreservedly, frankly"
+    "meaningEn": "decisively, unreservedly, frankly",
+    "exampleJp": "彼女は上司の欠点をずばりと指摘した。",
+    "exampleKr": "그녀는 상사의 결점을 정확히 지적했다."
   },
   {
     "id": "N1-1428",
@@ -15329,7 +15703,9 @@
     "word": "スプリング",
     "reading": "スプリング",
     "meaningKr": "스프링",
-    "meaningEn": "spring"
+    "meaningEn": "spring",
+    "exampleJp": "古いベッドはスプリングがへたって寝心地が悪い。",
+    "exampleKr": "낡은 침대는 스프링이 주저앉아 잠자리가 불편하다."
   },
   {
     "id": "N1-1429",
@@ -15338,7 +15714,9 @@
     "word": "スペース",
     "reading": "スペース",
     "meaningKr": "스페이스(공간)",
-    "meaningEn": "space"
+    "meaningEn": "space",
+    "exampleJp": "限られたスペースを有効に使うため、家具を作り付けにした。",
+    "exampleKr": "한정된 공간을 효율적으로 쓰기 위해 가구를 붙박이로 만들었다."
   },
   {
     "id": "N1-1430",
@@ -15347,7 +15725,9 @@
     "word": "ずぶぬれ",
     "reading": "ずぶぬれ",
     "meaningKr": "흠뻑 젖음",
-    "meaningEn": "soaked, dripping wet"
+    "meaningEn": "soaked, dripping wet",
+    "exampleJp": "傘を忘れて、家に着く頃にはずぶぬれになっていた。",
+    "exampleKr": "우산을 잊고 나와서 집에 도착할 무렵에는 흠뻑 젖어 있었다."
   },
   {
     "id": "N1-1431",
@@ -15356,7 +15736,9 @@
     "word": "スポーツカー",
     "reading": "スポーツカー",
     "meaningKr": "스포츠카",
-    "meaningEn": "sports car"
+    "meaningEn": "sports car",
+    "exampleJp": "彼は長年の夢だった真っ赤なスポーツカーをついに手に入れた。",
+    "exampleKr": "그는 오랜 꿈이었던 새빨간 스포츠카를 마침내 손에 넣었다."
   },
   {
     "id": "N1-1432",
@@ -15365,7 +15747,9 @@
     "word": "澄ます",
     "reading": "すます",
     "meaningKr": "맑게하다(귀를 기울이다)",
-    "meaningEn": "to clear, to make clear, to listen for"
+    "meaningEn": "to clear, to make clear, to listen for",
+    "exampleJp": "森の中で耳を澄ますと、かすかな鳥のさえずりが聞こえた。",
+    "exampleKr": "숲속에서 귀를 기울이자 희미한 새소리가 들려왔다."
   },
   {
     "id": "N1-1433",
@@ -15374,7 +15758,9 @@
     "word": "清ます",
     "reading": "すます",
     "meaningKr": "맑게하다",
-    "meaningEn": "to clear, to make clear, to listen for"
+    "meaningEn": "to clear, to make clear, to listen for",
+    "exampleJp": "湧き水は心を清ますような澄んだ音を立てて流れていた。",
+    "exampleKr": "샘물은 마음을 맑게 하는 듯한 맑은 소리를 내며 흐르고 있었다."
   },
   {
     "id": "N1-1434",
@@ -15383,7 +15769,9 @@
     "word": "済ます",
     "reading": "すます",
     "meaningKr": "끝내다(때우다)",
-    "meaningEn": "to finish; to settle; to do without"
+    "meaningEn": "to finish; to settle; to do without",
+    "exampleJp": "忙しいので昼食はコンビニのおにぎりで済ますことにした。",
+    "exampleKr": "바빠서 점심은 편의점 주먹밥으로 때우기로 했다."
   },
   {
     "id": "N1-1435",
@@ -15392,7 +15780,9 @@
     "word": "すみやか",
     "reading": "すみやか",
     "meaningKr": "신속함",
-    "meaningEn": "speedy"
+    "meaningEn": "speedy",
+    "exampleJp": "火災が発生した際は、すみやかに避難してください。",
+    "exampleKr": "화재가 발생했을 때는 신속하게 대피해 주십시오."
   },
   {
     "id": "N1-1436",
@@ -15401,7 +15791,9 @@
     "word": "スラックス",
     "reading": "スラックス",
     "meaningKr": "슬랙스(바지)",
-    "meaningEn": "slacks"
+    "meaningEn": "slacks",
+    "exampleJp": "面接には黒のスラックスとジャケットで臨むことにした。",
+    "exampleKr": "면접에는 검은색 슬랙스와 재킷 차림으로 임하기로 했다."
   },
   {
     "id": "N1-1437",
@@ -15410,7 +15802,9 @@
     "word": "ずらっと",
     "reading": "ずらっと",
     "meaningKr": "죽 늘어서서",
-    "meaningEn": "in a line, in a row"
+    "meaningEn": "in a line, in a row",
+    "exampleJp": "開店前から客がずらっと列を作って並んでいた。",
+    "exampleKr": "개점 전부터 손님들이 죽 줄을 지어 서 있었다."
   },
   {
     "id": "N1-1438",
@@ -15419,7 +15813,9 @@
     "word": "ずるずる",
     "reading": "ずるずる",
     "meaningKr": "질질(끄는 모양)",
-    "meaningEn": "dragging on, sound of sniffling"
+    "meaningEn": "dragging on, sound of sniffling",
+    "exampleJp": "決断を先延ばしにして、交渉はずるずると長引いた。",
+    "exampleKr": "결단을 미루는 바람에 협상은 질질 길어졌다."
   },
   {
     "id": "N1-1439",
@@ -15428,7 +15824,9 @@
     "word": "ずれ",
     "reading": "ずれ",
     "meaningKr": "어긋남(차이)",
-    "meaningEn": "difference, gap"
+    "meaningEn": "difference, gap",
+    "exampleJp": "上司と部下の認識のずれが、トラブルの原因になった。",
+    "exampleKr": "상사와 부하 직원의 인식 차이가 문제의 원인이 되었다."
   },
   {
     "id": "N1-1440",
@@ -15437,7 +15835,9 @@
     "word": "すれちがい",
     "reading": "すれちがい",
     "meaningKr": "엇갈림",
-    "meaningEn": "chance encounter"
+    "meaningEn": "chance encounter",
+    "exampleJp": "些細なすれちがいが積み重なって、二人は疎遠になった。",
+    "exampleKr": "사소한 엇갈림이 쌓여서 두 사람은 소원해졌다."
   },
   {
     "id": "N1-1441",
@@ -15446,7 +15846,9 @@
     "word": "擦れる",
     "reading": "すれる",
     "meaningKr": "스치다(닳다)",
-    "meaningEn": "to rub, to chafe"
+    "meaningEn": "to rub, to chafe",
+    "exampleJp": "新しい靴で長時間歩いたら、かかとが擦れて痛くなった。",
+    "exampleKr": "새 신발을 신고 오래 걸었더니 뒤꿈치가 쓸려서 아팠다."
   },
   {
     "id": "N1-1442",
@@ -15455,7 +15857,9 @@
     "word": "すんなり",
     "reading": "すんなり",
     "meaningKr": "순조롭게(날씬하게)",
-    "meaningEn": "pass with no objection, slim, slender"
+    "meaningEn": "pass with no objection, slim, slender",
+    "exampleJp": "反対されると思っていた企画案は、会議ですんなり通った。",
+    "exampleKr": "반대에 부딪힐 거라 생각했던 기획안은 회의에서 순조롭게 통과되었다."
   },
   {
     "id": "N1-1443",
@@ -15464,7 +15868,9 @@
     "word": "生育",
     "reading": "せいいく",
     "meaningKr": "생육(성장)",
-    "meaningEn": "growth, development, breeding"
+    "meaningEn": "growth, development, breeding",
+    "exampleJp": "今年は雨が多く、稲の生育が例年より早い。",
+    "exampleKr": "올해는 비가 많아서 벼의 생육이 예년보다 빠르다."
   },
   {
     "id": "N1-1444",
@@ -15473,7 +15879,9 @@
     "word": "成育",
     "reading": "せいいく",
     "meaningKr": "성육(자람)",
-    "meaningEn": "growth, raising"
+    "meaningEn": "growth, raising",
+    "exampleJp": "この病院では未熟児の成育を専門的に支援している。",
+    "exampleKr": "이 병원에서는 미숙아의 성장을 전문적으로 지원하고 있다."
   },
   {
     "id": "N1-1445",
@@ -15482,7 +15890,9 @@
     "word": "成果",
     "reading": "せいか",
     "meaningKr": "성과",
-    "meaningEn": "results, fruits"
+    "meaningEn": "results, fruits",
+    "exampleJp": "長年の研究がようやく成果を上げ始めた。",
+    "exampleKr": "오랜 연구가 마침내 성과를 내기 시작했다."
   },
   {
     "id": "N1-1446",
@@ -15491,7 +15901,9 @@
     "word": "正解",
     "reading": "せいかい",
     "meaningKr": "정답",
-    "meaningEn": "correct, right answer, solution"
+    "meaningEn": "correct, right answer, solution",
+    "exampleJp": "この問題には唯一の正解があるわけではない。",
+    "exampleKr": "이 문제에는 단 하나의 정답이 있는 것은 아니다."
   },
   {
     "id": "N1-1447",
@@ -15500,7 +15912,9 @@
     "word": "正義",
     "reading": "せいぎ",
     "meaningKr": "정의",
-    "meaningEn": "justice, right, righteousness"
+    "meaningEn": "justice, right, righteousness",
+    "exampleJp": "彼は正義感が強く、不正を見過ごせない性格だ。",
+    "exampleKr": "그는 정의감이 강해서 부정을 그냥 넘기지 못하는 성격이다."
   },
   {
     "id": "N1-1448",
@@ -15509,7 +15923,9 @@
     "word": "生計",
     "reading": "せいけい",
     "meaningKr": "생계",
-    "meaningEn": "livelihood, living"
+    "meaningEn": "livelihood, living",
+    "exampleJp": "彼女は小さな喫茶店を営んで生計を立てている。",
+    "exampleKr": "그녀는 작은 찻집을 운영해서 생계를 꾸리고 있다."
   },
   {
     "id": "N1-1449",
@@ -15518,7 +15934,9 @@
     "word": "政権",
     "reading": "せいけん",
     "meaningKr": "정권",
-    "meaningEn": "(political) administration, political power"
+    "meaningEn": "(political) administration, political power",
+    "exampleJp": "新しい政権は経済改革を最優先課題に掲げた。",
+    "exampleKr": "새 정권은 경제 개혁을 최우선 과제로 내걸었다."
   },
   {
     "id": "N1-1450",
@@ -15527,7 +15945,9 @@
     "word": "星座",
     "reading": "せいざ",
     "meaningKr": "별자리",
-    "meaningEn": "constellation"
+    "meaningEn": "constellation",
+    "exampleJp": "夜空を見上げて、彼はオリオン座の星座を指さした。",
+    "exampleKr": "밤하늘을 올려다보며 그는 오리온자리 별자리를 가리켰다."
   },
   {
     "id": "N1-1451",
@@ -15536,7 +15956,9 @@
     "word": "制裁",
     "reading": "せいさい",
     "meaningKr": "제재",
-    "meaningEn": "restraint, sanctions, punishment"
+    "meaningEn": "restraint, sanctions, punishment",
+    "exampleJp": "国際社会はその国に対して経済制裁を科した。",
+    "exampleKr": "국제사회는 그 나라에 대해 경제 제재를 가했다."
   },
   {
     "id": "N1-1452",
@@ -15545,7 +15967,9 @@
     "word": "政策",
     "reading": "せいさく",
     "meaningKr": "정책",
-    "meaningEn": "political measures, policy"
+    "meaningEn": "political measures, policy",
+    "exampleJp": "政府は少子化対策として新たな政策を打ち出した。",
+    "exampleKr": "정부는 저출산 대책으로 새로운 정책을 내놓았다."
   },
   {
     "id": "N1-1453",
@@ -15554,7 +15978,9 @@
     "word": "生死",
     "reading": "せいし",
     "meaningKr": "생사",
-    "meaningEn": "life and death"
+    "meaningEn": "life and death",
+    "exampleJp": "遭難した登山者の生死は、いまだに確認されていない。",
+    "exampleKr": "조난된 등산객의 생사는 아직도 확인되지 않고 있다."
   },
   {
     "id": "N1-1454",
@@ -15563,7 +15989,9 @@
     "word": "静止",
     "reading": "せいし",
     "meaningKr": "정지(멈춤)",
-    "meaningEn": "stillness, repose, standing still"
+    "meaningEn": "stillness, repose, standing still",
+    "exampleJp": "エレベーターが突然静止し、乗客は不安になった。",
+    "exampleKr": "엘리베이터가 갑자기 멈춰서 승객들은 불안해졌다."
   },
   {
     "id": "N1-1455",
@@ -15572,7 +16000,9 @@
     "word": "誠実",
     "reading": "せいじつ",
     "meaningKr": "성실",
-    "meaningEn": "sincere, honest, faithful"
+    "meaningEn": "sincere, honest, faithful",
+    "exampleJp": "彼の誠実な仕事ぶりは、取引先からも高く評価されている。",
+    "exampleKr": "그의 성실한 업무 태도는 거래처에서도 높이 평가받고 있다."
   },
   {
     "id": "N1-1456",
@@ -15581,7 +16011,9 @@
     "word": "成熟",
     "reading": "せいじゅく",
     "meaningKr": "성숙",
-    "meaningEn": "maturity, ripeness"
+    "meaningEn": "maturity, ripeness",
+    "exampleJp": "この市場はまだ成熟しておらず、成長の余地が大きい。",
+    "exampleKr": "이 시장은 아직 성숙하지 않아서 성장의 여지가 크다."
   },
   {
     "id": "N1-1457",
@@ -15590,7 +16022,9 @@
     "word": "青春",
     "reading": "せいしゅん",
     "meaningKr": "청춘",
-    "meaningEn": "youth, springtime of life, adolescent"
+    "meaningEn": "youth, springtime of life, adolescent",
+    "exampleJp": "彼にとって、あの部活動の日々は忘れられない青春の一ページだ。",
+    "exampleKr": "그에게 그 동아리 활동의 나날은 잊을 수 없는 청춘의 한 페이지다."
   },
   {
     "id": "N1-1458",
@@ -15599,7 +16033,9 @@
     "word": "清純",
     "reading": "せいじゅん",
     "meaningKr": "청순",
-    "meaningEn": "purity, innocence"
+    "meaningEn": "purity, innocence",
+    "exampleJp": "彼女は清純なイメージで多くのファンに支持されている。",
+    "exampleKr": "그녀는 청순한 이미지로 많은 팬들에게 지지를 받고 있다."
   },
   {
     "id": "N1-1459",
@@ -15608,7 +16044,9 @@
     "word": "聖書",
     "reading": "せいしょ",
     "meaningKr": "성경",
-    "meaningEn": "Bible"
+    "meaningEn": "Bible",
+    "exampleJp": "祖母は毎晩寝る前に聖書を読む習慣がある。",
+    "exampleKr": "할머니는 매일 밤 자기 전에 성경을 읽는 습관이 있다."
   },
   {
     "id": "N1-1460",
@@ -15617,7 +16055,9 @@
     "word": "正常",
     "reading": "せいじょう",
     "meaningKr": "정상",
-    "meaningEn": "normalcy, normality, normal"
+    "meaningEn": "normalcy, normality, normal",
+    "exampleJp": "検査の結果、すべての数値が正常な範囲内だった。",
+    "exampleKr": "검사 결과 모든 수치가 정상 범위 내였다."
   },
   {
     "id": "N1-1461",
@@ -15626,7 +16066,9 @@
     "word": "制する",
     "reading": "せいする",
     "meaningKr": "제압하다(통제하다)",
-    "meaningEn": "to control, to command"
+    "meaningEn": "to control, to command",
+    "exampleJp": "決勝戦では終始相手を制する試合運びを見せた。",
+    "exampleKr": "결승전에서는 처음부터 끝까지 상대를 제압하는 경기 운영을 보였다."
   },
   {
     "id": "N1-1462",
@@ -15635,7 +16077,9 @@
     "word": "整然",
     "reading": "せいぜん",
     "meaningKr": "정연함",
-    "meaningEn": "orderly, regular, well-organized"
+    "meaningEn": "orderly, regular, well-organized",
+    "exampleJp": "彼の主張は整然としていて、聞く者を納得させた。",
+    "exampleKr": "그의 주장은 조리 정연해서 듣는 사람을 납득시켰다."
   },
   {
     "id": "N1-1463",
@@ -15644,7 +16088,9 @@
     "word": "盛装",
     "reading": "せいそう",
     "meaningKr": "성장(화려하게 차려입음)",
-    "meaningEn": "be dressed up, wear rich clothes"
+    "meaningEn": "be dressed up, wear rich clothes",
+    "exampleJp": "パーティー会場には盛装した紳士淑女が集まっていた。",
+    "exampleKr": "파티장에는 화려하게 차려입은 신사 숙녀들이 모여 있었다."
   },
   {
     "id": "N1-1464",
@@ -15653,7 +16099,9 @@
     "word": "盛大",
     "reading": "せいだい",
     "meaningKr": "성대함",
-    "meaningEn": "grand, prosperous, magnificent"
+    "meaningEn": "grand, prosperous, magnificent",
+    "exampleJp": "創業百周年を記念して、盛大な祝賀会が開かれた。",
+    "exampleKr": "창업 백주년을 기념해서 성대한 축하연이 열렸다."
   },
   {
     "id": "N1-1465",
@@ -15662,7 +16110,9 @@
     "word": "清濁",
     "reading": "せいだく",
     "meaningKr": "청탁(선악)",
-    "meaningEn": "good and evil, purity and impurity"
+    "meaningEn": "good and evil, purity and impurity",
+    "exampleJp": "彼は清濁併せ呑む度量の持ち主として知られている。",
+    "exampleKr": "그는 선악을 가리지 않고 포용하는 도량을 지닌 사람으로 알려져 있다."
   },
   {
     "id": "N1-1466",
@@ -15671,7 +16121,9 @@
     "word": "制定",
     "reading": "せいてい",
     "meaningKr": "제정",
-    "meaningEn": "enactment, establishment, creation"
+    "meaningEn": "enactment, establishment, creation",
+    "exampleJp": "国会で新しい環境保護法が制定された。",
+    "exampleKr": "국회에서 새로운 환경보호법이 제정되었다."
   },
   {
     "id": "N1-1467",
@@ -15680,7 +16132,9 @@
     "word": "静的",
     "reading": "せいてき",
     "meaningKr": "정적",
-    "meaningEn": "static"
+    "meaningEn": "static",
+    "exampleJp": "この絵画は静的な構図の中に緊張感を漂わせている。",
+    "exampleKr": "이 그림은 정적인 구도 속에 긴장감을 자아내고 있다."
   },
   {
     "id": "N1-1468",
@@ -15689,7 +16143,9 @@
     "word": "製鉄",
     "reading": "せいてつ",
     "meaningKr": "제철",
-    "meaningEn": "iron manufacture"
+    "meaningEn": "iron manufacture",
+    "exampleJp": "この町は古くから製鉄業で栄えてきた。",
+    "exampleKr": "이 마을은 예로부터 제철업으로 번영해 왔다."
   },
   {
     "id": "N1-1469",
@@ -15698,7 +16154,9 @@
     "word": "晴天",
     "reading": "せいてん",
     "meaningKr": "맑은 하늘",
-    "meaningEn": "fine weather"
+    "meaningEn": "fine weather",
+    "exampleJp": "運動会当日は雲一つない晴天に恵まれた。",
+    "exampleKr": "운동회 당일은 구름 한 점 없는 맑은 날씨였다."
   },
   {
     "id": "N1-1470",
@@ -15707,7 +16165,9 @@
     "word": "正当",
     "reading": "せいとう",
     "meaningKr": "정당함",
-    "meaningEn": "just, due, proper"
+    "meaningEn": "just, due, proper",
+    "exampleJp": "彼の行動は正当な理由に基づいたものだった。",
+    "exampleKr": "그의 행동은 정당한 이유에 근거한 것이었다."
   },
   {
     "id": "N1-1471",
@@ -15716,7 +16176,9 @@
     "word": "制服",
     "reading": "せいふく",
     "meaningKr": "제복(교복)",
-    "meaningEn": "uniform"
+    "meaningEn": "uniform",
+    "exampleJp": "卒業式の日、彼女は最後に制服姿で写真を撮った。",
+    "exampleKr": "졸업식 날, 그녀는 마지막으로 교복 차림으로 사진을 찍었다."
   },
   {
     "id": "N1-1472",
@@ -15725,7 +16187,9 @@
     "word": "征服",
     "reading": "せいふく",
     "meaningKr": "정복",
-    "meaningEn": "conquest, subjugation, overcoming"
+    "meaningEn": "conquest, subjugation, overcoming",
+    "exampleJp": "彼はついに世界最高峰の征服という夢を果たした。",
+    "exampleKr": "그는 마침내 세계 최고봉 정복이라는 꿈을 이루었다."
   },
   {
     "id": "N1-1473",
@@ -15734,7 +16198,9 @@
     "word": "製法",
     "reading": "せいほう",
     "meaningKr": "제조법",
-    "meaningEn": "manufacturing method, recipe, formula"
+    "meaningEn": "manufacturing method, recipe, formula",
+    "exampleJp": "この酒蔵では江戸時代から伝わる製法を守り続けている。",
+    "exampleKr": "이 양조장에서는 에도 시대부터 전해오는 제조법을 지켜오고 있다."
   },
   {
     "id": "N1-1474",
@@ -15743,7 +16209,9 @@
     "word": "精密",
     "reading": "せいみつ",
     "meaningKr": "정밀함",
-    "meaningEn": "precise, exact, detailed, minute"
+    "meaningEn": "precise, exact, detailed, minute",
+    "exampleJp": "医師に勧められて、精密検査を受けることにした。",
+    "exampleKr": "의사의 권유로 정밀 검사를 받기로 했다."
   },
   {
     "id": "N1-1475",
@@ -15752,7 +16220,9 @@
     "word": "税務署",
     "reading": "ぜいむしょ",
     "meaningKr": "세무서",
-    "meaningEn": "tax office"
+    "meaningEn": "tax office",
+    "exampleJp": "確定申告の書類を税務署に提出してきた。",
+    "exampleKr": "종합소득세 신고 서류를 세무서에 제출하고 왔다."
   },
   {
     "id": "N1-1476",
@@ -15761,7 +16231,9 @@
     "word": "制約",
     "reading": "せいやく",
     "meaningKr": "제약",
-    "meaningEn": "limitation, constraints"
+    "meaningEn": "limitation, constraints",
+    "exampleJp": "予算の制約がある中で、最善の方法を模索した。",
+    "exampleKr": "예산 제약이 있는 상황에서 최선의 방법을 모색했다."
   },
   {
     "id": "N1-1477",
@@ -15770,7 +16242,9 @@
     "word": "勢力",
     "reading": "せいりょく",
     "meaningKr": "세력",
-    "meaningEn": "influence, power, might, strength"
+    "meaningEn": "influence, power, might, strength",
+    "exampleJp": "台風は勢力を弱めながら本州に接近している。",
+    "exampleKr": "태풍은 세력을 약화시키면서 혼슈에 접근하고 있다."
   },
   {
     "id": "N1-1478",
@@ -15779,7 +16253,9 @@
     "word": "整列",
     "reading": "せいれつ",
     "meaningKr": "정렬",
-    "meaningEn": "stand in a row, form a line"
+    "meaningEn": "stand in a row, form a line",
+    "exampleJp": "先生の合図で、生徒たちは校庭に整列した。",
+    "exampleKr": "선생님의 신호에 학생들은 운동장에 정렬했다."
   },
   {
     "id": "N1-1479",
@@ -15788,7 +16264,9 @@
     "word": "セール",
     "reading": "セール",
     "meaningKr": "세일",
-    "meaningEn": "sale"
+    "meaningEn": "sale",
+    "exampleJp": "年末セールを狙って、冬物のコートをまとめ買いした。",
+    "exampleKr": "연말 세일을 노려서 겨울 코트를 한꺼번에 샀다."
   },
   {
     "id": "N1-1480",
@@ -15797,7 +16275,9 @@
     "word": "急かす",
     "reading": "せかす",
     "meaningKr": "재촉하다",
-    "meaningEn": "to hurry, to urge on"
+    "meaningEn": "to hurry, to urge on",
+    "exampleJp": "上司に急かされて、資料をあわてて仕上げた。",
+    "exampleKr": "상사가 재촉하는 바람에 서둘러 자료를 완성했다."
   },
   {
     "id": "N1-1481",
@@ -15806,7 +16286,9 @@
     "word": "伜",
     "reading": "せがれ",
     "meaningKr": "자식(아들)",
-    "meaningEn": "son, my son"
+    "meaningEn": "son, my son",
+    "exampleJp": "うちの伜も来年で成人式を迎える年になった。",
+    "exampleKr": "우리 아들도 내년이면 성인식을 맞는 나이가 되었다."
   },
   {
     "id": "N1-1482",
@@ -15815,7 +16297,9 @@
     "word": "責務",
     "reading": "せきむ",
     "meaningKr": "책무",
-    "meaningEn": "duty, obligation"
+    "meaningEn": "duty, obligation",
+    "exampleJp": "国民の安全を守ることは政府の重大な責務である。",
+    "exampleKr": "국민의 안전을 지키는 것은 정부의 중대한 책무이다."
   },
   {
     "id": "N1-1483",
@@ -15824,7 +16308,9 @@
     "word": "セクション",
     "reading": "セクション",
     "meaningKr": "섹션",
-    "meaningEn": "section"
+    "meaningEn": "section",
+    "exampleJp": "この雑誌は年代別にセクションが分かれている。",
+    "exampleKr": "이 잡지는 연령대별로 섹션이 나뉘어 있다."
   },
   {
     "id": "N1-1484",
@@ -15833,7 +16319,9 @@
     "word": "世辞",
     "reading": "せじ",
     "meaningKr": "빈말(아첨)",
-    "meaningEn": "flattery, compliment"
+    "meaningEn": "flattery, compliment",
+    "exampleJp": "彼はお世辞が上手で、誰からも好かれている。",
+    "exampleKr": "그는 빈말을 잘해서 누구에게나 사랑받는다."
   },
   {
     "id": "N1-1485",
@@ -15842,7 +16330,9 @@
     "word": "世帯",
     "reading": "せたい",
     "meaningKr": "세대(가구)",
-    "meaningEn": "household"
+    "meaningEn": "household",
+    "exampleJp": "この地域は一人暮らしの世帯が年々増えている。",
+    "exampleKr": "이 지역은 1인 가구가 해마다 늘고 있다."
   },
   {
     "id": "N1-1486",
@@ -15851,7 +16341,9 @@
     "word": "是正",
     "reading": "ぜせい",
     "meaningKr": "시정",
-    "meaningEn": "correction, revision"
+    "meaningEn": "correction, revision",
+    "exampleJp": "会社は長時間労働の是正に取り組み始めた。",
+    "exampleKr": "회사는 장시간 노동의 시정에 나서기 시작했다."
   },
   {
     "id": "N1-1487",
@@ -15860,7 +16352,9 @@
     "word": "世代",
     "reading": "せだい",
     "meaningKr": "세대(世代)",
-    "meaningEn": "generation"
+    "meaningEn": "generation",
+    "exampleJp": "この価値観の違いは、世代の差によるものだろう。",
+    "exampleKr": "이 가치관의 차이는 세대 차이에 의한 것일 것이다."
   },
   {
     "id": "N1-1488",
@@ -15869,7 +16363,9 @@
     "word": "切開",
     "reading": "せっかい",
     "meaningKr": "절개",
-    "meaningEn": "opening up, cutting through"
+    "meaningEn": "opening up, cutting through",
+    "exampleJp": "緊急のため、帝王切開で出産することになった。",
+    "exampleKr": "긴급 상황이라 제왕절개로 출산하게 되었다."
   },
   {
     "id": "N1-1489",
@@ -15878,7 +16374,9 @@
     "word": "セックス",
     "reading": "セックス",
     "meaningKr": "섹스",
-    "meaningEn": "sex"
+    "meaningEn": "sex",
+    "exampleJp": "その授業では性教育の一環としてセックスについても学ぶ。",
+    "exampleKr": "그 수업에서는 성교육의 일환으로 성관계에 대해서도 배운다."
   },
   {
     "id": "N1-1490",
@@ -15887,7 +16385,9 @@
     "word": "切実",
     "reading": "せつじつ",
     "meaningKr": "절실함",
-    "meaningEn": "compelling, serious, severe, acute"
+    "meaningEn": "compelling, serious, severe, acute",
+    "exampleJp": "被災地では水と食料の不足が切実な問題となっている。",
+    "exampleKr": "재해 지역에서는 물과 식량 부족이 절실한 문제가 되고 있다."
   },
   {
     "id": "N1-1491",
@@ -15896,7 +16396,9 @@
     "word": "接触",
     "reading": "せっしょく",
     "meaningKr": "접촉",
-    "meaningEn": "touch, contact"
+    "meaningEn": "touch, contact",
+    "exampleJp": "捜査関係者は事件の重要人物と接触を試みている。",
+    "exampleKr": "수사관계자는 사건의 중요 인물과 접촉을 시도하고 있다."
   },
   {
     "id": "N1-1492",
@@ -15905,7 +16407,9 @@
     "word": "接続詞",
     "reading": "せつぞくし",
     "meaningKr": "접속사",
-    "meaningEn": "conjunction"
+    "meaningEn": "conjunction",
+    "exampleJp": "日本語の作文では接続詞の使い方が文章の流れを左右する。",
+    "exampleKr": "일본어 작문에서는 접속사 사용법이 문장의 흐름을 좌우한다."
   },
   {
     "id": "N1-1493",
@@ -15914,7 +16418,9 @@
     "word": "設置",
     "reading": "せっち",
     "meaningKr": "설치",
-    "meaningEn": "establishment, institution"
+    "meaningEn": "establishment, institution",
+    "exampleJp": "駅前に新しい防犯カメラが設置された。",
+    "exampleKr": "역 앞에 새로운 방범 카메라가 설치되었다."
   },
   {
     "id": "N1-1494",
@@ -15923,7 +16429,9 @@
     "word": "折衷",
     "reading": "せっちゅう",
     "meaningKr": "절충",
-    "meaningEn": "compromise, cross, blending, eclecticism"
+    "meaningEn": "compromise, cross, blending, eclecticism",
+    "exampleJp": "この建物は和洋折衷の様式で建てられている。",
+    "exampleKr": "이 건물은 일본식과 서양식을 절충한 양식으로 지어져 있다."
   },
   {
     "id": "N1-1495",
@@ -15932,7 +16440,9 @@
     "word": "設定",
     "reading": "せってい",
     "meaningKr": "설정",
-    "meaningEn": "establishment, creation"
+    "meaningEn": "establishment, creation",
+    "exampleJp": "スマートフォンの初期設定を済ませてから使い始めた。",
+    "exampleKr": "스마트폰의 초기 설정을 마친 후에 사용하기 시작했다."
   },
   {
     "id": "N1-1496",
@@ -15941,7 +16451,9 @@
     "word": "説得",
     "reading": "せっとく",
     "meaningKr": "설득",
-    "meaningEn": "persuasion"
+    "meaningEn": "persuasion",
+    "exampleJp": "反対する両親を何とか説得して留学を許してもらった。",
+    "exampleKr": "반대하는 부모님을 어떻게든 설득해서 유학을 허락받았다."
   },
   {
     "id": "N1-1497",
@@ -15950,7 +16462,9 @@
     "word": "切ない",
     "reading": "せつない",
     "meaningKr": "애달프다",
-    "meaningEn": "painful, trying, sad"
+    "meaningEn": "painful, trying, sad",
+    "exampleJp": "別れ際の彼女の笑顔が、かえって切なく感じられた。",
+    "exampleKr": "헤어질 때 그녀의 미소가 오히려 애달프게 느껴졌다."
   },
   {
     "id": "N1-1498",
@@ -15959,7 +16473,9 @@
     "word": "絶版",
     "reading": "ぜっぱん",
     "meaningKr": "절판",
-    "meaningEn": "out of print"
+    "meaningEn": "out of print",
+    "exampleJp": "探していた本はすでに絶版になっていた。",
+    "exampleKr": "찾고 있던 책은 이미 절판된 상태였다."
   },
   {
     "id": "N1-1499",
@@ -15968,7 +16484,9 @@
     "word": "設立",
     "reading": "せつりつ",
     "meaningKr": "설립",
-    "meaningEn": "establishment, foundation, institution"
+    "meaningEn": "establishment, foundation, institution",
+    "exampleJp": "彼は退職後、自らの会社を設立した。",
+    "exampleKr": "그는 퇴직 후 자신의 회사를 설립했다."
   },
   {
     "id": "N1-1500",
@@ -15977,7 +16495,9 @@
     "word": "攻め",
     "reading": "せめ",
     "meaningKr": "공격",
-    "meaningEn": "attack, offense"
+    "meaningEn": "attack, offense",
+    "exampleJp": "後半に入ってから、チームは攻めの姿勢を強めた。",
+    "exampleKr": "후반전에 들어서면서 팀은 공격 태세를 강화했다."
   },
   {
     "id": "N1-1501",
@@ -15986,7 +16506,9 @@
     "word": "ゼリー",
     "reading": "ゼリー",
     "meaningKr": "젤리",
-    "meaningEn": "jelly"
+    "meaningEn": "jelly",
+    "exampleJp": "食欲がない時は、冷たいゼリーがちょうどよい。",
+    "exampleKr": "식욕이 없을 때는 차가운 젤리가 딱 좋다."
   },
   {
     "id": "N1-1502",
@@ -15995,7 +16517,9 @@
     "word": "セレモニー",
     "reading": "セレモニー",
     "meaningKr": "세리모니(의식)",
-    "meaningEn": "ceremony"
+    "meaningEn": "ceremony",
+    "exampleJp": "新社屋の完成を祝うセレモニーが盛大に行われた。",
+    "exampleKr": "새 사옥 완공을 축하하는 세리모니가 성대하게 열렸다."
   },
   {
     "id": "N1-1503",
@@ -16004,7 +16528,9 @@
     "word": "世論",
     "reading": "せろん",
     "meaningKr": "여론",
-    "meaningEn": "public opinion"
+    "meaningEn": "public opinion",
+    "exampleJp": "増税に対する世論は依然として厳しい。",
+    "exampleKr": "증세에 대한 여론은 여전히 냉담하다."
   },
   {
     "id": "N1-1504",
@@ -16013,7 +16539,9 @@
     "word": "先",
     "reading": "せん",
     "meaningKr": "먼저(우선)",
-    "meaningEn": "priority, precedence, previous"
+    "meaningEn": "priority, precedence, previous",
+    "exampleJp": "議論に入る前に、まず現状の確認を先にしましょう。",
+    "exampleKr": "논의에 들어가기 전에 우선 현황 확인을 먼저 합시다."
   },
   {
     "id": "N1-1505",
@@ -16022,7 +16550,9 @@
     "word": "繊維",
     "reading": "せんい",
     "meaningKr": "섬유",
-    "meaningEn": "fiber, fiber, textile"
+    "meaningEn": "fiber, fiber, textile",
+    "exampleJp": "この地方は昔から繊維産業が盛んだった。",
+    "exampleKr": "이 지방은 예로부터 섬유 산업이 활발했다."
   },
   {
     "id": "N1-1506",
@@ -16031,7 +16561,9 @@
     "word": "全快",
     "reading": "ぜんかい",
     "meaningKr": "완쾌",
-    "meaningEn": "complete recovery of health"
+    "meaningEn": "complete recovery of health",
+    "exampleJp": "手術から半年たち、彼はようやく全快した。",
+    "exampleKr": "수술 후 반년이 지나 그는 마침내 완쾌했다."
   },
   {
     "id": "N1-1507",
@@ -16040,7 +16572,9 @@
     "word": "宣教",
     "reading": "せんきょう",
     "meaningKr": "선교",
-    "meaningEn": "religious mission"
+    "meaningEn": "religious mission",
+    "exampleJp": "彼はアジア各地で宣教活動を続けている。",
+    "exampleKr": "그는 아시아 각지에서 선교 활동을 계속하고 있다."
   },
   {
     "id": "N1-1508",
@@ -16049,7 +16583,9 @@
     "word": "宣言",
     "reading": "せんげん",
     "meaningKr": "선언",
-    "meaningEn": "declaration, proclamation, announcement"
+    "meaningEn": "declaration, proclamation, announcement",
+    "exampleJp": "首相は記者会見で緊急事態宣言を発表した。",
+    "exampleKr": "총리는 기자회견에서 긴급사태 선언을 발표했다."
   },
   {
     "id": "N1-1509",
@@ -16058,7 +16594,9 @@
     "word": "戦災",
     "reading": "せんさい",
     "meaningKr": "전쟁 피해",
-    "meaningEn": "war damage"
+    "meaningEn": "war damage",
+    "exampleJp": "この寺は戦災で焼失し、戦後に再建された。",
+    "exampleKr": "이 절은 전쟁 피해로 소실되어 전후에 재건되었다."
   },
   {
     "id": "N1-1510",
@@ -16067,7 +16605,9 @@
     "word": "専修",
     "reading": "せんしゅう",
     "meaningKr": "전수(전공)",
-    "meaningEn": "specialization"
+    "meaningEn": "specialization",
+    "exampleJp": "彼女は大学で経済学を専修している。",
+    "exampleKr": "그녀는 대학에서 경제학을 전공하고 있다."
   },
   {
     "id": "N1-1511",
