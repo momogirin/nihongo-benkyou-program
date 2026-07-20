@@ -3,11 +3,7 @@ import type { QuizQuestion } from './quizGenerator'
 import type { VocabQuizQuestion } from './vocabQuizGenerator'
 import type { GrammarQuizQuestion } from './grammarQuizGenerator'
 import type { MockExamQuestion } from './mockExamGenerator'
-import type {
-  EnglishVocabDerivationQuestion,
-  EnglishVocabDictationQuestion,
-  EnglishVocabQuizQuestion,
-} from './englishVocabQuizGenerator'
+import type { EnglishVocabDerivationQuestion, EnglishVocabQuizQuestion } from './englishVocabQuizGenerator'
 import type { EnglishLevel } from '../data/englishVocab'
 import type {
   AnsweredQuestion,
@@ -111,17 +107,6 @@ export interface EnglishVocabDerivationInProgressQuiz {
   startedAt: string
 }
 
-// 딕테이션(듣고 쓰기) 퀴즈용 이어하기 상태 — 위 두 타입과 나란한 세 번째
-// 병렬 구조(질문 shape은 entry뿐이지만 answers의 userAnswer가 텍스트 입력이라
-// 역시 합칠 수 없음)
-export interface EnglishVocabDictationInProgressQuiz {
-  level: EnglishLevel
-  questions: EnglishVocabDictationQuestion[]
-  index: number
-  answers: { question: EnglishVocabDictationQuestion; userAnswer: string; isCorrect: boolean }[]
-  startedAt: string
-}
-
 const WRONG_NOTES_KEY = 'kanjiApp.wrongNotes'
 const VOCAB_WRONG_NOTES_KEY = 'kanjiApp.vocabWrongNotes'
 const GRAMMAR_WRONG_NOTES_KEY = 'kanjiApp.grammarWrongNotes'
@@ -138,7 +123,6 @@ const GRAMMAR_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.grammarInProgressQuiz'
 const MOCK_EXAM_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.mockExamInProgressQuiz'
 const ENGLISH_VOCAB_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.englishVocabInProgressQuiz'
 const ENGLISH_VOCAB_DERIVATION_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.englishVocabDerivationInProgressQuiz'
-const ENGLISH_VOCAB_DICTATION_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.englishVocabDictationInProgressQuiz'
 const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
 const RADICAL_STUDY_PROGRESS_KEY = 'kanjiApp.radicalStudyProgress'
 const RADICAL_STUDY_BATCH_SIZE_KEY = 'kanjiApp.radicalStudyBatchSize'
@@ -439,28 +423,6 @@ export function clearEnglishVocabDerivationInProgressQuiz() {
 
 export function importEnglishVocabDerivationInProgressQuiz(quiz: EnglishVocabDerivationInProgressQuiz | null) {
   if (quiz && !getEnglishVocabDerivationInProgressQuiz()) saveEnglishVocabDerivationInProgressQuiz(quiz)
-}
-
-// same again, for the 딕테이션(듣고 쓰기) 퀴즈
-export function getEnglishVocabDictationInProgressQuiz(): EnglishVocabDictationInProgressQuiz | null {
-  try {
-    const raw = localStorage.getItem(ENGLISH_VOCAB_DICTATION_IN_PROGRESS_QUIZ_KEY)
-    return raw ? JSON.parse(raw) : null
-  } catch {
-    return null
-  }
-}
-
-export function saveEnglishVocabDictationInProgressQuiz(state: EnglishVocabDictationInProgressQuiz) {
-  localStorage.setItem(ENGLISH_VOCAB_DICTATION_IN_PROGRESS_QUIZ_KEY, JSON.stringify(state))
-}
-
-export function clearEnglishVocabDictationInProgressQuiz() {
-  localStorage.removeItem(ENGLISH_VOCAB_DICTATION_IN_PROGRESS_QUIZ_KEY)
-}
-
-export function importEnglishVocabDictationInProgressQuiz(quiz: EnglishVocabDictationInProgressQuiz | null) {
-  if (quiz && !getEnglishVocabDictationInProgressQuiz()) saveEnglishVocabDictationInProgressQuiz(quiz)
 }
 
 export function importGrammarInProgressQuiz(quiz: GrammarInProgressQuiz | null) {
@@ -811,8 +773,6 @@ export interface BackupPayload {
   englishVocabInProgressQuiz?: EnglishVocabInProgressQuiz | null
   // added in version 13 (영어단어 파생어 세트 품사 변환 빈칸형 퀴즈) — optional so older backup files still validate
   englishVocabDerivationInProgressQuiz?: EnglishVocabDerivationInProgressQuiz | null
-  // added in version 14 (영어단어 딕테이션 퀴즈) — optional so older backup files still validate
-  englishVocabDictationInProgressQuiz?: EnglishVocabDictationInProgressQuiz | null
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -847,7 +807,6 @@ export function buildBackupPayload(): BackupPayload {
     srsEnglishVocab: getAllSrsState('englishVocab'),
     englishVocabInProgressQuiz: getEnglishVocabInProgressQuiz(),
     englishVocabDerivationInProgressQuiz: getEnglishVocabDerivationInProgressQuiz(),
-    englishVocabDictationInProgressQuiz: getEnglishVocabDictationInProgressQuiz(),
   }
 }
 
@@ -880,6 +839,4 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.englishVocabInProgressQuiz) importEnglishVocabInProgressQuiz(payload.englishVocabInProgressQuiz)
   if (payload.englishVocabDerivationInProgressQuiz)
     importEnglishVocabDerivationInProgressQuiz(payload.englishVocabDerivationInProgressQuiz)
-  if (payload.englishVocabDictationInProgressQuiz)
-    importEnglishVocabDictationInProgressQuiz(payload.englishVocabDictationInProgressQuiz)
 }

@@ -1,39 +1,29 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import SpeakerButton from '../components/SpeakerButton'
 import { englishVocabList, type EnglishVocabWord, type EnglishLevel, type EnglishTopicTag } from '../data/englishVocab'
-import { speak } from '../lib/tts'
-import { normalizeAnswer } from '../lib/answerMatching'
 import {
   generateEnglishVocabQuestions,
   generateEnglishVocabQuestionsFromIds,
   generateEnglishVocabDerivationQuestions,
-  generateEnglishVocabDictationQuestions,
   englishVocabLevelPool,
   englishVocabDerivationLevelPool,
-  englishVocabDictationLevelPool,
   type EnglishVocabQuizQuestion,
   type EnglishVocabDerivationQuestion,
-  type EnglishVocabDictationQuestion,
 } from '../lib/englishVocabQuizGenerator'
 import {
   addEnglishVocabQuizHistoryEntry,
   addEnglishVocabWrongNotes,
   clearEnglishVocabInProgressQuiz,
   clearEnglishVocabDerivationInProgressQuiz,
-  clearEnglishVocabDictationInProgressQuiz,
   getEnglishVocabInProgressQuiz,
   getEnglishVocabDerivationInProgressQuiz,
-  getEnglishVocabDictationInProgressQuiz,
   getEnglishVocabStudyProgress,
   recordSrsReview,
   removeEnglishVocabWrongNote,
   saveEnglishVocabInProgressQuiz,
   saveEnglishVocabDerivationInProgressQuiz,
-  saveEnglishVocabDictationInProgressQuiz,
   setEnglishVocabStudyProgress,
   type EnglishVocabInProgressQuiz,
   type EnglishVocabDerivationInProgressQuiz,
-  type EnglishVocabDictationInProgressQuiz,
 } from '../lib/storage'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
@@ -110,13 +100,10 @@ type Phase =
   | 'quizResult'
   | 'derivationQuiz'
   | 'derivationQuizResult'
-  | 'dictationQuiz'
-  | 'dictationQuizResult'
-type QuizType = 'meaning' | 'derivation' | 'dictation'
+type QuizType = 'meaning' | 'derivation'
 const QUIZ_TYPE_LABELS: Record<QuizType, string> = {
   meaning: '뜻 맞히기',
   derivation: '품사 변환 빈칸형',
-  dictation: '딕테이션(듣고 쓰기)',
 }
 
 interface QuizAnswer {
@@ -131,12 +118,6 @@ interface DerivationAnswer {
   isCorrect: boolean
 }
 
-interface DictationAnswer {
-  question: EnglishVocabDictationQuestion
-  userAnswer: string
-  isCorrect: boolean
-}
-
 interface Props {
   retryIds?: string[] | null
   onRetryIdsConsumed?: () => void
@@ -146,7 +127,6 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   const [level, setLevel] = useState<EnglishLevel>(ALL_LEVELS[0])
   const pool = useMemo(() => englishVocabLevelPool(level), [level])
   const derivationPool = useMemo(() => englishVocabDerivationLevelPool(level), [level])
-  const dictationPool = useMemo(() => englishVocabDictationLevelPool(level), [level])
   const completedCount = Math.min(getEnglishVocabStudyProgress(level), pool.length)
   const remaining = pool.length - completedCount
 
@@ -203,28 +183,10 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   const lastAdvancedDerivationIndexRef = useRef(-1)
   const [savedDerivationQuiz, setSavedDerivationQuiz] = useState(() => getEnglishVocabDerivationInProgressQuiz())
 
-  // 딕테이션(듣고 쓰기) 퀴즈 — 4지선다가 아니라 텍스트 입력이라 선택지 상태
-  // (feedback.selected 등) 대신 QuizRunner(한자 promptToAnswer)와 같은
-  // inputValue를 씀. 나머지 두 퀴즈 타입과 나란한 세 번째 병렬 구조.
-  const [dictationQuestions, setDictationQuestions] = useState<EnglishVocabDictationQuestion[]>([])
-  const [dictationIndex, setDictationIndex] = useState(0)
-  const [dictationAnswers, setDictationAnswers] = useState<DictationAnswer[]>([])
-  const [dictationInputValue, setDictationInputValue] = useState('')
-  const [dictationFeedback, setDictationFeedback] = useState<{ isCorrect: boolean; userAnswer: string } | null>(
-    null,
-  )
-  const dictationInputRef = useRef<HTMLInputElement>(null)
-  const dictationRestartButtonRef = useRef<HTMLButtonElement>(null)
-  const dictationStartRef = useRef(0)
-  const lastAdvancedDictationIndexRef = useRef(-1)
-  const lastSubmittedDictationIndexRef = useRef(-1)
-  const [savedDictationQuiz, setSavedDictationQuiz] = useState(() => getEnglishVocabDictationInProgressQuiz())
-
   useEffect(() => {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'quizResult') restartButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'derivationQuizResult') derivationRestartButtonRef.current?.focus({ preventScroll: true })
-    if (phase === 'dictationQuizResult') dictationRestartButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
 
   function startBatch(fromLevel: EnglishLevel, fromCompleted: number) {
@@ -301,33 +263,6 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
     setPhase('derivationQuiz')
   }
 
-  function startDictationQuiz() {
-    clearEnglishVocabDictationInProgressQuiz()
-    setSavedDictationQuiz(null)
-    const count = quizCount === 'all' ? dictationPool.length : quizCount
-    setDictationQuestions(generateEnglishVocabDictationQuestions(level, count, quizOrder))
-    setDictationIndex(0)
-    setDictationAnswers([])
-    setDictationInputValue('')
-    setDictationFeedback(null)
-    lastAdvancedDictationIndexRef.current = -1
-    lastSubmittedDictationIndexRef.current = -1
-    dictationStartRef.current = Date.now()
-    setPhase('dictationQuiz')
-  }
-
-  function resumeDictationQuiz(saved: EnglishVocabDictationInProgressQuiz) {
-    setDictationQuestions(saved.questions)
-    setDictationIndex(saved.index)
-    setDictationAnswers(saved.answers)
-    setDictationInputValue('')
-    setDictationFeedback(null)
-    lastAdvancedDictationIndexRef.current = -1
-    lastSubmittedDictationIndexRef.current = -1
-    dictationStartRef.current = new Date(saved.startedAt).getTime()
-    setPhase('dictationQuiz')
-  }
-
   useEffect(() => {
     if (!retryIds || retryIds.length === 0) return
     clearEnglishVocabInProgressQuiz()
@@ -379,25 +314,6 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
     })
     derivationAnswers.filter((a) => a.isCorrect).forEach((a) => removeEnglishVocabWrongNote(a.question.entry.id))
     derivationAnswers.forEach((a) => recordSrsReview('englishVocab', a.question.entry.id, a.isCorrect))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase])
-
-  useEffect(() => {
-    if (phase !== 'dictationQuizResult') return
-    clearEnglishVocabDictationInProgressQuiz()
-    setSavedDictationQuiz(null)
-    const wrongIds = dictationAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
-    addEnglishVocabWrongNotes(wrongIds, `영어 단어 딕테이션 퀴즈 · ${LEVEL_LABELS[level]}`)
-    addEnglishVocabQuizHistoryEntry({
-      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-      level,
-      total: dictationAnswers.length,
-      correct: dictationAnswers.filter((a) => a.isCorrect).length,
-      elapsedMs: Date.now() - dictationStartRef.current,
-      finishedAt: new Date().toISOString(),
-    })
-    dictationAnswers.filter((a) => a.isCorrect).forEach((a) => removeEnglishVocabWrongNote(a.question.entry.id))
-    dictationAnswers.forEach((a) => recordSrsReview('englishVocab', a.question.entry.id, a.isCorrect))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 
@@ -568,83 +484,6 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, derivationIndex, derivationFeedback])
 
-  // 딕테이션은 선택지가 아니라 텍스트 입력이라 QuizRunner(한자 promptToAnswer)와
-  // 같은 방식으로 매 문제 진입 시 입력창에 포커스. 동시에 발음도 자동 재생 —
-  // 사용자가 매번 스피커 버튼을 누르지 않아도 바로 듣고 받아쓸 수 있게(다시
-  // 듣고 싶으면 화면의 스피커 버튼으로 재생 가능)
-  useEffect(() => {
-    if (phase !== 'dictationQuiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
-    dictationInputRef.current?.focus()
-    const question = dictationQuestions[dictationIndex]
-    if (question) speak(question.entry.word, 'en-US')
-  }, [phase, dictationIndex])
-
-  function goNextDictation(nextIndex: number) {
-    if (nextIndex < dictationQuestions.length) {
-      setDictationInputValue('')
-      setDictationFeedback(null)
-      setDictationIndex(nextIndex)
-    } else {
-      setPhase('dictationQuizResult')
-    }
-  }
-
-  function handleNextDictation() {
-    if (lastAdvancedDictationIndexRef.current === dictationIndex) return
-    lastAdvancedDictationIndexRef.current = dictationIndex
-    skipNextChoiceFocusRef.current = true
-    goNextDictation(dictationIndex + 1)
-  }
-
-  function submitDictationAnswer(rawAnswer: string) {
-    if (lastSubmittedDictationIndexRef.current === dictationIndex) return
-    lastSubmittedDictationIndexRef.current = dictationIndex
-
-    const question = dictationQuestions[dictationIndex]
-    // 대소문자는 구분하지 않음 — 딕테이션의 목적은 철자 암기지 대소문자
-    // 표기법 암기가 아님(answerMatching.normalizeAnswer는 대소문자를 그대로
-    // 두므로 여기서 별도로 소문자 비교)
-    const isCorrect = normalizeAnswer(rawAnswer).toLowerCase() === normalizeAnswer(question.entry.word).toLowerCase()
-    setDictationFeedback({ isCorrect, userAnswer: rawAnswer })
-    const updatedAnswers = [...dictationAnswers, { question, userAnswer: rawAnswer, isCorrect }]
-    setDictationAnswers(updatedAnswers)
-
-    const nextIndex = dictationIndex + 1
-    if (nextIndex < dictationQuestions.length) {
-      saveEnglishVocabDictationInProgressQuiz({
-        level,
-        questions: dictationQuestions,
-        index: nextIndex,
-        answers: updatedAnswers,
-        startedAt: new Date(dictationStartRef.current).toISOString(),
-      })
-    }
-
-    if (isCorrect) {
-      setTimeout(() => goNextDictation(nextIndex), FEEDBACK_DELAY_MS)
-    }
-  }
-
-  useEffect(() => {
-    if (phase !== 'dictationQuiz') return
-    function handleKeyDown(e: KeyboardEvent) {
-      if (dictationFeedback) {
-        if (!dictationFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextDictation()
-        return
-      }
-      if (e.key === 'Enter' && !e.repeat && dictationInputValue.trim() !== '') {
-        submitDictationAnswer(dictationInputValue)
-      }
-    }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, dictationIndex, dictationFeedback, dictationInputValue])
-
   if (phase === 'browse' && browseIndex !== null) {
     const word = levelWords[browseIndex]
     const isFirst = browseIndex === 0
@@ -671,10 +510,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
                 </span>
               ))}
             </div>
-            <div className="vocab-word-jp vocab-word-with-speaker">
-              {word.word}
-              <SpeakerButton text={word.word} lang="en-US" />
-            </div>
+            <div className="vocab-word-jp">{word.word}</div>
             <dl className="study-fields">
               <div className="study-field">
                 <dt>뜻</dt>
@@ -829,10 +665,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
                 </span>
               ))}
             </div>
-            <div className="vocab-word-jp vocab-word-with-speaker">
-              {word.word}
-              <SpeakerButton text={word.word} lang="en-US" />
-            </div>
+            <div className="vocab-word-jp">{word.word}</div>
             <dl className="study-fields">
               <div className="study-field">
                 <dt>뜻</dt>
@@ -928,10 +761,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
           </div>
         </div>
         <div className="vocab-quiz-prompt">
-          <span className="vocab-quiz-prompt-word vocab-word-with-speaker">
-            {question.entry.word}
-            <SpeakerButton text={question.entry.word} lang="en-US" size={16} />
-          </span>
+          <span className="vocab-quiz-prompt-word">{question.entry.word}</span>
           <span className="vocab-quiz-prompt-reading">{question.entry.pos}</span>
         </div>
         <div className="vocab-quiz-choices" ref={choicesRef}>
@@ -1106,96 +936,6 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
     )
   }
 
-  if (phase === 'dictationQuiz') {
-    const question = dictationQuestions[dictationIndex]
-    return (
-      <div className="quiz-runner">
-        <div className="quiz-topbar">
-          <button
-            type="button"
-            className="quiz-exit-button"
-            onClick={() => {
-              setPhase('setup')
-              setSavedDictationQuiz(getEnglishVocabDictationInProgressQuiz())
-            }}
-          >
-            나가기
-          </button>
-          <div className="quiz-progress">
-            {dictationIndex + 1} / {dictationQuestions.length}
-          </div>
-        </div>
-        <div className="vocab-dictation-prompt">
-          <SpeakerButton text={question.entry.word} lang="en-US" size={28} />
-          <span className="vocab-dictation-pos">{question.entry.pos}</span>
-        </div>
-        <input
-          ref={dictationInputRef}
-          className="quiz-input"
-          type="text"
-          value={dictationInputValue}
-          disabled={dictationFeedback !== null}
-          placeholder="들은 단어의 철자를 입력하세요"
-          autoComplete="off"
-          autoCapitalize="off"
-          autoCorrect="off"
-          spellCheck={false}
-          onChange={(e) => setDictationInputValue(e.target.value)}
-        />
-        {dictationFeedback && (
-          <p className={`quiz-feedback ${dictationFeedback.isCorrect ? 'correct' : 'incorrect'}`}>
-            {dictationFeedback.isCorrect ? '정답입니다' : `오답 · 정답: ${question.entry.word}`}
-          </p>
-        )}
-        {dictationFeedback && !dictationFeedback.isCorrect && (
-          <button type="button" className="quiz-next-button" onClick={handleNextDictation}>
-            다음
-          </button>
-        )}
-        <p className="shortcut-hint">스피커 버튼으로 다시 듣기 · Enter로 제출 · 오답이면 Enter로 다음 문제</p>
-      </div>
-    )
-  }
-
-  if (phase === 'dictationQuizResult') {
-    const correctCount = dictationAnswers.filter((a) => a.isCorrect).length
-    const total = dictationAnswers.length
-    const rate = total > 0 ? Math.round((correctCount / total) * 100) : 0
-
-    return (
-      <div className="result-screen">
-        <h1>영어 단어 딕테이션 퀴즈 결과</h1>
-        <p className="result-summary">
-          {correctCount} / {total} 정답 ({rate}%)
-        </p>
-        <ul className="result-list">
-          {dictationAnswers.map((a, i) => (
-            <li key={`${a.question.entry.id}-${i}`} className={a.isCorrect ? 'correct' : 'incorrect'}>
-              <span className="vocab-result-word">
-                {a.question.entry.word}
-                <span className="vocab-result-reading">{a.question.entry.pos}</span>
-              </span>
-              <span className="result-detail">
-                <span className="result-detail-main">
-                  정답: {a.question.entry.word}
-                  {!a.isCorrect && <> · 내 답: {a.userAnswer}</>}
-                </span>
-              </span>
-            </li>
-          ))}
-        </ul>
-        <button
-          type="button"
-          ref={dictationRestartButtonRef}
-          className="restart-button"
-          onClick={() => setPhase('setup')}
-        >
-          다시 설정하기
-        </button>
-      </div>
-    )
-  }
-
   const isLevelFinished = pool.length > 0 && remaining <= 0
 
   return (
@@ -1238,18 +978,6 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
         </>
       )}
 
-      {savedDictationQuiz && (
-        <>
-          <p className="page-placeholder">
-            진행 중이던 딕테이션 퀴즈가 있어요 ({LEVEL_LABELS[savedDictationQuiz.level]} · {savedDictationQuiz.index}/
-            {savedDictationQuiz.questions.length}문제)
-          </p>
-          <button type="button" className="study-start-button" onClick={() => resumeDictationQuiz(savedDictationQuiz)}>
-            이어서 풀기
-          </button>
-        </>
-      )}
-
       <div className="study-level-picker">
         {ALL_LEVELS.map((l) => (
           <button
@@ -1285,7 +1013,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
       <div className="quiz-option-group">
         <span className="quiz-option-label">퀴즈 종류</span>
         <div className="study-level-picker">
-          {(['meaning', 'derivation', 'dictation'] as const).map((t) => (
+          {(['meaning', 'derivation'] as const).map((t) => (
             <button
               key={t}
               type="button"
@@ -1302,7 +1030,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
         <span className="quiz-option-label">문항 수</span>
         <div className="study-level-picker">
           {QUIZ_COUNT_OPTIONS.map((opt) => {
-            const activePool = quizType === 'meaning' ? pool : quizType === 'derivation' ? derivationPool : dictationPool
+            const activePool = quizType === 'meaning' ? pool : derivationPool
             const disabled = opt !== 'all' && opt > activePool.length
             return (
               <button
@@ -1345,7 +1073,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
         <button type="button" className="vocab-quiz-button" onClick={startQuiz} disabled={pool.length === 0}>
           단어 퀴즈 풀기 ({quizCount === 'all' ? pool.length : Math.min(quizCount, pool.length)}문제)
         </button>
-      ) : quizType === 'derivation' ? (
+      ) : (
         <button
           type="button"
           className="vocab-quiz-button"
@@ -1353,15 +1081,6 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
           disabled={derivationPool.length === 0}
         >
           품사 변환 퀴즈 풀기 ({quizCount === 'all' ? derivationPool.length : Math.min(quizCount, derivationPool.length)}문제)
-        </button>
-      ) : (
-        <button
-          type="button"
-          className="vocab-quiz-button"
-          onClick={startDictationQuiz}
-          disabled={dictationPool.length === 0}
-        >
-          딕테이션 퀴즈 풀기 ({quizCount === 'all' ? dictationPool.length : Math.min(quizCount, dictationPool.length)}문제)
         </button>
       )}
     </div>

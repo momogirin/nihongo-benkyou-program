@@ -17,14 +17,6 @@
   font-size: 13px;
 }
 
-/* 예문 발음 듣기(TTS) 버튼 — grammar-example-kr(번역)과 달리 exampleJp
-   원문과 같은 줄에서 인라인으로 나란히 놓임 */
-.grammar-example-with-speaker {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
 .grammar-quiz-button {
   display: block;
   width: 100%;

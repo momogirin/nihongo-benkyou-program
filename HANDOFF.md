@@ -28,28 +28,14 @@
 - `npm run data:build`로 `src/data/kanji.ts` 재생성 완료. 이제 한자 2138자 전부 핵심 필드(kunKr/kunJp/exampleKanji/exampleJp/exampleKr) 결측 0건(onJp만 6자가 의도적으로 빈 문자열).
 - **교훈**: "전수 검토했다"는 과거 기록도 실제로 스크립트로 재검증하기 전까진 100% 신뢰하지 말 것 — 그 감사가 정확히 무엇을 검증했는지(내용 오류 vs 필드 존재 여부)가 다를 수 있음.
 
-## 딕테이션(듣고 쓰기) 퀴즈 추가 (2026-07-16 완료)
+## TTS(발음 듣기) 및 딕테이션 퀴즈 전면 제거 (2026-07-20 완료)
 
-영어(TOEIC) 2단계(보류) 후보 중 발음 듣기(TTS) 다음으로 착수 — TTS 인프라가 이미 있어서 추가 데이터 없이 바로 구현 가능했음(주제 태그/콜로케이션/유의어 퀴즈는 여전히 미착수, 데이터 소스나 범위 문제로 보류 유지). 뜻맞히기/품사변환에 이은 **세 번째 퀴즈 종류**로, 4지선다가 아니라 발음을 듣고 철자를 텍스트로 입력하는 방식(한자 퀴즈 `QuizRunner.tsx`의 promptToAnswer 입력 모드와 같은 패턴).
+아래 두 섹션("딕테이션 퀴즈 추가", "TTS 전 도메인 확장")에서 구현했던 내용을 사용자 요청으로 전부 되돌림. 브라우저 내장 Web Speech API 기반이었는데, 실사용 품질/필요성 문제로 제거 결정.
 
-- `lib/englishVocabQuizGenerator.ts`: `EnglishVocabDictationQuestion{entry}` + `generateEnglishVocabDictationQuestions`/`englishVocabDictationLevelPool` 추가. 선택지가 없어 파생어 퀴즈처럼 별도 pool 필터가 필요 없음(급수 전체가 대상).
-- `storage.ts`: `EnglishVocabDictationInProgressQuiz` 타입 + CRUD 세트를 기존 두 퀴즈 타입과 나란히 추가(질문 shape이 달라 합칠 수 없음 — 이 레포 기존 컨벤션). `BackupPayload` 버전 13→14.
-- `EnglishVocabPage.tsx`: `quizType`에 `'dictation'` 추가, "퀴즈 종류" 선택기가 이제 3종. 문제 진입 시 자동으로 발음 재생(`speak()`) + 입력창 포커스 — 단어 텍스트는 안 보여주고 스피커 버튼(56px, 큼직하게)만 표시, 다시 듣고 싶으면 버튼 재클릭. 정답 비교는 `normalizeAnswer()`(공백 제거) + 소문자 변환으로 대소문자 무시(딕테이션 목적이 철자 암기지 대소문자 표기법 암기가 아니므로).
-- **재도전 범위**: 오답노트 "오답 재도전"은 기존에도 영어단어가 도메인 전체 뜻맞히기로만 재도전됐음(파생어 퀴즈 오답도 마찬가지 — `questionType` 유형별 재도전은 한자 퀴즈에만 있는 기능). 딕테이션도 같은 기존 제약을 그대로 따름 — `generateEnglishVocabDictationQuestionsFromIds`류는 지금 쓸 곳이 없어 만들지 않음(필요해지면 재도전 유형 확장과 함께 추가).
-- `VocabPage.css`: `vocab-dictation-prompt`/`vocab-dictation-pos` 추가.
-
-## 발음 듣기(TTS) 전 도메인 확장 (2026-07-16, 영어 다음 이어서 완료)
-
-영어 단어에 TTS를 넣은 직후 사용자가 "일본어에 그런거 없지않나?"라고 지적 → 맞는 지적이라 세 도메인(한자/일본어 단어/문법) 전부에 같은 패턴으로 확장. 저장되는 음성 파일이 없는 브라우저 내장 API라 데이터 용량 걱정은 없음(사용자가 "데이터양이 꽤 많지 않나" 물어봄 → 실시간 합성이라 데이터 추가 없다고 확인).
-
-- **공용화**: 기존에 `EnglishVocabPage.tsx`에 인라인으로 있던 `canSpeak`/`speak()`를 `src/lib/tts.ts`로, 반복되던 스피커 아이콘 버튼 마크업을 `src/components/SpeakerButton.tsx`(`text`/`lang`/`size` prop)로 뽑아 공용 컴포넌트화. `vocab-word-with-speaker`/`vocab-speaker-button` CSS는 원래 `VocabPage.css`(영어 전용인 줄 알고 넣었던 것)에 있었는데 전 도메인 공용이 되면서 모든 학습 화면이 import하는 `StudyPage.css`로 이동.
-- **어떤 텍스트를 읽어줄지 도메인별로 판단**:
-  - 일본어 단어(`VocabPage.tsx`/`WrongNotePage.tsx`의 VocabDetailCard): 한자 표기(`word`)가 아니라 `reading`(히라가나)을 읽음 — 한자 단독은 TTS가 어느 음/훈으로 읽을지 모호함.
-  - 한자(`StudyPage.tsx`/`KanjiListPage.tsx`/`WrongNotePage.tsx`의 KanjiDetailCard): `kunJp`(훈독) 우선, 없으면 `onJp`(음독)로 대체하는 `primaryReading()` 헬퍼를 `lib/kanjiUsage.ts`에 추가(`usedKanji`와 같은 파일, 같은 성격의 한자 유틸). `kunJp`/`onJp`가 "ひ・か"처럼 중점(・)으로 여러 읽기를 묶어 저장하므로 첫 번째 읽기만 뽑음.
-  - 문법(`GrammarPage.tsx`/`WrongNotePage.tsx`의 GrammarDetailCard): 표제어(`pattern`, 예: "～あっての")는 조사만 있어 단독 발음이 부자연스러워서 대신 `exampleJp`(완전한 예문 문장)를 읽음.
-  - 영어 단어: 기존 그대로 `word`를 en-US로 읽음(변경 없음).
-- **적용 범위**: 학습(플래시카드)/전체보기 상세/오답노트 상세 모달/뜻맞히기(또는 대응하는) 퀴즈 프롬프트 — 즉 표제어가 눈에 보이는 곳마다 스피커 버튼. **모의고사(`MockExamPage.tsx`)는 제외** — 세 도메인 문제가 `MockExamQuestion{domain, prompt}`로 이미 통일된 shape인데, `prompt` 필드가 도메인별로 다른 성격의 텍스트라(한자 글자/단어/문법 패턴) "무엇을 읽어줄지"가 도메인마다 다시 판단이 필요해서 범위 밖으로 미룸. 영어 단어의 품사 변환 빈칸형 퀴즈도 기존처럼 미적용 상태(문장이 빈칸으로 가려져 있어 설계 필요).
-- 미지원 브라우저에서는 `SpeakerButton`이 `canSpeak === false`일 때 `null`을 반환해 버튼 자체가 안 보임(조용히 실패하는 게 아니라 애초에 안 뜸).
+- 삭제된 파일: `src/lib/tts.ts`, `src/components/SpeakerButton.tsx`.
+- 제거된 사용처: `StudyPage.tsx`/`KanjiListPage.tsx`/`VocabPage.tsx`/`GrammarPage.tsx`/`WrongNotePage.tsx`의 표제어 옆 스피커 버튼, `EnglishVocabPage.tsx`의 학습·전체보기·퀴즈 프롬프트 스피커 버튼. 관련 CSS(`vocab-word-with-speaker`/`vocab-speaker-button`/`grammar-example-with-speaker`)도 `StudyPage.css`/`GrammarPage.css`에서 제거.
+- **딕테이션(듣고 쓰기) 퀴즈 자체를 완전히 삭제**(TTS 발음 재생을 전제로 한 퀴즈라 TTS 제거 시 성립 불가): `EnglishVocabPage.tsx`의 `quizType`이 `'meaning' | 'derivation'` 2종으로 축소, 관련 phase(`dictationQuiz`/`dictationQuizResult`)·state·핸들러 전부 제거. `lib/englishVocabQuizGenerator.ts`의 `EnglishVocabDictationQuestion`/`generateEnglishVocabDictationQuestions`/`englishVocabDictationLevelPool` 삭제. `storage.ts`의 `EnglishVocabDictationInProgressQuiz` 타입·CRUD·`BackupPayload` 필드 삭제(과거 백업 파일에 남은 필드는 그냥 무시됨 — `BackupPayload.version`은 14 그대로 유지, 하위 호환 문제 없음). `VocabPage.css`의 `vocab-dictation-prompt`/`vocab-dictation-pos` 삭제.
+- 오답노트에 이미 쌓인 딕테이션 퀴즈발 wrong note는 그대로 남아있음(별도 마이그레이션 안 함 — 재도전 시 기존 뜻맞히기 퀴즈로 자연스럽게 흡수됨).
 
 ## 홈 화면 재구성 (2026-07-16 완료)
 

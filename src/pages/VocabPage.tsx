@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import SpeakerButton from '../components/SpeakerButton'
 import { vocabList, type VocabWord } from '../data/vocab'
 import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
@@ -295,10 +294,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             <div className="study-top">
               <span className={`study-level-badge study-level-badge-${word.level.toLowerCase()}`}>{word.level}</span>
             </div>
-            <div className="vocab-word-jp vocab-word-with-speaker">
-              {word.word}
-              <SpeakerButton text={word.reading} lang="ja-JP" />
-            </div>
+            <div className="vocab-word-jp">{word.word}</div>
             <div className="vocab-word-reading">{word.reading}</div>
             <dl className="study-fields">
               <div className="study-field">
@@ -443,10 +439,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             <div className="study-top">
               <span className={`study-level-badge study-level-badge-${word.level.toLowerCase()}`}>{word.level}</span>
             </div>
-            <div className="vocab-word-jp vocab-word-with-speaker">
-              {word.word}
-              <SpeakerButton text={word.reading} lang="ja-JP" />
-            </div>
+            <div className="vocab-word-jp">{word.word}</div>
             <div className="vocab-word-reading">{word.reading}</div>
             <dl className="study-fields">
               <div className="study-field">
@@ -562,10 +555,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           </div>
         </div>
         <div className="vocab-quiz-prompt">
-          <span className="vocab-quiz-prompt-word vocab-word-with-speaker">
-            {question.entry.word}
-            <SpeakerButton text={question.entry.reading} lang="ja-JP" size={16} />
-          </span>
+          <span className="vocab-quiz-prompt-word">{question.entry.word}</span>
           <span className="vocab-quiz-prompt-reading">{question.entry.reading}</span>
         </div>
         <div className="vocab-quiz-choices" ref={choicesRef}>

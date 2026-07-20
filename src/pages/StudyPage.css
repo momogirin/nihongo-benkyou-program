@@ -223,37 +223,6 @@
   margin-bottom: 20px;
 }
 
-/* 발음 듣기(TTS) 버튼 — 한자/일본어 단어/영어 단어 학습·상세·퀴즈 화면이
-   공유하는 표제어(study-kanji/vocab-word-jp/vocab-quiz-prompt-word) 옆에
-   붙는 스피커 아이콘. 이 클래스들 자체는 각 도메인 CSS에 그대로 두고,
-   버튼을 나란히 놓기 위한 flex 정렬만 별도 클래스로 추가(최소 diff) */
-.vocab-word-with-speaker {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.vocab-speaker-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  border: 1px solid var(--color-border);
-  border-radius: 50%;
-  background: var(--color-bg-elevated);
-  color: var(--color-primary-dark);
-  cursor: pointer;
-  flex: none;
-}
-
-.vocab-speaker-button:hover {
-  background: var(--color-selected-bg);
-  border-color: var(--color-primary-dark);
-}
-
 .study-fields {
   display: flex;
   flex-direction: column;

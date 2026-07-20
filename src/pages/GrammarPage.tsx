@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import SpeakerButton from '../components/SpeakerButton'
 import type { GrammarPoint } from '../data/grammar'
 import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
@@ -312,10 +311,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
               <div className="study-field">
                 <dt>예문</dt>
                 <dd>
-                  <span className="grammar-example-with-speaker">
-                    {point.exampleJp}
-                    <SpeakerButton text={point.exampleJp} lang="ja-JP" size={15} />
-                  </span>
+                  {point.exampleJp}
                   <br />
                   <span className="grammar-example-kr">{point.exampleKr}</span>
                 </dd>
@@ -441,10 +437,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
               <div className="study-field">
                 <dt>예문</dt>
                 <dd>
-                  <span className="grammar-example-with-speaker">
-                    {point.exampleJp}
-                    <SpeakerButton text={point.exampleJp} lang="ja-JP" size={15} />
-                  </span>
+                  {point.exampleJp}
                   <br />
                   <span className="grammar-example-kr">{point.exampleKr}</span>
                 </dd>
@@ -528,10 +521,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
         </div>
         <div className="grammar-quiz-prompt">
           <span className="grammar-quiz-prompt-pattern">{question.entry.pattern}</span>
-          <span className="grammar-quiz-prompt-example grammar-example-with-speaker">
-            {question.entry.exampleJp}
-            <SpeakerButton text={question.entry.exampleJp} lang="ja-JP" size={15} />
-          </span>
+          <span className="grammar-quiz-prompt-example">{question.entry.exampleJp}</span>
         </div>
         <div className="grammar-quiz-choices" ref={choicesRef}>
           {question.choices.map((choice, i) => {
