@@ -11556,7 +11556,9 @@
     "word": "～等",
     "reading": "～とう",
     "meaningKr": "~등(순위)",
-    "meaningEn": "level, place"
+    "meaningEn": "level, place",
+    "exampleJp": "テストの結果、彼は一等になった。",
+    "exampleKr": "시험 결과, 그는 일등이 되었다."
   },
   {
     "id": "N2-1052",
@@ -11565,7 +11567,9 @@
     "word": "～島",
     "reading": "～とう",
     "meaningKr": "~도(섬)",
-    "meaningEn": "kind of islands"
+    "meaningEn": "kind of islands",
+    "exampleJp": "この地域には小さな島が点在している。",
+    "exampleKr": "이 지역에는 작은 섬들이 흩어져 있다."
   },
   {
     "id": "N2-1053",
@@ -11574,7 +11578,9 @@
     "word": "銅",
     "reading": "どう",
     "meaningKr": "구리(동)",
-    "meaningEn": "copper"
+    "meaningEn": "copper",
+    "exampleJp": "この像は銅でできている。",
+    "exampleKr": "이 동상은 구리로 만들어졌다."
   },
   {
     "id": "N2-1054",
@@ -11583,7 +11589,9 @@
     "word": "同～",
     "reading": "どう～",
     "meaningKr": "동~(같은)",
-    "meaningEn": "same ~"
+    "meaningEn": "same ~",
+    "exampleJp": "彼と同世代の人々は少なくなってきた。",
+    "exampleKr": "그와 동세대 사람들은 점점 줄어들고 있다."
   },
   {
     "id": "N2-1055",
@@ -11592,7 +11600,9 @@
     "word": "～道",
     "reading": "～どう",
     "meaningKr": "~도(길)",
-    "meaningEn": "kind of path, road"
+    "meaningEn": "kind of path, road",
+    "exampleJp": "彼女は茶道を長年習っている。",
+    "exampleKr": "그녀는 다도를 오랫동안 배우고 있다."
   },
   {
     "id": "N2-1056",
@@ -11601,7 +11611,9 @@
     "word": "どういたしまして (かん)",
     "reading": "どういたしまして (かん)",
     "meaningKr": "천만에요",
-    "meaningEn": "you are welcome, don't mention it"
+    "meaningEn": "you are welcome, don't mention it",
+    "exampleJp": "「ありがとうございました」「どういたしまして」",
+    "exampleKr": "「감사합니다」「천만에요」"
   },
   {
     "id": "N2-1057",
@@ -11610,7 +11622,9 @@
     "word": "統一",
     "reading": "とういつ",
     "meaningKr": "통일",
-    "meaningEn": "unity, consolidation, uniformity"
+    "meaningEn": "unity, consolidation, uniformity",
+    "exampleJp": "会社は表記の統一を図ることにした。",
+    "exampleKr": "회사는 표기 통일을 도모하기로 했다."
   },
   {
     "id": "N2-1058",
@@ -11619,7 +11633,9 @@
     "word": "同格",
     "reading": "どうかく",
     "meaningKr": "동격",
-    "meaningEn": "the same rank, equality, apposition"
+    "meaningEn": "the same rank, equality, apposition",
+    "exampleJp": "彼はチームの中で監督と同格に扱われている。",
+    "exampleKr": "그는 팀 안에서 감독과 동격으로 대우받고 있다."
   },
   {
     "id": "N2-1059",
@@ -11628,7 +11644,9 @@
     "word": "峠",
     "reading": "とうげ",
     "meaningKr": "고개(정상)",
-    "meaningEn": "ridge, (mountain) pass, difficult part"
+    "meaningEn": "ridge, (mountain) pass, difficult part",
+    "exampleJp": "この峠を越えると景色が一変する。",
+    "exampleKr": "이 고개를 넘으면 경치가 확 바뀐다."
   },
   {
     "id": "N2-1060",
@@ -11637,7 +11655,9 @@
     "word": "統計",
     "reading": "とうけい",
     "meaningKr": "통계",
-    "meaningEn": "scattering, a scatter, dispersion"
+    "meaningEn": "statistics",
+    "exampleJp": "統計によると、若者の人口は年々減少している。",
+    "exampleKr": "통계에 따르면, 젊은층 인구는 해마다 감소하고 있다."
   },
   {
     "id": "N2-1061",
@@ -11646,7 +11666,9 @@
     "word": "動作",
     "reading": "どうさ",
     "meaningKr": "동작",
-    "meaningEn": "action, movements, motions"
+    "meaningEn": "action, movements, motions",
+    "exampleJp": "彼の動作は年齢のわりに機敏だ。",
+    "exampleKr": "그의 동작은 나이에 비해 민첩하다."
   },
   {
     "id": "N2-1062",
@@ -11655,7 +11677,9 @@
     "word": "東西",
     "reading": "とうざい",
     "meaningKr": "동서",
-    "meaningEn": "East and West, whole country"
+    "meaningEn": "East and West, whole country",
+    "exampleJp": "この道路は東西に走っている。",
+    "exampleKr": "이 도로는 동서로 뻗어 있다."
   },
   {
     "id": "N2-1063",
@@ -11664,7 +11688,9 @@
     "word": "当日",
     "reading": "とうじつ",
     "meaningKr": "당일",
-    "meaningEn": "appointed day, very day"
+    "meaningEn": "appointed day, very day",
+    "exampleJp": "チケットは当日会場で購入できます。",
+    "exampleKr": "티켓은 당일 행사장에서 구입할 수 있습니다."
   },
   {
     "id": "N2-1064",
@@ -11673,7 +11699,9 @@
     "word": "投書",
     "reading": "とうしょ",
     "meaningKr": "투서(투고)",
-    "meaningEn": "letter to the editor, letter from a reader, contribution"
+    "meaningEn": "letter to the editor, letter from a reader, contribution",
+    "exampleJp": "新聞に市の対応を批判する投書が届いた。",
+    "exampleKr": "신문사에 시의 대응을 비판하는 투고가 도착했다."
   },
   {
     "id": "N2-1065",
@@ -11682,7 +11710,9 @@
     "word": "登場",
     "reading": "とうじょう",
     "meaningKr": "등장",
-    "meaningEn": "entry (on stage)"
+    "meaningEn": "entry (on stage)",
+    "exampleJp": "新しい主人公の登場に観客は沸いた。",
+    "exampleKr": "새로운 주인공의 등장에 관객들이 열광했다."
   },
   {
     "id": "N2-1066",
@@ -11691,7 +11721,9 @@
     "word": "どうせ",
     "reading": "どうせ",
     "meaningKr": "어차피",
-    "meaningEn": "anyhow, in any case, at any rate"
+    "meaningEn": "anyhow, in any case, at any rate",
+    "exampleJp": "どうせやるなら、最後まで頑張ろう。",
+    "exampleKr": "어차피 할 거라면, 끝까지 힘내자."
   },
   {
     "id": "N2-1067",
@@ -11700,7 +11732,9 @@
     "word": "灯台",
     "reading": "とうだい",
     "meaningKr": "등대",
-    "meaningEn": "lighthouse"
+    "meaningEn": "lighthouse",
+    "exampleJp": "岬の先に白い灯台が見える。",
+    "exampleKr": "곶 끝에 하얀 등대가 보인다."
   },
   {
     "id": "N2-1068",
@@ -11709,7 +11743,9 @@
     "word": "盗難",
     "reading": "とうなん",
     "meaningKr": "도난",
-    "meaningEn": "theft, robbery"
+    "meaningEn": "theft, robbery",
+    "exampleJp": "旅行中に盗難に遭った。",
+    "exampleKr": "여행 중에 도난을 당했다."
   },
   {
     "id": "N2-1069",
@@ -11718,7 +11754,9 @@
     "word": "当番",
     "reading": "とうばん",
     "meaningKr": "당번",
-    "meaningEn": "being on duty"
+    "meaningEn": "being on duty",
+    "exampleJp": "今日は教室の掃除当番だ。",
+    "exampleKr": "오늘은 교실 청소 당번이다."
   },
   {
     "id": "N2-1070",
@@ -11727,7 +11765,9 @@
     "word": "等分",
     "reading": "とうぶん",
     "meaningKr": "등분",
-    "meaningEn": "division into equal parts"
+    "meaningEn": "division into equal parts",
+    "exampleJp": "ケーキを六等分に切った。",
+    "exampleKr": "케이크를 여섯 등분으로 잘랐다."
   },
   {
     "id": "N2-1071",
@@ -11736,7 +11776,9 @@
     "word": "透明",
     "reading": "とうめい",
     "meaningKr": "투명",
-    "meaningEn": "transparency, cleanness"
+    "meaningEn": "transparency, cleanness",
+    "exampleJp": "透明なガラスのコップを買った。",
+    "exampleKr": "투명한 유리컵을 샀다."
   },
   {
     "id": "N2-1072",
@@ -11745,7 +11787,9 @@
     "word": "灯油",
     "reading": "とうゆ",
     "meaningKr": "등유",
-    "meaningEn": "lamp oil, kerosene"
+    "meaningEn": "lamp oil, kerosene",
+    "exampleJp": "冬に備えて灯油を買っておいた。",
+    "exampleKr": "겨울에 대비해 등유를 사 두었다."
   },
   {
     "id": "N2-1073",
@@ -11754,7 +11798,9 @@
     "word": "童話",
     "reading": "どうわ",
     "meaningKr": "동화",
-    "meaningEn": "fairy tale"
+    "meaningEn": "fairy tale",
+    "exampleJp": "母は毎晩子供に童話を読んで聞かせる。",
+    "exampleKr": "엄마는 매일 밤 아이에게 동화를 읽어 준다."
   },
   {
     "id": "N2-1074",
@@ -11763,7 +11809,9 @@
     "word": "～通り",
     "reading": "～とおり",
     "meaningKr": "~대로",
-    "meaningEn": "in accordance with ~; following ~; ~ street, ~ avenue"
+    "meaningEn": "in accordance with ~; following ~; ~ street, ~ avenue",
+    "exampleJp": "説明書に書いてある通りに操作してください。",
+    "exampleKr": "설명서에 적혀 있는 대로 조작해 주세요."
   },
   {
     "id": "N2-1075",
@@ -11772,7 +11820,9 @@
     "word": "通り掛かる",
     "reading": "とおりかかる",
     "meaningKr": "지나가다",
-    "meaningEn": "to happen to pass by"
+    "meaningEn": "to happen to pass by",
+    "exampleJp": "通り掛かった人が事故を目撃した。",
+    "exampleKr": "지나가던 사람이 사고를 목격했다."
   },
   {
     "id": "N2-1076",
@@ -11781,7 +11831,9 @@
     "word": "溶かす",
     "reading": "とかす",
     "meaningKr": "녹이다",
-    "meaningEn": "to melt, to dissolve"
+    "meaningEn": "to melt, to dissolve",
+    "exampleJp": "鍋でバターを溶かす。",
+    "exampleKr": "냄비에 버터를 녹인다."
   },
   {
     "id": "N2-1077",
@@ -11790,7 +11842,9 @@
     "word": "尖る",
     "reading": "とがる",
     "meaningKr": "뾰족해지다",
-    "meaningEn": "to taper to a point, to become sharp"
+    "meaningEn": "to taper to a point, to become sharp",
+    "exampleJp": "鉛筆の先が尖っていて危ない。",
+    "exampleKr": "연필 끝이 뾰족해서 위험하다."
   },
   {
     "id": "N2-1078",
@@ -11799,7 +11853,9 @@
     "word": "どきどき",
     "reading": "どきどき",
     "meaningKr": "두근두근",
-    "meaningEn": "throb, beat (fast)"
+    "meaningEn": "throb, beat (fast)",
+    "exampleJp": "面接の前は胸がどきどきする。",
+    "exampleKr": "면접 전에는 가슴이 두근두근한다."
   },
   {
     "id": "N2-1079",
@@ -11808,7 +11864,9 @@
     "word": "特殊",
     "reading": "とくしゅ",
     "meaningKr": "특수",
-    "meaningEn": "special, unique"
+    "meaningEn": "special, unique",
+    "exampleJp": "この作業には特殊な技術が必要だ。",
+    "exampleKr": "이 작업에는 특수한 기술이 필요하다."
   },
   {
     "id": "N2-1080",
@@ -11817,7 +11875,9 @@
     "word": "特色",
     "reading": "とくしょく",
     "meaningKr": "특색",
-    "meaningEn": "characteristic, feature"
+    "meaningEn": "characteristic, feature",
+    "exampleJp": "この町の特色は自然の豊かさだ。",
+    "exampleKr": "이 마을의 특색은 풍부한 자연이다."
   },
   {
     "id": "N2-1081",
@@ -11826,7 +11886,9 @@
     "word": "特定",
     "reading": "とくてい",
     "meaningKr": "특정",
-    "meaningEn": "specific, special, particular"
+    "meaningEn": "specific, special, particular",
+    "exampleJp": "犯人はまだ特定されていない。",
+    "exampleKr": "범인은 아직 특정되지 않았다."
   },
   {
     "id": "N2-1082",
@@ -11835,7 +11897,9 @@
     "word": "特売",
     "reading": "とくばい",
     "meaningKr": "특매(특별할인)",
-    "meaningEn": "special sale"
+    "meaningEn": "special sale",
+    "exampleJp": "今週末、スーパーで卵の特売がある。",
+    "exampleKr": "이번 주말, 슈퍼에서 달걀 특매가 있다."
   },
   {
     "id": "N2-1083",
@@ -11844,7 +11908,9 @@
     "word": "溶け込む",
     "reading": "とけこむ",
     "meaningKr": "녹아들다(융화되다)",
-    "meaningEn": "to melt into; to become a part of"
+    "meaningEn": "to melt into; to become a part of",
+    "exampleJp": "彼は新しい職場にすぐ溶け込んだ。",
+    "exampleKr": "그는 새로운 직장에 금세 융화되었다."
   },
   {
     "id": "N2-1084",
@@ -11853,7 +11919,9 @@
     "word": "退ける",
     "reading": "どける",
     "meaningKr": "비키다(치우다)",
-    "meaningEn": "to dislodge, to put something out of the way"
+    "meaningEn": "to dislodge, to put something out of the way",
+    "exampleJp": "通行の邪魔になる荷物を退けた。",
+    "exampleKr": "통행에 방해가 되는 짐을 치웠다."
   },
   {
     "id": "N2-1085",
@@ -11862,7 +11930,9 @@
     "word": "床の間",
     "reading": "とこのま",
     "meaningKr": "도코노마(일본식 벽감)",
-    "meaningEn": "alcove"
+    "meaningEn": "alcove",
+    "exampleJp": "床の間に花瓶と掛け軸が飾られている。",
+    "exampleKr": "도코노마에 꽃병과 족자가 장식되어 있다."
   },
   {
     "id": "N2-1086",
@@ -11871,7 +11941,9 @@
     "word": "～ところ",
     "reading": "～ところ",
     "meaningKr": "막 ~하려는 참",
-    "meaningEn": "about to do ~"
+    "meaningEn": "about to do ~",
+    "exampleJp": "今からご飯を食べるところです。",
+    "exampleKr": "지금 막 밥을 먹으려던 참입니다."
   },
   {
     "id": "N2-1087",
@@ -11880,7 +11952,9 @@
     "word": "所々",
     "reading": "ところどころ",
     "meaningKr": "군데군데",
-    "meaningEn": "here and there, some parts (of something)"
+    "meaningEn": "here and there, some parts (of something)",
+    "exampleJp": "山道には所々に雪が残っていた。",
+    "exampleKr": "산길에는 군데군데 눈이 남아 있었다."
   },
   {
     "id": "N2-1088",
@@ -11889,7 +11963,9 @@
     "word": "都心",
     "reading": "としん",
     "meaningKr": "도심",
-    "meaningEn": "heart (of city)"
+    "meaningEn": "heart (of city)",
+    "exampleJp": "都心の家賃は郊外に比べてかなり高い。",
+    "exampleKr": "도심의 집세는 교외에 비해 상당히 비싸다."
   },
   {
     "id": "N2-1089",
@@ -11898,7 +11974,9 @@
     "word": "戸棚",
     "reading": "とだな",
     "meaningKr": "찬장(수납장)",
-    "meaningEn": "cupboard, cabinet"
+    "meaningEn": "cupboard, cabinet",
+    "exampleJp": "食器を戸棚にしまった。",
+    "exampleKr": "그릇을 찬장에 넣었다."
   },
   {
     "id": "N2-1090",
@@ -11907,7 +11985,9 @@
     "word": "とっくに",
     "reading": "とっくに",
     "meaningKr": "진작에",
-    "meaningEn": "long ago, already, a long time ago"
+    "meaningEn": "long ago, already, a long time ago",
+    "exampleJp": "彼女はとっくに帰ってしまった。",
+    "exampleKr": "그녀는 진작에 돌아가 버렸다."
   },
   {
     "id": "N2-1091",
@@ -11916,7 +11996,9 @@
     "word": "どっと",
     "reading": "どっと",
     "meaningKr": "왈칵(갑자기)",
-    "meaningEn": "suddenly"
+    "meaningEn": "suddenly",
+    "exampleJp": "彼の冗談に会場がどっと笑った。",
+    "exampleKr": "그의 농담에 회장이 왈칵 웃음바다가 되었다."
   },
   {
     "id": "N2-1092",
@@ -11925,7 +12007,9 @@
     "word": "整う",
     "reading": "ととのう",
     "meaningKr": "갖추어지다",
-    "meaningEn": "to be prepared, to be in order, to be arranged"
+    "meaningEn": "to be prepared, to be in order, to be arranged",
+    "exampleJp": "準備が整ったら出発しましょう。",
+    "exampleKr": "준비가 갖추어지면 출발합시다."
   },
   {
     "id": "N2-1093",
@@ -11934,7 +12018,9 @@
     "word": "留まる",
     "reading": "とどまる",
     "meaningKr": "머무르다",
-    "meaningEn": "to be fixed; to abide, to stay (in the one place)"
+    "meaningEn": "to be fixed; to abide, to stay (in the one place)",
+    "exampleJp": "彼はこの町に留まることを決めた。",
+    "exampleKr": "그는 이 마을에 머무르기로 결정했다."
   },
   {
     "id": "N2-1094",
@@ -11943,7 +12029,9 @@
     "word": "怒鳴る",
     "reading": "どなる",
     "meaningKr": "고함치다",
-    "meaningEn": "to shout, to yell"
+    "meaningEn": "to shout, to yell",
+    "exampleJp": "父は弟を見て怒鳴った。",
+    "exampleKr": "아버지는 동생을 보고 고함쳤다."
   },
   {
     "id": "N2-1095",
@@ -11952,7 +12040,9 @@
     "word": "殿",
     "reading": "どの",
     "meaningKr": "귀하(존칭)",
-    "meaningEn": "Mister (mostly in addressing someone on an envelope)"
+    "meaningEn": "Mister (mostly in addressing someone on an envelope)",
+    "exampleJp": "封筒には「山田太郎殿」と書いた。",
+    "exampleKr": "봉투에는 「야마다 타로 귀하」라고 썼다."
   },
   {
     "id": "N2-1096",
@@ -11961,7 +12051,9 @@
     "word": "飛び込む",
     "reading": "とびこむ",
     "meaningKr": "뛰어들다",
-    "meaningEn": "to jump in, to leap in, to plunge into"
+    "meaningEn": "to jump in, to leap in, to plunge into",
+    "exampleJp": "彼はプールに勢いよく飛び込んだ。",
+    "exampleKr": "그는 힘차게 수영장에 뛰어들었다."
   },
   {
     "id": "N2-1097",
@@ -11970,7 +12062,9 @@
     "word": "留まる",
     "reading": "とまる",
     "meaningKr": "머무르다",
-    "meaningEn": "to be fixed; to abide, to stay (in the one place)"
+    "meaningEn": "to be fixed; to abide, to stay (in the one place)",
+    "exampleJp": "鳥が枝に留まっている。",
+    "exampleKr": "새가 나뭇가지에 머물러 있다."
   },
   {
     "id": "N2-1098",
@@ -11979,7 +12073,9 @@
     "word": "ともかく",
     "reading": "ともかく",
     "meaningKr": "아무튼",
-    "meaningEn": "anyhow, at any rate, anyway"
+    "meaningEn": "anyhow, at any rate, anyway",
+    "exampleJp": "ともかく、まずは彼に連絡してみよう。",
+    "exampleKr": "아무튼, 우선 그에게 연락해 보자."
   },
   {
     "id": "N2-1099",
@@ -11988,7 +12084,9 @@
     "word": "捕える",
     "reading": "とらえる",
     "meaningKr": "붙잡다",
-    "meaningEn": "to seize, to capture, to arrest"
+    "meaningEn": "to seize, to capture, to arrest",
+    "exampleJp": "警察は逃げた犯人を捕えた。",
+    "exampleKr": "경찰은 도망친 범인을 붙잡았다."
   },
   {
     "id": "N2-1100",
@@ -11997,7 +12095,9 @@
     "word": "取り入れる",
     "reading": "とりいれる",
     "meaningKr": "받아들이다(수확하다)",
-    "meaningEn": "to harvest, to take in, to adopt"
+    "meaningEn": "to harvest, to take in, to adopt",
+    "exampleJp": "新しい技術を積極的に取り入れる。",
+    "exampleKr": "새로운 기술을 적극적으로 받아들인다."
   },
   {
     "id": "N2-1101",
@@ -12006,7 +12106,9 @@
     "word": "取り消す",
     "reading": "とりけす",
     "meaningKr": "취소하다",
-    "meaningEn": "to cancel"
+    "meaningEn": "to cancel",
+    "exampleJp": "予約を取り消したいのですが。",
+    "exampleKr": "예약을 취소하고 싶은데요."
   },
   {
     "id": "N2-1102",
@@ -12015,7 +12117,9 @@
     "word": "取り出す",
     "reading": "とりだす",
     "meaningKr": "꺼내다",
-    "meaningEn": "to take out, to pick out"
+    "meaningEn": "to take out, to pick out",
+    "exampleJp": "かばんから財布を取り出した。",
+    "exampleKr": "가방에서 지갑을 꺼냈다."
   },
   {
     "id": "N2-1103",
@@ -12024,7 +12128,9 @@
     "word": "採る",
     "reading": "とる",
     "meaningKr": "채택하다(따다)",
-    "meaningEn": "to adopt (measure, proposal); to pick (fruit)"
+    "meaningEn": "to adopt (measure, proposal); to pick (fruit)",
+    "exampleJp": "会社は新しい方式を採ることにした。",
+    "exampleKr": "회사는 새로운 방식을 채택하기로 했다."
   },
   {
     "id": "N2-1104",
@@ -12033,7 +12139,9 @@
     "word": "捕る",
     "reading": "とる",
     "meaningKr": "잡다(포획하다)",
-    "meaningEn": "to take, to catch (fish)"
+    "meaningEn": "to take, to catch (fish)",
+    "exampleJp": "漁師は毎朝魚を捕りに海へ出る。",
+    "exampleKr": "어부는 매일 아침 물고기를 잡으러 바다에 나간다."
   },
   {
     "id": "N2-1105",
@@ -12042,7 +12150,9 @@
     "word": "丼",
     "reading": "どんぶり",
     "meaningKr": "덮밥그릇",
-    "meaningEn": "porcelain bowl, bowl of rice with food on top"
+    "meaningEn": "porcelain bowl, bowl of rice with food on top",
+    "exampleJp": "昼食に牛丼を食べた。",
+    "exampleKr": "점심으로 규동(소고기덮밥)을 먹었다."
   },
   {
     "id": "N2-1106",
@@ -12051,7 +12161,9 @@
     "word": "～内",
     "reading": "～ない",
     "meaningKr": "~내(안)",
-    "meaningEn": "inside ~"
+    "meaningEn": "inside ~",
+    "exampleJp": "一週間以内に返事をください。",
+    "exampleKr": "일주일 이내에 답장을 주세요."
   },
   {
     "id": "N2-1107",
@@ -12060,7 +12172,9 @@
     "word": "内科",
     "reading": "ないか",
     "meaningKr": "내과",
-    "meaningEn": "internist clinic, internal medicine"
+    "meaningEn": "internist clinic, internal medicine",
+    "exampleJp": "熱が下がらないので内科に行った。",
+    "exampleKr": "열이 내려가지 않아서 내과에 갔다."
   },
   {
     "id": "N2-1108",
@@ -12069,7 +12183,9 @@
     "word": "内線",
     "reading": "ないせん",
     "meaningKr": "내선(전화)",
-    "meaningEn": "phone extension"
+    "meaningEn": "phone extension",
+    "exampleJp": "内線123に電話をつないでください。",
+    "exampleKr": "내선 123으로 전화를 연결해 주세요."
   },
   {
     "id": "N2-1109",
@@ -12078,7 +12194,9 @@
     "word": "ナイロン",
     "reading": "ナイロン",
     "meaningKr": "나일론",
-    "meaningEn": "nylon"
+    "meaningEn": "nylon",
+    "exampleJp": "このバッグはナイロン製で軽い。",
+    "exampleKr": "이 가방은 나일론 재질이라 가볍다."
   },
   {
     "id": "N2-1110",
@@ -12087,7 +12205,9 @@
     "word": "長～",
     "reading": "なが～",
     "meaningKr": "긴~",
-    "meaningEn": "long ~"
+    "meaningEn": "long ~",
+    "exampleJp": "彼女は長雨のせいで洗濯物が乾かないと嘆いた。",
+    "exampleKr": "그녀는 장마 탓에 빨래가 마르지 않는다고 한탄했다."
   },
   {
     "id": "N2-1111",
@@ -12096,7 +12216,9 @@
     "word": "仲直り",
     "reading": "なかなおり",
     "meaningKr": "화해",
-    "meaningEn": "reconciliation, make peace with"
+    "meaningEn": "reconciliation, make peace with",
+    "exampleJp": "喧嘩した友達と仲直りした。",
+    "exampleKr": "싸운 친구와 화해했다."
   },
   {
     "id": "N2-1112",
@@ -12105,7 +12227,9 @@
     "word": "長引く",
     "reading": "ながびく",
     "meaningKr": "길어지다(지연되다)",
-    "meaningEn": "to be prolonged, to drag on"
+    "meaningEn": "to be prolonged, to drag on",
+    "exampleJp": "会議が長引いて予定が遅れてしまった。",
+    "exampleKr": "회의가 길어져서 일정이 늦어지고 말았다."
   },
   {
     "id": "N2-1113",
@@ -12114,7 +12238,9 @@
     "word": "中指",
     "reading": "なかゆび",
     "meaningKr": "중지(가운뎃손가락)",
-    "meaningEn": "middle finger"
+    "meaningEn": "middle finger",
+    "exampleJp": "中指に指輪をはめている。",
+    "exampleKr": "중지에 반지를 끼고 있다."
   },
   {
     "id": "N2-1114",
@@ -12123,7 +12249,9 @@
     "word": "仲良し",
     "reading": "なかよし",
     "meaningKr": "사이좋음(친한 친구)",
-    "meaningEn": "intimate friend, bosom buddy"
+    "meaningEn": "intimate friend, bosom buddy",
+    "exampleJp": "二人は幼稚園からの仲良しだ。",
+    "exampleKr": "둘은 유치원 때부터 친한 친구다."
   },
   {
     "id": "N2-1115",
@@ -12132,7 +12260,9 @@
     "word": "慰める",
     "reading": "なぐさめる",
     "meaningKr": "위로하다",
-    "meaningEn": "to comfort, to console"
+    "meaningEn": "to comfort, to console",
+    "exampleJp": "失恋した友人を慰めた。",
+    "exampleKr": "실연한 친구를 위로했다."
   },
   {
     "id": "N2-1116",
@@ -12141,7 +12271,9 @@
     "word": "為す",
     "reading": "なす",
     "meaningKr": "이루다(하다)",
-    "meaningEn": "to accomplish, to do"
+    "meaningEn": "to accomplish, to do",
+    "exampleJp": "彼は若くして大きな業績を為した。",
+    "exampleKr": "그는 젊은 나이에 큰 업적을 이루었다."
   },
   {
     "id": "N2-1117",
@@ -12150,7 +12282,9 @@
     "word": "謎謎",
     "reading": "なぞなぞ",
     "meaningKr": "수수께끼",
-    "meaningEn": "riddle"
+    "meaningEn": "riddle",
+    "exampleJp": "子供と謎謎遊びをして楽しんだ。",
+    "exampleKr": "아이와 수수께끼 놀이를 하며 즐거워했다."
   },
   {
     "id": "N2-1118",
@@ -12159,7 +12293,9 @@
     "word": "傾らか",
     "reading": "なだらか",
     "meaningKr": "완만함",
-    "meaningEn": "gradual, gentle"
+    "meaningEn": "gradual, gentle",
+    "exampleJp": "この山道はなだらかで歩きやすい。",
+    "exampleKr": "이 산길은 완만해서 걷기 쉽다."
   },
   {
     "id": "N2-1119",
@@ -12168,7 +12304,9 @@
     "word": "懐かしい",
     "reading": "なつかしい",
     "meaningKr": "그립다",
-    "meaningEn": "dear, desired, missed"
+    "meaningEn": "dear, desired, missed",
+    "exampleJp": "昔の写真を見ると懐かしい気持ちになる。",
+    "exampleKr": "옛날 사진을 보면 그리운 마음이 든다."
   },
   {
     "id": "N2-1120",
@@ -12177,7 +12315,9 @@
     "word": "撫でる",
     "reading": "なでる",
     "meaningKr": "쓰다듬다",
-    "meaningEn": "to brush gently, to stroke"
+    "meaningEn": "to brush gently, to stroke",
+    "exampleJp": "子供の頭を優しく撫でた。",
+    "exampleKr": "아이의 머리를 부드럽게 쓰다듬었다."
   },
   {
     "id": "N2-1121",
@@ -12186,7 +12326,9 @@
     "word": "斜め",
     "reading": "ななめ",
     "meaningKr": "비스듬함",
-    "meaningEn": "diagonal, oblique"
+    "meaningEn": "diagonal, oblique",
+    "exampleJp": "額縁が斜めにかかっている。",
+    "exampleKr": "액자가 비스듬히 걸려 있다."
   },
   {
     "id": "N2-1122",
@@ -12195,7 +12337,9 @@
     "word": "なにしろ",
     "reading": "なにしろ",
     "meaningKr": "어쨌든",
-    "meaningEn": "at any rate, in any case"
+    "meaningEn": "at any rate, in any case",
+    "exampleJp": "なにしろ初めての経験だったので緊張した。",
+    "exampleKr": "어쨌든 처음 하는 경험이라 긴장했다."
   },
   {
     "id": "N2-1123",
@@ -12204,7 +12348,9 @@
     "word": "何々",
     "reading": "なになに",
     "meaningKr": "무엇무엇",
-    "meaningEn": "such and such, What?"
+    "meaningEn": "such and such, What?",
+    "exampleJp": "買い物リストに何々が必要か書き出した。",
+    "exampleKr": "쇼핑 목록에 무엇무엇이 필요한지 적어 보았다."
   },
   {
     "id": "N2-1124",
@@ -12213,7 +12359,9 @@
     "word": "何分",
     "reading": "なにぶん",
     "meaningKr": "아무쪼록(부디)",
-    "meaningEn": "by all means, please"
+    "meaningEn": "by all means, please",
+    "exampleJp": "何分不慣れなもので、失礼があればお許しください。",
+    "exampleKr": "아무쪼록 익숙하지 않아서 실례가 있으면 용서해 주세요."
   },
   {
     "id": "N2-1125",
@@ -12222,7 +12370,9 @@
     "word": "生意気",
     "reading": "なまいき",
     "meaningKr": "건방짐",
-    "meaningEn": "impertinent, impudent"
+    "meaningEn": "impertinent, impudent",
+    "exampleJp": "新人のくせに生意気な口をきくな。",
+    "exampleKr": "신입 주제에 건방진 말투를 쓰지 마라."
   },
   {
     "id": "N2-1126",
@@ -12231,7 +12381,9 @@
     "word": "並木",
     "reading": "なみき",
     "meaningKr": "가로수",
-    "meaningEn": "roadside tree, row of trees"
+    "meaningEn": "roadside tree, row of trees",
+    "exampleJp": "桜並木が満開で美しい。",
+    "exampleKr": "벚꽃 가로수가 만개해서 아름답다."
   },
   {
     "id": "N2-1127",
@@ -12240,7 +12392,9 @@
     "word": "倣う",
     "reading": "ならう",
     "meaningKr": "본받다(따르다)",
-    "meaningEn": "to imitate, to follow, to emulate"
+    "meaningEn": "to imitate, to follow, to emulate",
+    "exampleJp": "先輩の例に倣って計画を立てた。",
+    "exampleKr": "선배의 사례를 본받아 계획을 세웠다."
   },
   {
     "id": "N2-1128",
@@ -12249,7 +12403,9 @@
     "word": "南極",
     "reading": "なんきょく",
     "meaningKr": "남극",
-    "meaningEn": "south pole, Antarctic"
+    "meaningEn": "south pole, Antarctic",
+    "exampleJp": "南極には多くのペンギンが生息している。",
+    "exampleKr": "남극에는 많은 펭귄이 서식하고 있다."
   },
   {
     "id": "N2-1129",
@@ -12258,7 +12414,9 @@
     "word": "なんとなく",
     "reading": "なんとなく",
     "meaningKr": "왠지",
-    "meaningEn": "somehow or other, for some reason or another"
+    "meaningEn": "somehow or other, for some reason or another",
+    "exampleJp": "今日はなんとなく気分が乗らない。",
+    "exampleKr": "오늘은 왠지 기분이 내키지 않는다."
   },
   {
     "id": "N2-1130",
@@ -12267,7 +12425,9 @@
     "word": "なんとも",
     "reading": "なんとも",
     "meaningKr": "참으로(정말)",
-    "meaningEn": "nothing (with neg. verb), quite, not a bit"
+    "meaningEn": "nothing (with neg. verb), quite, not a bit",
+    "exampleJp": "彼の対応にはなんとも困ってしまった。",
+    "exampleKr": "그의 대응에는 정말 곤란해졌다."
   },
   {
     "id": "N2-1131",
@@ -12276,7 +12436,9 @@
     "word": "ナンバー",
     "reading": "ナンバー",
     "meaningKr": "넘버(번호)",
-    "meaningEn": "number"
+    "meaningEn": "number",
+    "exampleJp": "車のナンバーを控えておいた。",
+    "exampleKr": "차 번호를 적어 두었다."
   },
   {
     "id": "N2-1132",
@@ -12285,7 +12447,9 @@
     "word": "南米",
     "reading": "なんべい",
     "meaningKr": "남미",
-    "meaningEn": "South America"
+    "meaningEn": "South America",
+    "exampleJp": "南米には様々な文化が存在する。",
+    "exampleKr": "남미에는 다양한 문화가 존재한다."
   },
   {
     "id": "N2-1133",
@@ -12294,7 +12458,9 @@
     "word": "南北",
     "reading": "なんぼく",
     "meaningKr": "남북",
-    "meaningEn": "south and north"
+    "meaningEn": "south and north",
+    "exampleJp": "この国は南北に長く伸びている。",
+    "exampleKr": "이 나라는 남북으로 길게 뻗어 있다."
   },
   {
     "id": "N2-1134",
@@ -12303,7 +12469,9 @@
     "word": "匂う",
     "reading": "におう",
     "meaningKr": "냄새나다",
-    "meaningEn": "to be fragrant, to smell"
+    "meaningEn": "to be fragrant, to smell",
+    "exampleJp": "台所からいい匂いが匂ってきた。",
+    "exampleKr": "부엌에서 좋은 냄새가 났다."
   },
   {
     "id": "N2-1135",
@@ -12312,7 +12480,9 @@
     "word": "逃がす",
     "reading": "にがす",
     "meaningKr": "놓아주다(놓치다)",
-    "meaningEn": "to let loose, to set free, to let escape"
+    "meaningEn": "to let loose, to set free, to let escape",
+    "exampleJp": "釣った魚を川に逃がしてやった。",
+    "exampleKr": "낚은 물고기를 강에 놓아 주었다."
   },
   {
     "id": "N2-1136",
@@ -12321,7 +12491,9 @@
     "word": "憎い",
     "reading": "にくい",
     "meaningKr": "밉다",
-    "meaningEn": "hateful, abominable, detestable"
+    "meaningEn": "hateful, abominable, detestable",
+    "exampleJp": "嘘をつかれて彼が憎いと思った。",
+    "exampleKr": "거짓말을 당해서 그가 밉다고 생각했다."
   },
   {
     "id": "N2-1137",
@@ -12330,7 +12502,9 @@
     "word": "～難い",
     "reading": "～がたい",
     "meaningKr": "~하기 어렵다",
-    "meaningEn": "hard (difficult) to do ~"
+    "meaningEn": "hard (difficult) to do ~",
+    "exampleJp": "その話は信じ難い内容だった。",
+    "exampleKr": "그 이야기는 믿기 어려운 내용이었다."
   },
   {
     "id": "N2-1138",
@@ -12339,7 +12513,9 @@
     "word": "憎む",
     "reading": "にくむ",
     "meaningKr": "미워하다",
-    "meaningEn": "to hate, to detest"
+    "meaningEn": "to hate, to detest",
+    "exampleJp": "罪を憎んで人を憎まず。",
+    "exampleKr": "죄를 미워하되 사람은 미워하지 말라."
   },
   {
     "id": "N2-1139",
@@ -12348,7 +12524,9 @@
     "word": "憎らしい",
     "reading": "にくらしい",
     "meaningKr": "얄밉다",
-    "meaningEn": "odious, hateful"
+    "meaningEn": "odious, hateful",
+    "exampleJp": "弟の憎らしい態度に腹が立った。",
+    "exampleKr": "동생의 얄미운 태도에 화가 났다."
   },
   {
     "id": "N2-1140",
@@ -12357,7 +12535,9 @@
     "word": "にこにこ",
     "reading": "にこにこ",
     "meaningKr": "싱글벙글",
-    "meaningEn": "smile sweetly, smiley"
+    "meaningEn": "smile sweetly, smiley",
+    "exampleJp": "赤ちゃんがにこにこ笑っている。",
+    "exampleKr": "아기가 싱글벙글 웃고 있다."
   },
   {
     "id": "N2-1141",
@@ -12366,7 +12546,9 @@
     "word": "濁る",
     "reading": "にごる",
     "meaningKr": "흐려지다(탁해지다)",
-    "meaningEn": "to become muddy, to get cloudy"
+    "meaningEn": "to become muddy, to get cloudy",
+    "exampleJp": "雨のせいで川の水が濁っている。",
+    "exampleKr": "비 때문에 강물이 흐려져 있다."
   },
   {
     "id": "N2-1142",
@@ -12375,7 +12557,9 @@
     "word": "虹",
     "reading": "にじ",
     "meaningKr": "무지개",
-    "meaningEn": "rainbow"
+    "meaningEn": "rainbow",
+    "exampleJp": "雨が上がった後、空に虹がかかった。",
+    "exampleKr": "비가 그친 후 하늘에 무지개가 떴다."
   },
   {
     "id": "N2-1143",
@@ -12384,7 +12568,9 @@
     "word": "日時",
     "reading": "にちじ",
     "meaningKr": "일시",
-    "meaningEn": "date and time"
+    "meaningEn": "date and time",
+    "exampleJp": "会議の日時はまだ決まっていません。",
+    "exampleKr": "회의 일시는 아직 정해지지 않았습니다."
   },
   {
     "id": "N2-1144",
@@ -12393,7 +12579,9 @@
     "word": "日用品",
     "reading": "にちようひん",
     "meaningKr": "일용품",
-    "meaningEn": "daily necessities"
+    "meaningEn": "daily necessities",
+    "exampleJp": "引っ越し先で日用品を買いそろえた。",
+    "exampleKr": "이사한 곳에서 생활 일용품을 사서 갖췄다."
   },
   {
     "id": "N2-1145",
@@ -12402,7 +12590,9 @@
     "word": "日課",
     "reading": "にっか",
     "meaningKr": "일과",
-    "meaningEn": "daily work, daily routine"
+    "meaningEn": "daily work, daily routine",
+    "exampleJp": "毎朝散歩をするのが私の日課です。",
+    "exampleKr": "매일 아침 산책하는 것이 제 일과입니다."
   },
   {
     "id": "N2-1146",
@@ -12411,7 +12601,9 @@
     "word": "日程",
     "reading": "にってい",
     "meaningKr": "일정",
-    "meaningEn": "schedule"
+    "meaningEn": "schedule",
+    "exampleJp": "旅行の日程はまだ変更できます。",
+    "exampleKr": "여행 일정은 아직 변경할 수 있습니다."
   },
   {
     "id": "N2-1147",
@@ -12420,7 +12612,9 @@
     "word": "鈍い",
     "reading": "にぶい",
     "meaningKr": "둔하다",
-    "meaningEn": "dull (e.g., a knife), thickheaded, slow (opposite of fast), stupid"
+    "meaningEn": "dull (e.g., a knife), thickheaded, slow (opposite of fast), stupid",
+    "exampleJp": "このナイフは刃が鈍くて切れにくい。",
+    "exampleKr": "이 칼은 날이 둔해서 잘 안 든다."
   },
   {
     "id": "N2-1148",
@@ -12429,7 +12623,9 @@
     "word": "入社",
     "reading": "にゅうしゃ",
     "meaningKr": "입사",
-    "meaningEn": "entry to a company"
+    "meaningEn": "entry to a company",
+    "exampleJp": "来月からこの会社に入社することになりました。",
+    "exampleKr": "다음 달부터 이 회사에 입사하게 되었습니다."
   },
   {
     "id": "N2-1149",
@@ -12438,7 +12634,9 @@
     "word": "女房",
     "reading": "にょうぼう",
     "meaningKr": "아내(마누라)",
-    "meaningEn": "wife"
+    "meaningEn": "wife",
+    "exampleJp": "彼は女房と二人で小さな店をやっている。",
+    "exampleKr": "그는 아내와 둘이서 작은 가게를 하고 있다."
   },
   {
     "id": "N2-1150",
@@ -12447,7 +12645,9 @@
     "word": "睨む",
     "reading": "にらむ",
     "meaningKr": "노려보다",
-    "meaningEn": "to glare at, to stare; to keep an eye on"
+    "meaningEn": "to glare at, to stare; to keep an eye on",
+    "exampleJp": "彼は怒った顔で私を睨んだ。",
+    "exampleKr": "그는 화난 얼굴로 나를 노려보았다."
   },
   {
     "id": "N2-1151",
@@ -12456,7 +12656,9 @@
     "word": "俄",
     "reading": "にわか",
     "meaningKr": "갑작스러움",
-    "meaningEn": "sudden, abrupt, unexpected"
+    "meaningEn": "sudden, abrupt, unexpected",
+    "exampleJp": "俄に空が曇り、雨が降り出した。",
+    "exampleKr": "갑자기 하늘이 흐려지더니 비가 내리기 시작했다."
   },
   {
     "id": "N2-1152",
@@ -12465,7 +12667,9 @@
     "word": "縫う",
     "reading": "ぬう",
     "meaningKr": "바느질하다(꿰매다)",
-    "meaningEn": "to sew"
+    "meaningEn": "to sew",
+    "exampleJp": "母はミシンでスカートを縫ってくれた。",
+    "exampleKr": "어머니는 재봉틀로 치마를 꿰매 주셨다."
   },
   {
     "id": "N2-1153",
@@ -12474,7 +12678,9 @@
     "word": "ねじ",
     "reading": "ねじ",
     "meaningKr": "나사",
-    "meaningEn": "(a) screw"
+    "meaningEn": "(a) screw",
+    "exampleJp": "棚のねじが緩んでいたので締め直した。",
+    "exampleKr": "선반의 나사가 풀려 있어서 다시 조였다."
   },
   {
     "id": "N2-1154",
@@ -12483,7 +12689,9 @@
     "word": "捩る",
     "reading": "ねじる",
     "meaningKr": "비틀다",
-    "meaningEn": "to twist"
+    "meaningEn": "to twist",
+    "exampleJp": "転んで足首を捩ってしまった。",
+    "exampleKr": "넘어져서 발목을 비틀고 말았다."
   },
   {
     "id": "N2-1155",
@@ -12492,7 +12700,9 @@
     "word": "ネックレス",
     "reading": "ネックレス",
     "meaningKr": "목걸이",
-    "meaningEn": "necklace"
+    "meaningEn": "necklace",
+    "exampleJp": "誕生日に彼からネックレスをもらった。",
+    "exampleKr": "생일에 그에게서 목걸이를 받았다."
   },
   {
     "id": "N2-1156",
@@ -12501,7 +12711,9 @@
     "word": "熱する",
     "reading": "ねっする",
     "meaningKr": "가열하다",
-    "meaningEn": "to heat"
+    "meaningEn": "to heat",
+    "exampleJp": "フライパンをよく熱してから油を入れる。",
+    "exampleKr": "프라이팬을 충분히 가열한 후에 기름을 넣는다."
   },
   {
     "id": "N2-1157",
@@ -12510,7 +12722,9 @@
     "word": "寝間着",
     "reading": "ねまき",
     "meaningKr": "잠옷",
-    "meaningEn": "sleep-wear, pajamas"
+    "meaningEn": "sleep-wear, pajamas",
+    "exampleJp": "寝間着のまま玄関に出てしまった。",
+    "exampleKr": "잠옷 차림으로 현관에 나가 버렸다."
   },
   {
     "id": "N2-1158",
@@ -12519,7 +12733,9 @@
     "word": "寝巻",
     "reading": "ねまき",
     "meaningKr": "잠옷",
-    "meaningEn": "sleep-wear, pajamas"
+    "meaningEn": "sleep-wear, pajamas",
+    "exampleJp": "祖母は昔ながらの寝巻を着て寝る。",
+    "exampleKr": "할머니는 옛날식 잠옷을 입고 주무신다."
   },
   {
     "id": "N2-1159",
@@ -12528,7 +12744,9 @@
     "word": "狙い",
     "reading": "ねらい",
     "meaningKr": "목표(겨냥)",
-    "meaningEn": "aim"
+    "meaningEn": "aim",
+    "exampleJp": "この企画の狙いは若者の関心を集めることだ。",
+    "exampleKr": "이 기획의 목표는 젊은이들의 관심을 모으는 것이다."
   },
   {
     "id": "N2-1160",
@@ -12537,7 +12755,9 @@
     "word": "狙う",
     "reading": "ねらう",
     "meaningKr": "노리다",
-    "meaningEn": "to aim at"
+    "meaningEn": "to aim at",
+    "exampleJp": "彼は優勝を狙って毎日練習している。",
+    "exampleKr": "그는 우승을 노리고 매일 연습하고 있다."
   },
   {
     "id": "N2-1161",
@@ -12546,7 +12766,9 @@
     "word": "～年生",
     "reading": "～ねんせい",
     "meaningKr": "~학년",
-    "meaningEn": "counter for school year"
+    "meaningEn": "counter for school year",
+    "exampleJp": "弟は今年小学三年生になった。",
+    "exampleKr": "남동생은 올해 초등학교 3학년이 되었다."
   },
   {
     "id": "N2-1162",
@@ -12555,7 +12777,9 @@
     "word": "年度",
     "reading": "ねんど",
     "meaningKr": "연도",
-    "meaningEn": "year, fiscal year"
+    "meaningEn": "year, fiscal year",
+    "exampleJp": "今年度の予算はすでに決まっている。",
+    "exampleKr": "올해도(연도)의 예산은 이미 정해져 있다."
   },
   {
     "id": "N2-1163",
@@ -12564,7 +12788,9 @@
     "word": "農産物",
     "reading": "のうさんぶつ",
     "meaningKr": "농산물",
-    "meaningEn": "agricultural produce"
+    "meaningEn": "agricultural produce",
+    "exampleJp": "この店では地元の農産物を販売している。",
+    "exampleKr": "이 가게에서는 지역 농산물을 판매하고 있다."
   },
   {
     "id": "N2-1164",
@@ -12573,7 +12799,9 @@
     "word": "農村",
     "reading": "のうそん",
     "meaningKr": "농촌",
-    "meaningEn": "agricultural community"
+    "meaningEn": "agricultural community",
+    "exampleJp": "農村の人口はここ数年減り続けている。",
+    "exampleKr": "농촌 인구는 최근 몇 년간 계속 줄고 있다."
   },
   {
     "id": "N2-1165",
@@ -12582,7 +12810,9 @@
     "word": "濃度",
     "reading": "のうど",
     "meaningKr": "농도",
-    "meaningEn": "concentration, density"
+    "meaningEn": "concentration, density",
+    "exampleJp": "このジュースは糖分の濃度が高い。",
+    "exampleKr": "이 주스는 당분 농도가 높다."
   },
   {
     "id": "N2-1166",
@@ -12591,7 +12821,9 @@
     "word": "農薬",
     "reading": "のうやく",
     "meaningKr": "농약",
-    "meaningEn": "agricultural chemicals"
+    "meaningEn": "agricultural chemicals",
+    "exampleJp": "農薬を使わずに野菜を育てている。",
+    "exampleKr": "농약을 쓰지 않고 채소를 기르고 있다."
   },
   {
     "id": "N2-1167",
@@ -12600,7 +12832,9 @@
     "word": "能率",
     "reading": "のうりつ",
     "meaningKr": "능률",
-    "meaningEn": "efficiency"
+    "meaningEn": "efficiency",
+    "exampleJp": "新しい機械を導入して作業の能率が上がった。",
+    "exampleKr": "새 기계를 도입해서 작업 능률이 올라갔다."
   },
   {
     "id": "N2-1168",
@@ -12609,7 +12843,9 @@
     "word": "のこぎり",
     "reading": "のこぎり",
     "meaningKr": "톱",
-    "meaningEn": "saw"
+    "meaningEn": "saw",
+    "exampleJp": "のこぎりで木の板を切った。",
+    "exampleKr": "톱으로 나무 판자를 잘랐다."
   },
   {
     "id": "N2-1169",
@@ -12618,7 +12854,9 @@
     "word": "残らず",
     "reading": "のこらず",
     "meaningKr": "남김없이",
-    "meaningEn": "completely, without exception"
+    "meaningEn": "completely, without exception",
+    "exampleJp": "出された料理を残らず食べた。",
+    "exampleKr": "나온 요리를 남김없이 먹었다."
   },
   {
     "id": "N2-1170",
@@ -12627,7 +12865,9 @@
     "word": "上り",
     "reading": "のぼり",
     "meaningKr": "오름(상행)",
-    "meaningEn": "up-train (going to Tokyo), ascent"
+    "meaningEn": "up-train (going to Tokyo), ascent",
+    "exampleJp": "上りの電車は下りより混んでいる。",
+    "exampleKr": "상행 전철은 하행보다 붐빈다."
   },
   {
     "id": "N2-1171",
@@ -12636,7 +12876,9 @@
     "word": "糊",
     "reading": "のり",
     "meaningKr": "풀(접착제)",
-    "meaningEn": "glue, paste, starch"
+    "meaningEn": "glue, paste, starch",
+    "exampleJp": "封筒に糊をつけてしっかり閉じた。",
+    "exampleKr": "봉투에 풀을 발라 단단히 봉했다."
   },
   {
     "id": "N2-1172",
@@ -12645,7 +12887,9 @@
     "word": "乗換",
     "reading": "のりかえ",
     "meaningKr": "환승",
-    "meaningEn": "a transfer (e.g., trains, buses)"
+    "meaningEn": "a transfer (e.g., trains, buses)",
+    "exampleJp": "次の駅で急行に乗換をしてください。",
+    "exampleKr": "다음 역에서 급행으로 환승해 주세요."
   },
   {
     "id": "N2-1173",
@@ -12654,7 +12898,9 @@
     "word": "乗り越し",
     "reading": "のりこし",
     "meaningKr": "승차 지나침",
-    "meaningEn": "riding past (one's station)"
+    "meaningEn": "riding past (one's station)",
+    "exampleJp": "居眠りをして乗り越しをしてしまった。",
+    "exampleKr": "졸다가 내릴 역을 지나쳐 버렸다."
   },
   {
     "id": "N2-1174",
@@ -12663,7 +12909,9 @@
     "word": "鈍い",
     "reading": "のろい",
     "meaningKr": "굼뜨다(느리다)",
-    "meaningEn": "dull (e.g., a knife), slow (opposite of fast), stupid"
+    "meaningEn": "dull (e.g., a knife), slow (opposite of fast), stupid",
+    "exampleJp": "彼の動きはいつものろい。",
+    "exampleKr": "그의 동작은 늘 굼뜨다."
   },
   {
     "id": "N2-1175",
@@ -12672,7 +12920,9 @@
     "word": "のろのろ",
     "reading": "のろのろ",
     "meaningKr": "느릿느릿",
-    "meaningEn": "slowly, sluggishly"
+    "meaningEn": "slowly, sluggishly",
+    "exampleJp": "渋滞で車がのろのろとしか進まない。",
+    "exampleKr": "정체 때문에 차가 느릿느릿 밖에 나아가지 못한다."
   },
   {
     "id": "N2-1176",
@@ -12681,7 +12931,9 @@
     "word": "呑気",
     "reading": "のんき",
     "meaningKr": "태평함",
-    "meaningEn": "carefree, optimistic, careless"
+    "meaningEn": "carefree, optimistic, careless",
+    "exampleJp": "彼はいつも呑気で心配事がなさそうだ。",
+    "exampleKr": "그는 항상 태평해서 걱정거리가 없어 보인다."
   },
   {
     "id": "N2-1177",
@@ -12690,7 +12942,9 @@
     "word": "はい (かん)",
     "reading": "はい (かん)",
     "meaningKr": "네",
-    "meaningEn": "yes"
+    "meaningEn": "yes",
+    "exampleJp": "「これでよろしいですか」「はい、大丈夫です」",
+    "exampleKr": "\"이걸로 괜찮으신가요?\" \"네, 괜찮습니다.\""
   },
   {
     "id": "N2-1178",
@@ -12699,7 +12953,9 @@
     "word": "灰色",
     "reading": "はいいろ",
     "meaningKr": "회색",
-    "meaningEn": "grey, ashen"
+    "meaningEn": "grey, ashen",
+    "exampleJp": "今日の空は灰色の雲に覆われている。",
+    "exampleKr": "오늘 하늘은 회색 구름으로 덮여 있다."
   },
   {
     "id": "N2-1179",
@@ -12708,7 +12964,9 @@
     "word": "俳句",
     "reading": "はいく",
     "meaningKr": "하이쿠",
-    "meaningEn": "haiku poetry"
+    "meaningEn": "haiku poetry",
+    "exampleJp": "祖父は毎日俳句を作るのが趣味だ。",
+    "exampleKr": "할아버지는 매일 하이쿠를 짓는 것이 취미이다."
   },
   {
     "id": "N2-1180",
@@ -12717,7 +12975,9 @@
     "word": "売店",
     "reading": "ばいてん",
     "meaningKr": "매점",
-    "meaningEn": "shop, stand"
+    "meaningEn": "shop, stand",
+    "exampleJp": "駅の売店で新聞を買った。",
+    "exampleKr": "역 매점에서 신문을 샀다."
   },
   {
     "id": "N2-1181",
@@ -12726,7 +12986,9 @@
     "word": "バイバイ",
     "reading": "バイバイ",
     "meaningKr": "바이바이",
-    "meaningEn": "bye bye"
+    "meaningEn": "bye bye",
+    "exampleJp": "子供たちは手を振って「バイバイ」と言った。",
+    "exampleKr": "아이들은 손을 흔들며 \"바이바이\"라고 말했다."
   },
   {
     "id": "N2-1182",
@@ -12735,7 +12997,9 @@
     "word": "売買",
     "reading": "ばいばい",
     "meaningKr": "매매",
-    "meaningEn": "trade, buying and selling"
+    "meaningEn": "trade, buying and selling",
+    "exampleJp": "この土地の売買には手続きが必要だ。",
+    "exampleKr": "이 토지의 매매에는 절차가 필요하다."
   },
   {
     "id": "N2-1183",
@@ -12744,7 +13008,9 @@
     "word": "這う",
     "reading": "はう",
     "meaningKr": "기다(포복하다)",
-    "meaningEn": "to creep, to crawl"
+    "meaningEn": "to creep, to crawl",
+    "exampleJp": "赤ちゃんが床を這って移動している。",
+    "exampleKr": "아기가 바닥을 기어서 이동하고 있다."
   },
   {
     "id": "N2-1184",
@@ -12753,7 +13019,9 @@
     "word": "剥す",
     "reading": "はがす",
     "meaningKr": "떼어내다",
-    "meaningEn": "to tear off, to peel off, to rip off"
+    "meaningEn": "to tear off, to peel off, to rip off",
+    "exampleJp": "壁に貼ったポスターを剥した。",
+    "exampleKr": "벽에 붙였던 포스터를 떼어냈다."
   },
   {
     "id": "N2-1185",
@@ -12762,7 +13030,9 @@
     "word": "ばからしい",
     "reading": "ばからしい",
     "meaningKr": "어처구니없다",
-    "meaningEn": "absurd"
+    "meaningEn": "absurd",
+    "exampleJp": "そんな噂を信じるなんてばからしい。",
+    "exampleKr": "그런 소문을 믿다니 어처구니없다."
   },
   {
     "id": "N2-1186",
@@ -12771,7 +13041,9 @@
     "word": "秤",
     "reading": "はかり",
     "meaningKr": "저울",
-    "meaningEn": "scales, weighing machine"
+    "meaningEn": "scales, weighing machine",
+    "exampleJp": "秤で肉の重さを量った。",
+    "exampleKr": "저울로 고기의 무게를 쟀다."
   },
   {
     "id": "N2-1187",
@@ -12780,7 +13052,9 @@
     "word": "吐き気",
     "reading": "はきけ",
     "meaningKr": "메스꺼움(구역질)",
-    "meaningEn": "nausea, sickness in the stomach"
+    "meaningEn": "nausea, sickness in the stomach",
+    "exampleJp": "船に酔って吐き気がしてきた。",
+    "exampleKr": "배멀미를 해서 메스꺼움이 느껴졌다."
   },
   {
     "id": "N2-1188",
@@ -12789,7 +13063,9 @@
     "word": "はきはき",
     "reading": "はきはき",
     "meaningKr": "또렷하게",
-    "meaningEn": "clearly"
+    "meaningEn": "clearly",
+    "exampleJp": "彼女はいつもはきはきと受け答えする。",
+    "exampleKr": "그녀는 항상 또렷하게 대답한다."
   },
   {
     "id": "N2-1189",
@@ -12798,7 +13074,9 @@
     "word": "～泊",
     "reading": "～はく",
     "meaningKr": "~박(숙박)",
-    "meaningEn": "counter for staying (e.g., 2 nights)"
+    "meaningEn": "counter for staying (e.g., 2 nights)",
+    "exampleJp": "京都に二泊三日で旅行する予定だ。",
+    "exampleKr": "교토에 2박 3일 일정으로 여행할 예정이다."
   },
   {
     "id": "N2-1190",
@@ -12807,7 +13085,9 @@
     "word": "歯車",
     "reading": "はぐるま",
     "meaningKr": "톱니바퀴",
-    "meaningEn": "gear, cog-wheel"
+    "meaningEn": "gear, cog-wheel",
+    "exampleJp": "時計の中には小さな歯車がたくさんある。",
+    "exampleKr": "시계 안에는 작은 톱니바퀴가 많이 있다."
   },
   {
     "id": "N2-1191",
@@ -12816,7 +13096,9 @@
     "word": "バケツ",
     "reading": "バケツ",
     "meaningKr": "양동이",
-    "meaningEn": "bucket, pail"
+    "meaningEn": "bucket, pail",
+    "exampleJp": "バケツに水を入れて庭にまいた。",
+    "exampleKr": "양동이에 물을 담아 마당에 뿌렸다."
   },
   {
     "id": "N2-1192",
@@ -12825,7 +13107,9 @@
     "word": "挟まる",
     "reading": "はさまる",
     "meaningKr": "끼이다",
-    "meaningEn": "to get between, to be caught in"
+    "meaningEn": "to get between, to be caught in",
+    "exampleJp": "歯に食べ物が挟まって取れない。",
+    "exampleKr": "이 사이에 음식물이 끼여서 빠지지 않는다."
   },
   {
     "id": "N2-1193",
@@ -12834,7 +13118,9 @@
     "word": "挟む",
     "reading": "はさむ",
     "meaningKr": "끼우다",
-    "meaningEn": "to pinch; to hold between; to insert"
+    "meaningEn": "to pinch; to hold between; to insert",
+    "exampleJp": "パンにハムとチーズを挟んで食べた。",
+    "exampleKr": "빵에 햄과 치즈를 끼워서 먹었다."
   },
   {
     "id": "N2-1194",
@@ -12843,7 +13129,9 @@
     "word": "梯子",
     "reading": "はしご",
     "meaningKr": "사다리",
-    "meaningEn": "ladder, stairs"
+    "meaningEn": "ladder, stairs",
+    "exampleJp": "梯子を使って屋根に上った。",
+    "exampleKr": "사다리를 사용해서 지붕에 올라갔다."
   },
   {
     "id": "N2-1195",
@@ -12852,7 +13140,9 @@
     "word": "始めに",
     "reading": "はじめに",
     "meaningKr": "먼저(우선)",
-    "meaningEn": "to begin with, first of all"
+    "meaningEn": "to begin with, first of all",
+    "exampleJp": "始めに自己紹介をお願いします。",
+    "exampleKr": "먼저 자기소개를 부탁드립니다."
   },
   {
     "id": "N2-1196",
@@ -12861,7 +13151,9 @@
     "word": "初めに",
     "reading": "はじめに",
     "meaningKr": "먼저(우선)",
-    "meaningEn": "to begin with, first of all"
+    "meaningEn": "to begin with, first of all",
+    "exampleJp": "初めにこの資料に目を通してください。",
+    "exampleKr": "먼저 이 자료를 훑어봐 주세요."
   },
   {
     "id": "N2-1197",
@@ -12870,7 +13162,9 @@
     "word": "はじめまして",
     "reading": "はじめまして",
     "meaningKr": "처음 뵙겠습니다",
-    "meaningEn": "How do you do, I am glad to meet you"
+    "meaningEn": "How do you do, I am glad to meet you",
+    "exampleJp": "はじめまして、田中と申します。",
+    "exampleKr": "처음 뵙겠습니다, 다나카라고 합니다."
   },
   {
     "id": "N2-1198",
@@ -12879,7 +13173,9 @@
     "word": "斜",
     "reading": "はす",
     "meaningKr": "비스듬함",
-    "meaningEn": "diagonal"
+    "meaningEn": "diagonal",
+    "exampleJp": "机を壁に対して斜に置いた。",
+    "exampleKr": "책상을 벽에 대해 비스듬히 놓았다."
   },
   {
     "id": "N2-1199",
@@ -12888,7 +13184,9 @@
     "word": "パターン",
     "reading": "パターン",
     "meaningKr": "패턴",
-    "meaningEn": "pattern"
+    "meaningEn": "pattern",
+    "exampleJp": "この壁紙は花のパターンが可愛い。",
+    "exampleKr": "이 벽지는 꽃무늬 패턴이 귀엽다."
   },
   {
     "id": "N2-1200",
@@ -12897,7 +13195,9 @@
     "word": "肌着",
     "reading": "はだぎ",
     "meaningKr": "속옷",
-    "meaningEn": "underwear"
+    "meaningEn": "underwear",
+    "exampleJp": "冬は暖かい肌着を着るようにしている。",
+    "exampleKr": "겨울에는 따뜻한 속옷을 입도록 하고 있다."
   },
   {
     "id": "N2-1201",
@@ -12906,7 +13206,9 @@
     "word": "果して",
     "reading": "はたして",
     "meaningKr": "과연(예상대로)",
-    "meaningEn": "as was expected, really"
+    "meaningEn": "as was expected, really",
+    "exampleJp": "果して彼の予想通りの結果になった。",
+    "exampleKr": "과연 그의 예상대로 결과가 나왔다."
   },
   {
     "id": "N2-1202",
@@ -12915,7 +13217,9 @@
     "word": "鉢",
     "reading": "はち",
     "meaningKr": "화분(사발)",
-    "meaningEn": "a bowl, a pot"
+    "meaningEn": "a bowl, a pot",
+    "exampleJp": "窓辺に花の鉢を並べて置いた。",
+    "exampleKr": "창가에 꽃 화분을 나란히 놓았다."
   },
   {
     "id": "N2-1203",
@@ -12924,7 +13228,9 @@
     "word": "～発",
     "reading": "～はつ",
     "meaningKr": "~발(총알 세는 단위)",
-    "meaningEn": "counter for bullets"
+    "meaningEn": "counter for bullets",
+    "exampleJp": "銃には弾が三発しか残っていなかった。",
+    "exampleKr": "총에는 총알이 세 발밖에 남아 있지 않았다."
   },
   {
     "id": "N2-1204",
@@ -12933,7 +13239,9 @@
     "word": "×",
     "reading": "ばつ",
     "meaningKr": "엑스(틀림 표시)",
-    "meaningEn": "cross"
+    "meaningEn": "cross",
+    "exampleJp": "間違った答えには×をつけてください。",
+    "exampleKr": "틀린 답에는 엑스 표시를 해 주세요."
   },
   {
     "id": "N2-1205",
@@ -12942,7 +13250,9 @@
     "word": "発揮",
     "reading": "はっき",
     "meaningKr": "발휘",
-    "meaningEn": "exhibition, demonstration, display"
+    "meaningEn": "exhibition, demonstration, display",
+    "exampleJp": "彼は試合で実力を十分に発揮した。",
+    "exampleKr": "그는 시합에서 실력을 충분히 발휘했다."
   },
   {
     "id": "N2-1206",
@@ -12951,7 +13261,9 @@
     "word": "バック",
     "reading": "バック",
     "meaningKr": "백(뒤)",
-    "meaningEn": "back"
+    "meaningEn": "back",
+    "exampleJp": "車をゆっくりバックさせて駐車した。",
+    "exampleKr": "차를 천천히 뒤로 빼서 주차했다."
   },
   {
     "id": "N2-1207",
@@ -12960,7 +13272,9 @@
     "word": "発想",
     "reading": "はっそう",
     "meaningKr": "발상",
-    "meaningEn": "idea; way of thinking (same as 考え方 (かんがえかた))"
+    "meaningEn": "idea; way of thinking (same as 考え方 (かんがえかた))",
+    "exampleJp": "彼の発想はいつもユニークで面白い。",
+    "exampleKr": "그의 발상은 항상 독특하고 재미있다."
   },
   {
     "id": "N2-1208",
@@ -12969,7 +13283,9 @@
     "word": "発電",
     "reading": "はつでん",
     "meaningKr": "발전(전기 생산)",
-    "meaningEn": "generation (e.g., power)"
+    "meaningEn": "generation (e.g., power)",
+    "exampleJp": "この地域では太陽光発電が盛んだ。",
+    "exampleKr": "이 지역에서는 태양광 발전이 활발하다."
   },
   {
     "id": "N2-1209",
@@ -12978,7 +13294,9 @@
     "word": "発売",
     "reading": "はつばい",
     "meaningKr": "발매",
-    "meaningEn": "sale"
+    "meaningEn": "sale",
+    "exampleJp": "新しいゲームが来月発売される。",
+    "exampleKr": "새 게임이 다음 달에 발매된다."
   },
   {
     "id": "N2-1210",
@@ -12987,7 +13305,9 @@
     "word": "話合い",
     "reading": "はなしあい",
     "meaningKr": "논의(상담)",
-    "meaningEn": "discussion, talk"
+    "meaningEn": "discussion, talk",
+    "exampleJp": "両者は長時間の話合いの末、合意した。",
+    "exampleKr": "양측은 장시간의 논의 끝에 합의했다."
   },
   {
     "id": "N2-1211",
@@ -12996,7 +13316,9 @@
     "word": "話し掛ける",
     "reading": "はなしかける",
     "meaningKr": "말을 걸다",
-    "meaningEn": "to accost a person, to talk (to someone)"
+    "meaningEn": "to accost a person, to talk (to someone)",
+    "exampleJp": "知らない人に急に話し掛けられて驚いた。",
+    "exampleKr": "모르는 사람이 갑자기 말을 걸어와서 놀랐다."
   },
   {
     "id": "N2-1212",
@@ -13005,7 +13327,9 @@
     "word": "話中",
     "reading": "はなしちゅう",
     "meaningKr": "통화중",
-    "meaningEn": "while talking, the line is busy"
+    "meaningEn": "while talking, the line is busy",
+    "exampleJp": "何度電話をかけても話中だった。",
+    "exampleKr": "몇 번을 전화해도 통화중이었다."
   },
   {
     "id": "N2-1213",
@@ -13014,7 +13338,9 @@
     "word": "甚だしい",
     "reading": "はなはだしい",
     "meaningKr": "심하다",
-    "meaningEn": "extreme, excessive, terrible"
+    "meaningEn": "extreme, excessive, terrible",
+    "exampleJp": "今回の被害は甚だしいものだった。",
+    "exampleKr": "이번 피해는 심각한(심한) 것이었다."
   },
   {
     "id": "N2-1214",
@@ -13023,7 +13349,9 @@
     "word": "花火",
     "reading": "はなび",
     "meaningKr": "불꽃놀이",
-    "meaningEn": "fireworks"
+    "meaningEn": "fireworks",
+    "exampleJp": "夏祭りで花火を見に行った。",
+    "exampleKr": "여름 축제에서 불꽃놀이를 보러 갔다."
   },
   {
     "id": "N2-1215",
@@ -13032,7 +13360,9 @@
     "word": "花嫁",
     "reading": "はなよめ",
     "meaningKr": "신부",
-    "meaningEn": "bride"
+    "meaningEn": "bride",
+    "exampleJp": "花嫁は白いドレスを着ていた。",
+    "exampleKr": "신부는 하얀 드레스를 입고 있었다."
   },
   {
     "id": "N2-1216",
@@ -13041,7 +13371,9 @@
     "word": "ばね",
     "reading": "ばね",
     "meaningKr": "용수철(스프링)",
-    "meaningEn": "spring (e.g., coil, leaf)"
+    "meaningEn": "spring (e.g., coil, leaf)",
+    "exampleJp": "このソファーはばねが弱くなってきた。",
+    "exampleKr": "이 소파는 스프링이 약해지기 시작했다."
   },
   {
     "id": "N2-1217",
@@ -13050,7 +13382,9 @@
     "word": "跳ねる",
     "reading": "はねる",
     "meaningKr": "뛰다(튀다)",
-    "meaningEn": "to jump, to leap"
+    "meaningEn": "to jump, to leap",
+    "exampleJp": "魚が水面から跳ねるのが見えた。",
+    "exampleKr": "물고기가 수면 위로 튀어 오르는 것이 보였다."
   },
   {
     "id": "N2-1218",
@@ -13059,7 +13393,9 @@
     "word": "破片",
     "reading": "はへん",
     "meaningKr": "파편",
-    "meaningEn": "fragment, broken piece"
+    "meaningEn": "fragment, broken piece",
+    "exampleJp": "割れたガラスの破片が床に散らばっていた。",
+    "exampleKr": "깨진 유리 파편이 바닥에 흩어져 있었다."
   },
   {
     "id": "N2-1219",
@@ -13068,7 +13404,9 @@
     "word": "歯磨き",
     "reading": "はみがき",
     "meaningKr": "양치질",
-    "meaningEn": "toothbrushing, toothpaste"
+    "meaningEn": "toothbrushing, toothpaste",
+    "exampleJp": "寝る前に必ず歯磨きをする。",
+    "exampleKr": "자기 전에 반드시 양치질을 한다."
   },
   {
     "id": "N2-1220",
@@ -13077,7 +13415,9 @@
     "word": "はめる",
     "reading": "はめる",
     "meaningKr": "끼우다",
-    "meaningEn": "(col) to get in, to insert, to put on"
+    "meaningEn": "(col) to get in, to insert, to put on",
+    "exampleJp": "寒いので手袋をはめて出かけた。",
+    "exampleKr": "추워서 장갑을 끼고 외출했다."
   },
   {
     "id": "N2-1221",
@@ -13086,7 +13426,9 @@
     "word": "早口",
     "reading": "はやくち",
     "meaningKr": "빠른 말투",
-    "meaningEn": "fast-talking"
+    "meaningEn": "fast-talking",
+    "exampleJp": "彼女は早口なので聞き取りにくい。",
+    "exampleKr": "그녀는 말이 빨라서 알아듣기 어렵다."
   },
   {
     "id": "N2-1222",
@@ -13095,7 +13437,9 @@
     "word": "払い込む",
     "reading": "はらいこむ",
     "meaningKr": "납입하다",
-    "meaningEn": "to deposit, to pay in"
+    "meaningEn": "to deposit, to pay in",
+    "exampleJp": "銀行の口座に授業料を払い込んだ。",
+    "exampleKr": "은행 계좌에 수업료를 납입했다."
   },
   {
     "id": "N2-1223",
@@ -13104,7 +13448,9 @@
     "word": "払い戻す",
     "reading": "はらいもどす",
     "meaningKr": "환불하다",
-    "meaningEn": "to repay, to pay back"
+    "meaningEn": "to repay, to pay back",
+    "exampleJp": "チケットが売り切れたため、代金を払い戻した。",
+    "exampleKr": "티켓이 매진되어서 대금을 환불했다."
   },
   {
     "id": "N2-1224",
@@ -13113,7 +13459,9 @@
     "word": "針金",
     "reading": "はりがね",
     "meaningKr": "철사",
-    "meaningEn": "wire"
+    "meaningEn": "wire",
+    "exampleJp": "針金を曲げて簡単な人形を作った。",
+    "exampleKr": "철사를 구부려서 간단한 인형을 만들었다."
   },
   {
     "id": "N2-1225",
@@ -13122,7 +13470,9 @@
     "word": "張り切る",
     "reading": "はりきる",
     "meaningKr": "의욕이 넘치다",
-    "meaningEn": "to be in high spirits, to be full of vigor"
+    "meaningEn": "to be in high spirits, to be full of vigor",
+    "exampleJp": "新入社員は初日から張り切っている。",
+    "exampleKr": "신입 사원은 첫날부터 의욕이 넘친다."
   },
   {
     "id": "N2-1226",
@@ -13131,7 +13481,9 @@
     "word": "反～",
     "reading": "はん～",
     "meaningKr": "반~(반대)",
-    "meaningEn": "anti ~, counter ~"
+    "meaningEn": "anti ~, counter ~",
+    "exampleJp": "その政策には反政府の声が上がっている。",
+    "exampleKr": "그 정책에는 반정부 목소리가 나오고 있다."
   },
   {
     "id": "N2-1227",
@@ -13140,7 +13492,9 @@
     "word": "反映",
     "reading": "はんえい",
     "meaningKr": "반영",
-    "meaningEn": "reflection, influence"
+    "meaningEn": "reflection, influence",
+    "exampleJp": "この作品には作者の経験が反映されている。",
+    "exampleKr": "이 작품에는 작가의 경험이 반영되어 있다."
   },
   {
     "id": "N2-1228",
@@ -13149,7 +13503,9 @@
     "word": "半径",
     "reading": "はんけい",
     "meaningKr": "반지름",
-    "meaningEn": "radius"
+    "meaningEn": "radius",
+    "exampleJp": "この円の半径は五センチだ。",
+    "exampleKr": "이 원의 반지름은 5센티미터이다."
   },
   {
     "id": "N2-1229",
@@ -13158,7 +13514,9 @@
     "word": "判子",
     "reading": "はんこ",
     "meaningKr": "도장",
-    "meaningEn": "seal (used for signature)"
+    "meaningEn": "seal (used for signature)",
+    "exampleJp": "書類に判子を押してください。",
+    "exampleKr": "서류에 도장을 찍어 주세요."
   },
   {
     "id": "N2-1230",
@@ -13167,7 +13525,9 @@
     "word": "万歳",
     "reading": "ばんざい",
     "meaningKr": "만세",
-    "meaningEn": "banzai, Long live ~!"
+    "meaningEn": "banzai, Long live ~!",
+    "exampleJp": "優勝が決まった瞬間、みんなで万歳をした。",
+    "exampleKr": "우승이 결정된 순간, 모두 함께 만세를 불렀다."
   },
   {
     "id": "N2-1231",
@@ -13176,7 +13536,9 @@
     "word": "判事",
     "reading": "はんじ",
     "meaningKr": "판사",
-    "meaningEn": "judge, justice"
+    "meaningEn": "judge, justice",
+    "exampleJp": "彼女は長年の努力の末、判事になった。",
+    "exampleKr": "그녀는 오랜 노력 끝에 판사가 되었다."
   },
   {
     "id": "N2-1232",
@@ -13185,7 +13547,9 @@
     "word": "番地",
     "reading": "ばんち",
     "meaningKr": "번지(주소)",
-    "meaningEn": "house number, address"
+    "meaningEn": "house number, address",
+    "exampleJp": "手紙にはっきりと番地を書いてください。",
+    "exampleKr": "편지에 번지를 정확히 써 주세요."
   },
   {
     "id": "N2-1233",
@@ -13194,7 +13558,9 @@
     "word": "パンツ",
     "reading": "パンツ",
     "meaningKr": "팬티(바지)",
-    "meaningEn": "underpants"
+    "meaningEn": "underpants",
+    "exampleJp": "新しいパンツを三枚買った。",
+    "exampleKr": "새 팬티를 세 장 샀다."
   },
   {
     "id": "N2-1234",
@@ -13203,7 +13569,9 @@
     "word": "バンド",
     "reading": "バンド",
     "meaningKr": "밴드",
-    "meaningEn": "band"
+    "meaningEn": "band",
+    "exampleJp": "彼は大学時代にロックバンドを組んでいた。",
+    "exampleKr": "그는 대학 시절에 록 밴드를 결성했었다."
   },
   {
     "id": "N2-1235",
@@ -13212,7 +13580,9 @@
     "word": "半島",
     "reading": "はんとう",
     "meaningKr": "반도",
-    "meaningEn": "peninsula"
+    "meaningEn": "peninsula",
+    "exampleJp": "この半島は美しい海岸で有名だ。",
+    "exampleKr": "이 반도는 아름다운 해안으로 유명하다."
   },
   {
     "id": "N2-1236",
@@ -13221,7 +13591,9 @@
     "word": "ハンドル",
     "reading": "ハンドル",
     "meaningKr": "핸들",
-    "meaningEn": "handle, steering wheel"
+    "meaningEn": "handle, steering wheel",
+    "exampleJp": "急にハンドルを切ったので驚いた。",
+    "exampleKr": "갑자기 핸들을 꺾어서 놀랐다."
   },
   {
     "id": "N2-1237",
@@ -13230,7 +13602,9 @@
     "word": "～番目",
     "reading": "～ばんめ",
     "meaningKr": "~번째",
-    "meaningEn": "~th"
+    "meaningEn": "~th",
+    "exampleJp": "前から三番目の席に座ってください。",
+    "exampleKr": "앞에서 세 번째 자리에 앉아 주세요."
   },
   {
     "id": "N2-1238",
@@ -13239,7 +13613,9 @@
     "word": "非～",
     "reading": "ひ～",
     "meaningKr": "비~(아닌)",
-    "meaningEn": "anti~, counter~, an~, non~"
+    "meaningEn": "anti~, counter~, an~, non~",
+    "exampleJp": "その行動は非常識だと思われた。",
+    "exampleKr": "그 행동은 비상식적이라고 여겨졌다."
   },
   {
     "id": "N2-1239",
@@ -13248,7 +13624,9 @@
     "word": "～費",
     "reading": "～ひ",
     "meaningKr": "~비(비용)",
-    "meaningEn": "cost of ~"
+    "meaningEn": "cost of ~",
+    "exampleJp": "毎月の交通費がかなりかかる。",
+    "exampleKr": "매달 교통비가 꽤 든다."
   },
   {
     "id": "N2-1240",
@@ -13257,7 +13635,9 @@
     "word": "日当たり",
     "reading": "ひあたり",
     "meaningKr": "양지(햇볕이 듦)",
-    "meaningEn": "exposure to the sun, sunny place"
+    "meaningEn": "exposure to the sun, sunny place",
+    "exampleJp": "このアパートは日当たりがいい。",
+    "exampleKr": "이 아파트는 볕이 잘 든다."
   },
   {
     "id": "N2-1241",
@@ -13266,7 +13646,9 @@
     "word": "日帰り",
     "reading": "ひがえり",
     "meaningKr": "당일치기",
-    "meaningEn": "day trip"
+    "meaningEn": "day trip",
+    "exampleJp": "週末に温泉へ日帰り旅行に行った。",
+    "exampleKr": "주말에 온천으로 당일치기 여행을 다녀왔다."
   },
   {
     "id": "N2-1242",
@@ -13275,7 +13657,9 @@
     "word": "比較的",
     "reading": "ひかくてき",
     "meaningKr": "비교적",
-    "meaningEn": "comparatively; relatively"
+    "meaningEn": "comparatively; relatively",
+    "exampleJp": "今日は比較的涼しい一日だった。",
+    "exampleKr": "오늘은 비교적 시원한 하루였다."
   },
   {
     "id": "N2-1243",
@@ -13284,7 +13668,9 @@
     "word": "日陰",
     "reading": "ひかげ",
     "meaningKr": "그늘",
-    "meaningEn": "shadow"
+    "meaningEn": "shadow",
+    "exampleJp": "暑いので日陰で休むことにした。",
+    "exampleKr": "더워서 그늘에서 쉬기로 했다."
   },
   {
     "id": "N2-1244",
@@ -13293,16 +13679,20 @@
     "word": "ぴかぴか",
     "reading": "ぴかぴか",
     "meaningKr": "반짝반짝",
-    "meaningEn": "glitter, sparkle"
+    "meaningEn": "glitter, sparkle",
+    "exampleJp": "新しい靴はぴかぴかに光っていた。",
+    "exampleKr": "새 구두는 반짝반짝 빛나고 있었다."
   },
   {
     "id": "N2-1245",
     "level": "N2",
     "num": 1245,
-    "word": "引受る",
+    "word": "引き受ける",
     "reading": "ひきうける",
     "meaningKr": "떠맡다",
-    "meaningEn": "to undertake, to take up, to take over"
+    "meaningEn": "to undertake, to take up, to take over",
+    "exampleJp": "彼はその難しい仕事を快く引き受けた。",
+    "exampleKr": "그는 그 어려운 일을 흔쾌히 떠맡았다."
   },
   {
     "id": "N2-1246",
@@ -13311,7 +13701,9 @@
     "word": "引き返す",
     "reading": "ひきかえす",
     "meaningKr": "되돌아가다",
-    "meaningEn": "to turn back, to go back, reverse"
+    "meaningEn": "to turn back, to go back, reverse",
+    "exampleJp": "道を間違えたので途中で引き返した。",
+    "exampleKr": "길을 잘못 들어서 도중에 되돌아갔다."
   },
   {
     "id": "N2-1247",
@@ -13320,7 +13712,9 @@
     "word": "引算",
     "reading": "ひきざん",
     "meaningKr": "뺄셈",
-    "meaningEn": "subtraction"
+    "meaningEn": "subtraction",
+    "exampleJp": "子供に引算のやり方を教えた。",
+    "exampleKr": "아이에게 뺄셈하는 방법을 가르쳤다."
   },
   {
     "id": "N2-1248",
@@ -13329,7 +13723,9 @@
     "word": "引き出す",
     "reading": "ひきだす",
     "meaningKr": "꺼내다(인출하다)",
-    "meaningEn": "to pull out, to take out, to withdraw"
+    "meaningEn": "to pull out, to take out, to withdraw",
+    "exampleJp": "銀行でお金を引き出した。",
+    "exampleKr": "은행에서 돈을 인출했다."
   },
   {
     "id": "N2-1249",
@@ -13338,7 +13734,9 @@
     "word": "引き止める",
     "reading": "ひきとめる",
     "meaningKr": "만류하다",
-    "meaningEn": "to keep back, to prevent, to hold back"
+    "meaningEn": "to keep back, to prevent, to hold back",
+    "exampleJp": "友人が帰ろうとするのを引き止めた。",
+    "exampleKr": "돌아가려는 친구를 만류했다."
   },
   {
     "id": "N2-1250",
@@ -13347,7 +13745,9 @@
     "word": "卑怯",
     "reading": "ひきょう",
     "meaningKr": "비겁",
-    "meaningEn": "cowardice, meanness, unfairness"
+    "meaningEn": "cowardice, meanness, unfairness",
+    "exampleJp": "人のせいにするのは卑怯だと思う。",
+    "exampleKr": "남 탓을 하는 것은 비겁하다고 생각한다."
   },
   {
     "id": "N2-1251",
@@ -13356,7 +13756,9 @@
     "word": "引分け",
     "reading": "ひきわけ",
     "meaningKr": "무승부",
-    "meaningEn": "a draw (in competition), tie game"
+    "meaningEn": "a draw (in competition), tie game",
+    "exampleJp": "試合は一対一の引分けに終わった。",
+    "exampleKr": "경기는 1대1 무승부로 끝났다."
   },
   {
     "id": "N2-1252",
@@ -13365,7 +13767,9 @@
     "word": "陽射",
     "reading": "ひざし",
     "meaningKr": "햇살",
-    "meaningEn": "sunlight, rays of the sun"
+    "meaningEn": "sunlight, rays of the sun",
+    "exampleJp": "窓から柔らかい陽射しが差し込んでいる。",
+    "exampleKr": "창문으로 부드러운 햇살이 비쳐 들고 있다."
   },
   {
     "id": "N2-1253",
@@ -13374,7 +13778,9 @@
     "word": "肘",
     "reading": "ひじ",
     "meaningKr": "팔꿈치",
-    "meaningEn": "elbow"
+    "meaningEn": "elbow",
+    "exampleJp": "転んで肘をすりむいてしまった。",
+    "exampleKr": "넘어져서 팔꿈치가 까져 버렸다."
   },
   {
     "id": "N2-1254",
@@ -13383,7 +13789,9 @@
     "word": "ピストル",
     "reading": "ピストル",
     "meaningKr": "권총",
-    "meaningEn": "pistol"
+    "meaningEn": "pistol",
+    "exampleJp": "映画の中で警官がピストルを構えた。",
+    "exampleKr": "영화 속에서 경찰관이 권총을 겨눴다."
   },
   {
     "id": "N2-1255",
@@ -13392,7 +13800,9 @@
     "word": "ビタミン",
     "reading": "ビタミン",
     "meaningKr": "비타민",
-    "meaningEn": "vitamin"
+    "meaningEn": "vitamin",
+    "exampleJp": "この果物にはビタミンCが豊富に含まれている。",
+    "exampleKr": "이 과일에는 비타민C가 풍부하게 들어 있다."
   },
   {
     "id": "N2-1256",
@@ -13401,7 +13811,9 @@
     "word": "ぴたり",
     "reading": "ぴたり",
     "meaningKr": "딱(꼭 맞음)",
-    "meaningEn": "exactly; close-fitting"
+    "meaningEn": "exactly; close-fitting",
+    "exampleJp": "予想がぴたりと当たった。",
+    "exampleKr": "예상이 딱 들어맞았다."
   },
   {
     "id": "N2-1257",
@@ -13410,7 +13822,9 @@
     "word": "引っ掛かる",
     "reading": "ひっかかる",
     "meaningKr": "걸리다",
-    "meaningEn": "to be caught in, to be stuck in"
+    "meaningEn": "to be caught in, to be stuck in",
+    "exampleJp": "服が釘に引っ掛かって破れてしまった。",
+    "exampleKr": "옷이 못에 걸려서 찢어져 버렸다."
   },
   {
     "id": "N2-1258",
@@ -13419,7 +13833,9 @@
     "word": "筆記",
     "reading": "ひっき",
     "meaningKr": "필기",
-    "meaningEn": "note taking, writing"
+    "meaningEn": "note taking, writing",
+    "exampleJp": "明日は筆記試験があるので緊張する。",
+    "exampleKr": "내일은 필기시험이 있어서 긴장된다."
   },
   {
     "id": "N2-1259",
@@ -13428,7 +13844,9 @@
     "word": "引っ繰り返す",
     "reading": "ひっくりかえす",
     "meaningKr": "뒤집다",
-    "meaningEn": "to turn over, to overturn, to knock over"
+    "meaningEn": "to turn over, to overturn, to knock over",
+    "exampleJp": "誤ってコップを引っ繰り返してしまった。",
+    "exampleKr": "실수로 컵을 뒤집어엎고 말았다."
   },
   {
     "id": "N2-1260",
@@ -13437,7 +13855,9 @@
     "word": "引っ繰り返る",
     "reading": "ひっくりかえる",
     "meaningKr": "뒤집히다",
-    "meaningEn": "to be overturned, to be upset, to topple over, to be reversed"
+    "meaningEn": "to be overturned, to be upset, to topple over, to be reversed",
+    "exampleJp": "強い風で自転車が引っ繰り返った。",
+    "exampleKr": "강한 바람에 자전거가 뒤집혔다."
   },
   {
     "id": "N2-1261",
@@ -13446,7 +13866,9 @@
     "word": "引っ込む",
     "reading": "ひっこむ",
     "meaningKr": "틀어박히다(들어가다)",
-    "meaningEn": "to draw back, to sink, to cave in"
+    "meaningEn": "to draw back, to sink, to cave in",
+    "exampleJp": "彼は部屋に引っ込んだまま出てこない。",
+    "exampleKr": "그는 방에 틀어박힌 채 나오지 않는다."
   },
   {
     "id": "N2-1262",
@@ -13455,7 +13877,9 @@
     "word": "筆者",
     "reading": "ひっしゃ",
     "meaningKr": "필자",
-    "meaningEn": "writer, author"
+    "meaningEn": "writer, author",
+    "exampleJp": "この記事の筆者は有名な学者だ。",
+    "exampleKr": "이 기사의 필자는 유명한 학자다."
   },
   {
     "id": "N2-1263",
@@ -13464,7 +13888,9 @@
     "word": "必需品",
     "reading": "ひつじゅひん",
     "meaningKr": "필수품",
-    "meaningEn": "necessities, essential"
+    "meaningEn": "necessities, essential",
+    "exampleJp": "旅行に必需品を忘れずに持っていく。",
+    "exampleKr": "여행에 필수품을 잊지 않고 챙겨 간다."
   },
   {
     "id": "N2-1264",
@@ -13473,7 +13899,9 @@
     "word": "一～",
     "reading": "ひと～",
     "meaningKr": "한~(하나의)",
-    "meaningEn": "one ~"
+    "meaningEn": "one ~",
+    "exampleJp": "疲れたので一休みしましょう。",
+    "exampleKr": "피곤하니 한숨 돌립시다."
   },
   {
     "id": "N2-1265",
@@ -13482,7 +13910,9 @@
     "word": "人差指",
     "reading": "ひとさしゆび",
     "meaningKr": "검지",
-    "meaningEn": "index finger"
+    "meaningEn": "index finger",
+    "exampleJp": "人差指で地図の位置を指した。",
+    "exampleKr": "검지로 지도의 위치를 가리켰다."
   },
   {
     "id": "N2-1266",
@@ -13491,7 +13921,9 @@
     "word": "一通り",
     "reading": "ひととおり",
     "meaningKr": "대충(일반적으로)",
-    "meaningEn": "general, briefly"
+    "meaningEn": "general, briefly",
+    "exampleJp": "資料には一通り目を通しておいた。",
+    "exampleKr": "자료는 대충 훑어봐 두었다."
   },
   {
     "id": "N2-1267",
@@ -13500,7 +13932,9 @@
     "word": "人通り",
     "reading": "ひとどおり",
     "meaningKr": "인적(사람 왕래)",
-    "meaningEn": "pedestrian traffic"
+    "meaningEn": "pedestrian traffic",
+    "exampleJp": "夜遅くはこの道の人通りが少ない。",
+    "exampleKr": "밤늦게는 이 길에 인적이 드물다."
   },
   {
     "id": "N2-1268",
@@ -13509,7 +13943,9 @@
     "word": "ひとまず",
     "reading": "ひとまず",
     "meaningKr": "일단",
-    "meaningEn": "for the present, once, for the time being"
+    "meaningEn": "for the present, once, for the time being",
+    "exampleJp": "ひとまず今日の作業はここまでにしよう。",
+    "exampleKr": "일단 오늘 작업은 여기까지 하자."
   },
   {
     "id": "N2-1269",
@@ -13518,7 +13954,9 @@
     "word": "瞳",
     "reading": "ひとみ",
     "meaningKr": "눈동자",
-    "meaningEn": "pupil (of eye)"
+    "meaningEn": "pupil (of eye)",
+    "exampleJp": "彼女の瞳はとても澄んでいた。",
+    "exampleKr": "그녀의 눈동자는 매우 맑았다."
   },
   {
     "id": "N2-1270",
@@ -13527,7 +13965,9 @@
     "word": "一休み",
     "reading": "ひとやすみ",
     "meaningKr": "잠깐 쉼",
-    "meaningEn": "a rest"
+    "meaningEn": "a rest",
+    "exampleJp": "長く歩いたので木陰で一休みした。",
+    "exampleKr": "오래 걸어서 나무 그늘에서 잠깐 쉬었다."
   },
   {
     "id": "N2-1271",
@@ -13536,7 +13976,9 @@
     "word": "独り言",
     "reading": "ひとりごと",
     "meaningKr": "혼잣말",
-    "meaningEn": "a soliloquy, a monologue, speaking to oneself"
+    "meaningEn": "a soliloquy, a monologue, speaking to oneself",
+    "exampleJp": "彼はよく独り言を言う癖がある。",
+    "exampleKr": "그는 자주 혼잣말을 하는 버릇이 있다."
   },
   {
     "id": "N2-1272",
@@ -13545,7 +13987,9 @@
     "word": "ひとりでに",
     "reading": "ひとりでに",
     "meaningKr": "저절로",
-    "meaningEn": "by itself, automatically, naturally"
+    "meaningEn": "by itself, automatically, naturally",
+    "exampleJp": "ドアがひとりでに開いて驚いた。",
+    "exampleKr": "문이 저절로 열려서 놀랐다."
   },
   {
     "id": "N2-1273",
@@ -13554,7 +13998,9 @@
     "word": "ビニール",
     "reading": "ビニール",
     "meaningKr": "비닐",
-    "meaningEn": "vinyl"
+    "meaningEn": "vinyl",
+    "exampleJp": "野菜をビニール袋に入れて持ち帰った。",
+    "exampleKr": "채소를 비닐봉지에 넣어 가져갔다."
   },
   {
     "id": "N2-1274",
@@ -13563,7 +14009,9 @@
     "word": "皮肉",
     "reading": "ひにく",
     "meaningKr": "비꼼(냉소)",
-    "meaningEn": "cynicism, sarcasm"
+    "meaningEn": "cynicism, sarcasm",
+    "exampleJp": "彼はいつも皮肉を言うので苦手だ。",
+    "exampleKr": "그는 항상 비꼬는 말을 해서 어렵다."
   },
   {
     "id": "N2-1275",
@@ -13572,7 +14020,9 @@
     "word": "日日",
     "reading": "ひにち",
     "meaningKr": "날짜",
-    "meaningEn": "date"
+    "meaningEn": "date",
+    "exampleJp": "会議の日にちはまだ決まっていない。",
+    "exampleKr": "회의 날짜는 아직 정해지지 않았다."
   },
   {
     "id": "N2-1276",
@@ -13581,7 +14031,9 @@
     "word": "捻る",
     "reading": "ひねる",
     "meaningKr": "비틀다",
-    "meaningEn": "to twist, to turn"
+    "meaningEn": "to twist, to turn",
+    "exampleJp": "階段で足首を捻ってしまった。",
+    "exampleKr": "계단에서 발목을 삐끗하고 말았다."
   },
   {
     "id": "N2-1277",
@@ -13590,7 +14042,9 @@
     "word": "日の入り",
     "reading": "ひのいり",
     "meaningKr": "일몰",
-    "meaningEn": "sunset"
+    "meaningEn": "sunset",
+    "exampleJp": "冬は日の入りが早い。",
+    "exampleKr": "겨울에는 일몰이 이르다."
   },
   {
     "id": "N2-1278",
@@ -13599,7 +14053,9 @@
     "word": "日の出",
     "reading": "ひので",
     "meaningKr": "일출",
-    "meaningEn": "sunrise"
+    "meaningEn": "sunrise",
+    "exampleJp": "山の頂上で日の出を見た。",
+    "exampleKr": "산 정상에서 일출을 보았다."
   },
   {
     "id": "N2-1279",
@@ -13608,7 +14064,9 @@
     "word": "響き",
     "reading": "ひびき",
     "meaningKr": "울림",
-    "meaningEn": "echo, sound"
+    "meaningEn": "echo, sound",
+    "exampleJp": "鐘の響きが遠くまで聞こえた。",
+    "exampleKr": "종소리의 울림이 멀리까지 들렸다."
   },
   {
     "id": "N2-1280",
@@ -13617,7 +14075,9 @@
     "word": "響く",
     "reading": "ひびく",
     "meaningKr": "울리다",
-    "meaningEn": "to resound; to affect"
+    "meaningEn": "to resound; to affect",
+    "exampleJp": "花火の音が街中に響いた。",
+    "exampleKr": "불꽃놀이 소리가 온 거리에 울렸다."
   },
   {
     "id": "N2-1281",
@@ -13626,16 +14086,20 @@
     "word": "皮膚",
     "reading": "ひふ",
     "meaningKr": "피부",
-    "meaningEn": "skin"
+    "meaningEn": "skin",
+    "exampleJp": "夏は皮膚が日焼けしやすい。",
+    "exampleKr": "여름에는 피부가 쉽게 탄다."
   },
   {
     "id": "N2-1282",
     "level": "N2",
     "num": 1282,
-    "word": "ひゃっかじてん",
+    "word": "百科事典",
     "reading": "ひゃっかじてん",
     "meaningKr": "백과사전",
-    "meaningEn": "encyclopedia"
+    "meaningEn": "encyclopedia",
+    "exampleJp": "分からない言葉は百科事典で調べた。",
+    "exampleKr": "모르는 단어는 백과사전에서 찾아보았다."
   },
   {
     "id": "N2-1283",
@@ -13644,7 +14108,9 @@
     "word": "美容",
     "reading": "びよう",
     "meaningKr": "미용",
-    "meaningEn": "beauty of figure or form"
+    "meaningEn": "beauty of figure or form",
+    "exampleJp": "彼女は美容に関する仕事をしている。",
+    "exampleKr": "그녀는 미용 관련 일을 하고 있다."
   },
   {
     "id": "N2-1284",
@@ -13653,7 +14119,9 @@
     "word": "～病",
     "reading": "～びょう",
     "meaningKr": "~병",
-    "meaningEn": "kind of disease"
+    "meaningEn": "kind of disease",
+    "exampleJp": "祖父は糖尿病で入院している。",
+    "exampleKr": "할아버지는 당뇨병으로 입원해 있다."
   },
   {
     "id": "N2-1285",
@@ -13662,7 +14130,9 @@
     "word": "表紙",
     "reading": "ひょうし",
     "meaningKr": "표지",
-    "meaningEn": "front cover, binding"
+    "meaningEn": "front cover, binding",
+    "exampleJp": "この本の表紙はとても綺麗だ。",
+    "exampleKr": "이 책의 표지는 매우 예쁘다."
   },
   {
     "id": "N2-1286",
@@ -13671,7 +14141,9 @@
     "word": "標識",
     "reading": "ひょうしき",
     "meaningKr": "표지판",
-    "meaningEn": "sign, mark"
+    "meaningEn": "sign, mark",
+    "exampleJp": "道路標識をよく確認して運転してください。",
+    "exampleKr": "도로 표지판을 잘 확인하며 운전하세요."
   },
   {
     "id": "N2-1287",
@@ -13680,7 +14152,9 @@
     "word": "標準",
     "reading": "ひょうじゅん",
     "meaningKr": "표준",
-    "meaningEn": "standard, level"
+    "meaningEn": "standard, level",
+    "exampleJp": "この製品は業界の標準を満たしている。",
+    "exampleKr": "이 제품은 업계 표준을 충족하고 있다."
   },
   {
     "id": "N2-1288",
@@ -13689,7 +14163,9 @@
     "word": "標本",
     "reading": "ひょうほん",
     "meaningKr": "표본",
-    "meaningEn": "example, specimen"
+    "meaningEn": "example, specimen",
+    "exampleJp": "理科の授業で昆虫の標本を作った。",
+    "exampleKr": "과학 수업에서 곤충 표본을 만들었다."
   },
   {
     "id": "N2-1289",
@@ -13698,7 +14174,9 @@
     "word": "評論",
     "reading": "ひょうろん",
     "meaningKr": "평론",
-    "meaningEn": "criticism, critique"
+    "meaningEn": "criticism, critique",
+    "exampleJp": "彼は映画の評論を書くのが仕事だ。",
+    "exampleKr": "그는 영화 평론을 쓰는 것이 직업이다."
   },
   {
     "id": "N2-1290",
@@ -13707,7 +14185,9 @@
     "word": "ビルディング",
     "reading": "ビルディング",
     "meaningKr": "빌딩",
-    "meaningEn": "building"
+    "meaningEn": "building",
+    "exampleJp": "駅前に高いビルディングが建った。",
+    "exampleKr": "역 앞에 높은 빌딩이 세워졌다."
   },
   {
     "id": "N2-1291",
@@ -13716,7 +14196,9 @@
     "word": "昼寝",
     "reading": "ひるね",
     "meaningKr": "낮잠",
-    "meaningEn": "nap (at home), siesta"
+    "meaningEn": "nap (at home), siesta",
+    "exampleJp": "休日はよく昼寝をする。",
+    "exampleKr": "휴일에는 낮잠을 자주 잔다."
   },
   {
     "id": "N2-1292",
@@ -13725,7 +14207,9 @@
     "word": "広さ",
     "reading": "ひろさ",
     "meaningKr": "넓이",
-    "meaningEn": "extent"
+    "meaningEn": "extent",
+    "exampleJp": "この部屋の広さはどれくらいですか。",
+    "exampleKr": "이 방의 넓이는 어느 정도입니까."
   },
   {
     "id": "N2-1293",
@@ -13734,7 +14218,9 @@
     "word": "広場",
     "reading": "ひろば",
     "meaningKr": "광장",
-    "meaningEn": "plaza"
+    "meaningEn": "plaza",
+    "exampleJp": "駅前の広場で祭りが開かれた。",
+    "exampleKr": "역 앞 광장에서 축제가 열렸다."
   },
   {
     "id": "N2-1294",
@@ -13743,7 +14229,9 @@
     "word": "広々",
     "reading": "ひろびろ",
     "meaningKr": "널찍함",
-    "meaningEn": "extensive, spacious"
+    "meaningEn": "extensive, spacious",
+    "exampleJp": "新しい家は広々としていて気持ちいい。",
+    "exampleKr": "새 집은 널찍해서 기분이 좋다."
   },
   {
     "id": "N2-1295",
@@ -13752,7 +14240,9 @@
     "word": "ピンク",
     "reading": "ピンク",
     "meaningKr": "핑크",
-    "meaningEn": "pink"
+    "meaningEn": "pink",
+    "exampleJp": "彼女はピンクの服が好きだ。",
+    "exampleKr": "그녀는 핑크색 옷을 좋아한다."
   },
   {
     "id": "N2-1296",
@@ -13761,7 +14251,9 @@
     "word": "便箋",
     "reading": "びんせん",
     "meaningKr": "편지지",
-    "meaningEn": "writing paper, stationery"
+    "meaningEn": "writing paper, stationery",
+    "exampleJp": "祖母に便箋で手紙を書いた。",
+    "exampleKr": "할머니께 편지지로 편지를 썼다."
   },
   {
     "id": "N2-1297",
@@ -13770,7 +14262,9 @@
     "word": "瓶詰",
     "reading": "びんづめ",
     "meaningKr": "병조림(병에 담음)",
-    "meaningEn": "bottling, bottled"
+    "meaningEn": "bottling, bottled",
+    "exampleJp": "母は自家製のジャムを瓶詰にした。",
+    "exampleKr": "어머니는 손수 만든 잼을 병에 담았다."
   },
   {
     "id": "N2-1298",
@@ -13779,7 +14273,9 @@
     "word": "～部",
     "reading": "～ぶ",
     "meaningKr": "~부(부분)",
-    "meaningEn": "~ part"
+    "meaningEn": "~ part",
+    "exampleJp": "この資料は前半部と後半部に分かれている。",
+    "exampleKr": "이 자료는 전반부와 후반부로 나뉘어 있다."
   },
   {
     "id": "N2-1299",
@@ -13788,7 +14284,9 @@
     "word": "ファスナー",
     "reading": "ファスナー",
     "meaningKr": "지퍼(파스너)",
-    "meaningEn": "fastener, zipper"
+    "meaningEn": "fastener, zipper",
+    "exampleJp": "かばんのファスナーが壊れてしまった。",
+    "exampleKr": "가방 지퍼가 고장 나 버렸다."
   },
   {
     "id": "N2-1300",
@@ -13797,7 +14295,9 @@
     "word": "～風",
     "reading": "～ふう",
     "meaningKr": "~풍(스타일)",
-    "meaningEn": "~ style"
+    "meaningEn": "~ style",
+    "exampleJp": "このレストランは西洋風の内装だ。",
+    "exampleKr": "이 레스토랑은 서양풍 인테리어다."
   },
   {
     "id": "N2-1301",
@@ -13806,7 +14306,9 @@
     "word": "風船",
     "reading": "ふうせん",
     "meaningKr": "풍선",
-    "meaningEn": "balloon"
+    "meaningEn": "balloon",
+    "exampleJp": "子供が赤い風船を持って歩いていた。",
+    "exampleKr": "아이가 빨간 풍선을 들고 걷고 있었다."
   },
   {
     "id": "N2-1302",
@@ -13815,7 +14317,9 @@
     "word": "不運",
     "reading": "ふうん",
     "meaningKr": "불운",
-    "meaningEn": "unlucky, misfortune, bad luck"
+    "meaningEn": "unlucky, misfortune, bad luck",
+    "exampleJp": "彼は不運が重なって試験に落ちた。",
+    "exampleKr": "그는 불운이 겹쳐서 시험에 떨어졌다."
   },
   {
     "id": "N2-1303",
@@ -13824,7 +14328,9 @@
     "word": "不規則",
     "reading": "ふきそく",
     "meaningKr": "불규칙",
-    "meaningEn": "irregularity, unsteadiness"
+    "meaningEn": "irregularity, unsteadiness",
+    "exampleJp": "不規則な生活は体に良くない。",
+    "exampleKr": "불규칙한 생활은 몸에 좋지 않다."
   },
   {
     "id": "N2-1304",
@@ -13833,7 +14339,9 @@
     "word": "普及",
     "reading": "ふきゅう",
     "meaningKr": "보급",
-    "meaningEn": "diffusion, spread"
+    "meaningEn": "diffusion, spread",
+    "exampleJp": "スマートフォンの普及で生活が変わった。",
+    "exampleKr": "스마트폰 보급으로 생활이 바뀌었다."
   },
   {
     "id": "N2-1305",
@@ -13842,7 +14350,9 @@
     "word": "付近",
     "reading": "ふきん",
     "meaningKr": "부근",
-    "meaningEn": "neighborhood, vicinity"
+    "meaningEn": "neighborhood, vicinity",
+    "exampleJp": "駅付近には店がたくさんある。",
+    "exampleKr": "역 부근에는 가게가 많이 있다."
   },
   {
     "id": "N2-1306",
@@ -13851,7 +14361,9 @@
     "word": "副～",
     "reading": "ふく～",
     "meaningKr": "부~(보조)",
-    "meaningEn": "vice ~"
+    "meaningEn": "vice ~",
+    "exampleJp": "彼は会社の副社長に就任した。",
+    "exampleKr": "그는 회사의 부사장에 취임했다."
   },
   {
     "id": "N2-1307",
@@ -13860,7 +14372,9 @@
     "word": "副詞",
     "reading": "ふくし",
     "meaningKr": "부사",
-    "meaningEn": "adverb"
+    "meaningEn": "adverb",
+    "exampleJp": "日本語の副詞の使い方は難しい。",
+    "exampleKr": "일본어 부사 사용법은 어렵다."
   },
   {
     "id": "N2-1308",
@@ -13869,7 +14383,9 @@
     "word": "複写",
     "reading": "ふくしゃ",
     "meaningKr": "복사",
-    "meaningEn": "copy, duplicate"
+    "meaningEn": "copy, duplicate",
+    "exampleJp": "この書類を複写しておいてください。",
+    "exampleKr": "이 서류를 복사해 두세요."
   },
   {
     "id": "N2-1309",
@@ -13878,7 +14394,9 @@
     "word": "複数",
     "reading": "ふくすう",
     "meaningKr": "복수(여러 개)",
-    "meaningEn": "plural, multiple"
+    "meaningEn": "plural, multiple",
+    "exampleJp": "複数の意見をまとめて報告した。",
+    "exampleKr": "여러 의견을 정리해서 보고했다."
   },
   {
     "id": "N2-1310",
@@ -13887,7 +14405,9 @@
     "word": "膨らます",
     "reading": "ふくらます",
     "meaningKr": "부풀리다",
-    "meaningEn": "to swell, to expand, to inflate"
+    "meaningEn": "to swell, to expand, to inflate",
+    "exampleJp": "風船を大きく膨らました。",
+    "exampleKr": "풍선을 크게 부풀렸다."
   },
   {
     "id": "N2-1311",
@@ -13896,7 +14416,9 @@
     "word": "膨らむ",
     "reading": "ふくらむ",
     "meaningKr": "부풀다",
-    "meaningEn": "to expand, to swell (out), to become inflated"
+    "meaningEn": "to expand, to swell (out), to become inflated",
+    "exampleJp": "パンが焼けると生地が膨らむ。",
+    "exampleKr": "빵을 구우면 반죽이 부풀어 오른다."
   },
   {
     "id": "N2-1312",
@@ -13905,7 +14427,9 @@
     "word": "不潔",
     "reading": "ふけつ",
     "meaningKr": "불결함",
-    "meaningEn": "unclean, dirty"
+    "meaningEn": "unclean, dirty",
+    "exampleJp": "部屋が不潔だと病気の原因になる。",
+    "exampleKr": "방이 불결하면 병의 원인이 된다."
   },
   {
     "id": "N2-1313",
@@ -13914,7 +14438,9 @@
     "word": "更ける",
     "reading": "ふける",
     "meaningKr": "깊어지다(밤이)",
-    "meaningEn": "to get late, to wear on"
+    "meaningEn": "to get late, to wear on",
+    "exampleJp": "夜が更けるまで話し込んでしまった。",
+    "exampleKr": "밤이 깊어질 때까지 이야기에 열중해 버렸다."
   },
   {
     "id": "N2-1314",
@@ -13923,7 +14449,9 @@
     "word": "符号",
     "reading": "ふごう",
     "meaningKr": "부호",
-    "meaningEn": "sign, mark, symbol"
+    "meaningEn": "sign, mark, symbol",
+    "exampleJp": "数式にプラスの符号を付けた。",
+    "exampleKr": "수식에 플러스 부호를 붙였다."
   },
   {
     "id": "N2-1315",
@@ -13932,7 +14460,9 @@
     "word": "夫妻",
     "reading": "ふさい",
     "meaningKr": "부부",
-    "meaningEn": "man and wife, married couple"
+    "meaningEn": "man and wife, married couple",
+    "exampleJp": "田中夫妻がパーティーに招待された。",
+    "exampleKr": "다나카 부부가 파티에 초대되었다."
   },
   {
     "id": "N2-1316",
@@ -13941,7 +14471,9 @@
     "word": "塞がる",
     "reading": "ふさがる",
     "meaningKr": "막히다",
-    "meaningEn": "to be plugged up, to be shut up"
+    "meaningEn": "to be plugged up, to be shut up",
+    "exampleJp": "工事で道が塞がっている。",
+    "exampleKr": "공사로 길이 막혀 있다."
   },
   {
     "id": "N2-1317",
@@ -13950,7 +14482,9 @@
     "word": "塞ぐ",
     "reading": "ふさぐ",
     "meaningKr": "막다",
-    "meaningEn": "to stuff, to close up, to block (up)"
+    "meaningEn": "to stuff, to close up, to block (up)",
+    "exampleJp": "隙間をタオルで塞いだ。",
+    "exampleKr": "틈을 수건으로 막았다."
   },
   {
     "id": "N2-1318",
@@ -13959,7 +14493,9 @@
     "word": "ふざける",
     "reading": "ふざける",
     "meaningKr": "장난치다",
-    "meaningEn": "to romp, to gambol, to frolic"
+    "meaningEn": "to romp, to gambol, to frolic",
+    "exampleJp": "子供たちが庭でふざけて遊んでいる。",
+    "exampleKr": "아이들이 마당에서 장난치며 놀고 있다."
   },
   {
     "id": "N2-1319",
@@ -13968,7 +14504,9 @@
     "word": "無沙汰",
     "reading": "ぶさた",
     "meaningKr": "소식 끊김(격조)",
-    "meaningEn": "neglecting to stay in contact"
+    "meaningEn": "neglecting to stay in contact",
+    "exampleJp": "長い間ご無沙汰しておりました。",
+    "exampleKr": "오랫동안 소식을 전하지 못했습니다."
   },
   {
     "id": "N2-1320",
@@ -13977,7 +14515,9 @@
     "word": "武士",
     "reading": "ぶし",
     "meaningKr": "무사(사무라이)",
-    "meaningEn": "warrior, samurai"
+    "meaningEn": "warrior, samurai",
+    "exampleJp": "昔、この地域には多くの武士が住んでいた。",
+    "exampleKr": "옛날에 이 지역에는 많은 무사가 살고 있었다."
   },
   {
     "id": "N2-1321",
@@ -13986,7 +14526,9 @@
     "word": "部首",
     "reading": "ぶしゅ",
     "meaningKr": "부수",
-    "meaningEn": "radical (of a kanji character)"
+    "meaningEn": "radical (of a kanji character)",
+    "exampleJp": "漢字を覚えるときは部首から理解すると効率がいい。",
+    "exampleKr": "한자를 외울 때는 부수부터 이해하면 효율적이다."
   },
   {
     "id": "N2-1322",
@@ -13995,7 +14537,9 @@
     "word": "襖",
     "reading": "ふすま",
     "meaningKr": "후스마(일본식 미닫이문)",
-    "meaningEn": "sliding screen"
+    "meaningEn": "sliding screen",
+    "exampleJp": "和室の襖を開けると庭が見えた。",
+    "exampleKr": "일본식 방의 미닫이문을 열자 정원이 보였다."
   },
   {
     "id": "N2-1323",
@@ -14004,7 +14548,9 @@
     "word": "附属",
     "reading": "ふぞく",
     "meaningKr": "부속",
-    "meaningEn": "attached, belonging, affiliated"
+    "meaningEn": "attached, belonging, affiliated",
+    "exampleJp": "彼は大学の附属病院で働いている。",
+    "exampleKr": "그는 대학 부속 병원에서 일하고 있다."
   },
   {
     "id": "N2-1324",
@@ -14013,7 +14559,9 @@
     "word": "蓋",
     "reading": "ふた",
     "meaningKr": "뚜껑",
-    "meaningEn": "cover, lid, cap"
+    "meaningEn": "cover, lid, cap",
+    "exampleJp": "鍋の蓋を取ると、いい匂いがした。",
+    "exampleKr": "냄비 뚜껑을 열자 좋은 냄새가 났다."
   },
   {
     "id": "N2-1325",
@@ -14022,7 +14570,9 @@
     "word": "物騒",
     "reading": "ぶっそう",
     "meaningKr": "뒤숭숭함(위험함)",
-    "meaningEn": "dangerous, disturbed, insecure"
+    "meaningEn": "dangerous, disturbed, insecure",
+    "exampleJp": "最近この辺りは物騒なので夜は出歩かないようにしている。",
+    "exampleKr": "요즘 이 근처는 뒤숭숭해서 밤에는 돌아다니지 않으려고 한다."
   },
   {
     "id": "N2-1326",
@@ -14031,7 +14581,9 @@
     "word": "ぶつぶつ",
     "reading": "ぶつぶつ",
     "meaningKr": "투덜투덜",
-    "meaningEn": "grumbling, complaining in a small voice"
+    "meaningEn": "grumbling, complaining in a small voice",
+    "exampleJp": "彼は不満があるといつもぶつぶつ文句を言う。",
+    "exampleKr": "그는 불만이 있으면 항상 투덜투덜 불평을 한다."
   },
   {
     "id": "N2-1327",
@@ -14040,7 +14592,9 @@
     "word": "船便",
     "reading": "ふなびん",
     "meaningKr": "선편(배편)",
-    "meaningEn": "surface mail (ship)"
+    "meaningEn": "surface mail (ship)",
+    "exampleJp": "重い荷物なので船便で送ることにした。",
+    "exampleKr": "무거운 짐이라서 배편으로 보내기로 했다."
   },
   {
     "id": "N2-1328",
@@ -14049,7 +14603,9 @@
     "word": "部品",
     "reading": "ぶひん",
     "meaningKr": "부품",
-    "meaningEn": "parts, accessories"
+    "meaningEn": "parts, accessories",
+    "exampleJp": "この機械は古い部品を交換すればまだ使える。",
+    "exampleKr": "이 기계는 오래된 부품을 교체하면 아직 쓸 수 있다."
   },
   {
     "id": "N2-1329",
@@ -14058,7 +14614,9 @@
     "word": "吹雪",
     "reading": "ふぶき",
     "meaningKr": "눈보라",
-    "meaningEn": "snow storm"
+    "meaningEn": "snow storm",
+    "exampleJp": "吹雪のため電車が大幅に遅れた。",
+    "exampleKr": "눈보라 때문에 전철이 크게 지연되었다."
   },
   {
     "id": "N2-1330",
@@ -14067,7 +14625,9 @@
     "word": "父母",
     "reading": "ふぼ",
     "meaningKr": "부모",
-    "meaningEn": "father and mother, parents"
+    "meaningEn": "father and mother, parents",
+    "exampleJp": "父母の日ごろの苦労に感謝している。",
+    "exampleKr": "부모님의 평소 고생에 감사하고 있다."
   },
   {
     "id": "N2-1331",
@@ -14076,7 +14636,9 @@
     "word": "踏切",
     "reading": "ふみきり",
     "meaningKr": "건널목",
-    "meaningEn": "railway crossing, level crossing, starting line, scratch, crossover"
+    "meaningEn": "railway crossing, level crossing, starting line, scratch, crossover",
+    "exampleJp": "踏切の遮断機が下りて電車が通り過ぎるのを待った。",
+    "exampleKr": "건널목 차단기가 내려와 전철이 지나가기를 기다렸다."
   },
   {
     "id": "N2-1332",
@@ -14085,7 +14647,9 @@
     "word": "麓",
     "reading": "ふもと",
     "meaningKr": "산기슭",
-    "meaningEn": "the foot, the bottom, the base (of a mountain)"
+    "meaningEn": "the foot, the bottom, the base (of a mountain)",
+    "exampleJp": "山の麓に小さな村がある。",
+    "exampleKr": "산기슭에 작은 마을이 있다."
   },
   {
     "id": "N2-1333",
@@ -14094,7 +14658,9 @@
     "word": "フライパン",
     "reading": "フライパン",
     "meaningKr": "프라이팬",
-    "meaningEn": "fry pan, frying pan"
+    "meaningEn": "fry pan, frying pan",
+    "exampleJp": "フライパンで卵を焼いた。",
+    "exampleKr": "프라이팬으로 계란을 부쳤다."
   },
   {
     "id": "N2-1334",
@@ -14103,7 +14669,9 @@
     "word": "ブラウス",
     "reading": "ブラウス",
     "meaningKr": "블라우스",
-    "meaningEn": "blouse"
+    "meaningEn": "blouse",
+    "exampleJp": "彼女は白いブラウスを着て面接に行った。",
+    "exampleKr": "그녀는 흰 블라우스를 입고 면접에 갔다."
   },
   {
     "id": "N2-1335",
@@ -14112,7 +14680,9 @@
     "word": "ぶらさげる",
     "reading": "ぶらさげる",
     "meaningKr": "매달다",
-    "meaningEn": "to hang, to suspend, to swing"
+    "meaningEn": "to hang, to suspend, to swing",
+    "exampleJp": "彼は肩にかばんをぶらさげて歩いていた。",
+    "exampleKr": "그는 어깨에 가방을 매달고 걷고 있었다."
   },
   {
     "id": "N2-1336",
@@ -14121,7 +14691,9 @@
     "word": "ブラシ",
     "reading": "ブラシ",
     "meaningKr": "브러시",
-    "meaningEn": "brush"
+    "meaningEn": "brush",
+    "exampleJp": "靴をブラシできれいに磨いた。",
+    "exampleKr": "구두를 브러시로 깨끗이 닦았다."
   },
   {
     "id": "N2-1337",
@@ -14130,7 +14702,9 @@
     "word": "プラットホーム",
     "reading": "プラットホーム",
     "meaningKr": "플랫폼",
-    "meaningEn": "platform"
+    "meaningEn": "platform",
+    "exampleJp": "プラットホームで電車を待っている人が大勢いた。",
+    "exampleKr": "플랫폼에서 전철을 기다리는 사람이 많았다."
   },
   {
     "id": "N2-1338",
@@ -14139,7 +14713,9 @@
     "word": "～振り",
     "reading": "～ぶり",
     "meaningKr": "~만(간격)",
-    "meaningEn": "after an interval of ~"
+    "meaningEn": "after an interval of ~",
+    "exampleJp": "三年振りに故郷に帰った。",
+    "exampleKr": "삼 년 만에 고향에 돌아갔다."
   },
   {
     "id": "N2-1339",
@@ -14148,7 +14724,9 @@
     "word": "フリー",
     "reading": "フリー",
     "meaningKr": "프리(자유)",
-    "meaningEn": "free"
+    "meaningEn": "free",
+    "exampleJp": "彼は会社を辞めてフリーのデザイナーになった。",
+    "exampleKr": "그는 회사를 그만두고 프리랜서 디자이너가 되었다."
   },
   {
     "id": "N2-1340",
@@ -14157,7 +14735,9 @@
     "word": "振り仮名",
     "reading": "ふりがな",
     "meaningKr": "후리가나(읽는 법 표기)",
-    "meaningEn": "pronunciation key"
+    "meaningEn": "pronunciation key",
+    "exampleJp": "難しい漢字には振り仮名がついている。",
+    "exampleKr": "어려운 한자에는 읽는 법(후리가나)이 붙어 있다."
   },
   {
     "id": "N2-1341",
@@ -14166,7 +14746,9 @@
     "word": "振り向く",
     "reading": "ふりむく",
     "meaningKr": "돌아보다",
-    "meaningEn": "to turn one's face, to turn around"
+    "meaningEn": "to turn one's face, to turn around",
+    "exampleJp": "名前を呼ばれて思わず振り向いた。",
+    "exampleKr": "이름을 불려서 무심코 돌아보았다."
   },
   {
     "id": "N2-1342",
@@ -14175,7 +14757,9 @@
     "word": "プリント",
     "reading": "プリント",
     "meaningKr": "프린트(인쇄물)",
-    "meaningEn": "print, handout"
+    "meaningEn": "print, handout",
+    "exampleJp": "先生が授業でプリントを配った。",
+    "exampleKr": "선생님이 수업 시간에 프린트물을 나눠주었다."
   },
   {
     "id": "N2-1343",
@@ -14184,7 +14768,9 @@
     "word": "古～",
     "reading": "ふる～",
     "meaningKr": "오래된~",
-    "meaningEn": "old ~"
+    "meaningEn": "old ~",
+    "exampleJp": "古新聞を紐でまとめて捨てた。",
+    "exampleKr": "오래된 신문을 끈으로 묶어서 버렸다."
   },
   {
     "id": "N2-1344",
@@ -14193,7 +14779,9 @@
     "word": "故郷",
     "reading": "ふるさと",
     "meaningKr": "고향",
-    "meaningEn": "home town, birthplace"
+    "meaningEn": "home town, birthplace",
+    "exampleJp": "久しぶりに故郷に帰って両親に会った。",
+    "exampleKr": "오랜만에 고향에 돌아가 부모님을 만났다."
   },
   {
     "id": "N2-1345",
@@ -14202,7 +14790,9 @@
     "word": "古里",
     "reading": "ふるさと",
     "meaningKr": "고향",
-    "meaningEn": "home town, birthplace"
+    "meaningEn": "home town, birthplace",
+    "exampleJp": "祖母は古里の海を懐かしそうに話した。",
+    "exampleKr": "할머니는 고향의 바다를 그리운 듯 이야기했다."
   },
   {
     "id": "N2-1346",
@@ -14211,7 +14801,9 @@
     "word": "振舞う",
     "reading": "ふるまう",
     "meaningKr": "행동하다(대접하다)",
-    "meaningEn": "to behave, to conduct"
+    "meaningEn": "to behave, to conduct",
+    "exampleJp": "彼はどんな時も冷静に振舞う。",
+    "exampleKr": "그는 어떤 때에도 침착하게 행동한다."
   },
   {
     "id": "N2-1347",
@@ -14220,7 +14812,9 @@
     "word": "ブローチ",
     "reading": "ブローチ",
     "meaningKr": "브로치",
-    "meaningEn": "brooch"
+    "meaningEn": "brooch",
+    "exampleJp": "母からもらったブローチを胸につけた。",
+    "exampleKr": "어머니에게 받은 브로치를 가슴에 달았다."
   },
   {
     "id": "N2-1348",
@@ -14229,7 +14823,9 @@
     "word": "プログラム",
     "reading": "プログラム",
     "meaningKr": "프로그램",
-    "meaningEn": "program"
+    "meaningEn": "program",
+    "exampleJp": "コンサートのプログラムには曲目が書いてあった。",
+    "exampleKr": "콘서트 프로그램에는 곡목이 적혀 있었다."
   },
   {
     "id": "N2-1349",
@@ -14238,7 +14834,9 @@
     "word": "風呂敷",
     "reading": "ふろしき",
     "meaningKr": "보자기",
-    "meaningEn": "wrapping cloth, cloth wrapper"
+    "meaningEn": "wrapping cloth, cloth wrapper",
+    "exampleJp": "祖母は贈り物を風呂敷に包んで持ってきた。",
+    "exampleKr": "할머니는 선물을 보자기에 싸서 가져왔다."
   },
   {
     "id": "N2-1350",
@@ -14247,7 +14845,9 @@
     "word": "ふわふわ",
     "reading": "ふわふわ",
     "meaningKr": "푹신푹신",
-    "meaningEn": "light, soft"
+    "meaningEn": "light, soft",
+    "exampleJp": "新しい枕はふわふわで気持ちがいい。",
+    "exampleKr": "새 베개는 푹신푹신해서 기분이 좋다."
   },
   {
     "id": "N2-1351",
@@ -14256,7 +14856,9 @@
     "word": "噴火",
     "reading": "ふんか",
     "meaningKr": "분화(화산 폭발)",
-    "meaningEn": "eruption"
+    "meaningEn": "eruption",
+    "exampleJp": "火山の噴火で周辺の道路が閉鎖された。",
+    "exampleKr": "화산 분화로 주변 도로가 폐쇄되었다."
   },
   {
     "id": "N2-1352",
@@ -14265,7 +14867,9 @@
     "word": "分解",
     "reading": "ぶんかい",
     "meaningKr": "분해",
-    "meaningEn": "analysis, disassembly"
+    "meaningEn": "analysis, disassembly",
+    "exampleJp": "壊れた時計を分解して原因を調べた。",
+    "exampleKr": "고장난 시계를 분해해서 원인을 조사했다."
   },
   {
     "id": "N2-1353",
@@ -14274,7 +14878,9 @@
     "word": "文芸",
     "reading": "ぶんげい",
     "meaningKr": "문예",
-    "meaningEn": "literature, art and literature"
+    "meaningEn": "literature, art and literature",
+    "exampleJp": "彼女は大学で文芸を専攻している。",
+    "exampleKr": "그녀는 대학에서 문예를 전공하고 있다."
   },
   {
     "id": "N2-1354",
@@ -14283,7 +14889,9 @@
     "word": "文献",
     "reading": "ぶんけん",
     "meaningKr": "문헌",
-    "meaningEn": "literature, books (reference)"
+    "meaningEn": "literature, books (reference)",
+    "exampleJp": "論文を書くために多くの文献を調べた。",
+    "exampleKr": "논문을 쓰기 위해 많은 문헌을 조사했다."
   },
   {
     "id": "N2-1355",
@@ -14292,7 +14900,9 @@
     "word": "噴水",
     "reading": "ふんすい",
     "meaningKr": "분수",
-    "meaningEn": "water fountain"
+    "meaningEn": "water fountain",
+    "exampleJp": "公園の噴水の前で子供たちが遊んでいた。",
+    "exampleKr": "공원의 분수 앞에서 아이들이 놀고 있었다."
   },
   {
     "id": "N2-1356",
@@ -14301,7 +14911,9 @@
     "word": "分数",
     "reading": "ぶんすう",
     "meaningKr": "분수(수학)",
-    "meaningEn": "fraction (in math)"
+    "meaningEn": "fraction (in math)",
+    "exampleJp": "小学生の時に分数の計算を習った。",
+    "exampleKr": "초등학생 때 분수 계산을 배웠다."
   },
   {
     "id": "N2-1357",
@@ -14310,7 +14922,9 @@
     "word": "文体",
     "reading": "ぶんたい",
     "meaningKr": "문체",
-    "meaningEn": "literary style"
+    "meaningEn": "literary style",
+    "exampleJp": "この作家の文体は独特で読みやすい。",
+    "exampleKr": "이 작가의 문체는 독특하고 읽기 쉽다."
   },
   {
     "id": "N2-1358",
@@ -14319,7 +14933,9 @@
     "word": "分布",
     "reading": "ぶんぷ",
     "meaningKr": "분포",
-    "meaningEn": "distribution"
+    "meaningEn": "distribution",
+    "exampleJp": "この植物は主に温暖な地域に分布している。",
+    "exampleKr": "이 식물은 주로 온난한 지역에 분포한다."
   },
   {
     "id": "N2-1359",
@@ -14328,7 +14944,9 @@
     "word": "文房具",
     "reading": "ぶんぼうぐ",
     "meaningKr": "문방구",
-    "meaningEn": "stationery"
+    "meaningEn": "stationery",
+    "exampleJp": "新学期に備えて文房具を買いに行った。",
+    "exampleKr": "새 학기를 대비해 문방구를 사러 갔다."
   },
   {
     "id": "N2-1360",
@@ -14337,7 +14955,9 @@
     "word": "文脈",
     "reading": "ぶんみゃく",
     "meaningKr": "문맥",
-    "meaningEn": "context"
+    "meaningEn": "context",
+    "exampleJp": "この単語の意味は文脈から判断してください。",
+    "exampleKr": "이 단어의 뜻은 문맥에서 판단해 주세요."
   },
   {
     "id": "N2-1361",
@@ -14346,7 +14966,9 @@
     "word": "分量",
     "reading": "ぶんりょう",
     "meaningKr": "분량",
-    "meaningEn": "amount, quantity"
+    "meaningEn": "amount, quantity",
+    "exampleJp": "レシピ通りの分量で調味料を入れた。",
+    "exampleKr": "레시피대로의 분량으로 조미료를 넣었다."
   },
   {
     "id": "N2-1362",
@@ -14355,7 +14977,9 @@
     "word": "分類",
     "reading": "ぶんるい",
     "meaningKr": "분류",
-    "meaningEn": "classification"
+    "meaningEn": "classification",
+    "exampleJp": "資料をテーマごとに分類して整理した。",
+    "exampleKr": "자료를 주제별로 분류하여 정리했다."
   },
   {
     "id": "N2-1363",
@@ -14364,7 +14988,9 @@
     "word": "閉会",
     "reading": "へいかい",
     "meaningKr": "폐회",
-    "meaningEn": "closure"
+    "meaningEn": "closure",
+    "exampleJp": "会議は午後五時に閉会した。",
+    "exampleKr": "회의는 오후 5시에 폐회했다."
   },
   {
     "id": "N2-1364",
@@ -14373,7 +14999,9 @@
     "word": "平気",
     "reading": "へいき",
     "meaningKr": "태연함",
-    "meaningEn": "coolness, calmness, unconcern"
+    "meaningEn": "coolness, calmness, unconcern",
+    "exampleJp": "彼は失敗しても平気な顔をしている。",
+    "exampleKr": "그는 실패해도 태연한 얼굴을 하고 있다."
   },
   {
     "id": "N2-1365",
@@ -14382,7 +15010,9 @@
     "word": "並行",
     "reading": "へいこう",
     "meaningKr": "병행",
-    "meaningEn": "(going) side by side, concurrent, at the same time"
+    "meaningEn": "(going) side by side, concurrent, at the same time",
+    "exampleJp": "仕事と勉強を並行して続けている。",
+    "exampleKr": "일과 공부를 병행하여 계속하고 있다."
   },
   {
     "id": "N2-1366",
@@ -14391,7 +15021,9 @@
     "word": "平日",
     "reading": "へいじつ",
     "meaningKr": "평일",
-    "meaningEn": "weekday"
+    "meaningEn": "weekday",
+    "exampleJp": "平日はいつも混んでいないので買い物しやすい。",
+    "exampleKr": "평일은 항상 붐비지 않아서 쇼핑하기 편하다."
   },
   {
     "id": "N2-1367",
@@ -14400,7 +15032,9 @@
     "word": "兵隊",
     "reading": "へいたい",
     "meaningKr": "군인(병사)",
-    "meaningEn": "soldier"
+    "meaningEn": "soldier",
+    "exampleJp": "祖父は若い頃、兵隊として戦地へ行った。",
+    "exampleKr": "할아버지는 젊었을 때 병사로 전장에 갔었다."
   },
   {
     "id": "N2-1368",
@@ -14409,7 +15043,9 @@
     "word": "平凡",
     "reading": "へいぼん",
     "meaningKr": "평범",
-    "meaningEn": "common, ordinary"
+    "meaningEn": "common, ordinary",
+    "exampleJp": "彼女は平凡な毎日に幸せを感じている。",
+    "exampleKr": "그녀는 평범한 일상에 행복을 느끼고 있다."
   },
   {
     "id": "N2-1369",
@@ -14418,7 +15054,9 @@
     "word": "平野",
     "reading": "へいや",
     "meaningKr": "평야",
-    "meaningEn": "plain, open field"
+    "meaningEn": "plain, open field",
+    "exampleJp": "この地方は広い平野が広がっている。",
+    "exampleKr": "이 지방은 넓은 평야가 펼쳐져 있다."
   },
   {
     "id": "N2-1370",
@@ -14427,7 +15065,9 @@
     "word": "凹む",
     "reading": "へこむ",
     "meaningKr": "움푹 들어가다",
-    "meaningEn": "to be dented, to be indented"
+    "meaningEn": "to be dented, to be indented",
+    "exampleJp": "車のドアが事故でへこんでしまった。",
+    "exampleKr": "자동차 문이 사고로 움푹 들어가 버렸다."
   },
   {
     "id": "N2-1371",
@@ -14436,7 +15076,9 @@
     "word": "へそ",
     "reading": "へそ",
     "meaningKr": "배꼽",
-    "meaningEn": "navel, belly-button"
+    "meaningEn": "navel, belly-button",
+    "exampleJp": "赤ちゃんのへそを優しく消毒した。",
+    "exampleKr": "아기의 배꼽을 조심스럽게 소독했다."
   },
   {
     "id": "N2-1372",
@@ -14445,7 +15087,9 @@
     "word": "隔てる",
     "reading": "へだてる",
     "meaningKr": "사이를 두다(가로막다)",
-    "meaningEn": "to be shut out"
+    "meaningEn": "to be shut out",
+    "exampleJp": "二つの部屋はカーテンで隔てられている。",
+    "exampleKr": "두 방은 커튼으로 사이가 나뉘어 있다."
   },
   {
     "id": "N2-1373",
@@ -14454,7 +15098,9 @@
     "word": "別荘",
     "reading": "べっそう",
     "meaningKr": "별장",
-    "meaningEn": "villa; vacation home; summer cottage"
+    "meaningEn": "villa; vacation home; summer cottage",
+    "exampleJp": "夏になると家族で山の別荘に行く。",
+    "exampleKr": "여름이 되면 가족과 함께 산의 별장에 간다."
   },
   {
     "id": "N2-1374",
@@ -14463,7 +15109,9 @@
     "word": "別々",
     "reading": "べつべつ",
     "meaningKr": "각각(따로따로)",
-    "meaningEn": "separately, individually"
+    "meaningEn": "separately, individually",
+    "exampleJp": "お会計は別々にお願いします。",
+    "exampleKr": "계산은 따로따로 부탁드립니다."
   },
   {
     "id": "N2-1375",
@@ -14472,7 +15120,9 @@
     "word": "ベテラン",
     "reading": "ベテラン",
     "meaningKr": "베테랑",
-    "meaningEn": "veteran"
+    "meaningEn": "veteran",
+    "exampleJp": "彼は十年以上のベテラン運転手だ。",
+    "exampleKr": "그는 십 년 이상의 베테랑 운전기사이다."
   },
   {
     "id": "N2-1376",
@@ -14481,7 +15131,9 @@
     "word": "ヘリコプター",
     "reading": "ヘリコプター",
     "meaningKr": "헬리콥터",
-    "meaningEn": "helicopter"
+    "meaningEn": "helicopter",
+    "exampleJp": "山で遭難した登山者がヘリコプターで救助された。",
+    "exampleKr": "산에서 조난당한 등산객이 헬리콥터로 구조되었다."
   },
   {
     "id": "N2-1377",
@@ -14490,7 +15142,9 @@
     "word": "～遍",
     "reading": "～へん",
     "meaningKr": "~번(횟수)",
-    "meaningEn": "time"
+    "meaningEn": "time",
+    "exampleJp": "この本はもう三遍読んだ。",
+    "exampleKr": "이 책은 벌써 세 번 읽었다."
   },
   {
     "id": "N2-1378",
@@ -14499,7 +15153,9 @@
     "word": "～弁",
     "reading": "～べん",
     "meaningKr": "~사투리",
-    "meaningEn": "speech, dialect"
+    "meaningEn": "speech, dialect",
+    "exampleJp": "彼は大阪弁で話すと元気に聞こえる。",
+    "exampleKr": "그는 오사카 사투리로 말하면 활기차게 들린다."
   },
   {
     "id": "N2-1379",
@@ -14508,7 +15164,9 @@
     "word": "編集",
     "reading": "へんしゅう",
     "meaningKr": "편집",
-    "meaningEn": "editing, compilation, editorial (e.g., committee)"
+    "meaningEn": "editing, compilation, editorial (e.g., committee)",
+    "exampleJp": "彼女は雑誌の編集の仕事をしている。",
+    "exampleKr": "그녀는 잡지 편집 일을 하고 있다."
   },
   {
     "id": "N2-1380",
@@ -14517,7 +15175,9 @@
     "word": "便所",
     "reading": "べんじょ",
     "meaningKr": "변소(화장실)",
-    "meaningEn": "toilet, lavatory"
+    "meaningEn": "toilet, lavatory",
+    "exampleJp": "駅の便所は思ったよりきれいだった。",
+    "exampleKr": "역의 화장실은 생각보다 깨끗했다."
   },
   {
     "id": "N2-1381",
@@ -14526,7 +15186,9 @@
     "word": "ペンチ",
     "reading": "ペンチ",
     "meaningKr": "펜치(플라이어)",
-    "meaningEn": "pliers (lit: pinchers)"
+    "meaningEn": "pliers (lit: pinchers)",
+    "exampleJp": "ペンチで針金を切った。",
+    "exampleKr": "펜치로 철사를 잘랐다."
   },
   {
     "id": "N2-1382",
@@ -14535,7 +15197,9 @@
     "word": "～歩",
     "reading": "～ほ",
     "meaningKr": "~보(걸음)",
-    "meaningEn": "step, pace"
+    "meaningEn": "step, pace",
+    "exampleJp": "駅まで歩いて千歩ほどかかる。",
+    "exampleKr": "역까지 걸어서 천 걸음 정도 걸린다."
   },
   {
     "id": "N2-1383",
@@ -14544,7 +15208,9 @@
     "word": "～ぽい",
     "reading": "～ぽい",
     "meaningKr": "~스러움",
-    "meaningEn": "~ish"
+    "meaningEn": "~ish",
+    "exampleJp": "彼の話し方は子供っぽい。",
+    "exampleKr": "그의 말투는 아이스럽다."
   },
   {
     "id": "N2-1384",
@@ -14553,7 +15219,9 @@
     "word": "～ほう (ひかく)",
     "reading": "～ほう (ひかく)",
     "meaningKr": "~쪽(비교)",
-    "meaningEn": "(in comparison)"
+    "meaningEn": "(in comparison)",
+    "exampleJp": "この二つの中では赤いほうが好きです。",
+    "exampleKr": "이 둘 중에서는 빨간 쪽이 좋습니다."
   },
   {
     "id": "N2-1385",
@@ -14562,7 +15230,9 @@
     "word": "防～",
     "reading": "ぼう～",
     "meaningKr": "방~(예방)",
-    "meaningEn": "~ prevention"
+    "meaningEn": "~ prevention",
+    "exampleJp": "外出前に防水スプレーを靴にかけた。",
+    "exampleKr": "외출 전에 방수 스프레이를 신발에 뿌렸다."
   },
   {
     "id": "N2-1386",
@@ -14571,7 +15241,9 @@
     "word": "望遠鏡",
     "reading": "ぼうえんきょう",
     "meaningKr": "망원경",
-    "meaningEn": "telescope"
+    "meaningEn": "telescope",
+    "exampleJp": "望遠鏡で夜空の星を観察した。",
+    "exampleKr": "망원경으로 밤하늘의 별을 관찰했다."
   },
   {
     "id": "N2-1387",
@@ -14580,7 +15252,9 @@
     "word": "方角",
     "reading": "ほうがく",
     "meaningKr": "방향",
-    "meaningEn": "direction, way"
+    "meaningEn": "direction, way",
+    "exampleJp": "地図で目的地の方角を確認した。",
+    "exampleKr": "지도로 목적지의 방향을 확인했다."
   },
   {
     "id": "N2-1388",
@@ -14589,7 +15263,9 @@
     "word": "箒",
     "reading": "ほうき",
     "meaningKr": "빗자루",
-    "meaningEn": "broom"
+    "meaningEn": "broom",
+    "exampleJp": "箒で庭の落ち葉を掃いた。",
+    "exampleKr": "빗자루로 정원의 낙엽을 쓸었다."
   },
   {
     "id": "N2-1389",
@@ -14598,7 +15274,9 @@
     "word": "方言",
     "reading": "ほうげん",
     "meaningKr": "방언",
-    "meaningEn": "dialect"
+    "meaningEn": "dialect",
+    "exampleJp": "祖父の話す方言は聞き取るのが難しい。",
+    "exampleKr": "할아버지가 쓰는 방언은 알아듣기 어렵다."
   },
   {
     "id": "N2-1390",
@@ -14607,7 +15285,9 @@
     "word": "坊さん",
     "reading": "ぼうさん",
     "meaningKr": "스님",
-    "meaningEn": "Buddhist priest, monk"
+    "meaningEn": "Buddhist priest, monk",
+    "exampleJp": "お寺で坊さんの話を聞いた。",
+    "exampleKr": "절에서 스님의 이야기를 들었다."
   },
   {
     "id": "N2-1391",
@@ -14616,7 +15296,9 @@
     "word": "防止",
     "reading": "ぼうし",
     "meaningKr": "방지",
-    "meaningEn": "prevention, check"
+    "meaningEn": "prevention, check",
+    "exampleJp": "事故防止のために標識を増やした。",
+    "exampleKr": "사고 방지를 위해 표지판을 늘렸다."
   },
   {
     "id": "N2-1392",
@@ -14625,7 +15307,9 @@
     "word": "方針",
     "reading": "ほうしん",
     "meaningKr": "방침",
-    "meaningEn": "objective, plan, policy"
+    "meaningEn": "objective, plan, policy",
+    "exampleJp": "会社は新しい方針を発表した。",
+    "exampleKr": "회사는 새로운 방침을 발표했다."
   },
   {
     "id": "N2-1393",
@@ -14634,7 +15318,9 @@
     "word": "法則",
     "reading": "ほうそく",
     "meaningKr": "법칙",
-    "meaningEn": "law, rule"
+    "meaningEn": "law, rule",
+    "exampleJp": "自然界には様々な法則がある。",
+    "exampleKr": "자연계에는 다양한 법칙이 있다."
   },
   {
     "id": "N2-1394",
@@ -14643,7 +15329,9 @@
     "word": "包帯",
     "reading": "ほうたい",
     "meaningKr": "붕대",
-    "meaningEn": "bandage"
+    "meaningEn": "bandage",
+    "exampleJp": "けがをした腕に包帯を巻いた。",
+    "exampleKr": "다친 팔에 붕대를 감았다."
   },
   {
     "id": "N2-1395",
@@ -14652,7 +15340,9 @@
     "word": "膨大",
     "reading": "ぼうだい",
     "meaningKr": "방대함",
-    "meaningEn": "enormous, extensive"
+    "meaningEn": "enormous, extensive",
+    "exampleJp": "この研究には膨大な時間がかかった。",
+    "exampleKr": "이 연구에는 방대한 시간이 걸렸다."
   },
   {
     "id": "N2-1396",
@@ -14661,7 +15351,9 @@
     "word": "包丁",
     "reading": "ほうちょう",
     "meaningKr": "식칼",
-    "meaningEn": "kitchen knife, carving knife"
+    "meaningEn": "kitchen knife, carving knife",
+    "exampleJp": "包丁で野菜を細かく切った。",
+    "exampleKr": "식칼로 채소를 잘게 썰었다."
   },
   {
     "id": "N2-1397",
@@ -14670,7 +15362,9 @@
     "word": "方程式",
     "reading": "ほうていしき",
     "meaningKr": "방정식",
-    "meaningEn": "equation"
+    "meaningEn": "equation",
+    "exampleJp": "数学の授業で方程式の解き方を習った。",
+    "exampleKr": "수학 수업에서 방정식 푸는 법을 배웠다."
   },
   {
     "id": "N2-1398",
@@ -14679,7 +15373,9 @@
     "word": "防犯",
     "reading": "ぼうはん",
     "meaningKr": "방범",
-    "meaningEn": "prevention of crime"
+    "meaningEn": "prevention of crime",
+    "exampleJp": "マンションの入口に防犯カメラが設置された。",
+    "exampleKr": "아파트 입구에 방범 카메라가 설치되었다."
   },
   {
     "id": "N2-1399",
@@ -14688,7 +15384,9 @@
     "word": "方面",
     "reading": "ほうめん",
     "meaningKr": "방면",
-    "meaningEn": "direction; area"
+    "meaningEn": "direction; area",
+    "exampleJp": "このバスは新宿方面に向かう。",
+    "exampleKr": "이 버스는 신주쿠 방면으로 향한다."
   },
   {
     "id": "N2-1400",
@@ -14697,7 +15395,9 @@
     "word": "坊や",
     "reading": "ぼうや",
     "meaningKr": "꼬마(아가)",
-    "meaningEn": "boy"
+    "meaningEn": "boy",
+    "exampleJp": "隣のおばさんが坊やに優しく声をかけた。",
+    "exampleKr": "옆집 아주머니가 꼬마에게 다정하게 말을 걸었다."
   },
   {
     "id": "N2-1401",
