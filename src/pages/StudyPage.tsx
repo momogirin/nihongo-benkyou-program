@@ -20,6 +20,7 @@ function levelPool(level: KanjiLevel): Kanji[] {
 }
 
 type Phase = 'setup' | 'studying' | 'done'
+type ViewMode = 'card' | 'table'
 
 export default function StudyPage({ onStartQuiz }: Props) {
   const availableLevels = useMemo(() => ALL_LEVELS.filter((l) => levelPool(l).length > 0), [])
@@ -31,6 +32,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
   const [phase, setPhase] = useState<Phase>('setup')
   const [batch, setBatch] = useState<Kanji[]>([])
   const [cardIndex, setCardIndex] = useState(0)
+  const [viewMode, setViewMode] = useState<ViewMode>('card')
   const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
 
   // "done" lands on a fresh screen with nothing focused (the last study-nav
@@ -69,7 +71,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
   }
 
   useEffect(() => {
-    if (phase !== 'studying') return
+    if (phase !== 'studying' || viewMode !== 'card') return
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'ArrowRight' || e.key === 'Enter') {
         setCardIndex((i) => (i + 1 < batch.length ? i + 1 : i))
@@ -79,7 +81,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [phase, batch.length])
+  }, [phase, viewMode, batch.length])
 
   if (!level) {
     return (
@@ -97,77 +99,143 @@ export default function StudyPage({ onStartQuiz }: Props) {
     const isLast = cardIndex + 1 === batch.length
 
     return (
-      <div className="page study-page">
+      <div className={`page study-page${viewMode === 'table' ? ' study-page-table' : ''}`}>
         <div className="study-content">
           <div className="study-topbar">
             <button type="button" className="study-exit-button" onClick={exitBatch}>
               나가기
             </button>
+            <div className="study-view-toggle">
+              <button
+                type="button"
+                className={`study-view-toggle-btn${viewMode === 'card' ? ' active' : ''}`}
+                onClick={() => setViewMode('card')}
+              >
+                카드
+              </button>
+              <button
+                type="button"
+                className={`study-view-toggle-btn${viewMode === 'table' ? ' active' : ''}`}
+                onClick={() => setViewMode('table')}
+              >
+                표
+              </button>
+            </div>
             <div className="quiz-progress">
               {cardIndex + 1} / {batch.length}
             </div>
           </div>
-          <div className="study-card">
-            <div className="study-top">
-              <span className={`study-level-badge study-level-badge-${kanji.level.toLowerCase()}`}>{kanji.level}</span>
-              {radical && (
-                <span className="study-radical-chip">
-                  부수 {radical.radical} · {radical.strokeCount}획
-                </span>
+
+          {viewMode === 'table' ? (
+            <div className="study-table-wrap">
+              <table className="study-table">
+                <thead>
+                  <tr>
+                    <th>한자</th>
+                    <th>한국훈음</th>
+                    <th>일본훈독</th>
+                    <th>일본음독</th>
+                    <th>예문</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {batch.map((k, i) => (
+                    <tr
+                      key={k.id}
+                      className={i === cardIndex ? 'study-table-row-current' : ''}
+                      onClick={() => {
+                        setCardIndex(i)
+                        setViewMode('card')
+                      }}
+                    >
+                      <td className="study-table-kanji">{k.kanji}</td>
+                      <td>{k.kunKr}</td>
+                      <td>{k.kunJp}</td>
+                      <td>{k.onJp}</td>
+                      <td className="study-table-example">
+                        {k.exampleKanji
+                          ? `${k.exampleKanji}${k.exampleJp ? ` (${k.exampleJp})` : ''}${k.exampleKr ? ` · ${k.exampleKr}` : ''}`
+                          : ''}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <div className="study-card">
+              <div className="study-top">
+                <span className={`study-level-badge study-level-badge-${kanji.level.toLowerCase()}`}>{kanji.level}</span>
+                {radical && (
+                  <span className="study-radical-chip">
+                    부수 {radical.radical} · {radical.strokeCount}획
+                  </span>
+                )}
+              </div>
+              <div className="study-kanji">{kanji.kanji}</div>
+              <dl className="study-fields study-fields-core">
+                <div className="study-field">
+                  <dt>한국 훈음</dt>
+                  <dd>{kanji.kunKr}</dd>
+                </div>
+                <div className="study-field">
+                  <dt>일본 훈독</dt>
+                  <dd>{kanji.kunJp}</dd>
+                </div>
+                <div className="study-field">
+                  <dt>일본 음독</dt>
+                  <dd>{kanji.onJp}</dd>
+                </div>
+              </dl>
+              <dl className="study-fields study-fields-sub">
+                <div className="study-field">
+                  <dt>유래</dt>
+                  <dd>{content.etymology}</dd>
+                </div>
+                {kanji.exampleKanji && (
+                  <div className="study-field">
+                    <dt>예문</dt>
+                    <dd>
+                      {kanji.exampleKanji}
+                      {kanji.exampleJp && (
+                        <>
+                          (<span className="study-example-reading">{kanji.exampleJp}</span>)
+                        </>
+                      )}
+                      {kanji.exampleKr && ` · ${kanji.exampleKr}`}
+                    </dd>
+                  </div>
+                )}
+              </dl>
+            </div>
+          )}
+        </div>
+        {viewMode === 'card' && (
+          <>
+            <div className="study-nav">
+              <button type="button" onClick={() => setCardIndex((i) => i - 1)} disabled={cardIndex === 0}>
+                이전
+              </button>
+              {isLast ? (
+                <button type="button" className="study-nav-primary" onClick={finishBatch}>
+                  학습 완료
+                </button>
+              ) : (
+                <button type="button" className="study-nav-primary" onClick={() => setCardIndex((i) => i + 1)}>
+                  다음
+                </button>
               )}
             </div>
-            <div className="study-kanji">{kanji.kanji}</div>
-            <dl className="study-fields study-fields-core">
-              <div className="study-field">
-                <dt>한국 훈음</dt>
-                <dd>{kanji.kunKr}</dd>
-              </div>
-              <div className="study-field">
-                <dt>일본 훈독</dt>
-                <dd>{kanji.kunJp}</dd>
-              </div>
-              <div className="study-field">
-                <dt>일본 음독</dt>
-                <dd>{kanji.onJp}</dd>
-              </div>
-            </dl>
-            <dl className="study-fields study-fields-sub">
-              <div className="study-field">
-                <dt>유래</dt>
-                <dd>{content.etymology}</dd>
-              </div>
-              {kanji.exampleKanji && (
-                <div className="study-field">
-                  <dt>예문</dt>
-                  <dd>
-                    {kanji.exampleKanji}
-                    {kanji.exampleJp && (
-                      <>
-                        (<span className="study-example-reading">{kanji.exampleJp}</span>)
-                      </>
-                    )}
-                    {kanji.exampleKr && ` · ${kanji.exampleKr}`}
-                  </dd>
-                </div>
-              )}
-            </dl>
-          </div>
-        </div>
-        <div className="study-nav">
-          <button type="button" onClick={() => setCardIndex((i) => i - 1)} disabled={cardIndex === 0}>
-            이전
-          </button>
-          {isLast ? (
+            <p className="shortcut-hint">← → 로 이전/다음 · Enter로 다음</p>
+          </>
+        )}
+        {viewMode === 'table' && isLast && (
+          <div className="study-nav">
             <button type="button" className="study-nav-primary" onClick={finishBatch}>
               학습 완료
             </button>
-          ) : (
-            <button type="button" className="study-nav-primary" onClick={() => setCardIndex((i) => i + 1)}>
-              다음
-            </button>
-          )}
-        </div>
-        <p className="shortcut-hint">← → 로 이전/다음 · Enter로 다음</p>
+          </div>
+        )}
       </div>
     )
   }
