@@ -148,7 +148,7 @@ export default function KanjiListPage() {
           <table className="browse-table">
             <thead>
               <tr>
-                <th>급수</th>
+                <th className="browse-table-col-level">급수</th>
                 <th>한자</th>
                 <th>한국 훈음</th>
                 <th>일본 훈독</th>
@@ -166,7 +166,7 @@ export default function KanjiListPage() {
                     if (e.key === 'Enter') setSelectedIndex(sortedKanji.findIndex((x) => x.id === k.id))
                   }}
                 >
-                  <td>{k.level}</td>
+                  <td className="browse-table-col-level">{k.level}</td>
                   <td className="browse-table-cell-main">{k.kanji}</td>
                   <td>{k.kunKr}</td>
                   <td>{k.kunJp}</td>
