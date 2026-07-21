@@ -1,0 +1,122 @@
+/* 가나(오십음도) 화면 — study 및 vocab-quiz 공통 클래스를 최대한 재사용하고,
+   여기서는 차트 그리드와 큰 가나 글자 표시 등 가나 고유 요소만 정의한다. */
+
+.kana-script-toggle {
+  justify-content: center;
+  margin: 0 auto 20px;
+  width: fit-content;
+}
+
+.kana-chart-section {
+  margin-bottom: 28px;
+}
+
+.kana-chart-section h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* 자음 행 × 모음 열 고정 그리드. 열 수만 modifier로 바꿔 청음(5)·요음(3) 공용 */
+.kana-grid {
+  display: grid;
+  gap: 6px;
+}
+
+.kana-grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.kana-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.kana-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 8px 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.kana-cell:hover,
+.kana-cell:focus-visible {
+  border-color: var(--color-primary-dark);
+  background: var(--color-selected-bg);
+}
+
+/* 빈 칸(や행·わ행·요음 공백)은 표 정렬 유지를 위해 자리만 차지, 상호작용 없음 */
+.kana-cell-empty {
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: default;
+}
+
+.kana-cell-char {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--color-ink);
+  line-height: 1.1;
+}
+
+.kana-cell-romaji {
+  font-size: 12px;
+  color: var(--color-ink-muted);
+}
+
+/* 상세/학습 카드의 큰 가나 글자 */
+.kana-detail-char {
+  font-family: var(--font-display);
+  font-size: 72px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 퀴즈 프롬프트(가나 또는 로마자) */
+.kana-quiz-prompt-char {
+  font-family: var(--font-display);
+  font-size: 56px;
+}
+
+/* 퀴즈 설정: 라벨 + 선택 그룹 세로 배치 */
+.kana-quiz-field {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.kana-quiz-field-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  margin-bottom: 8px;
+}
+
+/* 결과 목록 항목 */
+.kana-result-char {
+  font-family: var(--font-display);
+  font-size: 22px;
+  min-width: 32px;
+}
+
+.kana-result-romaji {
+  color: var(--color-ink-muted);
+}
+
+@media (max-width: 768px) {
+  .kana-cell-char {
+    font-size: 20px;
+  }
+  .kana-grid {
+    gap: 4px;
+  }
+}

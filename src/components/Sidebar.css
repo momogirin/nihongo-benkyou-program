@@ -126,6 +126,16 @@
   margin-bottom: 4px;
 }
 
+/* 학습 단계 소분류(문자 / 어휘·문법) — 과목 그룹 라벨보다 한 단계 약하게,
+   하위 항목 위에 얹히는 구분선 역할 */
+.nav-subsection-label {
+  padding: 6px 12px 2px 24px;
+  color: var(--color-ink-muted);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .nav-subitem {
   padding-left: 24px;
   font-size: 14px;

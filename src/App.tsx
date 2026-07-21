@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Sidebar from './components/Sidebar'
 import HomePage from './pages/HomePage'
+import KanaPage from './pages/KanaPage'
 import KanjiPage from './pages/KanjiPage'
 import WrongNotePage from './pages/WrongNotePage'
 import VocabPage from './pages/VocabPage'
@@ -88,6 +89,8 @@ function App() {
             onRetryEnglishVocab={retryEnglishVocab}
           />
         )
+      case 'kana':
+        return <KanaPage />
       case 'kanji':
         return (
           <KanjiPage
