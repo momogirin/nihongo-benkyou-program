@@ -382,18 +382,31 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
         {normalizedBrowseQuery && filteredPool.length === 0 ? (
           <p className="page-placeholder">검색 결과가 없습니다.</p>
         ) : (
-          <div className="grammar-browse-grid">
-            {filteredPool.map((g) => (
-              <button
-                type="button"
-                className={`grammar-browse-tile grammar-browse-tile-${g.level.toLowerCase()}`}
-                key={g.id}
-                onClick={() => setBrowseIndex(pool.findIndex((x) => x.id === g.id))}
-              >
-                <span className="grammar-browse-tile-pattern">{g.pattern}</span>
-                <span className="grammar-browse-tile-meaning">{g.meaningKr}</span>
-              </button>
-            ))}
+          <div className="browse-table-wrap">
+            <table className="browse-table">
+              <thead>
+                <tr>
+                  <th>문형</th>
+                  <th>뜻</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredPool.map((g) => (
+                  <tr
+                    key={g.id}
+                    tabIndex={0}
+                    className={`browse-table-row browse-table-row-${g.level.toLowerCase()}`}
+                    onClick={() => setBrowseIndex(pool.findIndex((x) => x.id === g.id))}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') setBrowseIndex(pool.findIndex((x) => x.id === g.id))
+                    }}
+                  >
+                    <td className="browse-table-cell-main">{g.pattern}</td>
+                    <td className="browse-table-cell-meaning">{g.meaningKr}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
       </div>

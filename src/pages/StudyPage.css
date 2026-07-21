@@ -78,6 +78,80 @@
   outline-offset: 1px;
 }
 
+/* 한자/단어/문법 전체보기 표 — 타일 그리드 대신 행 단위로 여러 필드를 한눈에
+   훑을 수 있게 함(엑셀 시트처럼 전체 나열). 행 클릭 시 상세 카드로 진입하는
+   흐름은 기존 타일 그리드와 동일하게 유지 */
+.browse-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.browse-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.browse-table th {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  padding: 10px 12px;
+  background: var(--color-bg-elevated);
+  color: var(--color-ink-muted);
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.browse-table-row {
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.1s;
+}
+
+.browse-table-row:last-child {
+  border-bottom: none;
+}
+
+.browse-table-row:hover,
+.browse-table-row:focus-visible {
+  background: var(--color-selected-bg);
+  outline: none;
+}
+
+.browse-table-row td {
+  padding: 8px 12px;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.browse-table-row-n5 td:first-child,
+.browse-table-row-n4 td:first-child,
+.browse-table-row-n3 td:first-child,
+.browse-table-row-n2 td:first-child,
+.browse-table-row-n1 td:first-child {
+  border-left: 3px solid transparent;
+}
+
+.browse-table-row-n5 td:first-child { border-left-color: var(--color-level-n5); }
+.browse-table-row-n4 td:first-child { border-left-color: var(--color-level-n4); }
+.browse-table-row-n3 td:first-child { border-left-color: var(--color-level-n3); }
+.browse-table-row-n2 td:first-child { border-left-color: var(--color-level-n2); }
+.browse-table-row-n1 td:first-child { border-left-color: var(--color-level-n1); }
+
+.browse-table-cell-main {
+  font-family: var(--font-display);
+  font-size: 16px;
+}
+
+.browse-table-cell-meaning {
+  white-space: normal;
+  min-width: 160px;
+}
+
 /* selected level picks up that level's own color instead of the generic
    brand highlight, so N5~N1 read as visually distinct the same way their
    study-level-badge already does */

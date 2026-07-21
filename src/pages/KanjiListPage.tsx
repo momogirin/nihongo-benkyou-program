@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
-import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
+import { kanjiList, type KanjiLevel } from '../data/kanji'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
-import './RadicalsPage.css'
 import './StudyPage.css'
 
 const ALL_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
@@ -132,13 +131,6 @@ export default function KanjiListPage() {
       )
     : sortedKanji
 
-  const groups = new Map<KanjiLevel, Kanji[]>()
-  for (const k of filteredKanji) {
-    const list = groups.get(k.level) ?? []
-    list.push(k)
-    groups.set(k.level, list)
-  }
-
   return (
     <div className="page">
       <h1>한자 전체보기</h1>
@@ -152,24 +144,38 @@ export default function KanjiListPage() {
       {normalizedQuery && filteredKanji.length === 0 ? (
         <p className="page-placeholder">검색 결과가 없습니다.</p>
       ) : (
-        ALL_LEVELS.filter((level) => groups.has(level)).map((level) => (
-          <section key={level} className="radical-group">
-            <h2>{level}</h2>
-            <div className="radical-grid">
-              {(groups.get(level) ?? []).map((k) => (
-                <button
-                  type="button"
-                  className={`radical-tile radical-tile-${k.level.toLowerCase()}`}
+        <div className="browse-table-wrap">
+          <table className="browse-table">
+            <thead>
+              <tr>
+                <th>급수</th>
+                <th>한자</th>
+                <th>한국 훈음</th>
+                <th>일본 훈독</th>
+                <th>일본 음독</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredKanji.map((k) => (
+                <tr
                   key={k.id}
+                  tabIndex={0}
+                  className={`browse-table-row browse-table-row-${k.level.toLowerCase()}`}
                   onClick={() => setSelectedIndex(sortedKanji.findIndex((x) => x.id === k.id))}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') setSelectedIndex(sortedKanji.findIndex((x) => x.id === k.id))
+                  }}
                 >
-                  <span className="radical-char">{k.kanji}</span>
-                  <span className="radical-label">{k.kunKr}</span>
-                </button>
+                  <td>{k.level}</td>
+                  <td className="browse-table-cell-main">{k.kanji}</td>
+                  <td>{k.kunKr}</td>
+                  <td>{k.kunJp}</td>
+                  <td>{k.onJp}</td>
+                </tr>
               ))}
-            </div>
-          </section>
-        ))
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   )

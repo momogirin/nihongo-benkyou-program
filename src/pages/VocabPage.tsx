@@ -401,19 +401,33 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         {normalizedBrowseQuery && filteredWords.length === 0 ? (
           <p className="page-placeholder">검색 결과가 없습니다.</p>
         ) : (
-          <div className="vocab-browse-grid">
-            {filteredWords.map((w) => (
-              <button
-                type="button"
-                className={`vocab-browse-tile vocab-browse-tile-${w.level.toLowerCase()}`}
-                key={w.id}
-                onClick={() => setBrowseIndex(levelWords.findIndex((x) => x.id === w.id))}
-              >
-                <span className="vocab-browse-tile-word">{w.word}</span>
-                <span className="vocab-browse-tile-reading">{w.reading}</span>
-                <span className="vocab-browse-tile-meaning">{w.meaningKr}</span>
-              </button>
-            ))}
+          <div className="browse-table-wrap">
+            <table className="browse-table">
+              <thead>
+                <tr>
+                  <th>단어</th>
+                  <th>읽기</th>
+                  <th>뜻</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredWords.map((w) => (
+                  <tr
+                    key={w.id}
+                    tabIndex={0}
+                    className={`browse-table-row browse-table-row-${w.level.toLowerCase()}`}
+                    onClick={() => setBrowseIndex(levelWords.findIndex((x) => x.id === w.id))}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') setBrowseIndex(levelWords.findIndex((x) => x.id === w.id))
+                    }}
+                  >
+                    <td className="browse-table-cell-main">{w.word}</td>
+                    <td>{w.reading}</td>
+                    <td className="browse-table-cell-meaning">{w.meaningKr}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
       </div>
