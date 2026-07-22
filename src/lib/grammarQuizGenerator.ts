@@ -60,3 +60,57 @@ export function generateGrammarQuestionsFromIds(ids: string[]): GrammarQuizQuest
     return { entry, choices: shuffle([entry, ...distractors]) }
   })
 }
+
+// 문법 빈칸 채우기 퀴즈("이 자리에 어떤 문형이 들어가야 하는가" — 뜻 맞히기와
+// 달리 실제 JLPT 문법 파트와 정합) — blankJp/blankAnswer는 data/grammar-*.json에
+// 서브에이전트가 항목별로 직접 판단해 채운 필드(자동 마스킹 아님, ROADMAP.md
+// 1번 참고). 두 필드가 있는 항목만 출제 가능하므로, 아직 안 채워졌거나(신규
+// 항목 추가 시) 문장 전체가 그 문형이라 빈칸을 못 만든 항목은 자연히 제외된다.
+export interface GrammarBlankQuestion {
+  entry: GrammarPoint
+  choices: GrammarPoint[]
+}
+
+// blankJp/blankAnswer가 둘 다 있는 항목만 — optional 필드라 미완성 데이터가
+// 섞여도(향후 새 문형 추가 등) 조용히 걸러진다
+function hasBlank(entry: GrammarPoint): entry is GrammarPoint & { blankJp: string; blankAnswer: string } {
+  return Boolean(entry.blankJp && entry.blankAnswer)
+}
+
+export function grammarBlankLevelPool(level: KanjiLevel): GrammarPoint[] {
+  return grammarLevelPool(level).filter(hasBlank)
+}
+
+export function generateGrammarBlankQuestions(
+  level: KanjiLevel,
+  count: number,
+  order: 'random' | 'sequential' = 'random',
+): GrammarBlankQuestion[] {
+  const pool = grammarBlankLevelPool(level)
+  const ordered = order === 'random' ? shuffle(pool) : pool
+  const selected = ordered.slice(0, Math.min(count, pool.length))
+
+  return selected.map((entry) => {
+    // 오답 선택지는 blankAnswer 텍스트가 겹치지 않는 문형끼리(같은 표현이 정답/오답에
+    // 동시에 있으면 안 됨) — pool 밖(빈칸 없는 항목)도 고려할 필요 없이 같은 pool에서만 뽑음
+    const distractorPool = pool.filter((g) => g.id !== entry.id && g.blankAnswer !== entry.blankAnswer)
+    const distractors = shuffle(distractorPool).slice(0, 3)
+    return { entry, choices: shuffle([entry, ...distractors]) }
+  })
+}
+
+// same shape, but for a fixed set of ids (오답노트 재도전) — ids without a
+// blankable entry (e.g. data update removed blankJp) are silently skipped
+export function generateGrammarBlankQuestionsFromIds(ids: string[]): GrammarBlankQuestion[] {
+  const entries = ids
+    .map((id) => grammarList.find((g) => g.id === id))
+    .filter((g): g is GrammarPoint => g !== undefined)
+    .filter(hasBlank)
+
+  return shuffle(entries).map((entry) => {
+    const pool = grammarBlankLevelPool(entry.level)
+    const distractorPool = pool.filter((g) => g.id !== entry.id && g.blankAnswer !== entry.blankAnswer)
+    const distractors = shuffle(distractorPool).slice(0, 3)
+    return { entry, choices: shuffle([entry, ...distractors]) }
+  })
+}

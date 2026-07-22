@@ -36,6 +36,11 @@ export interface GrammarPoint {
   explanation: string
   exampleJp: string
   exampleKr: string
+  // 문법 빈칸 채우기 퀴즈용 — exampleJp에서 그 문형이 실현된 부분을 _____로 가린
+  // 문장(blankJp)과 그 자리의 정답 표현(blankAnswer). 문장 전체가 그 문형 자체라
+  // 부분만 가릴 수 없는 극소수 항목은 이 둘을 생략(optional)한다.
+  blankJp?: string
+  blankAnswer?: string
 }
 
 // Parsed from a JSON string rather than a literal array — see the same
