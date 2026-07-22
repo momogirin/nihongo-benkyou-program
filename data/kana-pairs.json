@@ -1,0 +1,222 @@
+[
+  {
+    "id": "KP-1",
+    "word": "きって",
+    "meaningKr": "우표",
+    "variants": [
+      "きて",
+      "きいて"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-2",
+    "word": "きっぷ",
+    "meaningKr": "표(승차권)",
+    "variants": [
+      "きぷ",
+      "きいぷ"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-3",
+    "word": "がっこう",
+    "meaningKr": "학교",
+    "variants": [
+      "がこう",
+      "がっこ"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-4",
+    "word": "けっこん",
+    "meaningKr": "결혼",
+    "variants": [
+      "けこん",
+      "けっこ"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-5",
+    "word": "ざっし",
+    "meaningKr": "잡지",
+    "variants": [
+      "ざし",
+      "ざっしい"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-6",
+    "word": "ちょっと",
+    "meaningKr": "잠깐·조금",
+    "variants": [
+      "ちょと",
+      "ちょっとう"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-7",
+    "word": "しっぱい",
+    "meaningKr": "실패",
+    "variants": [
+      "しぱい",
+      "しっぱ"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-8",
+    "word": "きっさてん",
+    "meaningKr": "찻집",
+    "variants": [
+      "きさてん",
+      "きっさて"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-9",
+    "word": "ビール",
+    "meaningKr": "맥주",
+    "variants": [
+      "ビル",
+      "ビイル"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-10",
+    "word": "コーヒー",
+    "meaningKr": "커피",
+    "variants": [
+      "コヒー",
+      "コーヒ"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-11",
+    "word": "おばあさん",
+    "meaningKr": "할머니",
+    "variants": [
+      "おばさん",
+      "おばーさん"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-12",
+    "word": "おじいさん",
+    "meaningKr": "할아버지",
+    "variants": [
+      "おじさん",
+      "おじーさん"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-13",
+    "word": "ゆうき",
+    "meaningKr": "용기(勇気)",
+    "variants": [
+      "ゆき",
+      "ゆうきい"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-14",
+    "word": "くうき",
+    "meaningKr": "공기",
+    "variants": [
+      "くき",
+      "くうきい"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-15",
+    "word": "こうこう",
+    "meaningKr": "고등학교",
+    "variants": [
+      "ここう",
+      "こうこ"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-16",
+    "word": "せんせい",
+    "meaningKr": "선생님",
+    "variants": [
+      "せんせ",
+      "せえんせい"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-17",
+    "word": "びょういん",
+    "meaningKr": "병원",
+    "variants": [
+      "びよういん",
+      "びょいん"
+    ],
+    "type": "요음"
+  },
+  {
+    "id": "KP-18",
+    "word": "きょう",
+    "meaningKr": "오늘",
+    "variants": [
+      "きよう",
+      "きょお"
+    ],
+    "type": "요음"
+  },
+  {
+    "id": "KP-19",
+    "word": "じゅう",
+    "meaningKr": "십(10)",
+    "variants": [
+      "じゆう",
+      "じゅ"
+    ],
+    "type": "요음"
+  },
+  {
+    "id": "KP-20",
+    "word": "りょこう",
+    "meaningKr": "여행",
+    "variants": [
+      "りよこう",
+      "りょこ"
+    ],
+    "type": "요음"
+  },
+  {
+    "id": "KP-21",
+    "word": "しゃしん",
+    "meaningKr": "사진",
+    "variants": [
+      "しやしん",
+      "しゃし"
+    ],
+    "type": "요음"
+  },
+  {
+    "id": "KP-22",
+    "word": "じょうず",
+    "meaningKr": "능숙함·잘함",
+    "variants": [
+      "じようず",
+      "じょず"
+    ],
+    "type": "요음"
+  }
+]

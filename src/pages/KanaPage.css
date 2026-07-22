@@ -87,6 +87,27 @@
   font-size: 56px;
 }
 
+/* 표기 구분(최소대립쌍) 퀴즈: 뜻 프롬프트 + 함정 유형 힌트 */
+.kana-pair-prompt-meaning {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.kana-pair-prompt-hint {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.kana-pair-desc {
+  max-width: 520px;
+  margin: 0 auto 4px;
+  color: var(--color-ink-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 /* 퀴즈 설정: 라벨 + 선택 그룹 세로 배치 */
 .kana-quiz-field {
   margin-bottom: 16px;

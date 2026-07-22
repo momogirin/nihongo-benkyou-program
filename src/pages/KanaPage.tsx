@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { kanaList, type Kana } from '../data/kana'
+import { kanaPairList } from '../data/kanaPairs'
 import './StudyPage.css'
 import './VocabPage.css'
 import './KanjiPage.css'
@@ -57,10 +58,6 @@ function shuffle<T>(items: T[]): T[] {
   return copy
 }
 
-interface QuizQuestion {
-  kana: Kana
-  choices: Kana[]
-}
 
 export default function KanaPage() {
   const [subTab, setSubTab] = useState<SubTab>('chart')
@@ -391,45 +388,94 @@ function KanaStudy({ script, onScriptChange }: ScriptToggleProps) {
 
 // ─────────────────────────────────────────── 퀴즈 ──────────────────────────
 
+// 두 퀴즈 유형(가나↔로마자 / 표기 구분)을 한 러너로 처리하기 위한 정규화 문제.
+type QuizType = 'romaji' | 'pairs'
+interface NormChoice {
+  key: string
+  main: string
+}
+interface NormQuestion {
+  promptMain: string
+  promptSub?: string
+  choices: NormChoice[]
+  answerKey: string
+  resultMain: string
+  resultSub?: string
+}
+
+const QUIZ_TYPE_LABELS: Record<QuizType, string> = {
+  romaji: '가나 ↔ 로마자',
+  pairs: '표기 구분',
+}
+
 function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
+  const [quizType, setQuizType] = useState<QuizType>('romaji')
   const [group, setGroup] = useState<GroupFilter>('gojuon')
   const [direction, setDirection] = useState<QuizDirection>('toRomaji')
   const [count, setCount] = useState<QuizCount>(20)
   const [phase, setPhase] = useState<Phase>('setup')
-  const [questions, setQuestions] = useState<QuizQuestion[]>([])
+  const [questions, setQuestions] = useState<NormQuestion[]>([])
   const [index, setIndex] = useState(0)
-  const [feedback, setFeedback] = useState<{ selectedId: string; isCorrect: boolean } | null>(null)
-  const [answers, setAnswers] = useState<{ kana: Kana; isCorrect: boolean }[]>([])
+  const [feedback, setFeedback] = useState<{ selectedKey: string; isCorrect: boolean } | null>(null)
+  const [answers, setAnswers] = useState<{ resultMain: string; resultSub?: string; isCorrect: boolean }[]>([])
   const advanceTimer = useRef<number | null>(null)
 
   const pool = useMemo(() => kanaList.filter((k) => inGroup(k, group)), [group])
+  const setupCount = quizType === 'pairs' ? kanaPairList.length : pool.length
 
-  useEffect(() => () => {
-    if (advanceTimer.current) window.clearTimeout(advanceTimer.current)
-  }, [])
+  useEffect(
+    () => () => {
+      if (advanceTimer.current) window.clearTimeout(advanceTimer.current)
+    },
+    [],
+  )
+
+  function buildRomajiQuestions(): NormQuestion[] {
+    const picked = count === 'all' ? shuffle(pool) : shuffle(pool).slice(0, count)
+    return picked.map((kana) => {
+      const distractors = shuffle(pool.filter((k) => k.romaji !== kana.romaji)).slice(0, 3)
+      const all = shuffle([kana, ...distractors])
+      const toRomaji = direction === 'toRomaji'
+      return {
+        promptMain: toRomaji ? displayChar(kana, script) : kana.romaji,
+        choices: all.map((k) => ({ key: k.id, main: toRomaji ? k.romaji : displayChar(k, script) })),
+        answerKey: kana.id,
+        resultMain: displayChar(kana, script),
+        resultSub: kana.romaji,
+      }
+    })
+  }
+
+  function buildPairQuestions(): NormQuestion[] {
+    const picked = count === 'all' ? shuffle(kanaPairList) : shuffle(kanaPairList).slice(0, count)
+    return picked.map((pair) => {
+      const spellings = shuffle([pair.word, ...pair.variants])
+      return {
+        promptMain: pair.meaningKr,
+        promptSub: `${pair.type} 구분`,
+        choices: spellings.map((s) => ({ key: s, main: s })),
+        answerKey: pair.word,
+        resultMain: pair.word,
+        resultSub: pair.meaningKr,
+      }
+    })
+  }
 
   function startQuiz() {
-    const picked = count === 'all' ? shuffle(pool) : shuffle(pool).slice(0, count)
-    const built = picked.map((kana) => {
-      const distractors = shuffle(pool.filter((k) => k.romaji !== kana.romaji)).slice(0, 3)
-      return { kana, choices: shuffle([kana, ...distractors]) }
-    })
-    setQuestions(built)
+    setQuestions(quizType === 'pairs' ? buildPairQuestions() : buildRomajiQuestions())
     setIndex(0)
     setFeedback(null)
     setAnswers([])
     setPhase('running')
   }
 
-  function submitAnswer(choice: Kana) {
+  function submitAnswer(choice: NormChoice) {
     if (feedback) return
     const question = questions[index]
-    const isCorrect = choice.id === question.kana.id
-    setFeedback({ selectedId: choice.id, isCorrect })
-    setAnswers((prev) => [...prev, { kana: question.kana, isCorrect }])
-    if (isCorrect) {
-      advanceTimer.current = window.setTimeout(goNext, 550)
-    }
+    const isCorrect = choice.key === question.answerKey
+    setFeedback({ selectedKey: choice.key, isCorrect })
+    setAnswers((prev) => [...prev, { resultMain: question.resultMain, resultSub: question.resultSub, isCorrect }])
+    if (isCorrect) advanceTimer.current = window.setTimeout(goNext, 550)
   }
 
   function goNext() {
@@ -438,11 +484,8 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
       advanceTimer.current = null
     }
     setFeedback(null)
-    if (index + 1 < questions.length) {
-      setIndex((i) => i + 1)
-    } else {
-      setPhase('result')
-    }
+    if (index + 1 < questions.length) setIndex((i) => i + 1)
+    else setPhase('result')
   }
 
   // window-level key handling (no auto-focus on choices — avoids the "same
@@ -465,7 +508,7 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
 
   if (phase === 'running') {
     const question = questions[index]
-    const promptText = direction === 'toRomaji' ? displayChar(question.kana, script) : question.kana.romaji
+    const isPairPrompt = quizType === 'pairs'
     return (
       <div className="quiz-runner">
         <div className="quiz-topbar">
@@ -477,25 +520,28 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
           </div>
         </div>
         <div className="vocab-quiz-prompt">
-          <span className="kana-quiz-prompt-char">{promptText}</span>
+          <span className={isPairPrompt ? 'kana-pair-prompt-meaning' : 'kana-quiz-prompt-char'}>
+            {question.promptMain}
+          </span>
+          {question.promptSub && <span className="kana-pair-prompt-hint">{question.promptSub}</span>}
         </div>
         <div className="vocab-quiz-choices">
           {question.choices.map((choice, i) => {
             let className = 'vocab-quiz-choice'
             if (feedback) {
-              if (choice.id === feedback.selectedId) className += feedback.isCorrect ? ' correct' : ' incorrect'
-              else if (!feedback.isCorrect && choice.id === question.kana.id) className += ' reveal-correct'
+              if (choice.key === feedback.selectedKey) className += feedback.isCorrect ? ' correct' : ' incorrect'
+              else if (!feedback.isCorrect && choice.key === question.answerKey) className += ' reveal-correct'
             }
             return (
               <button
-                key={choice.id}
+                key={choice.key}
                 type="button"
                 className={className}
                 disabled={feedback !== null}
                 onClick={() => submitAnswer(choice)}
               >
                 <span className="quiz-choice-num">{i + 1}</span>
-                {direction === 'toRomaji' ? choice.romaji : displayChar(choice, script)}
+                {choice.main}
               </button>
             )
           })}
@@ -522,9 +568,9 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
         </p>
         <ul className="result-list">
           {answers.map((a, i) => (
-            <li key={`${a.kana.id}-${i}`} className={a.isCorrect ? 'correct' : 'incorrect'}>
-              <span className="kana-result-char">{displayChar(a.kana, script)}</span>
-              <span className="kana-result-romaji">{a.kana.romaji}</span>
+            <li key={`${a.resultMain}-${i}`} className={a.isCorrect ? 'correct' : 'incorrect'}>
+              <span className="kana-result-char">{a.resultMain}</span>
+              {a.resultSub && <span className="kana-result-romaji">{a.resultSub}</span>}
             </li>
           ))}
         </ul>
@@ -538,37 +584,60 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
   return (
     <div className="page study-setup">
       <h1>가나 퀴즈</h1>
-      <ScriptToggle script={script} onScriptChange={onScriptChange} />
       <div className="kana-quiz-field">
-        <span className="kana-quiz-field-label">범위</span>
+        <span className="kana-quiz-field-label">유형</span>
         <div className="study-level-picker">
-          {GROUP_FILTERS.map((g) => (
+          {(['romaji', 'pairs'] as QuizType[]).map((t) => (
             <button
-              key={g.id}
+              key={t}
               type="button"
-              className={`study-level-btn${g.id === group ? ' active' : ''}`}
-              onClick={() => setGroup(g.id)}
+              className={`study-level-btn${t === quizType ? ' active' : ''}`}
+              onClick={() => setQuizType(t)}
             >
-              {g.label}
+              {QUIZ_TYPE_LABELS[t]}
             </button>
           ))}
         </div>
       </div>
-      <div className="kana-quiz-field">
-        <span className="kana-quiz-field-label">방향</span>
-        <div className="study-level-picker">
-          {(['toRomaji', 'toKana'] as QuizDirection[]).map((d) => (
-            <button
-              key={d}
-              type="button"
-              className={`study-level-btn${d === direction ? ' active' : ''}`}
-              onClick={() => setDirection(d)}
-            >
-              {DIRECTION_LABELS[d]}
-            </button>
-          ))}
-        </div>
-      </div>
+
+      {quizType === 'romaji' ? (
+        <>
+          <ScriptToggle script={script} onScriptChange={onScriptChange} />
+          <div className="kana-quiz-field">
+            <span className="kana-quiz-field-label">범위</span>
+            <div className="study-level-picker">
+              {GROUP_FILTERS.map((g) => (
+                <button
+                  key={g.id}
+                  type="button"
+                  className={`study-level-btn${g.id === group ? ' active' : ''}`}
+                  onClick={() => setGroup(g.id)}
+                >
+                  {g.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="kana-quiz-field">
+            <span className="kana-quiz-field-label">방향</span>
+            <div className="study-level-picker">
+              {(['toRomaji', 'toKana'] as QuizDirection[]).map((d) => (
+                <button
+                  key={d}
+                  type="button"
+                  className={`study-level-btn${d === direction ? ' active' : ''}`}
+                  onClick={() => setDirection(d)}
+                >
+                  {DIRECTION_LABELS[d]}
+                </button>
+              ))}
+            </div>
+          </div>
+        </>
+      ) : (
+        <p className="kana-pair-desc">촉음(っ)·장음(ー)·요음(ゃゅょ)이 헷갈리는 최소대립쌍 — 뜻을 보고 올바른 표기를 고르세요.</p>
+      )}
+
       <div className="kana-quiz-field">
         <span className="kana-quiz-field-label">문항 수</span>
         <div className="study-level-picker">
@@ -585,8 +654,8 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
         </div>
       </div>
       <p className="study-progress-summary">
-        {SCRIPT_LABELS[script]} · {DIRECTION_LABELS[direction]} ·{' '}
-        {count === 'all' ? pool.length : Math.min(count, pool.length)}문항
+        {quizType === 'romaji' ? `${SCRIPT_LABELS[script]} · ${DIRECTION_LABELS[direction]}` : '표기 구분'} ·{' '}
+        {count === 'all' ? setupCount : Math.min(count, setupCount)}문항
       </p>
       <button type="button" className="study-start-button" onClick={startQuiz}>
         퀴즈 풀기
