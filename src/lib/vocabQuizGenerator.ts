@@ -143,3 +143,77 @@ export function generateVocabReadingQuestions(
   const ordered = order === 'random' ? shuffle(pool) : pool
   return ordered.slice(0, Math.min(count, pool.length))
 }
+
+// JLPT 表記(히라가나 → 한자 표기 고르기) 유형 — reading을 프롬프트로 주고 올바른
+// 한자 표기(word)를 4지선다로 고른다. word가 순수 히라가나라 word===reading인
+// 항목(순수 가나 표기 단어)은 "표기"라는 개념 자체가 성립하지 않으므로 제외.
+export interface VocabWritingQuestion {
+  entry: VocabWord
+  choices: VocabWord[]
+}
+
+const KANJI_CHAR_RE = /[一-龯々]/g
+
+function kanjiChars(word: string): Set<string> {
+  return new Set(primaryWord(word).match(KANJI_CHAR_RE) ?? [])
+}
+
+// 무작위 오답이면 답이 너무 뻔해서 변별력이 없다 — 진짜 헷갈릴 만한 오답을
+// 우선순위로 뽑는다: ①읽기 첫 글자가 같음(음이 비슷해 헷갈리기 쉬움) ②한자를
+// 하나라도 공유(자주 혼동하는 유사 한자어) ③그래도 부족하면 나머지 무작위
+function pickDistractors(entry: VocabWord, pool: VocabWord[]): VocabWord[] {
+  const others = pool.filter((w) => w.id !== entry.id && primaryWord(w.word) !== primaryWord(entry.word))
+  const entryKanji = kanjiChars(entry.word)
+  const readingHead = entry.reading.slice(0, 1)
+
+  const sameReadingHead = others.filter((w) => w.reading.slice(0, 1) === readingHead)
+  const sharesKanji = others.filter((w) => [...kanjiChars(w.word)].some((c) => entryKanji.has(c)))
+  const rest = others
+
+  const picked: VocabWord[] = []
+  const usedIds = new Set<string>()
+  for (const source of [shuffle(sameReadingHead), shuffle(sharesKanji), shuffle(rest)]) {
+    for (const w of source) {
+      if (picked.length >= 3) break
+      if (usedIds.has(w.id)) continue
+      usedIds.add(w.id)
+      picked.push(w)
+    }
+    if (picked.length >= 3) break
+  }
+  return picked
+}
+
+// word===reading(순수 가나 표기)인 항목은 "표기"를 물을 수 없으므로 출제 풀에서 제외
+export function vocabWritingLevelPool(level: KanjiLevel): VocabWord[] {
+  return vocabLevelPool(level).filter((w) => primaryWord(w.word) !== w.reading)
+}
+
+export function generateVocabWritingQuestions(
+  level: KanjiLevel,
+  count: number,
+  order: 'random' | 'sequential' = 'random',
+): VocabWritingQuestion[] {
+  const pool = vocabWritingLevelPool(level)
+  const ordered = order === 'random' ? shuffle(pool) : pool
+  const selected = ordered.slice(0, Math.min(count, pool.length))
+
+  return selected.map((entry) => {
+    const distractors = pickDistractors(entry, pool)
+    return { entry, choices: shuffle([entry, ...distractors]) }
+  })
+}
+
+// same shape, but for a fixed set of ids (오답노트 재도전)
+export function generateVocabWritingQuestionsFromIds(ids: string[]): VocabWritingQuestion[] {
+  const entries = ids
+    .map((id) => vocabList.find((w) => w.id === id))
+    .filter((w): w is VocabWord => w !== undefined)
+    .filter((w) => primaryWord(w.word) !== w.reading)
+
+  return shuffle(entries).map((entry) => {
+    const pool = vocabWritingLevelPool(entry.level)
+    const distractors = pickDistractors(entry, pool)
+    return { entry, choices: shuffle([entry, ...distractors]) }
+  })
+}
