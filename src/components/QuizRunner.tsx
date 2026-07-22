@@ -38,6 +38,30 @@ function promptText(questionType: QuizConfig['questionType'], question: QuizQues
   }
 }
 
+// shown at the moment of a wrong answer — re-surfaces the kanji's full
+// reading/example so the miss becomes a learning point (elaborative feedback),
+// not just a red X. Uses only fields already on the entry (no new data).
+function KanjiHint({ kanji }: { kanji: Kanji }) {
+  return (
+    <div className="quiz-explanation">
+      <div className="quiz-explanation-row">
+        <span className="quiz-explanation-label">훈독</span>
+        <span>{kanji.kunJp || '—'} · {kanji.kunKr}</span>
+      </div>
+      <div className="quiz-explanation-row">
+        <span className="quiz-explanation-label">음독</span>
+        <span>{kanji.onJp || '—'}</span>
+      </div>
+      {kanji.exampleKanji && (
+        <div className="quiz-explanation-row">
+          <span className="quiz-explanation-label">예</span>
+          <span>{kanji.exampleKanji}{kanji.exampleKr ? ` · ${kanji.exampleKr}` : ''}</span>
+        </div>
+      )}
+    </div>
+  )
+}
+
 // text shown on each of the 4 choice buttons
 function choiceLabel(questionType: QuizConfig['questionType'], choice: Kanji): string {
   switch (questionType) {
@@ -207,6 +231,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
                 : `오답 · 정답: ${correctAnswerLabel(config.questionType, question.kanji)}`}
             </p>
           )}
+          {activeFeedback && !activeFeedback.isCorrect && <KanjiHint kanji={question.kanji} />}
           {activeFeedback && !activeFeedback.isCorrect && (
             <button type="button" className="quiz-next-button" onClick={handleNext}>
               다음
@@ -247,6 +272,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
               )
             })}
           </div>
+          {activeFeedback && !activeFeedback.isCorrect && <KanjiHint kanji={question.kanji} />}
           {activeFeedback && !activeFeedback.isCorrect && (
             <button type="button" className="quiz-next-button" onClick={handleNext}>
               다음

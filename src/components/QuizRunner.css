@@ -107,6 +107,31 @@
   color: var(--color-incorrect);
 }
 
+/* elaborative feedback shown on a wrong answer — the missed item's full
+   reading/example, so the miss teaches instead of just marking wrong */
+.quiz-explanation {
+  margin: 12px auto 0;
+  max-width: 320px;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  text-align: left;
+}
+
+.quiz-explanation-row {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.quiz-explanation-label {
+  flex: 0 0 40px;
+  color: var(--color-ink-muted);
+  font-size: 13px;
+}
+
 .quiz-choices {
   display: grid;
   grid-template-columns: 1fr 1fr;
