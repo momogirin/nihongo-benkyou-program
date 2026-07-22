@@ -6,6 +6,8 @@ import {
   type ConjugatedForm,
   type ConjugationEntry,
 } from '../lib/conjugation'
+import { vocabConjugationEntries } from '../lib/vocabConjugation'
+import type { KanjiLevel } from '../data/kanji'
 import './StudyPage.css'
 import './VocabPage.css'
 import './KanjiPage.css'
@@ -34,6 +36,21 @@ const SCOPES: { id: Scope; label: string }[] = [
 ]
 
 const QUIZ_COUNTS: QuizCount[] = [10, 20, 'all']
+
+// 활용 드릴에 쓸 단어 출처: 엄선 세트(초급 상용 146) 또는 급수별 태깅 어휘
+type Source = 'curated' | KanjiLevel
+const SOURCES: { id: Source; label: string }[] = [
+  { id: 'curated', label: '엄선' },
+  { id: 'N5', label: 'N5' },
+  { id: 'N4', label: 'N4' },
+  { id: 'N3', label: 'N3' },
+  { id: 'N2', label: 'N2' },
+  { id: 'N1', label: 'N1' },
+]
+
+function baseList(source: Source): ConjugationEntry[] {
+  return source === 'curated' ? conjugationList : vocabConjugationEntries(source)
+}
 
 function inScope(entry: ConjugationEntry, scope: Scope): boolean {
   switch (scope) {
@@ -75,11 +92,12 @@ export default function ConjugationPage() {
 // ─────────────────────────────────────────── 학습(활용표) ───────────────────
 
 function ConjugationStudy() {
+  const [source, setSource] = useState<Source>('curated')
   const [scope, setScope] = useState<Scope>('all')
   const [studying, setStudying] = useState(false)
   const [cardIndex, setCardIndex] = useState(0)
 
-  const pool = useMemo(() => conjugationList.filter((e) => inScope(e, scope)), [scope])
+  const pool = useMemo(() => baseList(source).filter((e) => inScope(e, scope)), [source, scope])
 
   useEffect(() => {
     if (!studying) return
@@ -140,24 +158,43 @@ function ConjugationStudy() {
   return (
     <div className="page study-setup">
       <h1>활용 학습</h1>
-      <div className="study-level-picker">
-        {SCOPES.map((s) => (
-          <button
-            key={s.id}
-            type="button"
-            className={`study-level-btn${s.id === scope ? ' active' : ''}`}
-            onClick={() => setScope(s.id)}
-          >
-            {s.label}
-          </button>
-        ))}
+      <div className="conj-quiz-field">
+        <span className="conj-quiz-field-label">단어</span>
+        <div className="study-level-picker">
+          {SOURCES.map((s) => (
+            <button
+              key={s.id}
+              type="button"
+              className={`study-level-btn${s.id === source ? ' active' : ''}`}
+              onClick={() => setSource(s.id)}
+            >
+              {s.label}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="conj-quiz-field">
+        <span className="conj-quiz-field-label">활용 그룹</span>
+        <div className="study-level-picker">
+          {SCOPES.map((s) => (
+            <button
+              key={s.id}
+              type="button"
+              className={`study-level-btn${s.id === scope ? ' active' : ''}`}
+              onClick={() => setScope(s.id)}
+            >
+              {s.label}
+            </button>
+          ))}
+        </div>
       </div>
       <p className="study-progress-summary">
-        {SCOPES.find((s) => s.id === scope)!.label} · {pool.length}개
+        {SOURCES.find((s) => s.id === source)!.label} · {SCOPES.find((s) => s.id === scope)!.label} · {pool.length}개
       </p>
       <button
         type="button"
         className="study-start-button"
+        disabled={pool.length === 0}
         onClick={() => {
           setCardIndex(0)
           setStudying(true)
@@ -221,6 +258,7 @@ function buildQuestion(entry: ConjugationEntry): QuizQuestion {
 }
 
 function ConjugationQuiz() {
+  const [source, setSource] = useState<Source>('curated')
   const [scope, setScope] = useState<Scope>('all')
   const [mode, setMode] = useState<QuizMode>('produce')
   const [count, setCount] = useState<QuizCount>(20)
@@ -231,7 +269,7 @@ function ConjugationQuiz() {
   const [answers, setAnswers] = useState<{ entry: ConjugationEntry; target: ConjugatedForm; isCorrect: boolean }[]>([])
   const advanceTimer = useRef<number | null>(null)
 
-  const pool = useMemo(() => conjugationList.filter((e) => inScope(e, scope)), [scope])
+  const pool = useMemo(() => baseList(source).filter((e) => inScope(e, scope)), [source, scope])
 
   useEffect(
     () => () => {
@@ -394,6 +432,21 @@ function ConjugationQuiz() {
     <div className="page study-setup">
       <h1>활용 퀴즈</h1>
       <div className="conj-quiz-field">
+        <span className="conj-quiz-field-label">단어</span>
+        <div className="study-level-picker">
+          {SOURCES.map((s) => (
+            <button
+              key={s.id}
+              type="button"
+              className={`study-level-btn${s.id === source ? ' active' : ''}`}
+              onClick={() => setSource(s.id)}
+            >
+              {s.label}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="conj-quiz-field">
         <span className="conj-quiz-field-label">유형</span>
         <div className="study-level-picker">
           {QUIZ_MODES.map((m) => (
@@ -409,7 +462,7 @@ function ConjugationQuiz() {
         </div>
       </div>
       <div className="conj-quiz-field">
-        <span className="conj-quiz-field-label">범위</span>
+        <span className="conj-quiz-field-label">활용 그룹</span>
         <div className="study-level-picker">
           {SCOPES.map((s) => (
             <button
@@ -439,9 +492,10 @@ function ConjugationQuiz() {
         </div>
       </div>
       <p className="study-progress-summary">
-        {SCOPES.find((s) => s.id === scope)!.label} · {count === 'all' ? pool.length : Math.min(count, pool.length)}문항
+        {SOURCES.find((s) => s.id === source)!.label} · {SCOPES.find((s) => s.id === scope)!.label} ·{' '}
+        {count === 'all' ? pool.length : Math.min(count, pool.length)}문항
       </p>
-      <button type="button" className="study-start-button" onClick={startQuiz}>
+      <button type="button" className="study-start-button" disabled={pool.length === 0} onClick={startQuiz}>
         퀴즈 풀기
       </button>
     </div>
