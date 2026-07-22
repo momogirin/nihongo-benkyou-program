@@ -119,6 +119,31 @@ interface Props {
   onRetryIdsConsumed?: () => void
 }
 
+// shown at the moment of a wrong answer across all vocab quiz types — the full
+// word card (단어·뜻·예문) so the miss becomes a learning point (elaborative
+// feedback) instead of just a red X. Uses only existing VocabWord fields.
+// .quiz-explanation styles come from the shared QuizRunner.css (already imported).
+function VocabHint({ entry }: { entry: VocabWord }) {
+  return (
+    <div className="quiz-explanation">
+      <div className="quiz-explanation-row">
+        <span className="quiz-explanation-label">단어</span>
+        <span>{entry.word} · {entry.reading}</span>
+      </div>
+      <div className="quiz-explanation-row">
+        <span className="quiz-explanation-label">뜻</span>
+        <span>{entry.meaningKr}</span>
+      </div>
+      {entry.exampleJp && (
+        <div className="quiz-explanation-row">
+          <span className="quiz-explanation-label">예</span>
+          <span>{entry.exampleJp}{entry.exampleKr ? ` · ${entry.exampleKr}` : ''}</span>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [level, setLevel] = useState<KanjiLevel>(ALL_LEVELS[0])
   const pool = useMemo(() => vocabLevelPool(level), [level])
@@ -1183,6 +1208,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {quizFeedback && !quizFeedback.isCorrect && <VocabHint entry={question.entry} />}
         {quizFeedback && !quizFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextQuiz}>
             다음
@@ -1273,6 +1299,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {blankFeedback && !blankFeedback.isCorrect && <VocabHint entry={question.entry} />}
         {blankFeedback && !blankFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextBlank}>
             다음
@@ -1361,6 +1388,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             {readingFeedback.isCorrect ? '정답입니다' : `오답 · 정답: ${entry.reading}`}
           </p>
         )}
+        {readingFeedback && !readingFeedback.isCorrect && <VocabHint entry={entry} />}
         {readingFeedback && !readingFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextReading}>
             다음
@@ -1453,6 +1481,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {writingFeedback && !writingFeedback.isCorrect && <VocabHint entry={question.entry} />}
         {writingFeedback && !writingFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextWriting}>
             다음
@@ -1510,6 +1539,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {transitivityFeedback && !transitivityFeedback.isCorrect && <VocabHint entry={question.entry} />}
         {transitivityFeedback && !transitivityFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextTransitivity}>
             다음
