@@ -853,7 +853,9 @@
     "meaningEn": "worth ~ / not worth ~",
     "explanation": "그럴 만한 가치·자격이 충분함, 혹은 그렇지 못함을 나타내는 문어체 표현.",
     "exampleJp": "彼は信頼するに足る人物です。",
-    "exampleKr": "그는 신뢰할 만한 인물입니다."
+    "exampleKr": "그는 신뢰할 만한 인물입니다.",
+    "blankJp": "彼は_____人物です。",
+    "blankAnswer": "信頼するに足る"
   },
   {
     "id": "N1-67",
@@ -864,7 +866,9 @@
     "meaningEn": "whenever ~",
     "explanation": "그런 상황이 생길 때마다 항상 같은 감정·생각이 듦을 나타냄.",
     "exampleJp": "この曲を聞くにつけ、昔のことを思い出します。",
-    "exampleKr": "이 곡을 들을 때마다 옛날 일이 생각납니다."
+    "exampleKr": "이 곡을 들을 때마다 옛날 일이 생각납니다.",
+    "blankJp": "この曲を_____、昔のことを思い出します。",
+    "blankAnswer": "聞くにつけ"
   },
   {
     "id": "N1-68",
@@ -875,7 +879,9 @@
     "meaningEn": "not limited to ~",
     "explanation": "그 범위에 머물지 않고 더 넓은 범위까지 미침을 나타냄.",
     "exampleJp": "被害は国内にとどまらず、海外にも広がりました。",
-    "exampleKr": "피해는 국내에 그치지 않고 해외에도 확산되었습니다."
+    "exampleKr": "피해는 국내에 그치지 않고 해외에도 확산되었습니다.",
+    "blankJp": "被害は国内_____、海外にも広がりました。",
+    "blankAnswer": "にとどまらず"
   },
   {
     "id": "N1-69",
@@ -886,7 +892,9 @@
     "meaningEn": "in contrast to ~",
     "explanation": "두 대상을 대조적으로 비교하며 차이를 강조하는 표현.",
     "exampleJp": "兄の几帳面さにひきかえ、弟はいつもだらしない。",
-    "exampleKr": "형의 꼼꼼함과는 달리 동생은 항상 칠칠치 못하다."
+    "exampleKr": "형의 꼼꼼함과는 달리 동생은 항상 칠칠치 못하다.",
+    "blankJp": "兄の几帳面さ_____、弟はいつもだらしない。",
+    "blankAnswer": "にひきかえ"
   },
   {
     "id": "N1-70",
@@ -897,7 +905,9 @@
     "meaningEn": "more than ever ~ / even more than ~",
     "explanation": "이전이나 다른 것과 비교했을 때 정도가 한층 더함을 나타냄.",
     "exampleJp": "今年は例年にもまして暑い夏になりそうです。",
-    "exampleKr": "올해는 예년보다 더욱 더운 여름이 될 것 같습니다."
+    "exampleKr": "올해는 예년보다 더욱 더운 여름이 될 것 같습니다.",
+    "blankJp": "今年は例年_____暑い夏になりそうです。",
+    "blankAnswer": "にもまして"
   },
   {
     "id": "N1-71",
@@ -908,7 +918,9 @@
     "meaningEn": "the height of ~ / utterly ~",
     "explanation": "감정이 최고조에 이르렀음을 나타내는 격식체 표현. 인사말에 자주 쓰임.",
     "exampleJp": "このような賞をいただき、光栄の至りです。",
-    "exampleKr": "이런 상을 받게 되어 영광스럽기 그지없습니다."
+    "exampleKr": "이런 상을 받게 되어 영광스럽기 그지없습니다.",
+    "blankJp": "このような賞をいただき、_____。",
+    "blankAnswer": "光栄の至りです"
   },
   {
     "id": "N1-72",
@@ -919,7 +931,9 @@
     "meaningEn": "the utmost of ~",
     "explanation": "감정이나 상태가 극단에 이르렀음을 나타내는 문어체 표현.",
     "exampleJp": "彼のわがままな態度は、疲労の極みに達しました。",
-    "exampleKr": "그의 제멋대로인 태도에 피로가 극에 달했습니다."
+    "exampleKr": "그의 제멋대로인 태도에 피로가 극에 달했습니다.",
+    "blankJp": "彼のわがままな態度は、_____達しました。",
+    "blankAnswer": "疲労の極みに"
   },
   {
     "id": "N1-73",
@@ -930,7 +944,9 @@
     "meaningEn": "nothing but ~",
     "explanation": "그것 이외의 무엇도 아니라고 강하게 단정하는 표현.",
     "exampleJp": "これは裏切り以外の何ものでもない。",
-    "exampleKr": "이것은 배신 이외의 다른 것이 아니다."
+    "exampleKr": "이것은 배신 이외의 다른 것이 아니다.",
+    "blankJp": "これは_____。",
+    "blankAnswer": "裏切り以外の何ものでもない"
   },
   {
     "id": "N1-74",
@@ -941,7 +957,9 @@
     "meaningEn": "let alone ~ / not to mention ~",
     "explanation": "당연히 될 것 같은 것조차 안 된다는 것을 강조하는 표현.",
     "exampleJp": "彼は漢字はおろか、ひらがなも読めません。",
-    "exampleKr": "그는 한자는커녕 히라가나도 못 읽습니다."
+    "exampleKr": "그는 한자는커녕 히라가나도 못 읽습니다.",
+    "blankJp": "彼は漢字_____、ひらがなも読めません。",
+    "blankAnswer": "はおろか"
   },
   {
     "id": "N1-75",
@@ -952,7 +970,9 @@
     "meaningEn": "putting ~ aside",
     "explanation": "그 화제는 나중으로 미루고 다른 이야기를 먼저 함을 나타냄.",
     "exampleJp": "冗談はさておき、本題に入りましょう。",
-    "exampleKr": "농담은 제쳐두고 본론으로 들어갑시다."
+    "exampleKr": "농담은 제쳐두고 본론으로 들어갑시다.",
+    "blankJp": "冗談_____、本題に入りましょう。",
+    "blankAnswer": "はさておき"
   },
   {
     "id": "N1-76",
@@ -963,7 +983,9 @@
     "meaningEn": "whatever the case with ~ may be",
     "explanation": "그것이 어떠하든 상관없이 결론은 변하지 않음을 나타냄.",
     "exampleJp": "結果はどうあれ、最善を尽くしたことに意味があります。",
-    "exampleKr": "결과는 어떻든 최선을 다한 것에 의미가 있습니다."
+    "exampleKr": "결과는 어떻든 최선을 다한 것에 의미가 있습니다.",
+    "blankJp": "結果_____、最善を尽くしたことに意味があります。",
+    "blankAnswer": "はどうあれ"
   },
   {
     "id": "N1-77",
@@ -974,7 +996,9 @@
     "meaningEn": "shall not ~ (prohibition, notice)",
     "explanation": "게시문·표어 등에서 금지를 나타내는 문어체·고전적 표현.",
     "exampleJp": "この芝生に入るべからず。",
-    "exampleKr": "이 잔디밭에 들어가지 말 것."
+    "exampleKr": "이 잔디밭에 들어가지 말 것.",
+    "blankJp": "この芝生に_____。",
+    "blankAnswer": "入るべからず"
   },
   {
     "id": "N1-78",
@@ -985,7 +1009,9 @@
     "meaningEn": "cannot possibly ~",
     "explanation": "그렇게 하는 것이 도저히 불가능함을 나타내는 문어체 표현.",
     "exampleJp": "当時の状況を知る由もないし、比較すべくもない。",
-    "exampleKr": "당시 상황을 알 방법도 없고 비교할 수도 없다."
+    "exampleKr": "당시 상황을 알 방법도 없고 비교할 수도 없다.",
+    "blankJp": "当時の状況を知る由もないし、_____。",
+    "blankAnswer": "比較すべくもない"
   },
   {
     "id": "N1-79",
@@ -996,7 +1022,9 @@
     "meaningEn": "should never ~ (unforgivable)",
     "explanation": "그 입장에서 도저히 해서는 안 될 일임을 강하게 비난하는 문어체 표현.",
     "exampleJp": "それは医者にあるまじき行為です。",
-    "exampleKr": "그것은 의사로서 있어서는 안 될 행위입니다."
+    "exampleKr": "그것은 의사로서 있어서는 안 될 행위입니다.",
+    "blankJp": "それは医者に_____行為です。",
+    "blankAnswer": "あるまじき"
   },
   {
     "id": "N1-80",
@@ -1007,7 +1035,9 @@
     "meaningEn": "will simply ~ / that's all one can do",
     "explanation": "다른 방법이 없으면 단순히 그렇게 하겠다는 화자의 각오를 나타냄.",
     "exampleJp": "だめなら、もう一度やり直すまでだ。",
-    "exampleKr": "안 되면 다시 한번 하면 그뿐이다."
+    "exampleKr": "안 되면 다시 한번 하면 그뿐이다.",
+    "blankJp": "だめなら、もう一度_____。",
+    "blankAnswer": "やり直すまでだ"
   },
   {
     "id": "N1-81",
@@ -1018,7 +1048,9 @@
     "meaningEn": "no need to go so far as to ~",
     "explanation": "이미 자명하므로 굳이 그렇게까지 할 필요가 없음을 나타냄.",
     "exampleJp": "言うまでもなく、健康が一番大切です。",
-    "exampleKr": "말할 필요도 없이 건강이 가장 중요합니다."
+    "exampleKr": "말할 필요도 없이 건강이 가장 중요합니다.",
+    "blankJp": "_____、健康が一番大切です。",
+    "blankAnswer": "言うまでもなく"
   },
   {
     "id": "N1-82",
@@ -1029,7 +1061,9 @@
     "meaningEn": "covered in ~",
     "explanation": "더러운 것이 온통 뒤덮여 있는 상태를 나타냄.",
     "exampleJp": "工事現場から泥まみれで帰ってきました。",
-    "exampleKr": "공사 현장에서 진흙투성이가 되어 돌아왔습니다."
+    "exampleKr": "공사 현장에서 진흙투성이가 되어 돌아왔습니다.",
+    "blankJp": "工事現場から_____で帰ってきました。",
+    "blankAnswer": "泥まみれ"
   },
   {
     "id": "N1-83",
@@ -1040,7 +1074,9 @@
     "meaningEn": "seem like ~ / take on the air of ~",
     "explanation": "그러한 성질이 겉으로 드러남을 나타내는 문어체 접미사.",
     "exampleJp": "三月に入り、少しずつ春めいてきました。",
-    "exampleKr": "3월에 접어들어 조금씩 봄다워졌습니다."
+    "exampleKr": "3월에 접어들어 조금씩 봄다워졌습니다.",
+    "blankJp": "三月に入り、少しずつ_____。",
+    "blankAnswer": "春めいてきました"
   },
   {
     "id": "N1-84",
@@ -1051,7 +1087,9 @@
     "meaningEn": "as soon as ~",
     "explanation": "한 동작이 일어난 것과 거의 동시에 다음 일이 일어남을 나타내는 문어체 표현.",
     "exampleJp": "彼は結果を聞くや否や、飛び上がって喜んだ。",
-    "exampleKr": "그는 결과를 듣자마자 펄쩍 뛰며 기뻐했다."
+    "exampleKr": "그는 결과를 듣자마자 펄쩍 뛰며 기뻐했다.",
+    "blankJp": "彼は結果を_____、飛び上がって喜んだ。",
+    "blankAnswer": "聞くや否や"
   },
   {
     "id": "N1-85",
@@ -1062,7 +1100,9 @@
     "meaningEn": "in order to ~ (classical, formal)",
     "explanation": "강한 목적 의식을 나타내는 고전적이고 격식 있는 표현.",
     "exampleJp": "生き延びんがために、あらゆる手段を尽くした。",
-    "exampleKr": "살아남기 위해서 모든 수단을 다했다."
+    "exampleKr": "살아남기 위해서 모든 수단을 다했다.",
+    "blankJp": "_____、あらゆる手段を尽くした。",
+    "blankAnswer": "生き延びんがために"
   },
   {
     "id": "N1-86",
@@ -1073,7 +1113,9 @@
     "meaningEn": "as if about to ~ / almost ~",
     "explanation": "실제로는 그렇지 않지만 마치 그럴 것 같은 정도로 강함을 나타냄.",
     "exampleJp": "彼女は泣かんばかりの顔で、私に頼んできた。",
-    "exampleKr": "그녀는 금방이라도 울 듯한 얼굴로 나에게 부탁해 왔다."
+    "exampleKr": "그녀는 금방이라도 울 듯한 얼굴로 나에게 부탁해 왔다.",
+    "blankJp": "彼女は_____顔で、私に頼んできた。",
+    "blankAnswer": "泣かんばかりの"
   },
   {
     "id": "N1-87",
@@ -1084,7 +1126,9 @@
     "meaningEn": "be forced to ~",
     "explanation": "본인의 의사와 상관없이 어쩔 수 없이 그렇게 됨을 나타내는 격식체 표현.",
     "exampleJp": "台風の影響で、試合の中止を余儀なくされました。",
-    "exampleKr": "태풍의 영향으로 부득이 시합을 중지하게 되었습니다."
+    "exampleKr": "태풍의 영향으로 부득이 시합을 중지하게 되었습니다.",
+    "blankJp": "台風の影響で、_____。",
+    "blankAnswer": "試合の中止を余儀なくされました"
   },
   {
     "id": "N1-88",
@@ -1095,7 +1139,9 @@
     "meaningEn": "despite ~ / pushing through ~",
     "explanation": "어려운 상황을 무릅쓰고 어떤 일을 강행함을 나타냄.",
     "exampleJp": "彼は病気を押して、会議に出席しました。",
-    "exampleKr": "그는 병을 무릅쓰고 회의에 참석했습니다."
+    "exampleKr": "그는 병을 무릅쓰고 회의에 참석했습니다.",
+    "blankJp": "彼は病気_____、会議に出席しました。",
+    "blankAnswer": "を押して"
   },
   {
     "id": "N1-89",
@@ -1106,7 +1152,9 @@
     "meaningEn": "starting with ~",
     "explanation": "그것을 시작으로 이후 잇달아 일이 이어짐을 나타냄.",
     "exampleJp": "彼の一言を皮切りにして、会議は白熱した議論になった。",
-    "exampleKr": "그의 한마디를 시작으로 회의는 뜨거운 논쟁이 되었다."
+    "exampleKr": "그의 한마디를 시작으로 회의는 뜨거운 논쟁이 되었다.",
+    "blankJp": "彼の一言_____、会議は白熱した議論になった。",
+    "blankAnswer": "を皮切りにして"
   },
   {
     "id": "N1-90",
@@ -1117,7 +1165,9 @@
     "meaningEn": "taking ~ as an opportunity",
     "explanation": "어떤 사건을 계기로 하여 상황이나 행동이 바뀜을 나타냄.",
     "exampleJp": "結婚を機に、実家を出て一人暮らしを始めました。",
-    "exampleKr": "결혼을 계기로 본가를 떠나 자취를 시작했습니다."
+    "exampleKr": "결혼을 계기로 본가를 떠나 자취를 시작했습니다.",
+    "blankJp": "結婚_____、実家を出て一人暮らしを始めました。",
+    "blankAnswer": "を機に"
   },
   {
     "id": "N1-91",
@@ -1128,7 +1178,9 @@
     "meaningEn": "through ~ / via ~ (a process)",
     "explanation": "어떤 과정이나 단계를 거쳐 지금에 이르렀음을 나타냄.",
     "exampleJp": "長い交渉を経て、ようやく契約が成立しました。",
-    "exampleKr": "긴 교섭을 거쳐 마침내 계약이 성립되었습니다."
+    "exampleKr": "긴 교섭을 거쳐 마침내 계약이 성립되었습니다.",
+    "blankJp": "長い交渉_____、ようやく契約が成立しました。",
+    "blankAnswer": "を経て"
   },
   {
     "id": "N1-92",
@@ -1139,7 +1191,9 @@
     "meaningEn": "ignoring ~ / regardless of ~",
     "explanation": "주위의 걱정이나 반대를 무시하고 행동함을 나타냄.",
     "exampleJp": "周囲の反対をよそに、彼は留学を決意しました。",
-    "exampleKr": "주위의 반대를 아랑곳하지 않고 그는 유학을 결심했습니다."
+    "exampleKr": "주위의 반대를 아랑곳하지 않고 그는 유학을 결심했습니다.",
+    "blankJp": "周囲の反対_____、彼は留学を決意しました。",
+    "blankAnswer": "をよそに"
   },
   {
     "id": "N1-93",
@@ -1150,7 +1204,9 @@
     "meaningEn": "based on ~ / taking ~ into account",
     "explanation": "어떤 사실이나 자료를 바탕으로 판단·행동함을 나타내는 격식체 표현.",
     "exampleJp": "これまでの結果を踏まえて、新しい方針を決めました。",
-    "exampleKr": "지금까지의 결과를 근거로 새로운 방침을 정했습니다."
+    "exampleKr": "지금까지의 결과를 근거로 새로운 방침을 정했습니다.",
+    "blankJp": "これまでの結果_____、新しい方針を決めました。",
+    "blankAnswer": "を踏まえて"
   },
   {
     "id": "N1-94",
@@ -1161,7 +1217,9 @@
     "meaningEn": "as of ~ (the last time)",
     "explanation": "그것을 마지막으로 하여 이후로는 끝남을 나타냄.",
     "exampleJp": "今日を限りに、たばこをやめることにしました。",
-    "exampleKr": "오늘을 마지막으로 담배를 끊기로 했습니다."
+    "exampleKr": "오늘을 마지막으로 담배를 끊기로 했습니다.",
+    "blankJp": "今日_____、たばこをやめることにしました。",
+    "blankAnswer": "を限りに"
   },
   {
     "id": "N1-95",
@@ -1172,7 +1230,9 @@
     "meaningEn": "undaunted by ~",
     "explanation": "곤란한 상황을 조금도 두려워하지 않고 극복함을 나타내는 문어체 표현.",
     "exampleJp": "彼女は周囲の批判をものともせず、自分の信念を貫いた。",
-    "exampleKr": "그녀는 주위의 비판에도 굴하지 않고 자신의 신념을 관철했다."
+    "exampleKr": "그녀는 주위의 비판에도 굴하지 않고 자신의 신념을 관철했다.",
+    "blankJp": "彼女は周囲の批判_____、自分の信念を貫いた。",
+    "blankAnswer": "をものともせず"
   },
   {
     "id": "N1-96",
@@ -1183,7 +1243,9 @@
     "meaningEn": "make ~ one's guiding principle",
     "explanation": "그것을 가장 중요한 원칙·목표로 삼음을 나타내는 격식체 표현.",
     "exampleJp": "当店はお客様第一を旨として営業しております。",
-    "exampleKr": "저희 가게는 고객 우선을 원칙으로 영업하고 있습니다."
+    "exampleKr": "저희 가게는 고객 우선을 원칙으로 영업하고 있습니다.",
+    "blankJp": "当店はお客様第一_____営業しております。",
+    "blankAnswer": "を旨として"
   },
   {
     "id": "N1-97",
@@ -1194,7 +1256,9 @@
     "meaningEn": "there is none other than ~",
     "explanation": "그것 외에는 적합한 것이 없다는 강한 단정을 나타냄.",
     "exampleJp": "この仕事を任せられるのは彼をおいて他にいません。",
-    "exampleKr": "이 일을 맡길 수 있는 사람은 그밖에 없습니다."
+    "exampleKr": "이 일을 맡길 수 있는 사람은 그밖에 없습니다.",
+    "blankJp": "この仕事を任せられるのは_____。",
+    "blankAnswer": "彼をおいて他にいません"
   },
   {
     "id": "N1-98",
@@ -1205,7 +1269,9 @@
     "meaningEn": "without regard to ~",
     "explanation": "자신의 안위나 사정을 신경 쓰지 않고 어떤 일을 함을 나타냄.",
     "exampleJp": "彼は自分の危険を顧みず、子供を助けに行った。",
-    "exampleKr": "그는 자신의 위험을 돌아보지 않고 아이를 구하러 갔다."
+    "exampleKr": "그는 자신의 위험을 돌아보지 않고 아이를 구하러 갔다.",
+    "blankJp": "彼は自分の危険_____、子供を助けに行った。",
+    "blankAnswer": "を顧みず"
   },
   {
     "id": "N1-99",
@@ -1216,7 +1282,9 @@
     "meaningEn": "by means of ~ / as of ~",
     "explanation": "수단·방법을 나타내거나, 어떤 시점을 기준으로 무언가가 끝남·시작됨을 나타내는 격식체 표현.",
     "exampleJp": "本日をもちまして、当店は閉店いたします。",
-    "exampleKr": "오늘부로 저희 가게는 문을 닫습니다."
+    "exampleKr": "오늘부로 저희 가게는 문을 닫습니다.",
+    "blankJp": "本日_____、当店は閉店いたします。",
+    "blankAnswer": "をもちまして"
   },
   {
     "id": "N1-100",
@@ -1227,7 +1295,9 @@
     "meaningEn": "as one who is ~",
     "explanation": "그러한 입장·자격을 가진 사람으로서 당연히 갖춰야 할 태도를 나타내는 문어체 표현.",
     "exampleJp": "リーダーたる者、常に冷静でなければならない。",
-    "exampleKr": "리더인 자는 항상 냉정해야 한다."
+    "exampleKr": "리더인 자는 항상 냉정해야 한다.",
+    "blankJp": "リーダー_____、常に冷静でなければならない。",
+    "blankAnswer": "たる者"
   },
   {
     "id": "N1-101",
@@ -1238,7 +1308,9 @@
     "meaningEn": "it ended up ~ (a bad result)",
     "explanation": "여러 나쁜 일이 겹친 끝에 결국 좋지 않은 결과에 이르렀음을 나타냄.",
     "exampleJp": "彼はお金を借りたあげく、逃げ出す始末だ。",
-    "exampleKr": "그는 돈을 빌린 끝에 결국 도망치는 꼴이다."
+    "exampleKr": "그는 돈을 빌린 끝에 결국 도망치는 꼴이다.",
+    "blankJp": "彼はお金を借りたあげく、_____。",
+    "blankAnswer": "逃げ出す始末だ"
   },
   {
     "id": "N1-102",
@@ -1249,7 +1321,9 @@
     "meaningEn": "only by ~ing / precisely by ~ing",
     "explanation": "그것을 함으로써 비로소 진정한 가치나 의미가 나타남을 강조.",
     "exampleJp": "苦労してこそ、成功の喜びが分かるものです。",
-    "exampleKr": "고생을 해야 비로소 성공의 기쁨을 알 수 있는 법입니다."
+    "exampleKr": "고생을 해야 비로소 성공의 기쁨을 알 수 있는 법입니다.",
+    "blankJp": "_____、成功の喜びが分かるものです。",
+    "blankAnswer": "苦労してこそ"
   },
   {
     "id": "N1-103",
@@ -1260,7 +1334,9 @@
     "meaningEn": "suited for ~",
     "explanation": "그 대상에게 적합한 성질을 가지고 있음을 나타냄.",
     "exampleJp": "この服は子供向きにデザインされています。",
-    "exampleKr": "이 옷은 아이용으로 디자인되어 있습니다."
+    "exampleKr": "이 옷은 아이용으로 디자인되어 있습니다.",
+    "blankJp": "この服は_____デザインされています。",
+    "blankAnswer": "子供向きに"
   },
   {
     "id": "N1-104",
@@ -1271,7 +1347,9 @@
     "meaningEn": "peculiar to ~ / unique to ~",
     "explanation": "그것이 아니면 볼 수 없는 특별한 것임을 나타내는 긍정적 표현.",
     "exampleJp": "これは京都ならではの伝統工芸品です。",
-    "exampleKr": "이것은 교토만의 전통 공예품입니다."
+    "exampleKr": "이것은 교토만의 전통 공예품입니다.",
+    "blankJp": "これは_____伝統工芸品です。",
+    "blankAnswer": "京都ならではの"
   },
   {
     "id": "N1-105",
@@ -1282,7 +1360,9 @@
     "meaningEn": "not entirely un-~ / not without ~",
     "explanation": "완전히 부정하지는 않는다는 완곡한 표현.",
     "exampleJp": "彼の言い分も分からなくもない。",
-    "exampleKr": "그의 주장도 이해가 안 되는 것도 아니다."
+    "exampleKr": "그의 주장도 이해가 안 되는 것도 아니다.",
+    "blankJp": "彼の言い分も_____。",
+    "blankAnswer": "分からなくもない"
   },
   {
     "id": "N1-106",
@@ -1293,7 +1373,9 @@
     "meaningEn": "seeming like ~",
     "explanation": "그런 분위기·성질을 띠고 있음을 나타내는 표현.",
     "exampleJp": "彼の言葉には皮肉めいた響きがあった。",
-    "exampleKr": "그의 말에는 빈정거림 같은 울림이 있었다."
+    "exampleKr": "그의 말에는 빈정거림 같은 울림이 있었다.",
+    "blankJp": "彼の言葉には_____響きがあった。",
+    "blankAnswer": "皮肉めいた"
   },
   {
     "id": "N1-107",
@@ -1304,7 +1386,9 @@
     "meaningEn": "if anything, ~ (rather than the opposite)",
     "explanation": "뒤에 부정 표현을 동반하여 오히려 그렇다는 것을 강조하는 문어체 표현.",
     "exampleJp": "彼の努力は称賛こそすれ、非難される理由はない。",
-    "exampleKr": "그의 노력은 칭찬받을지언정 비난받을 이유는 없다."
+    "exampleKr": "그의 노력은 칭찬받을지언정 비난받을 이유는 없다.",
+    "blankJp": "彼の努力は_____、非難される理由はない。",
+    "blankAnswer": "称賛こそすれ"
   },
   {
     "id": "N1-108",
@@ -1315,7 +1399,9 @@
     "meaningEn": "even though (you were busy, etc.)",
     "explanation": "상대의 상황을 배려하며 죄송함이나 감사함을 나타내는 격식체 표현.",
     "exampleJp": "お忙しいところを、わざわざお越しいただきありがとうございます。",
-    "exampleKr": "바쁘신 중에 일부러 와 주셔서 감사합니다."
+    "exampleKr": "바쁘신 중에 일부러 와 주셔서 감사합니다.",
+    "blankJp": "_____、わざわざお越しいただきありがとうございます。",
+    "blankAnswer": "お忙しいところを"
   },
   {
     "id": "N1-109",
@@ -1326,7 +1412,9 @@
     "meaningEn": "given that ~ / in light of the fact that ~",
     "explanation": "체면이나 입장 때문에 어쩔 수 없이 그렇게 해야 함을 나타냄.",
     "exampleJp": "自分から言い出した手前、今さらやめるとは言えません。",
-    "exampleKr": "내가 먼저 말을 꺼낸 처지라 이제 와서 그만둔다고 할 수 없습니다."
+    "exampleKr": "내가 먼저 말을 꺼낸 처지라 이제 와서 그만둔다고 할 수 없습니다.",
+    "blankJp": "自分から言い出した_____、今さらやめるとは言えません。",
+    "blankAnswer": "手前"
   },
   {
     "id": "N1-110",
@@ -1337,7 +1425,9 @@
     "meaningEn": "the foremost in ~",
     "explanation": "그 범위 안에서 가장 뛰어남을 나타냄.",
     "exampleJp": "彼はこの業界きっての実力者です。",
-    "exampleKr": "그는 이 업계에서 제일가는 실력자입니다."
+    "exampleKr": "그는 이 업계에서 제일가는 실력자입니다.",
+    "blankJp": "彼はこの業界_____実力者です。",
+    "blankAnswer": "きっての"
   },
   {
     "id": "N1-111",
@@ -1348,7 +1438,9 @@
     "meaningEn": "cannot say it won't ~ / might possibly ~",
     "explanation": "그럴 가능성이 전혀 없다고는 할 수 없음을 나타냄.",
     "exampleJp": "この先、地震が起こらないとも限りません。",
-    "exampleKr": "앞으로 지진이 일어나지 않는다고도 할 수 없습니다."
+    "exampleKr": "앞으로 지진이 일어나지 않는다고도 할 수 없습니다.",
+    "blankJp": "この先、地震が_____。",
+    "blankAnswer": "起こらないとも限りません"
   },
   {
     "id": "N1-112",
@@ -1359,7 +1451,9 @@
     "meaningEn": "not hesitate to ~",
     "explanation": "주저하지 않고 당당하게 말하거나 행동함을 나타내는 문어체 표현.",
     "exampleJp": "彼は自分が一番だと言ってはばからない。",
-    "exampleKr": "그는 자신이 최고라고 거리낌 없이 말한다."
+    "exampleKr": "그는 자신이 최고라고 거리낌 없이 말한다.",
+    "blankJp": "彼は自分が一番だと_____。",
+    "blankAnswer": "言ってはばからない"
   },
   {
     "id": "N1-113",
@@ -1370,7 +1464,9 @@
     "meaningEn": "entire ~ / whole ~ (including everything)",
     "explanation": "그 전체를 통째로 포함함을 나타내는 접미사.",
     "exampleJp": "この町では、町ぐるみで環境保護に取り組んでいます。",
-    "exampleKr": "이 마을에서는 마을 전체가 환경 보호에 힘쓰고 있습니다."
+    "exampleKr": "이 마을에서는 마을 전체가 환경 보호에 힘쓰고 있습니다.",
+    "blankJp": "この町では、_____環境保護に取り組んでいます。",
+    "blankAnswer": "町ぐるみで"
   },
   {
     "id": "N1-114",
@@ -1381,7 +1477,9 @@
     "meaningEn": "someone who is supposed to be ~ (criticism)",
     "explanation": "그 정도의 지위나 입장에 있는 사람으로서 어울리지 않는 행동을 했음을 비난하는 표현.",
     "exampleJp": "政治家ともあろう者が、そんな発言をするとは驚きだ。",
-    "exampleKr": "정치인씩이나 되는 사람이 그런 발언을 하다니 놀랍다."
+    "exampleKr": "정치인씩이나 되는 사람이 그런 발언을 하다니 놀랍다.",
+    "blankJp": "政治家_____、そんな発言をするとは驚きだ。",
+    "blankAnswer": "ともあろう者が"
   },
   {
     "id": "N1-115",
@@ -1392,7 +1490,9 @@
     "meaningEn": "tantamount to ~ / equal to ~",
     "explanation": "정도나 상태가 거의 그것과 다름없음을 나타냄.",
     "exampleJp": "この時間からでは、間に合わないに等しい。",
-    "exampleKr": "이 시간부터라면 늦은 것이나 다름없다."
+    "exampleKr": "이 시간부터라면 늦은 것이나 다름없다.",
+    "blankJp": "この時間からでは、_____。",
+    "blankAnswer": "間に合わないに等しい"
   },
   {
     "id": "N1-116",
@@ -1403,7 +1503,9 @@
     "meaningEn": "that must not be ~ (attributive)",
     "explanation": "べからず의 명사 수식형으로, 결코 해서는 안 됨을 나타내는 문어체 표현.",
     "exampleJp": "これは許すべからざる行為です。",
-    "exampleKr": "이것은 용서해서는 안 될 행위입니다."
+    "exampleKr": "이것은 용서해서는 안 될 행위입니다.",
+    "blankJp": "これは_____行為です。",
+    "blankAnswer": "許すべからざる"
   },
   {
     "id": "N1-117",
@@ -1414,7 +1516,9 @@
     "meaningEn": "about to ~ / on the verge of ~ (classical)",
     "explanation": "지금 막 어떤 일이 일어나려는 순간임을 나타내는 문어적 표현.",
     "exampleJp": "日が沈まんとする頃、彼は帰ってきた。",
-    "exampleKr": "해가 지려는 무렵 그는 돌아왔다."
+    "exampleKr": "해가 지려는 무렵 그는 돌아왔다.",
+    "blankJp": "日が_____頃、彼は帰ってきた。",
+    "blankAnswer": "沈まんとする"
   },
   {
     "id": "N1-118",
@@ -1425,7 +1529,9 @@
     "meaningEn": "as if to say ~",
     "explanation": "말은 하지 않지만 표정이나 태도로 그런 의사를 드러냄을 나타냄.",
     "exampleJp": "彼女は「早く帰れ」と言わんばかりに、時計を見た。",
-    "exampleKr": "그녀는 '빨리 돌아가라'는 듯이 시계를 보았다."
+    "exampleKr": "그녀는 '빨리 돌아가라'는 듯이 시계를 보았다.",
+    "blankJp": "彼女は「早く帰れ」_____、時計を見た。",
+    "blankAnswer": "と言わんばかりに"
   },
   {
     "id": "N1-119",
@@ -1436,7 +1542,9 @@
     "meaningEn": "there's no problem even if ~",
     "explanation": "그렇게 해도 문제가 되지 않음을 나타내는 격식체 허가 표현.",
     "exampleJp": "この資料は公開してさしつかえありません。",
-    "exampleKr": "이 자료는 공개해도 지장 없습니다."
+    "exampleKr": "이 자료는 공개해도 지장 없습니다.",
+    "blankJp": "この資料は_____。",
+    "blankAnswer": "公開してさしつかえありません"
   },
   {
     "id": "N1-120",
@@ -1447,7 +1555,9 @@
     "meaningEn": "under the guise of ~",
     "explanation": "실제와는 다른 명목·외양을 내세워 행동함을 나타냄.",
     "exampleJp": "彼は出張という体で、実は旅行を楽しんでいた。",
-    "exampleKr": "그는 출장이라는 명목으로 실은 여행을 즐기고 있었다."
+    "exampleKr": "그는 출장이라는 명목으로 실은 여행을 즐기고 있었다.",
+    "blankJp": "彼は_____、実は旅行を楽しんでいた。",
+    "blankAnswer": "出張という体で"
   },
   {
     "id": "N1-121",
@@ -1458,7 +1568,9 @@
     "meaningEn": "cannot help but ~",
     "explanation": "감정이 격해져 자연스럽게 그런 행동을 하게 됨을 나타냄.",
     "exampleJp": "その話を聞いて、笑わずにいられませんでした。",
-    "exampleKr": "그 이야기를 듣고 웃지 않을 수 없었습니다."
+    "exampleKr": "그 이야기를 듣고 웃지 않을 수 없었습니다.",
+    "blankJp": "その話を聞いて、_____。",
+    "blankAnswer": "笑わずにいられませんでした"
   },
   {
     "id": "N1-122",
@@ -1469,7 +1581,9 @@
     "meaningEn": "if it were ~, that would be one thing, but ~",
     "explanation": "특수한 경우라면 예외로 인정할 수 있지만, 그렇지 않은 경우에는 그렇지 않다는 대비를 나타냄.",
     "exampleJp": "初心者ならいざしらず、プロがこんなミスをするとは。",
-    "exampleKr": "초보자라면 몰라도 프로가 이런 실수를 하다니."
+    "exampleKr": "초보자라면 몰라도 프로가 이런 실수를 하다니.",
+    "blankJp": "初心者_____、プロがこんなミスをするとは。",
+    "blankAnswer": "ならいざしらず"
   },
   {
     "id": "N1-123",
@@ -1480,7 +1594,9 @@
     "meaningEn": "have no way to ~",
     "explanation": "어떻게 해야 할지 방법이 전혀 없음을 나타내는 문어체 표현.",
     "exampleJp": "連絡を取ろうにも、確かめるすべもなかった。",
-    "exampleKr": "연락을 취하려 해도 확인할 방법이 없었다."
+    "exampleKr": "연락을 취하려 해도 확인할 방법이 없었다.",
+    "blankJp": "連絡を取ろうにも、_____。",
+    "blankAnswer": "確かめるすべもなかった"
   },
   {
     "id": "N1-124",
@@ -1491,7 +1607,9 @@
     "meaningEn": "thought that ~, but contrary to expectation",
     "explanation": "예상과 다른 결과가 나와 놀랐음을 나타냄.",
     "exampleJp": "簡単に終わると思いきや、意外と手間がかかった。",
-    "exampleKr": "간단히 끝날 줄 알았더니 의외로 손이 많이 갔다."
+    "exampleKr": "간단히 끝날 줄 알았더니 의외로 손이 많이 갔다.",
+    "blankJp": "簡単に_____、意外と手間がかかった。",
+    "blankAnswer": "終わると思いきや"
   },
   {
     "id": "N1-125",
@@ -1502,7 +1620,9 @@
     "meaningEn": "come to be ~ (very formal, old-fashioned)",
     "explanation": "なる의 매우 격식 있고 예스러운 표현으로, 공식 문서나 인사말에 사용.",
     "exampleJp": "このたび、めでたく結婚と相成りました。",
-    "exampleKr": "이번에 경사스럽게도 결혼하게 되었습니다."
+    "exampleKr": "이번에 경사스럽게도 결혼하게 되었습니다.",
+    "blankJp": "このたび、めでたく_____。",
+    "blankAnswer": "結婚と相成りました"
   },
   {
     "id": "N1-126",
@@ -1513,7 +1633,9 @@
     "meaningEn": "if this isn't ~, what is?",
     "explanation": "강한 확신을 반어적으로 강조하는 문어체 표현.",
     "exampleJp": "これが奇跡でなくてなんだろうか。",
-    "exampleKr": "이것이 기적이 아니고 무엇이겠는가."
+    "exampleKr": "이것이 기적이 아니고 무엇이겠는가.",
+    "blankJp": "これが_____。",
+    "blankAnswer": "奇跡でなくてなんだろうか"
   },
   {
     "id": "N1-127",
@@ -1524,7 +1646,9 @@
     "meaningEn": "even if it fails, nothing is lost",
     "explanation": "실패해도 원래 상태와 같으니 밑질 것 없다는 마음가짐을 나타냄.",
     "exampleJp": "だめでもともとだから、とにかく挑戦してみます。",
-    "exampleKr": "안 되면 본전이니까 일단 도전해 보겠습니다."
+    "exampleKr": "안 되면 본전이니까 일단 도전해 보겠습니다.",
+    "blankJp": "_____、とにかく挑戦してみます。",
+    "blankAnswer": "だめでもともとだから"
   },
   {
     "id": "N1-128",
@@ -1535,7 +1659,9 @@
     "meaningEn": "~-like / imitation ~",
     "explanation": "진짜와 비슷하지만 실은 가짜이거나 그에 준함을 나타냄.",
     "exampleJp": "彼のやり方は詐欺まがいの商法だ。",
-    "exampleKr": "그의 방식은 사기나 다름없는 상술이다."
+    "exampleKr": "그의 방식은 사기나 다름없는 상술이다.",
+    "blankJp": "彼のやり方は_____商法だ。",
+    "blankAnswer": "詐欺まがいの"
   },
   {
     "id": "N1-129",
@@ -1546,7 +1672,9 @@
     "meaningEn": "can possibly ~ / cannot possibly ~",
     "explanation": "이론적·논리적으로 그럴 가능성이 있는지 없는지를 나타내는 문어체 표현.",
     "exampleJp": "この結果は十分にあり得る話です。",
-    "exampleKr": "이 결과는 충분히 있을 수 있는 이야기입니다."
+    "exampleKr": "이 결과는 충분히 있을 수 있는 이야기입니다.",
+    "blankJp": "この結果は十分に_____話です。",
+    "blankAnswer": "あり得る"
   },
   {
     "id": "N1-130",
@@ -1557,6 +1685,8 @@
     "meaningEn": "cannot help but feel ~ deeply",
     "explanation": "감정을 억누를 수 없을 정도로 강하게 느낀다는 것을 나타내는 문어체 표현.",
     "exampleJp": "皆様のご支援に、感謝の念に堪えません。",
-    "exampleKr": "여러분의 지원에 감사한 마음을 금할 수 없습니다."
+    "exampleKr": "여러분의 지원에 감사한 마음을 금할 수 없습니다.",
+    "blankJp": "皆様のご支援に、_____。",
+    "blankAnswer": "感謝の念に堪えません"
   }
 ]
