@@ -16,6 +16,13 @@ type SubTab = 'study' | 'quiz'
 type Scope = 'all' | 'verb' | 'adj'
 type QuizCount = 10 | 20 | 'all'
 type Phase = 'setup' | 'running' | 'result'
+// produce: 사전형+목표 활용형명 → 활용형 고르기 / identify: 활용형 → 무슨 형인지 고르기
+type QuizMode = 'produce' | 'identify'
+
+const QUIZ_MODES: { id: QuizMode; label: string }[] = [
+  { id: 'produce', label: '활용형 만들기' },
+  { id: 'identify', label: '활용형 읽기' },
+]
 
 const SCOPES: { id: Scope; label: string }[] = [
   { id: 'all', label: '전체' },
@@ -207,6 +214,7 @@ function buildQuestion(entry: ConjugationEntry): QuizQuestion {
 
 function ConjugationQuiz() {
   const [scope, setScope] = useState<Scope>('verb')
+  const [mode, setMode] = useState<QuizMode>('produce')
   const [count, setCount] = useState<QuizCount>(20)
   const [phase, setPhase] = useState<Phase>('setup')
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
@@ -281,14 +289,33 @@ function ConjugationQuiz() {
           </div>
         </div>
         <div className="vocab-quiz-prompt">
-          <span className="conj-quiz-prompt-word">
-            {question.entry.word}
-            <span className="conj-quiz-prompt-reading">{question.entry.reading}</span>
-          </span>
-          <span className="conj-quiz-prompt-meaning">{question.entry.meaningKr}</span>
-          <span className="conj-quiz-prompt-target">
-            → <strong>{question.target.label}</strong> 으로?
-          </span>
+          {mode === 'produce' ? (
+            <>
+              <span className="conj-quiz-prompt-word">
+                {question.entry.word}
+                <span className="conj-quiz-prompt-reading">{question.entry.reading}</span>
+              </span>
+              <span className="conj-quiz-prompt-meaning">{question.entry.meaningKr}</span>
+              <span className="conj-quiz-prompt-target">
+                → <strong>{question.target.label}</strong> 으로?
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="conj-quiz-prompt-word">
+                {question.target.word}
+                {question.target.reading !== question.target.word && (
+                  <span className="conj-quiz-prompt-reading">{question.target.reading}</span>
+                )}
+              </span>
+              <span className="conj-quiz-prompt-meaning">
+                {question.entry.word} · {question.entry.meaningKr}
+              </span>
+              <span className="conj-quiz-prompt-target">
+                → 무슨 <strong>활용형</strong>?
+              </span>
+            </>
+          )}
         </div>
         <div className="vocab-quiz-choices">
           {question.choices.map((choice, i) => {
@@ -306,8 +333,14 @@ function ConjugationQuiz() {
                 onClick={() => submitAnswer(choice)}
               >
                 <span className="quiz-choice-num">{i + 1}</span>
-                <span className="conj-choice-word">{choice.word}</span>
-                {choice.reading !== choice.word && <span className="conj-choice-reading">{choice.reading}</span>}
+                {mode === 'produce' ? (
+                  <>
+                    <span className="conj-choice-word">{choice.word}</span>
+                    {choice.reading !== choice.word && <span className="conj-choice-reading">{choice.reading}</span>}
+                  </>
+                ) : (
+                  <span className="conj-choice-word">{choice.label}</span>
+                )}
               </button>
             )
           })}
@@ -352,6 +385,21 @@ function ConjugationQuiz() {
   return (
     <div className="page study-setup">
       <h1>활용 퀴즈</h1>
+      <div className="conj-quiz-field">
+        <span className="conj-quiz-field-label">유형</span>
+        <div className="study-level-picker">
+          {QUIZ_MODES.map((m) => (
+            <button
+              key={m.id}
+              type="button"
+              className={`study-level-btn${m.id === mode ? ' active' : ''}`}
+              onClick={() => setMode(m.id)}
+            >
+              {m.label}
+            </button>
+          ))}
+        </div>
+      </div>
       <div className="conj-quiz-field">
         <span className="conj-quiz-field-label">범위</span>
         <div className="study-level-picker">
