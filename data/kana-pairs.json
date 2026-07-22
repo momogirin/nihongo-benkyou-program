@@ -218,5 +218,125 @@
       "じょず"
     ],
     "type": "요음"
+  },
+  {
+    "id": "KP-23",
+    "word": "にっき",
+    "meaningKr": "일기",
+    "variants": [
+      "にき",
+      "にっきい"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-24",
+    "word": "せっけん",
+    "meaningKr": "비누",
+    "variants": [
+      "せけん",
+      "せっけえ"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-25",
+    "word": "しゅっぱつ",
+    "meaningKr": "출발",
+    "variants": [
+      "しゅぱつ",
+      "しゅっぱ"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-26",
+    "word": "けってい",
+    "meaningKr": "결정",
+    "variants": [
+      "けてい",
+      "けってえ"
+    ],
+    "type": "촉음"
+  },
+  {
+    "id": "KP-27",
+    "word": "とおり",
+    "meaningKr": "길·거리",
+    "variants": [
+      "とり",
+      "とうり"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-28",
+    "word": "すうがく",
+    "meaningKr": "수학",
+    "variants": [
+      "すがく",
+      "すうがくう"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-29",
+    "word": "くうこう",
+    "meaningKr": "공항",
+    "variants": [
+      "くこう",
+      "くうこ"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-30",
+    "word": "ほうそう",
+    "meaningKr": "방송",
+    "variants": [
+      "ほそう",
+      "ほうそ"
+    ],
+    "type": "장음"
+  },
+  {
+    "id": "KP-31",
+    "word": "かいしゃ",
+    "meaningKr": "회사",
+    "variants": [
+      "かいしや",
+      "かいしゃあ"
+    ],
+    "type": "요음"
+  },
+  {
+    "id": "KP-32",
+    "word": "じゅぎょう",
+    "meaningKr": "수업",
+    "variants": [
+      "じゅぎよう",
+      "じゆぎょう"
+    ],
+    "type": "요음"
+  },
+  {
+    "id": "KP-33",
+    "word": "りょかん",
+    "meaningKr": "여관",
+    "variants": [
+      "りよかん",
+      "りょか"
+    ],
+    "type": "요음"
+  },
+  {
+    "id": "KP-34",
+    "word": "じょうだん",
+    "meaningKr": "농담",
+    "variants": [
+      "じよだん",
+      "じょだん"
+    ],
+    "type": "요음"
   }
 ]
