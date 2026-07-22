@@ -136,3 +136,22 @@
   font-weight: 700;
   color: var(--color-primary-dark);
 }
+
+/* 지난 회차 대비 정답률 추이 — 향상이 눈에 보이게 (학습효과: 성취 실감) */
+.mock-exam-trend {
+  margin: -8px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mock-exam-trend.up {
+  color: var(--color-correct);
+}
+
+.mock-exam-trend.down {
+  color: var(--color-incorrect);
+}
+
+.mock-exam-trend.flat {
+  color: var(--color-ink-muted);
+}

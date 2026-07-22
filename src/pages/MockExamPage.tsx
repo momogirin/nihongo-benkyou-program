@@ -9,6 +9,7 @@ import {
 import {
   addGrammarWrongNotes,
   addMockExamHistoryEntry,
+  getMockExamHistory,
   addVocabWrongNotes,
   addWrongNotes,
   clearMockExamInProgressQuiz,
@@ -65,6 +66,9 @@ export default function MockExamPage() {
   const [feedback, setFeedback] = useState<{ isCorrect: boolean; selectedLabel: string } | null>(null)
   const [remainingMs, setRemainingMs] = useState(0)
   const [result, setResult] = useState<ExamResult | null>(null)
+  // 같은 급수 직전 회차 정답률(%) — 이번 결과와 대비해 "지난 회차 대비 ±%p"로
+  // 성장을 실감하게 한다(학습효과: 향상이 눈에 보여야 지속됨). 첫 회차면 null.
+  const [prevRate, setPrevRate] = useState<number | null>(null)
 
   const answersRef = useRef<MockExamAnswer[]>([])
   const questionsRef = useRef<MockExamQuestion[]>([])
@@ -261,6 +265,11 @@ export default function MockExamPage() {
     correctByDomain.grammar.forEach(removeGrammarWrongNote)
     result.answers.forEach((a) => recordSrsReview(a.question.domain, a.question.id, a.isCorrect))
 
+    // 현재 회차를 기록에 넣기 전에 같은 급수 직전 회차 정답률을 확보한다
+    // (넣은 뒤에 읽으면 방금 회차가 "직전"이 되어버림)
+    const prev = getMockExamHistory().find((e) => e.level === level)
+    setPrevRate(prev && prev.total > 0 ? Math.round((prev.correct / prev.total) * 100) : null)
+
     const entry: MockExamHistoryEntry = {
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
       level,
@@ -418,6 +427,15 @@ export default function MockExamPage() {
       <p className="result-summary">
         {correctCount} / {total} 정답 ({rate}%) · 소요 시간 {formatElapsed(result?.elapsedMs ?? 0)}
       </p>
+      {prevRate !== null && (
+        <p className={`mock-exam-trend ${rate > prevRate ? 'up' : rate < prevRate ? 'down' : 'flat'}`}>
+          {rate > prevRate
+            ? `지난 ${level} 대비 +${rate - prevRate}%p ↑`
+            : rate < prevRate
+              ? `지난 ${level} 대비 ${rate - prevRate}%p ↓`
+              : `지난 ${level}과 동일 (${rate}%)`}
+        </p>
+      )}
 
       <div className="mock-exam-breakdown">
         {(Object.keys(DOMAIN_LABEL) as MockExamDomain[]).map((domain) => (
