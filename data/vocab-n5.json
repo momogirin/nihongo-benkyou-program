@@ -2666,7 +2666,8 @@
     "meaningKr": "괜찮음(충분함)",
     "meaningEn": "splendid; enough, tolerably",
     "exampleJp": "コーヒーはもう結構です。",
-    "exampleKr": "커피는 이제 괜찮습니다."
+    "exampleKr": "커피는 이제 괜찮습니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-238",
@@ -4194,7 +4195,8 @@
     "meaningKr": "괜찮음",
     "meaningEn": "It's ok (all right); No need to worry; Everything is under control",
     "exampleJp": "心配しないでください、大丈夫です。",
-    "exampleKr": "걱정하지 마세요, 괜찮아요."
+    "exampleKr": "걱정하지 마세요, 괜찮아요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-375",
@@ -4240,7 +4242,8 @@
     "meaningKr": "매우(힘듦)",
     "meaningEn": "very; difficult, hard",
     "exampleJp": "毎日の仕事はとても大変です。",
-    "exampleKr": "매일 하는 일은 아주 힘들어요."
+    "exampleKr": "매일 하는 일은 아주 힘들어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-379",

@@ -770,7 +770,8 @@
     "meaningKr": "중요함(소중함)",
     "meaningEn": "important, valuable, serious matter",
     "exampleJp": "私にとって家族が一番大事です。",
-    "exampleKr": "저에게는 가족이 제일 소중해요."
+    "exampleKr": "저에게는 가족이 제일 소중해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-70",
@@ -2368,7 +2369,8 @@
     "meaningKr": "친절",
     "meaningEn": "kindness",
     "exampleJp": "駅で親切な人に道を教えてもらいました。",
-    "exampleKr": "역에서 친절한 사람이 길을 알려 주었습니다."
+    "exampleKr": "역에서 친절한 사람이 길을 알려 주었습니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-212",
@@ -2402,7 +2404,8 @@
     "meaningKr": "열심(열정)",
     "meaningEn": "enthusiasm",
     "exampleJp": "彼女はいつも熱心に勉強しています。",
-    "exampleKr": "그녀는 항상 열심히 공부하고 있습니다."
+    "exampleKr": "그녀는 항상 열심히 공부하고 있습니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-215",
@@ -2873,7 +2876,8 @@
     "meaningKr": "확실함(아마)",
     "meaningEn": "if I remember correctly; certain, definite",
     "exampleJp": "彼は確か来週旅行に行くと言っていました。",
-    "exampleKr": "그는 아마 다음 주에 여행을 간다고 말했었습니다."
+    "exampleKr": "그는 아마 다음 주에 여행을 간다고 말했었습니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-257",
@@ -3453,7 +3457,8 @@
     "meaningKr": "성실함(진지함)",
     "meaningEn": "diligent, serious",
     "exampleJp": "彼はクラスで一番真面目な学生です。",
-    "exampleKr": "그는 반에서 가장 성실한 학생입니다."
+    "exampleKr": "그는 반에서 가장 성실한 학생입니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-309",
@@ -4134,7 +4139,8 @@
     "meaningKr": "방해",
     "meaningEn": "hindrance, intrusion",
     "exampleJp": "お仕事の邪魔をしてすみません。",
-    "exampleKr": "일하시는 데 방해해서 죄송합니다."
+    "exampleKr": "일하시는 데 방해해서 죄송합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-370",
@@ -4244,7 +4250,8 @@
     "meaningKr": "불편",
     "meaningEn": "inconvenience",
     "exampleJp": "車がないと生活が不便です。",
-    "exampleKr": "차가 없으면 생활이 불편합니다."
+    "exampleKr": "차가 없으면 생활이 불편합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-380",
@@ -5050,7 +5057,8 @@
     "meaningKr": "위험",
     "meaningEn": "danger, risk, hazard",
     "exampleJp": "この川は流れが速くて危険です。",
-    "exampleKr": "이 강은 물살이 빨라서 위험합니다."
+    "exampleKr": "이 강은 물살이 빨라서 위험합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-452",
@@ -7028,7 +7036,8 @@
     "meaningKr": "안전",
     "meaningEn": "safety, security",
     "exampleJp": "子供の安全を守ることが大切です。",
-    "exampleKr": "아이의 안전을 지키는 것이 중요합니다."
+    "exampleKr": "아이의 안전을 지키는 것이 중요합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-627",

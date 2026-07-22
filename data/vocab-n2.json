@@ -659,7 +659,8 @@
     "meaningKr": "고상함(품위있음)",
     "meaningEn": "refined, elegant, well-mannered",
     "exampleJp": "彼女はいつも上品な服装をしている。",
-    "exampleKr": "그녀는 항상 품위있는 옷차림을 하고 있다."
+    "exampleKr": "그녀는 항상 품위있는 옷차림을 하고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-61",
@@ -1543,7 +1544,8 @@
     "meaningKr": "순수함(고분고분함)",
     "meaningEn": "obedient, meek, docile",
     "exampleJp": "彼女は素直な性格です。",
-    "exampleKr": "그녀는 고분고분한 성격입니다."
+    "exampleKr": "그녀는 고분고분한 성격입니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-141",
@@ -12541,7 +12543,8 @@
     "meaningKr": "건방짐",
     "meaningEn": "impertinent, impudent",
     "exampleJp": "新人のくせに生意気な口をきくな。",
-    "exampleKr": "신입 주제에 건방진 말투를 쓰지 마라."
+    "exampleKr": "신입 주제에 건방진 말투를 쓰지 마라.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1126",
@@ -19251,7 +19254,8 @@
     "meaningKr": "적당함(알맞음)",
     "meaningEn": "moderate, handy",
     "exampleJp": "手頃な値段の服を買った。",
-    "exampleKr": "적당한 가격의 옷을 샀다."
+    "exampleKr": "적당한 가격의 옷을 샀다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1726",

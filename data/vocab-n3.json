@@ -1533,7 +1533,8 @@
     "meaningKr": "정직",
     "meaningEn": "honesty, integrity, frankness",
     "exampleJp": "正直に話してくれてありがとう。",
-    "exampleKr": "정직하게 말해줘서 고마워요."
+    "exampleKr": "정직하게 말해줘서 고마워요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-139",
@@ -4060,7 +4061,8 @@
     "meaningKr": "의외",
     "meaningEn": "unexpected, surprising",
     "exampleJp": "試験の結果は意外に良かった。",
-    "exampleKr": "시험 결과는 의외로 좋았다."
+    "exampleKr": "시험 결과는 의외로 좋았다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-365",
@@ -8327,7 +8329,8 @@
     "meaningKr": "손재주 있음",
     "meaningEn": "skillful, handy",
     "exampleJp": "彼女は手先が器用です。",
-    "exampleKr": "그녀는 손재주가 있어요."
+    "exampleKr": "그녀는 손재주가 있어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-746",
@@ -9799,7 +9802,8 @@
     "meaningKr": "행운",
     "meaningEn": "good luck, fortune",
     "exampleJp": "彼に会えて幸運でした。",
-    "exampleKr": "그를 만나서 행운이었어요."
+    "exampleKr": "그를 만나서 행운이었어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-878",
@@ -11404,7 +11408,8 @@
     "meaningKr": "묘함(이상함)",
     "meaningEn": "strange, unusual",
     "exampleJp": "何だか妙な感じがします。",
-    "exampleKr": "왠지 묘한 느낌이 들어요."
+    "exampleKr": "왠지 묘한 느낌이 들어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1022",
@@ -11607,7 +11612,8 @@
     "meaningKr": "헛됨(낭비)",
     "meaningEn": "futility, uselessness",
     "exampleJp": "時間を無駄にしないでください。",
-    "exampleKr": "시간을 낭비하지 마세요."
+    "exampleKr": "시간을 낭비하지 마세요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1040",
@@ -11618,7 +11624,8 @@
     "meaningKr": "몰두함(열중함)",
     "meaningEn": "crush, crazy, be hooked on",
     "exampleJp": "彼はゲームに夢中です。",
-    "exampleKr": "그는 게임에 몰두해 있어요."
+    "exampleKr": "그는 게임에 몰두해 있어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1041",
@@ -11730,7 +11737,8 @@
     "meaningKr": "폐(민폐)",
     "meaningEn": "trouble, bother, annoyance",
     "exampleJp": "隣の騒音で迷惑しています。",
-    "exampleKr": "옆집 소음 때문에 민폐를 겪고 있어요."
+    "exampleKr": "옆집 소음 때문에 민폐를 겪고 있어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1051",
@@ -12233,7 +12241,8 @@
     "meaningKr": "성가심",
     "meaningEn": "trouble, burden, care",
     "exampleJp": "厄介な問題が起きてしまいました。",
-    "exampleKr": "성가신 문제가 생기고 말았어요."
+    "exampleKr": "성가신 문제가 생기고 말았어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1096",
@@ -12586,7 +12595,8 @@
     "meaningKr": "명랑함(날씨)",
     "meaningEn": "season, weather, cheerfulness",
     "exampleJp": "彼はいつも陽気で楽しい人です。",
-    "exampleKr": "그는 언제나 명랑하고 즐거운 사람이에요."
+    "exampleKr": "그는 언제나 명랑하고 즐거운 사람이에요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1127",
@@ -15042,7 +15052,8 @@
     "meaningKr": "손해",
     "meaningEn": "loss, disadvantage",
     "exampleJp": "この取引では損をしました。",
-    "exampleKr": "이 거래에서는 손해를 봤어요."
+    "exampleKr": "이 거래에서는 손해를 봤어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1348",
@@ -17841,7 +17852,8 @@
     "meaningKr": "자신 있음(잘함)",
     "meaningEn": "pride, triumph, prosperity",
     "exampleJp": "私は数学が得意です。",
-    "exampleKr": "저는 수학을 잘해요."
+    "exampleKr": "저는 수학을 잘해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1598",
@@ -18766,7 +18778,8 @@
     "meaningKr": "서투름(약함)",
     "meaningEn": "poor (at), weak (in), dislike (of)",
     "exampleJp": "私は英語が苦手です。",
-    "exampleKr": "저는 영어가 서투릅니다."
+    "exampleKr": "저는 영어가 서투릅니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1680",
