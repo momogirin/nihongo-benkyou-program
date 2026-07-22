@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   conjugate,
   conjugationList,
-  isAdjective,
   TYPE_LABELS,
   type ConjugatedForm,
   type ConjugationEntry,
@@ -13,7 +12,8 @@ import './KanjiPage.css'
 import './ConjugationPage.css'
 
 type SubTab = 'study' | 'quiz'
-type Scope = 'all' | 'verb' | 'adj'
+// 활용 그룹별 집중 연습을 위한 필터
+type Scope = 'all' | 'godan' | 'ichidan' | 'suruKuru' | 'iadj' | 'naadj'
 type QuizCount = 10 | 20 | 'all'
 type Phase = 'setup' | 'running' | 'result'
 // produce: 사전형+목표 활용형명 → 활용형 고르기 / identify: 활용형 → 무슨 형인지 고르기
@@ -26,16 +26,24 @@ const QUIZ_MODES: { id: QuizMode; label: string }[] = [
 
 const SCOPES: { id: Scope; label: string }[] = [
   { id: 'all', label: '전체' },
-  { id: 'verb', label: '동사' },
-  { id: 'adj', label: '형용사' },
+  { id: 'godan', label: '5단' },
+  { id: 'ichidan', label: '1단' },
+  { id: 'suruKuru', label: 'する·くる' },
+  { id: 'iadj', label: 'い형' },
+  { id: 'naadj', label: 'な형' },
 ]
 
 const QUIZ_COUNTS: QuizCount[] = [10, 20, 'all']
 
 function inScope(entry: ConjugationEntry, scope: Scope): boolean {
-  if (scope === 'all') return true
-  const adj = isAdjective(entry.type)
-  return scope === 'adj' ? adj : !adj
+  switch (scope) {
+    case 'all':
+      return true
+    case 'suruKuru':
+      return entry.type === 'suru' || entry.type === 'kuru'
+    default:
+      return entry.type === scope
+  }
 }
 
 function shuffle<T>(items: T[]): T[] {
@@ -67,7 +75,7 @@ export default function ConjugationPage() {
 // ─────────────────────────────────────────── 학습(활용표) ───────────────────
 
 function ConjugationStudy() {
-  const [scope, setScope] = useState<Scope>('verb')
+  const [scope, setScope] = useState<Scope>('all')
   const [studying, setStudying] = useState(false)
   const [cardIndex, setCardIndex] = useState(0)
 
@@ -213,7 +221,7 @@ function buildQuestion(entry: ConjugationEntry): QuizQuestion {
 }
 
 function ConjugationQuiz() {
-  const [scope, setScope] = useState<Scope>('verb')
+  const [scope, setScope] = useState<Scope>('all')
   const [mode, setMode] = useState<QuizMode>('produce')
   const [count, setCount] = useState<QuizCount>(20)
   const [phase, setPhase] = useState<Phase>('setup')
