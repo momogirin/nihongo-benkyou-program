@@ -1,0 +1,646 @@
+[
+  {
+    "id": "CJ-1",
+    "word": "会う",
+    "reading": "あう",
+    "meaningKr": "만나다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-2",
+    "word": "買う",
+    "reading": "かう",
+    "meaningKr": "사다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-3",
+    "word": "使う",
+    "reading": "つかう",
+    "meaningKr": "사용하다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-4",
+    "word": "洗う",
+    "reading": "あらう",
+    "meaningKr": "씻다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-5",
+    "word": "歌う",
+    "reading": "うたう",
+    "meaningKr": "노래하다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-6",
+    "word": "書く",
+    "reading": "かく",
+    "meaningKr": "쓰다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-7",
+    "word": "聞く",
+    "reading": "きく",
+    "meaningKr": "듣다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-8",
+    "word": "行く",
+    "reading": "いく",
+    "meaningKr": "가다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-9",
+    "word": "泳ぐ",
+    "reading": "およぐ",
+    "meaningKr": "수영하다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-10",
+    "word": "急ぐ",
+    "reading": "いそぐ",
+    "meaningKr": "서두르다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-11",
+    "word": "話す",
+    "reading": "はなす",
+    "meaningKr": "말하다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-12",
+    "word": "待つ",
+    "reading": "まつ",
+    "meaningKr": "기다리다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-13",
+    "word": "立つ",
+    "reading": "たつ",
+    "meaningKr": "서다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-14",
+    "word": "持つ",
+    "reading": "もつ",
+    "meaningKr": "들다·가지다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-15",
+    "word": "死ぬ",
+    "reading": "しぬ",
+    "meaningKr": "죽다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-16",
+    "word": "呼ぶ",
+    "reading": "よぶ",
+    "meaningKr": "부르다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-17",
+    "word": "遊ぶ",
+    "reading": "あそぶ",
+    "meaningKr": "놀다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-18",
+    "word": "飲む",
+    "reading": "のむ",
+    "meaningKr": "마시다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-19",
+    "word": "読む",
+    "reading": "よむ",
+    "meaningKr": "읽다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-20",
+    "word": "住む",
+    "reading": "すむ",
+    "meaningKr": "살다·거주하다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-21",
+    "word": "休む",
+    "reading": "やすむ",
+    "meaningKr": "쉬다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-22",
+    "word": "取る",
+    "reading": "とる",
+    "meaningKr": "잡다·취하다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-23",
+    "word": "作る",
+    "reading": "つくる",
+    "meaningKr": "만들다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-24",
+    "word": "分かる",
+    "reading": "わかる",
+    "meaningKr": "알다·이해하다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-25",
+    "word": "座る",
+    "reading": "すわる",
+    "meaningKr": "앉다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-26",
+    "word": "送る",
+    "reading": "おくる",
+    "meaningKr": "보내다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-27",
+    "word": "終わる",
+    "reading": "おわる",
+    "meaningKr": "끝나다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-28",
+    "word": "帰る",
+    "reading": "かえる",
+    "meaningKr": "돌아가다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-29",
+    "word": "入る",
+    "reading": "はいる",
+    "meaningKr": "들어가다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-30",
+    "word": "走る",
+    "reading": "はしる",
+    "meaningKr": "달리다",
+    "type": "godan"
+  },
+  {
+    "id": "CJ-31",
+    "word": "食べる",
+    "reading": "たべる",
+    "meaningKr": "먹다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-32",
+    "word": "見る",
+    "reading": "みる",
+    "meaningKr": "보다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-33",
+    "word": "寝る",
+    "reading": "ねる",
+    "meaningKr": "자다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-34",
+    "word": "出る",
+    "reading": "でる",
+    "meaningKr": "나가다·나오다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-35",
+    "word": "着る",
+    "reading": "きる",
+    "meaningKr": "입다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-36",
+    "word": "起きる",
+    "reading": "おきる",
+    "meaningKr": "일어나다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-37",
+    "word": "生きる",
+    "reading": "いきる",
+    "meaningKr": "살다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-38",
+    "word": "教える",
+    "reading": "おしえる",
+    "meaningKr": "가르치다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-39",
+    "word": "覚える",
+    "reading": "おぼえる",
+    "meaningKr": "외우다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-40",
+    "word": "考える",
+    "reading": "かんがえる",
+    "meaningKr": "생각하다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-41",
+    "word": "答える",
+    "reading": "こたえる",
+    "meaningKr": "대답하다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-42",
+    "word": "開ける",
+    "reading": "あける",
+    "meaningKr": "열다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-43",
+    "word": "閉める",
+    "reading": "しめる",
+    "meaningKr": "닫다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-44",
+    "word": "借りる",
+    "reading": "かりる",
+    "meaningKr": "빌리다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-45",
+    "word": "降りる",
+    "reading": "おりる",
+    "meaningKr": "내리다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-46",
+    "word": "忘れる",
+    "reading": "わすれる",
+    "meaningKr": "잊다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-47",
+    "word": "見せる",
+    "reading": "みせる",
+    "meaningKr": "보여주다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-48",
+    "word": "集める",
+    "reading": "あつめる",
+    "meaningKr": "모으다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-49",
+    "word": "始める",
+    "reading": "はじめる",
+    "meaningKr": "시작하다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-50",
+    "word": "調べる",
+    "reading": "しらべる",
+    "meaningKr": "조사하다",
+    "type": "ichidan"
+  },
+  {
+    "id": "CJ-51",
+    "word": "する",
+    "reading": "する",
+    "meaningKr": "하다",
+    "type": "suru"
+  },
+  {
+    "id": "CJ-52",
+    "word": "勉強する",
+    "reading": "べんきょうする",
+    "meaningKr": "공부하다",
+    "type": "suru"
+  },
+  {
+    "id": "CJ-53",
+    "word": "運動する",
+    "reading": "うんどうする",
+    "meaningKr": "운동하다",
+    "type": "suru"
+  },
+  {
+    "id": "CJ-54",
+    "word": "掃除する",
+    "reading": "そうじする",
+    "meaningKr": "청소하다",
+    "type": "suru"
+  },
+  {
+    "id": "CJ-55",
+    "word": "洗濯する",
+    "reading": "せんたくする",
+    "meaningKr": "세탁하다",
+    "type": "suru"
+  },
+  {
+    "id": "CJ-56",
+    "word": "電話する",
+    "reading": "でんわする",
+    "meaningKr": "전화하다",
+    "type": "suru"
+  },
+  {
+    "id": "CJ-57",
+    "word": "結婚する",
+    "reading": "けっこんする",
+    "meaningKr": "결혼하다",
+    "type": "suru"
+  },
+  {
+    "id": "CJ-58",
+    "word": "来る",
+    "reading": "くる",
+    "meaningKr": "오다",
+    "type": "kuru"
+  },
+  {
+    "id": "CJ-59",
+    "word": "高い",
+    "reading": "たかい",
+    "meaningKr": "비싸다·높다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-60",
+    "word": "安い",
+    "reading": "やすい",
+    "meaningKr": "싸다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-61",
+    "word": "大きい",
+    "reading": "おおきい",
+    "meaningKr": "크다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-62",
+    "word": "小さい",
+    "reading": "ちいさい",
+    "meaningKr": "작다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-63",
+    "word": "新しい",
+    "reading": "あたらしい",
+    "meaningKr": "새롭다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-64",
+    "word": "古い",
+    "reading": "ふるい",
+    "meaningKr": "낡다·오래되다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-65",
+    "word": "いい",
+    "reading": "いい",
+    "meaningKr": "좋다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-66",
+    "word": "悪い",
+    "reading": "わるい",
+    "meaningKr": "나쁘다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-67",
+    "word": "暑い",
+    "reading": "あつい",
+    "meaningKr": "덥다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-68",
+    "word": "寒い",
+    "reading": "さむい",
+    "meaningKr": "춥다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-69",
+    "word": "冷たい",
+    "reading": "つめたい",
+    "meaningKr": "차갑다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-70",
+    "word": "忙しい",
+    "reading": "いそがしい",
+    "meaningKr": "바쁘다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-71",
+    "word": "楽しい",
+    "reading": "たのしい",
+    "meaningKr": "즐겁다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-72",
+    "word": "面白い",
+    "reading": "おもしろい",
+    "meaningKr": "재미있다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-73",
+    "word": "おいしい",
+    "reading": "おいしい",
+    "meaningKr": "맛있다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-74",
+    "word": "難しい",
+    "reading": "むずかしい",
+    "meaningKr": "어렵다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-75",
+    "word": "早い",
+    "reading": "はやい",
+    "meaningKr": "이르다·빠르다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-76",
+    "word": "遅い",
+    "reading": "おそい",
+    "meaningKr": "늦다·느리다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-77",
+    "word": "近い",
+    "reading": "ちかい",
+    "meaningKr": "가깝다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-78",
+    "word": "遠い",
+    "reading": "とおい",
+    "meaningKr": "멀다",
+    "type": "iadj"
+  },
+  {
+    "id": "CJ-79",
+    "word": "静か",
+    "reading": "しずか",
+    "meaningKr": "조용하다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-80",
+    "word": "きれい",
+    "reading": "きれい",
+    "meaningKr": "예쁘다·깨끗하다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-81",
+    "word": "元気",
+    "reading": "げんき",
+    "meaningKr": "건강하다·기운차다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-82",
+    "word": "有名",
+    "reading": "ゆうめい",
+    "meaningKr": "유명하다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-83",
+    "word": "便利",
+    "reading": "べんり",
+    "meaningKr": "편리하다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-84",
+    "word": "親切",
+    "reading": "しんせつ",
+    "meaningKr": "친절하다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-85",
+    "word": "好き",
+    "reading": "すき",
+    "meaningKr": "좋아하다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-86",
+    "word": "嫌い",
+    "reading": "きらい",
+    "meaningKr": "싫어하다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-87",
+    "word": "上手",
+    "reading": "じょうず",
+    "meaningKr": "잘하다·능숙하다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-88",
+    "word": "下手",
+    "reading": "へた",
+    "meaningKr": "못하다·서투르다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-89",
+    "word": "大切",
+    "reading": "たいせつ",
+    "meaningKr": "소중하다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-90",
+    "word": "簡単",
+    "reading": "かんたん",
+    "meaningKr": "간단하다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-91",
+    "word": "大丈夫",
+    "reading": "だいじょうぶ",
+    "meaningKr": "괜찮다",
+    "type": "naadj"
+  },
+  {
+    "id": "CJ-92",
+    "word": "暇",
+    "reading": "ひま",
+    "meaningKr": "한가하다",
+    "type": "naadj"
+  }
+]

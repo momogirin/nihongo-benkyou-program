@@ -20,7 +20,7 @@ interface NavSection {
 
 const JAPANESE_SECTIONS: NavSection[] = [
   { label: '문자', items: [{ id: 'kana', label: '가나' }, { id: 'kanji', label: '한자' }] },
-  { label: '어휘·문법', items: [{ id: 'vocab', label: '단어' }, { id: 'grammar', label: '문법' }] },
+  { label: '어휘·문법', items: [{ id: 'vocab', label: '단어' }, { id: 'grammar', label: '문법' }, { id: 'conjugation', label: '활용' }] },
   { items: [{ id: 'mockExam', label: '모의고사' }] },
 ]
 

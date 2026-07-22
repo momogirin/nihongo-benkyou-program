@@ -6,6 +6,7 @@ import KanjiPage from './pages/KanjiPage'
 import WrongNotePage from './pages/WrongNotePage'
 import VocabPage from './pages/VocabPage'
 import GrammarPage from './pages/GrammarPage'
+import ConjugationPage from './pages/ConjugationPage'
 import MockExamPage from './pages/MockExamPage'
 import EnglishVocabPage from './pages/EnglishVocabPage'
 import BackupPage from './pages/BackupPage'
@@ -123,6 +124,8 @@ function App() {
             onRetryIdsConsumed={() => setPendingGrammarRetryIds(null)}
           />
         )
+      case 'conjugation':
+        return <ConjugationPage />
       case 'mockExam':
         return <MockExamPage />
       case 'englishVocab':
