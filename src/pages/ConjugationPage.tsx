@@ -15,6 +15,24 @@ import './KanjiPage.css'
 import './KanaPage.css'
 import './ConjugationPage.css'
 
+// shown at the moment of a wrong conjugation answer — ties the base word +
+// type to the correct form so the miss teaches the rule, not just the answer
+// (elaborative feedback). .quiz-explanation styles come from QuizRunner.css.
+function ConjHint({ entry, target }: { entry: ConjugationEntry; target: ConjugatedForm }) {
+  return (
+    <div className="quiz-explanation">
+      <div className="quiz-explanation-row">
+        <span className="quiz-explanation-label">기본형</span>
+        <span>{entry.word} · {entry.reading} · {TYPE_LABELS[entry.type]}</span>
+      </div>
+      <div className="quiz-explanation-row">
+        <span className="quiz-explanation-label">{target.label}</span>
+        <span>{target.word}{target.reading !== target.word ? ` · ${target.reading}` : ''}</span>
+      </div>
+    </div>
+  )
+}
+
 type SubTab = 'study' | 'quiz'
 // 활용 그룹별 집중 연습을 위한 필터
 type Scope = 'all' | 'godan' | 'ichidan' | 'suruKuru' | 'iadj' | 'naadj'
@@ -410,6 +428,7 @@ function ConjugationQuiz() {
             )
           })}
         </div>
+        {feedback && !feedback.isCorrect && <ConjHint entry={question.entry} target={question.target} />}
         {feedback && !feedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={goNext}>
             다음
