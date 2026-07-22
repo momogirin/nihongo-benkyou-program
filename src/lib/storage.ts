@@ -848,6 +848,28 @@ export function recordSrsReview(domain: SrsDomain, itemId: string, correct: bool
   localStorage.setItem(SRS_STATE_KEY[domain], JSON.stringify(state))
 }
 
+// 학습 카드(플래시카드)의 "알겠음/모르겠음" 자가평가용 — 퀴즈 채점(recordSrsReview)보다
+// 신뢰도가 낮으므로(정답을 몰라도 "알겠음"을 누를 수 있음) 박스를 완전히 신뢰해 올리지
+// 않고 최대 1까지만 허용한다. 이렇게 하면:
+// - SRS 큐에 전혀 없던 항목(플래시카드만 보고 퀴즈를 안 풀어본 단어)도 최소한 SRS
+//   복습 대상에 편입되어, 기존 "퀴즈로 나온 적 있는 항목만 SRS에 진입"하는 한계를 메운다.
+// - 이미 퀴즈로 박스 2~4까지 올라간 항목은 자가평가로 더 못 올라간다 — 진짜 정착도는
+//   여전히 퀴즈 채점만으로 판단하게 유지(getSrsMastery의 "박스4=마스터" 판정이
+//   자가평가만으로 부풀려지는 것을 막음).
+// - "모르겠음"은 퀴즈 오답과 동일하게 박스 0 + 즉시 재복습 대상으로 리셋(이건 낮은
+//   신뢰도로 완화할 이유가 없음 — 사용자가 모른다고 한 걸 믿어도 안전한 쪽).
+export function recordSrsSelfCheck(domain: SrsDomain, itemId: string, knows: boolean) {
+  const state = getSrsStateMap(domain)
+  const prevBox = state[itemId]?.box
+  const box = knows ? Math.min((prevBox ?? -1) + 1, 1) : 0
+  state[itemId] = {
+    box,
+    dueAt: knows ? addDaysIso(SRS_BOX_INTERVAL_DAYS[box]) : new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  }
+  localStorage.setItem(SRS_STATE_KEY[domain], JSON.stringify(state))
+}
+
 // which of these ids are due for review right now — only ids that have been
 // quizzed at least once even show up (never-studied items aren't "due")
 export function getDueSrsIds(domain: SrsDomain, candidateIds: string[]): string[] {

@@ -3,7 +3,7 @@ import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
-import { getStudyProgress, setStudyProgress } from '../lib/storage'
+import { getStudyProgress, setStudyProgress, recordSrsSelfCheck } from '../lib/storage'
 import type { QuizConfig } from '../types'
 import './StudyPage.css'
 
@@ -55,6 +55,18 @@ export default function StudyPage({ onStartQuiz }: Props) {
     setPhase('done')
   }
 
+  // 자가평가(알겠음/모르겠음) — 퀴즈 채점과 달리 신뢰도가 낮으므로 박스를 최대 1까지만
+  // 올린다(recordSrsSelfCheck 참고). 판정 자체가 "다음" 역할을 겸해 카드 진행이 끊기지
+  // 않는다 — 플래시카드로만 본 항목도 SRS 큐에 편입시키는 게 목적(ROADMAP.md 5번).
+  function selfCheck(kanjiId: string, knows: boolean) {
+    recordSrsSelfCheck('kanji', kanjiId, knows)
+    if (cardIndex + 1 < batch.length) {
+      setCardIndex((i) => i + 1)
+    } else {
+      finishBatch()
+    }
+  }
+
   function restartBatch() {
     if (!level) return
     setBatch(pool)
@@ -73,10 +85,12 @@ export default function StudyPage({ onStartQuiz }: Props) {
   useEffect(() => {
     if (phase !== 'studying' || viewMode !== 'card') return
     function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === 'ArrowRight' || e.key === 'Enter') {
+      if (e.key === 'ArrowRight') {
         setCardIndex((i) => (i + 1 < batch.length ? i + 1 : i))
       } else if (e.key === 'ArrowLeft') {
         setCardIndex((i) => (i > 0 ? i - 1 : i))
+      } else if (e.key === 'Enter') {
+        selfCheck(batch[cardIndex].id, true)
       }
     }
     window.addEventListener('keydown', handleKeyDown)
@@ -216,17 +230,14 @@ export default function StudyPage({ onStartQuiz }: Props) {
               <button type="button" onClick={() => setCardIndex((i) => i - 1)} disabled={cardIndex === 0}>
                 이전
               </button>
-              {isLast ? (
-                <button type="button" className="study-nav-primary" onClick={finishBatch}>
-                  학습 완료
-                </button>
-              ) : (
-                <button type="button" className="study-nav-primary" onClick={() => setCardIndex((i) => i + 1)}>
-                  다음
-                </button>
-              )}
+              <button type="button" className="study-self-check-btn study-self-check-no" onClick={() => selfCheck(kanji.id, false)}>
+                모르겠음
+              </button>
+              <button type="button" className="study-self-check-btn study-self-check-yes" onClick={() => selfCheck(kanji.id, true)}>
+                알겠음
+              </button>
             </div>
-            <p className="shortcut-hint">← → 로 이전/다음 · Enter로 다음</p>
+            <p className="shortcut-hint">← → 로 이전/다음 · Enter로 알겠음 처리 후 다음</p>
           </>
         )}
         {viewMode === 'table' && isLast && (

@@ -512,6 +512,30 @@
   filter: brightness(0.93);
 }
 
+.study-nav button.study-self-check-btn {
+  font-weight: 600;
+}
+
+.study-nav button.study-self-check-yes {
+  border-color: var(--color-correct);
+  color: var(--color-correct);
+}
+
+.study-nav button.study-self-check-yes:hover {
+  background: var(--color-correct);
+  color: var(--color-on-primary);
+}
+
+.study-nav button.study-self-check-no {
+  border-color: var(--color-incorrect);
+  color: var(--color-incorrect);
+}
+
+.study-nav button.study-self-check-no:hover {
+  background: var(--color-incorrect);
+  color: var(--color-on-primary);
+}
+
 .study-done-actions {
   display: flex;
   justify-content: center;

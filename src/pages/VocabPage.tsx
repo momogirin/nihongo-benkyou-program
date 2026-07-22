@@ -30,6 +30,7 @@ import {
   getVocabWritingInProgressQuiz,
   getVocabStudyProgress,
   recordSrsReview,
+  recordSrsSelfCheck,
   removeVocabWrongNote,
   saveVocabInProgressQuiz,
   saveVocabBlankInProgressQuiz,
@@ -199,6 +200,17 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function finishBatch() {
     setVocabStudyProgress(level, Math.min(completedCount + batch.length, pool.length))
     setPhase('done')
+  }
+
+  // 자가평가(알겠음/모르겠음) — StudyPage(한자)와 동일한 패턴, recordSrsSelfCheck는
+  // 퀴즈 채점보다 신뢰도를 낮게 봐서 박스를 최대 1까지만 올린다
+  function selfCheck(vocabId: string, knows: boolean) {
+    recordSrsSelfCheck('vocab', vocabId, knows)
+    if (cardIndex + 1 < batch.length) {
+      setCardIndex((i) => i + 1)
+    } else {
+      finishBatch()
+    }
   }
 
   function restartBatch(fromLevel: KanjiLevel) {
@@ -408,15 +420,18 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'studying') return
     function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === 'ArrowRight' || e.key === 'Enter') {
+      if (e.key === 'ArrowRight') {
         setCardIndex((i) => (i + 1 < batch.length ? i + 1 : i))
       } else if (e.key === 'ArrowLeft') {
         setCardIndex((i) => (i > 0 ? i - 1 : i))
+      } else if (e.key === 'Enter') {
+        selfCheck(batch[cardIndex].id, true)
       }
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [phase, batch.length])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, batch, cardIndex])
 
   useEffect(() => {
     if (phase !== 'browse' || browseIndex === null) return
@@ -871,7 +886,6 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   if (phase === 'studying') {
     const word = batch[cardIndex]
-    const isLast = cardIndex + 1 === batch.length
 
     return (
       <div className="page study-page">
@@ -950,17 +964,14 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           <button type="button" onClick={() => setCardIndex((i) => i - 1)} disabled={cardIndex === 0}>
             이전
           </button>
-          {isLast ? (
-            <button type="button" className="study-nav-primary" onClick={finishBatch}>
-              학습 완료
-            </button>
-          ) : (
-            <button type="button" className="study-nav-primary" onClick={() => setCardIndex((i) => i + 1)}>
-              다음
-            </button>
-          )}
+          <button type="button" className="study-self-check-btn study-self-check-no" onClick={() => selfCheck(word.id, false)}>
+            모르겠음
+          </button>
+          <button type="button" className="study-self-check-btn study-self-check-yes" onClick={() => selfCheck(word.id, true)}>
+            알겠음
+          </button>
         </div>
-        <p className="shortcut-hint">← → 로 이전/다음 · Enter로 다음</p>
+        <p className="shortcut-hint">← → 로 이전/다음 · Enter로 알겠음 처리 후 다음</p>
       </div>
     )
   }
