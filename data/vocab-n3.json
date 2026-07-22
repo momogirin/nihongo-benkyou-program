@@ -19,7 +19,8 @@
     "meaningKr": "다양함",
     "meaningEn": "varied, various",
     "exampleJp": "この店には様々な種類のパンが並んでいます。",
-    "exampleKr": "이 가게에는 다양한 종류의 빵이 진열되어 있어요."
+    "exampleKr": "이 가게에는 다양한 종류의 빵이 진열되어 있어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-3",
@@ -886,7 +887,8 @@
     "meaningKr": "수수함",
     "meaningEn": "quiet, plain, conservative",
     "exampleJp": "彼女はいつも地味な服を着ています。",
-    "exampleKr": "그녀는 항상 수수한 옷을 입어요."
+    "exampleKr": "그녀는 항상 수수한 옷을 입어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-81",
@@ -1109,7 +1111,8 @@
     "meaningKr": "중대함",
     "meaningEn": "serious, important",
     "exampleJp": "これは会社にとって重大な問題です。",
-    "exampleKr": "이것은 회사에 있어 중대한 문제예요."
+    "exampleKr": "이것은 회사에 있어 중대한 문제예요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-101",
@@ -1175,7 +1178,8 @@
     "meaningKr": "중요함",
     "meaningEn": "important, essential",
     "exampleJp": "健康は何よりも重要です。",
-    "exampleKr": "건강은 무엇보다도 중요해요."
+    "exampleKr": "건강은 무엇보다도 중요해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-107",
@@ -1318,7 +1322,8 @@
     "meaningKr": "주요함",
     "meaningEn": "chief, main",
     "exampleJp": "この駅は主要な乗り換え駅です。",
-    "exampleKr": "이 역은 주요 환승역이에요."
+    "exampleKr": "이 역은 주요 환승역이에요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-120",
@@ -1373,7 +1378,8 @@
     "meaningKr": "순조로움",
     "meaningEn": "doing well",
     "exampleJp": "プロジェクトは順調に進んでいます。",
-    "exampleKr": "프로젝트는 순조롭게 진행되고 있어요."
+    "exampleKr": "프로젝트는 순조롭게 진행되고 있어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-125",
@@ -2056,7 +2062,8 @@
     "meaningKr": "진지함",
     "meaningEn": "seriousness, earnestness",
     "exampleJp": "彼は真剣な顔で話し始めました。",
-    "exampleKr": "그는 진지한 얼굴로 이야기하기 시작했어요."
+    "exampleKr": "그는 진지한 얼굴로 이야기하기 시작했어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-187",
@@ -2100,7 +2107,8 @@
     "meaningKr": "심각함",
     "meaningEn": "serious",
     "exampleJp": "水不足が深刻な問題になっています。",
-    "exampleKr": "물 부족이 심각한 문제가 되고 있어요."
+    "exampleKr": "물 부족이 심각한 문제가 되고 있어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-191",
@@ -2167,7 +2175,8 @@
     "meaningKr": "신선함",
     "meaningEn": "fresh",
     "exampleJp": "この魚はとても新鮮です。",
-    "exampleKr": "이 생선은 매우 신선해요."
+    "exampleKr": "이 생선은 매우 신선해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-197",
@@ -2211,7 +2220,8 @@
     "meaningKr": "신중함",
     "meaningEn": "careful, prudent, cautious",
     "exampleJp": "重要な決定は慎重に行うべきです。",
-    "exampleKr": "중요한 결정은 신중하게 해야 해요."
+    "exampleKr": "중요한 결정은 신중하게 해야 해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-201",
@@ -2893,7 +2903,8 @@
     "meaningKr": "정확함",
     "meaningEn": "accurate, punctuality, exact",
     "exampleJp": "正確な情報を伝えてください。",
-    "exampleKr": "정확한 정보를 전달해 주세요."
+    "exampleKr": "정확한 정보를 전달해 주세요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-262",
@@ -2937,7 +2948,8 @@
     "meaningKr": "청결함",
     "meaningEn": "clean",
     "exampleJp": "この病院はいつも清潔に保たれています。",
-    "exampleKr": "이 병원은 항상 청결하게 유지되고 있어요."
+    "exampleKr": "이 병원은 항상 청결하게 유지되고 있어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-266",
@@ -3411,7 +3423,8 @@
     "meaningKr": "명백함",
     "meaningEn": "obvious, clear",
     "exampleJp": "彼の失敗は明らかでした。",
-    "exampleKr": "그의 실수는 명백했어요."
+    "exampleKr": "그의 실수는 명백했어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-309",
@@ -3620,7 +3633,8 @@
     "meaningKr": "당연함",
     "meaningEn": "usual, common, obvious",
     "exampleJp": "約束を守るのは当たり前のことです。",
-    "exampleKr": "약속을 지키는 것은 당연한 일이에요."
+    "exampleKr": "약속을 지키는 것은 당연한 일이에요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-327",
@@ -3777,7 +3791,8 @@
     "meaningKr": "새로움",
     "meaningEn": "new, fresh",
     "exampleJp": "新たな気持ちで仕事に取り組みます。",
-    "exampleKr": "새로운 마음으로 일에 임할게요."
+    "exampleKr": "새로운 마음으로 일에 임할게요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-341",
@@ -3945,7 +3960,8 @@
     "meaningKr": "불쌍함",
     "meaningEn": "helpless, pity, pathetic",
     "exampleJp": "捨てられた犬の姿が哀れでした。",
-    "exampleKr": "버려진 개의 모습이 불쌍했어요."
+    "exampleKr": "버려진 개의 모습이 불쌍했어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-356",
@@ -4242,7 +4258,8 @@
     "meaningKr": "위대함",
     "meaningEn": "greatness",
     "exampleJp": "彼は偉大な科学者として知られている。",
-    "exampleKr": "그는 위대한 과학자로 알려져 있다."
+    "exampleKr": "그는 위대한 과학자로 알려져 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-383",
@@ -4672,7 +4689,8 @@
     "meaningKr": "초조함",
     "meaningEn": "getting nervous, irritation",
     "exampleJp": "渋滞が続いていらいらしてきた。",
-    "exampleKr": "정체가 계속되어 초조해졌다."
+    "exampleKr": "정체가 계속되어 초조해졌다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-422",
@@ -5765,7 +5783,8 @@
     "meaningKr": "온화함",
     "meaningEn": "calm, gentle, quiet",
     "exampleJp": "今日は穏やかな天気だ。",
-    "exampleKr": "오늘은 온화한 날씨다."
+    "exampleKr": "오늘은 온화한 날씨다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-519",
@@ -6034,7 +6053,8 @@
     "meaningKr": "온난함",
     "meaningEn": "warmth",
     "exampleJp": "地球温暖化が深刻な問題になっている。",
-    "exampleKr": "지구 온난화가 심각한 문제가 되고 있다."
+    "exampleKr": "지구 온난화가 심각한 문제가 되고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-543",
@@ -6254,7 +6274,8 @@
     "meaningKr": "쾌적함",
     "meaningEn": "pleasant, agreeable",
     "exampleJp": "この部屋はとても快適だ。",
-    "exampleKr": "이 방은 매우 쾌적하다."
+    "exampleKr": "이 방은 매우 쾌적하다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-563",
@@ -6526,7 +6547,8 @@
     "meaningKr": "확실함",
     "meaningEn": "certainty, reliability, soundness",
     "exampleJp": "彼の勝利はほぼ確実だ。",
-    "exampleKr": "그의 승리는 거의 확실하다."
+    "exampleKr": "그의 승리는 거의 확실하다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-587",
@@ -6946,7 +6968,8 @@
     "meaningKr": "실망함",
     "meaningEn": "feel disappointed, be dejected, lose heart",
     "exampleJp": "試験の結果を聞いてがっかりした。",
-    "exampleKr": "시험 결과를 듣고 실망했다."
+    "exampleKr": "시험 결과를 듣고 실망했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-624",
@@ -7112,7 +7135,8 @@
     "meaningKr": "가능함",
     "meaningEn": "possible, practicable, feasible",
     "exampleJp": "この計画は実現可能だと思う。",
-    "exampleKr": "이 계획은 실현 가능하다고 생각한다."
+    "exampleKr": "이 계획은 실현 가능하다고 생각한다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-639",
@@ -7603,7 +7627,8 @@
     "meaningKr": "완전함",
     "meaningEn": "perfection, completeness",
     "exampleJp": "この問題を完全に解決するのは難しい。",
-    "exampleKr": "이 문제를 완전히 해결하기는 어렵다."
+    "exampleKr": "이 문제를 완전히 해결하기는 어렵다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-683",
@@ -7933,7 +7958,8 @@
     "meaningKr": "귀중함",
     "meaningEn": "precious, valuable",
     "exampleJp": "貴重なアドバイスをありがとうございました。",
-    "exampleKr": "귀중한 조언 감사했습니다."
+    "exampleKr": "귀중한 조언 감사했습니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-713",
@@ -8100,7 +8126,8 @@
     "meaningKr": "기묘함",
     "meaningEn": "strange, queer, curious",
     "exampleJp": "奇妙な音が聞こえました。",
-    "exampleKr": "기묘한 소리가 들렸어요."
+    "exampleKr": "기묘한 소리가 들렸어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-728",
@@ -8221,7 +8248,8 @@
     "meaningKr": "급격함",
     "meaningEn": "sudden, precipitous, radical",
     "exampleJp": "気温が急激に下がりました。",
-    "exampleKr": "기온이 급격히 떨어졌어요."
+    "exampleKr": "기온이 급격히 떨어졌어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-739",
@@ -8254,7 +8282,8 @@
     "meaningKr": "급속함",
     "meaningEn": "rapid (e.g., progress)",
     "exampleJp": "技術が急速に進歩しています。",
-    "exampleKr": "기술이 급속히 발전하고 있어요."
+    "exampleKr": "기술이 급속히 발전하고 있어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-742",
@@ -8419,7 +8448,8 @@
     "meaningKr": "강력함",
     "meaningEn": "powerful, strong",
     "exampleJp": "強力な接着剤を使いました。",
-    "exampleKr": "강력한 접착제를 사용했어요."
+    "exampleKr": "강력한 접착제를 사용했어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-757",
@@ -8452,7 +8482,8 @@
     "meaningKr": "거대함",
     "meaningEn": "huge, gigantic, enormous",
     "exampleJp": "巨大なビルが建ちました。",
-    "exampleKr": "거대한 건물이 세워졌어요."
+    "exampleKr": "거대한 건물이 세워졌어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-760",
@@ -9358,7 +9389,8 @@
     "meaningKr": "인색함",
     "meaningEn": "stinginess, miser",
     "exampleJp": "彼はお金にとてもけちです。",
-    "exampleKr": "그는 돈에 아주 인색해요."
+    "exampleKr": "그는 돈에 아주 인색해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-841",
@@ -9822,7 +9854,8 @@
     "meaningKr": "호화로움",
     "meaningEn": "luxurious, gorgeous, extravagance",
     "exampleJp": "豪華なホテルに泊まりました。",
-    "exampleKr": "호화로운 호텔에 묵었어요."
+    "exampleKr": "호화로운 호텔에 묵었어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-883",
@@ -10042,7 +10075,8 @@
     "meaningKr": "공평함",
     "meaningEn": "fairness, impartial, justice",
     "exampleJp": "先生は生徒を公平に扱います。",
-    "exampleKr": "선생님은 학생을 공평하게 대해요."
+    "exampleKr": "선생님은 학생을 공평하게 대해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-903",
@@ -10610,7 +10644,8 @@
     "meaningKr": "곤란함",
     "meaningEn": "difficulty, distress",
     "exampleJp": "この仕事はとても困難です。",
-    "exampleKr": "이 일은 아주 곤란해요."
+    "exampleKr": "이 일은 아주 곤란해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-954",
@@ -11278,7 +11313,8 @@
     "meaningKr": "훌륭함",
     "meaningEn": "splendid, magnificent",
     "exampleJp": "彼女は見事な演技をしました。",
-    "exampleKr": "그녀는 훌륭한 연기를 했어요."
+    "exampleKr": "그녀는 훌륭한 연기를 했어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1014",
@@ -11626,7 +11662,8 @@
     "meaningKr": "명확함",
     "meaningEn": "clear, definite",
     "exampleJp": "明確な理由を教えてください。",
-    "exampleKr": "명확한 이유를 알려 주세요."
+    "exampleKr": "명확한 이유를 알려 주세요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1045",
@@ -12332,7 +12369,8 @@
     "meaningKr": "우수함",
     "meaningEn": "superiority, excellence",
     "exampleJp": "彼女は優秀な成績で卒業しました。",
-    "exampleKr": "그녀는 우수한 성적으로 졸업했습니다."
+    "exampleKr": "그녀는 우수한 성적으로 졸업했습니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1108",
@@ -12376,7 +12414,8 @@
     "meaningKr": "유능함",
     "meaningEn": "able, capable, efficient",
     "exampleJp": "彼はとても有能な社員です。",
-    "exampleKr": "그는 매우 유능한 직원입니다."
+    "exampleKr": "그는 매우 유능한 직원입니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1112",
@@ -12409,7 +12448,8 @@
     "meaningKr": "유리함",
     "meaningEn": "advantageous, better",
     "exampleJp": "この条件は私たちに有利です。",
-    "exampleKr": "이 조건은 우리에게 유리합니다."
+    "exampleKr": "이 조건은 우리에게 유리합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1115",
@@ -12431,7 +12471,8 @@
     "meaningKr": "유쾌함",
     "meaningEn": "pleasant, happy",
     "exampleJp": "みんなと過ごす時間はとても愉快です。",
-    "exampleKr": "모두와 함께 보내는 시간은 아주 유쾌해요."
+    "exampleKr": "모두와 함께 보내는 시간은 아주 유쾌해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1117",
@@ -12454,7 +12495,8 @@
     "meaningKr": "풍요로움",
     "meaningEn": "abundant, wealthy, plentiful, rich",
     "exampleJp": "自然が豊かな町に住みたいです。",
-    "exampleKr": "자연이 풍요로운 마을에 살고 싶어요."
+    "exampleKr": "자연이 풍요로운 마을에 살고 싶어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1119",
@@ -12900,7 +12942,8 @@
     "meaningKr": "편안함",
     "meaningEn": "comfort, ease",
     "exampleJp": "この椅子は座ると楽です。",
-    "exampleKr": "이 의자는 앉으면 편안해요."
+    "exampleKr": "이 의자는 앉으면 편안해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1159",
@@ -12955,7 +12998,8 @@
     "meaningKr": "영리함",
     "meaningEn": "clever, shrewd, bright",
     "exampleJp": "あの犬はとても利口です。",
-    "exampleKr": "저 개는 아주 영리해요."
+    "exampleKr": "저 개는 아주 영리해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1164",
@@ -13109,7 +13153,8 @@
     "meaningKr": "냉정함",
     "meaningEn": "calm, coolness",
     "exampleJp": "どんな時でも冷静でいることが大切です。",
-    "exampleKr": "어떤 때에도 냉정함을 유지하는 것이 중요해요."
+    "exampleKr": "어떤 때에도 냉정함을 유지하는 것이 중요해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1178",
@@ -15162,7 +15207,8 @@
     "meaningKr": "지루함",
     "meaningEn": "tedium, boring",
     "exampleJp": "この映画は退屈で眠くなりました。",
-    "exampleKr": "이 영화는 지루해서 졸렸어요."
+    "exampleKr": "이 영화는 지루해서 졸렸어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1363",
@@ -15383,7 +15429,8 @@
     "meaningKr": "평평함",
     "meaningEn": "flatness, level, smooth",
     "exampleJp": "この土地は平らで畑に向いています。",
-    "exampleKr": "이 땅은 평평해서 밭에 적합해요."
+    "exampleKr": "이 땅은 평평해서 밭에 적합해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1383",
@@ -16086,7 +16133,8 @@
     "meaningKr": "단순함",
     "meaningEn": "simplicity",
     "exampleJp": "彼は単純な性格で、裏表がありません。",
-    "exampleKr": "그는 단순한 성격이라 겉과 속이 다르지 않아요."
+    "exampleKr": "그는 단순한 성격이라 겉과 속이 다르지 않아요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1445",
@@ -17282,7 +17330,8 @@
     "meaningKr": "적절함",
     "meaningEn": "appropriate, adequate, relevance",
     "exampleJp": "適切な言葉を選んで説明しました。",
-    "exampleKr": "적절한 말을 골라서 설명했어요."
+    "exampleKr": "적절한 말을 골라서 설명했어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1552",
@@ -17293,7 +17342,8 @@
     "meaningKr": "적당함",
     "meaningEn": "moderate",
     "exampleJp": "健康のためには適度な運動が必要です。",
-    "exampleKr": "건강을 위해서는 적당한 운동이 필요해요."
+    "exampleKr": "건강을 위해서는 적당한 운동이 필요해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1553",
@@ -17846,7 +17896,8 @@
     "meaningKr": "독특함",
     "meaningEn": "peculiarity, uniqueness, characteristic",
     "exampleJp": "この料理には独特の香りがあります。",
-    "exampleKr": "이 요리에는 독특한 향이 있어요."
+    "exampleKr": "이 요리에는 독특한 향이 있어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1603",
@@ -19578,7 +19629,8 @@
     "meaningKr": "막대함",
     "meaningEn": "enormous, vast",
     "exampleJp": "この工事には莫大な費用がかかります。",
-    "exampleKr": "이 공사에는 막대한 비용이 들어요."
+    "exampleKr": "이 공사에는 막대한 비용이 들어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1757",
@@ -19888,7 +19940,8 @@
     "meaningKr": "화려함",
     "meaningEn": "showy, flashy, gaudy",
     "exampleJp": "彼女はいつも派手な服を着ています。",
-    "exampleKr": "그녀는 항상 화려한 옷을 입고 있어요."
+    "exampleKr": "그녀는 항상 화려한 옷을 입고 있어요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1785",
@@ -20114,7 +20167,8 @@
     "meaningKr": "핸섬함",
     "meaningEn": "handsome",
     "exampleJp": "彼はハンサムで背も高い。",
-    "exampleKr": "그는 잘생기고 키도 크다."
+    "exampleKr": "그는 잘생기고 키도 크다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1805",
@@ -20456,7 +20510,8 @@
     "meaningKr": "미묘함",
     "meaningEn": "delicate, subtle",
     "exampleJp": "二人の関係は微妙になってきた。",
-    "exampleKr": "두 사람의 관계가 미묘해지고 있다."
+    "exampleKr": "두 사람의 관계가 미묘해지고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1836",
@@ -20871,7 +20926,8 @@
     "meaningKr": "무사함",
     "meaningEn": "safety, peace",
     "exampleJp": "全員無事に家に帰ることができた。",
-    "exampleKr": "전원 무사히 집에 돌아갈 수 있었다."
+    "exampleKr": "전원 무사히 집에 돌아갈 수 있었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1873",
@@ -20893,7 +20949,8 @@
     "meaningKr": "불편함",
     "meaningEn": "discomfort, disability, inconvenience",
     "exampleJp": "祖母は足が不自由になってきた。",
-    "exampleKr": "할머니는 다리가 불편해졌다."
+    "exampleKr": "할머니는 다리가 불편해졌다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1875",
@@ -21204,7 +21261,8 @@
     "meaningKr": "불리함",
     "meaningEn": "disadvantage, drawback",
     "exampleJp": "この条件はこちらに不利だ。",
-    "exampleKr": "이 조건은 이쪽에 불리하다."
+    "exampleKr": "이 조건은 이쪽에 불리하다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1903",
@@ -21560,7 +21618,8 @@
     "meaningKr": "풍부함",
     "meaningEn": "abundance, plenty",
     "exampleJp": "この店は種類が豊富だ。",
-    "exampleKr": "이 가게는 종류가 풍부하다."
+    "exampleKr": "이 가게는 종류가 풍부하다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-1935",
@@ -22715,7 +22774,8 @@
     "meaningKr": "정교함",
     "meaningEn": "elaborate, delicate, exquisite",
     "exampleJp": "この時計は精巧に作られている。",
-    "exampleKr": "이 시계는 정교하게 만들어져 있다."
+    "exampleKr": "이 시계는 정교하게 만들어져 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-2038",
@@ -23263,7 +23323,8 @@
     "meaningKr": "당연함",
     "meaningEn": "obvious; natural",
     "exampleJp": "努力すれば結果が出るのは当然だ。",
-    "exampleKr": "노력하면 결과가 나오는 것은 당연하다."
+    "exampleKr": "노력하면 결과가 나오는 것은 당연하다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-2087",
@@ -23631,7 +23692,8 @@
     "meaningKr": "안도함",
     "meaningEn": "feel relieved",
     "exampleJp": "無事に終わってほっとした。",
-    "exampleKr": "무사히 끝나서 안도했다."
+    "exampleKr": "무사히 끝나서 안도했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N3-2120",

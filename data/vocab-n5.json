@@ -2340,7 +2340,8 @@
     "meaningKr": "싫어함",
     "meaningEn": "dislike",
     "exampleJp": "私は納豆が嫌いです。",
-    "exampleKr": "저는 낫토를 싫어합니다."
+    "exampleKr": "저는 낫토를 싫어합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-209",
@@ -3342,7 +3343,8 @@
     "meaningKr": "조용함",
     "meaningEn": "quiet, calm",
     "exampleJp": "図書館はとても静かです。",
-    "exampleKr": "도서관은 매우 조용합니다."
+    "exampleKr": "도서관은 매우 조용합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-299",
@@ -3589,7 +3591,8 @@
     "meaningKr": "튼튼함",
     "meaningEn": "strong, solid, durable",
     "exampleJp": "このかばんはとても丈夫です。",
-    "exampleKr": "이 가방은 매우 튼튼합니다."
+    "exampleKr": "이 가방은 매우 튼튼합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-321",
@@ -3712,7 +3715,8 @@
     "meaningKr": "좋아함",
     "meaningEn": "liking, fondness, love",
     "exampleJp": "私は音楽が好きです。",
-    "exampleKr": "저는 음악을 좋아합니다."
+    "exampleKr": "저는 음악을 좋아합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-332",
@@ -4201,7 +4205,8 @@
     "meaningKr": "아주 좋아함",
     "meaningEn": "very like-able, like very much",
     "exampleJp": "私は猫が大好きです。",
-    "exampleKr": "저는 고양이를 아주 좋아해요."
+    "exampleKr": "저는 고양이를 아주 좋아해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-376",
@@ -4212,7 +4217,8 @@
     "meaningKr": "소중함",
     "meaningEn": "important",
     "exampleJp": "家族はとても大切です。",
-    "exampleKr": "가족은 매우 소중해요."
+    "exampleKr": "가족은 매우 소중해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-377",
@@ -6724,7 +6730,8 @@
     "meaningKr": "편리함",
     "meaningEn": "convenient, handy",
     "exampleJp": "このアプリはとても便利です。",
-    "exampleKr": "이 앱은 매우 편리합니다."
+    "exampleKr": "이 앱은 매우 편리합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-601",
@@ -7618,7 +7625,8 @@
     "meaningKr": "유명함",
     "meaningEn": "famous",
     "exampleJp": "この店は有名です。",
-    "exampleKr": "이 가게는 유명합니다."
+    "exampleKr": "이 가게는 유명합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-681",
@@ -7819,7 +7827,8 @@
     "meaningKr": "훌륭함",
     "meaningEn": "splendid, fine",
     "exampleJp": "あの先生はりっぱな人です。",
-    "exampleKr": "저 선생님은 훌륭한 사람입니다."
+    "exampleKr": "저 선생님은 훌륭한 사람입니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N5-699",

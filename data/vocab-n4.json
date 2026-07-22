@@ -725,7 +725,8 @@
     "meaningKr": "복잡함",
     "meaningEn": "complexity, complication",
     "exampleJp": "この問題はとても複雑です。",
-    "exampleKr": "이 문제는 매우 복잡해요."
+    "exampleKr": "이 문제는 매우 복잡해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-66",
@@ -912,7 +913,8 @@
     "meaningKr": "필요함",
     "meaningEn": "necessary",
     "exampleJp": "この仕事にはパソコンが必要です。",
-    "exampleKr": "이 일에는 컴퓨터가 필요해요."
+    "exampleKr": "이 일에는 컴퓨터가 필요해요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-83",
@@ -1513,7 +1515,8 @@
     "meaningKr": "유감스러움",
     "meaningEn": "regret; regrettable",
     "exampleJp": "会えなくて残念です。",
-    "exampleKr": "만나지 못해서 아쉬워요."
+    "exampleKr": "만나지 못해서 아쉬워요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-136",
@@ -2275,7 +2278,8 @@
     "meaningKr": "적당함",
     "meaningEn": "fitness, suitability",
     "exampleJp": "この料理には適当な量の塩が必要です。",
-    "exampleKr": "이 요리에는 적당한 양의 소금이 필요합니다."
+    "exampleKr": "이 요리에는 적당한 양의 소금이 필요합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-204",
@@ -2545,7 +2549,8 @@
     "meaningKr": "이상함",
     "meaningEn": "strange, odd",
     "exampleJp": "この料理、味が変じゃないですか。",
-    "exampleKr": "이 요리, 맛이 이상하지 않아요?"
+    "exampleKr": "이 요리, 맛이 이상하지 않아요?",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-228",
@@ -4709,7 +4714,8 @@
     "meaningKr": "충분함",
     "meaningEn": "enough",
     "exampleJp": "毎日十分な睡眠を取ってください。",
-    "exampleKr": "매일 충분한 수면을 취해 주세요."
+    "exampleKr": "매일 충분한 수면을 취해 주세요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-422",
@@ -6758,7 +6764,8 @@
     "meaningKr": "간단함",
     "meaningEn": "simple",
     "exampleJp": "この料理はとても簡単に作れます。",
-    "exampleKr": "이 요리는 아주 간단하게 만들 수 있습니다."
+    "exampleKr": "이 요리는 아주 간단하게 만들 수 있습니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-604",
@@ -6791,7 +6798,8 @@
     "meaningKr": "특별함",
     "meaningEn": "special",
     "exampleJp": "今日は特別な日なので、外で食事します。",
-    "exampleKr": "오늘은 특별한 날이라서 밖에서 식사합니다."
+    "exampleKr": "오늘은 특별한 날이라서 밖에서 식사합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N4-607",

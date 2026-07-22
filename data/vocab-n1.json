@@ -107,7 +107,8 @@
     "meaningKr": "엄밀함",
     "meaningEn": "strict, close",
     "exampleJp": "厳密に言えば、この二つの言葉は意味が異なる。",
-    "exampleKr": "엄밀히 말하면 이 두 단어는 의미가 다르다."
+    "exampleKr": "엄밀히 말하면 이 두 단어는 의미가 다르다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-11",
@@ -118,7 +119,8 @@
     "meaningKr": "현명함",
     "meaningEn": "wisdom, intelligence, prudence",
     "exampleJp": "今は無理をせず、休むのが賢明だと思う。",
-    "exampleKr": "지금은 무리하지 말고 쉬는 것이 현명하다고 생각한다."
+    "exampleKr": "지금은 무리하지 말고 쉬는 것이 현명하다고 생각한다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-12",
@@ -471,7 +473,8 @@
     "meaningKr": "고상함",
     "meaningEn": "high, noble, refined",
     "exampleJp": "彼女はいつも高尚な趣味を持っていると評判だ。",
-    "exampleKr": "그녀는 항상 고상한 취미를 가지고 있다고 평판이 나 있다."
+    "exampleKr": "그녀는 항상 고상한 취미를 가지고 있다고 평판이 나 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-44",
@@ -548,7 +551,8 @@
     "meaningKr": "공공연함",
     "meaningEn": "openly",
     "exampleJp": "彼はその事実を公然と認めた。",
-    "exampleKr": "그는 그 사실을 공공연하게 인정했다."
+    "exampleKr": "그는 그 사실을 공공연하게 인정했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-51",
@@ -735,7 +739,8 @@
     "meaningKr": "교묘함",
     "meaningEn": "ingenious, skillful, clever",
     "exampleJp": "犯人は巧妙な手口で人々をだましていた。",
-    "exampleKr": "범인은 교묘한 수법으로 사람들을 속이고 있었다."
+    "exampleKr": "범인은 교묘한 수법으로 사람들을 속이고 있었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-68",
@@ -2140,7 +2145,8 @@
     "meaningKr": "조잡함",
     "meaningEn": "rough, crude",
     "exampleJp": "急いで作ったせいか、仕事が雑になってしまった。",
-    "exampleKr": "서둘러 만든 탓인지 일이 조잡해지고 말았다."
+    "exampleKr": "서둘러 만든 탓인지 일이 조잡해지고 말았다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-194",
@@ -2429,7 +2435,8 @@
     "meaningKr": "잔혹함",
     "meaningEn": "cruelty, harshness",
     "exampleJp": "その事件はあまりにも残酷な内容だった。",
-    "exampleKr": "그 사건은 너무나도 잔혹한 내용이었다."
+    "exampleKr": "그 사건은 너무나도 잔혹한 내용이었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-220",
@@ -3184,7 +3191,8 @@
     "meaningKr": "건재함",
     "meaningEn": "in good health, well",
     "exampleJp": "祖母は九十歳になった今も健在だ。",
-    "exampleKr": "할머니는 아흔 살이 된 지금도 건재하다."
+    "exampleKr": "할머니는 아흔 살이 된 지금도 건재하다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-288",
@@ -3261,7 +3269,8 @@
     "meaningKr": "건전함",
     "meaningEn": "health, soundness, wholesome",
     "exampleJp": "子供たちの健全な成長のため、環境を整える必要がある。",
-    "exampleKr": "아이들의 건전한 성장을 위해 환경을 갖출 필요가 있다."
+    "exampleKr": "아이들의 건전한 성장을 위해 환경을 갖출 필요가 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-295",
@@ -3351,7 +3360,8 @@
     "meaningKr": "당당함",
     "meaningEn": "magnificent, grand, impressive",
     "exampleJp": "彼は面接で堂々と自分の意見を述べた。",
-    "exampleKr": "그는 면접에서 당당하게 자신의 의견을 말했다."
+    "exampleKr": "그는 면접에서 당당하게 자신의 의견을 말했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-303",
@@ -4379,7 +4389,8 @@
     "meaningKr": "둔감함",
     "meaningEn": "thickheadedness, stolidity",
     "exampleJp": "彼は他人の気持ちに鈍感なところがある。",
-    "exampleKr": "그는 타인의 감정에 둔감한 면이 있다."
+    "exampleKr": "그는 타인의 감정에 둔감한 면이 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-395",
@@ -4623,7 +4634,8 @@
     "meaningKr": "화기애애함",
     "meaningEn": "mild, calm, harmonious",
     "exampleJp": "会議は和やかな雰囲気の中で進められた。",
-    "exampleKr": "회의는 화기애애한 분위기 속에서 진행되었다."
+    "exampleKr": "회의는 화기애애한 분위기 속에서 진행되었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-417",
@@ -4838,7 +4850,8 @@
     "meaningKr": "매끄러움",
     "meaningEn": "smoothness, glassiness",
     "exampleJp": "このクリームを塗ると肌が滑らかになる。",
-    "exampleKr": "이 크림을 바르면 피부가 매끄러워진다."
+    "exampleKr": "이 크림을 바르면 피부가 매끄러워진다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-436",
@@ -5733,7 +5746,8 @@
     "meaningKr": "한가로움",
     "meaningEn": "tranquil, calm, quiet",
     "exampleJp": "田舎ののどかな風景を見ると心が落ち着く。",
-    "exampleKr": "시골의 한가로운 풍경을 보면 마음이 편안해진다."
+    "exampleKr": "시골의 한가로운 풍경을 보면 마음이 편안해진다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-516",
@@ -6274,7 +6288,8 @@
     "meaningKr": "완전히 변함",
     "meaningEn": "complete change",
     "exampleJp": "社長の交代とともに、会社の方針が一変した。",
-    "exampleKr": "사장 교체와 함께 회사의 방침이 완전히 바뀌었다."
+    "exampleKr": "사장 교체와 함께 회사의 방침이 완전히 바뀌었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-565",
@@ -6484,7 +6499,8 @@
     "meaningKr": "음침함",
     "meaningEn": "gloom, melancholy",
     "exampleJp": "この部屋は日当たりが悪く、陰気な雰囲気が漂っている。",
-    "exampleKr": "이 방은 볕이 잘 들지 않아 음침한 분위기가 감돈다."
+    "exampleKr": "이 방은 볕이 잘 들지 않아 음침한 분위기가 감돈다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-584",
@@ -6822,7 +6838,8 @@
     "meaningKr": "공허함",
     "meaningEn": "blank, hollow, empty",
     "exampleJp": "彼はうつろな目で窓の外を眺めていた。",
-    "exampleKr": "그는 공허한 눈으로 창밖을 바라보고 있었다."
+    "exampleKr": "그는 공허한 눈으로 창밖을 바라보고 있었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-614",
@@ -7213,7 +7230,8 @@
     "meaningKr": "우아함",
     "meaningEn": "elegant",
     "exampleJp": "彼女はいつもエレガントな服装で会場に現れる。",
-    "exampleKr": "그녀는 항상 우아한 옷차림으로 행사장에 나타난다."
+    "exampleKr": "그녀는 항상 우아한 옷차림으로 행사장에 나타난다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-649",
@@ -7224,7 +7242,8 @@
     "meaningKr": "원활함",
     "meaningEn": "harmony, smoothness",
     "exampleJp": "会議を円滑に進めるため、進行役を決めた。",
-    "exampleKr": "회의를 원활하게 진행하기 위해 진행자를 정했다."
+    "exampleKr": "회의를 원활하게 진행하기 위해 진행자를 정했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-650",
@@ -7257,7 +7276,8 @@
     "meaningKr": "완곡함",
     "meaningEn": "euphemistic, indirect, insinuating",
     "exampleJp": "彼は婉曲な言い方で誘いを断った。",
-    "exampleKr": "그는 완곡한 말투로 제안을 거절했다."
+    "exampleKr": "그는 완곡한 말투로 제안을 거절했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-653",
@@ -7347,7 +7367,8 @@
     "meaningKr": "원만함",
     "meaningEn": "harmony, peace, smoothness",
     "exampleJp": "二人の話し合いは円満に解決した。",
-    "exampleKr": "두 사람의 논의는 원만하게 해결되었다."
+    "exampleKr": "두 사람의 논의는 원만하게 해결되었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-661",
@@ -7616,7 +7637,8 @@
     "meaningKr": "엄숙함",
     "meaningEn": "majestic, dignified",
     "exampleJp": "式典は厳かな雰囲気の中で執り行われた。",
-    "exampleKr": "식전은 엄숙한 분위기 속에서 거행되었다."
+    "exampleKr": "식전은 엄숙한 분위기 속에서 거행되었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-685",
@@ -8254,7 +8276,8 @@
     "meaningKr": "소홀함",
     "meaningEn": "neglect, negligence, carelessness",
     "exampleJp": "仕事が忙しいからといって、健康管理をおろそかにしてはいけない。",
-    "exampleKr": "일이 바쁘다고 해서 건강 관리를 소홀히 해서는 안 된다."
+    "exampleKr": "일이 바쁘다고 해서 건강 관리를 소홀히 해서는 안 된다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-741",
@@ -8287,7 +8310,8 @@
     "meaningKr": "온화함",
     "meaningEn": "gentle, mild, moderate",
     "exampleJp": "この地域は一年を通して気候が温和だ。",
-    "exampleKr": "이 지역은 일 년 내내 기후가 온화하다."
+    "exampleKr": "이 지역은 일 년 내내 기후가 온화하다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-744",
@@ -9238,7 +9262,8 @@
     "meaningKr": "희미함",
     "meaningEn": "faint, dim, weak",
     "exampleJp": "遠くから微かな音楽が聞こえてきた。",
-    "exampleKr": "멀리서 희미한 음악 소리가 들려왔다."
+    "exampleKr": "멀리서 희미한 음악 소리가 들려왔다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-830",
@@ -9419,7 +9444,8 @@
     "meaningKr": "낙담함",
     "meaningEn": "heartbroken",
     "exampleJp": "試験に落ちたと知って、彼はがっくりと肩を落とした。",
-    "exampleKr": "시험에 떨어졌다는 것을 알고 그는 낙담하여 어깨를 축 늘어뜨렸다."
+    "exampleKr": "시험에 떨어졌다는 것을 알고 그는 낙담하여 어깨를 축 늘어뜨렸다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-846",
@@ -9930,7 +9956,8 @@
     "meaningKr": "완고함",
     "meaningEn": "stubbornness, obstinacy",
     "exampleJp": "祖父は頑固で自分の意見を曲げない。",
-    "exampleKr": "할아버지는 완고해서 자기 의견을 굽히지 않는다."
+    "exampleKr": "할아버지는 완고해서 자기 의견을 굽히지 않는다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-892",
@@ -10018,7 +10045,8 @@
     "meaningKr": "튼튼함",
     "meaningEn": "solid, firm, strong",
     "exampleJp": "この橋は頑丈な鉄骨で造られている。",
-    "exampleKr": "이 다리는 튼튼한 철골로 만들어져 있다."
+    "exampleKr": "이 다리는 튼튼한 철골로 만들어져 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-900",
@@ -10106,7 +10134,8 @@
     "meaningKr": "간소함",
     "meaningEn": "simplicity, plain",
     "exampleJp": "式典はできるだけ簡素に行われた。",
-    "exampleKr": "식전은 최대한 간소하게 진행되었다."
+    "exampleKr": "식전은 최대한 간소하게 진행되었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-908",
@@ -10727,7 +10756,8 @@
     "meaningKr": "꼼꼼함",
     "meaningEn": "methodical, punctual, steady",
     "exampleJp": "彼は几帳面な性格で仕事にミスがない。",
-    "exampleKr": "그는 꼼꼼한 성격이라 업무에 실수가 없다."
+    "exampleKr": "그는 꼼꼼한 성격이라 업무에 실수가 없다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-964",
@@ -10881,7 +10911,8 @@
     "meaningKr": "고지식함",
     "meaningEn": "serious, sincerity",
     "exampleJp": "彼は生真面目な性格で、冗談が通じないことがある。",
-    "exampleKr": "그는 고지식한 성격이라 농담이 통하지 않을 때가 있다."
+    "exampleKr": "그는 고지식한 성격이라 농담이 통하지 않을 때가 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-978",
@@ -11047,7 +11078,8 @@
     "meaningKr": "갑갑함",
     "meaningEn": "narrow, tight, formal",
     "exampleJp": "このスーツは肩まわりが窮屈で、動きにくい。",
-    "exampleKr": "이 정장은 어깨 부분이 갑갑해서 움직이기 힘들다."
+    "exampleKr": "이 정장은 어깨 부분이 갑갑해서 움직이기 힘들다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-993",
@@ -11466,7 +11498,8 @@
     "meaningKr": "강렬함",
     "meaningEn": "strong, intense, severe",
     "exampleJp": "初めて食べたその料理は、強烈な辛さだった。",
-    "exampleKr": "처음 먹어본 그 요리는 강렬한 매운맛이었다."
+    "exampleKr": "처음 먹어본 그 요리는 강렬한 매운맛이었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1031",
@@ -11576,7 +11609,8 @@
     "meaningKr": "맑고 깨끗함",
     "meaningEn": "clean, pure, chaste",
     "exampleJp": "山奥には清らかな水が流れる小川があった。",
-    "exampleKr": "산속 깊은 곳에는 맑고 깨끗한 물이 흐르는 시냇물이 있었다."
+    "exampleKr": "산속 깊은 곳에는 맑고 깨끗한 물이 흐르는 시냇물이 있었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1041",
@@ -11587,7 +11621,8 @@
     "meaningKr": "눈부시게 화려함",
     "meaningEn": "gorgeous, gaudy, dazzling",
     "exampleJp": "会場はきらびやかな照明で飾られていた。",
-    "exampleKr": "행사장은 눈부시게 화려한 조명으로 장식되어 있었다."
+    "exampleKr": "행사장은 눈부시게 화려한 조명으로 장식되어 있었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1042",
@@ -12210,7 +12245,8 @@
     "meaningKr": "경쾌함",
     "meaningEn": "lively, casual, light",
     "exampleJp": "軽快な音楽に合わせて子供たちが踊り出した。",
-    "exampleKr": "경쾌한 음악에 맞춰 아이들이 춤추기 시작했다."
+    "exampleKr": "경쾌한 음악에 맞춰 아이들이 춤추기 시작했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1098",
@@ -12298,7 +12334,8 @@
     "meaningKr": "경솔함",
     "meaningEn": "thoughtless, careless, hasty",
     "exampleJp": "軽率な発言が周囲の反感を買ってしまった。",
-    "exampleKr": "경솔한 발언이 주변의 반감을 사고 말았다."
+    "exampleKr": "경솔한 발언이 주변의 반감을 사고 말았다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1106",
@@ -13461,7 +13498,8 @@
     "meaningKr": "선명함",
     "meaningEn": "vivid, clear",
     "exampleJp": "夕焼け空が鮮やかな橙色に染まっていた。",
-    "exampleKr": "노을 진 하늘이 선명한 주황색으로 물들어 있었다."
+    "exampleKr": "노을 진 하늘이 선명한 주황색으로 물들어 있었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1211",
@@ -13819,7 +13857,8 @@
     "meaningKr": "애매함",
     "meaningEn": "uncertain, vague, ambiguous",
     "exampleJp": "彼の説明はあやふやで、何を言いたいのかよく分からなかった。",
-    "exampleKr": "그의 설명은 애매해서 무엇을 말하고 싶은지 잘 알 수 없었다."
+    "exampleKr": "그의 설명은 애매해서 무엇을 말하고 싶은지 잘 알 수 없었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1243",
@@ -15732,7 +15771,8 @@
     "meaningKr": "건강함",
     "meaningEn": "vigorous, healthy, sound",
     "exampleJp": "子供が健やかに育つことが親にとって何よりの願いだ。",
-    "exampleKr": "아이가 건강하게 자라는 것이 부모에게 무엇보다 큰 바람이다."
+    "exampleKr": "아이가 건강하게 자라는 것이 부모에게 무엇보다 큰 바람이다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1416",
@@ -15956,7 +15996,8 @@
     "meaningKr": "신속함",
     "meaningEn": "speedy",
     "exampleJp": "火災が発生した際は、すみやかに避難してください。",
-    "exampleKr": "화재가 발생했을 때는 신속하게 대피해 주십시오."
+    "exampleKr": "화재가 발생했을 때는 신속하게 대피해 주십시오.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1436",
@@ -16254,7 +16295,8 @@
     "meaningKr": "정연함",
     "meaningEn": "orderly, regular, well-organized",
     "exampleJp": "彼の主張は整然としていて、聞く者を納得させた。",
-    "exampleKr": "그의 주장은 조리 정연해서 듣는 사람을 납득시켰다."
+    "exampleKr": "그의 주장은 조리 정연해서 듣는 사람을 납득시켰다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1463",
@@ -16276,7 +16318,8 @@
     "meaningKr": "성대함",
     "meaningEn": "grand, prosperous, magnificent",
     "exampleJp": "創業百周年を記念して、盛大な祝賀会が開かれた。",
-    "exampleKr": "창업 백주년을 기념해서 성대한 축하연이 열렸다."
+    "exampleKr": "창업 백주년을 기념해서 성대한 축하연이 열렸다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1465",
@@ -16342,7 +16385,8 @@
     "meaningKr": "정당함",
     "meaningEn": "just, due, proper",
     "exampleJp": "彼の行動は正当な理由に基づいたものだった。",
-    "exampleKr": "그의 행동은 정당한 이유에 근거한 것이었다."
+    "exampleKr": "그의 행동은 정당한 이유에 근거한 것이었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1471",
@@ -16386,7 +16430,8 @@
     "meaningKr": "정밀함",
     "meaningEn": "precise, exact, detailed, minute",
     "exampleJp": "医師に勧められて、精密検査を受けることにした。",
-    "exampleKr": "의사의 권유로 정밀 검사를 받기로 했다."
+    "exampleKr": "의사의 권유로 정밀 검사를 받기로 했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1475",
@@ -16563,7 +16608,8 @@
     "meaningKr": "절실함",
     "meaningEn": "compelling, serious, severe, acute",
     "exampleJp": "被災地では水と食料の不足が切実な問題となっている。",
-    "exampleKr": "재해 지역에서는 물과 식량 부족이 절실한 문제가 되고 있다."
+    "exampleKr": "재해 지역에서는 물과 식량 부족이 절실한 문제가 되고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1491",
@@ -16971,7 +17017,8 @@
     "meaningKr": "선량함",
     "meaningEn": "goodness, excellence, virtue",
     "exampleJp": "彼は善良な市民として近所でも評判がいい。",
-    "exampleKr": "그는 선량한 시민으로 동네에서도 평판이 좋다."
+    "exampleKr": "그는 선량한 시민으로 동네에서도 평판이 좋다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1528",
@@ -17059,7 +17106,8 @@
     "meaningKr": "조속함",
     "meaningEn": "urgent",
     "exampleJp": "早急なご返信をお願い申し上げます。",
-    "exampleKr": "조속한 답신을 부탁드립니다."
+    "exampleKr": "조속한 답신을 부탁드립니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1536",
@@ -17169,7 +17217,8 @@
     "meaningKr": "장대함",
     "meaningEn": "magnificent, grand, majestic",
     "exampleJp": "彼は宇宙移住という壮大な計画を語った。",
-    "exampleKr": "그는 우주 이주라는 장대한 계획을 이야기했다."
+    "exampleKr": "그는 우주 이주라는 장대한 계획을 이야기했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1546",
@@ -17474,7 +17523,8 @@
     "meaningKr": "소박함",
     "meaningEn": "simplicity, artlessness, naivety",
     "exampleJp": "田舎の素朴な暮らしに憧れている。",
-    "exampleKr": "시골의 소박한 삶을 동경하고 있다."
+    "exampleKr": "시골의 소박한 삶을 동경하고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1573",
@@ -17822,7 +17872,8 @@
     "meaningKr": "대담함",
     "meaningEn": "bold, daring, audacious",
     "exampleJp": "彼は大胆な発想で、業界の常識を覆した。",
-    "exampleKr": "그는 대담한 발상으로 업계의 상식을 뒤엎었다."
+    "exampleKr": "그는 대담한 발상으로 업계의 상식을 뒤엎었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1604",
@@ -18552,7 +18603,8 @@
     "meaningKr": "다양함",
     "meaningEn": "diversity, variety",
     "exampleJp": "現代社会では、価値観の多様が一層進んでいる。",
-    "exampleKr": "현대 사회에서는 가치관의 다양화가 한층 진행되고 있다."
+    "exampleKr": "현대 사회에서는 가치관의 다양화가 한층 진행되고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1669",
@@ -18663,7 +18715,8 @@
     "meaningKr": "성급함",
     "meaningEn": "quick temper",
     "exampleJp": "彼は短気なところがあり、すぐに怒鳴ってしまう。",
-    "exampleKr": "그는 성급한 면이 있어서 금세 소리를 지르고 만다."
+    "exampleKr": "그는 성급한 면이 있어서 금세 소리를 지르고 만다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1679",
@@ -18751,7 +18804,8 @@
     "meaningKr": "단조로움",
     "meaningEn": "monotony, monotone, dullness",
     "exampleJp": "毎日同じ作業の繰り返しで、単調な日々が続いている。",
-    "exampleKr": "매일 같은 작업의 반복으로 단조로운 나날이 이어지고 있다."
+    "exampleKr": "매일 같은 작업의 반복으로 단조로운 나날이 이어지고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1687",
@@ -19457,7 +19511,8 @@
     "meaningKr": "저명함",
     "meaningEn": "well-known, noted, celebrated",
     "exampleJp": "彼は世界的に著名な画家だ。",
-    "exampleKr": "그는 세계적으로 저명한 화가다."
+    "exampleKr": "그는 세계적으로 저명한 화가다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1751",
@@ -20285,7 +20340,8 @@
     "meaningKr": "손쉬움",
     "meaningEn": "easy, simple, cheap",
     "exampleJp": "手軽にできる料理を紹介する。",
-    "exampleKr": "손쉽게 만들 수 있는 요리를 소개한다."
+    "exampleKr": "손쉽게 만들 수 있는 요리를 소개한다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1825",
@@ -20849,7 +20905,8 @@
     "meaningKr": "로맨틱함",
     "meaningEn": "romantic",
     "exampleJp": "夜景がロマンチックな雰囲気を作る。",
-    "exampleKr": "야경이 로맨틱한 분위기를 만든다."
+    "exampleKr": "야경이 로맨틱한 분위기를 만든다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1876",
@@ -21129,7 +21186,8 @@
     "meaningKr": "막연함",
     "meaningEn": "obscure, vague, equivocal",
     "exampleJp": "将来について漠然とした不安がある。",
-    "exampleKr": "장래에 대해 막연한 불안이 있다."
+    "exampleKr": "장래에 대해 막연한 불안이 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1901",
@@ -21610,7 +21668,8 @@
     "meaningKr": "검소함",
     "meaningEn": "simplicity, modesty, frugality",
     "exampleJp": "彼女は質素な生活を送っている。",
-    "exampleKr": "그녀는 검소한 생활을 하고 있다."
+    "exampleKr": "그녀는 검소한 생활을 하고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1944",
@@ -21698,7 +21757,8 @@
     "meaningKr": "정숙함",
     "meaningEn": "graceful",
     "exampleJp": "彼女は淑やかな振る舞いをする。",
-    "exampleKr": "그녀는 정숙한 몸가짐을 보인다."
+    "exampleKr": "그녀는 정숙한 몸가짐을 보인다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-1952",
@@ -22239,7 +22299,8 @@
     "meaningKr": "충실함",
     "meaningEn": "fullness, perfection",
     "exampleJp": "充実した毎日を送っている。",
-    "exampleKr": "충실한 나날을 보내고 있다."
+    "exampleKr": "충실한 나날을 보내고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2001",
@@ -22294,7 +22355,8 @@
     "meaningKr": "유연함",
     "meaningEn": "flexible",
     "exampleJp": "柔軟な発想が求められる時代だ。",
-    "exampleKr": "유연한 발상이 요구되는 시대다."
+    "exampleKr": "유연한 발상이 요구되는 시대다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2006",
@@ -22646,7 +22708,8 @@
     "meaningKr": "민감함",
     "meaningEn": "sensibility, susceptibility, sensitive (to)",
     "exampleJp": "肌が敏感で化粧品を選ぶのが難しい。",
-    "exampleKr": "피부가 민감해서 화장품을 고르기가 어렵다."
+    "exampleKr": "피부가 민감해서 화장품을 고르기가 어렵다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2038",
@@ -22679,7 +22742,8 @@
     "meaningKr": "빈약함",
     "meaningEn": "poor, meager, insubstantial",
     "exampleJp": "設備が貧弱で改善が必要だ。",
-    "exampleKr": "설비가 빈약해서 개선이 필요하다."
+    "exampleKr": "설비가 빈약해서 개선이 필요하다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2041",
@@ -22712,7 +22776,8 @@
     "meaningKr": "빈번함",
     "meaningEn": "frequency",
     "exampleJp": "最近この道路では事故が頻繁に起きている。",
-    "exampleKr": "최근 이 도로에서는 사고가 빈번하게 일어나고 있다."
+    "exampleKr": "최근 이 도로에서는 사고가 빈번하게 일어나고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2044",
@@ -22723,7 +22788,8 @@
     "meaningKr": "가난함",
     "meaningEn": "poverty, destitute, poor",
     "exampleJp": "彼は貧乏な家庭に生まれながらも努力を重ねて成功した。",
-    "exampleKr": "그는 가난한 가정에서 태어났지만 노력을 거듭해 성공했다."
+    "exampleKr": "그는 가난한 가정에서 태어났지만 노력을 거듭해 성공했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2045",
@@ -22921,7 +22987,8 @@
     "meaningKr": "불길함",
     "meaningEn": "ominous, sinister, bad luck, ill omen",
     "exampleJp": "空に不吉な雲が広がり、嵐の予感がした。",
-    "exampleKr": "하늘에 불길한 구름이 퍼져 폭풍이 올 것 같은 예감이 들었다."
+    "exampleKr": "하늘에 불길한 구름이 퍼져 폭풍이 올 것 같은 예감이 들었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2063",
@@ -23100,7 +23167,8 @@
     "meaningKr": "불순함",
     "meaningEn": "irregularity, unseasonableness",
     "exampleJp": "今年は天候不順で野菜の値段が上がっている。",
-    "exampleKr": "올해는 날씨가 불순해서 채소 가격이 오르고 있다."
+    "exampleKr": "올해는 날씨가 불순해서 채소 가격이 오르고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2079",
@@ -23133,7 +23201,8 @@
     "meaningKr": "의심스러움",
     "meaningEn": "suspicious, doubt, infidelity",
     "exampleJp": "近所で不審な人物を見かけたら警察に通報してください。",
-    "exampleKr": "근처에서 수상한 인물을 목격하면 경찰에 신고해 주세요."
+    "exampleKr": "근처에서 수상한 인물을 목격하면 경찰에 신고해 주세요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2082",
@@ -23287,7 +23356,8 @@
     "meaningKr": "부당함",
     "meaningEn": "injustice, impropriety, unfair",
     "exampleJp": "彼は不当な解雇に対して裁判を起こした。",
-    "exampleKr": "그는 부당한 해고에 대해 소송을 제기했다."
+    "exampleKr": "그는 부당한 해고에 대해 소송을 제기했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2096",
@@ -23309,7 +23379,8 @@
     "meaningKr": "무난함",
     "meaningEn": "safety, security",
     "exampleJp": "面接では無難な服装を選ぶほうがいい。",
-    "exampleKr": "면접에서는 무난한 복장을 고르는 편이 좋다."
+    "exampleKr": "면접에서는 무난한 복장을 고르는 편이 좋다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2098",
@@ -25768,7 +25839,8 @@
     "meaningKr": "미숙함",
     "meaningEn": "inexperience, unskilled, immature",
     "exampleJp": "まだ未熟な自分を反省し、先輩の助言を素直に受け入れることにした。",
-    "exampleKr": "아직 미숙한 자신을 반성하고 선배의 조언을 솔직하게 받아들이기로 했다."
+    "exampleKr": "아직 미숙한 자신을 반성하고 선배의 조언을 솔직하게 받아들이기로 했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2319",
@@ -26224,7 +26296,8 @@
     "meaningKr": "과묵함",
     "meaningEn": "reticence",
     "exampleJp": "彼は無口な性格だが、話し出すと非常に論理的で説得力がある。",
-    "exampleKr": "그는 과묵한 성격이지만 말을 시작하면 매우 논리적이고 설득력이 있다."
+    "exampleKr": "그는 과묵한 성격이지만 말을 시작하면 매우 논리적이고 설득력이 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2360",
@@ -26268,7 +26341,8 @@
     "meaningKr": "천진난만함",
     "meaningEn": "innocence, simple-mindedness",
     "exampleJp": "子供たちの無邪気な笑顔を見ていると、こちらまで元気になる。",
-    "exampleKr": "아이들의 천진난만한 미소를 보고 있으면 나까지 기운이 난다."
+    "exampleKr": "아이들의 천진난만한 미소를 보고 있으면 나까지 기운이 난다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2364",
@@ -26525,7 +26599,8 @@
     "meaningKr": "명백함",
     "meaningEn": "obvious, clear",
     "exampleJp": "証拠から見て、彼の主張が事実であることは明白だ。",
-    "exampleKr": "증거로 볼 때 그의 주장이 사실이라는 것은 명백하다."
+    "exampleKr": "증거로 볼 때 그의 주장이 사실이라는 것은 명백하다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2387",
@@ -26558,7 +26633,8 @@
     "meaningKr": "명료함",
     "meaningEn": "clarity",
     "exampleJp": "彼の説明は非常に明瞭で、誰にでも理解しやすかった。",
-    "exampleKr": "그의 설명은 매우 명료해서 누구든 이해하기 쉬웠다."
+    "exampleKr": "그의 설명은 매우 명료해서 누구든 이해하기 쉬웠다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2390",
@@ -26569,7 +26645,8 @@
     "meaningKr": "명랑함",
     "meaningEn": "bright, clear, cheerful",
     "exampleJp": "選挙は明朗かつ公正な方法で行われなければならない。",
-    "exampleKr": "선거는 명랑하고 공정한 방법으로 이루어져야 한다."
+    "exampleKr": "선거는 명랑하고 공정한 방법으로 이루어져야 한다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2391",
@@ -26881,7 +26958,8 @@
     "meaningKr": "맹렬함",
     "meaningEn": "violent, vehement, rage",
     "exampleJp": "猛烈な勢いで台風が接近している。",
-    "exampleKr": "맹렬한 기세로 태풍이 접근하고 있다."
+    "exampleKr": "맹렬한 기세로 태풍이 접근하고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2419",
@@ -27611,7 +27689,8 @@
     "meaningKr": "우아함",
     "meaningEn": "grace, refinement, elegance",
     "exampleJp": "バレリーナの優美な身のこなしに観客は魅了された。",
-    "exampleKr": "발레리나의 우아한 몸놀림에 관객들은 매료되었다."
+    "exampleKr": "발레리나의 우아한 몸놀림에 관객들은 매료되었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2484",
@@ -27622,7 +27701,8 @@
     "meaningKr": "유망함",
     "meaningEn": "good prospects, full of hope, promising",
     "exampleJp": "彼は将来有望な若手研究者として注目されている。",
-    "exampleKr": "그는 장래가 유망한 젊은 연구자로 주목받고 있다."
+    "exampleKr": "그는 장래가 유망한 젊은 연구자로 주목받고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2485",
@@ -27655,7 +27735,8 @@
     "meaningKr": "유력함",
     "meaningEn": "influence, prominence; potent",
     "exampleJp": "彼は次期社長の有力な候補と目されている。",
-    "exampleKr": "그는 차기 사장의 유력한 후보로 여겨지고 있다."
+    "exampleKr": "그는 차기 사장의 유력한 후보로 여겨지고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2488",
@@ -28582,7 +28663,8 @@
     "meaningKr": "양호함",
     "meaningEn": "favorable, satisfactory",
     "exampleJp": "手術後の経過は良好で、来週には退院できる見込みだ。",
-    "exampleKr": "수술 후 경과는 양호해서 다음 주에는 퇴원할 수 있을 전망이다."
+    "exampleKr": "수술 후 경과는 양호해서 다음 주에는 퇴원할 수 있을 전망이다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2571",
@@ -28769,7 +28851,8 @@
     "meaningKr": "냉혹함",
     "meaningEn": "cruelty, coldheartedness, ruthless",
     "exampleJp": "彼の冷酷な決断によって、多くの社員が職を失うことになった。",
-    "exampleKr": "그의 냉혹한 결단으로 인해 많은 사원이 직장을 잃게 되었다."
+    "exampleKr": "그의 냉혹한 결단으로 인해 많은 사원이 직장을 잃게 되었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2588",
@@ -28791,7 +28874,8 @@
     "meaningKr": "냉담함",
     "meaningEn": "coolness, indifference",
     "exampleJp": "相談に行ったのに、担当者の冷淡な態度にがっかりした。",
-    "exampleKr": "상담하러 갔는데 담당자의 냉담한 태도에 실망했다."
+    "exampleKr": "상담하러 갔는데 담당자의 냉담한 태도에 실망했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2590",
@@ -28991,7 +29075,8 @@
     "meaningKr": "화려함",
     "meaningEn": "brilliant, gorgeous, florid",
     "exampleJp": "会場は華やかな照明と装飾で彩られ、祝いの雰囲気に包まれていた。",
-    "exampleKr": "행사장은 화려한 조명과 장식으로 꾸며져 축하 분위기에 감싸여 있었다."
+    "exampleKr": "행사장은 화려한 조명과 장식으로 꾸며져 축하 분위기에 감싸여 있었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2608",
@@ -29081,7 +29166,8 @@
     "meaningKr": "조마조마함",
     "meaningEn": "feel nervous",
     "exampleJp": "綱渡りの様子をはらはらしながら見守った。",
-    "exampleKr": "줄타기 모습을 조마조마해하며 지켜보았다."
+    "exampleKr": "줄타기 모습을 조마조마해하며 지켜보았다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2616",
@@ -29336,7 +29422,8 @@
     "meaningKr": "어중간함",
     "meaningEn": "fragment, fraction, incompleteness",
     "exampleJp": "半端な覚悟でこの仕事に取り組んでは、成功は望めない。",
-    "exampleKr": "어중간한 각오로 이 일에 임해서는 성공을 바랄 수 없다."
+    "exampleKr": "어중간한 각오로 이 일에 임해서는 성공을 바랄 수 없다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2639",
@@ -29548,7 +29635,8 @@
     "meaningKr": "비참함",
     "meaningEn": "tragedy, disaster; misery, wretched, pitiful",
     "exampleJp": "戦争がもたらした悲惨な光景に、誰もが言葉を失った。",
-    "exampleKr": "전쟁이 가져온 비참한 광경에 누구나 말을 잃었다."
+    "exampleKr": "전쟁이 가져온 비참한 광경에 누구나 말을 잃었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2658",
@@ -29625,7 +29713,8 @@
     "meaningKr": "은밀함",
     "meaningEn": "secret, private, surreptitious",
     "exampleJp": "彼女は誰にも知られぬよう、密かに計画を進めていた。",
-    "exampleKr": "그녀는 아무에게도 알려지지 않도록 은밀히 계획을 진행하고 있었다."
+    "exampleKr": "그녀는 아무에게도 알려지지 않도록 은밀히 계획을 진행하고 있었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N1-2665",

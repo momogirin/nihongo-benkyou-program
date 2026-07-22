@@ -2606,7 +2606,8 @@
     "meaningKr": "솔직함",
     "meaningEn": "frank, candid, honest",
     "exampleJp": "率直な意見を聞かせてください。",
-    "exampleKr": "솔직한 의견을 들려주세요."
+    "exampleKr": "솔직한 의견을 들려주세요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-237",
@@ -3139,7 +3140,8 @@
     "meaningKr": "타당함",
     "meaningEn": "proper, appropriate",
     "exampleJp": "この価格は妥当だと思います。",
-    "exampleKr": "이 가격은 타당하다고 생각합니다."
+    "exampleKr": "이 가격은 타당하다고 생각합니다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-285",
@@ -4443,7 +4445,8 @@
     "meaningKr": "각별함",
     "meaningEn": "exceptional",
     "exampleJp": "今年の夏の暑さは格別だった。",
-    "exampleKr": "올여름 더위는 각별했다."
+    "exampleKr": "올여름 더위는 각별했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-402",
@@ -5809,7 +5812,8 @@
     "meaningKr": "송구함",
     "meaningEn": "sorry to trouble",
     "exampleJp": "お忙しいところ恐縮ですが、少しお時間をいただけますか。",
-    "exampleKr": "바쁘신데 송구합니다만, 잠시 시간을 내주실 수 있을까요."
+    "exampleKr": "바쁘신데 송구합니다만, 잠시 시간을 내주실 수 있을까요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-525",
@@ -6670,7 +6674,8 @@
     "meaningKr": "천박함",
     "meaningEn": "vulgar, indecent, coarse",
     "exampleJp": "そんな下品な言葉遣いはやめなさい。",
-    "exampleKr": "그런 천박한 말투는 그만두어라."
+    "exampleKr": "그런 천박한 말투는 그만두어라.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-602",
@@ -6738,7 +6743,8 @@
     "meaningKr": "겸허함",
     "meaningEn": "modesty, humble",
     "exampleJp": "彼はいつも謙虚な態度で人と接する。",
-    "exampleKr": "그는 항상 겸허한 태도로 사람을 대한다."
+    "exampleKr": "그는 항상 겸허한 태도로 사람을 대한다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-608",
@@ -6793,7 +6799,8 @@
     "meaningKr": "엄중함",
     "meaningEn": "strict, severe, firm",
     "exampleJp": "空港では手荷物の検査が厳重に行われる。",
-    "exampleKr": "공항에서는 수하물 검사가 엄중하게 이루어진다."
+    "exampleKr": "공항에서는 수하물 검사가 엄중하게 이루어진다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-613",
@@ -8382,7 +8389,8 @@
     "meaningKr": "상쾌함",
     "meaningEn": "fresh, refreshing",
     "exampleJp": "朝の空気はさわやかで気持ちがいいです。",
-    "exampleKr": "아침 공기는 상쾌해서 기분이 좋아요."
+    "exampleKr": "아침 공기는 상쾌해서 기분이 좋아요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-756",
@@ -10049,7 +10057,8 @@
     "meaningKr": "애매함",
     "meaningEn": "vague, ambiguous",
     "exampleJp": "彼の返事はあいまいで分かりにくいです。",
-    "exampleKr": "그의 대답은 애매해서 이해하기 어려워요."
+    "exampleKr": "그의 대답은 애매해서 이해하기 어려워요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-906",
@@ -10495,7 +10504,8 @@
     "meaningKr": "안이함",
     "meaningEn": "easy-going",
     "exampleJp": "安易な考えで決めないでください。",
-    "exampleKr": "안이한 생각으로 결정하지 마세요."
+    "exampleKr": "안이한 생각으로 결정하지 마세요.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-945",
@@ -12450,7 +12460,8 @@
     "meaningKr": "완만함",
     "meaningEn": "gradual, gentle",
     "exampleJp": "この山道はなだらかで歩きやすい。",
-    "exampleKr": "이 산길은 완만해서 걷기 쉽다."
+    "exampleKr": "이 산길은 완만해서 걷기 쉽다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1119",
@@ -12485,7 +12496,8 @@
     "meaningKr": "비스듬함",
     "meaningEn": "diagonal, oblique",
     "exampleJp": "額縁が斜めにかかっている。",
-    "exampleKr": "액자가 비스듬히 걸려 있다."
+    "exampleKr": "액자가 비스듬히 걸려 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1122",
@@ -12821,7 +12833,8 @@
     "meaningKr": "갑작스러움",
     "meaningEn": "sudden, abrupt, unexpected",
     "exampleJp": "俄に空が曇り、雨が降り出した。",
-    "exampleKr": "갑자기 하늘이 흐려지더니 비가 내리기 시작했다."
+    "exampleKr": "갑자기 하늘이 흐려지더니 비가 내리기 시작했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1152",
@@ -13100,7 +13113,8 @@
     "meaningKr": "태평함",
     "meaningEn": "carefree, optimistic, careless",
     "exampleJp": "彼はいつも呑気で心配事がなさそうだ。",
-    "exampleKr": "그는 항상 태평해서 걱정거리가 없어 보인다."
+    "exampleKr": "그는 항상 태평해서 걱정거리가 없어 보인다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1177",
@@ -13346,7 +13360,8 @@
     "meaningKr": "비스듬함",
     "meaningEn": "diagonal",
     "exampleJp": "机を壁に対して斜に置いた。",
-    "exampleKr": "책상을 벽에 대해 비스듬히 놓았다."
+    "exampleKr": "책상을 벽에 대해 비스듬히 놓았다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1199",
@@ -14416,7 +14431,8 @@
     "meaningKr": "널찍함",
     "meaningEn": "extensive, spacious",
     "exampleJp": "新しい家は広々としていて気持ちいい。",
-    "exampleKr": "새 집은 널찍해서 기분이 좋다."
+    "exampleKr": "새 집은 널찍해서 기분이 좋다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1295",
@@ -14616,7 +14632,8 @@
     "meaningKr": "불결함",
     "meaningEn": "unclean, dirty",
     "exampleJp": "部屋が不潔だと病気の原因になる。",
-    "exampleKr": "방이 불결하면 병의 원인이 된다."
+    "exampleKr": "방이 불결하면 병의 원인이 된다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1313",
@@ -15193,7 +15210,8 @@
     "meaningKr": "태연함",
     "meaningEn": "coolness, calmness, unconcern",
     "exampleJp": "彼は失敗しても平気な顔をしている。",
-    "exampleKr": "그는 실패해도 태연한 얼굴을 하고 있다."
+    "exampleKr": "그는 실패해도 태연한 얼굴을 하고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1365",
@@ -15536,7 +15554,8 @@
     "meaningKr": "방대함",
     "meaningEn": "enormous, extensive",
     "exampleJp": "この研究には膨大な時間がかかった。",
-    "exampleKr": "이 연구에는 방대한 시간이 걸렸다."
+    "exampleKr": "이 연구에는 방대한 시간이 걸렸다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1396",
@@ -15625,7 +15644,8 @@
     "meaningKr": "명랑함",
     "meaningEn": "bright, cheerful, melodious",
     "exampleJp": "彼女はいつも朗らかに笑っている。",
-    "exampleKr": "그녀는 항상 명랑하게 웃고 있다."
+    "exampleKr": "그녀는 항상 명랑하게 웃고 있다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1404",
@@ -15971,7 +15991,8 @@
     "meaningKr": "캄캄함",
     "meaningEn": "total darkness",
     "exampleJp": "停電で部屋が真っ暗になった。",
-    "exampleKr": "정전으로 방이 캄캄해졌다."
+    "exampleKr": "정전으로 방이 캄캄해졌다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1435",
@@ -16239,7 +16260,8 @@
     "meaningKr": "비참함",
     "meaningEn": "sad, pitiful, wretched",
     "exampleJp": "試合に負けてみじめな気持ちになった。",
-    "exampleKr": "시합에 져서 비참한 기분이 되었다."
+    "exampleKr": "시합에 져서 비참한 기분이 되었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1459",
@@ -16541,7 +16563,8 @@
     "meaningKr": "무수함",
     "meaningEn": "countless number, infinite number",
     "exampleJp": "夜空には無数の星が輝いていた。",
-    "exampleKr": "밤하늘에는 무수한 별이 빛나고 있었다."
+    "exampleKr": "밤하늘에는 무수한 별이 빛나고 있었다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1486",
@@ -17581,7 +17604,8 @@
     "meaningKr": "유치함",
     "meaningEn": "infancy, childish, infantile",
     "exampleJp": "その言い訳はあまりに幼稚だった。",
-    "exampleKr": "그 변명은 너무나 유치했다."
+    "exampleKr": "그 변명은 너무나 유치했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1579",
@@ -17882,7 +17906,8 @@
     "meaningKr": "난폭함",
     "meaningEn": "rude, violent, rough",
     "exampleJp": "彼は言葉遣いが乱暴だと注意された。",
-    "exampleKr": "그는 말투가 난폭하다고 주의를 받았다."
+    "exampleKr": "그는 말투가 난폭하다고 주의를 받았다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1606",
@@ -18944,7 +18969,8 @@
     "meaningKr": "강경함",
     "meaningEn": "firm, strong",
     "exampleJp": "交渉では強気な態度を崩さなかった。",
-    "exampleKr": "협상에서는 강경한 태도를 유지했다."
+    "exampleKr": "협상에서는 강경한 태도를 유지했다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1701",
@@ -19190,7 +19216,8 @@
     "meaningKr": "적확함",
     "meaningEn": "precise, accurate",
     "exampleJp": "医師は適確な診断を下した。",
-    "exampleKr": "의사는 정확한 진단을 내렸다."
+    "exampleKr": "의사는 정확한 진단을 내렸다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1723",
@@ -19212,7 +19239,8 @@
     "meaningKr": "울퉁불퉁함",
     "meaningEn": "unevenness, roughness, ruggedness",
     "exampleJp": "この道は凸凹していて歩きにくい。",
-    "exampleKr": "이 길은 울퉁불퉁해서 걷기 힘들다."
+    "exampleKr": "이 길은 울퉁불퉁해서 걷기 힘들다.",
+    "conjugationType": "naadj"
   },
   {
     "id": "N2-1725",
