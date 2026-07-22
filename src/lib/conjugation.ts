@@ -3,7 +3,17 @@
 // scripts 검증 세트로 확인함(생성 콘텐츠 없음).
 import { conjugationList, type ConjugationEntry, type ConjugationType } from '../data/conjugation'
 
-export type VerbForm = 'dict' | 'masu' | 'te' | 'nai' | 'ta'
+export type VerbForm =
+  | 'dict'
+  | 'masu'
+  | 'te'
+  | 'nai'
+  | 'ta'
+  | 'potential'
+  | 'volitional'
+  | 'conditional'
+  | 'causative'
+  | 'passive'
 export type AdjForm = 'dict' | 'negative' | 'past' | 'te'
 
 // 五段 어미(う단) → 각 활용 어간/꼴
@@ -11,6 +21,8 @@ const GODAN_MASU: Record<string, string> = { う: 'い', く: 'き', ぐ: 'ぎ',
 const GODAN_NAI: Record<string, string> = { う: 'わ', く: 'か', ぐ: 'が', す: 'さ', つ: 'た', ぬ: 'な', ぶ: 'ば', む: 'ま', る: 'ら' }
 const GODAN_TE: Record<string, string> = { う: 'って', く: 'いて', ぐ: 'いで', す: 'して', つ: 'って', ぬ: 'んで', ぶ: 'んで', む: 'んで', る: 'って' }
 const GODAN_TA: Record<string, string> = { う: 'った', く: 'いた', ぐ: 'いだ', す: 'した', つ: 'った', ぬ: 'んだ', ぶ: 'んだ', む: 'んだ', る: 'った' }
+const GODAN_E: Record<string, string> = { う: 'え', く: 'け', ぐ: 'げ', す: 'せ', つ: 'て', ぬ: 'ね', ぶ: 'べ', む: 'め', る: 'れ' } // 可能·条件
+const GODAN_O: Record<string, string> = { う: 'お', く: 'こ', ぐ: 'ご', す: 'そ', つ: 'と', ぬ: 'の', ぶ: 'ぼ', む: 'も', る: 'ろ' } // 意志
 
 // str: 사전형(단어 또는 읽기, 어미가 かな). 五段은 어미 かな로 열을 판정.
 function conjGodan(str: string, form: VerbForm): string {
@@ -19,32 +31,63 @@ function conjGodan(str: string, form: VerbForm): string {
   const stem = str.slice(0, -1)
   // 行く는 て/た형이 음편 예외(いって/いった)
   const isIku = str === 'いく' || str.endsWith('行く')
-  if (form === 'masu') return stem + GODAN_MASU[last] + 'ます'
-  if (form === 'nai') return stem + GODAN_NAI[last] + 'ない'
-  if (form === 'te') return isIku ? stem + 'って' : stem + GODAN_TE[last]
-  return isIku ? stem + 'った' : stem + GODAN_TA[last] // ta
+  switch (form) {
+    case 'masu': return stem + GODAN_MASU[last] + 'ます'
+    case 'nai': return stem + GODAN_NAI[last] + 'ない'
+    case 'te': return isIku ? stem + 'って' : stem + GODAN_TE[last]
+    case 'ta': return isIku ? stem + 'った' : stem + GODAN_TA[last]
+    case 'potential': return stem + GODAN_E[last] + 'る'
+    case 'volitional': return stem + GODAN_O[last] + 'う'
+    case 'conditional': return stem + GODAN_E[last] + 'ば'
+    case 'causative': return stem + GODAN_NAI[last] + 'せる'
+    case 'passive': return stem + GODAN_NAI[last] + 'れる'
+    default: return str
+  }
 }
 
 function conjIchidan(str: string, form: VerbForm): string {
   const stem = str.slice(0, -1) // remove る
-  return { dict: str, masu: stem + 'ます', te: stem + 'て', ta: stem + 'た', nai: stem + 'ない' }[form]
+  const map: Record<VerbForm, string> = {
+    dict: str,
+    masu: stem + 'ます',
+    te: stem + 'て',
+    ta: stem + 'た',
+    nai: stem + 'ない',
+    potential: stem + 'られる',
+    volitional: stem + 'よう',
+    conditional: stem + 'れば',
+    causative: stem + 'させる',
+    passive: stem + 'られる',
+  }
+  return map[form]
+}
+
+// する 어미 활용(끝의 する만 바뀜, 사전형 제외)
+const SURU_SUFFIX: Record<Exclude<VerbForm, 'dict'>, string> = {
+  masu: 'します', te: 'して', ta: 'した', nai: 'しない', potential: 'できる',
+  volitional: 'しよう', conditional: 'すれば', causative: 'させる', passive: 'される',
+}
+// 来る 읽기(き/こ 모음 변화)와 한자표기(来 + 어미) 각각
+const KURU_READING: Record<Exclude<VerbForm, 'dict'>, string> = {
+  masu: 'きます', te: 'きて', ta: 'きた', nai: 'こない', potential: 'こられる',
+  volitional: 'こよう', conditional: 'くれば', causative: 'こさせる', passive: 'こられる',
+}
+const KURU_WORD_SUFFIX: Record<Exclude<VerbForm, 'dict'>, string> = {
+  masu: 'ます', te: 'て', ta: 'た', nai: 'ない', potential: 'られる',
+  volitional: 'よう', conditional: 'れば', causative: 'させる', passive: 'られる',
 }
 
 // する 및 복합동사(勉強する 등): 끝의 する만 활용
 function conjSuru(str: string, form: VerbForm): string {
-  const stem = str.slice(0, -2)
-  return { dict: str, masu: stem + 'します', te: stem + 'して', ta: stem + 'した', nai: stem + 'しない' }[form]
+  if (form === 'dict') return str
+  return str.slice(0, -2) + SURU_SUFFIX[form]
 }
 
 // 来る/くる: 읽기는 き/こ로 모음 변화, 한자표기는 来 유지
 function conjKuru(str: string, form: VerbForm): string {
   if (form === 'dict') return str
-  if (str.endsWith('くる')) {
-    const p = str.slice(0, -2)
-    return p + { masu: 'きます', te: 'きて', ta: 'きた', nai: 'こない' }[form]
-  }
-  const stem = str.slice(0, -1) // 来る -> 来
-  return { masu: stem + 'ます', te: stem + 'て', ta: stem + 'た', nai: stem + 'ない' }[form]
+  if (str.endsWith('くる')) return str.slice(0, -2) + KURU_READING[form]
+  return str.slice(0, -1) + KURU_WORD_SUFFIX[form] // 来る -> 来 + suffix
 }
 
 // い형용사. いい/よい는 어간 よ로 불규칙
@@ -80,6 +123,11 @@ export const VERB_FORMS: { key: VerbForm; label: string; hint: string }[] = [
   { key: 'te', label: 'て형', hint: '연결·진행' },
   { key: 'nai', label: 'ない형', hint: '부정' },
   { key: 'ta', label: 'た형', hint: '과거' },
+  { key: 'potential', label: '가능형', hint: '~할 수 있다' },
+  { key: 'volitional', label: '의지형', hint: '~하자·하겠다' },
+  { key: 'conditional', label: '조건형', hint: '~하면(ば)' },
+  { key: 'causative', label: '사역형', hint: '~하게 하다' },
+  { key: 'passive', label: '수동형', hint: '~당하다·받다' },
 ]
 
 export const ADJ_FORMS: { key: AdjForm; label: string; hint: string }[] = [

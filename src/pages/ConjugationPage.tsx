@@ -183,12 +183,24 @@ interface QuizQuestion {
   choices: ConjugatedForm[]
 }
 
-// 사전형은 답으로 내지 않음(활용을 만드는 연습이므로)
+// 사전형은 답으로 내지 않음(활용을 만드는 연습이므로).
+// 같은 문자열이 되는 활용형(예: 一段 가능형=수동형 「食べられる」)은 선택지에서
+// 하나만 남기고, 정답은 문자열이 유일한 활용형에서만 골라 문제가 애매해지지 않게 한다.
 function buildQuestion(entry: ConjugationEntry): QuizQuestion {
   const forms = conjugate(entry)
-  const answerable = forms.filter((f) => f.key !== 'dict')
-  const target = answerable[Math.floor(Math.random() * answerable.length)]
-  const others = forms.filter((f) => f.key !== target.key)
+  const wordCount = new Map<string, number>()
+  forms.forEach((f) => wordCount.set(f.word, (wordCount.get(f.word) ?? 0) + 1))
+  const uniqueByWord: ConjugatedForm[] = []
+  const seen = new Set<string>()
+  for (const f of forms) {
+    if (seen.has(f.word)) continue
+    seen.add(f.word)
+    uniqueByWord.push(f)
+  }
+  const unambiguous = uniqueByWord.filter((f) => f.key !== 'dict' && wordCount.get(f.word) === 1)
+  const targetPool = unambiguous.length > 0 ? unambiguous : uniqueByWord.filter((f) => f.key !== 'dict')
+  const target = targetPool[Math.floor(Math.random() * targetPool.length)]
+  const others = uniqueByWord.filter((f) => f.word !== target.word)
   const choices = shuffle([target, ...shuffle(others).slice(0, 3)])
   return { entry, target, choices }
 }
