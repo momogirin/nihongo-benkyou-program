@@ -296,28 +296,29 @@ export default function HomePage({
     studyProgress && {
       key: 'progress-kanji',
       title: '한자 학습',
-      detail: `${studyProgress.level} · ${studyProgress.completed}/${studyProgress.total}자`,
+      // "학습함(카드 넘김)"과 별개로, 실제 외운(SRS 박스4 도달) 수를 병기해 진도를 정직하게
+      detail: `${studyProgress.level} · ${studyProgress.completed}/${studyProgress.total}자 · 정착 ${srsMasteryByDomain.kanji.mastered}자`,
       rate: studyProgress.completed / studyProgress.total,
       onClick: onGoToStudy,
     },
     vocabStudyProgress && {
       key: 'progress-vocab',
       title: '단어 학습',
-      detail: `${vocabStudyProgress.level} · ${vocabStudyProgress.completed}/${vocabStudyProgress.total}개`,
+      detail: `${vocabStudyProgress.level} · ${vocabStudyProgress.completed}/${vocabStudyProgress.total}개 · 정착 ${srsMasteryByDomain.vocab.mastered}개`,
       rate: vocabStudyProgress.completed / vocabStudyProgress.total,
       onClick: onGoToVocab,
     },
     grammarStudyProgress && {
       key: 'progress-grammar',
       title: '문법 학습',
-      detail: `${grammarStudyProgress.level} · ${grammarStudyProgress.completed}/${grammarStudyProgress.total}개`,
+      detail: `${grammarStudyProgress.level} · ${grammarStudyProgress.completed}/${grammarStudyProgress.total}개 · 정착 ${srsMasteryByDomain.grammar.mastered}개`,
       rate: grammarStudyProgress.completed / grammarStudyProgress.total,
       onClick: onGoToGrammar,
     },
     englishVocabStudyProgress && {
       key: 'progress-english',
       title: '영어단어 학습',
-      detail: `${englishVocabStudyProgress.level} · ${englishVocabStudyProgress.completed}/${englishVocabStudyProgress.total}개`,
+      detail: `${englishVocabStudyProgress.level} · ${englishVocabStudyProgress.completed}/${englishVocabStudyProgress.total}개 · 정착 ${srsMasteryByDomain.englishVocab.mastered}개`,
       rate: englishVocabStudyProgress.completed / englishVocabStudyProgress.total,
       onClick: onGoToEnglishVocab,
     },
