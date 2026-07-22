@@ -8,7 +8,8 @@
     "meaningKr": "밟다",
     "meaningEn": "to step on, to tread on",
     "exampleJp": "電車の中で足を踏まれました。",
-    "exampleKr": "전철 안에서 발을 밟혔어요."
+    "exampleKr": "전철 안에서 발을 밟혔어요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-2",
@@ -41,7 +42,8 @@
     "meaningKr": "훔치다",
     "meaningEn": "to steal; to rob",
     "exampleJp": "誰かが私の自転車を盗みました。",
-    "exampleKr": "누군가 제 자전거를 훔쳤어요."
+    "exampleKr": "누군가 제 자전거를 훔쳤어요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-5",
@@ -85,7 +87,8 @@
     "meaningKr": "울리다",
     "meaningEn": "to sound, to ring (v.i.)",
     "exampleJp": "さっきから電話が鳴っています。",
-    "exampleKr": "아까부터 전화가 울리고 있어요."
+    "exampleKr": "아까부터 전화가 울리고 있어요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-9",
@@ -107,7 +110,8 @@
     "meaningKr": "살다",
     "meaningEn": "to live",
     "exampleJp": "祖父は100歳まで生きました。",
-    "exampleKr": "할아버지는 100살까지 사셨어요."
+    "exampleKr": "할아버지는 100살까지 사셨어요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-11",
@@ -129,7 +133,8 @@
     "meaningKr": "끓다",
     "meaningEn": "to boil, to grow hot",
     "exampleJp": "やかんのお湯が沸きました。",
-    "exampleKr": "주전자 물이 끓었어요."
+    "exampleKr": "주전자 물이 끓었어요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-13",
@@ -251,7 +256,8 @@
     "meaningKr": "들리다",
     "meaningEn": "to be heard, to be audible",
     "exampleJp": "隣の部屋から音楽が聞こえます。",
-    "exampleKr": "옆방에서 음악이 들려요."
+    "exampleKr": "옆방에서 음악이 들려요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-24",
@@ -295,7 +301,8 @@
     "meaningKr": "화내다",
     "meaningEn": "to get angry; to scold angrily",
     "exampleJp": "遅刻したので、母は私に怒りました。",
-    "exampleKr": "지각해서 엄마가 저에게 화를 냈어요."
+    "exampleKr": "지각해서 엄마가 저에게 화를 냈어요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-28",
@@ -339,7 +346,8 @@
     "meaningKr": "그치다",
     "meaningEn": "to cease, to stop",
     "exampleJp": "やっと雨が止みました。",
-    "exampleKr": "드디어 비가 그쳤어요."
+    "exampleKr": "드디어 비가 그쳤어요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-32",
@@ -449,7 +457,8 @@
     "meaningKr": "부드럽다",
     "meaningEn": "soft (in reference to texture), tender",
     "exampleJp": "このパンはとても柔らかいです。",
-    "exampleKr": "이 빵은 아주 부드러워요."
+    "exampleKr": "이 빵은 아주 부드러워요.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-42",
@@ -460,7 +469,8 @@
     "meaningKr": "줍다",
     "meaningEn": "to pick up (something), to find",
     "exampleJp": "道でお金を拾いました。",
-    "exampleKr": "길에서 돈을 주웠어요."
+    "exampleKr": "길에서 돈을 주웠어요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-43",
@@ -493,7 +503,8 @@
     "meaningKr": "비교하다",
     "meaningEn": "to compare",
     "exampleJp": "兄と弟を比べないでください。",
-    "exampleKr": "형과 동생을 비교하지 마세요."
+    "exampleKr": "형과 동생을 비교하지 마세요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-46",
@@ -603,7 +614,8 @@
     "meaningKr": "굽다",
     "meaningEn": "to bake, to grill",
     "exampleJp": "週末にパンを焼きます。",
-    "exampleKr": "주말에 빵을 구워요."
+    "exampleKr": "주말에 빵을 구워요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-56",
@@ -944,7 +956,8 @@
     "meaningKr": "그만두다",
     "meaningEn": "to end, to stop",
     "exampleJp": "健康のためにタバコを止めることにしました。",
-    "exampleKr": "건강을 위해 담배를 끊기로 했어요."
+    "exampleKr": "건강을 위해 담배를 끊기로 했어요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-87",
@@ -977,7 +990,8 @@
     "meaningKr": "엄격하다",
     "meaningEn": "hard; rigorous; strict",
     "exampleJp": "父はとても厳しい人です。",
-    "exampleKr": "아버지는 매우 엄격한 사람이에요."
+    "exampleKr": "아버지는 매우 엄격한 사람이에요.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-90",
@@ -1043,7 +1057,8 @@
     "meaningKr": "깊다",
     "meaningEn": "deep, profound",
     "exampleJp": "この川はとても深いです。",
-    "exampleKr": "이 강은 매우 깊어요."
+    "exampleKr": "이 강은 매우 깊어요.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-96",
@@ -1066,7 +1081,8 @@
     "meaningEn": "to shake, to sway",
     "exampleJp": "地震で家が揺れました。",
     "exampleKr": "지진으로 집이 흔들렸어요.",
-    "transitivityPairId": "揺れる"
+    "transitivityPairId": "揺れる",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-98",
@@ -1077,7 +1093,8 @@
     "meaningKr": "떨어지다",
     "meaningEn": "to fall, to drop",
     "exampleJp": "木からりんごが落ちました。",
-    "exampleKr": "나무에서 사과가 떨어졌어요."
+    "exampleKr": "나무에서 사과가 떨어졌어요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-99",
@@ -1099,7 +1116,8 @@
     "meaningKr": "슬프다",
     "meaningEn": "sad, sorrowful",
     "exampleJp": "その映画を見て悲しくなりました。",
-    "exampleKr": "그 영화를 보고 슬퍼졌어요."
+    "exampleKr": "그 영화를 보고 슬퍼졌어요.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-101",
@@ -1209,7 +1227,8 @@
     "meaningKr": "얕다",
     "meaningEn": "shallow, superficial",
     "exampleJp": "この川は浅いので、子供でも安全です。",
-    "exampleKr": "이 강은 얕아서 아이도 안전해요."
+    "exampleKr": "이 강은 얕아서 아이도 안전해요.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-111",
@@ -1275,7 +1294,8 @@
     "meaningKr": "생각하다",
     "meaningEn": "to think, to feel",
     "exampleJp": "明日は晴れると思います。",
-    "exampleKr": "내일은 맑을 거라고 생각해요."
+    "exampleKr": "내일은 맑을 거라고 생각해요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-117",
@@ -1308,7 +1328,8 @@
     "meaningKr": "말씀드리다",
     "meaningEn": "(humble)to say, to tell",
     "exampleJp": "先生にお礼を申し上げます。",
-    "exampleKr": "선생님께 감사의 말씀을 드립니다."
+    "exampleKr": "선생님께 감사의 말씀을 드립니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-120",
@@ -1352,7 +1373,8 @@
     "meaningKr": "맞이하다",
     "meaningEn": "to welcome; to meet; to greet",
     "exampleJp": "空港で友達を迎えました。",
-    "exampleKr": "공항에서 친구를 맞이했어요."
+    "exampleKr": "공항에서 친구를 맞이했어요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-124",
@@ -1363,7 +1385,8 @@
     "meaningKr": "만지다",
     "meaningEn": "to touch, to feel",
     "exampleJp": "このボタンには触らないでください。",
-    "exampleKr": "이 버튼은 만지지 마세요."
+    "exampleKr": "이 버튼은 만지지 마세요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-125",
@@ -1431,7 +1454,8 @@
     "meaningEn": "to stop by",
     "exampleJp": "帰りにコンビニに寄ります。",
     "exampleKr": "돌아가는 길에 편의점에 들러요.",
-    "transitivityPairId": "寄る"
+    "transitivityPairId": "寄る",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-131",
@@ -1443,7 +1467,8 @@
     "meaningEn": "to be set; fixed (v.i.)",
     "exampleJp": "旅行の日程が決まりました。",
     "exampleKr": "여행 일정이 정해졌어요.",
-    "transitivityPairId": "決まる"
+    "transitivityPairId": "決まる",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-132",
@@ -1465,7 +1490,8 @@
     "meaningKr": "도망가다",
     "meaningEn": "to escape, to run away",
     "exampleJp": "犯人は逃げてしまいました。",
-    "exampleKr": "범인은 도망가 버렸어요."
+    "exampleKr": "범인은 도망가 버렸어요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-134",
@@ -1542,7 +1568,8 @@
     "meaningKr": "무섭다",
     "meaningEn": "scary, frightening",
     "exampleJp": "夜の道は怖いです。",
-    "exampleKr": "밤길은 무서워요."
+    "exampleKr": "밤길은 무서워요.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-141",
@@ -1641,7 +1668,8 @@
     "meaningKr": "장식하다",
     "meaningEn": "to decorate, to adorn",
     "exampleJp": "クリスマスツリーを飾りました。",
-    "exampleKr": "크리스마스트리를 장식했어요."
+    "exampleKr": "크리스마스트리를 장식했어요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-150",
@@ -1664,7 +1692,8 @@
     "meaningKr": "부끄럽다",
     "meaningEn": "ashamed, embarrassed",
     "exampleJp": "人前で歌うのは恥ずかしいです。",
-    "exampleKr": "사람들 앞에서 노래하는 건 부끄러워요."
+    "exampleKr": "사람들 앞에서 노래하는 건 부끄러워요.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-152",
@@ -1719,7 +1748,8 @@
     "meaningKr": "열심히 하다",
     "meaningEn": "to try one's best, to try hard, to persist",
     "exampleJp": "試験に向けて頑張ります。",
-    "exampleKr": "시험을 위해 열심히 할게요."
+    "exampleKr": "시험을 위해 열심히 할게요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-157",
@@ -1730,7 +1760,8 @@
     "meaningKr": "던지다",
     "meaningEn": "to pitch, to cast away",
     "exampleJp": "子供にボールを投げました。",
-    "exampleKr": "아이에게 공을 던졌어요."
+    "exampleKr": "아이에게 공을 던졌어요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-158",
@@ -1840,7 +1871,8 @@
     "meaningKr": "충분하다",
     "meaningEn": "to be sufficient; to be enough",
     "exampleJp": "お金が足りません。",
-    "exampleKr": "돈이 부족해요."
+    "exampleKr": "돈이 부족해요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-168",
@@ -1873,7 +1905,8 @@
     "meaningKr": "없어지다",
     "meaningEn": "to disappear, to get lost",
     "exampleJp": "財布の中のお金が無くなりました。",
-    "exampleKr": "지갑 속의 돈이 없어졌습니다."
+    "exampleKr": "지갑 속의 돈이 없어졌습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-171",
@@ -1950,7 +1983,8 @@
     "meaningKr": "살이 빠지다",
     "meaningEn": "to lose weight",
     "exampleJp": "病気をしてから、少し痩せました。",
-    "exampleKr": "병을 앓고 나서 살이 조금 빠졌습니다."
+    "exampleKr": "병을 앓고 나서 살이 조금 빠졌습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-178",
@@ -1984,7 +2018,8 @@
     "meaningEn": "to decide (v.t.)",
     "exampleJp": "旅行の日程はもう決めましたか。",
     "exampleKr": "여행 일정은 이미 정했습니까?",
-    "transitivityPairId": "決まる"
+    "transitivityPairId": "決まる",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-181",
@@ -2028,7 +2063,8 @@
     "meaningKr": "빛나다",
     "meaningEn": "to shine, to glitter",
     "exampleJp": "夜空に星がきれいに光っています。",
-    "exampleKr": "밤하늘에 별이 예쁘게 빛나고 있습니다."
+    "exampleKr": "밤하늘에 별이 예쁘게 빛나고 있습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-185",
@@ -2171,7 +2207,8 @@
     "meaningKr": "아름답다",
     "meaningEn": "beautiful, lovely",
     "exampleJp": "京都には美しいお寺がたくさんあります。",
-    "exampleKr": "교토에는 아름다운 절이 많이 있습니다."
+    "exampleKr": "교토에는 아름다운 절이 많이 있습니다.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-198",
@@ -2182,7 +2219,8 @@
     "meaningKr": "버리다",
     "meaningEn": "throw away (trash), dump, discard",
     "exampleJp": "ごみは決められた日に捨ててください。",
-    "exampleKr": "쓰레기는 정해진 날에 버려 주세요."
+    "exampleKr": "쓰레기는 정해진 날에 버려 주세요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-199",
@@ -2248,7 +2286,8 @@
     "meaningKr": "멋지다",
     "meaningEn": "wonderful; terrific",
     "exampleJp": "昨日のコンサートは素晴らしかったです。",
-    "exampleKr": "어제 콘서트는 정말 멋졌습니다."
+    "exampleKr": "어제 콘서트는 정말 멋졌습니다.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-205",
@@ -2336,7 +2375,8 @@
     "meaningKr": "알리다",
     "meaningEn": "to notify",
     "exampleJp": "試験の結果は来週知らせます。",
-    "exampleKr": "시험 결과는 다음 주에 알려 드리겠습니다."
+    "exampleKr": "시험 결과는 다음 주에 알려 드리겠습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-213",
@@ -2370,7 +2410,8 @@
     "meaningEn": "to start, to begin",
     "exampleJp": "来月から新しい仕事を始めます。",
     "exampleKr": "다음 달부터 새로운 일을 시작합니다.",
-    "transitivityPairId": "始まる"
+    "transitivityPairId": "始まる",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-216",
@@ -2381,7 +2422,8 @@
     "meaningKr": "받다",
     "meaningEn": "to receive",
     "exampleJp": "誕生日に友達からプレゼントをもらいました。",
-    "exampleKr": "생일에 친구에게서 선물을 받았습니다."
+    "exampleKr": "생일에 친구에게서 선물을 받았습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-217",
@@ -2392,7 +2434,8 @@
     "meaningKr": "울다",
     "meaningEn": "to cry",
     "exampleJp": "悲しい映画を見て泣いてしまいました。",
-    "exampleKr": "슬픈 영화를 보고 울어 버렸습니다."
+    "exampleKr": "슬픈 영화를 보고 울어 버렸습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-218",
@@ -2524,7 +2567,8 @@
     "meaningKr": "남다",
     "meaningEn": "to remain (v.i.), to be left",
     "exampleJp": "パーティーの後、料理が少し残りました。",
-    "exampleKr": "파티 후에 음식이 조금 남았습니다."
+    "exampleKr": "파티 후에 음식이 조금 남았습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-230",
@@ -2535,7 +2579,8 @@
     "meaningKr": "세우다",
     "meaningEn": "to stand (something) up, to erect (something)",
     "exampleJp": "来年の計画を立てるつもりです。",
-    "exampleKr": "내년 계획을 세울 생각입니다."
+    "exampleKr": "내년 계획을 세울 생각입니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-231",
@@ -2546,7 +2591,8 @@
     "meaningKr": "(나에게) 주다",
     "meaningEn": "to give, to do for",
     "exampleJp": "母が誕生日にセーターをくれました。",
-    "exampleKr": "어머니가 생일에 스웨터를 주셨습니다."
+    "exampleKr": "어머니가 생일에 스웨터를 주셨습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-232",
@@ -2579,7 +2625,8 @@
     "meaningKr": "놀라다",
     "meaningEn": "to be surprised, to be astonished",
     "exampleJp": "突然の知らせに家族はみんな驚きました。",
-    "exampleKr": "갑작스러운 소식에 가족 모두가 놀랐습니다."
+    "exampleKr": "갑작스러운 소식에 가족 모두가 놀랐습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-235",
@@ -2898,7 +2945,8 @@
     "meaningKr": "마르다",
     "meaningEn": "to get dry",
     "exampleJp": "洗濯物はもう乾きましたか。",
-    "exampleKr": "빨래는 벌써 말랐나요?"
+    "exampleKr": "빨래는 벌써 말랐나요?",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-264",
@@ -2931,7 +2979,8 @@
     "meaningKr": "춤추다",
     "meaningEn": "to dance",
     "exampleJp": "パーティーでみんなで踊りました。",
-    "exampleKr": "파티에서 다같이 춤을 췄습니다."
+    "exampleKr": "파티에서 다같이 춤을 췄습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-267",
@@ -2953,7 +3002,8 @@
     "meaningKr": "칠하다",
     "meaningEn": "to paint, to plaster",
     "exampleJp": "壁を白いペンキで塗りました。",
-    "exampleKr": "벽을 흰색 페인트로 칠했습니다."
+    "exampleKr": "벽을 흰색 페인트로 칠했습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-269",
@@ -3030,7 +3080,8 @@
     "meaningKr": "찾다",
     "meaningEn": "to search, to seek, to look for",
     "exampleJp": "なくした鍵を一時間も探しました。",
-    "exampleKr": "잃어버린 열쇠를 한 시간이나 찾았습니다."
+    "exampleKr": "잃어버린 열쇠를 한 시간이나 찾았습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-276",
@@ -3129,7 +3180,8 @@
     "meaningKr": "외롭다",
     "meaningEn": "lonely, lonesome",
     "exampleJp": "家族と離れて暮らすのは寂しいです。",
-    "exampleKr": "가족과 떨어져 사는 것은 외롭습니다."
+    "exampleKr": "가족과 떨어져 사는 것은 외롭습니다.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-285",
@@ -3217,7 +3269,8 @@
     "meaningKr": "데리고 가다",
     "meaningEn": "to lead, to take (a person)",
     "exampleJp": "週末、子供を動物園に連れて行きます。",
-    "exampleKr": "주말에 아이를 동물원에 데리고 갑니다."
+    "exampleKr": "주말에 아이를 동물원에 데리고 갑니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-293",
@@ -3316,7 +3369,8 @@
     "meaningKr": "나아가다",
     "meaningEn": "to advance, to proceed",
     "exampleJp": "工事は予定通りに進んでいます。",
-    "exampleKr": "공사는 예정대로 진행되고 있습니다."
+    "exampleKr": "공사는 예정대로 진행되고 있습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-302",
@@ -3327,7 +3381,8 @@
     "meaningKr": "즐기다",
     "meaningEn": "to enjoy",
     "exampleJp": "休みの日は家族と釣りを楽しみます。",
-    "exampleKr": "쉬는 날에는 가족과 낚시를 즐깁니다."
+    "exampleKr": "쉬는 날에는 가족과 낚시를 즐깁니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-303",
@@ -3471,7 +3526,8 @@
     "meaningKr": "체크(확인)하다",
     "meaningEn": "check",
     "exampleJp": "出発前に持ち物をチェックしてください。",
-    "exampleKr": "출발 전에 소지품을 확인해 주세요."
+    "exampleKr": "출발 전에 소지품을 확인해 주세요.",
+    "conjugationType": "suru"
   },
   {
     "id": "N4-316",
@@ -3526,7 +3582,8 @@
     "meaningKr": "기뻐하다",
     "meaningEn": "to rejoice, to be delighted, to be glad",
     "exampleJp": "合格の知らせを聞いて、家族みんなが喜びました。",
-    "exampleKr": "합격 소식을 듣고 가족 모두가 기뻐했습니다."
+    "exampleKr": "합격 소식을 듣고 가족 모두가 기뻐했습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-321",
@@ -3636,7 +3693,8 @@
     "meaningKr": "이사하다",
     "meaningEn": "to move to a new place of residence",
     "exampleJp": "来月、新しいアパートに引っ越します。",
-    "exampleKr": "다음 달에 새 아파트로 이사합니다."
+    "exampleKr": "다음 달에 새 아파트로 이사합니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-331",
@@ -3768,7 +3826,8 @@
     "meaningKr": "대단하다",
     "meaningEn": "terrific, great",
     "exampleJp": "彼のピアノはすごいですね。",
-    "exampleKr": "그의 피아노 실력은 대단하네요."
+    "exampleKr": "그의 피아노 실력은 대단하네요.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-343",
@@ -3845,7 +3904,8 @@
     "meaningKr": "더하다",
     "meaningEn": "to add (numbers)",
     "exampleJp": "3に5を足すと8になります。",
-    "exampleKr": "3에 5를 더하면 8이 됩니다."
+    "exampleKr": "3에 5를 더하면 8이 됩니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-350",
@@ -3955,7 +4015,8 @@
     "meaningKr": "저물다",
     "meaningEn": "to get dark, to come to an end",
     "exampleJp": "冬は日が早く暮れます。",
-    "exampleKr": "겨울은 해가 일찍 저뭅니다."
+    "exampleKr": "겨울은 해가 일찍 저뭅니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-360",
@@ -3966,7 +4027,8 @@
     "meaningKr": "낚다",
     "meaningEn": "to fish",
     "exampleJp": "週末、父と川で魚を釣りました。",
-    "exampleKr": "주말에 아버지와 강에서 물고기를 낚았습니다."
+    "exampleKr": "주말에 아버지와 강에서 물고기를 낚았습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-361",
@@ -3988,7 +4050,8 @@
     "meaningKr": "치다",
     "meaningEn": "to hit, to strike",
     "exampleJp": "パソコンのキーを速く打つことができます。",
-    "exampleKr": "컴퓨터 키를 빠르게 칠 수 있습니다."
+    "exampleKr": "컴퓨터 키를 빠르게 칠 수 있습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-363",
@@ -4010,7 +4073,8 @@
     "meaningKr": "사과하다",
     "meaningEn": "to apologize",
     "exampleJp": "遅刻したので先生に謝りました。",
-    "exampleKr": "지각을 해서 선생님께 사과했습니다."
+    "exampleKr": "지각을 해서 선생님께 사과했습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-365",
@@ -4318,7 +4382,8 @@
     "meaningKr": "놀라다",
     "meaningEn": "to be surprised",
     "exampleJp": "急に大きな音がしてびっくりしました。",
-    "exampleKr": "갑자기 큰 소리가 나서 놀랐습니다."
+    "exampleKr": "갑자기 큰 소리가 나서 놀랐습니다.",
+    "conjugationType": "suru"
   },
   {
     "id": "N4-393",
@@ -4341,7 +4406,8 @@
     "meaningEn": "to change, to alter, to vary",
     "exampleJp": "今年、髪型を大きく変えました。",
     "exampleKr": "올해 헤어스타일을 크게 바꿨습니다.",
-    "transitivityPairId": "変わる"
+    "transitivityPairId": "変わる",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-395",
@@ -4374,7 +4440,8 @@
     "meaningKr": "끓이다",
     "meaningEn": "to boil",
     "exampleJp": "お湯を沸かしてお茶を入れます。",
-    "exampleKr": "물을 끓여서 차를 우립니다."
+    "exampleKr": "물을 끓여서 차를 우립니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-398",
@@ -4529,7 +4596,8 @@
     "meaningEn": "to change (v.i.), to be transformed, to vary",
     "exampleJp": "今日は天気が急に変わりました。",
     "exampleKr": "오늘은 날씨가 갑자기 바뀌었습니다.",
-    "transitivityPairId": "変わる"
+    "transitivityPairId": "変わる",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-412",
@@ -4629,7 +4697,8 @@
     "meaningEn": "to be visible; -- polite verb meaning 来る (くる) --",
     "exampleJp": "この窓から富士山が見えます。",
     "exampleKr": "이 창문에서 후지산이 보입니다.",
-    "transitivityPairId": "見る"
+    "transitivityPairId": "見る",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-421",
@@ -4718,7 +4787,8 @@
     "meaningKr": "올바르다",
     "meaningEn": "correct",
     "exampleJp": "答えが正しいかどうか確認してください。",
-    "exampleKr": "답이 올바른지 확인해 주세요."
+    "exampleKr": "답이 올바른지 확인해 주세요.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-429",
@@ -4774,7 +4844,8 @@
     "meaningEn": "to convey (a message); to tell, to report",
     "exampleJp": "彼に私のお礼を伝えてください。",
     "exampleKr": "그에게 제 감사 인사를 전해 주세요.",
-    "transitivityPairId": "伝わる"
+    "transitivityPairId": "伝わる",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-434",
@@ -4829,7 +4900,8 @@
     "meaningKr": "미끄러지다",
     "meaningEn": "to slide, to slip",
     "exampleJp": "雪が降って道が滑ります。",
-    "exampleKr": "눈이 내려서 길이 미끄럽습니다."
+    "exampleKr": "눈이 내려서 길이 미끄럽습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-439",
@@ -5082,7 +5154,8 @@
     "meaningKr": "보내다",
     "meaningEn": "to send, to dispatch",
     "exampleJp": "友達に手紙を送りました。",
-    "exampleKr": "친구에게 편지를 보냈습니다."
+    "exampleKr": "친구에게 편지를 보냈습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-462",
@@ -5093,7 +5166,8 @@
     "meaningKr": "주다",
     "meaningEn": "to give",
     "exampleJp": "妹に誕生日プレゼントをあげました。",
-    "exampleKr": "여동생에게 생일 선물을 주었습니다."
+    "exampleKr": "여동생에게 생일 선물을 주었습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-463",
@@ -5104,7 +5178,8 @@
     "meaningKr": "떠들다",
     "meaningEn": "to make noise, to clamor",
     "exampleJp": "教室で大声で騒がないでください。",
-    "exampleKr": "교실에서 큰 소리로 떠들지 마세요."
+    "exampleKr": "교실에서 큰 소리로 떠들지 마세요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-464",
@@ -5115,7 +5190,8 @@
     "meaningKr": "묻다",
     "meaningEn": "to inquire (same as 質問する)",
     "exampleJp": "駅までの道を尋ねました。",
-    "exampleKr": "역까지 가는 길을 물었습니다."
+    "exampleKr": "역까지 가는 길을 물었습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-465",
@@ -5270,7 +5346,8 @@
     "meaningKr": "내려가다",
     "meaningEn": "to get down, to go; come down",
     "exampleJp": "階段をゆっくり下りてください。",
-    "exampleKr": "계단을 천천히 내려가세요."
+    "exampleKr": "계단을 천천히 내려가세요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-479",
@@ -5336,7 +5413,8 @@
     "meaningKr": "닮다",
     "meaningEn": "to resemble, to be similar",
     "exampleJp": "娘は母によく似ています。",
-    "exampleKr": "딸은 어머니를 많이 닮았습니다."
+    "exampleKr": "딸은 어머니를 많이 닮았습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-485",
@@ -5402,7 +5480,8 @@
     "meaningKr": "익숙해지다",
     "meaningEn": "to grow accustomed to",
     "exampleJp": "新しい仕事にだんだん慣れてきました。",
-    "exampleKr": "새로운 일에 점점 익숙해지고 있습니다."
+    "exampleKr": "새로운 일에 점점 익숙해지고 있습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-491",
@@ -5424,7 +5503,8 @@
     "meaningKr": "돕다",
     "meaningEn": "to help",
     "exampleJp": "毎日、母の家事を手伝います。",
-    "exampleKr": "매일 어머니의 집안일을 돕습니다."
+    "exampleKr": "매일 어머니의 집안일을 돕습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-493",
@@ -5490,7 +5570,8 @@
     "meaningKr": "웃다",
     "meaningEn": "to laugh, to smile",
     "exampleJp": "彼女はいつも楽しそうに笑っています。",
-    "exampleKr": "그녀는 항상 즐겁게 웃고 있습니다."
+    "exampleKr": "그녀는 항상 즐겁게 웃고 있습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-499",
@@ -5612,7 +5693,8 @@
     "meaningKr": "칭찬하다",
     "meaningEn": "to praise; to say nice things",
     "exampleJp": "先生が私を褒めてくれました。",
-    "exampleKr": "선생님이 저를 칭찬해 주셨습니다."
+    "exampleKr": "선생님이 저를 칭찬해 주셨습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-510",
@@ -5623,7 +5705,8 @@
     "meaningKr": "한산해지다",
     "meaningEn": "to be empty (in reference to people), to be less crowded",
     "exampleJp": "朝は電車が空いていて楽です。",
-    "exampleKr": "아침에는 전철이 한산해서 편합니다."
+    "exampleKr": "아침에는 전철이 한산해서 편합니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-511",
@@ -5755,7 +5838,8 @@
     "meaningKr": "늦다",
     "meaningEn": "to (be) become late",
     "exampleJp": "バスが事故で遅れています。",
-    "exampleKr": "버스가 사고로 늦고 있습니다."
+    "exampleKr": "버스가 사고로 늦고 있습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-523",
@@ -5767,7 +5851,8 @@
     "meaningEn": "to be found (v.i.), to be discovered",
     "exampleJp": "なくした鍵がやっと見つかりました。",
     "exampleKr": "잃어버린 열쇠가 드디어 발견되었습니다.",
-    "transitivityPairId": "見つける"
+    "transitivityPairId": "見つける",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-524",
@@ -5778,7 +5863,8 @@
     "meaningKr": "드시다",
     "meaningEn": "-- honorific form of 食べる (たべる) and 飲む (のむ) --",
     "exampleJp": "どうぞ、熱いうちに召し上がってください。",
-    "exampleKr": "자, 뜨거울 때 드세요."
+    "exampleKr": "자, 뜨거울 때 드세요.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-525",
@@ -5789,7 +5875,8 @@
     "meaningKr": "살찌다",
     "meaningEn": "to gain weight",
     "exampleJp": "最近甘い物を食べ過ぎて太りました。",
-    "exampleKr": "요즘 단것을 너무 먹어서 살쪘습니다."
+    "exampleKr": "요즘 단것을 너무 먹어서 살쪘습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-526",
@@ -5866,7 +5953,8 @@
     "meaningKr": "고쳐지다",
     "meaningEn": "to be fixed",
     "exampleJp": "パソコンがやっと直りました。",
-    "exampleKr": "컴퓨터가 드디어 고쳐졌습니다."
+    "exampleKr": "컴퓨터가 드디어 고쳐졌습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-533",
@@ -5878,7 +5966,8 @@
     "meaningEn": "to collect, to gather (v.t.), to assemble",
     "exampleJp": "切手を集めるのが趣味です。",
     "exampleKr": "우표를 모으는 것이 취미입니다.",
-    "transitivityPairId": "集まる"
+    "transitivityPairId": "集まる",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-534",
@@ -5889,7 +5978,8 @@
     "meaningKr": "고치다",
     "meaningEn": "to correct (v.t.); to fix",
     "exampleJp": "壊れた時計を直してもらいました。",
-    "exampleKr": "고장 난 시계를 고쳐 받았습니다."
+    "exampleKr": "고장 난 시계를 고쳐 받았습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-535",
@@ -5900,7 +5990,8 @@
     "meaningKr": "계속되다",
     "meaningEn": "to be continued",
     "exampleJp": "雨がもう一週間も続いています。",
-    "exampleKr": "비가 벌써 일주일이나 계속되고 있습니다."
+    "exampleKr": "비가 벌써 일주일이나 계속되고 있습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-536",
@@ -5999,7 +6090,8 @@
     "meaningKr": "지불하다",
     "meaningEn": "to pay",
     "exampleJp": "レジでお金を払いました。",
-    "exampleKr": "계산대에서 돈을 지불했습니다."
+    "exampleKr": "계산대에서 돈을 지불했습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-545",
@@ -6043,7 +6135,8 @@
     "meaningKr": "차가워지다",
     "meaningEn": "to grow cold, to cool down",
     "exampleJp": "夜になると急に冷えますね。",
-    "exampleKr": "밤이 되면 갑자기 차가워지네요."
+    "exampleKr": "밤이 되면 갑자기 차가워지네요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-549",
@@ -6054,7 +6147,8 @@
     "meaningKr": "켜지다",
     "meaningEn": "to be started, to be switched on",
     "exampleJp": "スイッチを押したら電気が点きました。",
-    "exampleKr": "스위치를 눌렀더니 불이 켜졌습니다."
+    "exampleKr": "스위치를 눌렀더니 불이 켜졌습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-550",
@@ -6098,7 +6192,8 @@
     "meaningKr": "계속하다",
     "meaningEn": "to continue, to keep up",
     "exampleJp": "毎日日本語の勉強を続けています。",
-    "exampleKr": "매일 일본어 공부를 계속하고 있습니다."
+    "exampleKr": "매일 일본어 공부를 계속하고 있습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-554",
@@ -6154,7 +6249,8 @@
     "meaningEn": "to break",
     "exampleJp": "コップが落ちて割れてしまいました。",
     "exampleKr": "컵이 떨어져서 깨져 버렸습니다.",
-    "transitivityPairId": "割れる"
+    "transitivityPairId": "割れる",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-559",
@@ -6187,7 +6283,8 @@
     "meaningKr": "괴롭히다",
     "meaningEn": "to bully, to torment",
     "exampleJp": "学校で友達をいじめてはいけません。",
-    "exampleKr": "학교에서 친구를 괴롭히면 안 됩니다."
+    "exampleKr": "학교에서 친구를 괴롭히면 안 됩니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-562",
@@ -6231,7 +6328,8 @@
     "meaningKr": "졸리다",
     "meaningEn": "sleepy, drowsy",
     "exampleJp": "昨日よく寝られなくて眠いです。",
-    "exampleKr": "어제 잠을 잘 못 자서 졸립니다."
+    "exampleKr": "어제 잠을 잘 못 자서 졸립니다.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-566",
@@ -6242,7 +6340,8 @@
     "meaningKr": "젖다",
     "meaningEn": "to get wet",
     "exampleJp": "雨で服がすっかり濡れました。",
-    "exampleKr": "비 때문에 옷이 흠뻑 젖었습니다."
+    "exampleKr": "비 때문에 옷이 흠뻑 젖었습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-567",
@@ -6253,7 +6352,8 @@
     "meaningKr": "쓰러지다",
     "meaningEn": "to collapse, to break down",
     "exampleJp": "おじいさんが道で倒れました。",
-    "exampleKr": "할아버지가 길에서 쓰러졌습니다."
+    "exampleKr": "할아버지가 길에서 쓰러졌습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-568",
@@ -6286,7 +6386,8 @@
     "meaningKr": "생각하다",
     "meaningEn": "to think (about); to consider",
     "exampleJp": "将来のことをよく考えてください。",
-    "exampleKr": "장래에 대해 잘 생각해 보세요."
+    "exampleKr": "장래에 대해 잘 생각해 보세요.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-571",
@@ -6297,7 +6398,8 @@
     "meaningKr": "향하다",
     "meaningEn": "to face, to go towards",
     "exampleJp": "電車は東京に向かっています。",
-    "exampleKr": "전철은 도쿄로 향하고 있습니다."
+    "exampleKr": "전철은 도쿄로 향하고 있습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-572",
@@ -6473,7 +6575,8 @@
     "meaningKr": "움직이다",
     "meaningEn": "to move",
     "exampleJp": "電車が急に動き出しました。",
-    "exampleKr": "전철이 갑자기 움직이기 시작했습니다."
+    "exampleKr": "전철이 갑자기 움직이기 시작했습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-588",
@@ -6540,7 +6643,8 @@
     "meaningEn": "to plant",
     "exampleJp": "庭に花を植えました。",
     "exampleKr": "마당에 꽃을 심었습니다.",
-    "transitivityPairId": "植わる"
+    "transitivityPairId": "植わる",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-594",
@@ -6562,7 +6666,8 @@
     "meaningKr": "더러워지다",
     "meaningEn": "to become dirty",
     "exampleJp": "靴が泥で汚れてしまいました。",
-    "exampleKr": "신발이 진흙으로 더러워졌습니다."
+    "exampleKr": "신발이 진흙으로 더러워졌습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-596",
@@ -6595,7 +6700,8 @@
     "meaningKr": "이기다",
     "meaningEn": "to win",
     "exampleJp": "昨日の試合で私たちのチームが勝ちました。",
-    "exampleKr": "어제 경기에서 우리 팀이 이겼습니다."
+    "exampleKr": "어제 경기에서 우리 팀이 이겼습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-599",
@@ -6628,7 +6734,8 @@
     "meaningKr": "교체하다",
     "meaningEn": "to exchange, to replace",
     "exampleJp": "古い電池を新しいのに取り替えました。",
-    "exampleKr": "오래된 건전지를 새것으로 교체했습니다."
+    "exampleKr": "오래된 건전지를 새것으로 교체했습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-602",
@@ -6639,7 +6746,8 @@
     "meaningKr": "서두르다",
     "meaningEn": "to hurry, to be in a hurry, to rush",
     "exampleJp": "電車に間に合うように急ぎました。",
-    "exampleKr": "전철 시간에 맞추려고 서둘렀습니다."
+    "exampleKr": "전철 시간에 맞추려고 서둘렀습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-603",
@@ -6705,7 +6813,8 @@
     "meaningKr": "시간에 맞추다",
     "meaningEn": "to be in time for",
     "exampleJp": "急いだので、電車に間に合いました。",
-    "exampleKr": "서둘러서 전철 시간에 맞췄습니다."
+    "exampleKr": "서둘러서 전철 시간에 맞췄습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-609",
@@ -6716,7 +6825,8 @@
     "meaningKr": "도움이 되다",
     "meaningEn": "to be helpful, to be useful",
     "exampleJp": "この辞書は勉強にとても役に立ちます。",
-    "exampleKr": "이 사전은 공부하는 데 아주 도움이 됩니다."
+    "exampleKr": "이 사전은 공부하는 데 아주 도움이 됩니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-610",
@@ -6749,7 +6859,8 @@
     "meaningKr": "되돌아가다",
     "meaningEn": "to return (v.i.); to come back",
     "exampleJp": "忘れ物をして家に戻りました。",
-    "exampleKr": "물건을 두고 와서 집으로 되돌아갔습니다."
+    "exampleKr": "물건을 두고 와서 집으로 되돌아갔습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-613",
@@ -6793,7 +6904,8 @@
     "meaningKr": "붐비다",
     "meaningEn": "to be crowded",
     "exampleJp": "週末はどこも込んでいます。",
-    "exampleKr": "주말에는 어디나 붐빕니다."
+    "exampleKr": "주말에는 어디나 붐빕니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-617",
@@ -6815,7 +6927,8 @@
     "meaningKr": "방문하다",
     "meaningEn": "to visit",
     "exampleJp": "久しぶりに祖母の家を訪ねました。",
-    "exampleKr": "오랜만에 할머니 댁을 방문했습니다."
+    "exampleKr": "오랜만에 할머니 댁을 방문했습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-619",
@@ -6827,7 +6940,8 @@
     "meaningEn": "to lower (v.t.); to hang",
     "exampleJp": "音楽の音を少し下げてください。",
     "exampleKr": "음악 소리를 좀 낮춰 주세요.",
-    "transitivityPairId": "下がる"
+    "transitivityPairId": "下がる",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-620",
@@ -6871,7 +6985,8 @@
     "meaningKr": "환승하다",
     "meaningEn": "to transfer (trains), to change (bus, train, etc.)",
     "exampleJp": "新宿でJRから地下鉄に乗り換えます。",
-    "exampleKr": "신주쿠에서 JR에서 지하철로 환승합니다."
+    "exampleKr": "신주쿠에서 JR에서 지하철로 환승합니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-624",
@@ -6882,7 +6997,8 @@
     "meaningKr": "헤어지다",
     "meaningEn": "to part from, to separate",
     "exampleJp": "二人は駅の前で別れました。",
-    "exampleKr": "두 사람은 역 앞에서 헤어졌습니다."
+    "exampleKr": "두 사람은 역 앞에서 헤어졌습니다.",
+    "conjugationType": "ichidan"
   },
   {
     "id": "N4-625",
@@ -6970,7 +7086,8 @@
     "meaningKr": "잠들다",
     "meaningEn": "to sleep",
     "exampleJp": "赤ちゃんはもう眠っています。",
-    "exampleKr": "아기는 벌써 잠들어 있습니다."
+    "exampleKr": "아기는 벌써 잠들어 있습니다.",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-633",
@@ -6982,7 +7099,8 @@
     "meaningEn": "to rise, to go up",
     "exampleJp": "最近野菜の値段が上がりました。",
     "exampleKr": "요즘 채소 가격이 올랐습니다.",
-    "transitivityPairId": "上がる"
+    "transitivityPairId": "上がる",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-634",
@@ -7082,7 +7200,8 @@
     "meaningEn": "to gather (v.i.), to collect",
     "exampleJp": "公園にたくさんの人が集まりました。",
     "exampleKr": "공원에 많은 사람들이 모였습니다.",
-    "transitivityPairId": "集まる"
+    "transitivityPairId": "集まる",
+    "conjugationType": "godan"
   },
   {
     "id": "N4-643",
@@ -7236,7 +7355,8 @@
     "meaningKr": "기쁘다",
     "meaningEn": "to be happy; to be glad",
     "exampleJp": "合格の知らせを聞いてうれしかったです。",
-    "exampleKr": "합격 소식을 듣고 기뻤습니다."
+    "exampleKr": "합격 소식을 듣고 기뻤습니다.",
+    "conjugationType": "iadj"
   },
   {
     "id": "N4-657",
