@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { kanjiList, type KanjiLevel } from '../data/kanji'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
+import { wordsUsingKanji, wordsUsingKanjiCount } from '../lib/kanjiWordIndex'
 import './StudyPage.css'
 
 const ALL_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
@@ -95,6 +96,28 @@ export default function KanjiListPage() {
                   </dd>
                 </div>
               )}
+              {(() => {
+                const words = wordsUsingKanji(kanji.kanji)
+                if (words.length === 0) return null
+                const total = wordsUsingKanjiCount(kanji.kanji)
+                return (
+                  <div className="study-field">
+                    <dt>이 한자가 쓰인 단어{total > words.length ? ` (${words.length}/${total})` : ` (${total})`}</dt>
+                    <dd>
+                      <div className="study-used-kanji">
+                        {words.map((w) => (
+                          <span key={w.id} className="study-used-kanji-chip">
+                            <span className="study-used-kanji-char">{w.word}</span>
+                            <span className="study-used-kanji-info">
+                              {w.reading} · {w.meaningKr}
+                            </span>
+                          </span>
+                        ))}
+                      </div>
+                    </dd>
+                  </div>
+                )
+              })()}
             </dl>
           </div>
         </div>
