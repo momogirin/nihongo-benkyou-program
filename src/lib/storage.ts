@@ -193,7 +193,7 @@ const DEFAULT_STUDY_BATCH_SIZE = 10
 // SRS(간격반복 복습, 라이트너 방식): 퀴즈에서 맞히면 박스가 하나 올라가고 다음
 // 복습일이 더 멀어지고, 틀리면 박스 0으로 돌아가 바로 다음날 다시 나옴.
 // 학습(flashcard)이 아니라 퀴즈로 실제 recall을 테스트했을 때만 갱신됨.
-export type SrsDomain = 'kanji' | 'vocab' | 'grammar' | 'englishVocab'
+export type SrsDomain = 'kanji' | 'vocab' | 'grammar' | 'englishVocab' | 'kana'
 
 export interface SrsEntry {
   box: number
@@ -206,6 +206,8 @@ const SRS_STATE_KEY: Record<SrsDomain, string> = {
   vocab: 'kanjiApp.srsVocab',
   grammar: 'kanjiApp.srsGrammar',
   englishVocab: 'kanjiApp.srsEnglishVocab',
+  // 가나 SRS는 로컬 저장만(현재 백업 페이로드에는 미포함 — 버전 호환 유지).
+  kana: 'kanjiApp.srsKana',
 }
 
 const SRS_MAX_BOX = 4

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { kanaList, type Kana } from '../data/kana'
 import { kanaPairList } from '../data/kanaPairs'
+import { getDueSrsIds, recordSrsReview } from '../lib/storage'
 import './StudyPage.css'
 import './VocabPage.css'
 import './KanjiPage.css'
@@ -430,12 +431,11 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
     [],
   )
 
-  function buildRomajiQuestions(): NormQuestion[] {
-    const picked = count === 'all' ? shuffle(pool) : shuffle(pool).slice(0, count)
-    return picked.map((kana) => {
-      const distractors = shuffle(pool.filter((k) => k.romaji !== kana.romaji)).slice(0, 3)
+  function buildRomajiQuestionsFrom(sourceKana: Kana[], distractorPool: Kana[]): NormQuestion[] {
+    const toRomaji = direction === 'toRomaji'
+    return sourceKana.map((kana) => {
+      const distractors = shuffle(distractorPool.filter((k) => k.romaji !== kana.romaji)).slice(0, 3)
       const all = shuffle([kana, ...distractors])
-      const toRomaji = direction === 'toRomaji'
       return {
         promptMain: toRomaji ? displayChar(kana, script) : kana.romaji,
         choices: all.map((k) => ({ key: k.id, main: toRomaji ? k.romaji : displayChar(k, script) })),
@@ -444,6 +444,26 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
         resultSub: kana.romaji,
       }
     })
+  }
+
+  function buildRomajiQuestions(): NormQuestion[] {
+    const picked = count === 'all' ? shuffle(pool) : shuffle(pool).slice(0, count)
+    return buildRomajiQuestionsFrom(picked, pool)
+  }
+
+  function startFrom(questionList: NormQuestion[]) {
+    setQuestions(questionList)
+    setIndex(0)
+    setFeedback(null)
+    setAnswers([])
+    setPhase('running')
+  }
+
+  // 복습: SRS가 지금 복습하라고 지목한 가나만 뽑아 로마자 퀴즈로. 오답 선택지는
+  // 전체 가나에서(그룹 무관) 뽑아 변별력 유지.
+  function startReview(dueKana: Kana[]) {
+    setQuizType('romaji')
+    startFrom(buildRomajiQuestionsFrom(shuffle(dueKana), kanaList))
   }
 
   function buildPairQuestions(): NormQuestion[] {
@@ -462,17 +482,16 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
   }
 
   function startQuiz() {
-    setQuestions(quizType === 'pairs' ? buildPairQuestions() : buildRomajiQuestions())
-    setIndex(0)
-    setFeedback(null)
-    setAnswers([])
-    setPhase('running')
+    startFrom(quizType === 'pairs' ? buildPairQuestions() : buildRomajiQuestions())
   }
 
   function submitAnswer(choice: NormChoice) {
     if (feedback) return
     const question = questions[index]
     const isCorrect = choice.key === question.answerKey
+    // 로마자 모드는 answerKey가 가나 id라 SRS 기록 대상(가나 낱자 재인). 표기 구분
+    // (pairs) 모드는 낱자 재인이 아니고 answerKey가 표기 문자열이라 기록하지 않음.
+    if (quizType === 'romaji') recordSrsReview('kana', question.answerKey, isCorrect)
     setFeedback({ selectedKey: choice.key, isCorrect })
     setAnswers((prev) => [...prev, { resultMain: question.resultMain, resultSub: question.resultSub, isCorrect }])
     if (isCorrect) advanceTimer.current = window.setTimeout(goNext, 550)
@@ -581,9 +600,19 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
     )
   }
 
+  // SRS가 지금 복습하라고 지목한 가나(로마자 퀴즈로 한 번이라도 틀렸거나 복습주기가
+  // 된 낱자). setup이 다시 그려질 때마다 최신 상태를 읽는다.
+  const dueSet = new Set(getDueSrsIds('kana', kanaList.map((k) => k.id)))
+  const dueKana = kanaList.filter((k) => dueSet.has(k.id))
+
   return (
     <div className="page study-setup">
       <h1>가나 퀴즈</h1>
+      {quizType === 'romaji' && dueKana.length > 0 && (
+        <button type="button" className="kana-review-banner" onClick={() => startReview(dueKana)}>
+          복습할 가나 <strong>{dueKana.length}자</strong> — 지금 복습하기
+        </button>
+      )}
       <div className="kana-quiz-field">
         <span className="kana-quiz-field-label">유형</span>
         <div className="study-level-picker">

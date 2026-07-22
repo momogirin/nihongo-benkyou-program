@@ -31,7 +31,9 @@ import { getDomainAccuracies, getSrsMastery, getWeakestDomain, getWeeklyStats } 
 import type { QuizConfig } from '../types'
 import './HomePage.css'
 
-const DOMAIN_LABEL = { kanji: '한자', vocab: '단어', grammar: '문법', englishVocab: '영어단어' } as const
+// 가나는 통계/정답률 도메인 집계 대상이 아니라 실제로 이 라벨로 렌더되지는 않지만,
+// SrsDomain 유니온에 kana가 포함돼 타입상 키가 필요함
+const DOMAIN_LABEL = { kanji: '한자', vocab: '단어', grammar: '문법', englishVocab: '영어단어', kana: '가나' } as const
 
 interface Props {
   onStartQuiz: (config: QuizConfig) => void

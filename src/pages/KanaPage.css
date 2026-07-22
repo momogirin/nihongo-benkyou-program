@@ -108,6 +108,29 @@
   line-height: 1.5;
 }
 
+/* SRS 복습 안내 배너(퀴즈 setup 상단) */
+.kana-review-banner {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: var(--radius-md);
+  background: var(--color-selected-bg);
+  color: var(--color-primary-dark);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.kana-review-banner:hover,
+.kana-review-banner:focus-visible {
+  background: var(--color-primary-dark);
+  color: var(--color-bg-elevated);
+}
+
 /* 퀴즈 설정: 라벨 + 선택 그룹 세로 배치 */
 .kana-quiz-field {
   margin-bottom: 16px;
