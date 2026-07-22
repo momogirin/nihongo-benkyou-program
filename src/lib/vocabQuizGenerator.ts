@@ -125,3 +125,21 @@ export function generateVocabBlankQuestionsFromIds(ids: string[]): VocabBlankQue
     return { entry, blankedSentence: blankSentence(entry)!, choices: shuffle([entry, ...distractors]) }
   })
 }
+
+// 단어 읽기 입력 퀴즈 — 4지선다(재인)가 아니라 히라가나 직접 타이핑(산출)으로
+// 실제 기억 강도를 테스트한다. word가 순수 히라가나라 reading이 사실상 word와
+// 같은 항목(N4-309 ごらんになる 등)도 출제 대상에서 딱히 뺄 이유는 없지만, reading
+// 자체가 비어 있는 방어적 케이스만 걸러낸다(현재 데이터엔 없지만 향후 데이터 추가 시 대비).
+export function vocabReadingLevelPool(level: KanjiLevel): VocabWord[] {
+  return vocabLevelPool(level).filter((w) => w.reading.trim() !== '')
+}
+
+export function generateVocabReadingQuestions(
+  level: KanjiLevel,
+  count: number,
+  order: 'random' | 'sequential' = 'random',
+): VocabWord[] {
+  const pool = vocabReadingLevelPool(level)
+  const ordered = order === 'random' ? shuffle(pool) : pool
+  return ordered.slice(0, Math.min(count, pool.length))
+}
