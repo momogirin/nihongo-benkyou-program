@@ -14,7 +14,7 @@ export type VerbForm =
   | 'conditional'
   | 'causative'
   | 'passive'
-export type AdjForm = 'dict' | 'negative' | 'past' | 'te'
+export type AdjForm = 'dict' | 'negative' | 'past' | 'te' | 'adverbial'
 
 // 五段 어미(う단) → 각 활용 어간/꼴
 const GODAN_MASU: Record<string, string> = { う: 'い', く: 'き', ぐ: 'ぎ', す: 'し', つ: 'ち', ぬ: 'に', ぶ: 'び', む: 'み', る: 'り' }
@@ -94,15 +94,15 @@ function conjKuru(str: string, form: VerbForm): string {
 function conjIadj(str: string, form: AdjForm): string {
   if (form === 'dict') return str
   if (str === 'いい' || str === 'よい') {
-    return { negative: 'よくない', past: 'よかった', te: 'よくて' }[form]
+    return { negative: 'よくない', past: 'よかった', te: 'よくて', adverbial: 'よく' }[form]
   }
   const stem = str.slice(0, -1) // remove 끝 い
-  return { negative: stem + 'くない', past: stem + 'かった', te: stem + 'くて' }[form]
+  return { negative: stem + 'くない', past: stem + 'かった', te: stem + 'くて', adverbial: stem + 'く' }[form]
 }
 
 // な형용사(사전형은 な 없이 저장)
 function conjNaadj(str: string, form: AdjForm): string {
-  return { dict: str, negative: str + 'じゃない', past: str + 'だった', te: str + 'で' }[form]
+  return { dict: str, negative: str + 'じゃない', past: str + 'だった', te: str + 'で', adverbial: str + 'に' }[form]
 }
 
 function conjVerb(str: string, type: ConjugationType, form: VerbForm): string {
@@ -135,6 +135,7 @@ export const ADJ_FORMS: { key: AdjForm; label: string; hint: string }[] = [
   { key: 'negative', label: '부정형', hint: '~하지 않다' },
   { key: 'past', label: '과거형', hint: '~했다' },
   { key: 'te', label: 'て형', hint: '연결' },
+  { key: 'adverbial', label: '부사형', hint: '~하게(く·に)' },
 ]
 
 export interface ConjugatedForm {
