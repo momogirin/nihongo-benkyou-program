@@ -5,20 +5,27 @@ import { usedKanji } from '../lib/kanjiUsage'
 import {
   generateVocabQuestions,
   generateVocabQuestionsFromIds,
+  generateVocabBlankQuestions,
   vocabLevelPool,
+  vocabBlankLevelPool,
   type VocabQuizQuestion,
+  type VocabBlankQuestion,
 } from '../lib/vocabQuizGenerator'
 import {
   addVocabQuizHistoryEntry,
   addVocabWrongNotes,
   clearVocabInProgressQuiz,
+  clearVocabBlankInProgressQuiz,
   getVocabInProgressQuiz,
+  getVocabBlankInProgressQuiz,
   getVocabStudyProgress,
   recordSrsReview,
   removeVocabWrongNote,
   saveVocabInProgressQuiz,
+  saveVocabBlankInProgressQuiz,
   setVocabStudyProgress,
   type VocabInProgressQuiz,
+  type VocabBlankInProgressQuiz,
 } from '../lib/storage'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
@@ -30,11 +37,22 @@ const QUIZ_QUESTION_COUNT = 20
 const QUIZ_COUNT_OPTIONS = [10, 20, 30, 50, 'all'] as const
 const FEEDBACK_DELAY_MS = 550
 
-type Phase = 'setup' | 'studying' | 'done' | 'browse' | 'quiz' | 'quizResult'
+type Phase = 'setup' | 'studying' | 'done' | 'browse' | 'quiz' | 'quizResult' | 'blankQuiz' | 'blankQuizResult'
+type QuizType = 'meaning' | 'blank'
+const QUIZ_TYPE_LABELS: Record<QuizType, string> = {
+  meaning: '뜻 맞히기',
+  blank: '문맥 빈칸 채우기',
+}
 
 interface QuizAnswer {
   question: VocabQuizQuestion
   selected: string
+  isCorrect: boolean
+}
+
+interface BlankAnswer {
+  question: VocabBlankQuestion
+  selectedId: string
   isCorrect: boolean
 }
 
@@ -46,6 +64,7 @@ interface Props {
 export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [level, setLevel] = useState<KanjiLevel>(ALL_LEVELS[0])
   const pool = useMemo(() => vocabLevelPool(level), [level])
+  const blankPool = useMemo(() => vocabBlankLevelPool(level), [level])
   const completedCount = Math.min(getVocabStudyProgress(level), pool.length)
   const remaining = pool.length - completedCount
 
@@ -81,9 +100,23 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   // on the setup screen as an 이어하기 option instead of silently losing it
   const [savedQuiz, setSavedQuiz] = useState(() => getVocabInProgressQuiz())
 
+  // 문맥 빈칸 채우기 퀴즈 — 뜻 맞히기 퀴즈와 질문/정답 shape이 달라 상태를 따로 둠
+  // (GrammarPage의 뜻맞히기/빈칸채우기 퀴즈와 같은 병렬 구조)
+  const [quizType, setQuizType] = useState<QuizType>('meaning')
+  const [blankQuestions, setBlankQuestions] = useState<VocabBlankQuestion[]>([])
+  const [blankIndex, setBlankIndex] = useState(0)
+  const [blankAnswers, setBlankAnswers] = useState<BlankAnswer[]>([])
+  const [blankFeedback, setBlankFeedback] = useState<{ isCorrect: boolean; selectedId: string } | null>(null)
+  const blankChoicesRef = useRef<HTMLDivElement>(null)
+  const blankRestartButtonRef = useRef<HTMLButtonElement>(null)
+  const blankStartRef = useRef(0)
+  const lastAdvancedBlankIndexRef = useRef(-1)
+  const [savedBlankQuiz, setSavedBlankQuiz] = useState(() => getVocabBlankInProgressQuiz())
+
   useEffect(() => {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'quizResult') restartButtonRef.current?.focus({ preventScroll: true })
+    if (phase === 'blankQuizResult') blankRestartButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
 
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
@@ -137,6 +170,29 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     setPhase('quiz')
   }
 
+  function startBlankQuiz() {
+    clearVocabBlankInProgressQuiz()
+    setSavedBlankQuiz(null)
+    const count = quizCount === 'all' ? blankPool.length : quizCount
+    setBlankQuestions(generateVocabBlankQuestions(level, count, quizOrder))
+    setBlankIndex(0)
+    setBlankAnswers([])
+    setBlankFeedback(null)
+    lastAdvancedBlankIndexRef.current = -1
+    blankStartRef.current = Date.now()
+    setPhase('blankQuiz')
+  }
+
+  function resumeBlankQuiz(saved: VocabBlankInProgressQuiz) {
+    setBlankQuestions(saved.questions)
+    setBlankIndex(saved.index)
+    setBlankAnswers(saved.answers)
+    setBlankFeedback(null)
+    lastAdvancedBlankIndexRef.current = -1
+    blankStartRef.current = new Date(saved.startedAt).getTime()
+    setPhase('blankQuiz')
+  }
+
   useEffect(() => {
     if (!retryIds || retryIds.length === 0) return
     clearVocabInProgressQuiz()
@@ -169,6 +225,25 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     // a word answered correctly this round is no longer a standing weak point
     quizAnswers.filter((a) => a.isCorrect).forEach((a) => removeVocabWrongNote(a.question.entry.id))
     quizAnswers.forEach((a) => recordSrsReview('vocab', a.question.entry.id, a.isCorrect))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase])
+
+  useEffect(() => {
+    if (phase !== 'blankQuizResult') return
+    clearVocabBlankInProgressQuiz()
+    setSavedBlankQuiz(null)
+    const wrongIds = blankAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
+    addVocabWrongNotes(wrongIds, `단어 문맥 빈칸 퀴즈 · ${level}`)
+    addVocabQuizHistoryEntry({
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      level,
+      total: blankAnswers.length,
+      correct: blankAnswers.filter((a) => a.isCorrect).length,
+      elapsedMs: Date.now() - blankStartRef.current,
+      finishedAt: new Date().toISOString(),
+    })
+    blankAnswers.filter((a) => a.isCorrect).forEach((a) => removeVocabWrongNote(a.question.entry.id))
+    blankAnswers.forEach((a) => recordSrsReview('vocab', a.question.entry.id, a.isCorrect))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 
@@ -208,6 +283,15 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     }
     choicesRef.current?.querySelector('button')?.focus()
   }, [phase, quizIndex])
+
+  useEffect(() => {
+    if (phase !== 'blankQuiz') return
+    if (skipNextChoiceFocusRef.current) {
+      skipNextChoiceFocusRef.current = false
+      return
+    }
+    blankChoicesRef.current?.querySelector('button')?.focus()
+  }, [phase, blankIndex])
 
   function goNextQuiz(nextIndex: number) {
     if (nextIndex < quizQuestions.length) {
@@ -273,6 +357,62 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     return () => window.removeEventListener('keydown', handleKeyDown)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, quizIndex, quizFeedback])
+
+  function goNextBlank(nextIndex: number) {
+    if (nextIndex < blankQuestions.length) {
+      setBlankFeedback(null)
+      setBlankIndex(nextIndex)
+    } else {
+      setPhase('blankQuizResult')
+    }
+  }
+
+  function handleNextBlank() {
+    if (lastAdvancedBlankIndexRef.current === blankIndex) return
+    lastAdvancedBlankIndexRef.current = blankIndex
+    skipNextChoiceFocusRef.current = true
+    goNextBlank(blankIndex + 1)
+  }
+
+  function submitBlankAnswer(selectedId: string) {
+    if (blankFeedback) return
+    const question = blankQuestions[blankIndex]
+    const isCorrect = selectedId === question.entry.id
+    setBlankFeedback({ isCorrect, selectedId })
+    const updatedAnswers = [...blankAnswers, { question, selectedId, isCorrect }]
+    setBlankAnswers(updatedAnswers)
+
+    const nextIndex = blankIndex + 1
+    if (nextIndex < blankQuestions.length) {
+      saveVocabBlankInProgressQuiz({
+        level,
+        questions: blankQuestions,
+        index: nextIndex,
+        answers: updatedAnswers,
+        startedAt: new Date(blankStartRef.current).toISOString(),
+      })
+    }
+
+    if (isCorrect) {
+      setTimeout(() => goNextBlank(nextIndex), FEEDBACK_DELAY_MS)
+    }
+  }
+
+  useEffect(() => {
+    if (phase !== 'blankQuiz') return
+    function handleKeyDown(e: KeyboardEvent) {
+      if (blankFeedback) {
+        if (!blankFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextBlank()
+        return
+      }
+      const choiceIndex = Number(e.key) - 1
+      const choice = blankQuestions[blankIndex]?.choices[choiceIndex]
+      if (choice) submitBlankAnswer(choice.id)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, blankIndex, blankFeedback])
 
   if (phase === 'browse' && browseIndex !== null) {
     const word = levelWords[browseIndex]
@@ -640,6 +780,104 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     )
   }
 
+  if (phase === 'blankQuiz') {
+    const question = blankQuestions[blankIndex]
+    return (
+      <div className="quiz-runner">
+        <div className="quiz-topbar">
+          <button
+            type="button"
+            className="quiz-exit-button"
+            onClick={() => {
+              setPhase('setup')
+              setSavedBlankQuiz(getVocabBlankInProgressQuiz())
+            }}
+          >
+            나가기
+          </button>
+          <div className="quiz-progress">
+            {blankIndex + 1} / {blankQuestions.length}
+          </div>
+        </div>
+        <div className="vocab-quiz-prompt">
+          <span className="vocab-derivation-sentence">{question.blankedSentence}</span>
+        </div>
+        <div className="vocab-quiz-choices" ref={blankChoicesRef}>
+          {question.choices.map((choice, i) => {
+            let className = 'vocab-quiz-choice'
+            if (blankFeedback) {
+              if (choice.id === blankFeedback.selectedId) {
+                className += blankFeedback.isCorrect ? ' correct' : ' incorrect'
+              } else if (!blankFeedback.isCorrect && choice.id === question.entry.id) {
+                className += ' reveal-correct'
+              }
+            }
+            return (
+              <button
+                key={choice.id}
+                type="button"
+                className={className}
+                disabled={blankFeedback !== null}
+                onClick={() => submitBlankAnswer(choice.id)}
+              >
+                <span className="quiz-choice-num">{i + 1}</span>
+                {choice.word}
+              </button>
+            )
+          })}
+        </div>
+        {blankFeedback && !blankFeedback.isCorrect && (
+          <button type="button" className="quiz-next-button" onClick={handleNextBlank}>
+            다음
+          </button>
+        )}
+        <p className="shortcut-hint">숫자키(1~4)로 선택 · 오답이면 Enter로 다음 문제</p>
+      </div>
+    )
+  }
+
+  if (phase === 'blankQuizResult') {
+    const correctCount = blankAnswers.filter((a) => a.isCorrect).length
+    const total = blankAnswers.length
+    const rate = total > 0 ? Math.round((correctCount / total) * 100) : 0
+
+    return (
+      <div className="result-screen">
+        <h1>단어 문맥 빈칸 퀴즈 결과</h1>
+        <p className="result-summary">
+          {correctCount} / {total} 정답 ({rate}%)
+        </p>
+        <ul className="result-list">
+          {blankAnswers.map((a, i) => {
+            const selectedChoice = a.question.choices.find((c) => c.id === a.selectedId)
+            return (
+              <li key={`${a.question.entry.id}-${i}`} className={a.isCorrect ? 'correct' : 'incorrect'}>
+                <span className="vocab-result-word">
+                  {a.question.entry.word}
+                  <span className="vocab-result-reading">{a.question.entry.reading}</span>
+                </span>
+                <span className="result-detail">
+                  <span className="result-detail-main">
+                    정답: {a.question.entry.word}
+                    {!a.isCorrect && selectedChoice && <> · 내 답: {selectedChoice.word}</>}
+                  </span>
+                </span>
+              </li>
+            )
+          })}
+        </ul>
+        <button
+          type="button"
+          ref={blankRestartButtonRef}
+          className="restart-button"
+          onClick={() => setPhase('setup')}
+        >
+          다시 설정하기
+        </button>
+      </div>
+    )
+  }
+
   const isLevelFinished = pool.length > 0 && remaining <= 0
 
   return (
@@ -665,6 +903,18 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             진행 중이던 단어 퀴즈가 있어요 ({savedQuiz.level} · {savedQuiz.index}/{savedQuiz.questions.length}문제)
           </p>
           <button type="button" className="study-start-button" onClick={() => resumeQuiz(savedQuiz)}>
+            이어서 풀기
+          </button>
+        </>
+      )}
+
+      {savedBlankQuiz && (
+        <>
+          <p className="page-placeholder">
+            진행 중이던 단어 문맥 빈칸 퀴즈가 있어요 ({savedBlankQuiz.level} · {savedBlankQuiz.index}/
+            {savedBlankQuiz.questions.length}문제)
+          </p>
+          <button type="button" className="study-start-button" onClick={() => resumeBlankQuiz(savedBlankQuiz)}>
             이어서 풀기
           </button>
         </>
@@ -701,10 +951,27 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
       )}
 
       <div className="quiz-option-group">
+        <span className="quiz-option-label">퀴즈 종류</span>
+        <div className="study-level-picker">
+          {(['meaning', 'blank'] as const).map((t) => (
+            <button
+              key={t}
+              type="button"
+              className={`study-level-btn${quizType === t ? ' active' : ''}`}
+              onClick={() => setQuizType(t)}
+            >
+              {QUIZ_TYPE_LABELS[t]}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="quiz-option-group">
         <span className="quiz-option-label">문항 수</span>
         <div className="study-level-picker">
           {QUIZ_COUNT_OPTIONS.map((opt) => {
-            const disabled = opt !== 'all' && opt > pool.length
+            const activePool = quizType === 'meaning' ? pool : blankPool
+            const disabled = opt !== 'all' && opt > activePool.length
             return (
               <button
                 key={opt}
@@ -713,7 +980,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
                 disabled={disabled}
                 onClick={() => setQuizCount(opt)}
               >
-                {opt === 'all' ? `전체 (${pool.length})` : opt}
+                {opt === 'all' ? `전체 (${activePool.length})` : opt}
               </button>
             )
           })}
@@ -740,9 +1007,17 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         </div>
       </div>
 
-      <button type="button" className="vocab-quiz-button" onClick={startQuiz}>
-        단어 퀴즈 풀기 ({quizCount === 'all' ? pool.length : Math.min(quizCount, pool.length)}문제)
-      </button>
+      {quizType === 'blank' && blankPool.length === 0 ? (
+        <p className="page-placeholder">이 급수는 아직 빈칸 퀴즈로 낼 수 있는 단어가 없습니다.</p>
+      ) : quizType === 'meaning' ? (
+        <button type="button" className="vocab-quiz-button" onClick={startQuiz}>
+          단어 퀴즈 풀기 ({quizCount === 'all' ? pool.length : Math.min(quizCount, pool.length)}문제)
+        </button>
+      ) : (
+        <button type="button" className="vocab-quiz-button" onClick={startBlankQuiz}>
+          문맥 빈칸 퀴즈 풀기 ({quizCount === 'all' ? blankPool.length : Math.min(quizCount, blankPool.length)}문제)
+        </button>
+      )}
     </div>
   )
 }

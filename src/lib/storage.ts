@@ -1,6 +1,6 @@
 import type { KanjiLevel } from '../data/kanji'
 import type { QuizQuestion } from './quizGenerator'
-import type { VocabQuizQuestion } from './vocabQuizGenerator'
+import type { VocabQuizQuestion, VocabBlankQuestion } from './vocabQuizGenerator'
 import type { GrammarQuizQuestion, GrammarBlankQuestion } from './grammarQuizGenerator'
 import type { MockExamQuestion } from './mockExamGenerator'
 import type { EnglishVocabDerivationQuestion, EnglishVocabQuizQuestion } from './englishVocabQuizGenerator'
@@ -69,6 +69,16 @@ export interface VocabInProgressQuiz {
   startedAt: string
 }
 
+// 단어 문맥 빈칸 채우기 퀴즈용 이어하기 상태 — 위 VocabInProgressQuiz와 나란한 별도
+// 타입(질문/정답 shape이 달라 합칠 수 없음, GrammarBlankInProgressQuiz와 같은 이유)
+export interface VocabBlankInProgressQuiz {
+  level: KanjiLevel
+  questions: VocabBlankQuestion[]
+  index: number
+  answers: { question: VocabBlankQuestion; selectedId: string; isCorrect: boolean }[]
+  startedAt: string
+}
+
 export interface GrammarInProgressQuiz {
   level: KanjiLevel
   questions: GrammarQuizQuestion[]
@@ -129,6 +139,7 @@ const MOCK_EXAM_HISTORY_KEY = 'kanjiApp.mockExamHistory'
 const QUIZ_HISTORY_LIMIT = 20
 const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
 const VOCAB_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabInProgressQuiz'
+const VOCAB_BLANK_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabBlankInProgressQuiz'
 const GRAMMAR_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.grammarInProgressQuiz'
 const GRAMMAR_BLANK_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.grammarBlankInProgressQuiz'
 const MOCK_EXAM_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.mockExamInProgressQuiz'
@@ -349,6 +360,24 @@ export function clearVocabInProgressQuiz() {
   localStorage.removeItem(VOCAB_IN_PROGRESS_QUIZ_KEY)
 }
 
+// same again, for 단어 문맥 빈칸 채우기 퀴즈
+export function getVocabBlankInProgressQuiz(): VocabBlankInProgressQuiz | null {
+  try {
+    const raw = localStorage.getItem(VOCAB_BLANK_IN_PROGRESS_QUIZ_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
+export function saveVocabBlankInProgressQuiz(state: VocabBlankInProgressQuiz) {
+  localStorage.setItem(VOCAB_BLANK_IN_PROGRESS_QUIZ_KEY, JSON.stringify(state))
+}
+
+export function clearVocabBlankInProgressQuiz() {
+  localStorage.removeItem(VOCAB_BLANK_IN_PROGRESS_QUIZ_KEY)
+}
+
 // same again, for 문법 퀴즈
 export function getGrammarInProgressQuiz(): GrammarInProgressQuiz | null {
   try {
@@ -426,6 +455,10 @@ export function clearEnglishVocabInProgressQuiz() {
 // same "don't clobber an active local session" rule as importInProgressQuiz
 export function importVocabInProgressQuiz(quiz: VocabInProgressQuiz | null) {
   if (quiz && !getVocabInProgressQuiz()) saveVocabInProgressQuiz(quiz)
+}
+
+export function importVocabBlankInProgressQuiz(quiz: VocabBlankInProgressQuiz | null) {
+  if (quiz && !getVocabBlankInProgressQuiz()) saveVocabBlankInProgressQuiz(quiz)
 }
 
 export function importEnglishVocabInProgressQuiz(quiz: EnglishVocabInProgressQuiz | null) {
@@ -775,7 +808,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15
+  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -808,6 +841,8 @@ export interface BackupPayload {
   englishVocabDerivationInProgressQuiz?: EnglishVocabDerivationInProgressQuiz | null
   // added in version 15 (문법 빈칸 채우기 퀴즈) — optional so older backup files still validate
   grammarBlankInProgressQuiz?: GrammarBlankInProgressQuiz | null
+  // added in version 16 (단어 문맥 빈칸 채우기 퀴즈) — optional so older backup files still validate
+  vocabBlankInProgressQuiz?: VocabBlankInProgressQuiz | null
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -816,7 +851,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 15,
+    version: 16,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -843,6 +878,7 @@ export function buildBackupPayload(): BackupPayload {
     englishVocabInProgressQuiz: getEnglishVocabInProgressQuiz(),
     englishVocabDerivationInProgressQuiz: getEnglishVocabDerivationInProgressQuiz(),
     grammarBlankInProgressQuiz: getGrammarBlankInProgressQuiz(),
+    vocabBlankInProgressQuiz: getVocabBlankInProgressQuiz(),
   }
 }
 
@@ -876,4 +912,5 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.englishVocabDerivationInProgressQuiz)
     importEnglishVocabDerivationInProgressQuiz(payload.englishVocabDerivationInProgressQuiz)
   if (payload.grammarBlankInProgressQuiz) importGrammarBlankInProgressQuiz(payload.grammarBlankInProgressQuiz)
+  if (payload.vocabBlankInProgressQuiz) importVocabBlankInProgressQuiz(payload.vocabBlankInProgressQuiz)
 }
