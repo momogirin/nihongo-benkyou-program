@@ -3,6 +3,7 @@ import { vocabList, type VocabWord } from '../data/vocab'
 import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
 import { isCorrectAnswer } from '../lib/answerMatching'
+import { TYPE_LABELS } from '../lib/conjugation'
 import {
   generateVocabQuestions,
   generateVocabQuestionsFromIds,
@@ -881,6 +882,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           <div className="study-card">
             <div className="study-top">
               <span className={`study-level-badge study-level-badge-${word.level.toLowerCase()}`}>{word.level}</span>
+              {word.conjugationType && <span className="study-radical-chip">{TYPE_LABELS[word.conjugationType]}</span>}
             </div>
             <div className="vocab-word-jp">{word.word}</div>
             <div className="vocab-word-reading">{word.reading}</div>
@@ -1039,6 +1041,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           <div className="study-card">
             <div className="study-top">
               <span className={`study-level-badge study-level-badge-${word.level.toLowerCase()}`}>{word.level}</span>
+              {word.conjugationType && <span className="study-radical-chip">{TYPE_LABELS[word.conjugationType]}</span>}
             </div>
             <div className="vocab-word-jp">{word.word}</div>
             <div className="vocab-word-reading">{word.reading}</div>
