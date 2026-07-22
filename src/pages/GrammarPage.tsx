@@ -62,6 +62,31 @@ interface Props {
   onRetryIdsConsumed?: () => void
 }
 
+// shown at the moment of a wrong answer in both grammar quiz types — the full
+// grammar card (문형·뜻·해설·예문) so the miss teaches instead of just marking
+// wrong. GrammarPoint already carries an explanation field, so no new data.
+// .quiz-explanation styles come from the shared QuizRunner.css (already imported).
+function GrammarHint({ entry }: { entry: GrammarPoint }) {
+  return (
+    <div className="quiz-explanation">
+      <div className="quiz-explanation-row">
+        <span className="quiz-explanation-label">문형</span>
+        <span>{entry.pattern} · {entry.meaningKr}</span>
+      </div>
+      {entry.explanation && (
+        <div className="quiz-explanation-row">
+          <span className="quiz-explanation-label">해설</span>
+          <span>{entry.explanation}</span>
+        </div>
+      )}
+      <div className="quiz-explanation-row">
+        <span className="quiz-explanation-label">예</span>
+        <span>{entry.exampleJp} · {entry.exampleKr}</span>
+      </div>
+    </div>
+  )
+}
+
 export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [level, setLevel] = useState<KanjiLevel>(grammarAvailableLevels[0])
   const pool = useMemo(() => grammarLevelPool(level), [level])
@@ -711,6 +736,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {quizFeedback && !quizFeedback.isCorrect && <GrammarHint entry={question.entry} />}
         {quizFeedback && !quizFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextQuiz}>
             다음
@@ -798,6 +824,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {blankFeedback && !blankFeedback.isCorrect && <GrammarHint entry={question.entry} />}
         {blankFeedback && !blankFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextBlank}>
             다음
