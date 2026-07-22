@@ -41,6 +41,9 @@ export interface VocabWord {
   exampleJp?: string
   exampleKr?: string
   transitivityPairId?: string
+  // 동사·형용사 활용유형(있으면 활용 드릴 대상). 5단/1단 분류는 표준사전 기준 검증,
+  // な형용사·명사·부사는 이번 태깅 스코프 밖(현재는 동사+い형용사 위주) — src/lib/conjugation.ts
+  conjugationType?: 'godan' | 'ichidan' | 'suru' | 'kuru' | 'iadj' | 'naadj'
 }
 
 // Parsed from a JSON string rather than a literal array — see the same
