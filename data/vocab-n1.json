@@ -2087,7 +2087,8 @@
     "meaningKr": "정해지다",
     "meaningEn": "to become settled, to be fixed",
     "exampleJp": "議論の末、ようやく方針が定まった。",
-    "exampleKr": "논의 끝에 마침내 방침이 정해졌다."
+    "exampleKr": "논의 끝에 마침내 방침이 정해졌다.",
+    "transitivityPairId": "定まる"
   },
   {
     "id": "N1-191",
@@ -2098,7 +2099,8 @@
     "meaningKr": "정하다",
     "meaningEn": "to decide, to determine",
     "exampleJp": "法律で最低賃金が定められている。",
-    "exampleKr": "법률로 최저임금이 정해져 있다."
+    "exampleKr": "법률로 최저임금이 정해져 있다.",
+    "transitivityPairId": "定まる"
   },
   {
     "id": "N1-192",
@@ -2560,7 +2562,8 @@
     "meaningKr": "완성하다",
     "meaningEn": "to finish up, to complete",
     "exampleJp": "締め切りまでに、なんとかレポートを仕上げた。",
-    "exampleKr": "마감까지 어떻게든 리포트를 완성했다."
+    "exampleKr": "마감까지 어떻게든 리포트를 완성했다.",
+    "transitivityPairId": "仕上がる"
   },
   {
     "id": "N1-234",
@@ -5332,7 +5335,8 @@
     "meaningKr": "뒤틀리다",
     "meaningEn": "twist, strain",
     "exampleJp": "コードが捩れてしまい、うまく巻き取れない。",
-    "exampleKr": "코드가 뒤틀려서 잘 감기지 않는다."
+    "exampleKr": "코드가 뒤틀려서 잘 감기지 않는다.",
+    "transitivityPairId": "捩れる"
   },
   {
     "id": "N1-486",
@@ -6905,7 +6909,8 @@
     "meaningKr": "심어지다",
     "meaningEn": "to be planted",
     "exampleJp": "庭には古い桜の木が一本植わっている。",
-    "exampleKr": "정원에는 오래된 벚나무가 한 그루 심어져 있다."
+    "exampleKr": "정원에는 오래된 벚나무가 한 그루 심어져 있다.",
+    "transitivityPairId": "植わる"
   },
   {
     "id": "N1-629",
@@ -7554,7 +7559,8 @@
     "meaningKr": "수습되다(정리되다)",
     "meaningEn": "to settle into; to be obtained",
     "exampleJp": "混乱していた騒動もようやく収まった。",
-    "exampleKr": "혼란스러웠던 소동도 마침내 수습되었다."
+    "exampleKr": "혼란스러웠던 소동도 마침내 수습되었다.",
+    "transitivityPairId": "収まる"
   },
   {
     "id": "N1-688",
@@ -7565,7 +7571,8 @@
     "meaningKr": "납입되다",
     "meaningEn": "to settle into; to be obtained",
     "exampleJp": "今月分の税金は無事に納まった。",
-    "exampleKr": "이번 달분 세금은 무사히 납입되었다."
+    "exampleKr": "이번 달분 세금은 무사히 납입되었다.",
+    "transitivityPairId": "納まる"
   },
   {
     "id": "N1-689",
@@ -7576,7 +7583,8 @@
     "meaningKr": "진정되다",
     "meaningEn": "to be at peace, to calm down",
     "exampleJp": "薬を飲んだら痛みが治まった。",
-    "exampleKr": "약을 먹었더니 통증이 진정되었다."
+    "exampleKr": "약을 먹었더니 통증이 진정되었다.",
+    "transitivityPairId": "治まる"
   },
   {
     "id": "N1-690",
@@ -9237,7 +9245,8 @@
     "meaningKr": "굳히다",
     "meaningEn": "to harden, to freeze, to fortify",
     "exampleJp": "彼はもう留学する決意を固めているようだ。",
-    "exampleKr": "그는 이미 유학할 결심을 굳힌 것 같다."
+    "exampleKr": "그는 이미 유학할 결심을 굳힌 것 같다.",
+    "transitivityPairId": "固まる"
   },
   {
     "id": "N1-841",
@@ -13747,7 +13756,8 @@
     "meaningKr": "고쳐지다(격식차려지다)",
     "meaningEn": "to be renewed; to be formal",
     "exampleJp": "年が改まると、社内の規則も一部見直されるそうだ。",
-    "exampleKr": "새해가 되면 사내 규칙도 일부 재검토된다고 한다."
+    "exampleKr": "새해가 되면 사내 규칙도 일부 재검토된다고 한다.",
+    "transitivityPairId": "改まる"
   },
   {
     "id": "N1-1251",
@@ -15848,7 +15858,8 @@
     "meaningKr": "스치다(닳다)",
     "meaningEn": "to rub, to chafe",
     "exampleJp": "新しい靴で長時間歩いたら、かかとが擦れて痛くなった。",
-    "exampleKr": "새 신발을 신고 오래 걸었더니 뒤꿈치가 쓸려서 아팠다."
+    "exampleKr": "새 신발을 신고 오래 걸었더니 뒤꿈치가 쓸려서 아팠다.",
+    "transitivityPairId": "擦る"
   },
   {
     "id": "N1-1442",
@@ -17256,7 +17267,8 @@
     "meaningKr": "갖추어지다",
     "meaningEn": "to be furnished with",
     "exampleJp": "この施設には最新の設備が備わっている。",
-    "exampleKr": "이 시설에는 최신 설비가 갖추어져 있다."
+    "exampleKr": "이 시설에는 최신 설비가 갖추어져 있다.",
+    "transitivityPairId": "備わる"
   },
   {
     "id": "N1-1570",
@@ -17267,7 +17279,8 @@
     "meaningKr": "갖추어지다",
     "meaningEn": "to be furnished with",
     "exampleJp": "彼には人を惹きつける魅力が具わっている。",
-    "exampleKr": "그에게는 사람을 끌어당기는 매력이 갖추어져 있다."
+    "exampleKr": "그에게는 사람을 끌어당기는 매력이 갖추어져 있다.",
+    "transitivityPairId": "具わる"
   },
   {
     "id": "N1-1571",
@@ -17311,7 +17324,8 @@
     "meaningKr": "물들다",
     "meaningEn": "to be dyed",
     "exampleJp": "夕日で空が赤く染まっている。",
-    "exampleKr": "석양으로 하늘이 붉게 물들어 있다."
+    "exampleKr": "석양으로 하늘이 붉게 물들어 있다.",
+    "transitivityPairId": "染まる"
   },
   {
     "id": "N1-1575",
@@ -17322,7 +17336,8 @@
     "meaningKr": "물들이다",
     "meaningEn": "to dye, to color",
     "exampleJp": "彼女は髪を明るい茶色に染めた。",
-    "exampleKr": "그녀는 머리를 밝은 갈색으로 염색했다."
+    "exampleKr": "그녀는 머리를 밝은 갈색으로 염색했다.",
+    "transitivityPairId": "染まる"
   },
   {
     "id": "N1-1576",
@@ -18741,7 +18756,8 @@
     "meaningKr": "줄어들다",
     "meaningEn": "to be shortened, to be contracted, to shrink",
     "exampleJp": "二人の距離が急速に縮まった。",
-    "exampleKr": "두 사람의 거리가 급속히 줄어들었다."
+    "exampleKr": "두 사람의 거리가 급속히 줄어들었다.",
+    "transitivityPairId": "縮まる"
   },
   {
     "id": "N1-1705",
@@ -19665,7 +19681,8 @@
     "meaningKr": "감당해내다",
     "meaningEn": "be equal, be fit",
     "exampleJp": "彼にこの大役が務まるか心配だ。",
-    "exampleKr": "그가 이 중책을 감당해낼 수 있을지 걱정이다."
+    "exampleKr": "그가 이 중책을 감당해낼 수 있을지 걱정이다.",
+    "transitivityPairId": "務まる"
   },
   {
     "id": "N1-1789",
@@ -19808,7 +19825,8 @@
     "meaningKr": "줄지어 있다",
     "meaningEn": "to extend, to stretch out, to stand in a row",
     "exampleJp": "山々が連なる美しい景色だった。",
-    "exampleKr": "산들이 줄지어 있는 아름다운 풍경이었다."
+    "exampleKr": "산들이 줄지어 있는 아름다운 풍경이었다.",
+    "transitivityPairId": "連なる"
   },
   {
     "id": "N1-1802",
@@ -19830,7 +19848,8 @@
     "meaningKr": "늘어놓다(잇다)",
     "meaningEn": "to link, to join, to put together",
     "exampleJp": "彼は言い訳を連ねた。",
-    "exampleKr": "그는 변명을 늘어놓았다."
+    "exampleKr": "그는 변명을 늘어놓았다.",
+    "transitivityPairId": "連なる"
   },
   {
     "id": "N1-1804",
@@ -23658,7 +23677,8 @@
     "meaningKr": "멀어지다",
     "meaningEn": "to be distant",
     "exampleJp": "両者の意見は依然として大きく隔たっている。",
-    "exampleKr": "양측의 의견은 여전히 크게 벌어져 있다."
+    "exampleKr": "양측의 의견은 여전히 크게 벌어져 있다.",
+    "transitivityPairId": "隔たる"
   },
   {
     "id": "N1-2152",
@@ -27409,7 +27429,8 @@
     "meaningKr": "흔들다",
     "meaningEn": "to shake, to jolt, to rock, to swing",
     "exampleJp": "その証言は陪審員の心を大きく揺さぶった。",
-    "exampleKr": "그 증언은 배심원의 마음을 크게 뒤흔들었다."
+    "exampleKr": "그 증언은 배심원의 마음을 크게 뒤흔들었다.",
+    "transitivityPairId": "揺れる"
   },
   {
     "id": "N1-2493",

@@ -217,7 +217,8 @@
     "meaningKr": "꺾다(접다)",
     "meaningEn": "to snap, to break; to bend",
     "exampleJp": "紙を半分に折ってください。",
-    "exampleKr": "종이를 반으로 접어 주세요."
+    "exampleKr": "종이를 반으로 접어 주세요.",
+    "transitivityPairId": "折る"
   },
   {
     "id": "N4-21",
@@ -1064,7 +1065,8 @@
     "meaningKr": "흔들리다",
     "meaningEn": "to shake, to sway",
     "exampleJp": "地震で家が揺れました。",
-    "exampleKr": "지진으로 집이 흔들렸어요."
+    "exampleKr": "지진으로 집이 흔들렸어요.",
+    "transitivityPairId": "揺れる"
   },
   {
     "id": "N4-98",
@@ -1405,7 +1407,8 @@
     "meaningKr": "잡다(붙잡다)",
     "meaningEn": "to catch, to arrest",
     "exampleJp": "警察が泥棒を捕まえました。",
-    "exampleKr": "경찰이 도둑을 잡았어요."
+    "exampleKr": "경찰이 도둑을 잡았어요.",
+    "transitivityPairId": "捕まえる"
   },
   {
     "id": "N4-129",
@@ -1427,7 +1430,8 @@
     "meaningKr": "들르다",
     "meaningEn": "to stop by",
     "exampleJp": "帰りにコンビニに寄ります。",
-    "exampleKr": "돌아가는 길에 편의점에 들러요."
+    "exampleKr": "돌아가는 길에 편의점에 들러요.",
+    "transitivityPairId": "寄る"
   },
   {
     "id": "N4-131",
@@ -1438,7 +1442,8 @@
     "meaningKr": "정해지다",
     "meaningEn": "to be set; fixed (v.i.)",
     "exampleJp": "旅行の日程が決まりました。",
-    "exampleKr": "여행 일정이 정해졌어요."
+    "exampleKr": "여행 일정이 정해졌어요.",
+    "transitivityPairId": "決まる"
   },
   {
     "id": "N4-132",
@@ -1647,7 +1652,8 @@
     "meaningKr": "세우다(멈추다)",
     "meaningEn": "to stop (something)",
     "exampleJp": "車をここに止めてください。",
-    "exampleKr": "차를 여기에 세워 주세요."
+    "exampleKr": "차를 여기에 세워 주세요.",
+    "transitivityPairId": "止まる"
   },
   {
     "id": "N4-151",
@@ -1977,7 +1983,8 @@
     "meaningKr": "정하다",
     "meaningEn": "to decide (v.t.)",
     "exampleJp": "旅行の日程はもう決めましたか。",
-    "exampleKr": "여행 일정은 이미 정했습니까?"
+    "exampleKr": "여행 일정은 이미 정했습니까?",
+    "transitivityPairId": "決まる"
   },
   {
     "id": "N4-181",
@@ -2362,7 +2369,8 @@
     "meaningKr": "시작하다",
     "meaningEn": "to start, to begin",
     "exampleJp": "来月から新しい仕事を始めます。",
-    "exampleKr": "다음 달부터 새로운 일을 시작합니다."
+    "exampleKr": "다음 달부터 새로운 일을 시작합니다.",
+    "transitivityPairId": "始まる"
   },
   {
     "id": "N4-216",
@@ -3418,7 +3426,8 @@
     "meaningKr": "묵다(숙박하다)",
     "meaningEn": "to stay (over night) (v.i.)",
     "exampleJp": "京都のホテルに一晩泊まりました。",
-    "exampleKr": "교토의 호텔에서 하룻밤 묵었습니다."
+    "exampleKr": "교토의 호텔에서 하룻밤 묵었습니다.",
+    "transitivityPairId": "泊まる"
   },
   {
     "id": "N4-312",
@@ -4331,7 +4340,8 @@
     "meaningKr": "바꾸다",
     "meaningEn": "to change, to alter, to vary",
     "exampleJp": "今年、髪型を大きく変えました。",
-    "exampleKr": "올해 헤어스타일을 크게 바꿨습니다."
+    "exampleKr": "올해 헤어스타일을 크게 바꿨습니다.",
+    "transitivityPairId": "変わる"
   },
   {
     "id": "N4-395",
@@ -4518,7 +4528,8 @@
     "meaningKr": "바뀌다",
     "meaningEn": "to change (v.i.), to be transformed, to vary",
     "exampleJp": "今日は天気が急に変わりました。",
-    "exampleKr": "오늘은 날씨가 갑자기 바뀌었습니다."
+    "exampleKr": "오늘은 날씨가 갑자기 바뀌었습니다.",
+    "transitivityPairId": "変わる"
   },
   {
     "id": "N4-412",
@@ -4617,7 +4628,8 @@
     "meaningKr": "보이다",
     "meaningEn": "to be visible; -- polite verb meaning 来る (くる) --",
     "exampleJp": "この窓から富士山が見えます。",
-    "exampleKr": "이 창문에서 후지산이 보입니다."
+    "exampleKr": "이 창문에서 후지산이 보입니다.",
+    "transitivityPairId": "見る"
   },
   {
     "id": "N4-421",
@@ -4694,7 +4706,8 @@
     "meaningKr": "부러지다(꺾이다)",
     "meaningEn": "to break, to be folded, to give in; to turn (a corner)",
     "exampleJp": "強い風で木の枝が折れました。",
-    "exampleKr": "강한 바람에 나뭇가지가 부러졌습니다."
+    "exampleKr": "강한 바람에 나뭇가지가 부러졌습니다.",
+    "transitivityPairId": "折る"
   },
   {
     "id": "N4-428",
@@ -4760,7 +4773,8 @@
     "meaningKr": "전하다",
     "meaningEn": "to convey (a message); to tell, to report",
     "exampleJp": "彼に私のお礼を伝えてください。",
-    "exampleKr": "그에게 제 감사 인사를 전해 주세요."
+    "exampleKr": "그에게 제 감사 인사를 전해 주세요.",
+    "transitivityPairId": "伝わる"
   },
   {
     "id": "N4-434",
@@ -5189,7 +5203,8 @@
     "meaningKr": "발견하다(찾다)",
     "meaningEn": "to discover, to find (v.t.)",
     "exampleJp": "なくした鍵をやっと見つけました。",
-    "exampleKr": "잃어버린 열쇠를 겨우 발견했습니다."
+    "exampleKr": "잃어버린 열쇠를 겨우 발견했습니다.",
+    "transitivityPairId": "見つける"
   },
   {
     "id": "N4-473",
@@ -5563,7 +5578,8 @@
     "meaningKr": "내려가다(낮아지다)",
     "meaningEn": "to descend, to drop, to fall",
     "exampleJp": "薬を飲んだら熱が下がりました。",
-    "exampleKr": "약을 먹었더니 열이 내려갔습니다."
+    "exampleKr": "약을 먹었더니 열이 내려갔습니다.",
+    "transitivityPairId": "下がる"
   },
   {
     "id": "N4-507",
@@ -5750,7 +5766,8 @@
     "meaningKr": "발견되다",
     "meaningEn": "to be found (v.i.), to be discovered",
     "exampleJp": "なくした鍵がやっと見つかりました。",
-    "exampleKr": "잃어버린 열쇠가 드디어 발견되었습니다."
+    "exampleKr": "잃어버린 열쇠가 드디어 발견되었습니다.",
+    "transitivityPairId": "見つける"
   },
   {
     "id": "N4-524",
@@ -5860,7 +5877,8 @@
     "meaningKr": "모으다",
     "meaningEn": "to collect, to gather (v.t.), to assemble",
     "exampleJp": "切手を集めるのが趣味です。",
-    "exampleKr": "우표를 모으는 것이 취미입니다."
+    "exampleKr": "우표를 모으는 것이 취미입니다.",
+    "transitivityPairId": "集まる"
   },
   {
     "id": "N4-534",
@@ -6135,7 +6153,8 @@
     "meaningKr": "깨지다",
     "meaningEn": "to break",
     "exampleJp": "コップが落ちて割れてしまいました。",
-    "exampleKr": "컵이 떨어져서 깨져 버렸습니다."
+    "exampleKr": "컵이 떨어져서 깨져 버렸습니다.",
+    "transitivityPairId": "割れる"
   },
   {
     "id": "N4-559",
@@ -6520,7 +6539,8 @@
     "meaningKr": "심다",
     "meaningEn": "to plant",
     "exampleJp": "庭に花を植えました。",
-    "exampleKr": "마당에 꽃을 심었습니다."
+    "exampleKr": "마당에 꽃을 심었습니다.",
+    "transitivityPairId": "植わる"
   },
   {
     "id": "N4-594",
@@ -6806,7 +6826,8 @@
     "meaningKr": "내리다",
     "meaningEn": "to lower (v.t.); to hang",
     "exampleJp": "音楽の音を少し下げてください。",
-    "exampleKr": "음악 소리를 좀 낮춰 주세요."
+    "exampleKr": "음악 소리를 좀 낮춰 주세요.",
+    "transitivityPairId": "下がる"
   },
   {
     "id": "N4-620",
@@ -6960,7 +6981,8 @@
     "meaningKr": "오르다",
     "meaningEn": "to rise, to go up",
     "exampleJp": "最近野菜の値段が上がりました。",
-    "exampleKr": "요즘 채소 가격이 올랐습니다."
+    "exampleKr": "요즘 채소 가격이 올랐습니다.",
+    "transitivityPairId": "上がる"
   },
   {
     "id": "N4-634",
@@ -7059,7 +7081,8 @@
     "meaningKr": "모이다",
     "meaningEn": "to gather (v.i.), to collect",
     "exampleJp": "公園にたくさんの人が集まりました。",
-    "exampleKr": "공원에 많은 사람들이 모였습니다."
+    "exampleKr": "공원에 많은 사람들이 모였습니다.",
+    "transitivityPairId": "集まる"
   },
   {
     "id": "N4-643",

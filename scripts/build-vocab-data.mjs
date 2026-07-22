@@ -40,6 +40,7 @@ export interface VocabWord {
   meaningEn: string
   exampleJp?: string
   exampleKr?: string
+  transitivityPairId?: string
 }
 
 // Parsed from a JSON string rather than a literal array — see the same

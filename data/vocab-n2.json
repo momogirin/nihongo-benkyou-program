@@ -3440,7 +3440,8 @@
     "meaningKr": "게을리하다",
     "meaningEn": "to neglect, to fail",
     "exampleJp": "勉強を怠ってはいけません。",
-    "exampleKr": "공부를 게을리해서는 안 됩니다."
+    "exampleKr": "공부를 게을리해서는 안 됩니다.",
+    "transitivityPairId": "怠ける"
   },
   {
     "id": "N2-314",
@@ -4661,7 +4662,8 @@
     "meaningKr": "굳다",
     "meaningEn": "to harden, to solidify, to become firm",
     "exampleJp": "コンクリートが固まるまで少し時間がかかる。",
-    "exampleKr": "콘크리트가 굳을 때까지 시간이 좀 걸린다."
+    "exampleKr": "콘크리트가 굳을 때까지 시간이 좀 걸린다.",
+    "transitivityPairId": "固まる"
   },
   {
     "id": "N2-425",
@@ -8423,7 +8425,8 @@
     "meaningKr": "완성되다",
     "meaningEn": "to be finished",
     "exampleJp": "注文した服がようやく仕上がりました。",
-    "exampleKr": "주문한 옷이 드디어 완성되었어요."
+    "exampleKr": "주문한 옷이 드디어 완성되었어요.",
+    "transitivityPairId": "仕上がる"
   },
   {
     "id": "N2-767",
@@ -10326,7 +10329,8 @@
     "meaningKr": "고치다(개선하다)",
     "meaningEn": "to change, to reform, to revise",
     "exampleJp": "悪い習慣を改めようと思います。",
-    "exampleKr": "나쁜 습관을 고치려고 해요."
+    "exampleKr": "나쁜 습관을 고치려고 해요.",
+    "transitivityPairId": "改まる"
   },
   {
     "id": "N2-940",
@@ -12020,7 +12024,8 @@
     "meaningKr": "머무르다",
     "meaningEn": "to be fixed; to abide, to stay (in the one place)",
     "exampleJp": "彼はこの町に留まることを決めた。",
-    "exampleKr": "그는 이 마을에 머무르기로 결정했다."
+    "exampleKr": "그는 이 마을에 머무르기로 결정했다.",
+    "transitivityPairId": "留まる"
   },
   {
     "id": "N2-1094",
@@ -12064,7 +12069,8 @@
     "meaningKr": "머무르다",
     "meaningEn": "to be fixed; to abide, to stay (in the one place)",
     "exampleJp": "鳥が枝に留まっている。",
-    "exampleKr": "새가 나뭇가지에 머물러 있다."
+    "exampleKr": "새가 나뭇가지에 머물러 있다.",
+    "transitivityPairId": "留まる"
   },
   {
     "id": "N2-1098",
@@ -12691,7 +12697,8 @@
     "meaningKr": "비틀다",
     "meaningEn": "to twist",
     "exampleJp": "転んで足首を捩ってしまった。",
-    "exampleKr": "넘어져서 발목을 비틀고 말았다."
+    "exampleKr": "넘어져서 발목을 비틀고 말았다.",
+    "transitivityPairId": "捩れる"
   },
   {
     "id": "N2-1155",
@@ -15089,7 +15096,8 @@
     "meaningKr": "사이를 두다(가로막다)",
     "meaningEn": "to be shut out",
     "exampleJp": "二つの部屋はカーテンで隔てられている。",
-    "exampleKr": "두 방은 커튼으로 사이가 나뉘어 있다."
+    "exampleKr": "두 방은 커튼으로 사이가 나뉘어 있다.",
+    "transitivityPairId": "隔たる"
   },
   {
     "id": "N2-1373",
@@ -15408,7 +15416,8 @@
     "meaningKr": "내던지다(방치하다)",
     "meaningEn": "to let go",
     "exampleJp": "彼はボールを遠くへ放った。",
-    "exampleKr": "그는 공을 멀리 던졌다."
+    "exampleKr": "그는 공을 멀리 던졌다.",
+    "transitivityPairId": "放れる"
   },
   {
     "id": "N2-1402",
@@ -15683,7 +15692,8 @@
     "meaningKr": "구부리다",
     "meaningEn": "to bend, to crook, to lean",
     "exampleJp": "針金を曲げて輪を作った。",
-    "exampleKr": "철사를 구부려서 고리를 만들었다."
+    "exampleKr": "철사를 구부려서 고리를 만들었다.",
+    "transitivityPairId": "曲がる"
   },
   {
     "id": "N2-1427",
@@ -16640,7 +16650,8 @@
     "meaningKr": "돈이 벌리다",
     "meaningEn": "to be profitable, to yield a profit",
     "exampleJp": "新しい商売はなかなか儲かっている。",
-    "exampleKr": "새로운 장사가 꽤 돈이 벌리고 있다."
+    "exampleKr": "새로운 장사가 꽤 돈이 벌리고 있다.",
+    "transitivityPairId": "儲かる"
   },
   {
     "id": "N2-1514",
@@ -16651,7 +16662,8 @@
     "meaningKr": "돈을 벌다",
     "meaningEn": "to earn, to have (bear, beget) a child",
     "exampleJp": "株の売買で大金を儲けた。",
-    "exampleKr": "주식 매매로 큰돈을 벌었다."
+    "exampleKr": "주식 매매로 큰돈을 벌었다.",
+    "transitivityPairId": "儲かる"
   },
   {
     "id": "N2-1515",
@@ -17927,7 +17939,8 @@
     "meaningKr": "줄이다",
     "meaningEn": "to shorten, to reduce, to shrink",
     "exampleJp": "工夫して作業時間を縮めた。",
-    "exampleKr": "궁리해서 작업 시간을 줄였다."
+    "exampleKr": "궁리해서 작업 시간을 줄였다.",
+    "transitivityPairId": "縮まる"
   },
   {
     "id": "N2-1631",
@@ -18576,7 +18589,8 @@
     "meaningKr": "맡다(임무를)",
     "meaningEn": "to serve, to act",
     "exampleJp": "彼は司会を務めることになった。",
-    "exampleKr": "그는 사회를 맡게 되었다."
+    "exampleKr": "그는 사회를 맡게 되었다.",
+    "transitivityPairId": "務まる"
   },
   {
     "id": "N2-1690",
@@ -18664,7 +18678,8 @@
     "meaningKr": "막히다",
     "meaningEn": "to be blocked, to be packed",
     "exampleJp": "排水口が髪の毛で詰まった。",
-    "exampleKr": "배수구가 머리카락으로 막혔다."
+    "exampleKr": "배수구가 머리카락으로 막혔다.",
+    "transitivityPairId": "詰まる"
   },
   {
     "id": "N2-1698",

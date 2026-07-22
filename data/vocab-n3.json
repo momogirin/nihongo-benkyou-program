@@ -5046,7 +5046,8 @@
     "meaningKr": "묻다(메우다)",
     "meaningEn": "to bury, to fill up, to fill (a seat, a vacant position)",
     "exampleJp": "庭に穴を掘って種を埋めた。",
-    "exampleKr": "정원에 구멍을 파고 씨앗을 묻었다."
+    "exampleKr": "정원에 구멍을 파고 씨앗을 묻었다.",
+    "transitivityPairId": "埋まる"
   },
   {
     "id": "N3-460",
@@ -5079,7 +5080,8 @@
     "meaningKr": "팔리다",
     "meaningEn": "to be sold",
     "exampleJp": "この新商品はとてもよく売れている。",
-    "exampleKr": "이 신상품은 아주 잘 팔리고 있다."
+    "exampleKr": "이 신상품은 아주 잘 팔리고 있다.",
+    "transitivityPairId": "売る"
   },
   {
     "id": "N3-463",
@@ -5442,7 +5444,8 @@
     "meaningKr": "끝내다",
     "meaningEn": "to finish",
     "exampleJp": "彼は無事に仕事を終えた。",
-    "exampleKr": "그는 무사히 일을 끝냈다."
+    "exampleKr": "그는 무사히 일을 끝냈다.",
+    "transitivityPairId": "終る"
   },
   {
     "id": "N3-496",
@@ -5563,7 +5566,8 @@
     "meaningKr": "거두다(담다)",
     "meaningEn": "to store to pay, to supply",
     "exampleJp": "彼はビジネスで大きな成功を収めた。",
-    "exampleKr": "그는 사업에서 큰 성공을 거두었다."
+    "exampleKr": "그는 사업에서 큰 성공을 거두었다.",
+    "transitivityPairId": "収まる"
   },
   {
     "id": "N3-507",
@@ -5574,7 +5578,8 @@
     "meaningKr": "납부하다",
     "meaningEn": "to store to pay, to supply",
     "exampleJp": "毎月きちんと税金を納めている。",
-    "exampleKr": "매달 꼬박꼬박 세금을 납부하고 있다."
+    "exampleKr": "매달 꼬박꼬박 세금을 납부하고 있다.",
+    "transitivityPairId": "納まる"
   },
   {
     "id": "N3-508",
@@ -5585,7 +5590,8 @@
     "meaningKr": "다스리다",
     "meaningEn": "to govern, to manage; to subdue",
     "exampleJp": "その王は国を長く治めた。",
-    "exampleKr": "그 왕은 나라를 오래 다스렸다."
+    "exampleKr": "그 왕은 나라를 오래 다스렸다.",
+    "transitivityPairId": "治まる"
   },
   {
     "id": "N3-509",
@@ -6223,7 +6229,8 @@
     "meaningKr": "대신하다",
     "meaningEn": "to exchange, to interchange, to substitute",
     "exampleJp": "挨拶に代えて一言申し上げます。",
-    "exampleKr": "인사말을 대신하여 한 말씀 드리겠습니다."
+    "exampleKr": "인사말을 대신하여 한 말씀 드리겠습니다.",
+    "transitivityPairId": "代る"
   },
   {
     "id": "N3-567",
@@ -6619,7 +6626,8 @@
     "meaningKr": "겹치다",
     "meaningEn": "to be piled up, lie on top of one another",
     "exampleJp": "今週は仕事の締め切りが重なっている。",
-    "exampleKr": "이번 주는 업무 마감이 겹쳐 있다."
+    "exampleKr": "이번 주는 업무 마감이 겹쳐 있다.",
+    "transitivityPairId": "重なる"
   },
   {
     "id": "N3-603",
@@ -6630,7 +6638,8 @@
     "meaningKr": "포개다(쌓다)",
     "meaningEn": "to pile up, to put something on another, to heap up",
     "exampleJp": "皿を綺麗に重ねて片付けた。",
-    "exampleKr": "접시를 깔끔하게 포개어 정리했다."
+    "exampleKr": "접시를 깔끔하게 포개어 정리했다.",
+    "transitivityPairId": "重なる"
   },
   {
     "id": "N3-604",
@@ -7268,7 +7277,8 @@
     "meaningKr": "대신하다",
     "meaningEn": "to take the place of, to relieve, to be substituted for",
     "exampleJp": "部長に代って私が説明します。",
-    "exampleKr": "부장님을 대신하여 제가 설명하겠습니다."
+    "exampleKr": "부장님을 대신하여 제가 설명하겠습니다.",
+    "transitivityPairId": "代る"
   },
   {
     "id": "N3-662",
@@ -8390,7 +8400,8 @@
     "meaningKr": "잘 들다(끊어지다)",
     "meaningEn": "to cut well, to be sharp; to break (off)",
     "exampleJp": "このナイフはよく切れます。",
-    "exampleKr": "이 칼은 잘 들어요."
+    "exampleKr": "이 칼은 잘 들어요.",
+    "transitivityPairId": "切る"
   },
   {
     "id": "N3-764",
@@ -8940,7 +8951,8 @@
     "meaningKr": "더하다",
     "meaningEn": "to append, to sum up, to add (up)",
     "exampleJp": "スープに塩を加えました。",
-    "exampleKr": "수프에 소금을 더했어요."
+    "exampleKr": "수프에 소금을 더했어요.",
+    "transitivityPairId": "加わる"
   },
   {
     "id": "N3-814",
@@ -8973,7 +8985,8 @@
     "meaningKr": "더해지다(참가하다)",
     "meaningEn": "to join in, to accede to",
     "exampleJp": "新しいメンバーが加わりました。",
-    "exampleKr": "새로운 멤버가 더해졌어요."
+    "exampleKr": "새로운 멤버가 더해졌어요.",
+    "transitivityPairId": "加わる"
   },
   {
     "id": "N3-817",
@@ -12086,7 +12099,8 @@
     "meaningKr": "찢다(깨다)",
     "meaningEn": "to tear; to violate; to defeat",
     "exampleJp": "うっかり大事な書類を破ってしまいました。",
-    "exampleKr": "실수로 중요한 서류를 찢고 말았어요."
+    "exampleKr": "실수로 중요한 서류를 찢고 말았어요.",
+    "transitivityPairId": "破れる"
   },
   {
     "id": "N3-1100",
@@ -12097,7 +12111,8 @@
     "meaningKr": "찢어지다",
     "meaningEn": "to get torn, to wear out",
     "exampleJp": "かばんの底が破れてしまいました。",
-    "exampleKr": "가방 바닥이 찢어지고 말았어요."
+    "exampleKr": "가방 바닥이 찢어지고 말았어요.",
+    "transitivityPairId": "破れる"
   },
   {
     "id": "N3-1101",
@@ -12537,7 +12552,8 @@
     "meaningKr": "모으다(가까이 대다)",
     "meaningEn": "to collect, to gather, to put aside",
     "exampleJp": "机を壁際に寄せてください。",
-    "exampleKr": "책상을 벽 쪽으로 붙여 주세요."
+    "exampleKr": "책상을 벽 쪽으로 붙여 주세요.",
+    "transitivityPairId": "寄る"
   },
   {
     "id": "N3-1141",
@@ -13120,7 +13136,8 @@
     "meaningKr": "나뉘다(갈라지다)",
     "meaningEn": "to branch off, to diverge from",
     "exampleJp": "意見が二つに分かれました。",
-    "exampleKr": "의견이 둘로 나뉘었어요."
+    "exampleKr": "의견이 둘로 나뉘었어요.",
+    "transitivityPairId": "分ける"
   },
   {
     "id": "N3-1194",
@@ -13153,7 +13170,8 @@
     "meaningKr": "나누다",
     "meaningEn": "to divide, to separate",
     "exampleJp": "ケーキを四つに分けました。",
-    "exampleKr": "케이크를 네 조각으로 나눴어요."
+    "exampleKr": "케이크를 네 조각으로 나눴어요.",
+    "transitivityPairId": "分ける"
   },
   {
     "id": "N3-1197",
@@ -13219,7 +13237,8 @@
     "meaningKr": "쪼개다(나누다)",
     "meaningEn": "to divide, to break",
     "exampleJp": "うっかりお皿を割ってしまいました。",
-    "exampleKr": "실수로 접시를 깨고 말았어요."
+    "exampleKr": "실수로 접시를 깨고 말았어요.",
+    "transitivityPairId": "割れる"
   },
   {
     "id": "N3-1203",
@@ -13483,7 +13502,8 @@
     "meaningKr": "묻히다(메워지다)",
     "meaningEn": "to be buried, to be filled",
     "exampleJp": "駐車場はすでに車で埋まっていました。",
-    "exampleKr": "주차장은 이미 차로 가득 차 있었어요."
+    "exampleKr": "주차장은 이미 차로 가득 차 있었어요.",
+    "transitivityPairId": "埋まる"
   },
   {
     "id": "N3-1227",
@@ -14660,7 +14680,8 @@
     "meaningKr": "대비하다(갖추다)",
     "meaningEn": "to prepare, to furnish, to store",
     "exampleJp": "地震に備えて水を用意しています。",
-    "exampleKr": "지진에 대비해 물을 준비하고 있어요."
+    "exampleKr": "지진에 대비해 물을 준비하고 있어요.",
+    "transitivityPairId": "備わる"
   },
   {
     "id": "N3-1334",
@@ -14671,7 +14692,8 @@
     "meaningKr": "갖추다",
     "meaningEn": "to be furnished with",
     "exampleJp": "この部屋は必要な家具を具えています。",
-    "exampleKr": "이 방은 필요한 가구를 갖추고 있어요."
+    "exampleKr": "이 방은 필요한 가구를 갖추고 있어요.",
+    "transitivityPairId": "具わる"
   },
   {
     "id": "N3-1335",
@@ -15276,7 +15298,8 @@
     "meaningKr": "높이다",
     "meaningEn": "to raise, to lift, to boost",
     "exampleJp": "この練習は集中力を高めます。",
-    "exampleKr": "이 연습은 집중력을 높여 줍니다."
+    "exampleKr": "이 연습은 집중력을 높여 줍니다.",
+    "transitivityPairId": "高まる"
   },
   {
     "id": "N3-1390",
@@ -15386,7 +15409,8 @@
     "meaningKr": "살아나다(도움이 되다)",
     "meaningEn": "to be saved; (something) helps (v.i.)",
     "exampleJp": "手伝ってもらえると助かります。",
-    "exampleKr": "도와주시면 도움이 됩니다."
+    "exampleKr": "도와주시면 도움이 됩니다.",
+    "transitivityPairId": "助かる"
   },
   {
     "id": "N3-1400",
@@ -15397,7 +15421,8 @@
     "meaningKr": "돕다(구하다)",
     "meaningEn": "to help (v.t.), to save, to rescue",
     "exampleJp": "溺れている人を助けました。",
-    "exampleKr": "물에 빠진 사람을 구했어요."
+    "exampleKr": "물에 빠진 사람을 구했어요.",
+    "transitivityPairId": "助かる"
   },
   {
     "id": "N3-1401",
@@ -15760,7 +15785,8 @@
     "meaningKr": "쌓이다",
     "meaningEn": "to collect, to gather, to accumulate",
     "exampleJp": "仕事のストレスが溜まっています。",
-    "exampleKr": "업무 스트레스가 쌓이고 있어요."
+    "exampleKr": "업무 스트레스가 쌓이고 있어요.",
+    "transitivityPairId": "溜まる"
   },
   {
     "id": "N3-1434",
@@ -15804,7 +15830,8 @@
     "meaningKr": "모으다(쌓다)",
     "meaningEn": "to accumulate, to collect",
     "exampleJp": "旅行のためにお金を溜めています。",
-    "exampleKr": "여행을 위해 돈을 모으고 있어요."
+    "exampleKr": "여행을 위해 돈을 모으고 있어요.",
+    "transitivityPairId": "溜まる"
   },
   {
     "id": "N3-1438",
@@ -16530,7 +16557,8 @@
     "meaningKr": "붙잡히다",
     "meaningEn": "to be arrested; to be caught",
     "exampleJp": "泥棒はすぐに警察に捕まりました。",
-    "exampleKr": "도둑은 곧바로 경찰에게 붙잡혔어요."
+    "exampleKr": "도둑은 곧바로 경찰에게 붙잡혔어요.",
+    "transitivityPairId": "捕まえる"
   },
   {
     "id": "N3-1504",
@@ -16673,7 +16701,8 @@
     "meaningKr": "전해지다",
     "meaningEn": "to be handed down, to be transmitted",
     "exampleJp": "この祭りは何百年も前から伝わっています。",
-    "exampleKr": "이 축제는 몇백 년 전부터 전해지고 있어요."
+    "exampleKr": "이 축제는 몇백 년 전부터 전해지고 있어요.",
+    "transitivityPairId": "伝わる"
   },
   {
     "id": "N3-1517",
@@ -16739,7 +16768,8 @@
     "meaningKr": "이어지다",
     "meaningEn": "to be connected to, to be related to",
     "exampleJp": "この道は高速道路につながっています。",
-    "exampleKr": "이 길은 고속도로로 이어져 있어요."
+    "exampleKr": "이 길은 고속도로로 이어져 있어요.",
+    "transitivityPairId": "繋がる"
   },
   {
     "id": "N3-1523",
@@ -16761,7 +16791,8 @@
     "meaningKr": "연결하다",
     "meaningEn": "to connect",
     "exampleJp": "パソコンをネットワークにつなげました。",
-    "exampleKr": "컴퓨터를 네트워크에 연결했어요."
+    "exampleKr": "컴퓨터를 네트워크에 연결했어요.",
+    "transitivityPairId": "繋がる"
   },
   {
     "id": "N3-1525",
@@ -16827,7 +16858,8 @@
     "meaningKr": "채우다(좁히다)",
     "meaningEn": "to pack, to shorten, to work out (details)",
     "exampleJp": "スーツケースに服を詰めました。",
-    "exampleKr": "여행 가방에 옷을 채웠어요."
+    "exampleKr": "여행 가방에 옷을 채웠어요.",
+    "transitivityPairId": "詰まる"
   },
   {
     "id": "N3-1531",
@@ -17850,7 +17882,8 @@
     "meaningKr": "고정하다(끄다)",
     "meaningEn": "to fasten, to turn off, to detain",
     "exampleJp": "書類をクリップで留めました。",
-    "exampleKr": "서류를 클립으로 고정했어요."
+    "exampleKr": "서류를 클립으로 고정했어요.",
+    "transitivityPairId": "留まる"
   },
   {
     "id": "N3-1624",
@@ -17861,7 +17894,8 @@
     "meaningKr": "묵게 하다",
     "meaningEn": "to have someone stay (over night) (v.t.)",
     "exampleJp": "友人を一晩、家に泊めました。",
-    "exampleKr": "친구를 하룻밤 집에 묵게 했어요."
+    "exampleKr": "친구를 하룻밤 집에 묵게 했어요.",
+    "transitivityPairId": "泊まる"
   },
   {
     "id": "N3-1625",
@@ -17993,7 +18027,8 @@
     "meaningKr": "떨어지다(빠지다)",
     "meaningEn": "to come off, to be taken off",
     "exampleJp": "シャツのボタンが取れてしまいました。",
-    "exampleKr": "셔츠 단추가 떨어져 버렸어요."
+    "exampleKr": "셔츠 단추가 떨어져 버렸어요.",
+    "transitivityPairId": "取る"
   },
   {
     "id": "N3-1637",
@@ -18312,7 +18347,8 @@
     "meaningKr": "게으름 피우다",
     "meaningEn": "to be idle, to neglect",
     "exampleJp": "勉強を怠けたら成績が下がりました。",
-    "exampleKr": "공부를 게을리했더니 성적이 떨어졌어요."
+    "exampleKr": "공부를 게을리했더니 성적이 떨어졌어요.",
+    "transitivityPairId": "怠ける"
   },
   {
     "id": "N3-1666",
@@ -18455,7 +18491,8 @@
     "meaningKr": "끓다(익다)",
     "meaningEn": "to boil, to cook, to be cooked",
     "exampleJp": "野菜がやわらかく煮えました。",
-    "exampleKr": "채소가 부드럽게 익었어요."
+    "exampleKr": "채소가 부드럽게 익었어요.",
+    "transitivityPairId": "煮える"
   },
   {
     "id": "N3-1679",
@@ -18576,7 +18613,8 @@
     "meaningKr": "삶다(끓이다)",
     "meaningEn": "to boil, to cook",
     "exampleJp": "大根を柔らかくなるまで煮ました。",
-    "exampleKr": "무를 부드러워질 때까지 삶았어요."
+    "exampleKr": "무를 부드러워질 때까지 삶았어요.",
+    "transitivityPairId": "煮える"
   },
   {
     "id": "N3-1690",
@@ -18895,7 +18933,8 @@
     "meaningKr": "태우다",
     "meaningEn": "to place on (something), to take on board",
     "exampleJp": "駅まで車に乗せてもらいました。",
-    "exampleKr": "역까지 차에 태워 줬어요."
+    "exampleKr": "역까지 차에 태워 줬어요.",
+    "transitivityPairId": "乗る"
   },
   {
     "id": "N3-1719",
@@ -18906,7 +18945,8 @@
     "meaningKr": "싣다(게재하다)",
     "meaningEn": "to place on (something); to publish",
     "exampleJp": "新聞にその記事が載せられました。",
-    "exampleKr": "신문에 그 기사가 실렸어요."
+    "exampleKr": "신문에 그 기사가 실렸어요.",
+    "transitivityPairId": "載せる"
   },
   {
     "id": "N3-1720",
@@ -19060,7 +19100,8 @@
     "meaningKr": "실리다(게재되다)",
     "meaningEn": "to appear (in print), to be recorded",
     "exampleJp": "彼のインタビューが雑誌に載りました。",
-    "exampleKr": "그의 인터뷰가 잡지에 실렸어요."
+    "exampleKr": "그의 인터뷰가 잡지에 실렸어요.",
+    "transitivityPairId": "載せる"
   },
   {
     "id": "N3-1734",
@@ -19676,7 +19717,8 @@
     "meaningKr": "풀려나다",
     "meaningEn": "to leave, to get free, to cut oneself off",
     "exampleJp": "鳥が籠から放れて飛んでいきました。",
-    "exampleKr": "새가 새장에서 풀려나 날아갔어요."
+    "exampleKr": "새가 새장에서 풀려나 날아갔어요.",
+    "transitivityPairId": "放れる"
   },
   {
     "id": "N3-1790",
@@ -20314,7 +20356,8 @@
     "meaningKr": "넓어지다(퍼지다)",
     "meaningEn": "to spread (out), to extend, to stretch, to reach to, to get around",
     "exampleJp": "目の前に広い海が広がっていた。",
-    "exampleKr": "눈앞에 넓은 바다가 펼쳐져 있었다."
+    "exampleKr": "눈앞에 넓은 바다가 펼쳐져 있었다.",
+    "transitivityPairId": "広がる"
   },
   {
     "id": "N3-1848",
@@ -20325,7 +20368,8 @@
     "meaningKr": "넓히다(펼치다)",
     "meaningEn": "to spread, to extend, to expand, to enlarge",
     "exampleJp": "地図をテーブルの上に広げた。",
-    "exampleKr": "지도를 테이블 위에 펼쳤다."
+    "exampleKr": "지도를 테이블 위에 펼쳤다.",
+    "transitivityPairId": "広がる"
   },
   {
     "id": "N3-1849",
@@ -20336,7 +20380,8 @@
     "meaningKr": "넓히다(보급하다)",
     "meaningEn": "to broaden, to propagate",
     "exampleJp": "彼はこの技術を世界に広めたいと考えている。",
-    "exampleKr": "그는 이 기술을 세계에 보급하고 싶어한다."
+    "exampleKr": "그는 이 기술을 세계에 보급하고 싶어한다.",
+    "transitivityPairId": "広まる"
   },
   {
     "id": "N3-1850",
@@ -20490,7 +20535,8 @@
     "meaningKr": "깊어지다",
     "meaningEn": "to deepen",
     "exampleJp": "話し合ううちに二人の理解が深まった。",
-    "exampleKr": "이야기를 나누는 사이에 두 사람의 이해가 깊어졌다."
+    "exampleKr": "이야기를 나누는 사이에 두 사람의 이해가 깊어졌다.",
+    "transitivityPairId": "深まる"
   },
   {
     "id": "N3-1864",
@@ -21744,7 +21790,8 @@
     "meaningKr": "섞이다",
     "meaningEn": "to be mixed, to mingle with",
     "exampleJp": "水と油はうまく混ざらない。",
-    "exampleKr": "물과 기름은 잘 섞이지 않는다."
+    "exampleKr": "물과 기름은 잘 섞이지 않는다.",
+    "transitivityPairId": "混ざる"
   },
   {
     "id": "N3-1978",
@@ -21755,7 +21802,8 @@
     "meaningKr": "섞이다",
     "meaningEn": "to be mixed, to mingle with",
     "exampleJp": "外国人の中に日本人も交ざっていた。",
-    "exampleKr": "외국인들 사이에 일본인도 섞여 있었다."
+    "exampleKr": "외국인들 사이에 일본인도 섞여 있었다.",
+    "transitivityPairId": "交ざる"
   },
   {
     "id": "N3-1979",
@@ -21766,7 +21814,8 @@
     "meaningKr": "섞이다",
     "meaningEn": "to be mixed, to mingle with",
     "exampleJp": "雨に雪が混じって降っている。",
-    "exampleKr": "비에 눈이 섞여 내리고 있다."
+    "exampleKr": "비에 눈이 섞여 내리고 있다.",
+    "transitivityPairId": "混ざる"
   },
   {
     "id": "N3-1980",
@@ -21777,7 +21826,8 @@
     "meaningKr": "섞이다",
     "meaningEn": "to be mixed, to mingle with",
     "exampleJp": "彼の髪に白髪が交じり始めた。",
-    "exampleKr": "그의 머리카락에 흰머리가 섞이기 시작했다."
+    "exampleKr": "그의 머리카락에 흰머리가 섞이기 시작했다.",
+    "transitivityPairId": "交ざる"
   },
   {
     "id": "N3-1981",
@@ -21832,7 +21882,8 @@
     "meaningKr": "섞다",
     "meaningEn": "to mix, to stir",
     "exampleJp": "砂糖と卵をよく混ぜてください。",
-    "exampleKr": "설탕과 계란을 잘 섞어 주세요."
+    "exampleKr": "설탕과 계란을 잘 섞어 주세요.",
+    "transitivityPairId": "混ざる"
   },
   {
     "id": "N3-1986",
@@ -21843,7 +21894,8 @@
     "meaningKr": "섞다",
     "meaningEn": "to be mixed, to be blended with",
     "exampleJp": "白いご飯に豆を交ぜて炊いた。",
-    "exampleKr": "흰밥에 콩을 섞어 밥을 지었다."
+    "exampleKr": "흰밥에 콩을 섞어 밥을 지었다.",
+    "transitivityPairId": "交ざる"
   },
   {
     "id": "N3-1987",
@@ -22382,7 +22434,8 @@
     "meaningKr": "문지르다(비비다)",
     "meaningEn": "to rub, to chafe",
     "exampleJp": "寒くて手をこすり合わせた。",
-    "exampleKr": "추워서 손을 비볐다."
+    "exampleKr": "추워서 손을 비볐다.",
+    "transitivityPairId": "擦る"
   },
   {
     "id": "N3-2036",
@@ -22668,7 +22721,8 @@
     "meaningKr": "높아지다",
     "meaningEn": "to rise; to grow; to mount (v.i.)",
     "exampleJp": "試合が近づくにつれて期待が高まった。",
-    "exampleKr": "시합이 다가올수록 기대가 높아졌다."
+    "exampleKr": "시합이 다가올수록 기대가 높아졌다.",
+    "transitivityPairId": "高まる"
   },
   {
     "id": "N3-2062",
@@ -22800,7 +22854,8 @@
     "meaningKr": "강해지다",
     "meaningEn": "to get strong, to gain strength",
     "exampleJp": "夕方から風が強まってきた。",
-    "exampleKr": "저녁부터 바람이 강해지기 시작했다."
+    "exampleKr": "저녁부터 바람이 강해지기 시작했다.",
+    "transitivityPairId": "強まる"
   },
   {
     "id": "N3-2074",
@@ -22811,7 +22866,8 @@
     "meaningKr": "강화하다",
     "meaningEn": "to strengthen, to emphasize",
     "exampleJp": "会社は警備を強めることにした。",
-    "exampleKr": "회사는 경비를 강화하기로 했다."
+    "exampleKr": "회사는 경비를 강화하기로 했다.",
+    "transitivityPairId": "強まる"
   },
   {
     "id": "N3-2075",
@@ -23218,7 +23274,8 @@
     "meaningKr": "넓어지다(퍼지다)",
     "meaningEn": "to spread, to be propagated",
     "exampleJp": "そのうわさはあっという間に広まった。",
-    "exampleKr": "그 소문은 순식간에 퍼졌다."
+    "exampleKr": "그 소문은 순식간에 퍼졌다.",
+    "transitivityPairId": "広まる"
   },
   {
     "id": "N3-2112",
@@ -23229,7 +23286,8 @@
     "meaningKr": "깊게 하다",
     "meaningEn": "to deepen, to heighten, to intensify",
     "exampleJp": "留学は異文化への理解を深める。",
-    "exampleKr": "유학은 이문화에 대한 이해를 깊게 한다."
+    "exampleKr": "유학은 이문화에 대한 이해를 깊게 한다.",
+    "transitivityPairId": "深まる"
   },
   {
     "id": "N3-2113",
@@ -23482,7 +23540,8 @@
     "meaningKr": "약해지다",
     "meaningEn": "to weaken, to be emaciated, to be dejected",
     "exampleJp": "台風の勢いが少しずつ弱まってきた。",
-    "exampleKr": "태풍의 기세가 조금씩 약해지고 있다."
+    "exampleKr": "태풍의 기세가 조금씩 약해지고 있다.",
+    "transitivityPairId": "弱まる"
   },
   {
     "id": "N3-2136",
@@ -23493,7 +23552,8 @@
     "meaningKr": "약하게 하다",
     "meaningEn": "to weaken",
     "exampleJp": "火を弱めてゆっくり煮込んだ。",
-    "exampleKr": "불을 약하게 해서 천천히 끓였다."
+    "exampleKr": "불을 약하게 해서 천천히 끓였다.",
+    "transitivityPairId": "弱まる"
   },
   {
     "id": "N3-2137",

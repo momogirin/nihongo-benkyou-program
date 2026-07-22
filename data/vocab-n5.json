@@ -118,7 +118,8 @@
     "meaningKr": "올리다",
     "meaningEn": "to raise, to lift",
     "exampleJp": "手を上げてください。",
-    "exampleKr": "손을 들어 주세요."
+    "exampleKr": "손을 들어 주세요.",
+    "transitivityPairId": "上がる"
   },
   {
     "id": "N5-12",
@@ -800,7 +801,8 @@
     "meaningKr": "넣다",
     "meaningEn": "to put in",
     "exampleJp": "かばんに本を入れます。",
-    "exampleKr": "가방에 책을 넣습니다."
+    "exampleKr": "가방에 책을 넣습니다.",
+    "transitivityPairId": "入る"
   },
   {
     "id": "N5-74",
@@ -921,7 +923,8 @@
     "meaningKr": "팔다",
     "meaningEn": "to sell (v.t.)",
     "exampleJp": "この店は花を売っています。",
-    "exampleKr": "이 가게는 꽃을 팝니다."
+    "exampleKr": "이 가게는 꽃을 팝니다.",
+    "transitivityPairId": "売る"
   },
   {
     "id": "N5-85",
@@ -1515,7 +1518,8 @@
     "meaningKr": "끝나다",
     "meaningEn": "to finish, to close",
     "exampleJp": "授業は三時に終ります。",
-    "exampleKr": "수업은 3시에 끝납니다."
+    "exampleKr": "수업은 3시에 끝납니다.",
+    "transitivityPairId": "終る"
   },
   {
     "id": "N5-139",
@@ -2296,7 +2300,8 @@
     "meaningKr": "자르다(끊다)",
     "meaningEn": "to cut; to hang up (a phone)",
     "exampleJp": "ナイフで野菜を切ります。",
-    "exampleKr": "칼로 채소를 자릅니다."
+    "exampleKr": "칼로 채소를 자릅니다.",
+    "transitivityPairId": "切る"
   },
   {
     "id": "N5-210",
@@ -3374,7 +3379,8 @@
     "meaningKr": "닫히다",
     "meaningEn": "to close, to be closed",
     "exampleJp": "その店は九時に閉まります。",
-    "exampleKr": "그 가게는 9시에 닫힙니다."
+    "exampleKr": "그 가게는 9시에 닫힙니다.",
+    "transitivityPairId": "閉まる"
   },
   {
     "id": "N5-308",
@@ -3385,7 +3391,8 @@
     "meaningKr": "닫다",
     "meaningEn": "to close, to shut",
     "exampleJp": "寒いのでドアを閉めてください。",
-    "exampleKr": "추우니까 문을 닫아 주세요."
+    "exampleKr": "추우니까 문을 닫아 주세요.",
+    "transitivityPairId": "閉まる"
   },
   {
     "id": "N5-309",
@@ -5145,7 +5152,8 @@
     "meaningKr": "멈추다",
     "meaningEn": "to come to a halt",
     "exampleJp": "電車が駅に止まりました。",
-    "exampleKr": "전철이 역에 멈췄어요."
+    "exampleKr": "전철이 역에 멈췄어요.",
+    "transitivityPairId": "止まる"
   },
   {
     "id": "N5-469",
@@ -5200,7 +5208,8 @@
     "meaningKr": "잡다(취하다)",
     "meaningEn": "to take (a class); to get (a grade)",
     "exampleJp": "すみません、その塩を取ってください。",
-    "exampleKr": "죄송하지만 그 소금 좀 집어 주세요."
+    "exampleKr": "죄송하지만 그 소금 좀 집어 주세요.",
+    "transitivityPairId": "取る"
   },
   {
     "id": "N5-474",
@@ -5673,7 +5682,8 @@
     "meaningKr": "타다",
     "meaningEn": "to get on, to ride in, to board",
     "exampleJp": "駅でバスに乗ります。",
-    "exampleKr": "역에서 버스를 타요."
+    "exampleKr": "역에서 버스를 타요.",
+    "transitivityPairId": "乗る"
   },
   {
     "id": "N5-517",
@@ -5739,7 +5749,8 @@
     "meaningKr": "들어가다",
     "meaningEn": "to enter, to contain, to hold",
     "exampleJp": "静かに部屋に入ります。",
-    "exampleKr": "조용히 방에 들어가요."
+    "exampleKr": "조용히 방에 들어가요.",
+    "transitivityPairId": "入る"
   },
   {
     "id": "N5-523",
@@ -5805,7 +5816,8 @@
     "meaningKr": "시작되다",
     "meaningEn": "(something) begins",
     "exampleJp": "授業は九時に始まります。",
-    "exampleKr": "수업은 9시에 시작돼요."
+    "exampleKr": "수업은 9시에 시작돼요.",
+    "transitivityPairId": "始まる"
   },
   {
     "id": "N5-529",
@@ -6850,7 +6862,8 @@
     "meaningKr": "돌다(굽다)",
     "meaningEn": "to turn, to bend",
     "exampleJp": "次の角を右に曲がってください。",
-    "exampleKr": "다음 모퉁이에서 오른쪽으로 도세요."
+    "exampleKr": "다음 모퉁이에서 오른쪽으로 도세요.",
+    "transitivityPairId": "曲がる"
   },
   {
     "id": "N5-624",
@@ -7125,7 +7138,8 @@
     "meaningKr": "보다",
     "meaningEn": "to see, to look",
     "exampleJp": "テレビを見ます。",
-    "exampleKr": "텔레비전을 봅니다."
+    "exampleKr": "텔레비전을 봅니다.",
+    "transitivityPairId": "見る"
   },
   {
     "id": "N5-649",

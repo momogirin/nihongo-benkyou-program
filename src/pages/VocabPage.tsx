@@ -9,13 +9,16 @@ import {
   generateVocabBlankQuestions,
   generateVocabReadingQuestions,
   generateVocabWritingQuestions,
+  generateVocabTransitivityQuestions,
   vocabLevelPool,
   vocabBlankLevelPool,
   vocabReadingLevelPool,
   vocabWritingLevelPool,
+  vocabTransitivityLevelPool,
   type VocabQuizQuestion,
   type VocabBlankQuestion,
   type VocabWritingQuestion,
+  type VocabTransitivityQuestion,
 } from '../lib/vocabQuizGenerator'
 import {
   addVocabQuizHistoryEntry,
@@ -24,10 +27,12 @@ import {
   clearVocabBlankInProgressQuiz,
   clearVocabReadingInProgressQuiz,
   clearVocabWritingInProgressQuiz,
+  clearVocabTransitivityInProgressQuiz,
   getVocabInProgressQuiz,
   getVocabBlankInProgressQuiz,
   getVocabReadingInProgressQuiz,
   getVocabWritingInProgressQuiz,
+  getVocabTransitivityInProgressQuiz,
   getVocabStudyProgress,
   recordSrsReview,
   recordSrsSelfCheck,
@@ -36,11 +41,13 @@ import {
   saveVocabBlankInProgressQuiz,
   saveVocabReadingInProgressQuiz,
   saveVocabWritingInProgressQuiz,
+  saveVocabTransitivityInProgressQuiz,
   setVocabStudyProgress,
   type VocabInProgressQuiz,
   type VocabBlankInProgressQuiz,
   type VocabReadingInProgressQuiz,
   type VocabWritingInProgressQuiz,
+  type VocabTransitivityInProgressQuiz,
 } from '../lib/storage'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
@@ -65,12 +72,15 @@ type Phase =
   | 'readingQuizResult'
   | 'writingQuiz'
   | 'writingQuizResult'
-type QuizType = 'meaning' | 'blank' | 'reading' | 'writing'
+  | 'transitivityQuiz'
+  | 'transitivityQuizResult'
+type QuizType = 'meaning' | 'blank' | 'reading' | 'writing' | 'transitivity'
 const QUIZ_TYPE_LABELS: Record<QuizType, string> = {
   meaning: '뜻 맞히기',
   blank: '문맥 빈칸 채우기',
   reading: '읽기 입력',
   writing: '표기 고르기',
+  transitivity: '자타동사 구분',
 }
 
 interface QuizAnswer {
@@ -97,6 +107,12 @@ interface WritingAnswer {
   isCorrect: boolean
 }
 
+interface TransitivityAnswer {
+  question: VocabTransitivityQuestion
+  selectedId: string
+  isCorrect: boolean
+}
+
 interface Props {
   retryIds?: string[] | null
   onRetryIdsConsumed?: () => void
@@ -108,6 +124,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const blankPool = useMemo(() => vocabBlankLevelPool(level), [level])
   const readingPool = useMemo(() => vocabReadingLevelPool(level), [level])
   const writingPool = useMemo(() => vocabWritingLevelPool(level), [level])
+  const transitivityPool = useMemo(() => vocabTransitivityLevelPool(level), [level])
   const completedCount = Math.min(getVocabStudyProgress(level), pool.length)
   const remaining = pool.length - completedCount
 
@@ -182,12 +199,26 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const lastAdvancedWritingIndexRef = useRef(-1)
   const [savedWritingQuiz, setSavedWritingQuiz] = useState(() => getVocabWritingInProgressQuiz())
 
+  // 자타동사 구분 퀴즈 — 나머지 네 퀴즈와 나란한 병렬 구조
+  const [transitivityQuestions, setTransitivityQuestions] = useState<VocabTransitivityQuestion[]>([])
+  const [transitivityIndex, setTransitivityIndex] = useState(0)
+  const [transitivityAnswers, setTransitivityAnswers] = useState<TransitivityAnswer[]>([])
+  const [transitivityFeedback, setTransitivityFeedback] = useState<{ isCorrect: boolean; selectedId: string } | null>(
+    null,
+  )
+  const transitivityChoicesRef = useRef<HTMLDivElement>(null)
+  const transitivityRestartButtonRef = useRef<HTMLButtonElement>(null)
+  const transitivityStartRef = useRef(0)
+  const lastAdvancedTransitivityIndexRef = useRef(-1)
+  const [savedTransitivityQuiz, setSavedTransitivityQuiz] = useState(() => getVocabTransitivityInProgressQuiz())
+
   useEffect(() => {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'quizResult') restartButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'blankQuizResult') blankRestartButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'readingQuizResult') readingRestartButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'writingQuizResult') writingRestartButtonRef.current?.focus({ preventScroll: true })
+    if (phase === 'transitivityQuizResult') transitivityRestartButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
 
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
@@ -325,6 +356,29 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     setPhase('writingQuiz')
   }
 
+  function startTransitivityQuiz() {
+    clearVocabTransitivityInProgressQuiz()
+    setSavedTransitivityQuiz(null)
+    const count = quizCount === 'all' ? transitivityPool.length : quizCount
+    setTransitivityQuestions(generateVocabTransitivityQuestions(level, count, quizOrder))
+    setTransitivityIndex(0)
+    setTransitivityAnswers([])
+    setTransitivityFeedback(null)
+    lastAdvancedTransitivityIndexRef.current = -1
+    transitivityStartRef.current = Date.now()
+    setPhase('transitivityQuiz')
+  }
+
+  function resumeTransitivityQuiz(saved: VocabTransitivityInProgressQuiz) {
+    setTransitivityQuestions(saved.questions)
+    setTransitivityIndex(saved.index)
+    setTransitivityAnswers(saved.answers)
+    setTransitivityFeedback(null)
+    lastAdvancedTransitivityIndexRef.current = -1
+    transitivityStartRef.current = new Date(saved.startedAt).getTime()
+    setPhase('transitivityQuiz')
+  }
+
   useEffect(() => {
     if (!retryIds || retryIds.length === 0) return
     clearVocabInProgressQuiz()
@@ -418,6 +472,25 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   }, [phase])
 
   useEffect(() => {
+    if (phase !== 'transitivityQuizResult') return
+    clearVocabTransitivityInProgressQuiz()
+    setSavedTransitivityQuiz(null)
+    const wrongIds = transitivityAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
+    addVocabWrongNotes(wrongIds, `단어 자타동사 구분 퀴즈 · ${level}`)
+    addVocabQuizHistoryEntry({
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      level,
+      total: transitivityAnswers.length,
+      correct: transitivityAnswers.filter((a) => a.isCorrect).length,
+      elapsedMs: Date.now() - transitivityStartRef.current,
+      finishedAt: new Date().toISOString(),
+    })
+    transitivityAnswers.filter((a) => a.isCorrect).forEach((a) => removeVocabWrongNote(a.question.entry.id))
+    transitivityAnswers.forEach((a) => recordSrsReview('vocab', a.question.entry.id, a.isCorrect))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase])
+
+  useEffect(() => {
     if (phase !== 'studying') return
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'ArrowRight') {
@@ -485,6 +558,15 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     }
     writingChoicesRef.current?.querySelector('button')?.focus()
   }, [phase, writingIndex])
+
+  useEffect(() => {
+    if (phase !== 'transitivityQuiz') return
+    if (skipNextChoiceFocusRef.current) {
+      skipNextChoiceFocusRef.current = false
+      return
+    }
+    transitivityChoicesRef.current?.querySelector('button')?.focus()
+  }, [phase, transitivityIndex])
 
   function goNextQuiz(nextIndex: number) {
     if (nextIndex < quizQuestions.length) {
@@ -723,6 +805,62 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     return () => window.removeEventListener('keydown', handleKeyDown)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, writingIndex, writingFeedback])
+
+  function goNextTransitivity(nextIndex: number) {
+    if (nextIndex < transitivityQuestions.length) {
+      setTransitivityFeedback(null)
+      setTransitivityIndex(nextIndex)
+    } else {
+      setPhase('transitivityQuizResult')
+    }
+  }
+
+  function handleNextTransitivity() {
+    if (lastAdvancedTransitivityIndexRef.current === transitivityIndex) return
+    lastAdvancedTransitivityIndexRef.current = transitivityIndex
+    skipNextChoiceFocusRef.current = true
+    goNextTransitivity(transitivityIndex + 1)
+  }
+
+  function submitTransitivityAnswer(selectedId: string) {
+    if (transitivityFeedback) return
+    const question = transitivityQuestions[transitivityIndex]
+    const isCorrect = selectedId === question.entry.id
+    setTransitivityFeedback({ isCorrect, selectedId })
+    const updatedAnswers = [...transitivityAnswers, { question, selectedId, isCorrect }]
+    setTransitivityAnswers(updatedAnswers)
+
+    const nextIndex = transitivityIndex + 1
+    if (nextIndex < transitivityQuestions.length) {
+      saveVocabTransitivityInProgressQuiz({
+        level,
+        questions: transitivityQuestions,
+        index: nextIndex,
+        answers: updatedAnswers,
+        startedAt: new Date(transitivityStartRef.current).toISOString(),
+      })
+    }
+
+    if (isCorrect) {
+      setTimeout(() => goNextTransitivity(nextIndex), FEEDBACK_DELAY_MS)
+    }
+  }
+
+  useEffect(() => {
+    if (phase !== 'transitivityQuiz') return
+    function handleKeyDown(e: KeyboardEvent) {
+      if (transitivityFeedback) {
+        if (!transitivityFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextTransitivity()
+        return
+      }
+      const choiceIndex = Number(e.key) - 1
+      const choice = transitivityQuestions[transitivityIndex]?.choices[choiceIndex]
+      if (choice) submitTransitivityAnswer(choice.id)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, transitivityIndex, transitivityFeedback])
 
   if (phase === 'browse' && browseIndex !== null) {
     const word = levelWords[browseIndex]
@@ -1322,6 +1460,63 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     )
   }
 
+  if (phase === 'transitivityQuiz') {
+    const question = transitivityQuestions[transitivityIndex]
+    return (
+      <div className="quiz-runner">
+        <div className="quiz-topbar">
+          <button
+            type="button"
+            className="quiz-exit-button"
+            onClick={() => {
+              setPhase('setup')
+              setSavedTransitivityQuiz(getVocabTransitivityInProgressQuiz())
+            }}
+          >
+            나가기
+          </button>
+          <div className="quiz-progress">
+            {transitivityIndex + 1} / {transitivityQuestions.length}
+          </div>
+        </div>
+        <div className="vocab-quiz-prompt">
+          <span className="vocab-derivation-sentence">{question.blankedSentence}</span>
+        </div>
+        <div className="vocab-quiz-choices" ref={transitivityChoicesRef}>
+          {question.choices.map((choice, i) => {
+            let className = 'vocab-quiz-choice'
+            if (transitivityFeedback) {
+              if (choice.id === transitivityFeedback.selectedId) {
+                className += transitivityFeedback.isCorrect ? ' correct' : ' incorrect'
+              } else if (!transitivityFeedback.isCorrect && choice.id === question.entry.id) {
+                className += ' reveal-correct'
+              }
+            }
+            return (
+              <button
+                key={choice.id}
+                type="button"
+                className={className}
+                disabled={transitivityFeedback !== null}
+                onClick={() => submitTransitivityAnswer(choice.id)}
+              >
+                <span className="quiz-choice-num">{i + 1}</span>
+                {choice.word}
+                <span className="quiz-choice-pos">{choice.reading}</span>
+              </button>
+            )
+          })}
+        </div>
+        {transitivityFeedback && !transitivityFeedback.isCorrect && (
+          <button type="button" className="quiz-next-button" onClick={handleNextTransitivity}>
+            다음
+          </button>
+        )}
+        <p className="shortcut-hint">숫자키(1~4)로 선택 · 오답이면 Enter로 다음 문제</p>
+      </div>
+    )
+  }
+
   if (phase === 'writingQuizResult') {
     const correctCount = writingAnswers.filter((a) => a.isCorrect).length
     const total = writingAnswers.length
@@ -1355,6 +1550,48 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         <button
           type="button"
           ref={writingRestartButtonRef}
+          className="restart-button"
+          onClick={() => setPhase('setup')}
+        >
+          다시 설정하기
+        </button>
+      </div>
+    )
+  }
+
+  if (phase === 'transitivityQuizResult') {
+    const correctCount = transitivityAnswers.filter((a) => a.isCorrect).length
+    const total = transitivityAnswers.length
+    const rate = total > 0 ? Math.round((correctCount / total) * 100) : 0
+
+    return (
+      <div className="result-screen">
+        <h1>자타동사 구분 퀴즈 결과</h1>
+        <p className="result-summary">
+          {correctCount} / {total} 정답 ({rate}%)
+        </p>
+        <ul className="result-list">
+          {transitivityAnswers.map((a, i) => {
+            const selectedChoice = a.question.choices.find((c) => c.id === a.selectedId)
+            return (
+              <li key={`${a.question.entry.id}-${i}`} className={a.isCorrect ? 'correct' : 'incorrect'}>
+                <span className="vocab-result-word">
+                  {a.question.entry.word}
+                  <span className="vocab-result-reading">{a.question.entry.reading}</span>
+                </span>
+                <span className="result-detail">
+                  <span className="result-detail-main">
+                    정답: {a.question.entry.word}
+                    {!a.isCorrect && selectedChoice && <> · 내 답: {selectedChoice.word}</>}
+                  </span>
+                </span>
+              </li>
+            )
+          })}
+        </ul>
+        <button
+          type="button"
+          ref={transitivityRestartButtonRef}
           className="restart-button"
           onClick={() => setPhase('setup')}
         >
@@ -1430,6 +1667,22 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         </>
       )}
 
+      {savedTransitivityQuiz && (
+        <>
+          <p className="page-placeholder">
+            진행 중이던 자타동사 구분 퀴즈가 있어요 ({savedTransitivityQuiz.level} · {savedTransitivityQuiz.index}/
+            {savedTransitivityQuiz.questions.length}문제)
+          </p>
+          <button
+            type="button"
+            className="study-start-button"
+            onClick={() => resumeTransitivityQuiz(savedTransitivityQuiz)}
+          >
+            이어서 풀기
+          </button>
+        </>
+      )}
+
       <div className="study-level-picker">
         {ALL_LEVELS.map((l) => (
           <button
@@ -1463,7 +1716,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
       <div className="quiz-option-group">
         <span className="quiz-option-label">퀴즈 종류</span>
         <div className="study-level-picker">
-          {(['meaning', 'blank', 'reading', 'writing'] as const).map((t) => (
+          {(['meaning', 'blank', 'reading', 'writing', 'transitivity'] as const).map((t) => (
             <button
               key={t}
               type="button"
@@ -1487,7 +1740,9 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
                   ? blankPool
                   : quizType === 'reading'
                     ? readingPool
-                    : writingPool
+                    : quizType === 'writing'
+                      ? writingPool
+                      : transitivityPool
             const disabled = opt !== 'all' && opt > activePool.length
             return (
               <button
@@ -1530,6 +1785,8 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         <p className="page-placeholder">이 급수는 아직 읽기 입력 퀴즈로 낼 수 있는 단어가 없습니다.</p>
       ) : quizType === 'writing' && writingPool.length === 0 ? (
         <p className="page-placeholder">이 급수는 아직 표기 퀴즈로 낼 수 있는 단어가 없습니다.</p>
+      ) : quizType === 'transitivity' && transitivityPool.length === 0 ? (
+        <p className="page-placeholder">이 급수는 아직 자타동사 구분 퀴즈로 낼 수 있는 단어가 없습니다.</p>
       ) : quizType === 'meaning' ? (
         <button type="button" className="vocab-quiz-button" onClick={startQuiz}>
           단어 퀴즈 풀기 ({quizCount === 'all' ? pool.length : Math.min(quizCount, pool.length)}문제)
@@ -1542,9 +1799,14 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         <button type="button" className="vocab-quiz-button" onClick={startReadingQuiz}>
           읽기 입력 퀴즈 풀기 ({quizCount === 'all' ? readingPool.length : Math.min(quizCount, readingPool.length)}문제)
         </button>
-      ) : (
+      ) : quizType === 'writing' ? (
         <button type="button" className="vocab-quiz-button" onClick={startWritingQuiz}>
           표기 퀴즈 풀기 ({quizCount === 'all' ? writingPool.length : Math.min(quizCount, writingPool.length)}문제)
+        </button>
+      ) : (
+        <button type="button" className="vocab-quiz-button" onClick={startTransitivityQuiz}>
+          자타동사 구분 퀴즈 풀기 ({quizCount === 'all' ? transitivityPool.length : Math.min(quizCount, transitivityPool.length)}
+          문제)
         </button>
       )}
     </div>

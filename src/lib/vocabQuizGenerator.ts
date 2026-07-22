@@ -217,3 +217,56 @@ export function generateVocabWritingQuestionsFromIds(ids: string[]): VocabWritin
     return { entry, choices: shuffle([entry, ...distractors]) }
   })
 }
+
+// 자타동사(自動詞・他動詞) 구분 퀴즈 — transitivityPairId가 같은 단어들(예: 上がる/上げる)
+// 끼리 묶어, exampleJp 빈칸에 문맥상 맞는 형태를 고르게 한다. VocabBlankQuestion과 달리
+// 오답 선택지가 "무관한 단어"가 아니라 "같은 짝의 다른 형태"라서 진짜 자타동사 구분
+// 능력을 테스트한다(뜻을 몰라도 무작위로 찍어 맞힐 수 없음 — 짝 전체가 뜻은 비슷하고
+// 문형만 다름).
+export interface VocabTransitivityQuestion {
+  entry: VocabWord
+  blankedSentence: string
+  choices: VocabWord[]
+}
+
+function transitivityPairMembers(entry: VocabWord): VocabWord[] {
+  if (!entry.transitivityPairId) return []
+  return vocabList.filter((w) => w.transitivityPairId === entry.transitivityPairId && w.id !== entry.id)
+}
+
+// entries usable as a question's answer: needs >=1 pair partner and a blankable
+// example sentence (blankSentence already handles inflected forms/stem matching)
+export function vocabTransitivityLevelPool(level: KanjiLevel): VocabWord[] {
+  return vocabLevelPool(level).filter((w) => transitivityPairMembers(w).length >= 1 && blankSentence(w) !== null)
+}
+
+export function generateVocabTransitivityQuestions(
+  level: KanjiLevel,
+  count: number,
+  order: 'random' | 'sequential' = 'random',
+): VocabTransitivityQuestion[] {
+  const pool = vocabTransitivityLevelPool(level)
+  const ordered = order === 'random' ? shuffle(pool) : pool
+  const selected = ordered.slice(0, Math.min(count, pool.length))
+
+  return selected.map((entry) => ({
+    entry,
+    blankedSentence: blankSentence(entry)!,
+    choices: shuffle([entry, ...transitivityPairMembers(entry)]),
+  }))
+}
+
+// same shape, but for a fixed set of ids (오답노트 재도전) — ids whose pair
+// shrank below usable (e.g. a data update) are silently skipped
+export function generateVocabTransitivityQuestionsFromIds(ids: string[]): VocabTransitivityQuestion[] {
+  const entries = ids
+    .map((id) => vocabList.find((w) => w.id === id))
+    .filter((w): w is VocabWord => w !== undefined)
+    .filter((w) => transitivityPairMembers(w).length >= 1 && blankSentence(w) !== null)
+
+  return shuffle(entries).map((entry) => ({
+    entry,
+    blankedSentence: blankSentence(entry)!,
+    choices: shuffle([entry, ...transitivityPairMembers(entry)]),
+  }))
+}
