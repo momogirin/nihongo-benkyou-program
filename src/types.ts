@@ -54,6 +54,19 @@ export interface SimpleQuizHistoryEntry {
   finishedAt: string
 }
 
+// 활용 퀴즈는 급수 축(KanjiLevel)이 아니라 단어 출처(엄선/N5~N1)+유형(만들기/읽기)을
+// 쓰므로 level 대신 source/mode 라벨을 쓰는 별도 기록 타입. total/correct/finishedAt은
+// 공통이라 주간 통계 합산에 그대로 섞인다.
+export interface ConjugationQuizHistoryEntry {
+  id: string
+  source: string
+  mode: string
+  total: number
+  correct: number
+  elapsedMs: number
+  finishedAt: string
+}
+
 // 모의고사(한자/단어/문법 통합) 한 회차 기록 — SimpleQuizHistoryEntry에 도메인별
 // 정답/전체 브레이크다운만 추가된 형태
 export interface MockExamHistoryEntry {

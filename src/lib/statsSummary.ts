@@ -1,5 +1,6 @@
 import {
   getAllSrsState,
+  getConjugationQuizHistory,
   getEnglishVocabQuizHistory,
   getGrammarQuizHistory,
   getMockExamHistory,
@@ -27,6 +28,7 @@ export function getWeeklyStats(): WeeklyStats {
     ...getGrammarQuizHistory(),
     ...getEnglishVocabQuizHistory(),
     ...getMockExamHistory(),
+    ...getConjugationQuizHistory(),
   ]
   const recent = sessions.filter((s) => new Date(s.finishedAt).getTime() >= cutoff)
   return {

@@ -9,6 +9,7 @@ import {
 import { vocabConjugationEntries } from '../lib/vocabConjugation'
 import type { KanjiLevel } from '../data/kanji'
 import {
+  addConjugationQuizHistoryEntry,
   addConjugationWrongNotes,
   getDueSrsIds,
   recordSrsReview,
@@ -298,6 +299,9 @@ function ConjugationQuiz() {
   const [feedback, setFeedback] = useState<{ selectedKey: string; isCorrect: boolean } | null>(null)
   const [answers, setAnswers] = useState<{ entry: ConjugationEntry; target: ConjugatedForm; isCorrect: boolean }[]>([])
   const advanceTimer = useRef<number | null>(null)
+  const quizStartRef = useRef(0)
+  // 복습(startReview) 회차는 출처가 뒤섞이므로 기록 라벨을 '복습'으로 남긴다
+  const startedFromReviewRef = useRef(false)
 
   const pool = useMemo(() => baseList(source).filter((e) => inScope(e, scope)), [source, scope])
 
@@ -314,6 +318,8 @@ function ConjugationQuiz() {
     setIndex(0)
     setFeedback(null)
     setAnswers([])
+    quizStartRef.current = Date.now()
+    startedFromReviewRef.current = false
     setPhase('running')
   }
 
@@ -325,6 +331,8 @@ function ConjugationQuiz() {
     setIndex(0)
     setFeedback(null)
     setAnswers([])
+    quizStartRef.current = Date.now()
+    startedFromReviewRef.current = true
     setPhase('running')
   }
 
@@ -369,7 +377,8 @@ function ConjugationQuiz() {
   // (entry.id). 같은 세션에서 틀린 항목은 맞혀도 제거하지 않는다(오답 우선).
   useEffect(() => {
     if (phase !== 'result') return
-    const sourceLabel = SOURCES.find((s) => s.id === source)?.label ?? source
+    if (answers.length === 0) return
+    const sourceLabel = startedFromReviewRef.current ? '복습' : (SOURCES.find((s) => s.id === source)?.label ?? source)
     const modeLabel = QUIZ_MODES.find((m) => m.id === mode)?.label ?? mode
     const noteSource = `활용 퀴즈 · ${sourceLabel} · ${modeLabel}`
     const wrongIds = answers.filter((a) => !a.isCorrect).map((a) => a.entry.id)
@@ -378,6 +387,16 @@ function ConjugationQuiz() {
     answers
       .filter((a) => a.isCorrect && !wrongSet.has(a.entry.id))
       .forEach((a) => removeConjugationWrongNote(a.entry.id))
+    // 주간 통계·최근 기록에 활용 퀴즈도 잡히도록 회차 기록 남김
+    addConjugationQuizHistoryEntry({
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      source: sourceLabel,
+      mode: modeLabel,
+      total: answers.length,
+      correct: answers.filter((a) => a.isCorrect).length,
+      elapsedMs: Date.now() - quizStartRef.current,
+      finishedAt: new Date().toISOString(),
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 

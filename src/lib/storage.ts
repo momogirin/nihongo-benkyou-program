@@ -14,6 +14,7 @@ import type { EnglishVocabDerivationQuestion, EnglishVocabQuizQuestion } from '.
 import type { EnglishLevel } from '../data/englishVocab'
 import type {
   AnsweredQuestion,
+  ConjugationQuizHistoryEntry,
   MockExamHistoryEntry,
   QuestionType,
   QuizConfig,
@@ -198,6 +199,7 @@ const QUIZ_HISTORY_KEY = 'kanjiApp.quizHistory'
 const VOCAB_QUIZ_HISTORY_KEY = 'kanjiApp.vocabQuizHistory'
 const GRAMMAR_QUIZ_HISTORY_KEY = 'kanjiApp.grammarQuizHistory'
 const ENGLISH_VOCAB_QUIZ_HISTORY_KEY = 'kanjiApp.englishVocabQuizHistory'
+const CONJUGATION_QUIZ_HISTORY_KEY = 'kanjiApp.conjugationQuizHistory'
 const MOCK_EXAM_HISTORY_KEY = 'kanjiApp.mockExamHistory'
 const QUIZ_HISTORY_LIMIT = 20
 const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
@@ -353,6 +355,28 @@ export function importEnglishVocabQuizHistory(entries: SimpleQuizHistoryEntry[])
   for (const entry of entries) byId.set(entry.id, entry)
   const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
   localStorage.setItem(ENGLISH_VOCAB_QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
+}
+
+// 같은 다시, 활용(conjugation) 퀴즈 — level 대신 source/mode를 쓰는 별도 타입
+export function getConjugationQuizHistory(): ConjugationQuizHistoryEntry[] {
+  try {
+    const raw = localStorage.getItem(CONJUGATION_QUIZ_HISTORY_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function addConjugationQuizHistoryEntry(entry: ConjugationQuizHistoryEntry) {
+  const history = [entry, ...getConjugationQuizHistory()].slice(0, QUIZ_HISTORY_LIMIT)
+  localStorage.setItem(CONJUGATION_QUIZ_HISTORY_KEY, JSON.stringify(history))
+}
+
+export function importConjugationQuizHistory(entries: ConjugationQuizHistoryEntry[]) {
+  const byId = new Map(getConjugationQuizHistory().map((entry) => [entry.id, entry]))
+  for (const entry of entries) byId.set(entry.id, entry)
+  const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
+  localStorage.setItem(CONJUGATION_QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
 }
 
 // 모의고사(한자/단어/문법 통합) 기록 — 위 세 히스토리와 같은 패턴
@@ -1059,7 +1083,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24
+  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -1110,6 +1134,8 @@ export interface BackupPayload {
   conjugationWrongNotes?: ConjugationWrongNoteEntry[]
   // added in version 24 (단어 유의어 퀴즈) — optional so older backup files still validate
   vocabSynonymInProgressQuiz?: VocabSynonymInProgressQuiz | null
+  // added in version 25 (활용 퀴즈 기록 — 주간 통계/최근 기록 편입) — optional so older backup files still validate
+  conjugationQuizHistory?: ConjugationQuizHistoryEntry[]
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -1118,7 +1144,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 24,
+    version: 25,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -1154,6 +1180,7 @@ export function buildBackupPayload(): BackupPayload {
     kanaWrongNotes: getKanaWrongNotes(),
     conjugationWrongNotes: getConjugationWrongNotes(),
     vocabSynonymInProgressQuiz: getVocabSynonymInProgressQuiz(),
+    conjugationQuizHistory: getConjugationQuizHistory(),
   }
 }
 
@@ -1197,4 +1224,5 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.kanaWrongNotes) importKanaWrongNotes(payload.kanaWrongNotes)
   if (payload.conjugationWrongNotes) importConjugationWrongNotes(payload.conjugationWrongNotes)
   if (payload.vocabSynonymInProgressQuiz) importVocabSynonymInProgressQuiz(payload.vocabSynonymInProgressQuiz)
+  if (payload.conjugationQuizHistory) importConjugationQuizHistory(payload.conjugationQuizHistory)
 }
