@@ -29,7 +29,13 @@ import {
   getStudyProgressSummary,
   getVocabStudyProgressSummary,
 } from '../lib/studyProgress'
-import { getDomainAccuracies, getSrsMastery, getWeakestDomain, getWeeklyStats } from '../lib/statsSummary'
+import {
+  getDomainAccuracies,
+  getDomainLevelAccuracies,
+  getSrsMastery,
+  getWeakestDomainLevel,
+  getWeeklyStats,
+} from '../lib/statsSummary'
 import type { QuizConfig } from '../types'
 import './HomePage.css'
 
@@ -202,7 +208,20 @@ export default function HomePage({
   // 액션 카드 그리드와는 별도 섹션으로 둠
   const weeklyStats = useMemo(() => getWeeklyStats(), [])
   const domainAccuracies = useMemo(() => getDomainAccuracies(), [])
-  const weakestDomain = useMemo(() => getWeakestDomain(domainAccuracies), [domainAccuracies])
+  // 도메인 단위보다 세밀한 (도메인, 급수) 약점 — "가장 약한 급수"를 콕 집어 안내
+  const domainLevelAccuracies = useMemo(() => getDomainLevelAccuracies(), [])
+  const weakestDomainLevel = useMemo(
+    () => getWeakestDomainLevel(domainLevelAccuracies),
+    [domainLevelAccuracies],
+  )
+  // 약점 카드 클릭 시 해당 도메인으로 이동(급수는 그 화면에서 선택). 급수별 약점을
+  // 계산하는 도메인은 kanji/vocab/grammar/englishVocab 넷뿐이라 이들만 매핑
+  const weakestNav: Partial<Record<keyof typeof DOMAIN_LABEL, () => void>> = {
+    kanji: onGoToStudy,
+    vocab: onGoToVocab,
+    grammar: onGoToGrammar,
+    englishVocab: onGoToEnglishVocab,
+  }
   const srsMasteryByDomain = useMemo(
     () => ({
       kanji: getSrsMastery('kanji'),
@@ -484,11 +503,18 @@ export default function HomePage({
                 )
               })}
           </div>
-          {weakestDomain && (
-            <p className="home-stats-weak">
-              가장 약한 영역: <strong>{DOMAIN_LABEL[weakestDomain.domain]}</strong> — 누적 정답률 {weakestDomain.rate}%
-              ({weakestDomain.correct}/{weakestDomain.total}문항)
-            </p>
+          {weakestDomainLevel && (
+            <button
+              type="button"
+              className="home-stats-weak"
+              onClick={weakestNav[weakestDomainLevel.domain]}
+            >
+              <span>
+                가장 약한 영역: <strong>{DOMAIN_LABEL[weakestDomainLevel.domain]} {weakestDomainLevel.level}</strong> — 누적
+                정답률 {weakestDomainLevel.rate}% ({weakestDomainLevel.correct}/{weakestDomainLevel.total}문항)
+              </span>
+              <span className="home-stats-weak-chip">복습하러 가기 →</span>
+            </button>
           )}
         </section>
       )}

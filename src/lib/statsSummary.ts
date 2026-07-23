@@ -103,3 +103,52 @@ export function getWeakestDomain(accuracies: DomainAccuracy[]): DomainAccuracy |
   if (withEnoughData.length === 0) return null
   return withEnoughData.reduce((min, a) => (a.rate < min.rate ? a : min))
 }
+
+// 도메인 단위보다 한 단계 세밀한 (도메인, 급수)별 누적 정답률. 퀴즈기록의 level
+// 필드로 집계 — "어느 급수가 약한지"까지 콕 집어 복습을 안내하기 위함.
+export interface DomainLevelAccuracy {
+  domain: SrsDomain
+  level: string
+  total: number
+  correct: number
+  rate: number
+}
+
+export function getDomainLevelAccuracies(): DomainLevelAccuracy[] {
+  const map = new Map<string, { domain: SrsDomain; level: string; total: number; correct: number }>()
+  const add = (domain: SrsDomain, level: string, total: number, correct: number) => {
+    if (total === 0) return
+    const key = `${domain}|${level}`
+    const cur = map.get(key) ?? { domain, level, total: 0, correct: 0 }
+    cur.total += total
+    cur.correct += correct
+    map.set(key, cur)
+  }
+  // 한자는 config에 급수가 담김 — 여러 급수를 섞었거나 오답노트발(kanjiIds)이라
+  // 급수가 하나로 특정되지 않는 회차는 급수별 집계에서 제외
+  for (const e of getQuizHistory()) {
+    if (e.config.kanjiIds || e.config.levels.length !== 1) continue
+    add('kanji', e.config.levels[0], e.total, e.correct)
+  }
+  for (const e of getVocabQuizHistory()) add('vocab', e.level, e.total, e.correct)
+  for (const e of getGrammarQuizHistory()) add('grammar', e.level, e.total, e.correct)
+  for (const e of getEnglishVocabQuizHistory()) add('englishVocab', e.level, e.total, e.correct)
+  // 모의고사는 회차마다 급수 하나 + 도메인별 브레이크다운
+  for (const e of getMockExamHistory()) {
+    for (const domain of ['kanji', 'vocab', 'grammar'] as const) {
+      add(domain, e.level, e.breakdown[domain].total, e.breakdown[domain].correct)
+    }
+  }
+  return [...map.values()].map((v) => ({
+    ...v,
+    rate: v.total > 0 ? Math.round((v.correct / v.total) * 100) : 0,
+  }))
+}
+
+// 표본 충분한(5문항 이상) (도메인, 급수) 중 정답률이 가장 낮은 하나 — 홈의 "약점
+// 집중" 카드가 여기로 바로 안내한다
+export function getWeakestDomainLevel(accuracies: DomainLevelAccuracy[]): DomainLevelAccuracy | null {
+  const withEnoughData = accuracies.filter((a) => a.total >= MIN_SAMPLE_FOR_WEAKEST)
+  if (withEnoughData.length === 0) return null
+  return withEnoughData.reduce((min, a) => (a.rate < min.rate ? a : min))
+}
