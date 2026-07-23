@@ -206,7 +206,6 @@ const SRS_STATE_KEY: Record<SrsDomain, string> = {
   vocab: 'kanjiApp.srsVocab',
   grammar: 'kanjiApp.srsGrammar',
   englishVocab: 'kanjiApp.srsEnglishVocab',
-  // 가나 SRS는 로컬 저장만(현재 백업 페이로드에는 미포함 — 버전 호환 유지).
   kana: 'kanjiApp.srsKana',
   conjugation: 'kanjiApp.srsConjugation',
 }
@@ -936,7 +935,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20
+  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -979,6 +978,8 @@ export interface BackupPayload {
   vocabTransitivityInProgressQuiz?: VocabTransitivityInProgressQuiz | null
   // added in version 20 (활용 드릴 SRS 연동) — optional so older backup files still validate
   srsConjugation?: Record<string, SrsEntry>
+  // added in version 21 (가나 SRS 백업 편입) — optional so older backup files still validate
+  srsKana?: Record<string, SrsEntry>
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -987,7 +988,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 20,
+    version: 21,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -1019,6 +1020,7 @@ export function buildBackupPayload(): BackupPayload {
     vocabWritingInProgressQuiz: getVocabWritingInProgressQuiz(),
     vocabTransitivityInProgressQuiz: getVocabTransitivityInProgressQuiz(),
     srsConjugation: getAllSrsState('conjugation'),
+    srsKana: getAllSrsState('kana'),
   }
 }
 
@@ -1058,4 +1060,5 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.vocabTransitivityInProgressQuiz)
     importVocabTransitivityInProgressQuiz(payload.vocabTransitivityInProgressQuiz)
   if (payload.srsConjugation) importSrsState('conjugation', payload.srsConjugation)
+  if (payload.srsKana) importSrsState('kana', payload.srsKana)
 }
