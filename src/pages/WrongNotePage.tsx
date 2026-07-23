@@ -1,24 +1,30 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { kanjiList, type Kanji } from '../data/kanji'
+import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
 import { vocabList, type VocabWord } from '../data/vocab'
 import { grammarList, type GrammarPoint } from '../data/grammar'
 import { englishVocabList, type EnglishVocabWord } from '../data/englishVocab'
 import { kanaList, type Kana } from '../data/kana'
+import { conjugate, conjugationList, TYPE_LABELS, type ConjugationEntry } from '../lib/conjugation'
+import { vocabConjugationEntries } from '../lib/vocabConjugation'
+import { ConjTable } from './ConjugationPage'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
 import { usedKanji } from '../lib/kanjiUsage'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import {
+  getConjugationWrongNotes,
   getEnglishVocabWrongNotes,
   getGrammarWrongNotes,
   getKanaWrongNotes,
   getVocabWrongNotes,
   getWrongNotes,
+  removeConjugationWrongNote,
   removeEnglishVocabWrongNote,
   removeGrammarWrongNote,
   removeKanaWrongNote,
   removeVocabWrongNote,
   removeWrongNote,
+  type ConjugationWrongNoteEntry,
   type EnglishVocabWrongNoteEntry,
   type GrammarWrongNoteEntry,
   type KanaWrongNoteEntry,
@@ -30,6 +36,7 @@ import './StudyPage.css'
 import './VocabPage.css'
 import './GrammarPage.css'
 import './KanaPage.css'
+import './ConjugationPage.css'
 import './WrongNotePage.css'
 
 interface Props {
@@ -38,6 +45,7 @@ interface Props {
   onRetryGrammar: (ids: string[]) => void
   onRetryEnglishVocab: (ids: string[]) => void
   onGoToKana: () => void
+  onGoToConjugation: () => void
 }
 
 type DetailTarget =
@@ -46,8 +54,21 @@ type DetailTarget =
   | { kind: 'grammar'; point: GrammarPoint }
   | { kind: 'englishVocab'; word: EnglishVocabWord }
   | { kind: 'kana'; kana: Kana }
+  | { kind: 'conjugation'; entry: ConjugationEntry }
 
-type ConfirmTarget = { kind: 'kanji' | 'vocab' | 'grammar' | 'englishVocab' | 'kana'; id: string; label: string }
+type ConfirmTarget = {
+  kind: 'kanji' | 'vocab' | 'grammar' | 'englishVocab' | 'kana' | 'conjugation'
+  id: string
+  label: string
+}
+
+// 활용 오답노트 항목 조회용 — 활용 퀴즈의 allEntries()와 같은 구성(엄선 + 급수별
+// 태깅 어휘). id는 서로 겹치지 않음(엄선 CJ-*, 어휘 N5-* 등)
+const CONJUGATION_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+const allConjugationEntries: ConjugationEntry[] = [
+  ...conjugationList,
+  ...CONJUGATION_LEVELS.flatMap((l) => vocabConjugationEntries(l)),
+]
 
 interface Session<TNote, TItem> {
   wrongAt: string
@@ -82,12 +103,14 @@ export default function WrongNotePage({
   onRetryGrammar,
   onRetryEnglishVocab,
   onGoToKana,
+  onGoToConjugation,
 }: Props) {
   const [wrongNotes, setWrongNotes] = useState(() => getWrongNotes())
   const [vocabWrongNotes, setVocabWrongNotes] = useState(() => getVocabWrongNotes())
   const [grammarWrongNotes, setGrammarWrongNotes] = useState(() => getGrammarWrongNotes())
   const [englishVocabWrongNotes, setEnglishVocabWrongNotes] = useState(() => getEnglishVocabWrongNotes())
   const [kanaWrongNotes, setKanaWrongNotes] = useState(() => getKanaWrongNotes())
+  const [conjugationWrongNotes, setConjugationWrongNotes] = useState(() => getConjugationWrongNotes())
   const [detail, setDetail] = useState<DetailTarget | null>(null)
   const [confirmTarget, setConfirmTarget] = useState<ConfirmTarget | null>(null)
   const detailCloseButtonRef = useRef<HTMLButtonElement>(null)
@@ -98,6 +121,7 @@ export default function WrongNotePage({
   const grammarById = useMemo(() => new Map(grammarList.map((g) => [g.id, g])), [])
   const englishVocabById = useMemo(() => new Map(englishVocabList.map((w) => [w.id, w])), [])
   const kanaById = useMemo(() => new Map(kanaList.map((k) => [k.id, k])), [])
+  const conjugationById = useMemo(() => new Map(allConjugationEntries.map((e) => [e.id, e])), [])
 
   useEffect(() => {
     if (!detail) return
@@ -175,6 +199,16 @@ export default function WrongNotePage({
     [kanaWrongNotes, kanaById],
   )
 
+  const conjugationSessions = useMemo(
+    () =>
+      groupBySession<ConjugationWrongNoteEntry, ConjugationEntry>(
+        conjugationWrongNotes
+          .map((note) => ({ note, item: conjugationById.get(note.conjugationId) }))
+          .filter((e): e is { note: ConjugationWrongNoteEntry; item: ConjugationEntry } => e.item !== undefined),
+      ),
+    [conjugationWrongNotes, conjugationById],
+  )
+
   const kanjiIds = useMemo(() => kanjiSessions.flatMap((s) => s.items.map(({ item }) => item.id)), [kanjiSessions])
   const vocabIds = useMemo(() => vocabSessions.flatMap((s) => s.items.map(({ item }) => item.id)), [vocabSessions])
   const grammarIds = useMemo(
@@ -186,12 +220,17 @@ export default function WrongNotePage({
     [englishVocabSessions],
   )
   const kanaIds = useMemo(() => kanaSessions.flatMap((s) => s.items.map(({ item }) => item.id)), [kanaSessions])
+  const conjugationIds = useMemo(
+    () => conjugationSessions.flatMap((s) => s.items.map(({ item }) => item.id)),
+    [conjugationSessions],
+  )
 
   const kanjiCount = kanjiIds.length
   const vocabCount = vocabIds.length
   const grammarCount = grammarIds.length
   const englishVocabCount = englishVocabIds.length
   const kanaCount = kanaIds.length
+  const conjugationCount = conjugationIds.length
 
   function performRemove(target: ConfirmTarget) {
     if (target.kind === 'kanji') {
@@ -206,9 +245,12 @@ export default function WrongNotePage({
     } else if (target.kind === 'englishVocab') {
       removeEnglishVocabWrongNote(target.id)
       setEnglishVocabWrongNotes(getEnglishVocabWrongNotes())
-    } else {
+    } else if (target.kind === 'kana') {
       removeKanaWrongNote(target.id)
       setKanaWrongNotes(getKanaWrongNotes())
+    } else {
+      removeConjugationWrongNote(target.id)
+      setConjugationWrongNotes(getConjugationWrongNotes())
     }
     setConfirmTarget(null)
   }
@@ -222,7 +264,8 @@ export default function WrongNotePage({
     vocabCount === 0 &&
     grammarCount === 0 &&
     englishVocabCount === 0 &&
-    kanaCount === 0
+    kanaCount === 0 &&
+    conjugationCount === 0
   ) {
     return (
       <div className="page">
@@ -467,6 +510,49 @@ export default function WrongNotePage({
         </section>
       )}
 
+      {conjugationSessions.length > 0 && (
+        <section className="wrong-note-section">
+          <div className="page-header">
+            <h2>활용</h2>
+            <button type="button" className="retry-button" onClick={onGoToConjugation}>
+              오답만 재도전 ({conjugationCount})
+            </button>
+          </div>
+          {conjugationSessions.map((session) => (
+            <div className="wrong-note-session" key={`conjugation-${session.wrongAt}`}>
+              <div className="wrong-note-session-header">
+                <span className="wrong-note-session-time">{formatDateTime(session.wrongAt)}</span>
+                <span className="wrong-note-session-source">{session.source ?? '기록 없음'}</span>
+              </div>
+              <ul className="wrong-note-list">
+                {session.items.map(({ note, item: entry }) => (
+                  <li key={entry.id} className="wrong-note-item">
+                    <button
+                      type="button"
+                      className="wrong-note-item-main"
+                      onClick={() => setDetail({ kind: 'conjugation', entry })}
+                    >
+                      <span className="wrong-note-word">{entry.word}</span>
+                      <span className="wrong-note-detail">
+                        {entry.reading} · {entry.meaningKr} · {TYPE_LABELS[entry.type]}
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      className="wrong-note-remove"
+                      aria-label={`${entry.word} 오답노트에서 제거`}
+                      onClick={() => setConfirmTarget({ kind: 'conjugation', id: note.conjugationId, label: entry.word })}
+                    >
+                      ✕
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
+      )}
+
       {detail && (
         <div className="wrong-note-modal-backdrop" onClick={() => setDetail(null)}>
           <div className="wrong-note-modal" onClick={(e) => e.stopPropagation()}>
@@ -481,6 +567,7 @@ export default function WrongNotePage({
             {detail.kind === 'grammar' && <GrammarDetailCard point={detail.point} />}
             {detail.kind === 'englishVocab' && <EnglishVocabDetailCard word={detail.word} />}
             {detail.kind === 'kana' && <KanaDetailCard kana={detail.kana} />}
+            {detail.kind === 'conjugation' && <ConjugationDetailCard entry={detail.entry} />}
           </div>
         </div>
       )}
@@ -690,6 +777,23 @@ function GrammarDetailCard({ point }: { point: GrammarPoint }) {
           </div>
         )}
       </dl>
+    </div>
+  )
+}
+
+function ConjugationDetailCard({ entry }: { entry: ConjugationEntry }) {
+  const forms = conjugate(entry)
+  return (
+    <div className="study-card">
+      <div className="study-top">
+        <span className="conj-type-badge">{TYPE_LABELS[entry.type]}</span>
+      </div>
+      <div className="conj-dict-word">
+        {entry.word}
+        <span className="conj-dict-reading">{entry.reading}</span>
+      </div>
+      <p className="conj-dict-meaning">{entry.meaningKr}</p>
+      <ConjTable forms={forms} />
     </div>
   )
 }

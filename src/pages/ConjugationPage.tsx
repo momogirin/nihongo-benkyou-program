@@ -8,7 +8,12 @@ import {
 } from '../lib/conjugation'
 import { vocabConjugationEntries } from '../lib/vocabConjugation'
 import type { KanjiLevel } from '../data/kanji'
-import { getDueSrsIds, recordSrsReview } from '../lib/storage'
+import {
+  addConjugationWrongNotes,
+  getDueSrsIds,
+  recordSrsReview,
+  removeConjugationWrongNote,
+} from '../lib/storage'
 import './StudyPage.css'
 import './VocabPage.css'
 import './KanjiPage.css'
@@ -231,7 +236,7 @@ function ConjugationStudy() {
   )
 }
 
-function ConjTable({ forms }: { forms: ConjugatedForm[] }) {
+export function ConjTable({ forms }: { forms: ConjugatedForm[] }) {
   return (
     <table className="conj-table">
       <tbody>
@@ -358,6 +363,23 @@ function ConjugationQuiz() {
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [phase, index, feedback, questions])
+
+  // 결과 화면 진입 시 한 번: 오답은 오답노트에 쌓고, 맞힌 항목은 오답노트에서
+  // 제거 — 다른 도메인 퀴즈와 동일한 파이프라인. 단위는 SRS와 같은 활용 기본형
+  // (entry.id). 같은 세션에서 틀린 항목은 맞혀도 제거하지 않는다(오답 우선).
+  useEffect(() => {
+    if (phase !== 'result') return
+    const sourceLabel = SOURCES.find((s) => s.id === source)?.label ?? source
+    const modeLabel = QUIZ_MODES.find((m) => m.id === mode)?.label ?? mode
+    const noteSource = `활용 퀴즈 · ${sourceLabel} · ${modeLabel}`
+    const wrongIds = answers.filter((a) => !a.isCorrect).map((a) => a.entry.id)
+    const wrongSet = new Set(wrongIds)
+    addConjugationWrongNotes(wrongIds, noteSource)
+    answers
+      .filter((a) => a.isCorrect && !wrongSet.has(a.entry.id))
+      .forEach((a) => removeConjugationWrongNote(a.entry.id))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase])
 
   if (phase === 'running') {
     const question = questions[index]

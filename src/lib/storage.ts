@@ -61,6 +61,15 @@ export interface KanaWrongNoteEntry {
   source?: string
 }
 
+// 활용(活用) 드릴 오답노트 — SRS와 같은 단위(활용 기본형 entry.id: 엄선은 CJ-*,
+// 급수 태깅 어휘는 vocab id N5-* 등)로 저장. 특정 활용형이 아니라 기본형 단위라
+// 재도전은 활용 페이지의 SRS 복습 배너가 그대로 그 단어를 다시 물어본다.
+export interface ConjugationWrongNoteEntry {
+  conjugationId: string
+  wrongAt: string
+  source?: string
+}
+
 // a quiz session that's been started but not finished yet, saved after every
 // answer so it can be resumed exactly (same questions/choices, same answers
 // so far) instead of restarting from scratch
@@ -175,6 +184,7 @@ const VOCAB_WRONG_NOTES_KEY = 'kanjiApp.vocabWrongNotes'
 const GRAMMAR_WRONG_NOTES_KEY = 'kanjiApp.grammarWrongNotes'
 const ENGLISH_VOCAB_WRONG_NOTES_KEY = 'kanjiApp.englishVocabWrongNotes'
 const KANA_WRONG_NOTES_KEY = 'kanjiApp.kanaWrongNotes'
+const CONJUGATION_WRONG_NOTES_KEY = 'kanjiApp.conjugationWrongNotes'
 const QUIZ_HISTORY_KEY = 'kanjiApp.quizHistory'
 const VOCAB_QUIZ_HISTORY_KEY = 'kanjiApp.vocabQuizHistory'
 const GRAMMAR_QUIZ_HISTORY_KEY = 'kanjiApp.grammarQuizHistory'
@@ -771,6 +781,42 @@ export function importKanaWrongNotes(entries: KanaWrongNoteEntry[]) {
   localStorage.setItem(KANA_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
 }
 
+// same shape again, but for the 활용(conjugation) drill quiz
+export function getConjugationWrongNotes(): ConjugationWrongNoteEntry[] {
+  try {
+    const raw = localStorage.getItem(CONJUGATION_WRONG_NOTES_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function addConjugationWrongNotes(conjugationIds: string[], source: string) {
+  if (conjugationIds.length === 0) return
+  const byId = new Map(getConjugationWrongNotes().map((entry) => [entry.conjugationId, entry]))
+  const wrongAt = new Date().toISOString()
+  for (const conjugationId of conjugationIds) {
+    byId.set(conjugationId, { conjugationId, wrongAt, source })
+  }
+  localStorage.setItem(CONJUGATION_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
+}
+
+export function removeConjugationWrongNote(conjugationId: string) {
+  const remaining = getConjugationWrongNotes().filter((entry) => entry.conjugationId !== conjugationId)
+  localStorage.setItem(CONJUGATION_WRONG_NOTES_KEY, JSON.stringify(remaining))
+}
+
+export function importConjugationWrongNotes(entries: ConjugationWrongNoteEntry[]) {
+  const byId = new Map(getConjugationWrongNotes().map((entry) => [entry.conjugationId, entry]))
+  for (const entry of entries) {
+    const existing = byId.get(entry.conjugationId)
+    if (!existing || existing.wrongAt < entry.wrongAt) {
+      byId.set(entry.conjugationId, entry)
+    }
+  }
+  localStorage.setItem(CONJUGATION_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
+}
+
 function getLevelProgressMap(key: string): Record<string, number> {
   try {
     const raw = localStorage.getItem(key)
@@ -981,7 +1027,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22
+  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -1028,6 +1074,8 @@ export interface BackupPayload {
   srsKana?: Record<string, SrsEntry>
   // added in version 22 (가나 오답노트 편입) — optional so older backup files still validate
   kanaWrongNotes?: KanaWrongNoteEntry[]
+  // added in version 23 (활용 드릴 오답노트 편입) — optional so older backup files still validate
+  conjugationWrongNotes?: ConjugationWrongNoteEntry[]
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -1036,7 +1084,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 22,
+    version: 23,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -1070,6 +1118,7 @@ export function buildBackupPayload(): BackupPayload {
     srsConjugation: getAllSrsState('conjugation'),
     srsKana: getAllSrsState('kana'),
     kanaWrongNotes: getKanaWrongNotes(),
+    conjugationWrongNotes: getConjugationWrongNotes(),
   }
 }
 
@@ -1111,4 +1160,5 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.srsConjugation) importSrsState('conjugation', payload.srsConjugation)
   if (payload.srsKana) importSrsState('kana', payload.srsKana)
   if (payload.kanaWrongNotes) importKanaWrongNotes(payload.kanaWrongNotes)
+  if (payload.conjugationWrongNotes) importConjugationWrongNotes(payload.conjugationWrongNotes)
 }
