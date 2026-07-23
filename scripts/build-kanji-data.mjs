@@ -27,6 +27,18 @@ export type KunKrSource = 'curated' | 'wiktionary' | 'wiktionary-traditional' | 
 // this field is never sourced from JMdict directly — see data/raw/README.md)
 export type ExampleKrSource = 'curated' | 'generated'
 
+// 음독별 대표 단어(src/lib/kanjiOnReadingIndex.ts)가 vocabList 자동 매칭으로
+// 못 찾은 음독을 사람이 직접 채운 것 — 熟語 중간/끝 글자(오탐 방지로 자동
+// 매칭을 포기하는 위치)에 있는 음독이 대다수. word/reading은 vocabList에
+// 실제로 없는 단어일 수도 있어(그 음독을 보여주는 가장 흔한 예를 직접 고른
+// 것) VocabWord와 무관한 별도 얕은 타입으로 둔다.
+export interface OnReadingOverrideEntry {
+  on: string
+  word: string
+  reading: string
+  meaningKr: string
+}
+
 export interface Kanji {
   id: string
   level: KanjiLevel
@@ -42,6 +54,7 @@ export interface Kanji {
   exampleRefNum: string | null
   kunKrSource: KunKrSource
   exampleKrSource?: ExampleKrSource
+  onReadingOverride?: OnReadingOverrideEntry[]
 }
 
 // Parsed from a JSON string (rather than a literal array) because TS's

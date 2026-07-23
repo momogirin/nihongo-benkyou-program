@@ -81,15 +81,27 @@ function matchesOnReading(word: VocabWord, kanjiChar: string, onHira: string): b
   return false
 }
 
+// KanjiListPage가 실제로 쓰는 필드만 담은 얕은 타입 — vocabList에서 자동
+// 매칭된 VocabWord와, 사람이 직접 채운 onReadingOverride 항목을 같은
+// shape으로 다루기 위함(override 단어는 vocabList에 없을 수도 있어 id가
+// 없으므로 `${kanji}-${on}-${word}`로 합성).
+export interface OnReadingWord {
+  id: string
+  word: string
+  reading: string
+  meaningKr: string
+}
+
 export interface OnReadingExample {
   on: string
-  words: VocabWord[]
+  words: OnReadingWord[]
 }
 
 const cache = new Map<string, OnReadingExample[]>()
 
-// 한자별 음독마다 대표 단어(최대 limit개, 급수·번호순)를 반환.
-// 매칭되는 단어가 없는 음독은 결과에서 제외한다(추측 금지 원칙).
+// 한자별 음독마다 대표 단어(최대 limit개, 급수·번호순)를 반환. vocabList
+// 자동 매칭이 못 찾은 음독은 kanji.onReadingOverride(사람이 직접 채운 것)로
+// 보완하고, 그마저 없으면 결과에서 제외한다(추측 금지 원칙).
 export function onReadingExamples(kanji: Kanji, limit = 3): OnReadingExample[] {
   const cached = cache.get(kanji.kanji)
   if (cached) return cached
@@ -109,13 +121,26 @@ export function onReadingExamples(kanji: Kanji, limit = 3): OnReadingExample[] {
     matchesByOn.set(on, matched)
   }
 
+  const overrideByOn = new Map<string, OnReadingWord[]>()
+  for (const entry of kanji.onReadingOverride ?? []) {
+    const arr = overrideByOn.get(entry.on) ?? []
+    arr.push({
+      id: `${kanji.kanji}-${entry.on}-${entry.word}`,
+      word: entry.word,
+      reading: entry.reading,
+      meaningKr: entry.meaningKr,
+    })
+    overrideByOn.set(entry.on, arr)
+  }
+
   const result: OnReadingExample[] = []
   for (const on of onList) {
-    const matched = (matchesByOn.get(on) ?? []).sort(
-      (a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level] || a.num - b.num,
-    )
-    if (matched.length === 0) continue
-    result.push({ on, words: matched.slice(0, limit) })
+    const matched: OnReadingWord[] = (matchesByOn.get(on) ?? [])
+      .sort((a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level] || a.num - b.num)
+      .map((w) => ({ id: w.id, word: w.word, reading: w.reading, meaningKr: w.meaningKr }))
+    const words = matched.length > 0 ? matched : (overrideByOn.get(on) ?? [])
+    if (words.length === 0) continue
+    result.push({ on, words: words.slice(0, limit) })
   }
 
   cache.set(kanji.kanji, result)
