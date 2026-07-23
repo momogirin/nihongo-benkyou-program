@@ -86,6 +86,7 @@ function App() {
             onGoToMockExam={() => handleNavigate('mockExam')}
             onGoToEnglishVocab={() => handleNavigate('englishVocab')}
             onGoToKana={() => handleNavigate('kana')}
+            onGoToConjugation={() => handleNavigate('conjugation')}
             onRetryVocab={retryVocab}
             onRetryGrammar={retryGrammar}
             onRetryEnglishVocab={retryEnglishVocab}

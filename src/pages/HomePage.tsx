@@ -4,8 +4,11 @@ import { vocabList } from '../data/vocab'
 import { grammarList } from '../data/grammar'
 import { englishVocabList } from '../data/englishVocab'
 import { kanaList } from '../data/kana'
+import { conjugationList } from '../lib/conjugation'
+import { vocabConjugationEntries } from '../lib/vocabConjugation'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import {
+  getConjugationWrongNotes,
   getDueSrsIds,
   getEnglishVocabInProgressQuiz,
   getEnglishVocabQuizHistory,
@@ -50,6 +53,13 @@ const DOMAIN_LABEL = {
   conjugation: '활용',
 } as const
 
+// 활용 SRS due/오답노트를 조회할 전체 id 집합 — 활용 퀴즈의 allEntries()와 동일
+// 구성(엄선 + 급수별 태깅 어휘). id는 서로 겹치지 않음(엄선 CJ-*, 어휘 N5-* 등)
+const ALL_CONJUGATION_IDS = [
+  ...conjugationList.map((e) => e.id),
+  ...(['N5', 'N4', 'N3', 'N2', 'N1'] as const).flatMap((l) => vocabConjugationEntries(l).map((e) => e.id)),
+]
+
 interface Props {
   onStartQuiz: (config: QuizConfig) => void
   onResumeQuiz: () => void
@@ -59,6 +69,7 @@ interface Props {
   onGoToMockExam: () => void
   onGoToEnglishVocab: () => void
   onGoToKana: () => void
+  onGoToConjugation: () => void
   onRetryVocab: (ids: string[]) => void
   onRetryGrammar: (ids: string[]) => void
   onRetryEnglishVocab: (ids: string[]) => void
@@ -88,6 +99,7 @@ export default function HomePage({
   onGoToMockExam,
   onGoToEnglishVocab,
   onGoToKana,
+  onGoToConjugation,
   onRetryVocab,
   onRetryGrammar,
   onRetryEnglishVocab,
@@ -193,6 +205,13 @@ export default function HomePage({
       .filter((id) => validIds.has(id))
   }, [])
 
+  const conjugationWrongIds = useMemo(() => {
+    const validIds = new Set(ALL_CONJUGATION_IDS)
+    return getConjugationWrongNotes()
+      .map((n) => n.conjugationId)
+      .filter((id) => validIds.has(id))
+  }, [])
+
   // SRS(간격반복 복습) — 퀴즈에서 한 번이라도 다뤄진 항목 중 복습 시점이 된 것.
   // 오답노트(항상 틀린 것)와 달리 "지금이 다시 볼 타이밍"이라는 시간 축 정보라 별도 카드로 둠
   const dueKanjiIds = useMemo(() => getDueSrsIds('kanji', kanjiList.map((k) => k.id)), [])
@@ -203,6 +222,7 @@ export default function HomePage({
     [],
   )
   const dueKanaIds = useMemo(() => getDueSrsIds('kana', kanaList.map((k) => k.id)), [])
+  const dueConjugationIds = useMemo(() => getDueSrsIds('conjugation', ALL_CONJUGATION_IDS), [])
 
   // 학습 통계 — 진도/오답과 달리 "얼마나 잘 하고 있는지"를 보여주는 요약이라
   // 액션 카드 그리드와는 별도 섹션으로 둠
@@ -248,11 +268,13 @@ export default function HomePage({
     grammarWrongIds.length > 0 ||
     englishVocabWrongIds.length > 0 ||
     kanaWrongIds.length > 0 ||
+    conjugationWrongIds.length > 0 ||
     dueKanjiIds.length > 0 ||
     dueVocabIds.length > 0 ||
     dueGrammarIds.length > 0 ||
     dueEnglishVocabIds.length > 0 ||
-    dueKanaIds.length > 0
+    dueKanaIds.length > 0 ||
+    dueConjugationIds.length > 0
   if (!hasAnyEntry && mergedHistory.length === 0) {
     return (
       <div className="page">
@@ -301,6 +323,13 @@ export default function HomePage({
       title: '가나 복습',
       detail: `${dueKanaIds.length}자 복습할 시간이에요`,
       onClick: onGoToKana,
+    },
+    dueConjugationIds.length > 0 && {
+      key: 'due-conjugation',
+      urgent: true,
+      title: '활용 복습',
+      detail: `${dueConjugationIds.length}개 복습할 시간이에요`,
+      onClick: onGoToConjugation,
     },
     inProgress && {
       key: 'resume-kanji',
@@ -406,6 +435,13 @@ export default function HomePage({
       count: kanaWrongIds.length,
       unit: '자',
       onClick: onGoToKana,
+    },
+    conjugationWrongIds.length > 0 && {
+      key: 'retry-conjugation',
+      title: '활용',
+      count: conjugationWrongIds.length,
+      unit: '개',
+      onClick: onGoToConjugation,
     },
   ].filter((item): item is Exclude<typeof item, false | null> => Boolean(item))
 
