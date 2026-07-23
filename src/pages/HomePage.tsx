@@ -3,6 +3,7 @@ import { kanjiList } from '../data/kanji'
 import { vocabList } from '../data/vocab'
 import { grammarList } from '../data/grammar'
 import { englishVocabList } from '../data/englishVocab'
+import { kanaList } from '../data/kana'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import {
   getDueSrsIds,
@@ -13,6 +14,7 @@ import {
   getGrammarQuizHistory,
   getGrammarWrongNotes,
   getInProgressQuiz,
+  getKanaWrongNotes,
   getMockExamHistory,
   getMockExamInProgressQuiz,
   getQuizHistory,
@@ -50,6 +52,7 @@ interface Props {
   onGoToGrammar: () => void
   onGoToMockExam: () => void
   onGoToEnglishVocab: () => void
+  onGoToKana: () => void
   onRetryVocab: (ids: string[]) => void
   onRetryGrammar: (ids: string[]) => void
   onRetryEnglishVocab: (ids: string[]) => void
@@ -78,6 +81,7 @@ export default function HomePage({
   onGoToGrammar,
   onGoToMockExam,
   onGoToEnglishVocab,
+  onGoToKana,
   onRetryVocab,
   onRetryGrammar,
   onRetryEnglishVocab,
@@ -176,6 +180,13 @@ export default function HomePage({
       .filter((id) => validIds.has(id))
   }, [])
 
+  const kanaWrongIds = useMemo(() => {
+    const validIds = new Set(kanaList.map((k) => k.id))
+    return getKanaWrongNotes()
+      .map((n) => n.kanaId)
+      .filter((id) => validIds.has(id))
+  }, [])
+
   // SRS(간격반복 복습) — 퀴즈에서 한 번이라도 다뤄진 항목 중 복습 시점이 된 것.
   // 오답노트(항상 틀린 것)와 달리 "지금이 다시 볼 타이밍"이라는 시간 축 정보라 별도 카드로 둠
   const dueKanjiIds = useMemo(() => getDueSrsIds('kanji', kanjiList.map((k) => k.id)), [])
@@ -185,6 +196,7 @@ export default function HomePage({
     () => getDueSrsIds('englishVocab', englishVocabList.map((w) => w.id)),
     [],
   )
+  const dueKanaIds = useMemo(() => getDueSrsIds('kana', kanaList.map((k) => k.id)), [])
 
   // 학습 통계 — 진도/오답과 달리 "얼마나 잘 하고 있는지"를 보여주는 요약이라
   // 액션 카드 그리드와는 별도 섹션으로 둠
@@ -216,10 +228,12 @@ export default function HomePage({
     vocabWrongIds.length > 0 ||
     grammarWrongIds.length > 0 ||
     englishVocabWrongIds.length > 0 ||
+    kanaWrongIds.length > 0 ||
     dueKanjiIds.length > 0 ||
     dueVocabIds.length > 0 ||
     dueGrammarIds.length > 0 ||
-    dueEnglishVocabIds.length > 0
+    dueEnglishVocabIds.length > 0 ||
+    dueKanaIds.length > 0
   if (!hasAnyEntry && mergedHistory.length === 0) {
     return (
       <div className="page">
@@ -261,6 +275,13 @@ export default function HomePage({
       title: '영어단어 복습',
       detail: `${dueEnglishVocabIds.length}개 복습할 시간이에요`,
       onClick: () => onRetryEnglishVocab(dueEnglishVocabIds),
+    },
+    dueKanaIds.length > 0 && {
+      key: 'due-kana',
+      urgent: true,
+      title: '가나 복습',
+      detail: `${dueKanaIds.length}자 복습할 시간이에요`,
+      onClick: onGoToKana,
     },
     inProgress && {
       key: 'resume-kanji',
@@ -359,6 +380,13 @@ export default function HomePage({
       count: englishVocabWrongIds.length,
       unit: '개',
       onClick: () => onRetryEnglishVocab(englishVocabWrongIds),
+    },
+    kanaWrongIds.length > 0 && {
+      key: 'retry-kana',
+      title: '가나',
+      count: kanaWrongIds.length,
+      unit: '자',
+      onClick: onGoToKana,
     },
   ].filter((item): item is Exclude<typeof item, false | null> => Boolean(item))
 

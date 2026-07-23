@@ -85,6 +85,7 @@ function App() {
             onGoToGrammar={() => handleNavigate('grammar')}
             onGoToMockExam={() => handleNavigate('mockExam')}
             onGoToEnglishVocab={() => handleNavigate('englishVocab')}
+            onGoToKana={() => handleNavigate('kana')}
             onRetryVocab={retryVocab}
             onRetryGrammar={retryGrammar}
             onRetryEnglishVocab={retryEnglishVocab}
