@@ -473,6 +473,26 @@
   color: var(--color-primary-dark);
 }
 
+.study-on-reading-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.study-on-reading-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.study-on-reading-label {
+  flex: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-ink-muted);
+}
+
 .study-nav {
   display: flex;
   justify-content: center;
