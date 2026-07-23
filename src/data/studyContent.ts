@@ -10543,7 +10543,7 @@ export const studyContentByKanjiId: Record<string, StudyContent> = {
   },
   "N5-49": {
     "kanjiId": "N5-49",
-    "radicalNumber": 72,
+    "radicalNumber": 73,
     "etymology": "회의자, 붓(聿)으로 말한 것을 적는다는 데서 '쓰다'는 뜻이 됨."
   },
   "N5-50": {
@@ -10633,7 +10633,7 @@ export const studyContentByKanjiId: Record<string, StudyContent> = {
   },
   "N5-67": {
     "kanjiId": "N5-67",
-    "radicalNumber": 51,
+    "radicalNumber": 24,
     "etymology": "원래 악기(종·북 종류)의 모습을 본뜬 상형자였는데 가차되어 '남쪽'을 뜻하게 됨."
   },
   "N5-68": {
