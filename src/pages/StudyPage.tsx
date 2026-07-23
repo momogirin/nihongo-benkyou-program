@@ -3,6 +3,8 @@ import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
+import { wordsUsingKanji, wordsUsingKanjiCount } from '../lib/kanjiWordIndex'
+import { onReadingExamples } from '../lib/kanjiOnReadingIndex'
 import { getStudyProgress, setStudyProgress, recordSrsSelfCheck } from '../lib/storage'
 import type { QuizConfig } from '../types'
 import './StudyPage.css'
@@ -198,7 +200,32 @@ export default function StudyPage({ onStartQuiz }: Props) {
                 </div>
                 <div className="study-field">
                   <dt>일본 음독</dt>
-                  <dd>{kanji.onJp}</dd>
+                  <dd>
+                    {kanji.onJp}
+                    {(() => {
+                      const examples = onReadingExamples(kanji)
+                      if (examples.length === 0) return null
+                      return (
+                        <div className="study-on-reading-examples">
+                          {examples.map(({ on, words }) => (
+                            <div key={on} className="study-on-reading-row">
+                              <span className="study-on-reading-label">{on}</span>
+                              <div className="study-used-kanji">
+                                {words.map((w) => (
+                                  <span key={w.id} className="study-used-kanji-chip">
+                                    <span className="study-used-kanji-char">{w.word}</span>
+                                    <span className="study-used-kanji-info">
+                                      {w.reading} · {w.meaningKr}
+                                    </span>
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )
+                    })()}
+                  </dd>
                 </div>
               </dl>
               <dl className="study-fields study-fields-sub">
@@ -220,6 +247,28 @@ export default function StudyPage({ onStartQuiz }: Props) {
                     </dd>
                   </div>
                 )}
+                {(() => {
+                  const words = wordsUsingKanji(kanji.kanji)
+                  if (words.length === 0) return null
+                  const total = wordsUsingKanjiCount(kanji.kanji)
+                  return (
+                    <div className="study-field">
+                      <dt>이 한자가 쓰인 단어{total > words.length ? ` (${words.length}/${total})` : ` (${total})`}</dt>
+                      <dd>
+                        <div className="study-used-kanji">
+                          {words.map((w) => (
+                            <span key={w.id} className="study-used-kanji-chip">
+                              <span className="study-used-kanji-char">{w.word}</span>
+                              <span className="study-used-kanji-info">
+                                {w.reading} · {w.meaningKr}
+                              </span>
+                            </span>
+                          ))}
+                        </div>
+                      </dd>
+                    </div>
+                  )
+                })()}
               </dl>
             </div>
           )}
