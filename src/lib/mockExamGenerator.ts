@@ -6,6 +6,7 @@ import {
   generateVocabBlankQuestions,
   generateVocabWritingQuestions,
   generateVocabTransitivityQuestions,
+  generateVocabSynonymQuestions,
 } from './vocabQuizGenerator'
 import { generateGrammarQuestions, generateGrammarBlankQuestions } from './grammarQuizGenerator'
 
@@ -145,7 +146,16 @@ function vocabBatches(level: KanjiLevel, count: number): MockExamQuestion[] {
     prompt: q.blankedSentence,
     choices: q.choices.map((w) => ({ label: `${headWord(w.word)}(${w.reading})`, isCorrect: w.id === q.entry.id })),
   }))
-  return roundRobin([meaning, blank, writing, transitivity], count)
+  // 言い換え類義: 제시 단어와 같은 뜻의 단어 고르기. 정답은 entry가 아니라 유의어
+  // (answer)라 isCorrect 판정 기준이 다름
+  const synonym = generateVocabSynonymQuestions(level, count).map((q) => ({
+    domain: 'vocab' as const,
+    id: q.entry.id,
+    prompt: `${q.entry.word}(${q.entry.reading})`,
+    promptSub: `${q.entry.meaningKr} · 같은 뜻은?`,
+    choices: q.choices.map((w) => ({ label: `${headWord(w.word)}(${w.reading})`, isCorrect: w.id === q.answer.id })),
+  }))
+  return roundRobin([meaning, blank, writing, transitivity, synonym], count)
 }
 
 // ── 문법: 뜻/文法 빈칸 ──────────────────────────────────────────────────
