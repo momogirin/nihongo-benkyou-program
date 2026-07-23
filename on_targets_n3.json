@@ -1,0 +1,921 @@
+[
+ {
+  "id": "N3-1",
+  "level": "N3",
+  "kanji": "政",
+  "kunKr": "정사 정",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N3-7",
+  "level": "N3",
+  "kanji": "合",
+  "kunKr": "합할 합",
+  "missing": [
+   "カッ"
+  ]
+ },
+ {
+  "id": "N3-9",
+  "level": "N3",
+  "kanji": "内",
+  "kunKr": "안 내",
+  "missing": [
+   "ダイ"
+  ]
+ },
+ {
+  "id": "N3-10",
+  "level": "N3",
+  "kanji": "相",
+  "kunKr": "서로 상",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N3-12",
+  "level": "N3",
+  "kanji": "回",
+  "kunKr": "돌 회",
+  "missing": [
+   "エ"
+  ]
+ },
+ {
+  "id": "N3-14",
+  "level": "N3",
+  "kanji": "米",
+  "kunKr": "쌀 미",
+  "missing": [
+   "ベイ",
+   "マイ",
+   "メエトル"
+  ]
+ },
+ {
+  "id": "N3-15",
+  "level": "N3",
+  "kanji": "実",
+  "kunKr": "열매 실",
+  "missing": [
+   "シツ"
+  ]
+ },
+ {
+  "id": "N3-21",
+  "level": "N3",
+  "kanji": "経",
+  "kunKr": "지날 경",
+  "missing": [
+   "キョウ",
+   "キン"
+  ]
+ },
+ {
+  "id": "N3-22",
+  "level": "N3",
+  "kanji": "最",
+  "kunKr": "가장 최",
+  "missing": [
+   "シュ"
+  ]
+ },
+ {
+  "id": "N3-29",
+  "level": "N3",
+  "kanji": "法",
+  "kunKr": "법 법",
+  "missing": [
+   "ハッ",
+   "ホッ",
+   "フラン"
+  ]
+ },
+ {
+  "id": "N3-30",
+  "level": "N3",
+  "kanji": "性",
+  "kunKr": "성품 성",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N3-33",
+  "level": "N3",
+  "kanji": "治",
+  "kunKr": "다스릴 치",
+  "missing": [
+   "ジ"
+  ]
+ },
+ {
+  "id": "N3-35",
+  "level": "N3",
+  "kanji": "成",
+  "kunKr": "이룰 성",
+  "missing": [
+   "ジョウ"
+  ]
+ },
+ {
+  "id": "N3-36",
+  "level": "N3",
+  "kanji": "期",
+  "kunKr": "기약할 기",
+  "missing": [
+   "ゴ"
+  ]
+ },
+ {
+  "id": "N3-39",
+  "level": "N3",
+  "kanji": "和",
+  "kunKr": "화할 화",
+  "missing": [
+   "オ",
+   "カ"
+  ]
+ },
+ {
+  "id": "N3-41",
+  "level": "N3",
+  "kanji": "平",
+  "kunKr": "평평할 평",
+  "missing": [
+   "ヒョウ"
+  ]
+ },
+ {
+  "id": "N3-44",
+  "level": "N3",
+  "kanji": "続",
+  "kunKr": "이을 속",
+  "missing": [
+   "ショク",
+   "コウ",
+   "キョウ"
+  ]
+ },
+ {
+  "id": "N3-46",
+  "level": "N3",
+  "kanji": "数",
+  "kunKr": "셈 수",
+  "missing": [
+   "ス",
+   "サク",
+   "ソク",
+   "シュ"
+  ]
+ },
+ {
+  "id": "N3-50",
+  "level": "N3",
+  "kanji": "権",
+  "kunKr": "권세 권",
+  "missing": [
+   "ゴン"
+  ]
+ },
+ {
+  "id": "N3-55",
+  "level": "N3",
+  "kanji": "済",
+  "kunKr": "건널 제",
+  "missing": [
+   "サイ",
+   "セイ"
+  ]
+ },
+ {
+  "id": "N3-60",
+  "level": "N3",
+  "kanji": "解",
+  "kunKr": "풀 해",
+  "missing": [
+   "ゲ"
+  ]
+ },
+ {
+  "id": "N3-63",
+  "level": "N3",
+  "kanji": "予",
+  "kunKr": "미리 예",
+  "missing": [
+   "シャ"
+  ]
+ },
+ {
+  "id": "N3-67",
+  "level": "N3",
+  "kanji": "面",
+  "kunKr": "낯 면",
+  "missing": [
+   "ベン"
+  ]
+ },
+ {
+  "id": "N3-69",
+  "level": "N3",
+  "kanji": "反",
+  "kunKr": "반대할 반",
+  "missing": [
+   "ホン",
+   "タン",
+   "ホ"
+  ]
+ },
+ {
+  "id": "N3-70",
+  "level": "N3",
+  "kanji": "判",
+  "kunKr": "판단할 판",
+  "missing": [
+   "バン"
+  ]
+ },
+ {
+  "id": "N3-72",
+  "level": "N3",
+  "kanji": "参",
+  "kunKr": "참여할 참",
+  "missing": [
+   "シン"
+  ]
+ },
+ {
+  "id": "N3-81",
+  "level": "N3",
+  "kanji": "求",
+  "kunKr": "구할 구",
+  "missing": [
+   "キュウ",
+   "グ"
+  ]
+ },
+ {
+  "id": "N3-83",
+  "level": "N3",
+  "kanji": "次",
+  "kunKr": "버금 차",
+  "missing": [
+   "ジ"
+  ]
+ },
+ {
+  "id": "N3-90",
+  "level": "N3",
+  "kanji": "情",
+  "kunKr": "뜻 정",
+  "missing": [
+   "セイ"
+  ]
+ },
+ {
+  "id": "N3-92",
+  "level": "N3",
+  "kanji": "示",
+  "kunKr": "보일 시",
+  "missing": [
+   "ジ"
+  ]
+ },
+ {
+  "id": "N3-94",
+  "level": "N3",
+  "kanji": "打",
+  "kunKr": "칠 타",
+  "missing": [
+   "ダース"
+  ]
+ },
+ {
+  "id": "N3-98",
+  "level": "N3",
+  "kanji": "確",
+  "kunKr": "굳을 확",
+  "missing": [
+   "コウ"
+  ]
+ },
+ {
+  "id": "N3-103",
+  "level": "N3",
+  "kanji": "歳",
+  "kunKr": "해 세",
+  "missing": [
+   "サイ",
+   "セイ"
+  ]
+ },
+ {
+  "id": "N3-109",
+  "level": "N3",
+  "kanji": "流",
+  "kunKr": "흐를 류",
+  "missing": [
+   "ル"
+  ]
+ },
+ {
+  "id": "N3-110",
+  "level": "N3",
+  "kanji": "格",
+  "kunKr": "격식 격",
+  "missing": [
+   "コウ",
+   "キャク",
+   "ゴウ"
+  ]
+ },
+ {
+  "id": "N3-118",
+  "level": "N3",
+  "kanji": "職",
+  "kunKr": "직분 직",
+  "missing": [
+   "ソク"
+  ]
+ },
+ {
+  "id": "N3-120",
+  "level": "N3",
+  "kanji": "供",
+  "kunKr": "이바지할 공",
+  "missing": [
+   "ク",
+   "クウ",
+   "グ"
+  ]
+ },
+ {
+  "id": "N3-121",
+  "level": "N3",
+  "kanji": "役",
+  "kunKr": "부릴 역",
+  "missing": [
+   "エキ"
+  ]
+ },
+ {
+  "id": "N3-126",
+  "level": "N3",
+  "kanji": "由",
+  "kunKr": "말미암을 유",
+  "missing": [
+   "ユ",
+   "ユウ",
+   "ユイ"
+  ]
+ },
+ {
+  "id": "N3-127",
+  "level": "N3",
+  "kanji": "説",
+  "kunKr": "말씀 설",
+  "missing": [
+   "ゼイ"
+  ]
+ },
+ {
+  "id": "N3-129",
+  "level": "N3",
+  "kanji": "優",
+  "kunKr": "뛰어날 우",
+  "missing": [
+   "ウ"
+  ]
+ },
+ {
+  "id": "N3-130",
+  "level": "N3",
+  "kanji": "夫",
+  "kunKr": "지아비 부",
+  "missing": [
+   "ブ"
+  ]
+ },
+ {
+  "id": "N3-133",
+  "level": "N3",
+  "kanji": "石",
+  "kunKr": "돌 석",
+  "missing": [
+   "シャク",
+   "コク"
+  ]
+ },
+ {
+  "id": "N3-148",
+  "level": "N3",
+  "kanji": "乗",
+  "kunKr": "탈 승",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N3-149",
+  "level": "N3",
+  "kanji": "残",
+  "kunKr": "남을 잔",
+  "missing": [
+   "サン"
+  ]
+ },
+ {
+  "id": "N3-150",
+  "level": "N3",
+  "kanji": "想",
+  "kunKr": "생각 상",
+  "missing": [
+   "ソ"
+  ]
+ },
+ {
+  "id": "N3-151",
+  "level": "N3",
+  "kanji": "声",
+  "kunKr": "소리 성",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N3-156",
+  "level": "N3",
+  "kanji": "然",
+  "kunKr": "그럴 연",
+  "missing": [
+   "ゼン",
+   "ネン"
+  ]
+ },
+ {
+  "id": "N3-161",
+  "level": "N3",
+  "kanji": "伝",
+  "kunKr": "전할 전",
+  "missing": [
+   "テン"
+  ]
+ },
+ {
+  "id": "N3-163",
+  "level": "N3",
+  "kanji": "形",
+  "kunKr": "모양 형",
+  "missing": [
+   "ギョウ"
+  ]
+ },
+ {
+  "id": "N3-168",
+  "level": "N3",
+  "kanji": "頭",
+  "kunKr": "머리 두",
+  "missing": [
+   "トウ",
+   "ト"
+  ]
+ },
+ {
+  "id": "N3-173",
+  "level": "N3",
+  "kanji": "末",
+  "kunKr": "끝 말",
+  "missing": [
+   "バツ"
+  ]
+ },
+ {
+  "id": "N3-174",
+  "level": "N3",
+  "kanji": "守",
+  "kunKr": "지킬 수",
+  "missing": [
+   "ス"
+  ]
+ },
+ {
+  "id": "N3-175",
+  "level": "N3",
+  "kanji": "若",
+  "kunKr": "젊을 약",
+  "missing": [
+   "ジャク",
+   "ニャク",
+   "ニャ"
+  ]
+ },
+ {
+  "id": "N3-177",
+  "level": "N3",
+  "kanji": "美",
+  "kunKr": "아름다울 미",
+  "missing": [
+   "ミ"
+  ]
+ },
+ {
+  "id": "N3-178",
+  "level": "N3",
+  "kanji": "命",
+  "kunKr": "목숨 명",
+  "missing": [
+   "ミョウ"
+  ]
+ },
+ {
+  "id": "N3-180",
+  "level": "N3",
+  "kanji": "望",
+  "kunKr": "바랄 망",
+  "missing": [
+   "モウ"
+  ]
+ },
+ {
+  "id": "N3-184",
+  "level": "N3",
+  "kanji": "段",
+  "kunKr": "층계 단",
+  "missing": [
+   "タン"
+  ]
+ },
+ {
+  "id": "N3-188",
+  "level": "N3",
+  "kanji": "様",
+  "kunKr": "모양 양",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N3-189",
+  "level": "N3",
+  "kanji": "財",
+  "kunKr": "재물 재",
+  "missing": [
+   "ゾク"
+  ]
+ },
+ {
+  "id": "N3-193",
+  "level": "N3",
+  "kanji": "達",
+  "kunKr": "통달할 달",
+  "missing": [
+   "タツ",
+   "ダ"
+  ]
+ },
+ {
+  "id": "N3-197",
+  "level": "N3",
+  "kanji": "満",
+  "kunKr": "찰 만",
+  "missing": [
+   "バン"
+  ]
+ },
+ {
+  "id": "N3-200",
+  "level": "N3",
+  "kanji": "突",
+  "kunKr": "갑자기 돌",
+  "missing": [
+   "カ"
+  ]
+ },
+ {
+  "id": "N3-202",
+  "level": "N3",
+  "kanji": "路",
+  "kunKr": "길 로",
+  "missing": [
+   "ロ",
+   "ル"
+  ]
+ },
+ {
+  "id": "N3-207",
+  "level": "N3",
+  "kanji": "太",
+  "kunKr": "클 태",
+  "missing": [
+   "タ"
+  ]
+ },
+ {
+  "id": "N3-208",
+  "level": "N3",
+  "kanji": "客",
+  "kunKr": "손님 객",
+  "missing": [
+   "カク"
+  ]
+ },
+ {
+  "id": "N3-211",
+  "level": "N3",
+  "kanji": "登",
+  "kunKr": "오를 등",
+  "missing": [
+   "ドウ",
+   "ショウ",
+   "チョウ"
+  ]
+ },
+ {
+  "id": "N3-212",
+  "level": "N3",
+  "kanji": "易",
+  "kunKr": "쉬울 이",
+  "missing": [
+   "エキ",
+   "イ"
+  ]
+ },
+ {
+  "id": "N3-216",
+  "level": "N3",
+  "kanji": "殺",
+  "kunKr": "죽일 살",
+  "missing": [
+   "サイ",
+   "セツ"
+  ]
+ },
+ {
+  "id": "N3-221",
+  "level": "N3",
+  "kanji": "除",
+  "kunKr": "덜 제",
+  "missing": [
+   "ジ"
+  ]
+ },
+ {
+  "id": "N3-223",
+  "level": "N3",
+  "kanji": "降",
+  "kunKr": "내릴 강",
+  "missing": [
+   "ゴ"
+  ]
+ },
+ {
+  "id": "N3-236",
+  "level": "N3",
+  "kanji": "富",
+  "kunKr": "부유할 부",
+  "missing": [
+   "フウ"
+  ]
+ },
+ {
+  "id": "N3-238",
+  "level": "N3",
+  "kanji": "未",
+  "kunKr": "아닐 미",
+  "missing": [
+   "ビ"
+  ]
+ },
+ {
+  "id": "N3-240",
+  "level": "N3",
+  "kanji": "亡",
+  "kunKr": "망할 망",
+  "missing": [
+   "ボウ",
+   "モウ"
+  ]
+ },
+ {
+  "id": "N3-249",
+  "level": "N3",
+  "kanji": "王",
+  "kunKr": "임금 왕",
+  "missing": [
+   "ノウ"
+  ]
+ },
+ {
+  "id": "N3-262",
+  "level": "N3",
+  "kanji": "抜",
+  "kunKr": "뽑을 발",
+  "missing": [
+   "バツ",
+   "ハツ",
+   "ハイ"
+  ]
+ },
+ {
+  "id": "N3-267",
+  "level": "N3",
+  "kanji": "精",
+  "kunKr": "정할 정",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N3-269",
+  "level": "N3",
+  "kanji": "静",
+  "kunKr": "고요할 정",
+  "missing": [
+   "ジョウ"
+  ]
+ },
+ {
+  "id": "N3-280",
+  "level": "N3",
+  "kanji": "払",
+  "kunKr": "떨칠 불",
+  "missing": [
+   "フツ",
+   "ヒツ",
+   "ホツ"
+  ]
+ },
+ {
+  "id": "N3-283",
+  "level": "N3",
+  "kanji": "勤",
+  "kunKr": "부지런할 근",
+  "missing": [
+   "ゴン"
+  ]
+ },
+ {
+  "id": "N3-285",
+  "level": "N3",
+  "kanji": "居",
+  "kunKr": "있을 거",
+  "missing": [
+   "コ"
+  ]
+ },
+ {
+  "id": "N3-289",
+  "level": "N3",
+  "kanji": "欠",
+  "kunKr": "이지러질 결",
+  "missing": [
+   "ケン"
+  ]
+ },
+ {
+  "id": "N3-294",
+  "level": "N3",
+  "kanji": "犯",
+  "kunKr": "범할 범",
+  "missing": [
+   "ボン"
+  ]
+ },
+ {
+  "id": "N3-297",
+  "level": "N3",
+  "kanji": "遠",
+  "kunKr": "멀 원",
+  "missing": [
+   "オン"
+  ]
+ },
+ {
+  "id": "N3-301",
+  "level": "N3",
+  "kanji": "越",
+  "kunKr": "넘을 월",
+  "missing": [
+   "エツ",
+   "オツ"
+  ]
+ },
+ {
+  "id": "N3-311",
+  "level": "N3",
+  "kanji": "遊",
+  "kunKr": "놀 유",
+  "missing": [
+   "ユ"
+  ]
+ },
+ {
+  "id": "N3-313",
+  "level": "N3",
+  "kanji": "夢",
+  "kunKr": "꿈 몽",
+  "missing": [
+   "ボウ"
+  ]
+ },
+ {
+  "id": "N3-316",
+  "level": "N3",
+  "kanji": "緒",
+  "kunKr": "실마리 서",
+  "missing": [
+   "ショ",
+   "チョ"
+  ]
+ },
+ {
+  "id": "N3-317",
+  "level": "N3",
+  "kanji": "折",
+  "kunKr": "꺾을 절",
+  "missing": [
+   "セツ",
+   "シャク"
+  ]
+ },
+ {
+  "id": "N3-323",
+  "level": "N3",
+  "kanji": "掛",
+  "kunKr": "걸 괘",
+  "missing": [
+   "カイ",
+   "ケイ"
+  ]
+ },
+ {
+  "id": "N3-330",
+  "level": "N3",
+  "kanji": "御",
+  "kunKr": "거느릴 어",
+  "missing": [
+   "ギョ"
+  ]
+ },
+ {
+  "id": "N3-339",
+  "level": "N3",
+  "kanji": "礼",
+  "kunKr": "예도 례",
+  "missing": [
+   "ライ"
+  ]
+ },
+ {
+  "id": "N3-340",
+  "level": "N3",
+  "kanji": "窓",
+  "kunKr": "창 창",
+  "missing": [
+   "ソウ",
+   "ス"
+  ]
+ },
+ {
+  "id": "N3-341",
+  "level": "N3",
+  "kanji": "昔",
+  "kunKr": "옛 석",
+  "missing": [
+   "セキ",
+   "シャク"
+  ]
+ },
+ {
+  "id": "N3-343",
+  "level": "N3",
+  "kanji": "怒",
+  "kunKr": "성낼 노",
+  "missing": [
+   "ヌ"
+  ]
+ },
+ {
+  "id": "N3-353",
+  "level": "N3",
+  "kanji": "怖",
+  "kunKr": "두려울 포",
+  "missing": [
+   "フ",
+   "ホ"
+  ]
+ },
+ {
+  "id": "N3-360",
+  "level": "N3",
+  "kanji": "忙",
+  "kunKr": "바쁠 망",
+  "missing": [
+   "ボウ",
+   "モウ"
+  ]
+ }
+]

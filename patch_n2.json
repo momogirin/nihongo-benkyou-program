@@ -1,0 +1,173 @@
+[
+  { "id": "N2-13", "kanji": "団", "overrides": [
+    {"on":"トン","word":"布団","reading":"ふとん","meaningKr":"이불"}
+  ]},
+  { "id": "N2-18", "kanji": "勢", "overrides": [
+    {"on":"ゼイ","word":"虚勢","reading":"きょせい","meaningKr":"허세"}
+  ]},
+  { "id": "N2-26", "kanji": "境", "overrides": [
+    {"on":"ケイ","word":"境内","reading":"けいだい","meaningKr":"경내"}
+  ]},
+  { "id": "N2-34", "kanji": "州", "overrides": [
+    {"on":"ス","word":"欧州","reading":"おうしゅう","meaningKr":"유럽"}
+  ]},
+  { "id": "N2-35", "kanji": "武", "overrides": [
+    {"on":"ム","word":"武者","reading":"むしゃ","meaningKr":"무사"}
+  ]},
+  { "id": "N2-50", "kanji": "個", "overrides": [
+    {"on":"カ","word":"一個","reading":"いっか","meaningKr":"한 개"}
+  ]},
+  { "id": "N2-66", "kanji": "兵", "overrides": [
+    {"on":"ヒョウ","word":"兵糧","reading":"ひょうろう","meaningKr":"군량"}
+  ]},
+  { "id": "N2-67", "kanji": "接", "overrides": [
+    {"on":"ショウ","word":"接待","reading":"せったい","meaningKr":"접대"}
+  ]},
+  { "id": "N2-73", "kanji": "省", "overrides": [
+    {"on":"セイ","word":"反省","reading":"はんせい","meaningKr":"반성"}
+  ]},
+  { "id": "N2-86", "kanji": "並", "overrides": [
+    {"on":"ホウ","word":"並行","reading":"へいこう","meaningKr":"병행"}
+  ]},
+  { "id": "N2-94", "kanji": "歴", "overrides": [
+    {"on":"レッキ","word":"歴然","reading":"れきぜん","meaningKr":"역력함"}
+  ]},
+  { "id": "N2-95", "kanji": "将", "overrides": [
+    {"on":"ソウ","word":"将棋","reading":"しょうぎ","meaningKr":"장기(놀이)"}
+  ]},
+  { "id": "N2-101", "kanji": "装", "overrides": [
+    {"on":"ショウ","word":"装束","reading":"しょうぞく","meaningKr":"의상,차림"}
+  ]},
+  { "id": "N2-107", "kanji": "児", "overrides": [
+    {"on":"ニ","word":"小児科","reading":"しょうにか","meaningKr":"소아과"}
+  ]},
+  { "id": "N2-110", "kanji": "逆", "overrides": [
+    {"on":"ゲキ","word":"逆鱗","reading":"げきりん","meaningKr":"역린,대노함"}
+  ]},
+  { "id": "N2-112", "kanji": "久", "overrides": [
+    {"on":"キュウ","word":"永久","reading":"えいきゅう","meaningKr":"영구"},
+    {"on":"ク","word":"久遠","reading":"くおん","meaningKr":"구원,영원"}
+  ]},
+  { "id": "N2-114", "kanji": "油", "overrides": [
+    {"on":"ユウ","word":"油断","reading":"ゆだん","meaningKr":"방심"}
+  ]},
+  { "id": "N2-119", "kanji": "清", "overrides": [
+    {"on":"シン","word":"清々しい","reading":"すがすがしい","meaningKr":"상쾌하다"}
+  ]},
+  { "id": "N2-124", "kanji": "芸", "overrides": [
+    {"on":"ウン","word":"芸亭","reading":"うんてい","meaningKr":"일본 최초 도서관 이름"}
+  ]},
+  { "id": "N2-129", "kanji": "陸", "overrides": [
+    {"on":"ロク","word":"陸","reading":"ろく","meaningKr":"평평함(陸でない에 쓰임)"}
+  ]},
+  { "id": "N2-140", "kanji": "豊", "overrides": [
+    {"on":"ブ","word":"豊国","reading":"ぶこく","meaningKr":"풍요한 나라"}
+  ]},
+  { "id": "N2-146", "kanji": "承", "overrides": [
+    {"on":"ジョウ","word":"承知","reading":"じょうち","meaningKr":"승낙,양지"}
+  ]},
+  { "id": "N2-152", "kanji": "庁", "overrides": [
+    {"on":"チョウ","word":"官庁","reading":"かんちょう","meaningKr":"관청"}
+  ]},
+  { "id": "N2-153", "kanji": "城", "overrides": [
+    {"on":"セイ","word":"城塞","reading":"じょうさい","meaningKr":"성채"}
+  ]},
+  { "id": "N2-163", "kanji": "仏", "overrides": [
+    {"on":"フツ","word":"仏語","reading":"ふつご","meaningKr":"프랑스어"}
+  ]},
+  { "id": "N2-173", "kanji": "星", "overrides": [
+    {"on":"ショウ","word":"明星","reading":"みょうじょう","meaningKr":"샛별"}
+  ]},
+  { "id": "N2-177", "kanji": "庫", "overrides": [
+    {"on":"コ","word":"庫裏","reading":"くり","meaningKr":"절의 부엌,주지 거처"}
+  ]},
+  { "id": "N2-183", "kanji": "布", "overrides": [
+    {"on":"ホ","word":"布施","reading":"ふせ","meaningKr":"보시"}
+  ]},
+  { "id": "N2-190", "kanji": "依", "overrides": [
+    {"on":"エ","word":"帰依","reading":"きえ","meaningKr":"귀의"}
+  ]},
+  { "id": "N2-193", "kanji": "枚", "overrides": [
+    {"on":"バイ","word":"枚挙","reading":"まいきょ","meaningKr":"매거,낱낱이 듦"}
+  ]},
+  { "id": "N2-197", "kanji": "栄", "overrides": [
+    {"on":"ヨウ","word":"栄耀","reading":"えいよう","meaningKr":"영요,사치"}
+  ]},
+  { "id": "N2-199", "kanji": "板", "overrides": [
+    {"on":"ハン","word":"看板","reading":"かんばん","meaningKr":"간판"}
+  ]},
+  { "id": "N2-203", "kanji": "巻", "overrides": [
+    {"on":"カン","word":"上巻","reading":"じょうかん","meaningKr":"상권"}
+  ]},
+  { "id": "N2-217", "kanji": "律", "overrides": [
+    {"on":"リツ","word":"法律","reading":"ほうりつ","meaningKr":"법률"},
+    {"on":"リチ","word":"律儀","reading":"りちぎ","meaningKr":"의리가 굳음"}
+  ]},
+  { "id": "N2-218", "kanji": "贈", "overrides": [
+    {"on":"ゾウ","word":"贈与","reading":"ぞうよ","meaningKr":"증여"}
+  ]},
+  { "id": "N2-224", "kanji": "詰", "overrides": [
+    {"on":"キツ","word":"詰問","reading":"きつもん","meaningKr":"힐문"}
+  ]},
+  { "id": "N2-242", "kanji": "袋", "overrides": [
+    {"on":"タイ","word":"胎袋","reading":"たいたい","meaningKr":"태낭(불확실)"}
+  ]},
+  { "id": "N2-250", "kanji": "砂", "overrides": [
+    {"on":"シャ","word":"土砂","reading":"どしゃ","meaningKr":"토사"}
+  ]},
+  { "id": "N2-257", "kanji": "緑", "overrides": [
+    {"on":"リョク","word":"緑地","reading":"りょくち","meaningKr":"녹지"}
+  ]},
+  { "id": "N2-261", "kanji": "殿", "overrides": [
+    {"on":"デン","word":"殿堂","reading":"でんどう","meaningKr":"전당"}
+  ]},
+  { "id": "N2-264", "kanji": "衣", "overrides": [
+    {"on":"エ","word":"衣紋","reading":"えもん","meaningKr":"옷깃,옷맵시"}
+  ]},
+  { "id": "N2-270", "kanji": "黄", "overrides": [
+    {"on":"コウ","word":"黄金","reading":"こうきん","meaningKr":"황금(こがね와 병용)"}
+  ]},
+  { "id": "N2-272", "kanji": "臣", "overrides": [
+    {"on":"シン","word":"大臣","reading":"だいじん","meaningKr":"대신,장관"}
+  ]},
+  { "id": "N2-283", "kanji": "紅", "overrides": [
+    {"on":"ク","word":"深紅","reading":"しんく","meaningKr":"짙은 다홍색(불확실)"}
+  ]},
+  { "id": "N2-288", "kanji": "冊", "overrides": [
+    {"on":"サツ","word":"一冊","reading":"いっさつ","meaningKr":"한 권"},
+    {"on":"サク","word":"短冊","reading":"たんざく","meaningKr":"단자쿠(글 쓰는 종이)"}
+  ]},
+  { "id": "N2-297", "kanji": "虫", "overrides": [
+    {"on":"チュウ","word":"害虫","reading":"がいちゅう","meaningKr":"해충"}
+  ]},
+  { "id": "N2-302", "kanji": "涙", "overrides": [
+    {"on":"ルイ","word":"感涙","reading":"かんるい","meaningKr":"감격의 눈물"}
+  ]},
+  { "id": "N2-313", "kanji": "乾", "overrides": [
+    {"on":"ケン","word":"乾坤","reading":"けんこん","meaningKr":"천지,건곤"}
+  ]},
+  { "id": "N2-316", "kanji": "拾", "overrides": [
+    {"on":"シュウ","word":"拾得","reading":"しゅうとく","meaningKr":"습득"}
+  ]},
+  { "id": "N2-322", "kanji": "湿", "overrides": [
+    {"on":"シュウ","word":"湿疹","reading":"しっしん","meaningKr":"습진"}
+  ]},
+  { "id": "N2-323", "kanji": "瓶", "overrides": [
+    {"on":"ヘイ","word":"花瓶","reading":"かへい","meaningKr":"화병(불확실,보통 かびん)"}
+  ]},
+  { "id": "N2-329", "kanji": "蒸", "overrides": [
+    {"on":"セイ","word":"蒸気","reading":"じょうき","meaningKr":"증기(불확실 발음)"}
+  ]},
+  { "id": "N2-339", "kanji": "姓", "overrides": [
+    {"on":"ショウ","word":"百姓","reading":"ひゃくしょう","meaningKr":"농민"}
+  ]},
+  { "id": "N2-345", "kanji": "畳", "overrides": [
+    {"on":"ジョウ","word":"三畳","reading":"さんじょう","meaningKr":"다다미 세 장"}
+  ]},
+  { "id": "N2-353", "kanji": "帽", "overrides": [
+    {"on":"モウ","word":"制帽","reading":"せいぼう","meaningKr":"제모"}
+  ]},
+  { "id": "N2-364", "kanji": "挟", "overrides": [
+    {"on":"キョウ","word":"挟撃","reading":"きょうげき","meaningKr":"협공"}
+  ]}
+]

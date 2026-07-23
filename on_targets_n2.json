@@ -1,0 +1,714 @@
+[
+ {
+  "id": "N2-4",
+  "level": "N2",
+  "kanji": "区",
+  "kunKr": "구역 구",
+  "missing": [
+   "オウ",
+   "コウ"
+  ]
+ },
+ {
+  "id": "N2-13",
+  "level": "N2",
+  "kanji": "団",
+  "kunKr": "둥글 단",
+  "missing": [
+   "トン"
+  ]
+ },
+ {
+  "id": "N2-18",
+  "level": "N2",
+  "kanji": "勢",
+  "kunKr": "형세 세",
+  "missing": [
+   "ゼイ"
+  ]
+ },
+ {
+  "id": "N2-26",
+  "level": "N2",
+  "kanji": "境",
+  "kunKr": "땅의 경계 경",
+  "missing": [
+   "ケイ"
+  ]
+ },
+ {
+  "id": "N2-30",
+  "level": "N2",
+  "kanji": "輸",
+  "kunKr": "실어나를 수",
+  "missing": [
+   "シュ"
+  ]
+ },
+ {
+  "id": "N2-34",
+  "level": "N2",
+  "kanji": "州",
+  "kunKr": "고을 주",
+  "missing": [
+   "ス"
+  ]
+ },
+ {
+  "id": "N2-35",
+  "level": "N2",
+  "kanji": "武",
+  "kunKr": "굳세다 무",
+  "missing": [
+   "ム"
+  ]
+ },
+ {
+  "id": "N2-50",
+  "level": "N2",
+  "kanji": "個",
+  "kunKr": "낱 개",
+  "missing": [
+   "カ"
+  ]
+ },
+ {
+  "id": "N2-53",
+  "level": "N2",
+  "kanji": "脳",
+  "kunKr": "뇌 뇌",
+  "missing": [
+   "ドウ"
+  ]
+ },
+ {
+  "id": "N2-56",
+  "level": "N2",
+  "kanji": "蔵",
+  "kunKr": "감출 장",
+  "missing": [
+   "ソウ"
+  ]
+ },
+ {
+  "id": "N2-66",
+  "level": "N2",
+  "kanji": "兵",
+  "kunKr": "군사 병",
+  "missing": [
+   "ヒョウ"
+  ]
+ },
+ {
+  "id": "N2-67",
+  "level": "N2",
+  "kanji": "接",
+  "kunKr": "이을 접",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N2-73",
+  "level": "N2",
+  "kanji": "省",
+  "kunKr": "살피다 성",
+  "missing": [
+   "セイ"
+  ]
+ },
+ {
+  "id": "N2-83",
+  "level": "N2",
+  "kanji": "捜",
+  "kunKr": "찾을 수",
+  "missing": [
+   "シュ",
+   "シュウ"
+  ]
+ },
+ {
+  "id": "N2-86",
+  "level": "N2",
+  "kanji": "並",
+  "kunKr": "나란히 병",
+  "missing": [
+   "ホウ"
+  ]
+ },
+ {
+  "id": "N2-94",
+  "level": "N2",
+  "kanji": "歴",
+  "kunKr": "지날 력",
+  "missing": [
+   "レッキ"
+  ]
+ },
+ {
+  "id": "N2-95",
+  "level": "N2",
+  "kanji": "将",
+  "kunKr": "장수 장",
+  "missing": [
+   "ソウ"
+  ]
+ },
+ {
+  "id": "N2-101",
+  "level": "N2",
+  "kanji": "装",
+  "kunKr": "꾸밀 장",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N2-107",
+  "level": "N2",
+  "kanji": "児",
+  "kunKr": "아이 아",
+  "missing": [
+   "ニ",
+   "ゲイ"
+  ]
+ },
+ {
+  "id": "N2-110",
+  "level": "N2",
+  "kanji": "逆",
+  "kunKr": "거스를 역",
+  "missing": [
+   "ゲキ"
+  ]
+ },
+ {
+  "id": "N2-112",
+  "level": "N2",
+  "kanji": "久",
+  "kunKr": "오래다 구",
+  "missing": [
+   "キュウ",
+   "ク"
+  ]
+ },
+ {
+  "id": "N2-114",
+  "level": "N2",
+  "kanji": "油",
+  "kunKr": "기름 유",
+  "missing": [
+   "ユウ"
+  ]
+ },
+ {
+  "id": "N2-119",
+  "level": "N2",
+  "kanji": "清",
+  "kunKr": "맑을 청",
+  "missing": [
+   "ショウ",
+   "シン"
+  ]
+ },
+ {
+  "id": "N2-123",
+  "level": "N2",
+  "kanji": "圧",
+  "kunKr": "누르다 압",
+  "missing": [
+   "エン",
+   "オウ"
+  ]
+ },
+ {
+  "id": "N2-124",
+  "level": "N2",
+  "kanji": "芸",
+  "kunKr": "운향 운",
+  "missing": [
+   "ウン"
+  ]
+ },
+ {
+  "id": "N2-129",
+  "level": "N2",
+  "kanji": "陸",
+  "kunKr": "뭍 륙",
+  "missing": [
+   "ロク"
+  ]
+ },
+ {
+  "id": "N2-137",
+  "level": "N2",
+  "kanji": "乱",
+  "kunKr": "어지럽다 란",
+  "missing": [
+   "ロン"
+  ]
+ },
+ {
+  "id": "N2-140",
+  "level": "N2",
+  "kanji": "豊",
+  "kunKr": "풍부할 풍",
+  "missing": [
+   "ブ"
+  ]
+ },
+ {
+  "id": "N2-144",
+  "level": "N2",
+  "kanji": "卒",
+  "kunKr": "마칠 졸",
+  "missing": [
+   "シュツ"
+  ]
+ },
+ {
+  "id": "N2-146",
+  "level": "N2",
+  "kanji": "承",
+  "kunKr": "잇다 승",
+  "missing": [
+   "ジョウ"
+  ]
+ },
+ {
+  "id": "N2-150",
+  "level": "N2",
+  "kanji": "軽",
+  "kunKr": "가벼울 경",
+  "missing": [
+   "キョウ",
+   "キン"
+  ]
+ },
+ {
+  "id": "N2-152",
+  "level": "N2",
+  "kanji": "庁",
+  "kunKr": "관청 청",
+  "missing": [
+   "チョウ",
+   "テイ"
+  ]
+ },
+ {
+  "id": "N2-153",
+  "level": "N2",
+  "kanji": "城",
+  "kunKr": "성 성",
+  "missing": [
+   "セイ"
+  ]
+ },
+ {
+  "id": "N2-163",
+  "level": "N2",
+  "kanji": "仏",
+  "kunKr": "부처 불",
+  "missing": [
+   "フツ"
+  ]
+ },
+ {
+  "id": "N2-173",
+  "level": "N2",
+  "kanji": "星",
+  "kunKr": "별 성",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N2-175",
+  "level": "N2",
+  "kanji": "著",
+  "kunKr": "나타나다 저",
+  "missing": [
+   "チャク"
+  ]
+ },
+ {
+  "id": "N2-177",
+  "level": "N2",
+  "kanji": "庫",
+  "kunKr": "곳집 고",
+  "missing": [
+   "コ",
+   "ク"
+  ]
+ },
+ {
+  "id": "N2-180",
+  "level": "N2",
+  "kanji": "香",
+  "kunKr": "향기 향",
+  "missing": [
+   "キョウ"
+  ]
+ },
+ {
+  "id": "N2-183",
+  "level": "N2",
+  "kanji": "布",
+  "kunKr": "베 포",
+  "missing": [
+   "ホ"
+  ]
+ },
+ {
+  "id": "N2-188",
+  "level": "N2",
+  "kanji": "希",
+  "kunKr": "바라다 희",
+  "missing": [
+   "ケ"
+  ]
+ },
+ {
+  "id": "N2-190",
+  "level": "N2",
+  "kanji": "依",
+  "kunKr": "의지하다 의",
+  "missing": [
+   "エ"
+  ]
+ },
+ {
+  "id": "N2-193",
+  "level": "N2",
+  "kanji": "枚",
+  "kunKr": "낱 매",
+  "missing": [
+   "バイ"
+  ]
+ },
+ {
+  "id": "N2-197",
+  "level": "N2",
+  "kanji": "栄",
+  "kunKr": "영화롭다 영",
+  "missing": [
+   "ヨウ"
+  ]
+ },
+ {
+  "id": "N2-199",
+  "level": "N2",
+  "kanji": "板",
+  "kunKr": "널 판",
+  "missing": [
+   "ハン",
+   "バン"
+  ]
+ },
+ {
+  "id": "N2-203",
+  "level": "N2",
+  "kanji": "巻",
+  "kunKr": "책 권",
+  "missing": [
+   "カン",
+   "ケン"
+  ]
+ },
+ {
+  "id": "N2-214",
+  "level": "N2",
+  "kanji": "簡",
+  "kunKr": "대쪽 간",
+  "missing": [
+   "ケン"
+  ]
+ },
+ {
+  "id": "N2-217",
+  "level": "N2",
+  "kanji": "律",
+  "kunKr": "법률 률",
+  "missing": [
+   "リツ",
+   "リチ",
+   "レツ"
+  ]
+ },
+ {
+  "id": "N2-218",
+  "level": "N2",
+  "kanji": "贈",
+  "kunKr": "주다 증",
+  "missing": [
+   "ゾウ",
+   "ソウ"
+  ]
+ },
+ {
+  "id": "N2-224",
+  "level": "N2",
+  "kanji": "詰",
+  "kunKr": "묻다 힐",
+  "missing": [
+   "キツ",
+   "キチ"
+  ]
+ },
+ {
+  "id": "N2-231",
+  "level": "N2",
+  "kanji": "敬",
+  "kunKr": "공경하다 경",
+  "missing": [
+   "キョウ"
+  ]
+ },
+ {
+  "id": "N2-242",
+  "level": "N2",
+  "kanji": "袋",
+  "kunKr": "주머니 대",
+  "missing": [
+   "タイ",
+   "ダイ"
+  ]
+ },
+ {
+  "id": "N2-244",
+  "level": "N2",
+  "kanji": "訓",
+  "kunKr": "가르치다 훈",
+  "missing": [
+   "キン"
+  ]
+ },
+ {
+  "id": "N2-250",
+  "level": "N2",
+  "kanji": "砂",
+  "kunKr": "모래 사",
+  "missing": [
+   "シャ"
+  ]
+ },
+ {
+  "id": "N2-257",
+  "level": "N2",
+  "kanji": "緑",
+  "kunKr": "초록 록",
+  "missing": [
+   "リョク",
+   "ロク"
+  ]
+ },
+ {
+  "id": "N2-259",
+  "level": "N2",
+  "kanji": "祝",
+  "kunKr": "빌다 축",
+  "missing": [
+   "シュウ"
+  ]
+ },
+ {
+  "id": "N2-260",
+  "level": "N2",
+  "kanji": "柔",
+  "kunKr": "부드럽다 유",
+  "missing": [
+   "ニュウ"
+  ]
+ },
+ {
+  "id": "N2-261",
+  "level": "N2",
+  "kanji": "殿",
+  "kunKr": "큰 집 전",
+  "missing": [
+   "デン",
+   "テン"
+  ]
+ },
+ {
+  "id": "N2-264",
+  "level": "N2",
+  "kanji": "衣",
+  "kunKr": "옷 의",
+  "missing": [
+   "エ"
+  ]
+ },
+ {
+  "id": "N2-270",
+  "level": "N2",
+  "kanji": "黄",
+  "kunKr": "누를 황",
+  "missing": [
+   "コウ"
+  ]
+ },
+ {
+  "id": "N2-272",
+  "level": "N2",
+  "kanji": "臣",
+  "kunKr": "신하 신",
+  "missing": [
+   "シン",
+   "ジン"
+  ]
+ },
+ {
+  "id": "N2-274",
+  "level": "N2",
+  "kanji": "掃",
+  "kunKr": "쓸 소",
+  "missing": [
+   "シュ"
+  ]
+ },
+ {
+  "id": "N2-279",
+  "level": "N2",
+  "kanji": "沈",
+  "kunKr": "잠기다 침",
+  "missing": [
+   "ジン"
+  ]
+ },
+ {
+  "id": "N2-283",
+  "level": "N2",
+  "kanji": "紅",
+  "kunKr": "붉다 홍",
+  "missing": [
+   "ク"
+  ]
+ },
+ {
+  "id": "N2-288",
+  "level": "N2",
+  "kanji": "冊",
+  "kunKr": "책 책",
+  "missing": [
+   "サツ",
+   "サク"
+  ]
+ },
+ {
+  "id": "N2-297",
+  "level": "N2",
+  "kanji": "虫",
+  "kunKr": "벌레 훼",
+  "missing": [
+   "チュウ",
+   "キ"
+  ]
+ },
+ {
+  "id": "N2-302",
+  "level": "N2",
+  "kanji": "涙",
+  "kunKr": "눈물 루",
+  "missing": [
+   "ルイ",
+   "レイ"
+  ]
+ },
+ {
+  "id": "N2-313",
+  "level": "N2",
+  "kanji": "乾",
+  "kunKr": "마를 건",
+  "missing": [
+   "ケン"
+  ]
+ },
+ {
+  "id": "N2-316",
+  "level": "N2",
+  "kanji": "拾",
+  "kunKr": "주울 습",
+  "missing": [
+   "シュウ",
+   "ジュウ"
+  ]
+ },
+ {
+  "id": "N2-322",
+  "level": "N2",
+  "kanji": "湿",
+  "kunKr": "축축하다 습",
+  "missing": [
+   "シュウ"
+  ]
+ },
+ {
+  "id": "N2-323",
+  "level": "N2",
+  "kanji": "瓶",
+  "kunKr": "병 병",
+  "missing": [
+   "ヘイ"
+  ]
+ },
+ {
+  "id": "N2-329",
+  "level": "N2",
+  "kanji": "蒸",
+  "kunKr": "찔 증",
+  "missing": [
+   "セイ"
+  ]
+ },
+ {
+  "id": "N2-333",
+  "level": "N2",
+  "kanji": "泥",
+  "kunKr": "진흙 니",
+  "missing": [
+   "デイ",
+   "ナイ",
+   "デ",
+   "ニ"
+  ]
+ },
+ {
+  "id": "N2-339",
+  "level": "N2",
+  "kanji": "姓",
+  "kunKr": "성 성",
+  "missing": [
+   "ショウ"
+  ]
+ },
+ {
+  "id": "N2-345",
+  "level": "N2",
+  "kanji": "畳",
+  "kunKr": "거듭 첩",
+  "missing": [
+   "ジョウ",
+   "チョウ"
+  ]
+ },
+ {
+  "id": "N2-353",
+  "level": "N2",
+  "kanji": "帽",
+  "kunKr": "모자 모",
+  "missing": [
+   "モウ"
+  ]
+ },
+ {
+  "id": "N2-364",
+  "level": "N2",
+  "kanji": "挟",
+  "kunKr": "끼다 협",
+  "missing": [
+   "キョウ",
+   "ショウ"
+  ]
+ }
+]
