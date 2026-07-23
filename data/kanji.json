@@ -13,7 +13,15 @@
     "exampleRefKanji": "毎(매양 매)",
     "exampleRefNum": "N5 69번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジツ",
+        "word": "先日",
+        "reading": "せんじつ",
+        "meaningKr": "요전"
+      }
+    ]
   },
   {
     "id": "N5-2",
@@ -29,7 +37,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "イツ",
+        "word": "均一",
+        "reading": "きんいつ",
+        "meaningKr": "균일"
+      }
+    ]
   },
   {
     "id": "N5-3",
@@ -109,7 +125,21 @@
     "exampleRefKanji": "分(나눌 분)",
     "exampleRefNum": "N5 18번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジッ",
+        "word": "十分",
+        "reading": "じっぷん",
+        "meaningKr": "10분"
+      },
+      {
+        "on": "ジュッ",
+        "word": "十分",
+        "reading": "じゅっぷん",
+        "meaningKr": "10분"
+      }
+    ]
   },
   {
     "id": "N5-8",
@@ -189,7 +219,15 @@
     "exampleRefKanji": "口(입 구)",
     "exampleRefNum": "N4 79번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "スイ",
+        "word": "出納",
+        "reading": "すいとう",
+        "meaningKr": "출납"
+      }
+    ]
   },
   {
     "id": "N5-13",
@@ -237,7 +275,15 @@
     "exampleRefKanji": "旅(나그네 여)",
     "exampleRefNum": "N4 144번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "アン",
+        "word": "行脚",
+        "reading": "あんぎゃ",
+        "meaningKr": "순례"
+      }
+    ]
   },
   {
     "id": "N5-16",
@@ -269,7 +315,15 @@
     "exampleRefKanji": "一(하나 일)",
     "exampleRefNum": "N5 2번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ガツ",
+        "word": "一月",
+        "reading": "いちがつ",
+        "meaningKr": "1월"
+      }
+    ]
   },
   {
     "id": "N5-18",
@@ -285,7 +339,15 @@
     "exampleRefKanji": "自(스스로 자)",
     "exampleRefNum": "N4 4번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "フン",
+        "word": "一分",
+        "reading": "いっぷん",
+        "meaningKr": "1분"
+      }
+    ]
   },
   {
     "id": "N5-19",
@@ -365,7 +427,15 @@
     "exampleRefKanji": "人(사람 인)",
     "exampleRefNum": "N5 4번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ケン",
+        "word": "世間",
+        "reading": "せけん",
+        "meaningKr": "세상"
+      }
+    ]
   },
   {
     "id": "N5-24",
@@ -381,7 +451,15 @@
     "exampleRefKanji": "手(손 수)",
     "exampleRefNum": "N4 16번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "上人",
+        "reading": "しょうにん",
+        "meaningKr": "고승"
+      }
+    ]
   },
   {
     "id": "N5-25",
@@ -429,7 +507,15 @@
     "exampleRefKanji": "日(날 일)",
     "exampleRefNum": "N5 1번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "キン",
+        "word": "今上",
+        "reading": "きんじょう",
+        "meaningKr": "현재 천황"
+      }
+    ]
   },
   {
     "id": "N5-28",
@@ -445,7 +531,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゴン",
+        "word": "黄金",
+        "reading": "おうごん",
+        "meaningKr": "황금"
+      }
+    ]
   },
   {
     "id": "N5-29",
@@ -541,7 +635,15 @@
     "exampleRefKanji": "供(이바지할 공)",
     "exampleRefNum": "N3 120번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ス",
+        "word": "様子",
+        "reading": "ようす",
+        "meaningKr": "모습"
+      }
+    ]
   },
   {
     "id": "N5-35",
@@ -717,7 +819,15 @@
     "exampleRefKanji": "彼(저 피)",
     "exampleRefNum": "N3 237번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ニョ",
+        "word": "天女",
+        "reading": "てんにょ",
+        "meaningKr": "선녀"
+      }
+    ]
   },
   {
     "id": "N5-46",
@@ -893,7 +1003,15 @@
     "exampleRefKanji": "性(성품 성)",
     "exampleRefNum": "N3 30번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ナン",
+        "word": "長男",
+        "reading": "ちょうなん",
+        "meaningKr": "장남"
+      }
+    ]
   },
   {
     "id": "N5-57",
@@ -989,7 +1107,15 @@
     "exampleRefKanji": "曜(빛날 요), 日(날 일)",
     "exampleRefNum": "N4 148번, N5 1번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ボク",
+        "word": "大木",
+        "reading": "たいぼく",
+        "meaningKr": "큰 나무"
+      }
+    ]
   },
   {
     "id": "N5-63",
@@ -1005,7 +1131,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ブン",
+        "word": "新聞",
+        "reading": "しんぶん",
+        "meaningKr": "신문"
+      },
+      {
+        "on": "モン",
+        "word": "前代未聞",
+        "reading": "ぜんだいみもん",
+        "meaningKr": "전대미문"
+      }
+    ]
   },
   {
     "id": "N5-64",
@@ -1021,7 +1161,15 @@
     "exampleRefKanji": "物(물건 물)",
     "exampleRefNum": "N4 63번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジキ",
+        "word": "断食",
+        "reading": "だんじき",
+        "meaningKr": "단식"
+      }
+    ]
   },
   {
     "id": "N5-65",
@@ -1069,7 +1217,15 @@
     "exampleRefKanji": "口(입 구)",
     "exampleRefNum": "N4 79번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ナ",
+        "word": "南無",
+        "reading": "なむ",
+        "meaningKr": "나무(귀의)"
+      }
+    ]
   },
   {
     "id": "N5-68",
@@ -1117,7 +1273,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ビャク",
+        "word": "白衣",
+        "reading": "びゃくえ",
+        "meaningKr": "백의"
+      }
+    ]
   },
   {
     "id": "N5-71",
@@ -1181,7 +1345,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ウ",
+        "word": "右翼",
+        "reading": "うよく",
+        "meaningKr": "우익"
+      },
+      {
+        "on": "ユウ",
+        "word": "左右",
+        "reading": "さゆう",
+        "meaningKr": "좌우"
+      }
+    ]
   },
   {
     "id": "N5-75",
@@ -1197,7 +1375,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "トク",
+        "word": "読本",
+        "reading": "とくほん",
+        "meaningKr": "독본"
+      },
+      {
+        "on": "トウ",
+        "word": "句読点",
+        "reading": "くとうてん",
+        "meaningKr": "구두점"
+      }
+    ]
   },
   {
     "id": "N5-76",
@@ -1293,7 +1485,15 @@
     "exampleRefKanji": "社(모일 사)",
     "exampleRefNum": "N4 5번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "エ",
+        "word": "会釈",
+        "reading": "えしゃく",
+        "meaningKr": "가벼운 인사"
+      }
+    ]
   },
   {
     "id": "N4-2",
@@ -1373,7 +1573,15 @@
     "exampleRefKanji": "出(날 출)",
     "exampleRefNum": "N5 12번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ホツ",
+        "word": "発起人",
+        "reading": "ほっきにん",
+        "meaningKr": "발기인"
+      }
+    ]
   },
   {
     "id": "N4-7",
@@ -1421,7 +1629,15 @@
     "exampleRefKanji": "授(줄 수)",
     "exampleRefNum": "N1 71번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゴウ",
+        "word": "自業自得",
+        "reading": "じごうじとく",
+        "meaningKr": "자업자득"
+      }
+    ]
   },
   {
     "id": "N4-10",
@@ -1501,7 +1717,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "リツ",
+        "word": "独立",
+        "reading": "どくりつ",
+        "meaningKr": "독립"
+      },
+      {
+        "on": "リュウ",
+        "word": "建立",
+        "reading": "こんりゅう",
+        "meaningKr": "건립"
+      }
+    ]
   },
   {
     "id": "N4-15",
@@ -1549,7 +1779,21 @@
     "exampleRefKanji": "努(힘쓸 노)",
     "exampleRefNum": "N3 266번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "リョク",
+        "word": "能力",
+        "reading": "のうりょく",
+        "meaningKr": "능력"
+      },
+      {
+        "on": "リキ",
+        "word": "力士",
+        "reading": "りきし",
+        "meaningKr": "스모 선수"
+      }
+    ]
   },
   {
     "id": "N4-18",
@@ -1581,7 +1825,15 @@
     "exampleRefKanji": "表(겉 표)",
     "exampleRefNum": "N3 19번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "タイ",
+        "word": "交代",
+        "reading": "こうたい",
+        "meaningKr": "교대"
+      }
+    ]
   },
   {
     "id": "N4-20",
@@ -1629,7 +1881,15 @@
     "exampleRefKanji": "都(도읍 도)",
     "exampleRefNum": "N3 38번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "キョウ",
+        "word": "東京",
+        "reading": "とうきょう",
+        "meaningKr": "도쿄"
+      }
+    ]
   },
   {
     "id": "N4-23",
@@ -1661,7 +1921,15 @@
     "exampleRefKanji": "交(사귈 교)",
     "exampleRefNum": "N3 61번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ツ",
+        "word": "通夜",
+        "reading": "つや",
+        "meaningKr": "밤샘 조문"
+      }
+    ]
   },
   {
     "id": "N4-25",
@@ -1677,7 +1945,15 @@
     "exampleRefKanji": "葉(잎 엽)",
     "exampleRefNum": "N3 160번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゴン",
+        "word": "伝言",
+        "reading": "でんごん",
+        "meaningKr": "전언"
+      }
+    ]
   },
   {
     "id": "N4-26",
@@ -2173,7 +2449,15 @@
     "exampleRefKanji": "映(비칠 영)",
     "exampleRefNum": "N4 105번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "カク",
+        "word": "画一",
+        "reading": "かくいつ",
+        "meaningKr": "획일"
+      }
+    ]
   },
   {
     "id": "N4-57",
@@ -2237,7 +2521,15 @@
     "exampleRefKanji": "路(길 로)",
     "exampleRefNum": "N3 202번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "トウ",
+        "word": "神道",
+        "reading": "しんとう",
+        "meaningKr": "신토"
+      }
+    ]
   },
   {
     "id": "N4-61",
@@ -2285,7 +2577,15 @@
     "exampleRefKanji": "食(먹을 식)",
     "exampleRefNum": "N5 64번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "モツ",
+        "word": "荷物",
+        "reading": "にもつ",
+        "meaningKr": "짐"
+      }
+    ]
   },
   {
     "id": "N4-64",
@@ -2621,7 +2921,15 @@
     "exampleRefKanji": "物(물건 물)",
     "exampleRefNum": "N4 63번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "コン",
+        "word": "建立",
+        "reading": "こんりゅう",
+        "meaningKr": "건립"
+      }
+    ]
   },
   {
     "id": "N4-85",
@@ -2701,7 +3009,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "サイ",
+        "word": "一切",
+        "reading": "いっさい",
+        "meaningKr": "일체"
+      }
+    ]
   },
   {
     "id": "N4-90",
@@ -2813,7 +3129,15 @@
     "exampleRefKanji": "到(이를 도)",
     "exampleRefNum": "N3 324번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジャク",
+        "word": "愛着",
+        "reading": "あいじゃく",
+        "meaningKr": "애착"
+      }
+    ]
   },
   {
     "id": "N4-97",
@@ -2845,7 +3169,15 @@
     "exampleRefKanji": "気(기운 기)",
     "exampleRefNum": "N5 40번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ヘイ",
+        "word": "疾病",
+        "reading": "しっぺい",
+        "meaningKr": "질병"
+      }
+    ]
   },
   {
     "id": "N4-99",
@@ -2861,7 +3193,21 @@
     "exampleRefKanji": "問(물을 문)",
     "exampleRefNum": "N4 18번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "シチ",
+        "word": "質屋",
+        "reading": "しちや",
+        "meaningKr": "전당포"
+      },
+      {
+        "on": "チ",
+        "word": "言質",
+        "reading": "げんち",
+        "meaningKr": "언질"
+      }
+    ]
   },
   {
     "id": "N4-100",
@@ -2989,7 +3335,21 @@
     "exampleRefKanji": "試(시험할 시)",
     "exampleRefNum": "N4 101번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ケン",
+        "word": "経験",
+        "reading": "けいけん",
+        "meaningKr": "경험"
+      },
+      {
+        "on": "ゲン",
+        "word": "験担ぎ",
+        "reading": "げんかつぎ",
+        "meaningKr": "징크스 챙기기"
+      }
+    ]
   },
   {
     "id": "N4-108",
@@ -3037,7 +3397,15 @@
     "exampleRefKanji": "事(일 사)",
     "exampleRefNum": "N4 3번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジ",
+        "word": "給仕",
+        "reading": "きゅうじ",
+        "meaningKr": "급사"
+      }
+    ]
   },
   {
     "id": "N4-111",
@@ -3053,7 +3421,15 @@
     "exampleRefKanji": "年(해 년)",
     "exampleRefNum": "N5 5번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "コ",
+        "word": "過去",
+        "reading": "かこ",
+        "meaningKr": "과거"
+      }
+    ]
   },
   {
     "id": "N4-112",
@@ -3149,7 +3525,21 @@
     "exampleRefKanji": "楽(즐길 락)",
     "exampleRefNum": "N4 94번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "イン",
+        "word": "母音",
+        "reading": "ぼいん",
+        "meaningKr": "모음"
+      },
+      {
+        "on": "ノン",
+        "word": "観音",
+        "reading": "かんのん",
+        "meaningKr": "관음"
+      }
+    ]
   },
   {
     "id": "N4-118",
@@ -3245,7 +3635,15 @@
     "exampleRefKanji": "人(사람 인)",
     "exampleRefNum": "N5 4번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "オ",
+        "word": "悪寒",
+        "reading": "おかん",
+        "meaningKr": "오한"
+      }
+    ]
   },
   {
     "id": "N4-124",
@@ -3309,7 +3707,15 @@
     "exampleRefKanji": "散(흩을 산)",
     "exampleRefNum": "N3 268번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ブ",
+        "word": "歩合",
+        "reading": "ぶあい",
+        "meaningKr": "비율"
+      }
+    ]
   },
   {
     "id": "N4-128",
@@ -3517,7 +3923,15 @@
     "exampleRefKanji": "休(쉴 휴)",
     "exampleRefNum": "N5 78번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゲ",
+        "word": "夏至",
+        "reading": "げし",
+        "meaningKr": "하지"
+      }
+    ]
   },
   {
     "id": "N4-141",
@@ -3805,7 +4219,15 @@
     "exampleRefKanji": "緑(초록 록)",
     "exampleRefNum": "N2 257번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "サ",
+        "word": "茶道",
+        "reading": "さどう",
+        "meaningKr": "다도"
+      }
+    ]
   },
   {
     "id": "N4-159",
@@ -3821,7 +4243,15 @@
     "exampleRefKanji": "兄(형 형)",
     "exampleRefNum": "N4 162번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ダイ",
+        "word": "兄弟",
+        "reading": "きょうだい",
+        "meaningKr": "형제"
+      }
+    ]
   },
   {
     "id": "N4-160",
@@ -3869,7 +4299,15 @@
     "exampleRefKanji": "弟(아우 제)",
     "exampleRefNum": "N4 159번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ケイ",
+        "word": "父兄",
+        "reading": "ふけい",
+        "meaningKr": "학부모"
+      }
+    ]
   },
   {
     "id": "N4-163",
@@ -3949,7 +4387,15 @@
     "exampleRefKanji": "治(다스릴 치)",
     "exampleRefNum": "N3 33번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "摂政",
+        "reading": "せっしょう",
+        "meaningKr": "섭정"
+      }
+    ]
   },
   {
     "id": "N3-2",
@@ -4045,7 +4491,15 @@
     "exampleRefKanji": "都(도읍 도)",
     "exampleRefNum": "N3 38번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "カッ",
+        "word": "合宿",
+        "reading": "がっしゅく",
+        "meaningKr": "합숙"
+      }
+    ]
   },
   {
     "id": "N3-8",
@@ -4077,7 +4531,15 @@
     "exampleRefKanji": "国(나라 국)",
     "exampleRefNum": "N5 3번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ダイ",
+        "word": "境内",
+        "reading": "けいだい",
+        "meaningKr": "경내"
+      }
+    ]
   },
   {
     "id": "N3-10",
@@ -4093,7 +4555,15 @@
     "exampleRefKanji": "手(손 수)",
     "exampleRefNum": "N4 16번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "首相",
+        "reading": "しゅしょう",
+        "meaningKr": "수상"
+      }
+    ]
   },
   {
     "id": "N3-11",
@@ -4157,7 +4627,21 @@
     "exampleRefKanji": "国(나라 국)",
     "exampleRefNum": "N5 3번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ベイ",
+        "word": "米国",
+        "reading": "べいこく",
+        "meaningKr": "미국"
+      },
+      {
+        "on": "マイ",
+        "word": "新米",
+        "reading": "しんまい",
+        "meaningKr": "신참"
+      }
+    ]
   },
   {
     "id": "N3-15",
@@ -4269,7 +4753,15 @@
     "exampleRefKanji": "験(시험 험)",
     "exampleRefNum": "N4 107번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "キョウ",
+        "word": "読経",
+        "reading": "どきょう",
+        "meaningKr": "독경"
+      }
+    ]
   },
   {
     "id": "N3-22",
@@ -4397,7 +4889,15 @@
     "exampleRefKanji": "方(모 방)",
     "exampleRefNum": "N4 10번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ハッ",
+        "word": "法度",
+        "reading": "はっと",
+        "meaningKr": "법도/금지"
+      }
+    ]
   },
   {
     "id": "N3-30",
@@ -4413,7 +4913,15 @@
     "exampleRefKanji": "女(계집 녀)",
     "exampleRefNum": "N5 45번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "性分",
+        "reading": "しょうぶん",
+        "meaningKr": "천성"
+      }
+    ]
   },
   {
     "id": "N3-31",
@@ -4461,7 +4969,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジ",
+        "word": "政治",
+        "reading": "せいじ",
+        "meaningKr": "정치"
+      }
+    ]
   },
   {
     "id": "N3-34",
@@ -4493,7 +5009,15 @@
     "exampleRefKanji": "賛(도울 찬)",
     "exampleRefNum": "N3 292번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジョウ",
+        "word": "成就",
+        "reading": "じょうじゅ",
+        "meaningKr": "성취"
+      }
+    ]
   },
   {
     "id": "N3-36",
@@ -4509,7 +5033,15 @@
     "exampleRefKanji": "間(사이 간)",
     "exampleRefNum": "N5 23번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゴ",
+        "word": "最期",
+        "reading": "さいご",
+        "meaningKr": "임종"
+      }
+    ]
   },
   {
     "id": "N3-37",
@@ -4557,7 +5089,15 @@
     "exampleRefKanji": "平(평평할 평)",
     "exampleRefNum": "N3 41번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "カ",
+        "word": "和尚",
+        "reading": "かしょう",
+        "meaningKr": "화상(승려)"
+      }
+    ]
   },
   {
     "id": "N3-40",
@@ -4669,7 +5209,15 @@
     "exampleRefKanji": "学(배울 학)",
     "exampleRefNum": "N5 31번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ス",
+        "word": "数寄屋",
+        "reading": "すきや",
+        "meaningKr": "다실"
+      }
+    ]
   },
   {
     "id": "N3-47",
@@ -4733,7 +5281,15 @@
     "exampleRefKanji": "利(이로울 리)",
     "exampleRefNum": "N3 73번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゴン",
+        "word": "権化",
+        "reading": "ごんげ",
+        "meaningKr": "화신"
+      }
+    ]
   },
   {
     "id": "N3-51",
@@ -4893,7 +5449,15 @@
     "exampleRefKanji": "理(다스릴 리)",
     "exampleRefNum": "N4 26번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゲ",
+        "word": "解熱",
+        "reading": "げねつ",
+        "meaningKr": "해열"
+      }
+    ]
   },
   {
     "id": "N3-61",
@@ -5037,7 +5601,15 @@
     "exampleRefKanji": "対(대할 대)",
     "exampleRefNum": "N3 5번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "タン",
+        "word": "反物",
+        "reading": "たんもの",
+        "meaningKr": "옷감 한 필"
+      }
+    ]
   },
   {
     "id": "N3-70",
@@ -5053,7 +5625,15 @@
     "exampleRefKanji": "断(끊을 단)",
     "exampleRefNum": "N3 132번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "バン",
+        "word": "大判",
+        "reading": "おおばん",
+        "meaningKr": "큰 판형/큰 금화"
+      }
+    ]
   },
   {
     "id": "N3-71",
@@ -5229,7 +5809,15 @@
     "exampleRefKanji": "要(요긴할 요)",
     "exampleRefNum": "N3 31번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "キュウ",
+        "word": "要求",
+        "reading": "ようきゅう",
+        "meaningKr": "요구"
+      }
+    ]
   },
   {
     "id": "N3-82",
@@ -5261,7 +5849,15 @@
     "exampleRefKanji": "回(돌 회)",
     "exampleRefNum": "N3 12번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジ",
+        "word": "次第",
+        "reading": "しだい",
+        "meaningKr": "순서/사정"
+      }
+    ]
   },
   {
     "id": "N3-84",
@@ -5373,7 +5969,15 @@
     "exampleRefKanji": "事(일 사)",
     "exampleRefNum": "N4 3번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "セイ",
+        "word": "風情",
+        "reading": "ふぜい",
+        "meaningKr": "운치"
+      }
+    ]
   },
   {
     "id": "N3-91",
@@ -5405,7 +6009,15 @@
     "exampleRefKanji": "指(손가락 지)",
     "exampleRefNum": "N3 49번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジ",
+        "word": "指示",
+        "reading": "しじ",
+        "meaningKr": "지시"
+      }
+    ]
   },
   {
     "id": "N3-93",
@@ -5581,7 +6193,21 @@
     "exampleRefKanji": "年(해 년)",
     "exampleRefNum": "N5 5번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "サイ",
+        "word": "歳月",
+        "reading": "さいげつ",
+        "meaningKr": "세월"
+      },
+      {
+        "on": "セイ",
+        "word": "お歳暮",
+        "reading": "おせいぼ",
+        "meaningKr": "연말 선물"
+      }
+    ]
   },
   {
     "id": "N3-104",
@@ -5677,7 +6303,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ル",
+        "word": "流布",
+        "reading": "るふ",
+        "meaningKr": "유포"
+      }
+    ]
   },
   {
     "id": "N3-110",
@@ -5693,7 +6327,15 @@
     "exampleRefKanji": "好(좋을 호)",
     "exampleRefNum": "N3 166번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "コウ",
+        "word": "格子",
+        "reading": "こうし",
+        "meaningKr": "격자"
+      }
+    ]
   },
   {
     "id": "N3-111",
@@ -5869,7 +6511,15 @@
     "exampleRefKanji": "割(나눌 할)",
     "exampleRefNum": "N3 123번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "エキ",
+        "word": "役務",
+        "reading": "えきむ",
+        "meaningKr": "역무/서비스"
+      }
+    ]
   },
   {
     "id": "N3-122",
@@ -5949,7 +6599,27 @@
     "exampleRefKanji": "理(다스릴 리)",
     "exampleRefNum": "N4 26번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ユ",
+        "word": "経由",
+        "reading": "けいゆ",
+        "meaningKr": "경유"
+      },
+      {
+        "on": "ユウ",
+        "word": "自由",
+        "reading": "じゆう",
+        "meaningKr": "자유"
+      },
+      {
+        "on": "ユイ",
+        "word": "由緒",
+        "reading": "ゆいしょ",
+        "meaningKr": "유서(내력)"
+      }
+    ]
   },
   {
     "id": "N3-127",
@@ -5965,7 +6635,15 @@
     "exampleRefKanji": "小(작을 소)",
     "exampleRefNum": "N5 41번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゼイ",
+        "word": "遊説",
+        "reading": "ゆうぜい",
+        "meaningKr": "유세"
+      }
+    ]
   },
   {
     "id": "N3-128",
@@ -6061,7 +6739,21 @@
     "exampleRefKanji": "油(기름 유)",
     "exampleRefNum": "N2 114번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "シャク",
+        "word": "磁石",
+        "reading": "じしゃく",
+        "meaningKr": "자석"
+      },
+      {
+        "on": "コク",
+        "word": "石高",
+        "reading": "こくだか",
+        "meaningKr": "쌀 수확량"
+      }
+    ]
   },
   {
     "id": "N3-134",
@@ -6301,7 +6993,15 @@
     "exampleRefKanji": "車(수레 차)",
     "exampleRefNum": "N5 65번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "乗客",
+        "reading": "じょうきゃく",
+        "meaningKr": "승객"
+      }
+    ]
   },
   {
     "id": "N3-149",
@@ -6317,7 +7017,15 @@
     "exampleRefKanji": "念(생각 념)",
     "exampleRefNum": "N3 152번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "サン",
+        "word": "残暑",
+        "reading": "ざんしょ",
+        "meaningKr": "늦더위"
+      }
+    ]
   },
   {
     "id": "N3-150",
@@ -6333,7 +7041,15 @@
     "exampleRefKanji": "像(모양 상)",
     "exampleRefNum": "N2 179번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ソ",
+        "word": "愛想",
+        "reading": "あいそ",
+        "meaningKr": "붙임성"
+      }
+    ]
   },
   {
     "id": "N3-151",
@@ -6349,7 +7065,15 @@
     "exampleRefKanji": "援(도울 원)",
     "exampleRefNum": "N1 22번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "声明",
+        "reading": "しょうみょう",
+        "meaningKr": "불교 성명(음악)"
+      }
+    ]
   },
   {
     "id": "N3-152",
@@ -6429,7 +7153,21 @@
     "exampleRefKanji": "当(마땅할 당)",
     "exampleRefNum": "N3 26번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゼン",
+        "word": "自然",
+        "reading": "しぜん",
+        "meaningKr": "자연"
+      },
+      {
+        "on": "ネン",
+        "word": "天然",
+        "reading": "てんねん",
+        "meaningKr": "천연"
+      }
+    ]
   },
   {
     "id": "N3-157",
@@ -6541,7 +7279,15 @@
     "exampleRefKanji": "式(법 식)",
     "exampleRefNum": "N3 97번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ギョウ",
+        "word": "人形",
+        "reading": "にんぎょう",
+        "meaningKr": "인형"
+      }
+    ]
   },
   {
     "id": "N3-164",
@@ -6621,7 +7367,21 @@
     "exampleRefKanji": "痛(아플 통)",
     "exampleRefNum": "N3 303번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "トウ",
+        "word": "頭部",
+        "reading": "とうぶ",
+        "meaningKr": "두부(머리 부분)"
+      },
+      {
+        "on": "ト",
+        "word": "音頭",
+        "reading": "おんど",
+        "meaningKr": "선창/음두"
+      }
+    ]
   },
   {
     "id": "N3-169",
@@ -6701,7 +7461,15 @@
     "exampleRefKanji": "週(돌 주)",
     "exampleRefNum": "N4 125번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "バツ",
+        "word": "末子",
+        "reading": "ばっし",
+        "meaningKr": "막내"
+      }
+    ]
   },
   {
     "id": "N3-174",
@@ -6717,7 +7485,15 @@
     "exampleRefKanji": "留(머물 류)",
     "exampleRefNum": "N3 264번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ス",
+        "word": "留守",
+        "reading": "るす",
+        "meaningKr": "부재중"
+      }
+    ]
   },
   {
     "id": "N3-175",
@@ -6733,7 +7509,21 @@
     "exampleRefKanji": "者(놈 자)",
     "exampleRefNum": "N4 7번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジャク",
+        "word": "若干",
+        "reading": "じゃっかん",
+        "meaningKr": "약간"
+      },
+      {
+        "on": "ニャク",
+        "word": "老若男女",
+        "reading": "ろうにゃくなんにょ",
+        "meaningKr": "남녀노소"
+      }
+    ]
   },
   {
     "id": "N3-176",
@@ -6781,7 +7571,15 @@
     "exampleRefKanji": "令(?)",
     "exampleRefNum": "-",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ミョウ",
+        "word": "寿命",
+        "reading": "じゅみょう",
+        "meaningKr": "수명"
+      }
+    ]
   },
   {
     "id": "N3-179",
@@ -6813,7 +7611,15 @@
     "exampleRefKanji": "希(?)",
     "exampleRefNum": "-",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "モウ",
+        "word": "本望",
+        "reading": "ほんもう",
+        "meaningKr": "숙원 성취"
+      }
+    ]
   },
   {
     "id": "N3-181",
@@ -7021,7 +7827,21 @@
     "exampleRefKanji": "配(나눌 배)",
     "exampleRefNum": "N3 143번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "タツ",
+        "word": "達成",
+        "reading": "たっせい",
+        "meaningKr": "달성"
+      },
+      {
+        "on": "ダ",
+        "word": "達磨",
+        "reading": "だるま",
+        "meaningKr": "오뚝이(달마)"
+      }
+    ]
   },
   {
     "id": "N3-194",
@@ -7165,7 +7985,15 @@
     "exampleRefKanji": "道(길 도)",
     "exampleRefNum": "N4 60번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ロ",
+        "word": "通路",
+        "reading": "つうろ",
+        "meaningKr": "통로"
+      }
+    ]
   },
   {
     "id": "N3-203",
@@ -7245,7 +8073,15 @@
     "exampleRefKanji": "陽(볕 양)",
     "exampleRefNum": "N3 329번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "タ",
+        "word": "太刀",
+        "reading": "たち",
+        "meaningKr": "긴 칼"
+      }
+    ]
   },
   {
     "id": "N3-208",
@@ -7261,7 +8097,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "カク",
+        "word": "主客",
+        "reading": "しゅかく",
+        "meaningKr": "주객"
+      }
+    ]
   },
   {
     "id": "N3-209",
@@ -7325,7 +8169,21 @@
     "exampleRefKanji": "貿(무역할 무)",
     "exampleRefNum": "N2 98번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "エキ",
+        "word": "貿易",
+        "reading": "ぼうえき",
+        "meaningKr": "무역"
+      },
+      {
+        "on": "イ",
+        "word": "容易",
+        "reading": "ようい",
+        "meaningKr": "용이"
+      }
+    ]
   },
   {
     "id": "N3-213",
@@ -7389,7 +8247,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "サイ",
+        "word": "相殺",
+        "reading": "そうさい",
+        "meaningKr": "상쇄"
+      },
+      {
+        "on": "セツ",
+        "word": "殺生",
+        "reading": "せっしょう",
+        "meaningKr": "살생"
+      }
+    ]
   },
   {
     "id": "N3-217",
@@ -7469,7 +8341,15 @@
     "exampleRefKanji": "掃(쓸 소)",
     "exampleRefNum": "N2 274번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジ",
+        "word": "掃除",
+        "reading": "そうじ",
+        "meaningKr": "청소"
+      }
+    ]
   },
   {
     "id": "N3-222",
@@ -7709,7 +8589,15 @@
     "exampleRefKanji": "豊(풍부할 풍)",
     "exampleRefNum": "N2 140번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "フウ",
+        "word": "富貴",
+        "reading": "ふうき",
+        "meaningKr": "부귀"
+      }
+    ]
   },
   {
     "id": "N3-237",
@@ -7773,7 +8661,21 @@
     "exampleRefKanji": "死(죽을 사)",
     "exampleRefNum": "N4 67번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ボウ",
+        "word": "亡命",
+        "reading": "ぼうめい",
+        "meaningKr": "망명"
+      },
+      {
+        "on": "モウ",
+        "word": "亡者",
+        "reading": "もうじゃ",
+        "meaningKr": "망자"
+      }
+    ]
   },
   {
     "id": "N3-241",
@@ -8125,7 +9027,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "バツ",
+        "word": "抜群",
+        "reading": "ばつぐん",
+        "meaningKr": "발군"
+      }
+    ]
   },
   {
     "id": "N3-263",
@@ -8205,7 +9115,15 @@
     "exampleRefKanji": "神(귀신 신)",
     "exampleRefNum": "N3 136번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "精進",
+        "reading": "しょうじん",
+        "meaningKr": "정진"
+      }
+    ]
   },
   {
     "id": "N3-268",
@@ -8237,7 +9155,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ジョウ",
+        "word": "静脈",
+        "reading": "じょうみゃく",
+        "meaningKr": "정맥"
+      }
+    ]
   },
   {
     "id": "N3-270",
@@ -8413,7 +9339,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "フツ",
+        "word": "払拭",
+        "reading": "ふっしょく",
+        "meaningKr": "불식"
+      }
+    ]
   },
   {
     "id": "N3-281",
@@ -8461,7 +9395,15 @@
     "exampleRefKanji": "務(힘쓸 무)",
     "exampleRefNum": "N3 34번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゴン",
+        "word": "勤行",
+        "reading": "ごんぎょう",
+        "meaningKr": "근행(불교 예불)"
+      }
+    ]
   },
   {
     "id": "N3-284",
@@ -8685,7 +9627,15 @@
     "exampleRefKanji": "足(발 족)",
     "exampleRefNum": "N4 92번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "オン",
+        "word": "久遠",
+        "reading": "くおん",
+        "meaningKr": "구원(영원)"
+      }
+    ]
   },
   {
     "id": "N3-298",
@@ -8749,7 +9699,15 @@
     "exampleRefKanji": "引(끌 인)",
     "exampleRefNum": "N3 80번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "エツ",
+        "word": "超越",
+        "reading": "ちょうえつ",
+        "meaningKr": "초월"
+      }
+    ]
   },
   {
     "id": "N3-302",
@@ -8909,7 +9867,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ユ",
+        "word": "遊山",
+        "reading": "ゆさん",
+        "meaningKr": "유람"
+      }
+    ]
   },
   {
     "id": "N3-312",
@@ -8989,7 +9955,15 @@
     "exampleRefKanji": "一(하나 일)",
     "exampleRefNum": "N5 2번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ショ",
+        "word": "情緒",
+        "reading": "じょうしょ",
+        "meaningKr": "정서"
+      }
+    ]
   },
   {
     "id": "N3-317",
@@ -9005,7 +9979,15 @@
     "exampleRefKanji": "骨(?)",
     "exampleRefNum": "-",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "セツ",
+        "word": "曲折",
+        "reading": "きょくせつ",
+        "meaningKr": "곡절"
+      }
+    ]
   },
   {
     "id": "N3-318",
@@ -9213,7 +10195,15 @@
     "exampleRefKanji": "制(절제할 제)",
     "exampleRefNum": "N3 32번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ギョ",
+        "word": "制御",
+        "reading": "せいぎょ",
+        "meaningKr": "제어"
+      }
+    ]
   },
   {
     "id": "N3-331",
@@ -9357,7 +10347,15 @@
     "exampleRefKanji": "儀(거동 의)",
     "exampleRefNum": "N1 122번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ライ",
+        "word": "礼賛",
+        "reading": "らいさん",
+        "meaningKr": "예찬"
+      }
+    ]
   },
   {
     "id": "N3-340",
@@ -9373,7 +10371,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ソウ",
+        "word": "同窓",
+        "reading": "どうそう",
+        "meaningKr": "동창"
+      }
+    ]
   },
   {
     "id": "N3-341",
@@ -9389,7 +10395,21 @@
     "exampleRefKanji": "話(말씀 화)",
     "exampleRefNum": "N5 44번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "セキ",
+        "word": "昔日",
+        "reading": "せきじつ",
+        "meaningKr": "석일(옛날)"
+      },
+      {
+        "on": "シャク",
+        "word": "今昔",
+        "reading": "こんじゃく",
+        "meaningKr": "금석(옛날과 지금)"
+      }
+    ]
   },
   {
     "id": "N3-342",
@@ -9421,7 +10441,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ヌ",
+        "word": "忿怒",
+        "reading": "ふんぬ",
+        "meaningKr": "분노"
+      }
+    ]
   },
   {
     "id": "N3-344",
@@ -9693,7 +10721,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ボウ",
+        "word": "忙殺",
+        "reading": "ぼうさつ",
+        "meaningKr": "몹시 바쁨"
+      }
+    ]
   },
   {
     "id": "N3-361",
@@ -10013,7 +11049,15 @@
     "exampleRefKanji": "布(베 포)",
     "exampleRefNum": "N2 183번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "トン",
+        "word": "布団",
+        "reading": "ふとん",
+        "meaningKr": "이불"
+      }
+    ]
   },
   {
     "id": "N2-14",
@@ -10093,7 +11137,15 @@
     "exampleRefKanji": "大(큰 대)",
     "exampleRefNum": "N5 6번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゼイ",
+        "word": "虚勢",
+        "reading": "きょせい",
+        "meaningKr": "허세"
+      }
+    ]
   },
   {
     "id": "N2-19",
@@ -10221,7 +11273,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ケイ",
+        "word": "境内",
+        "reading": "けいだい",
+        "meaningKr": "경내"
+      }
+    ]
   },
   {
     "id": "N2-27",
@@ -10349,7 +11409,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ス",
+        "word": "欧州",
+        "reading": "おうしゅう",
+        "meaningKr": "유럽"
+      }
+    ]
   },
   {
     "id": "N2-35",
@@ -10365,7 +11433,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ム",
+        "word": "武者",
+        "reading": "むしゃ",
+        "meaningKr": "무사"
+      }
+    ]
   },
   {
     "id": "N2-36",
@@ -10605,7 +11681,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "カ",
+        "word": "一個",
+        "reading": "いっか",
+        "meaningKr": "한 개"
+      }
+    ]
   },
   {
     "id": "N2-51",
@@ -10861,7 +11945,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ヒョウ",
+        "word": "兵糧",
+        "reading": "ひょうろう",
+        "meaningKr": "군량"
+      }
+    ]
   },
   {
     "id": "N2-67",
@@ -10877,7 +11969,15 @@
     "exampleRefKanji": "面(낯 면)",
     "exampleRefNum": "N3 67번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "接待",
+        "reading": "せったい",
+        "meaningKr": "접대"
+      }
+    ]
   },
   {
     "id": "N2-68",
@@ -10973,7 +12073,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "セイ",
+        "word": "反省",
+        "reading": "はんせい",
+        "meaningKr": "반성"
+      }
+    ]
   },
   {
     "id": "N2-74",
@@ -11181,7 +12289,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ホウ",
+        "word": "並行",
+        "reading": "へいこう",
+        "meaningKr": "병행"
+      }
+    ]
   },
   {
     "id": "N2-87",
@@ -11309,7 +12425,15 @@
     "exampleRefKanji": "史(역사 사)",
     "exampleRefNum": "N2 63번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "レッキ",
+        "word": "歴然",
+        "reading": "れきぜん",
+        "meaningKr": "역력함"
+      }
+    ]
   },
   {
     "id": "N2-95",
@@ -11325,7 +12449,15 @@
     "exampleRefKanji": "来(올 래)",
     "exampleRefNum": "N5 39번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ソウ",
+        "word": "将棋",
+        "reading": "しょうぎ",
+        "meaningKr": "장기(놀이)"
+      }
+    ]
   },
   {
     "id": "N2-96",
@@ -11421,7 +12553,15 @@
     "exampleRefKanji": "服(옷 복)",
     "exampleRefNum": "N4 145번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "装束",
+        "reading": "しょうぞく",
+        "meaningKr": "의상,차림"
+      }
+    ]
   },
   {
     "id": "N2-102",
@@ -11517,7 +12657,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ニ",
+        "word": "小児科",
+        "reading": "しょうにか",
+        "meaningKr": "소아과"
+      }
+    ]
   },
   {
     "id": "N2-108",
@@ -11565,7 +12713,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ゲキ",
+        "word": "逆鱗",
+        "reading": "げきりん",
+        "meaningKr": "역린,대노함"
+      }
+    ]
   },
   {
     "id": "N2-111",
@@ -11597,7 +12753,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "キュウ",
+        "word": "永久",
+        "reading": "えいきゅう",
+        "meaningKr": "영구"
+      },
+      {
+        "on": "ク",
+        "word": "久遠",
+        "reading": "くおん",
+        "meaningKr": "구원,영원"
+      }
+    ]
   },
   {
     "id": "N2-113",
@@ -11629,7 +12799,15 @@
     "exampleRefKanji": "石(돌 석)",
     "exampleRefNum": "N3 133번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ユウ",
+        "word": "油断",
+        "reading": "ゆだん",
+        "meaningKr": "방심"
+      }
+    ]
   },
   {
     "id": "N2-115",
@@ -11709,7 +12887,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "シン",
+        "word": "清々しい",
+        "reading": "すがすがしい",
+        "meaningKr": "상쾌하다"
+      }
+    ]
   },
   {
     "id": "N2-120",
@@ -11789,7 +12975,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ウン",
+        "word": "芸亭",
+        "reading": "うんてい",
+        "meaningKr": "일본 최초 도서관 이름"
+      }
+    ]
   },
   {
     "id": "N2-125",
@@ -11869,7 +13063,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ロク",
+        "word": "陸",
+        "reading": "ろく",
+        "meaningKr": "평평함(陸でない에 쓰임)"
+      }
+    ]
   },
   {
     "id": "N2-130",
@@ -12045,7 +13247,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ブ",
+        "word": "豊国",
+        "reading": "ぶこく",
+        "meaningKr": "풍요한 나라"
+      }
+    ]
   },
   {
     "id": "N2-141",
@@ -12141,7 +13351,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ジョウ",
+        "word": "承知",
+        "reading": "じょうち",
+        "meaningKr": "승낙,양지"
+      }
+    ]
   },
   {
     "id": "N2-147",
@@ -12237,7 +13455,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "チョウ",
+        "word": "官庁",
+        "reading": "かんちょう",
+        "meaningKr": "관청"
+      }
+    ]
   },
   {
     "id": "N2-153",
@@ -12253,7 +13479,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "セイ",
+        "word": "城塞",
+        "reading": "じょうさい",
+        "meaningKr": "성채"
+      }
+    ]
   },
   {
     "id": "N2-154",
@@ -12413,7 +13647,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "フツ",
+        "word": "仏語",
+        "reading": "ふつご",
+        "meaningKr": "프랑스어"
+      }
+    ]
   },
   {
     "id": "N2-164",
@@ -12573,7 +13815,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "明星",
+        "reading": "みょうじょう",
+        "meaningKr": "샛별"
+      }
+    ]
   },
   {
     "id": "N2-174",
@@ -12637,7 +13887,15 @@
     "exampleRefKanji": "冷(찰 냉), 蔵(감출 장)",
     "exampleRefNum": "N3 241번, N2 56번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "コ",
+        "word": "庫裏",
+        "reading": "くり",
+        "meaningKr": "절의 부엌,주지 거처"
+      }
+    ]
   },
   {
     "id": "N2-178",
@@ -12733,7 +13991,15 @@
     "exampleRefKanji": "団(둥글 단)",
     "exampleRefNum": "N2 13번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ホ",
+        "word": "布施",
+        "reading": "ふせ",
+        "meaningKr": "보시"
+      }
+    ]
   },
   {
     "id": "N2-184",
@@ -12845,7 +14111,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "エ",
+        "word": "帰依",
+        "reading": "きえ",
+        "meaningKr": "귀의"
+      }
+    ]
   },
   {
     "id": "N2-191",
@@ -12893,7 +14167,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "バイ",
+        "word": "枚挙",
+        "reading": "まいきょ",
+        "meaningKr": "매거,낱낱이 듦"
+      }
+    ]
   },
   {
     "id": "N2-194",
@@ -12957,7 +14239,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ヨウ",
+        "word": "栄耀",
+        "reading": "えいよう",
+        "meaningKr": "영요,사치"
+      }
+    ]
   },
   {
     "id": "N2-198",
@@ -12989,7 +14279,15 @@
     "exampleRefKanji": "黒(검을 흑)",
     "exampleRefNum": "N4 130번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ハン",
+        "word": "看板",
+        "reading": "かんばん",
+        "meaningKr": "간판"
+      }
+    ]
   },
   {
     "id": "N2-200",
@@ -13053,7 +14351,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary-traditional",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "カン",
+        "word": "上巻",
+        "reading": "じょうかん",
+        "meaningKr": "상권"
+      }
+    ]
   },
   {
     "id": "N2-204",
@@ -13277,7 +14583,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "リツ",
+        "word": "法律",
+        "reading": "ほうりつ",
+        "meaningKr": "법률"
+      },
+      {
+        "on": "リチ",
+        "word": "律儀",
+        "reading": "りちぎ",
+        "meaningKr": "의리가 굳음"
+      }
+    ]
   },
   {
     "id": "N2-218",
@@ -13293,7 +14613,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ゾウ",
+        "word": "贈与",
+        "reading": "ぞうよ",
+        "meaningKr": "증여"
+      }
+    ]
   },
   {
     "id": "N2-219",
@@ -13389,7 +14717,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "キツ",
+        "word": "詰問",
+        "reading": "きつもん",
+        "meaningKr": "힐문"
+      }
+    ]
   },
   {
     "id": "N2-225",
@@ -13677,7 +15013,15 @@
     "exampleRefKanji": "手(손 수)",
     "exampleRefNum": "N4 16번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "タイ",
+        "word": "胎袋",
+        "reading": "たいたい",
+        "meaningKr": "태낭(불확실)"
+      }
+    ]
   },
   {
     "id": "N2-243",
@@ -13805,7 +15149,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "シャ",
+        "word": "土砂",
+        "reading": "どしゃ",
+        "meaningKr": "토사"
+      }
+    ]
   },
   {
     "id": "N2-251",
@@ -13917,7 +15269,15 @@
     "exampleRefKanji": "茶(차 다)",
     "exampleRefNum": "N4 158번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "リョク",
+        "word": "緑地",
+        "reading": "りょくち",
+        "meaningKr": "녹지"
+      }
+    ]
   },
   {
     "id": "N2-258",
@@ -13981,7 +15341,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "デン",
+        "word": "殿堂",
+        "reading": "でんどう",
+        "meaningKr": "전당"
+      }
+    ]
   },
   {
     "id": "N2-262",
@@ -14029,7 +15397,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "エ",
+        "word": "衣紋",
+        "reading": "えもん",
+        "meaningKr": "옷깃,옷맵시"
+      }
+    ]
   },
   {
     "id": "N2-265",
@@ -14125,7 +15501,15 @@
     "exampleRefKanji": "色(빛 색)",
     "exampleRefNum": "N4 137번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "コウ",
+        "word": "黄金",
+        "reading": "こうきん",
+        "meaningKr": "황금(こがね와 병용)"
+      }
+    ]
   },
   {
     "id": "N2-271",
@@ -14157,7 +15541,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "シン",
+        "word": "大臣",
+        "reading": "だいじん",
+        "meaningKr": "대신,장관"
+      }
+    ]
   },
   {
     "id": "N2-273",
@@ -14333,7 +15725,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ク",
+        "word": "深紅",
+        "reading": "しんく",
+        "meaningKr": "짙은 다홍색(불확실)"
+      }
+    ]
   },
   {
     "id": "N2-284",
@@ -14413,7 +15813,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "サツ",
+        "word": "一冊",
+        "reading": "いっさつ",
+        "meaningKr": "한 권"
+      },
+      {
+        "on": "サク",
+        "word": "短冊",
+        "reading": "たんざく",
+        "meaningKr": "단자쿠(글 쓰는 종이)"
+      }
+    ]
   },
   {
     "id": "N2-289",
@@ -14557,7 +15971,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "チュウ",
+        "word": "害虫",
+        "reading": "がいちゅう",
+        "meaningKr": "해충"
+      }
+    ]
   },
   {
     "id": "N2-298",
@@ -14637,7 +16059,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ルイ",
+        "word": "感涙",
+        "reading": "かんるい",
+        "meaningKr": "감격의 눈물"
+      }
+    ]
   },
   {
     "id": "N2-303",
@@ -14813,7 +16243,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ケン",
+        "word": "乾坤",
+        "reading": "けんこん",
+        "meaningKr": "천지,건곤"
+      }
+    ]
   },
   {
     "id": "N2-314",
@@ -14861,7 +16299,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "シュウ",
+        "word": "拾得",
+        "reading": "しゅうとく",
+        "meaningKr": "습득"
+      }
+    ]
   },
   {
     "id": "N2-317",
@@ -14957,7 +16403,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary-traditional",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "シュウ",
+        "word": "湿疹",
+        "reading": "しっしん",
+        "meaningKr": "습진"
+      }
+    ]
   },
   {
     "id": "N2-323",
@@ -14973,7 +16427,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ヘイ",
+        "word": "花瓶",
+        "reading": "かへい",
+        "meaningKr": "화병(불확실,보통 かびん)"
+      }
+    ]
   },
   {
     "id": "N2-324",
@@ -15069,7 +16531,15 @@
     "exampleRefKanji": "暑(더울 서)",
     "exampleRefNum": "N1 514번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "セイ",
+        "word": "蒸気",
+        "reading": "じょうき",
+        "meaningKr": "증기(불확실 발음)"
+      }
+    ]
   },
   {
     "id": "N2-330",
@@ -15229,7 +16699,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "百姓",
+        "reading": "ひゃくしょう",
+        "meaningKr": "농민"
+      }
+    ]
   },
   {
     "id": "N2-340",
@@ -15325,7 +16803,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ジョウ",
+        "word": "三畳",
+        "reading": "さんじょう",
+        "meaningKr": "다다미 세 장"
+      }
+    ]
   },
   {
     "id": "N2-346",
@@ -15453,7 +16939,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "モウ",
+        "word": "制帽",
+        "reading": "せいぼう",
+        "meaningKr": "제모"
+      }
+    ]
   },
   {
     "id": "N2-354",
@@ -15629,7 +17123,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary-traditional",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "キョウ",
+        "word": "挟撃",
+        "reading": "きょうげき",
+        "meaningKr": "협공"
+      }
+    ]
   },
   {
     "id": "N2-365",
@@ -25949,7 +27451,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "テイ",
+        "word": "料亭",
+        "reading": "りょうてい",
+        "meaningKr": "고급 요릿집"
+      }
+    ]
   },
   {
     "id": "N1-643",
@@ -26269,7 +27779,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "エキ",
+        "word": "疫病",
+        "reading": "えきびょう",
+        "meaningKr": "역병"
+      },
+      {
+        "on": "ヤク",
+        "word": "疫病神",
+        "reading": "やくびょうがみ",
+        "meaningKr": "역병신(재수없는 사람)"
+      }
+    ]
   },
   {
     "id": "N1-663",
@@ -26461,7 +27985,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "リョ",
+        "word": "虜囚",
+        "reading": "りょしゅう",
+        "meaningKr": "포로"
+      },
+      {
+        "on": "ロ",
+        "word": "俘虜",
+        "reading": "ふりょ",
+        "meaningKr": "포로"
+      }
+    ]
   },
   {
     "id": "N1-675",
@@ -26557,7 +28095,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ミ",
+        "word": "弥生",
+        "reading": "やよい",
+        "meaningKr": "음력 3월"
+      },
+      {
+        "on": "ビ",
+        "word": "阿弥陀",
+        "reading": "あみだ",
+        "meaningKr": "아미타불"
+      }
+    ]
   },
   {
     "id": "N1-681",
@@ -26749,7 +28301,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ジョ",
+        "word": "如実",
+        "reading": "にょじつ",
+        "meaningKr": "여실함"
+      },
+      {
+        "on": "ニョ",
+        "word": "如来",
+        "reading": "にょらい",
+        "meaningKr": "여래"
+      }
+    ]
   },
   {
     "id": "N1-693",
@@ -26829,7 +28395,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ミョウ",
+        "word": "苗字",
+        "reading": "みょうじ",
+        "meaningKr": "성씨"
+      }
+    ]
   },
   {
     "id": "N1-698",
@@ -26925,7 +28499,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ダ",
+        "word": "蛇足",
+        "reading": "だそく",
+        "meaningKr": "사족"
+      }
+    ]
   },
   {
     "id": "N1-704",
@@ -27037,7 +28619,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ボン",
+        "word": "平凡",
+        "reading": "へいぼん",
+        "meaningKr": "평범"
+      },
+      {
+        "on": "ハン",
+        "word": "凡例",
+        "reading": "はんれい",
+        "meaningKr": "범례"
+      }
+    ]
   },
   {
     "id": "N1-711",
@@ -27229,7 +28825,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ム",
+        "word": "霧散",
+        "reading": "むさん",
+        "meaningKr": "흩어짐"
+      }
+    ]
   },
   {
     "id": "N1-723",
@@ -27341,7 +28945,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "キョウ",
+        "word": "窮屈",
+        "reading": "きゅうくつ",
+        "meaningKr": "갑갑함"
+      }
+    ]
   },
   {
     "id": "N1-730",
@@ -27469,7 +29081,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary-traditional",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "レキ",
+        "word": "西暦",
+        "reading": "せいれき",
+        "meaningKr": "서기"
+      }
+    ]
   },
   {
     "id": "N1-738",
@@ -27645,7 +29265,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary-traditional",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "セツ",
+        "word": "摂取",
+        "reading": "せっしゅ",
+        "meaningKr": "섭취"
+      },
+      {
+        "on": "ショウ",
+        "word": "摂政",
+        "reading": "せっしょう",
+        "meaningKr": "섭정"
+      }
+    ]
   },
   {
     "id": "N1-749",
@@ -27773,7 +29407,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "スウ",
+        "word": "中枢",
+        "reading": "ちゅうすう",
+        "meaningKr": "중추"
+      }
+    ]
   },
   {
     "id": "N1-757",
@@ -27869,7 +29511,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ユウ",
+        "word": "猶予",
+        "reading": "ゆうよ",
+        "meaningKr": "유예"
+      }
+    ]
   },
   {
     "id": "N1-763",
@@ -27885,7 +29535,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "カイ",
+        "word": "塊根",
+        "reading": "かいこん",
+        "meaningKr": "덩이뿌리"
+      }
+    ]
   },
   {
     "id": "N1-764",
@@ -28221,7 +29879,15 @@
     "exampleRefKanji": "赤(붉을 적)",
     "exampleRefNum": "N4 133번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "ボッ",
+        "word": "坊っちゃん",
+        "reading": "ぼっちゃん",
+        "meaningKr": "도련님"
+      }
+    ]
   },
   {
     "id": "N1-785",
@@ -28237,7 +29903,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "キョウ",
+        "word": "海峡",
+        "reading": "かいきょう",
+        "meaningKr": "해협"
+      }
+    ]
   },
   {
     "id": "N1-786",
@@ -28685,7 +30359,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ザ",
+        "word": "挫折",
+        "reading": "ざせつ",
+        "meaningKr": "좌절"
+      }
+    ]
   },
   {
     "id": "N1-814",
@@ -28861,7 +30543,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ダク",
+        "word": "濁音",
+        "reading": "だくおん",
+        "meaningKr": "탁음"
+      }
+    ]
   },
   {
     "id": "N1-825",
@@ -28893,7 +30583,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ト",
+        "word": "北斗七星",
+        "reading": "ほくとしちせい",
+        "meaningKr": "북두칠성"
+      },
+      {
+        "on": "トウ",
+        "word": "漏斗",
+        "reading": "ろうと",
+        "meaningKr": "깔때기"
+      }
+    ]
   },
   {
     "id": "N1-827",
@@ -28941,7 +30645,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ハツ",
+        "word": "衣鉢",
+        "reading": "いはつ",
+        "meaningKr": "의발(스승 계승의 상징)"
+      }
+    ]
   },
   {
     "id": "N1-830",
@@ -28973,7 +30685,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary-traditional",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "カク",
+        "word": "地殻",
+        "reading": "ちかく",
+        "meaningKr": "지각"
+      }
+    ]
   },
   {
     "id": "N1-832",
@@ -28989,7 +30709,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "コウ",
+        "word": "享受",
+        "reading": "きょうじゅ",
+        "meaningKr": "향수(누림)"
+      }
+    ]
   },
   {
     "id": "N1-833",
@@ -29021,7 +30749,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "サ",
+        "word": "沙汰",
+        "reading": "さた",
+        "meaningKr": "소식/처분"
+      },
+      {
+        "on": "シャ",
+        "word": "沙羅",
+        "reading": "しゃら",
+        "meaningKr": "사라수"
+      }
+    ]
   },
   {
     "id": "N1-835",
@@ -29069,7 +30811,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary-traditional",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "セン",
+        "word": "禅宗",
+        "reading": "ぜんしゅう",
+        "meaningKr": "선종"
+      }
+    ]
   },
   {
     "id": "N1-838",
@@ -29165,7 +30915,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ツイ",
+        "word": "脊椎",
+        "reading": "せきつい",
+        "meaningKr": "척추"
+      }
+    ]
   },
   {
     "id": "N1-844",
@@ -29293,7 +31051,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ギョウ",
+        "word": "暁天",
+        "reading": "ぎょうてん",
+        "meaningKr": "새벽하늘"
+      }
+    ]
   },
   {
     "id": "N1-852",
@@ -29389,7 +31155,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ケン",
+        "word": "拳法",
+        "reading": "けんぽう",
+        "meaningKr": "권법"
+      }
+    ]
   },
   {
     "id": "N1-858",
@@ -29437,7 +31211,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ジ",
+        "word": "侍従",
+        "reading": "じじゅう",
+        "meaningKr": "시종"
+      }
+    ]
   },
   {
     "id": "N1-861",
@@ -29453,7 +31235,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "シャク",
+        "word": "尺度",
+        "reading": "しゃくど",
+        "meaningKr": "척도"
+      }
+    ]
   },
   {
     "id": "N1-862",
@@ -29565,7 +31355,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "カン",
+        "word": "堪忍",
+        "reading": "かんにん",
+        "meaningKr": "용서/참음"
+      }
+    ]
   },
   {
     "id": "N1-869",
@@ -29805,7 +31603,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ソク",
+        "word": "捕捉",
+        "reading": "ほそく",
+        "meaningKr": "포착"
+      }
+    ]
   },
   {
     "id": "N1-884",
@@ -29933,7 +31739,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ボク",
+        "word": "親睦",
+        "reading": "しんぼく",
+        "meaningKr": "친목"
+      }
+    ]
   },
   {
     "id": "N1-892",
@@ -29981,7 +31795,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ソウ",
+        "word": "法曹",
+        "reading": "ほうそう",
+        "meaningKr": "법조계"
+      }
+    ]
   },
   {
     "id": "N1-895",
@@ -30045,7 +31867,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary-traditional",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "チュウ",
+        "word": "鋳造",
+        "reading": "ちゅうぞう",
+        "meaningKr": "주조"
+      }
+    ]
   },
   {
     "id": "N1-899",
@@ -30077,7 +31907,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "イ",
+        "word": "大尉",
+        "reading": "たいい",
+        "meaningKr": "대위"
+      }
+    ]
   },
   {
     "id": "N1-901",
@@ -30173,7 +32011,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ケイ",
+        "word": "頃日",
+        "reading": "けいじつ",
+        "meaningKr": "근래"
+      }
+    ]
   },
   {
     "id": "N1-907",
@@ -30445,7 +32291,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "キュウ",
+        "word": "脱臼",
+        "reading": "だっきゅう",
+        "meaningKr": "탈구"
+      }
+    ]
   },
   {
     "id": "N1-924",
@@ -30493,7 +32347,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "コウ",
+        "word": "気孔",
+        "reading": "きこう",
+        "meaningKr": "기공"
+      }
+    ]
   },
   {
     "id": "N1-927",
@@ -30509,7 +32371,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ロ",
+        "word": "風呂",
+        "reading": "ふろ",
+        "meaningKr": "목욕(탕)"
+      }
+    ]
   },
   {
     "id": "N1-928",
@@ -30605,7 +32475,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ガ",
+        "word": "牙城",
+        "reading": "がじょう",
+        "meaningKr": "아성"
+      }
+    ]
   },
   {
     "id": "N1-934",
@@ -30637,7 +32515,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ドウ",
+        "word": "瞳孔",
+        "reading": "どうこう",
+        "meaningKr": "동공"
+      }
+    ]
   },
   {
     "id": "N1-936",
@@ -30653,7 +32539,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ユウ",
+        "word": "湧出",
+        "reading": "ゆうしゅつ",
+        "meaningKr": "용출"
+      }
+    ]
   },
   {
     "id": "N1-937",
@@ -30749,7 +32643,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ハン",
+        "word": "煩雑",
+        "reading": "はんざつ",
+        "meaningKr": "번잡"
+      },
+      {
+        "on": "ボン",
+        "word": "煩悩",
+        "reading": "ぼんのう",
+        "meaningKr": "번뇌"
+      }
+    ]
   },
   {
     "id": "N1-943",
@@ -30765,7 +32673,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "チン",
+        "word": "枕頭",
+        "reading": "ちんとう",
+        "meaningKr": "베갯머리"
+      }
+    ]
   },
   {
     "id": "N1-944",
@@ -30861,7 +32777,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "グ",
+        "word": "危惧",
+        "reading": "きぐ",
+        "meaningKr": "우려"
+      }
+    ]
   },
   {
     "id": "N1-950",
@@ -30989,7 +32913,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ヒツ",
+        "word": "分泌",
+        "reading": "ぶんぴつ",
+        "meaningKr": "분비"
+      },
+      {
+        "on": "ヒ",
+        "word": "泌尿器",
+        "reading": "ひにょうき",
+        "meaningKr": "비뇨기"
+      }
+    ]
   },
   {
     "id": "N1-958",
@@ -31021,7 +32959,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "セン",
+        "word": "配膳",
+        "reading": "はいぜん",
+        "meaningKr": "상차림"
+      }
+    ]
   },
   {
     "id": "N1-960",
@@ -31085,7 +33031,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "チャク",
+        "word": "嫡子",
+        "reading": "ちゃくし",
+        "meaningKr": "적자"
+      }
+    ]
   },
   {
     "id": "N1-964",
@@ -31101,7 +33055,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ジュ",
+        "word": "呪文",
+        "reading": "じゅもん",
+        "meaningKr": "주문"
+      },
+      {
+        "on": "シュ",
+        "word": "呪縛",
+        "reading": "しゅばく",
+        "meaningKr": "주박(속박)"
+      }
+    ]
   },
   {
     "id": "N1-965",
@@ -31117,7 +33085,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ザン",
+        "word": "斬新",
+        "reading": "ざんしん",
+        "meaningKr": "참신"
+      }
+    ]
   },
   {
     "id": "N1-966",
@@ -31133,7 +33109,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "オン",
+        "word": "怨念",
+        "reading": "おんねん",
+        "meaningKr": "원념"
+      }
+    ]
   },
   {
     "id": "N1-967",
@@ -31197,7 +33181,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "シュ",
+        "word": "腫瘍",
+        "reading": "しゅよう",
+        "meaningKr": "종양"
+      }
+    ]
   },
   {
     "id": "N1-971",
@@ -31245,7 +33237,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ヘイ",
+        "word": "画餅",
+        "reading": "がべい",
+        "meaningKr": "그림의 떡"
+      }
+    ]
   },
   {
     "id": "N1-974",
@@ -31405,7 +33405,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ビ",
+        "word": "眉目",
+        "reading": "びもく",
+        "meaningKr": "용모"
+      }
+    ]
   },
   {
     "id": "N1-984",
@@ -31437,7 +33445,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "タイ",
+        "word": "堆積",
+        "reading": "たいせき",
+        "meaningKr": "퇴적"
+      }
+    ]
   },
   {
     "id": "N1-986",
@@ -31533,7 +33549,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ミツ",
+        "word": "蜂蜜",
+        "reading": "はちみつ",
+        "meaningKr": "꿀"
+      }
+    ]
   },
   {
     "id": "N1-992",
@@ -31741,7 +33765,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "シツ",
+        "word": "叱責",
+        "reading": "しっせき",
+        "meaningKr": "질책"
+      }
+    ]
   },
   {
     "id": "N1-1005",
@@ -31773,7 +33805,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ショウ",
+        "word": "憧憬",
+        "reading": "しょうけい",
+        "meaningKr": "동경"
+      },
+      {
+        "on": "ドウ",
+        "word": "憧憬",
+        "reading": "どうけい",
+        "meaningKr": "동경"
+      }
+    ]
   },
   {
     "id": "N1-1007",
@@ -31821,7 +33867,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "モウ",
+        "word": "妄想",
+        "reading": "もうそう",
+        "meaningKr": "망상"
+      },
+      {
+        "on": "ボウ",
+        "word": "妄言",
+        "reading": "ぼうげん",
+        "meaningKr": "망언"
+      }
+    ]
   },
   {
     "id": "N1-1010",
@@ -31853,7 +33913,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "サン",
+        "word": "養蚕",
+        "reading": "ようさん",
+        "meaningKr": "양잠"
+      }
+    ]
   },
   {
     "id": "N1-1012",
@@ -31885,7 +33953,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ジ",
+        "word": "餌食",
+        "reading": "えじき",
+        "meaningKr": "먹잇감"
+      }
+    ]
   },
   {
     "id": "N1-1014",
@@ -31981,7 +34057,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "セイ",
+        "word": "凄惨",
+        "reading": "せいさん",
+        "meaningKr": "처참"
+      }
+    ]
   },
   {
     "id": "N1-1020",
@@ -32077,7 +34161,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "メン",
+        "word": "麺類",
+        "reading": "めんるい",
+        "meaningKr": "면류"
+      }
+    ]
   },
   {
     "id": "N1-1026",
@@ -32189,7 +34281,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "メイ",
+        "word": "冥福",
+        "reading": "めいふく",
+        "meaningKr": "명복"
+      },
+      {
+        "on": "ミョウ",
+        "word": "冥利",
+        "reading": "みょうり",
+        "meaningKr": "명리(은혜)"
+      }
+    ]
   },
   {
     "id": "N1-1033",
@@ -32205,7 +34311,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "イチ",
+        "word": "壱万円",
+        "reading": "いちまんえん",
+        "meaningKr": "1만엔(갖은자)"
+      }
+    ]
   },
   {
     "id": "N1-1034",
@@ -32221,7 +34335,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ル",
+        "word": "瑠璃",
+        "reading": "るり",
+        "meaningKr": "유리(보석)"
+      }
+    ]
   },
   {
     "id": "N1-1035",
@@ -32301,7 +34423,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "シュウ",
+        "word": "一蹴",
+        "reading": "いっしゅう",
+        "meaningKr": "일축"
+      }
+    ]
   },
   {
     "id": "N1-1040",
@@ -32333,7 +34463,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ハク",
+        "word": "剥製",
+        "reading": "はくせい",
+        "meaningKr": "박제"
+      }
+    ]
   },
   {
     "id": "N1-1042",
@@ -32349,7 +34487,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ガイ",
+        "word": "頭蓋骨",
+        "reading": "ずがいこつ",
+        "meaningKr": "두개골"
+      }
+    ]
   },
   {
     "id": "N1-1043",
@@ -32445,7 +34591,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ショク",
+        "word": "払拭",
+        "reading": "ふっしょく",
+        "meaningKr": "불식"
+      }
+    ]
   },
   {
     "id": "N1-1049",
@@ -32477,7 +34631,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "チョウ",
+        "word": "貼付",
+        "reading": "ちょうふ",
+        "meaningKr": "첩부(붙임)"
+      }
+    ]
   },
   {
     "id": "N1-1051",
@@ -32509,7 +34671,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "テイ",
+        "word": "諦観",
+        "reading": "ていかん",
+        "meaningKr": "체관(체념)"
+      }
+    ]
   },
   {
     "id": "N1-1053",
@@ -32685,7 +34855,15 @@
     "exampleRefKanji": "親(어버이 친)",
     "exampleRefNum": "N4 106번",
     "kunKrSource": "curated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "セキ",
+        "word": "親戚",
+        "reading": "しんせき",
+        "meaningKr": "친척"
+      }
+    ]
   },
   {
     "id": "N1-1064",
@@ -32733,7 +34911,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ギ",
+        "word": "歌舞伎",
+        "reading": "かぶき",
+        "meaningKr": "가부키"
+      }
+    ]
   },
   {
     "id": "N1-1067",
@@ -32749,7 +34935,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "リョ",
+        "word": "伴侶",
+        "reading": "はんりょ",
+        "meaningKr": "반려"
+      }
+    ]
   },
   {
     "id": "N1-1068",
@@ -32781,7 +34975,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "キン",
+        "word": "僅少",
+        "reading": "きんしょう",
+        "meaningKr": "근소함"
+      }
+    ]
   },
   {
     "id": "N1-1070",
@@ -32813,7 +35015,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "セツ",
+        "word": "刹那",
+        "reading": "せつな",
+        "meaningKr": "찰나"
+      },
+      {
+        "on": "サツ",
+        "word": "古刹",
+        "reading": "こさつ",
+        "meaningKr": "고찰(오래된 절)"
+      }
+    ]
   },
   {
     "id": "N1-1072",
@@ -32829,7 +35045,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ボツ",
+        "word": "勃発",
+        "reading": "ぼっぱつ",
+        "meaningKr": "발발"
+      }
+    ]
   },
   {
     "id": "N1-1073",
@@ -32845,7 +35069,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "コウ",
+        "word": "勾配",
+        "reading": "こうばい",
+        "meaningKr": "경사"
+      }
+    ]
   },
   {
     "id": "N1-1074",
@@ -32877,7 +35109,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "イン",
+        "word": "咽喉",
+        "reading": "いんこう",
+        "meaningKr": "인후"
+      }
+    ]
   },
   {
     "id": "N1-1076",
@@ -32893,7 +35133,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ダ",
+        "word": "唾液",
+        "reading": "だえき",
+        "meaningKr": "타액"
+      }
+    ]
   },
   {
     "id": "N1-1077",
@@ -32925,7 +35173,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "チョウ",
+        "word": "嘲笑",
+        "reading": "ちょうしょう",
+        "meaningKr": "조소"
+      }
+    ]
   },
   {
     "id": "N1-1079",
@@ -32957,7 +35213,21 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ソク",
+        "word": "梗塞",
+        "reading": "こうそく",
+        "meaningKr": "경색"
+      },
+      {
+        "on": "サイ",
+        "word": "要塞",
+        "reading": "ようさい",
+        "meaningKr": "요새"
+      }
+    ]
   },
   {
     "id": "N1-1081",
@@ -32973,7 +35243,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "curated"
+    "exampleKrSource": "curated",
+    "onReadingOverride": [
+      {
+        "on": "テン",
+        "word": "補塡",
+        "reading": "ほてん",
+        "meaningKr": "보전(메움)"
+      }
+    ]
   },
   {
     "id": "N1-1082",
@@ -33005,7 +35283,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ト",
+        "word": "嫉妬",
+        "reading": "しっと",
+        "meaningKr": "질투"
+      }
+    ]
   },
   {
     "id": "N1-1084",
@@ -33037,7 +35323,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ガイ",
+        "word": "断崖",
+        "reading": "だんがい",
+        "meaningKr": "단애(절벽)"
+      }
+    ]
   },
   {
     "id": "N1-1086",
@@ -33053,7 +35347,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "キン",
+        "word": "布巾",
+        "reading": "ふきん",
+        "meaningKr": "행주"
+      }
+    ]
   },
   {
     "id": "N1-1087",
@@ -33069,7 +35371,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ロウ",
+        "word": "愚弄",
+        "reading": "ぐろう",
+        "meaningKr": "우롱"
+      }
+    ]
   },
   {
     "id": "N1-1088",
@@ -33085,7 +35395,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary-traditional",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ニ",
+        "word": "弐万円",
+        "reading": "にまんえん",
+        "meaningKr": "2만엔(갖은자)"
+      }
+    ]
   },
   {
     "id": "N1-1089",
@@ -33149,7 +35467,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ラ",
+        "word": "拉致",
+        "reading": "らち",
+        "meaningKr": "납치"
+      }
+    ]
   },
   {
     "id": "N1-1093",
@@ -33181,7 +35507,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated-uncertain",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "チョク",
+        "word": "進捗",
+        "reading": "しんちょく",
+        "meaningKr": "진척"
+      }
+    ]
   },
   {
     "id": "N1-1095",
@@ -33197,7 +35531,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ネン",
+        "word": "捻挫",
+        "reading": "ねんざ",
+        "meaningKr": "염좌(삠)"
+      }
+    ]
   },
   {
     "id": "N1-1096",
@@ -33229,7 +35571,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "タン",
+        "word": "元旦",
+        "reading": "がんたん",
+        "meaningKr": "설날 아침"
+      }
+    ]
   },
   {
     "id": "N1-1098",
@@ -33245,7 +35595,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "マイ",
+        "word": "曖昧",
+        "reading": "あいまい",
+        "meaningKr": "애매함"
+      }
+    ]
   },
   {
     "id": "N1-1099",
@@ -33325,7 +35683,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "コウ",
+        "word": "梗塞",
+        "reading": "こうそく",
+        "meaningKr": "경색"
+      }
+    ]
   },
   {
     "id": "N1-1104",
@@ -33389,7 +35755,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "タ",
+        "word": "淘汰",
+        "reading": "とうた",
+        "meaningKr": "도태"
+      }
+    ]
   },
   {
     "id": "N1-1108",
@@ -33405,7 +35779,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ヨウ",
+        "word": "肥沃",
+        "reading": "ひよく",
+        "meaningKr": "비옥"
+      }
+    ]
   },
   {
     "id": "N1-1109",
@@ -33437,7 +35819,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "デキ",
+        "word": "溺愛",
+        "reading": "できあい",
+        "meaningKr": "익애(너무 사랑함)"
+      }
+    ]
   },
   {
     "id": "N1-1111",
@@ -33453,7 +35843,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "カイ",
+        "word": "潰瘍",
+        "reading": "かいよう",
+        "meaningKr": "궤양"
+      }
+    ]
   },
   {
     "id": "N1-1112",
@@ -33549,7 +35947,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ソウ",
+        "word": "痩身",
+        "reading": "そうしん",
+        "meaningKr": "마른 몸"
+      }
+    ]
   },
   {
     "id": "N1-1118",
@@ -33597,7 +36003,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "クツ",
+        "word": "洞窟",
+        "reading": "どうくつ",
+        "meaningKr": "동굴"
+      }
+    ]
   },
   {
     "id": "N1-1121",
@@ -33613,7 +36027,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "コ",
+        "word": "箇所",
+        "reading": "かしょ",
+        "meaningKr": "개소(부분)"
+      }
+    ]
   },
   {
     "id": "N1-1122",
@@ -33645,7 +36067,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ロウ",
+        "word": "籠城",
+        "reading": "ろうじょう",
+        "meaningKr": "농성"
+      }
+    ]
   },
   {
     "id": "N1-1124",
@@ -33693,7 +36123,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "generated",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "セン",
+        "word": "羨望",
+        "reading": "せんぼう",
+        "meaningKr": "선망"
+      }
+    ]
   },
   {
     "id": "N1-1127",
@@ -33709,7 +36147,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "モウ",
+        "word": "消耗",
+        "reading": "しょうもう",
+        "meaningKr": "소모"
+      }
+    ]
   },
   {
     "id": "N1-1128",
@@ -33821,7 +36267,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ヘイ",
+        "word": "隠蔽",
+        "reading": "いんぺい",
+        "meaningKr": "은폐"
+      }
+    ]
   },
   {
     "id": "N1-1135",
@@ -33853,7 +36307,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ケイ",
+        "word": "参詣",
+        "reading": "さんけい",
+        "meaningKr": "참배"
+      }
+    ]
   },
   {
     "id": "N1-1137",
@@ -33917,7 +36379,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ボウ",
+        "word": "美貌",
+        "reading": "びぼう",
+        "meaningKr": "미모"
+      }
+    ]
   },
   {
     "id": "N1-1141",
@@ -33933,7 +36403,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ドン",
+        "word": "貪欲",
+        "reading": "どんよく",
+        "meaningKr": "탐욕"
+      }
+    ]
   },
   {
     "id": "N1-1142",
@@ -33965,7 +36443,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "フ",
+        "word": "賦課",
+        "reading": "ふか",
+        "meaningKr": "부과"
+      }
+    ]
   },
   {
     "id": "N1-1144",
@@ -33981,7 +36467,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ソウ",
+        "word": "失踪",
+        "reading": "しっそう",
+        "meaningKr": "실종"
+      }
+    ]
   },
   {
     "id": "N1-1145",
@@ -34029,7 +36523,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ソ",
+        "word": "遡及",
+        "reading": "そきゅう",
+        "meaningKr": "소급"
+      }
+    ]
   },
   {
     "id": "N1-1148",
@@ -34061,7 +36563,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "チュウ",
+        "word": "焼酎",
+        "reading": "しょうちゅう",
+        "meaningKr": "소주"
+      }
+    ]
   },
   {
     "id": "N1-1150",
@@ -34125,7 +36635,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ゲキ",
+        "word": "間隙",
+        "reading": "かんげき",
+        "meaningKr": "간극"
+      }
+    ]
   },
   {
     "id": "N1-1154",
@@ -34141,7 +36659,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "トン",
+        "word": "頓知",
+        "reading": "とんち",
+        "meaningKr": "기지(재치)"
+      }
+    ]
   },
   {
     "id": "N1-1155",
@@ -34189,7 +36715,15 @@
     "exampleRefKanji": null,
     "exampleRefNum": null,
     "kunKrSource": "wiktionary",
-    "exampleKrSource": "generated"
+    "exampleKrSource": "generated",
+    "onReadingOverride": [
+      {
+        "on": "ガイ",
+        "word": "死骸",
+        "reading": "しがい",
+        "meaningKr": "사체"
+      }
+    ]
   },
   {
     "id": "N1-1158",
