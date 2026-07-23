@@ -62,8 +62,9 @@ export function getDomainAccuracies(): DomainAccuracy[] {
     vocab: { total: 0, correct: 0 },
     grammar: { total: 0, correct: 0 },
     englishVocab: { total: 0, correct: 0 },
-    // 가나는 도메인별 정답률 집계 대상이 아님(아래 출력 리스트에 미포함) — 타입 충족용
+    // 가나·활용은 도메인별 정답률 집계 대상이 아님(아래 출력 리스트에 미포함) — 타입 충족용
     kana: { total: 0, correct: 0 },
+    conjugation: { total: 0, correct: 0 },
   }
   for (const e of getQuizHistory()) {
     totals.kanji.total += e.total

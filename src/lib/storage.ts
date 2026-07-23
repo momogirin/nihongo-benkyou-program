@@ -193,7 +193,7 @@ const DEFAULT_STUDY_BATCH_SIZE = 10
 // SRS(간격반복 복습, 라이트너 방식): 퀴즈에서 맞히면 박스가 하나 올라가고 다음
 // 복습일이 더 멀어지고, 틀리면 박스 0으로 돌아가 바로 다음날 다시 나옴.
 // 학습(flashcard)이 아니라 퀴즈로 실제 recall을 테스트했을 때만 갱신됨.
-export type SrsDomain = 'kanji' | 'vocab' | 'grammar' | 'englishVocab' | 'kana'
+export type SrsDomain = 'kanji' | 'vocab' | 'grammar' | 'englishVocab' | 'kana' | 'conjugation'
 
 export interface SrsEntry {
   box: number
@@ -208,6 +208,7 @@ const SRS_STATE_KEY: Record<SrsDomain, string> = {
   englishVocab: 'kanjiApp.srsEnglishVocab',
   // 가나 SRS는 로컬 저장만(현재 백업 페이로드에는 미포함 — 버전 호환 유지).
   kana: 'kanjiApp.srsKana',
+  conjugation: 'kanjiApp.srsConjugation',
 }
 
 const SRS_MAX_BOX = 4
@@ -935,7 +936,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19
+  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -976,6 +977,8 @@ export interface BackupPayload {
   vocabWritingInProgressQuiz?: VocabWritingInProgressQuiz | null
   // added in version 19 (자타동사 구분 퀴즈) — optional so older backup files still validate
   vocabTransitivityInProgressQuiz?: VocabTransitivityInProgressQuiz | null
+  // added in version 20 (활용 드릴 SRS 연동) — optional so older backup files still validate
+  srsConjugation?: Record<string, SrsEntry>
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -984,7 +987,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 19,
+    version: 20,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -1015,6 +1018,7 @@ export function buildBackupPayload(): BackupPayload {
     vocabReadingInProgressQuiz: getVocabReadingInProgressQuiz(),
     vocabWritingInProgressQuiz: getVocabWritingInProgressQuiz(),
     vocabTransitivityInProgressQuiz: getVocabTransitivityInProgressQuiz(),
+    srsConjugation: getAllSrsState('conjugation'),
   }
 }
 
@@ -1053,4 +1057,5 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.vocabWritingInProgressQuiz) importVocabWritingInProgressQuiz(payload.vocabWritingInProgressQuiz)
   if (payload.vocabTransitivityInProgressQuiz)
     importVocabTransitivityInProgressQuiz(payload.vocabTransitivityInProgressQuiz)
+  if (payload.srsConjugation) importSrsState('conjugation', payload.srsConjugation)
 }

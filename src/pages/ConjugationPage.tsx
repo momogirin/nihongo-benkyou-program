@@ -8,9 +8,11 @@ import {
 } from '../lib/conjugation'
 import { vocabConjugationEntries } from '../lib/vocabConjugation'
 import type { KanjiLevel } from '../data/kanji'
+import { getDueSrsIds, recordSrsReview } from '../lib/storage'
 import './StudyPage.css'
 import './VocabPage.css'
 import './KanjiPage.css'
+import './KanaPage.css'
 import './ConjugationPage.css'
 
 type SubTab = 'study' | 'quiz'
@@ -50,6 +52,11 @@ const SOURCES: { id: Source; label: string }[] = [
 
 function baseList(source: Source): ConjugationEntry[] {
   return source === 'curated' ? conjugationList : vocabConjugationEntries(source)
+}
+
+// SRS 복습 배너용 — 출처(엄선/급수) 구분 없이 전체 활용 드릴 항목을 한 번에 훑는다.
+function allEntries(): ConjugationEntry[] {
+  return SOURCES.flatMap((s) => baseList(s.id))
 }
 
 function inScope(entry: ConjugationEntry, scope: Scope): boolean {
@@ -287,10 +294,22 @@ function ConjugationQuiz() {
     setPhase('running')
   }
 
+  // 복습: SRS가 지금 복습하라고 지목한 항목(전체 출처 통틀어, 이전에 퀴즈로
+  // 한 번이라도 틀렸거나 복습주기가 된 것)만 뽑아 바로 퀴즈로 — KanaQuiz의
+  // "복습할 가나 N자" 배너와 동일 패턴.
+  function startReview(dueEntries: ConjugationEntry[]) {
+    setQuestions(shuffle(dueEntries).map(buildQuestion))
+    setIndex(0)
+    setFeedback(null)
+    setAnswers([])
+    setPhase('running')
+  }
+
   function submitAnswer(choice: ConjugatedForm) {
     if (feedback) return
     const question = questions[index]
     const isCorrect = choice.key === question.target.key
+    recordSrsReview('conjugation', question.entry.id, isCorrect)
     setFeedback({ selectedKey: choice.key, isCorrect })
     setAnswers((prev) => [...prev, { entry: question.entry, target: question.target, isCorrect }])
     if (isCorrect) advanceTimer.current = window.setTimeout(goNext, 550)
@@ -428,9 +447,17 @@ function ConjugationQuiz() {
     )
   }
 
+  const dueSet = new Set(getDueSrsIds('conjugation', allEntries().map((e) => e.id)))
+  const dueEntries = allEntries().filter((e) => dueSet.has(e.id))
+
   return (
     <div className="page study-setup">
       <h1>활용 퀴즈</h1>
+      {dueEntries.length > 0 && (
+        <button type="button" className="kana-review-banner" onClick={() => startReview(dueEntries)}>
+          복습할 활용어 <strong>{dueEntries.length}개</strong> — 지금 복습하기
+        </button>
+      )}
       <div className="conj-quiz-field">
         <span className="conj-quiz-field-label">단어</span>
         <div className="study-level-picker">
