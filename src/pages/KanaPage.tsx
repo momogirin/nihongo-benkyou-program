@@ -1,7 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { kanaList, type Kana } from '../data/kana'
 import { kanaPairList } from '../data/kanaPairs'
-import { addKanaWrongNotes, getDueSrsIds, recordSrsReview, removeKanaWrongNote } from '../lib/storage'
+import {
+  addKanaQuizHistoryEntry,
+  addKanaWrongNotes,
+  getDueSrsIds,
+  recordSrsReview,
+  removeKanaWrongNote,
+} from '../lib/storage'
 import './StudyPage.css'
 import './VocabPage.css'
 import './KanjiPage.css'
@@ -422,6 +428,7 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
     { answerKey: string; resultMain: string; resultSub?: string; isCorrect: boolean }[]
   >([])
   const advanceTimer = useRef<number | null>(null)
+  const quizStartRef = useRef(0)
 
   const pool = useMemo(() => kanaList.filter((k) => inGroup(k, group)), [group])
   const setupCount = quizType === 'pairs' ? kanaPairList.length : pool.length
@@ -458,6 +465,7 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
     setIndex(0)
     setFeedback(null)
     setAnswers([])
+    quizStartRef.current = Date.now()
     setPhase('running')
   }
 
@@ -519,6 +527,21 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
     const wrongIds = answers.filter((a) => !a.isCorrect).map((a) => a.answerKey)
     addKanaWrongNotes(wrongIds, `가나 퀴즈 · ${QUIZ_TYPE_LABELS[quizType]}`)
     answers.filter((a) => a.isCorrect).forEach((a) => removeKanaWrongNote(a.answerKey))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase])
+
+  // 주간 통계·최근 기록에 가나 퀴즈도 잡히도록 회차 기록 — 두 유형(로마자/표기 구분)
+  // 모두 대상(오답노트/SRS와 달리 pairs도 실제 학습이므로 통계엔 포함)
+  useEffect(() => {
+    if (phase !== 'result' || answers.length === 0) return
+    addKanaQuizHistoryEntry({
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      mode: QUIZ_TYPE_LABELS[quizType],
+      total: answers.length,
+      correct: answers.filter((a) => a.isCorrect).length,
+      elapsedMs: Date.now() - quizStartRef.current,
+      finishedAt: new Date().toISOString(),
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 

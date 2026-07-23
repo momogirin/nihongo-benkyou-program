@@ -3,6 +3,7 @@ import {
   getConjugationQuizHistory,
   getEnglishVocabQuizHistory,
   getGrammarQuizHistory,
+  getKanaQuizHistory,
   getMockExamHistory,
   getQuizHistory,
   getVocabQuizHistory,
@@ -29,6 +30,7 @@ export function getWeeklyStats(): WeeklyStats {
     ...getEnglishVocabQuizHistory(),
     ...getMockExamHistory(),
     ...getConjugationQuizHistory(),
+    ...getKanaQuizHistory(),
   ]
   const recent = sessions.filter((s) => new Date(s.finishedAt).getTime() >= cutoff)
   return {

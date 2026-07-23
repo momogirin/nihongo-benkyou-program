@@ -15,6 +15,7 @@ import type { EnglishLevel } from '../data/englishVocab'
 import type {
   AnsweredQuestion,
   ConjugationQuizHistoryEntry,
+  KanaQuizHistoryEntry,
   MockExamHistoryEntry,
   QuestionType,
   QuizConfig,
@@ -200,6 +201,7 @@ const VOCAB_QUIZ_HISTORY_KEY = 'kanjiApp.vocabQuizHistory'
 const GRAMMAR_QUIZ_HISTORY_KEY = 'kanjiApp.grammarQuizHistory'
 const ENGLISH_VOCAB_QUIZ_HISTORY_KEY = 'kanjiApp.englishVocabQuizHistory'
 const CONJUGATION_QUIZ_HISTORY_KEY = 'kanjiApp.conjugationQuizHistory'
+const KANA_QUIZ_HISTORY_KEY = 'kanjiApp.kanaQuizHistory'
 const MOCK_EXAM_HISTORY_KEY = 'kanjiApp.mockExamHistory'
 const QUIZ_HISTORY_LIMIT = 20
 const IN_PROGRESS_QUIZ_KEY = 'kanjiApp.inProgressQuiz'
@@ -377,6 +379,28 @@ export function importConjugationQuizHistory(entries: ConjugationQuizHistoryEntr
   for (const entry of entries) byId.set(entry.id, entry)
   const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
   localStorage.setItem(CONJUGATION_QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
+}
+
+// 같은 다시, 가나(kana) 퀴즈
+export function getKanaQuizHistory(): KanaQuizHistoryEntry[] {
+  try {
+    const raw = localStorage.getItem(KANA_QUIZ_HISTORY_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch {
+    return []
+  }
+}
+
+export function addKanaQuizHistoryEntry(entry: KanaQuizHistoryEntry) {
+  const history = [entry, ...getKanaQuizHistory()].slice(0, QUIZ_HISTORY_LIMIT)
+  localStorage.setItem(KANA_QUIZ_HISTORY_KEY, JSON.stringify(history))
+}
+
+export function importKanaQuizHistory(entries: KanaQuizHistoryEntry[]) {
+  const byId = new Map(getKanaQuizHistory().map((entry) => [entry.id, entry]))
+  for (const entry of entries) byId.set(entry.id, entry)
+  const merged = [...byId.values()].sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
+  localStorage.setItem(KANA_QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
 }
 
 // 모의고사(한자/단어/문법 통합) 기록 — 위 세 히스토리와 같은 패턴
@@ -1083,7 +1107,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25
+  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -1136,6 +1160,8 @@ export interface BackupPayload {
   vocabSynonymInProgressQuiz?: VocabSynonymInProgressQuiz | null
   // added in version 25 (활용 퀴즈 기록 — 주간 통계/최근 기록 편입) — optional so older backup files still validate
   conjugationQuizHistory?: ConjugationQuizHistoryEntry[]
+  // added in version 26 (가나 퀴즈 기록 — 주간 통계/최근 기록 편입) — optional so older backup files still validate
+  kanaQuizHistory?: KanaQuizHistoryEntry[]
 }
 
 export function isBackupPayload(value: unknown): value is BackupPayload {
@@ -1144,7 +1170,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 25,
+    version: 26,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -1181,6 +1207,7 @@ export function buildBackupPayload(): BackupPayload {
     conjugationWrongNotes: getConjugationWrongNotes(),
     vocabSynonymInProgressQuiz: getVocabSynonymInProgressQuiz(),
     conjugationQuizHistory: getConjugationQuizHistory(),
+    kanaQuizHistory: getKanaQuizHistory(),
   }
 }
 
@@ -1225,4 +1252,5 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.conjugationWrongNotes) importConjugationWrongNotes(payload.conjugationWrongNotes)
   if (payload.vocabSynonymInProgressQuiz) importVocabSynonymInProgressQuiz(payload.vocabSynonymInProgressQuiz)
   if (payload.conjugationQuizHistory) importConjugationQuizHistory(payload.conjugationQuizHistory)
+  if (payload.kanaQuizHistory) importKanaQuizHistory(payload.kanaQuizHistory)
 }

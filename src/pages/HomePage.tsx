@@ -10,6 +10,7 @@ import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import {
   getConjugationQuizHistory,
   getConjugationWrongNotes,
+  getKanaQuizHistory,
   getDueSrsIds,
   getEnglishVocabInProgressQuiz,
   getEnglishVocabQuizHistory,
@@ -111,6 +112,7 @@ export default function HomePage({
   const mockExamHistory = useMemo(() => getMockExamHistory(), [])
   const englishVocabHistory = useMemo(() => getEnglishVocabQuizHistory(), [])
   const conjugationHistory = useMemo(() => getConjugationQuizHistory(), [])
+  const kanaHistory = useMemo(() => getKanaQuizHistory(), [])
 
   // merge all three domains' quiz history into one chronological feed —
   // vocab/grammar entries don't carry a replayable config like kanji's, so
@@ -164,11 +166,27 @@ export default function HomePage({
       label: `활용 ${e.source} · ${e.mode} · ${e.total}문항`,
       onClick: onGoToConjugation,
     }))
-    return [...kanjiItems, ...vocabItems, ...grammarItems, ...mockExamItems, ...englishVocabItems, ...conjugationItems]
+    const kanaItems = kanaHistory.map((e) => ({
+      id: e.id,
+      finishedAt: e.finishedAt,
+      correct: e.correct,
+      total: e.total,
+      label: `가나 ${e.mode} · ${e.total}문항`,
+      onClick: onGoToKana,
+    }))
+    return [
+      ...kanjiItems,
+      ...vocabItems,
+      ...grammarItems,
+      ...mockExamItems,
+      ...englishVocabItems,
+      ...conjugationItems,
+      ...kanaItems,
+    ]
       .sort((a, b) => b.finishedAt.localeCompare(a.finishedAt))
       .slice(0, 20)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [history, vocabHistory, grammarHistory, mockExamHistory, englishVocabHistory, conjugationHistory])
+  }, [history, vocabHistory, grammarHistory, mockExamHistory, englishVocabHistory, conjugationHistory, kanaHistory])
 
   const inProgress = useMemo(() => getInProgressQuiz(), [])
   const vocabInProgress = useMemo(() => getVocabInProgressQuiz(), [])
