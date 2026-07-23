@@ -11,15 +11,18 @@ import {
   generateVocabReadingQuestions,
   generateVocabWritingQuestions,
   generateVocabTransitivityQuestions,
+  generateVocabSynonymQuestions,
   vocabLevelPool,
   vocabBlankLevelPool,
   vocabReadingLevelPool,
   vocabWritingLevelPool,
   vocabTransitivityLevelPool,
+  vocabSynonymLevelPool,
   type VocabQuizQuestion,
   type VocabBlankQuestion,
   type VocabWritingQuestion,
   type VocabTransitivityQuestion,
+  type VocabSynonymQuestion,
 } from '../lib/vocabQuizGenerator'
 import {
   addVocabQuizHistoryEntry,
@@ -29,11 +32,13 @@ import {
   clearVocabReadingInProgressQuiz,
   clearVocabWritingInProgressQuiz,
   clearVocabTransitivityInProgressQuiz,
+  clearVocabSynonymInProgressQuiz,
   getVocabInProgressQuiz,
   getVocabBlankInProgressQuiz,
   getVocabReadingInProgressQuiz,
   getVocabWritingInProgressQuiz,
   getVocabTransitivityInProgressQuiz,
+  getVocabSynonymInProgressQuiz,
   getVocabStudyProgress,
   recordSrsReview,
   recordSrsSelfCheck,
@@ -43,12 +48,14 @@ import {
   saveVocabReadingInProgressQuiz,
   saveVocabWritingInProgressQuiz,
   saveVocabTransitivityInProgressQuiz,
+  saveVocabSynonymInProgressQuiz,
   setVocabStudyProgress,
   type VocabInProgressQuiz,
   type VocabBlankInProgressQuiz,
   type VocabReadingInProgressQuiz,
   type VocabWritingInProgressQuiz,
   type VocabTransitivityInProgressQuiz,
+  type VocabSynonymInProgressQuiz,
 } from '../lib/storage'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
@@ -75,13 +82,16 @@ type Phase =
   | 'writingQuizResult'
   | 'transitivityQuiz'
   | 'transitivityQuizResult'
-type QuizType = 'meaning' | 'blank' | 'reading' | 'writing' | 'transitivity'
+  | 'synonymQuiz'
+  | 'synonymQuizResult'
+type QuizType = 'meaning' | 'blank' | 'reading' | 'writing' | 'transitivity' | 'synonym'
 const QUIZ_TYPE_LABELS: Record<QuizType, string> = {
   meaning: '뜻 맞히기',
   blank: '문맥 빈칸 채우기',
   reading: '읽기 입력',
   writing: '표기 고르기',
   transitivity: '자타동사 구분',
+  synonym: '유의어',
 }
 
 interface QuizAnswer {
@@ -110,6 +120,12 @@ interface WritingAnswer {
 
 interface TransitivityAnswer {
   question: VocabTransitivityQuestion
+  selectedId: string
+  isCorrect: boolean
+}
+
+interface SynonymAnswer {
+  question: VocabSynonymQuestion
   selectedId: string
   isCorrect: boolean
 }
@@ -151,6 +167,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const readingPool = useMemo(() => vocabReadingLevelPool(level), [level])
   const writingPool = useMemo(() => vocabWritingLevelPool(level), [level])
   const transitivityPool = useMemo(() => vocabTransitivityLevelPool(level), [level])
+  const synonymPool = useMemo(() => vocabSynonymLevelPool(level), [level])
   const completedCount = Math.min(getVocabStudyProgress(level), pool.length)
   const remaining = pool.length - completedCount
 
@@ -238,6 +255,18 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const lastAdvancedTransitivityIndexRef = useRef(-1)
   const [savedTransitivityQuiz, setSavedTransitivityQuiz] = useState(() => getVocabTransitivityInProgressQuiz())
 
+  // 유의어 퀴즈 — 나머지 다섯 퀴즈와 나란한 병렬 구조. 다른 유형과 달리 정답이
+  // entry(프롬프트)가 아니라 answer(유의어)라는 점만 다름
+  const [synonymQuestions, setSynonymQuestions] = useState<VocabSynonymQuestion[]>([])
+  const [synonymIndex, setSynonymIndex] = useState(0)
+  const [synonymAnswers, setSynonymAnswers] = useState<SynonymAnswer[]>([])
+  const [synonymFeedback, setSynonymFeedback] = useState<{ isCorrect: boolean; selectedId: string } | null>(null)
+  const synonymChoicesRef = useRef<HTMLDivElement>(null)
+  const synonymRestartButtonRef = useRef<HTMLButtonElement>(null)
+  const synonymStartRef = useRef(0)
+  const lastAdvancedSynonymIndexRef = useRef(-1)
+  const [savedSynonymQuiz, setSavedSynonymQuiz] = useState(() => getVocabSynonymInProgressQuiz())
+
   useEffect(() => {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'quizResult') restartButtonRef.current?.focus({ preventScroll: true })
@@ -245,6 +274,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     if (phase === 'readingQuizResult') readingRestartButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'writingQuizResult') writingRestartButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'transitivityQuizResult') transitivityRestartButtonRef.current?.focus({ preventScroll: true })
+    if (phase === 'synonymQuizResult') synonymRestartButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
 
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
@@ -405,6 +435,29 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     setPhase('transitivityQuiz')
   }
 
+  function startSynonymQuiz() {
+    clearVocabSynonymInProgressQuiz()
+    setSavedSynonymQuiz(null)
+    const count = quizCount === 'all' ? synonymPool.length : quizCount
+    setSynonymQuestions(generateVocabSynonymQuestions(level, count, quizOrder))
+    setSynonymIndex(0)
+    setSynonymAnswers([])
+    setSynonymFeedback(null)
+    lastAdvancedSynonymIndexRef.current = -1
+    synonymStartRef.current = Date.now()
+    setPhase('synonymQuiz')
+  }
+
+  function resumeSynonymQuiz(saved: VocabSynonymInProgressQuiz) {
+    setSynonymQuestions(saved.questions)
+    setSynonymIndex(saved.index)
+    setSynonymAnswers(saved.answers)
+    setSynonymFeedback(null)
+    lastAdvancedSynonymIndexRef.current = -1
+    synonymStartRef.current = new Date(saved.startedAt).getTime()
+    setPhase('synonymQuiz')
+  }
+
   useEffect(() => {
     if (!retryIds || retryIds.length === 0) return
     clearVocabInProgressQuiz()
@@ -517,6 +570,26 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   }, [phase])
 
   useEffect(() => {
+    if (phase !== 'synonymQuizResult') return
+    clearVocabSynonymInProgressQuiz()
+    setSavedSynonymQuiz(null)
+    // 오답노트/SRS 단위는 제시 단어(entry) — 다른 단어 퀴즈 유형과 공유(vocab 도메인)
+    const wrongIds = synonymAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
+    addVocabWrongNotes(wrongIds, `단어 유의어 퀴즈 · ${level}`)
+    addVocabQuizHistoryEntry({
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      level,
+      total: synonymAnswers.length,
+      correct: synonymAnswers.filter((a) => a.isCorrect).length,
+      elapsedMs: Date.now() - synonymStartRef.current,
+      finishedAt: new Date().toISOString(),
+    })
+    synonymAnswers.filter((a) => a.isCorrect).forEach((a) => removeVocabWrongNote(a.question.entry.id))
+    synonymAnswers.forEach((a) => recordSrsReview('vocab', a.question.entry.id, a.isCorrect))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase])
+
+  useEffect(() => {
     if (phase !== 'studying') return
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'ArrowRight') {
@@ -593,6 +666,15 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     }
     transitivityChoicesRef.current?.querySelector('button')?.focus()
   }, [phase, transitivityIndex])
+
+  useEffect(() => {
+    if (phase !== 'synonymQuiz') return
+    if (skipNextChoiceFocusRef.current) {
+      skipNextChoiceFocusRef.current = false
+      return
+    }
+    synonymChoicesRef.current?.querySelector('button')?.focus()
+  }, [phase, synonymIndex])
 
   function goNextQuiz(nextIndex: number) {
     if (nextIndex < quizQuestions.length) {
@@ -887,6 +969,63 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     return () => window.removeEventListener('keydown', handleKeyDown)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, transitivityIndex, transitivityFeedback])
+
+  function goNextSynonym(nextIndex: number) {
+    if (nextIndex < synonymQuestions.length) {
+      setSynonymFeedback(null)
+      setSynonymIndex(nextIndex)
+    } else {
+      setPhase('synonymQuizResult')
+    }
+  }
+
+  function handleNextSynonym() {
+    if (lastAdvancedSynonymIndexRef.current === synonymIndex) return
+    lastAdvancedSynonymIndexRef.current = synonymIndex
+    skipNextChoiceFocusRef.current = true
+    goNextSynonym(synonymIndex + 1)
+  }
+
+  function submitSynonymAnswer(selectedId: string) {
+    if (synonymFeedback) return
+    const question = synonymQuestions[synonymIndex]
+    // 정답은 유의어(answer) — entry는 프롬프트라 선택지에 없음
+    const isCorrect = selectedId === question.answer.id
+    setSynonymFeedback({ isCorrect, selectedId })
+    const updatedAnswers = [...synonymAnswers, { question, selectedId, isCorrect }]
+    setSynonymAnswers(updatedAnswers)
+
+    const nextIndex = synonymIndex + 1
+    if (nextIndex < synonymQuestions.length) {
+      saveVocabSynonymInProgressQuiz({
+        level,
+        questions: synonymQuestions,
+        index: nextIndex,
+        answers: updatedAnswers,
+        startedAt: new Date(synonymStartRef.current).toISOString(),
+      })
+    }
+
+    if (isCorrect) {
+      setTimeout(() => goNextSynonym(nextIndex), FEEDBACK_DELAY_MS)
+    }
+  }
+
+  useEffect(() => {
+    if (phase !== 'synonymQuiz') return
+    function handleKeyDown(e: KeyboardEvent) {
+      if (synonymFeedback) {
+        if (!synonymFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextSynonym()
+        return
+      }
+      const choiceIndex = Number(e.key) - 1
+      const choice = synonymQuestions[synonymIndex]?.choices[choiceIndex]
+      if (choice) submitSynonymAnswer(choice.id)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, synonymIndex, synonymFeedback])
 
   if (phase === 'browse' && browseIndex !== null) {
     const word = levelWords[browseIndex]
@@ -1634,6 +1773,108 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     )
   }
 
+  if (phase === 'synonymQuiz') {
+    const question = synonymQuestions[synonymIndex]
+    return (
+      <div className="quiz-runner">
+        <div className="quiz-topbar">
+          <button
+            type="button"
+            className="quiz-exit-button"
+            onClick={() => {
+              setPhase('setup')
+              setSavedSynonymQuiz(getVocabSynonymInProgressQuiz())
+            }}
+          >
+            나가기
+          </button>
+          <div className="quiz-progress">
+            {synonymIndex + 1} / {synonymQuestions.length}
+          </div>
+        </div>
+        <div className="vocab-quiz-prompt">
+          <span className="vocab-quiz-prompt-word">{question.entry.word}</span>
+          <span className="vocab-quiz-prompt-reading">{question.entry.reading}</span>
+          <span className="vocab-quiz-prompt-meaning">{question.entry.meaningKr} · 같은 뜻의 단어는?</span>
+        </div>
+        <div className="vocab-quiz-choices" ref={synonymChoicesRef}>
+          {question.choices.map((choice, i) => {
+            let className = 'vocab-quiz-choice'
+            if (synonymFeedback) {
+              if (choice.id === synonymFeedback.selectedId) {
+                className += synonymFeedback.isCorrect ? ' correct' : ' incorrect'
+              } else if (!synonymFeedback.isCorrect && choice.id === question.answer.id) {
+                className += ' reveal-correct'
+              }
+            }
+            return (
+              <button
+                key={choice.id}
+                type="button"
+                className={className}
+                disabled={synonymFeedback !== null}
+                onClick={() => submitSynonymAnswer(choice.id)}
+              >
+                <span className="quiz-choice-num">{i + 1}</span>
+                {choice.word}
+                <span className="quiz-choice-pos">{choice.reading}</span>
+              </button>
+            )
+          })}
+        </div>
+        {synonymFeedback && !synonymFeedback.isCorrect && <VocabHint entry={question.answer} />}
+        {synonymFeedback && !synonymFeedback.isCorrect && (
+          <button type="button" className="quiz-next-button" onClick={handleNextSynonym}>
+            다음
+          </button>
+        )}
+        <p className="shortcut-hint">숫자키(1~4)로 선택 · 오답이면 Enter로 다음 문제</p>
+      </div>
+    )
+  }
+
+  if (phase === 'synonymQuizResult') {
+    const correctCount = synonymAnswers.filter((a) => a.isCorrect).length
+    const total = synonymAnswers.length
+    const rate = total > 0 ? Math.round((correctCount / total) * 100) : 0
+
+    return (
+      <div className="result-screen">
+        <h1>단어 유의어 퀴즈 결과</h1>
+        <p className="result-summary">
+          {correctCount} / {total} 정답 ({rate}%)
+        </p>
+        <ul className="result-list">
+          {synonymAnswers.map((a, i) => {
+            const selectedChoice = a.question.choices.find((c) => c.id === a.selectedId)
+            return (
+              <li key={`${a.question.entry.id}-${i}`} className={a.isCorrect ? 'correct' : 'incorrect'}>
+                <span className="vocab-result-word">
+                  {a.question.entry.word}
+                  <span className="vocab-result-reading">{a.question.entry.reading}</span>
+                </span>
+                <span className="result-detail">
+                  <span className="result-detail-main">
+                    정답: {a.question.answer.word}
+                    {!a.isCorrect && selectedChoice && <> · 내 답: {selectedChoice.word}</>}
+                  </span>
+                </span>
+              </li>
+            )
+          })}
+        </ul>
+        <button
+          type="button"
+          ref={synonymRestartButtonRef}
+          className="restart-button"
+          onClick={() => setPhase('setup')}
+        >
+          다시 설정하기
+        </button>
+      </div>
+    )
+  }
+
   const isLevelFinished = pool.length > 0 && remaining <= 0
 
   return (
@@ -1716,6 +1957,18 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         </>
       )}
 
+      {savedSynonymQuiz && (
+        <>
+          <p className="page-placeholder">
+            진행 중이던 유의어 퀴즈가 있어요 ({savedSynonymQuiz.level} · {savedSynonymQuiz.index}/
+            {savedSynonymQuiz.questions.length}문제)
+          </p>
+          <button type="button" className="study-start-button" onClick={() => resumeSynonymQuiz(savedSynonymQuiz)}>
+            이어서 풀기
+          </button>
+        </>
+      )}
+
       <div className="study-level-picker">
         {ALL_LEVELS.map((l) => (
           <button
@@ -1749,7 +2002,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
       <div className="quiz-option-group">
         <span className="quiz-option-label">퀴즈 종류</span>
         <div className="study-level-picker">
-          {(['meaning', 'blank', 'reading', 'writing', 'transitivity'] as const).map((t) => (
+          {(['meaning', 'blank', 'reading', 'writing', 'transitivity', 'synonym'] as const).map((t) => (
             <button
               key={t}
               type="button"
@@ -1775,7 +2028,9 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
                     ? readingPool
                     : quizType === 'writing'
                       ? writingPool
-                      : transitivityPool
+                      : quizType === 'transitivity'
+                        ? transitivityPool
+                        : synonymPool
             const disabled = opt !== 'all' && opt > activePool.length
             return (
               <button
@@ -1820,6 +2075,8 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         <p className="page-placeholder">이 급수는 아직 표기 퀴즈로 낼 수 있는 단어가 없습니다.</p>
       ) : quizType === 'transitivity' && transitivityPool.length === 0 ? (
         <p className="page-placeholder">이 급수는 아직 자타동사 구분 퀴즈로 낼 수 있는 단어가 없습니다.</p>
+      ) : quizType === 'synonym' && synonymPool.length === 0 ? (
+        <p className="page-placeholder">이 급수는 아직 유의어 퀴즈로 낼 수 있는 단어가 없습니다.</p>
       ) : quizType === 'meaning' ? (
         <button type="button" className="vocab-quiz-button" onClick={startQuiz}>
           단어 퀴즈 풀기 ({quizCount === 'all' ? pool.length : Math.min(quizCount, pool.length)}문제)
@@ -1836,10 +2093,14 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         <button type="button" className="vocab-quiz-button" onClick={startWritingQuiz}>
           표기 퀴즈 풀기 ({quizCount === 'all' ? writingPool.length : Math.min(quizCount, writingPool.length)}문제)
         </button>
-      ) : (
+      ) : quizType === 'transitivity' ? (
         <button type="button" className="vocab-quiz-button" onClick={startTransitivityQuiz}>
           자타동사 구분 퀴즈 풀기 ({quizCount === 'all' ? transitivityPool.length : Math.min(quizCount, transitivityPool.length)}
           문제)
+        </button>
+      ) : (
+        <button type="button" className="vocab-quiz-button" onClick={startSynonymQuiz}>
+          유의어 퀴즈 풀기 ({quizCount === 'all' ? synonymPool.length : Math.min(quizCount, synonymPool.length)}문제)
         </button>
       )}
     </div>

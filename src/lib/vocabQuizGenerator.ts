@@ -270,3 +270,83 @@ export function generateVocabTransitivityQuestionsFromIds(ids: string[]): VocabT
     choices: shuffle([entry, ...transitivityPairMembers(entry)]),
   }))
 }
+
+// JLPT 言い換え類義(유의어 바꿔쓰기) — 제시 단어와 "같은 뜻의 다른 단어"를 고른다.
+// 유의어 관계는 신규 데이터 없이 기존 meaningKr에서 도출한다: 같은 meaningKr을
+// 가지면서 읽기·표기가 모두 다른 단어를 진짜 유의어로 본다(읽기/표기가 같으면
+// 같은 단어의 이표기라 유의어가 아님 — 明日/明日, 在る/有る 등 제외).
+//
+// ⚠️ 한계(캐비어트): meaningKr 일치 기반이라, 한국어 뜻이 동음이의인 극소수 쌍
+// (電力/全力=전력, 劇団/極端=극단)이 오탐으로 섞일 수 있다(실측 약 5%). meaningKr/
+// meaningEn 어느 쪽으로도 진짜 유의어(遠ざかる/隔たる 등)와 규칙으로 완전 분리가
+// 불가능해(영어 뜻도 say/speak처럼 달라짐) 이 노이즈는 감수한다. 대다수(95%)는
+// 실제 유의어다. 이 프로젝트의 "생성 콘텐츠는 캐비어트를 남긴다" 관례를 따른 표기.
+export interface VocabSynonymQuestion {
+  entry: VocabWord // 제시 단어(프롬프트)
+  answer: VocabWord // 정답 = entry의 유의어
+  choices: VocabWord[] // answer + 오답 3개
+}
+
+function normalizeMeaning(meaning: string): string {
+  return meaning.trim().replace(/\s+/g, '')
+}
+
+let synonymGroupsCache: Map<string, VocabWord[]> | null = null
+function synonymGroups(): Map<string, VocabWord[]> {
+  if (synonymGroupsCache) return synonymGroupsCache
+  const map = new Map<string, VocabWord[]>()
+  for (const w of vocabList) {
+    const key = normalizeMeaning(w.meaningKr)
+    const arr = map.get(key)
+    if (arr) arr.push(w)
+    else map.set(key, [w])
+  }
+  synonymGroupsCache = map
+  return map
+}
+
+// entry의 진짜 유의어들(같은 뜻 + 읽기 다름 + 표기 다름). 급수 제한은 두지 않는다
+// (N3 단어의 유의어가 N2일 수 있음 — 급수는 선택지에 노출되지 않아 문제없음).
+function synonymsOf(entry: VocabWord): VocabWord[] {
+  const group = synonymGroups().get(normalizeMeaning(entry.meaningKr)) ?? []
+  const entryWord = primaryWord(entry.word)
+  return group.filter(
+    (w) => w.id !== entry.id && w.reading !== entry.reading && primaryWord(w.word) !== entryWord,
+  )
+}
+
+export function vocabSynonymLevelPool(level: KanjiLevel): VocabWord[] {
+  return vocabLevelPool(level).filter((w) => synonymsOf(w).length > 0)
+}
+
+function buildSynonymQuestion(entry: VocabWord): VocabSynonymQuestion {
+  const answer = shuffle(synonymsOf(entry))[0]
+  const answerMeaning = normalizeMeaning(entry.meaningKr)
+  // 오답은 같은 급수에서, 뜻이 다른(정답이 2개가 되지 않도록) 단어로
+  const distractorPool = vocabLevelPool(entry.level).filter(
+    (w) => w.id !== entry.id && w.id !== answer.id && normalizeMeaning(w.meaningKr) !== answerMeaning,
+  )
+  const distractors = shuffle(distractorPool).slice(0, 3)
+  return { entry, answer, choices: shuffle([answer, ...distractors]) }
+}
+
+export function generateVocabSynonymQuestions(
+  level: KanjiLevel,
+  count: number,
+  order: 'random' | 'sequential' = 'random',
+): VocabSynonymQuestion[] {
+  const pool = vocabSynonymLevelPool(level)
+  const ordered = order === 'random' ? shuffle(pool) : pool
+  const selected = ordered.slice(0, Math.min(count, pool.length))
+  return selected.map(buildSynonymQuestion)
+}
+
+// same shape, but for a fixed set of ids (오답노트 재도전) — ids that no longer
+// have a synonym (e.g. a data update changed meaningKr) are silently skipped
+export function generateVocabSynonymQuestionsFromIds(ids: string[]): VocabSynonymQuestion[] {
+  const entries = ids
+    .map((id) => vocabList.find((w) => w.id === id))
+    .filter((w): w is VocabWord => w !== undefined)
+    .filter((w) => synonymsOf(w).length > 0)
+  return shuffle(entries).map(buildSynonymQuestion)
+}
