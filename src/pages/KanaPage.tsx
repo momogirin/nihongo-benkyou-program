@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { kanaList, type Kana } from '../data/kana'
 import { kanaPairList } from '../data/kanaPairs'
-import { getDueSrsIds, recordSrsReview } from '../lib/storage'
+import { addKanaWrongNotes, getDueSrsIds, recordSrsReview, removeKanaWrongNote } from '../lib/storage'
 import './StudyPage.css'
 import './VocabPage.css'
 import './KanjiPage.css'
@@ -418,7 +418,9 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
   const [questions, setQuestions] = useState<NormQuestion[]>([])
   const [index, setIndex] = useState(0)
   const [feedback, setFeedback] = useState<{ selectedKey: string; isCorrect: boolean } | null>(null)
-  const [answers, setAnswers] = useState<{ resultMain: string; resultSub?: string; isCorrect: boolean }[]>([])
+  const [answers, setAnswers] = useState<
+    { answerKey: string; resultMain: string; resultSub?: string; isCorrect: boolean }[]
+  >([])
   const advanceTimer = useRef<number | null>(null)
 
   const pool = useMemo(() => kanaList.filter((k) => inGroup(k, group)), [group])
@@ -493,7 +495,10 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
     // (pairs) 모드는 낱자 재인이 아니고 answerKey가 표기 문자열이라 기록하지 않음.
     if (quizType === 'romaji') recordSrsReview('kana', question.answerKey, isCorrect)
     setFeedback({ selectedKey: choice.key, isCorrect })
-    setAnswers((prev) => [...prev, { resultMain: question.resultMain, resultSub: question.resultSub, isCorrect }])
+    setAnswers((prev) => [
+      ...prev,
+      { answerKey: question.answerKey, resultMain: question.resultMain, resultSub: question.resultSub, isCorrect },
+    ])
     if (isCorrect) advanceTimer.current = window.setTimeout(goNext, 550)
   }
 
@@ -506,6 +511,16 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
     if (index + 1 < questions.length) setIndex((i) => i + 1)
     else setPhase('result')
   }
+
+  // 로마자 퀴즈 결과 화면 진입 시 오답을 오답노트에 쌓고, 이번 회차에 맞힌
+  // 낱자는 더 이상 약점이 아니므로 제거 — 다른 도메인과 같은 패턴(GrammarPage 등).
+  useEffect(() => {
+    if (phase !== 'result' || quizType !== 'romaji') return
+    const wrongIds = answers.filter((a) => !a.isCorrect).map((a) => a.answerKey)
+    addKanaWrongNotes(wrongIds, `가나 퀴즈 · ${QUIZ_TYPE_LABELS[quizType]}`)
+    answers.filter((a) => a.isCorrect).forEach((a) => removeKanaWrongNote(a.answerKey))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase])
 
   // window-level key handling (no auto-focus on choices — avoids the "same
   // Enter keyup clicks the freshly focused choice" bug seen elsewhere)

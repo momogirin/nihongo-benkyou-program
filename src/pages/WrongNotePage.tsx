@@ -3,6 +3,7 @@ import { kanjiList, type Kanji } from '../data/kanji'
 import { vocabList, type VocabWord } from '../data/vocab'
 import { grammarList, type GrammarPoint } from '../data/grammar'
 import { englishVocabList, type EnglishVocabWord } from '../data/englishVocab'
+import { kanaList, type Kana } from '../data/kana'
 import { studyContentByKanjiId } from '../data/studyContent'
 import { radicalList } from '../data/radicals'
 import { usedKanji } from '../lib/kanjiUsage'
@@ -10,14 +11,17 @@ import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import {
   getEnglishVocabWrongNotes,
   getGrammarWrongNotes,
+  getKanaWrongNotes,
   getVocabWrongNotes,
   getWrongNotes,
   removeEnglishVocabWrongNote,
   removeGrammarWrongNote,
+  removeKanaWrongNote,
   removeVocabWrongNote,
   removeWrongNote,
   type EnglishVocabWrongNoteEntry,
   type GrammarWrongNoteEntry,
+  type KanaWrongNoteEntry,
   type VocabWrongNoteEntry,
   type WrongNoteEntry,
 } from '../lib/storage'
@@ -25,6 +29,7 @@ import type { QuizConfig } from '../types'
 import './StudyPage.css'
 import './VocabPage.css'
 import './GrammarPage.css'
+import './KanaPage.css'
 import './WrongNotePage.css'
 
 interface Props {
@@ -32,6 +37,7 @@ interface Props {
   onRetryVocab: (ids: string[]) => void
   onRetryGrammar: (ids: string[]) => void
   onRetryEnglishVocab: (ids: string[]) => void
+  onGoToKana: () => void
 }
 
 type DetailTarget =
@@ -39,8 +45,9 @@ type DetailTarget =
   | { kind: 'vocab'; word: VocabWord }
   | { kind: 'grammar'; point: GrammarPoint }
   | { kind: 'englishVocab'; word: EnglishVocabWord }
+  | { kind: 'kana'; kana: Kana }
 
-type ConfirmTarget = { kind: 'kanji' | 'vocab' | 'grammar' | 'englishVocab'; id: string; label: string }
+type ConfirmTarget = { kind: 'kanji' | 'vocab' | 'grammar' | 'englishVocab' | 'kana'; id: string; label: string }
 
 interface Session<TNote, TItem> {
   wrongAt: string
@@ -69,11 +76,18 @@ function groupBySession<TNote extends { wrongAt: string; source?: string }, TIte
   return [...map.values()].sort((a, b) => b.wrongAt.localeCompare(a.wrongAt))
 }
 
-export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGrammar, onRetryEnglishVocab }: Props) {
+export default function WrongNotePage({
+  onStartQuiz,
+  onRetryVocab,
+  onRetryGrammar,
+  onRetryEnglishVocab,
+  onGoToKana,
+}: Props) {
   const [wrongNotes, setWrongNotes] = useState(() => getWrongNotes())
   const [vocabWrongNotes, setVocabWrongNotes] = useState(() => getVocabWrongNotes())
   const [grammarWrongNotes, setGrammarWrongNotes] = useState(() => getGrammarWrongNotes())
   const [englishVocabWrongNotes, setEnglishVocabWrongNotes] = useState(() => getEnglishVocabWrongNotes())
+  const [kanaWrongNotes, setKanaWrongNotes] = useState(() => getKanaWrongNotes())
   const [detail, setDetail] = useState<DetailTarget | null>(null)
   const [confirmTarget, setConfirmTarget] = useState<ConfirmTarget | null>(null)
   const detailCloseButtonRef = useRef<HTMLButtonElement>(null)
@@ -83,6 +97,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
   const vocabById = useMemo(() => new Map(vocabList.map((w) => [w.id, w])), [])
   const grammarById = useMemo(() => new Map(grammarList.map((g) => [g.id, g])), [])
   const englishVocabById = useMemo(() => new Map(englishVocabList.map((w) => [w.id, w])), [])
+  const kanaById = useMemo(() => new Map(kanaList.map((k) => [k.id, k])), [])
 
   useEffect(() => {
     if (!detail) return
@@ -150,6 +165,16 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
     [englishVocabWrongNotes, englishVocabById],
   )
 
+  const kanaSessions = useMemo(
+    () =>
+      groupBySession<KanaWrongNoteEntry, Kana>(
+        kanaWrongNotes
+          .map((note) => ({ note, item: kanaById.get(note.kanaId) }))
+          .filter((e): e is { note: KanaWrongNoteEntry; item: Kana } => e.item !== undefined),
+      ),
+    [kanaWrongNotes, kanaById],
+  )
+
   const kanjiIds = useMemo(() => kanjiSessions.flatMap((s) => s.items.map(({ item }) => item.id)), [kanjiSessions])
   const vocabIds = useMemo(() => vocabSessions.flatMap((s) => s.items.map(({ item }) => item.id)), [vocabSessions])
   const grammarIds = useMemo(
@@ -160,11 +185,13 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
     () => englishVocabSessions.flatMap((s) => s.items.map(({ item }) => item.id)),
     [englishVocabSessions],
   )
+  const kanaIds = useMemo(() => kanaSessions.flatMap((s) => s.items.map(({ item }) => item.id)), [kanaSessions])
 
   const kanjiCount = kanjiIds.length
   const vocabCount = vocabIds.length
   const grammarCount = grammarIds.length
   const englishVocabCount = englishVocabIds.length
+  const kanaCount = kanaIds.length
 
   function performRemove(target: ConfirmTarget) {
     if (target.kind === 'kanji') {
@@ -176,9 +203,12 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
     } else if (target.kind === 'grammar') {
       removeGrammarWrongNote(target.id)
       setGrammarWrongNotes(getGrammarWrongNotes())
-    } else {
+    } else if (target.kind === 'englishVocab') {
       removeEnglishVocabWrongNote(target.id)
       setEnglishVocabWrongNotes(getEnglishVocabWrongNotes())
+    } else {
+      removeKanaWrongNote(target.id)
+      setKanaWrongNotes(getKanaWrongNotes())
     }
     setConfirmTarget(null)
   }
@@ -187,7 +217,13 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
     onStartQuiz(kanjiIdsQuizConfig(kanjiIds))
   }
 
-  if (kanjiCount === 0 && vocabCount === 0 && grammarCount === 0 && englishVocabCount === 0) {
+  if (
+    kanjiCount === 0 &&
+    vocabCount === 0 &&
+    grammarCount === 0 &&
+    englishVocabCount === 0 &&
+    kanaCount === 0
+  ) {
     return (
       <div className="page">
         <h1>오답노트</h1>
@@ -388,6 +424,49 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
         </section>
       )}
 
+      {kanaSessions.length > 0 && (
+        <section className="wrong-note-section">
+          <div className="page-header">
+            <h2>가나</h2>
+            <button type="button" className="retry-button" onClick={onGoToKana}>
+              오답만 재도전 ({kanaCount})
+            </button>
+          </div>
+          {kanaSessions.map((session) => (
+            <div className="wrong-note-session" key={`kana-${session.wrongAt}`}>
+              <div className="wrong-note-session-header">
+                <span className="wrong-note-session-time">{formatDateTime(session.wrongAt)}</span>
+                <span className="wrong-note-session-source">{session.source ?? '기록 없음'}</span>
+              </div>
+              <ul className="wrong-note-list">
+                {session.items.map(({ note, item: kana }) => (
+                  <li key={kana.id} className="wrong-note-item">
+                    <button
+                      type="button"
+                      className="wrong-note-item-main"
+                      onClick={() => setDetail({ kind: 'kana', kana })}
+                    >
+                      <span className="wrong-note-kanji">{kana.hiragana}</span>
+                      <span className="wrong-note-detail">
+                        {kana.katakana} · {kana.romaji}
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      className="wrong-note-remove"
+                      aria-label={`${kana.hiragana} 오답노트에서 제거`}
+                      onClick={() => setConfirmTarget({ kind: 'kana', id: note.kanaId, label: kana.hiragana })}
+                    >
+                      ✕
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
+      )}
+
       {detail && (
         <div className="wrong-note-modal-backdrop" onClick={() => setDetail(null)}>
           <div className="wrong-note-modal" onClick={(e) => e.stopPropagation()}>
@@ -401,6 +480,7 @@ export default function WrongNotePage({ onStartQuiz, onRetryVocab, onRetryGramma
             {detail.kind === 'vocab' && <VocabDetailCard word={detail.word} />}
             {detail.kind === 'grammar' && <GrammarDetailCard point={detail.point} />}
             {detail.kind === 'englishVocab' && <EnglishVocabDetailCard word={detail.word} />}
+            {detail.kind === 'kana' && <KanaDetailCard kana={detail.kana} />}
           </div>
         </div>
       )}
@@ -610,6 +690,39 @@ function GrammarDetailCard({ point }: { point: GrammarPoint }) {
           </div>
         )}
       </dl>
+    </div>
+  )
+}
+
+function KanaDetailCard({ kana }: { kana: Kana }) {
+  return (
+    <div className="study-card">
+      <div className="kana-detail-char">{kana.hiragana}</div>
+      <dl className="study-fields study-fields-core">
+        <div className="study-field">
+          <dt>히라가나</dt>
+          <dd>{kana.hiragana}</dd>
+        </div>
+        <div className="study-field">
+          <dt>가타카나</dt>
+          <dd>{kana.katakana}</dd>
+        </div>
+        <div className="study-field">
+          <dt>로마자</dt>
+          <dd>{kana.romaji}</dd>
+        </div>
+      </dl>
+      {kana.exampleJp && (
+        <dl className="study-fields study-fields-sub">
+          <div className="study-field">
+            <dt>예시 단어</dt>
+            <dd>
+              {kana.exampleJp}
+              {kana.exampleKr && ` · ${kana.exampleKr}`}
+            </dd>
+          </div>
+        </dl>
+      )}
     </div>
   )
 }
