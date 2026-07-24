@@ -6,28 +6,35 @@ import {
   generateGrammarQuestions,
   generateGrammarQuestionsFromIds,
   generateGrammarBlankQuestions,
+  generateGrammarSentenceQuestions,
   grammarAvailableLevels,
   grammarLevelPool,
   grammarBlankLevelPool,
+  grammarSentenceLevelPool,
   type GrammarQuizQuestion,
   type GrammarBlankQuestion,
+  type GrammarSentenceQuestion,
 } from '../lib/grammarQuizGenerator'
 import {
   addGrammarQuizHistoryEntry,
   addGrammarWrongNotes,
   clearGrammarInProgressQuiz,
   clearGrammarBlankInProgressQuiz,
+  clearGrammarSentenceInProgressQuiz,
   getGrammarInProgressQuiz,
   getGrammarBlankInProgressQuiz,
+  getGrammarSentenceInProgressQuiz,
   getGrammarStudyProgress,
   recordSrsReview,
   recordSrsSelfCheck,
   removeGrammarWrongNote,
   saveGrammarInProgressQuiz,
   saveGrammarBlankInProgressQuiz,
+  saveGrammarSentenceInProgressQuiz,
   setGrammarStudyProgress,
   type GrammarInProgressQuiz,
   type GrammarBlankInProgressQuiz,
+  type GrammarSentenceInProgressQuiz,
 } from '../lib/storage'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
@@ -38,11 +45,22 @@ const QUIZ_QUESTION_COUNT = 20
 const QUIZ_COUNT_OPTIONS = [10, 20, 30, 50, 'all'] as const
 const FEEDBACK_DELAY_MS = 550
 
-type Phase = 'setup' | 'studying' | 'done' | 'browse' | 'quiz' | 'quizResult' | 'blankQuiz' | 'blankQuizResult'
-type QuizType = 'meaning' | 'blank'
+type Phase =
+  | 'setup'
+  | 'studying'
+  | 'done'
+  | 'browse'
+  | 'quiz'
+  | 'quizResult'
+  | 'blankQuiz'
+  | 'blankQuizResult'
+  | 'sentenceQuiz'
+  | 'sentenceQuizResult'
+type QuizType = 'meaning' | 'blank' | 'sentence'
 const QUIZ_TYPE_LABELS: Record<QuizType, string> = {
   meaning: '뜻 맞히기',
   blank: '문장 빈칸 채우기',
+  sentence: '문장 배열',
 }
 
 interface QuizAnswer {
@@ -54,6 +72,12 @@ interface QuizAnswer {
 interface BlankAnswer {
   question: GrammarBlankQuestion
   selectedId: string
+  isCorrect: boolean
+}
+
+interface SentenceAnswer {
+  question: GrammarSentenceQuestion
+  arranged: string[]
   isCorrect: boolean
 }
 
@@ -91,6 +115,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [level, setLevel] = useState<KanjiLevel>(grammarAvailableLevels[0])
   const pool = useMemo(() => grammarLevelPool(level), [level])
   const blankPool = useMemo(() => grammarBlankLevelPool(level), [level])
+  const sentencePool = useMemo(() => grammarSentenceLevelPool(level), [level])
   const completedCount = Math.min(getGrammarStudyProgress(level), pool.length)
   const remaining = pool.length - completedCount
 
@@ -139,10 +164,40 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const lastAdvancedBlankIndexRef = useRef(-1)
   const [savedBlankQuiz, setSavedBlankQuiz] = useState(() => getGrammarBlankInProgressQuiz())
 
+  // 문장 배열(文の組み立て) 퀴즈 — 셔플된 조각을 탭해 순서를 만든 뒤 확인. 4지선다가
+  // 아니라 배열이라 상태·정답판정이 다르다. arranged = 지금까지 선택 영역에 넣은 조각들
+  const [sentenceQuestions, setSentenceQuestions] = useState<GrammarSentenceQuestion[]>([])
+  const [sentenceIndex, setSentenceIndex] = useState(0)
+  const [sentenceAnswers, setSentenceAnswers] = useState<SentenceAnswer[]>([])
+  const [arranged, setArranged] = useState<string[]>([])
+  const [sentenceFeedback, setSentenceFeedback] = useState<{ isCorrect: boolean } | null>(null)
+  const sentenceRestartButtonRef = useRef<HTMLButtonElement>(null)
+  const sentenceStartRef = useRef(0)
+  const lastAdvancedSentenceIndexRef = useRef(-1)
+  const [savedSentenceQuiz, setSavedSentenceQuiz] = useState(() => getGrammarSentenceInProgressQuiz())
+
+  // 조각 풀에서 아직 선택 영역(arranged)에 안 넣은 조각들. 같은 표면형 조각이 둘 이상일
+  // 수 있어(예: 「が」가 두 번) 값이 아니라 개수 기준으로 소거한다 — shuffled를 순회하며
+  // arranged에 남아있는 만큼만 하나씩 차감.
+  const remainingPieces = useMemo(() => {
+    const q = sentenceQuestions[sentenceIndex]
+    if (!q) return []
+    const used = new Map<string, number>()
+    for (const p of arranged) used.set(p, (used.get(p) ?? 0) + 1)
+    const out: string[] = []
+    for (const p of q.shuffled) {
+      const remaining = used.get(p) ?? 0
+      if (remaining > 0) used.set(p, remaining - 1)
+      else out.push(p)
+    }
+    return out
+  }, [sentenceQuestions, sentenceIndex, arranged])
+
   useEffect(() => {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'quizResult') restartButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'blankQuizResult') blankRestartButtonRef.current?.focus({ preventScroll: true })
+    if (phase === 'sentenceQuizResult') sentenceRestartButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
 
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
@@ -229,6 +284,31 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     setPhase('blankQuiz')
   }
 
+  function startSentenceQuiz() {
+    clearGrammarSentenceInProgressQuiz()
+    setSavedSentenceQuiz(null)
+    const count = quizCount === 'all' ? sentencePool.length : quizCount
+    setSentenceQuestions(generateGrammarSentenceQuestions(level, count, quizOrder))
+    setSentenceIndex(0)
+    setSentenceAnswers([])
+    setArranged([])
+    setSentenceFeedback(null)
+    lastAdvancedSentenceIndexRef.current = -1
+    sentenceStartRef.current = Date.now()
+    setPhase('sentenceQuiz')
+  }
+
+  function resumeSentenceQuiz(saved: GrammarSentenceInProgressQuiz) {
+    setSentenceQuestions(saved.questions)
+    setSentenceIndex(saved.index)
+    setSentenceAnswers(saved.answers)
+    setArranged([])
+    setSentenceFeedback(null)
+    lastAdvancedSentenceIndexRef.current = -1
+    sentenceStartRef.current = new Date(saved.startedAt).getTime()
+    setPhase('sentenceQuiz')
+  }
+
   useEffect(() => {
     if (!retryIds || retryIds.length === 0) return
     clearGrammarInProgressQuiz()
@@ -280,6 +360,25 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     })
     blankAnswers.filter((a) => a.isCorrect).forEach((a) => removeGrammarWrongNote(a.question.entry.id))
     blankAnswers.forEach((a) => recordSrsReview('grammar', a.question.entry.id, a.isCorrect))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase])
+
+  useEffect(() => {
+    if (phase !== 'sentenceQuizResult') return
+    clearGrammarSentenceInProgressQuiz()
+    setSavedSentenceQuiz(null)
+    const wrongIds = sentenceAnswers.filter((a) => !a.isCorrect).map((a) => a.question.entry.id)
+    addGrammarWrongNotes(wrongIds, `문법 문장 배열 퀴즈 · ${level}`)
+    addGrammarQuizHistoryEntry({
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      level,
+      total: sentenceAnswers.length,
+      correct: sentenceAnswers.filter((a) => a.isCorrect).length,
+      elapsedMs: Date.now() - sentenceStartRef.current,
+      finishedAt: new Date().toISOString(),
+    })
+    sentenceAnswers.filter((a) => a.isCorrect).forEach((a) => removeGrammarWrongNote(a.question.entry.id))
+    sentenceAnswers.forEach((a) => recordSrsReview('grammar', a.question.entry.id, a.isCorrect))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 
@@ -452,6 +551,61 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     return () => window.removeEventListener('keydown', handleKeyDown)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, blankIndex, blankFeedback])
+
+  function goNextSentence(nextIndex: number) {
+    if (nextIndex < sentenceQuestions.length) {
+      setSentenceFeedback(null)
+      setArranged([])
+      setSentenceIndex(nextIndex)
+    } else {
+      setPhase('sentenceQuizResult')
+    }
+  }
+
+  function handleNextSentence() {
+    if (lastAdvancedSentenceIndexRef.current === sentenceIndex) return
+    lastAdvancedSentenceIndexRef.current = sentenceIndex
+    goNextSentence(sentenceIndex + 1)
+  }
+
+  // 조각 풀에서 조각을 선택 영역으로 이동(같은 표면형 조각이 둘 이상일 수 있어 값이
+  // 아니라 "풀에서의 위치"로 지운다 — 여기선 첫 미사용 인덱스를 옮김)
+  function pickPiece(poolIndex: number) {
+    if (sentenceFeedback) return
+    const piece = remainingPieces[poolIndex]
+    setArranged((prev) => [...prev, piece])
+  }
+
+  // 선택 영역에서 조각을 되돌림(맨 끝/특정 위치)
+  function unpickPiece(arrangedIndex: number) {
+    if (sentenceFeedback) return
+    setArranged((prev) => prev.filter((_, i) => i !== arrangedIndex))
+  }
+
+  function submitSentenceAnswer() {
+    if (sentenceFeedback) return
+    const question = sentenceQuestions[sentenceIndex]
+    if (arranged.length !== question.pieces.length) return
+    const isCorrect = arranged.join('') === question.pieces.join('')
+    setSentenceFeedback({ isCorrect })
+    const updatedAnswers = [...sentenceAnswers, { question, arranged, isCorrect }]
+    setSentenceAnswers(updatedAnswers)
+
+    const nextIndex = sentenceIndex + 1
+    if (nextIndex < sentenceQuestions.length) {
+      saveGrammarSentenceInProgressQuiz({
+        level,
+        questions: sentenceQuestions,
+        index: nextIndex,
+        answers: updatedAnswers,
+        startedAt: new Date(sentenceStartRef.current).toISOString(),
+      })
+    }
+
+    if (isCorrect) {
+      setTimeout(() => goNextSentence(nextIndex), FEEDBACK_DELAY_MS)
+    }
+  }
 
   if (phase === 'browse' && browseIndex !== null) {
     const point = pool[browseIndex]
@@ -874,6 +1028,129 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     )
   }
 
+  if (phase === 'sentenceQuiz') {
+    const question = sentenceQuestions[sentenceIndex]
+    const isComplete = arranged.length === question.pieces.length
+    return (
+      <div className="quiz-runner">
+        <div className="quiz-topbar">
+          <button
+            type="button"
+            className="quiz-exit-button"
+            onClick={() => {
+              setPhase('setup')
+              setSavedSentenceQuiz(getGrammarSentenceInProgressQuiz())
+            }}
+          >
+            나가기
+          </button>
+          <div className="quiz-progress">
+            {sentenceIndex + 1} / {sentenceQuestions.length}
+          </div>
+        </div>
+        <div className="grammar-quiz-prompt">
+          <span className="grammar-quiz-prompt-pattern">{question.entry.pattern}</span>
+          <span className="grammar-sentence-instruction">조각을 눌러 올바른 순서로 문장을 완성하세요</span>
+        </div>
+
+        {/* 선택 영역 — 4칸 고정 슬롯이라 조각을 넣고 빼도 레이아웃이 흔들리지 않음 */}
+        <div className="grammar-sentence-answer">
+          {question.pieces.map((_, i) => {
+            const piece = arranged[i]
+            const revealCorrect = sentenceFeedback && !sentenceFeedback.isCorrect
+            return (
+              <button
+                key={i}
+                type="button"
+                className={`grammar-sentence-slot${piece ? ' filled' : ''}${
+                  sentenceFeedback ? (sentenceFeedback.isCorrect ? ' correct' : ' incorrect') : ''
+                }`}
+                disabled={!piece || sentenceFeedback !== null}
+                onClick={() => unpickPiece(i)}
+              >
+                {piece ?? (revealCorrect ? question.pieces[i] : ' ')}
+              </button>
+            )
+          })}
+        </div>
+
+        {/* 오답 시 정답 순서를 아래에 노출 */}
+        {sentenceFeedback && !sentenceFeedback.isCorrect && (
+          <p className="grammar-sentence-correct">정답: {question.pieces.join(' / ')}</p>
+        )}
+
+        {/* 조각 풀 — 아직 선택 영역에 안 넣은 조각들 */}
+        <div className="grammar-sentence-pool">
+          {remainingPieces.map((piece, i) => (
+            <button
+              key={i}
+              type="button"
+              className="grammar-sentence-piece"
+              disabled={sentenceFeedback !== null}
+              onClick={() => pickPiece(i)}
+            >
+              {piece}
+            </button>
+          ))}
+        </div>
+
+        {!sentenceFeedback && (
+          <button
+            type="button"
+            className="quiz-next-button"
+            disabled={!isComplete}
+            onClick={submitSentenceAnswer}
+          >
+            확인
+          </button>
+        )}
+        {sentenceFeedback && !sentenceFeedback.isCorrect && <GrammarHint entry={question.entry} />}
+        {sentenceFeedback && !sentenceFeedback.isCorrect && (
+          <button type="button" className="quiz-next-button" onClick={handleNextSentence}>
+            다음
+          </button>
+        )}
+        <p className="shortcut-hint">조각을 눌러 넣고, 넣은 조각을 다시 누르면 빠집니다</p>
+      </div>
+    )
+  }
+
+  if (phase === 'sentenceQuizResult') {
+    const correctCount = sentenceAnswers.filter((a) => a.isCorrect).length
+    const total = sentenceAnswers.length
+    const rate = total > 0 ? Math.round((correctCount / total) * 100) : 0
+
+    return (
+      <div className="result-screen">
+        <h1>문법 문장 배열 퀴즈 결과</h1>
+        <p className="result-summary">
+          {correctCount} / {total} 정답 ({rate}%)
+        </p>
+        <ul className="result-list">
+          {sentenceAnswers.map((a, i) => (
+            <li key={`${a.question.entry.id}-${i}`} className={a.isCorrect ? 'correct' : 'incorrect'}>
+              <span className="grammar-result-pattern">{a.question.entry.pattern}</span>
+              <span className="result-detail">
+                <span className="result-detail-main">
+                  정답: {a.question.pieces.join('')}
+                  {!a.isCorrect && <> · 내 답: {a.arranged.join('')}</>}
+                </span>
+              </span>
+            </li>
+          ))}
+        </ul>
+        <button
+          type="button"
+          ref={sentenceRestartButtonRef}
+          className="restart-button"
+          onClick={() => setPhase('setup')}
+        >
+          다시 설정하기
+        </button>
+      </div>
+    )
+  }
+
   const isLevelFinished = pool.length > 0 && remaining <= 0
 
   return (
@@ -916,6 +1193,18 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
         </>
       )}
 
+      {savedSentenceQuiz && (
+        <>
+          <p className="page-placeholder">
+            진행 중이던 문장 배열 퀴즈가 있어요 ({savedSentenceQuiz.level} · {savedSentenceQuiz.index}/
+            {savedSentenceQuiz.questions.length}문제)
+          </p>
+          <button type="button" className="study-start-button" onClick={() => resumeSentenceQuiz(savedSentenceQuiz)}>
+            이어서 풀기
+          </button>
+        </>
+      )}
+
       <div className="study-level-picker">
         {grammarAvailableLevels.map((l) => (
           <button
@@ -949,7 +1238,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
       <div className="quiz-option-group">
         <span className="quiz-option-label">퀴즈 종류</span>
         <div className="study-level-picker">
-          {(['meaning', 'blank'] as const).map((t) => (
+          {(['meaning', 'blank', 'sentence'] as const).map((t) => (
             <button
               key={t}
               type="button"
@@ -966,7 +1255,8 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
         <span className="quiz-option-label">문항 수</span>
         <div className="study-level-picker">
           {QUIZ_COUNT_OPTIONS.map((opt) => {
-            const activePool = quizType === 'meaning' ? pool : blankPool
+            const activePool =
+              quizType === 'meaning' ? pool : quizType === 'blank' ? blankPool : sentencePool
             const disabled = opt !== 'all' && opt > activePool.length
             return (
               <button
@@ -1005,13 +1295,19 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
 
       {quizType === 'blank' && blankPool.length === 0 ? (
         <p className="page-placeholder">이 급수는 아직 빈칸 퀴즈용 문형이 없습니다.</p>
+      ) : quizType === 'sentence' && sentencePool.length === 0 ? (
+        <p className="page-placeholder">이 급수는 아직 문장 배열 퀴즈로 낼 수 있는 예문이 없습니다.</p>
       ) : quizType === 'meaning' ? (
         <button type="button" className="grammar-quiz-button" onClick={startQuiz}>
           문법 퀴즈 풀기 ({quizCount === 'all' ? pool.length : Math.min(quizCount, pool.length)}문제)
         </button>
-      ) : (
+      ) : quizType === 'blank' ? (
         <button type="button" className="grammar-quiz-button" onClick={startBlankQuiz}>
           문장 빈칸 채우기 퀴즈 풀기 ({quizCount === 'all' ? blankPool.length : Math.min(quizCount, blankPool.length)}문제)
+        </button>
+      ) : (
+        <button type="button" className="grammar-quiz-button" onClick={startSentenceQuiz}>
+          문장 배열 퀴즈 풀기 ({quizCount === 'all' ? sentencePool.length : Math.min(quizCount, sentencePool.length)}문제)
         </button>
       )}
     </div>

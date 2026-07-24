@@ -9,7 +9,7 @@ import type {
   VocabUsageQuestion,
 } from './vocabQuizGenerator'
 import type { VocabWord } from '../data/vocab'
-import type { GrammarQuizQuestion, GrammarBlankQuestion } from './grammarQuizGenerator'
+import type { GrammarQuizQuestion, GrammarBlankQuestion, GrammarSentenceQuestion } from './grammarQuizGenerator'
 import type { MockExamQuestion } from './mockExamGenerator'
 import type { EnglishVocabDerivationQuestion, EnglishVocabQuizQuestion } from './englishVocabQuizGenerator'
 import type { EnglishLevel } from '../data/englishVocab'
@@ -170,6 +170,16 @@ export interface GrammarBlankInProgressQuiz {
   startedAt: string
 }
 
+// 문장 조각 배열(文の組み立て) 퀴즈용 이어하기 상태 — 정답이 selectedId가 아니라
+// 배열한 조각 순서(arranged)라 answers shape이 다르다
+export interface GrammarSentenceInProgressQuiz {
+  level: KanjiLevel
+  questions: GrammarSentenceQuestion[]
+  index: number
+  answers: { question: GrammarSentenceQuestion; arranged: string[]; isCorrect: boolean }[]
+  startedAt: string
+}
+
 export interface MockExamInProgressQuiz {
   level: KanjiLevel
   count: number
@@ -224,6 +234,7 @@ const VOCAB_SYNONYM_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabSynonymInProgressQuiz'
 const VOCAB_USAGE_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabUsageInProgressQuiz'
 const GRAMMAR_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.grammarInProgressQuiz'
 const GRAMMAR_BLANK_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.grammarBlankInProgressQuiz'
+const GRAMMAR_SENTENCE_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.grammarSentenceInProgressQuiz'
 const MOCK_EXAM_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.mockExamInProgressQuiz'
 const ENGLISH_VOCAB_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.englishVocabInProgressQuiz'
 const ENGLISH_VOCAB_DERIVATION_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.englishVocabDerivationInProgressQuiz'
@@ -632,6 +643,24 @@ export function clearGrammarBlankInProgressQuiz() {
   localStorage.removeItem(GRAMMAR_BLANK_IN_PROGRESS_QUIZ_KEY)
 }
 
+// same again, for 문장 조각 배열(文の組み立て) 퀴즈
+export function getGrammarSentenceInProgressQuiz(): GrammarSentenceInProgressQuiz | null {
+  try {
+    const raw = localStorage.getItem(GRAMMAR_SENTENCE_IN_PROGRESS_QUIZ_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
+export function saveGrammarSentenceInProgressQuiz(state: GrammarSentenceInProgressQuiz) {
+  localStorage.setItem(GRAMMAR_SENTENCE_IN_PROGRESS_QUIZ_KEY, JSON.stringify(state))
+}
+
+export function clearGrammarSentenceInProgressQuiz() {
+  localStorage.removeItem(GRAMMAR_SENTENCE_IN_PROGRESS_QUIZ_KEY)
+}
+
 // same again, for 모의고사 — startedAt is real wall-clock time, so resuming
 // after a break naturally eats into the remaining countdown (matches how the
 // timer already works: elapsed = Date.now() - startTime)
@@ -731,6 +760,10 @@ export function importGrammarInProgressQuiz(quiz: GrammarInProgressQuiz | null) 
 
 export function importGrammarBlankInProgressQuiz(quiz: GrammarBlankInProgressQuiz | null) {
   if (quiz && !getGrammarBlankInProgressQuiz()) saveGrammarBlankInProgressQuiz(quiz)
+}
+
+export function importGrammarSentenceInProgressQuiz(quiz: GrammarSentenceInProgressQuiz | null) {
+  if (quiz && !getGrammarSentenceInProgressQuiz()) saveGrammarSentenceInProgressQuiz(quiz)
 }
 
 export function importMockExamInProgressQuiz(quiz: MockExamInProgressQuiz | null) {
@@ -1140,7 +1173,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27
+  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -1173,6 +1206,8 @@ export interface BackupPayload {
   englishVocabDerivationInProgressQuiz?: EnglishVocabDerivationInProgressQuiz | null
   // added in version 15 (문법 빈칸 채우기 퀴즈) — optional so older backup files still validate
   grammarBlankInProgressQuiz?: GrammarBlankInProgressQuiz | null
+  // added in version 28
+  grammarSentenceInProgressQuiz?: GrammarSentenceInProgressQuiz | null
   // added in version 16 (단어 문맥 빈칸 채우기 퀴즈) — optional so older backup files still validate
   vocabBlankInProgressQuiz?: VocabBlankInProgressQuiz | null
   // added in version 17 (단어 읽기 입력 퀴즈) — optional so older backup files still validate
@@ -1205,7 +1240,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 27,
+    version: 28,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -1232,6 +1267,7 @@ export function buildBackupPayload(): BackupPayload {
     englishVocabInProgressQuiz: getEnglishVocabInProgressQuiz(),
     englishVocabDerivationInProgressQuiz: getEnglishVocabDerivationInProgressQuiz(),
     grammarBlankInProgressQuiz: getGrammarBlankInProgressQuiz(),
+    grammarSentenceInProgressQuiz: getGrammarSentenceInProgressQuiz(),
     vocabBlankInProgressQuiz: getVocabBlankInProgressQuiz(),
     vocabReadingInProgressQuiz: getVocabReadingInProgressQuiz(),
     vocabWritingInProgressQuiz: getVocabWritingInProgressQuiz(),
@@ -1277,6 +1313,8 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.englishVocabDerivationInProgressQuiz)
     importEnglishVocabDerivationInProgressQuiz(payload.englishVocabDerivationInProgressQuiz)
   if (payload.grammarBlankInProgressQuiz) importGrammarBlankInProgressQuiz(payload.grammarBlankInProgressQuiz)
+  if (payload.grammarSentenceInProgressQuiz)
+    importGrammarSentenceInProgressQuiz(payload.grammarSentenceInProgressQuiz)
   if (payload.vocabBlankInProgressQuiz) importVocabBlankInProgressQuiz(payload.vocabBlankInProgressQuiz)
   if (payload.vocabReadingInProgressQuiz) importVocabReadingInProgressQuiz(payload.vocabReadingInProgressQuiz)
   if (payload.vocabWritingInProgressQuiz) importVocabWritingInProgressQuiz(payload.vocabWritingInProgressQuiz)

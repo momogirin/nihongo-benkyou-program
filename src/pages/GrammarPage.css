@@ -104,3 +104,91 @@
   flex: none;
 }
 
+/* 문장 배열(文の組み立て) 퀴즈 — 선택 영역 + 조각 풀 */
+.grammar-sentence-instruction {
+  color: var(--color-ink-muted);
+  font-size: 14px;
+}
+
+/* 선택 영역: 조각을 넣는 슬롯. 조각 유무와 무관하게 min-height로 높이를 고정해
+   넣고 빼도 레이아웃이 흔들리지 않게 한다(레이아웃 시프트 금지). */
+.grammar-sentence-answer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 56px;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+}
+
+.grammar-sentence-slot {
+  padding: 10px 14px;
+  font-size: 17px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-selected-bg);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.grammar-sentence-slot:not(.filled) {
+  border-style: dashed;
+  background: transparent;
+  color: transparent;
+  min-width: 40px;
+  cursor: default;
+}
+
+.grammar-sentence-slot:disabled {
+  cursor: default;
+}
+
+.grammar-sentence-slot.filled.correct {
+  border-color: var(--color-correct);
+  background: rgba(63, 125, 87, 0.12);
+  color: var(--color-correct);
+}
+
+.grammar-sentence-slot.filled.incorrect {
+  border-color: var(--color-incorrect);
+  color: var(--color-incorrect);
+}
+
+.grammar-sentence-correct {
+  margin: 0 0 16px;
+  color: var(--color-correct);
+  font-size: 15px;
+  text-align: center;
+}
+
+.grammar-sentence-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.grammar-sentence-piece {
+  padding: 10px 14px;
+  font-size: 17px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.grammar-sentence-piece:hover:not(:disabled) {
+  border-color: var(--color-primary-dark);
+  background: var(--color-selected-bg);
+}
+
+.grammar-sentence-piece:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
