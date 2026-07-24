@@ -7,6 +7,7 @@ import {
   generateVocabWritingQuestions,
   generateVocabTransitivityQuestions,
   generateVocabSynonymQuestions,
+  generateVocabUsageQuestions,
 } from './vocabQuizGenerator'
 import { generateGrammarQuestions, generateGrammarBlankQuestions } from './grammarQuizGenerator'
 
@@ -155,7 +156,16 @@ function vocabBatches(level: KanjiLevel, count: number): MockExamQuestion[] {
     promptSub: `${q.entry.meaningKr} · 같은 뜻은?`,
     choices: q.choices.map((w) => ({ label: `${headWord(w.word)}(${w.reading})`, isCorrect: w.id === q.answer.id })),
   }))
-  return roundRobin([meaning, blank, writing, transitivity, synonym], count)
+  // 用法: 제시 단어가 자연스럽게 들어갈 문장 고르기. 선택지=각 단어의 빈칸 예문,
+  // 정답은 제시 단어(entry) 자신의 문장. 프롬프트에 단어+뜻을 주고 문맥을 판단시킨다.
+  const usage = generateVocabUsageQuestions(level, count).map((q) => ({
+    domain: 'vocab' as const,
+    id: q.entry.id,
+    prompt: `${q.entry.word}(${q.entry.reading})`,
+    promptSub: `${q.entry.meaningKr} · 이 단어가 들어갈 문장은?`,
+    choices: q.blankedChoices.map((c) => ({ label: c.blankedSentence, isCorrect: c.entry.id === q.entry.id })),
+  }))
+  return roundRobin([meaning, blank, writing, transitivity, synonym, usage], count)
 }
 
 // ── 문법: 뜻/文法 빈칸 ──────────────────────────────────────────────────
