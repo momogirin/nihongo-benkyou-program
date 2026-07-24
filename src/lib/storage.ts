@@ -6,6 +6,7 @@ import type {
   VocabWritingQuestion,
   VocabTransitivityQuestion,
   VocabSynonymQuestion,
+  VocabUsageQuestion,
 } from './vocabQuizGenerator'
 import type { VocabWord } from '../data/vocab'
 import type { GrammarQuizQuestion, GrammarBlankQuestion } from './grammarQuizGenerator'
@@ -142,6 +143,15 @@ export interface VocabSynonymInProgressQuiz {
   startedAt: string
 }
 
+// 용법(用法) 퀴즈용 이어하기 상태 — 위 유의어와 나란한 별도 타입
+export interface VocabUsageInProgressQuiz {
+  level: KanjiLevel
+  questions: VocabUsageQuestion[]
+  index: number
+  answers: { question: VocabUsageQuestion; selectedId: string; isCorrect: boolean }[]
+  startedAt: string
+}
+
 export interface GrammarInProgressQuiz {
   level: KanjiLevel
   questions: GrammarQuizQuestion[]
@@ -211,6 +221,7 @@ const VOCAB_READING_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabReadingInProgressQuiz'
 const VOCAB_WRITING_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabWritingInProgressQuiz'
 const VOCAB_TRANSITIVITY_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabTransitivityInProgressQuiz'
 const VOCAB_SYNONYM_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabSynonymInProgressQuiz'
+const VOCAB_USAGE_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.vocabUsageInProgressQuiz'
 const GRAMMAR_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.grammarInProgressQuiz'
 const GRAMMAR_BLANK_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.grammarBlankInProgressQuiz'
 const MOCK_EXAM_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.mockExamInProgressQuiz'
@@ -567,6 +578,24 @@ export function clearVocabSynonymInProgressQuiz() {
   localStorage.removeItem(VOCAB_SYNONYM_IN_PROGRESS_QUIZ_KEY)
 }
 
+// same again, for 용법(用法) 퀴즈
+export function getVocabUsageInProgressQuiz(): VocabUsageInProgressQuiz | null {
+  try {
+    const raw = localStorage.getItem(VOCAB_USAGE_IN_PROGRESS_QUIZ_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch {
+    return null
+  }
+}
+
+export function saveVocabUsageInProgressQuiz(state: VocabUsageInProgressQuiz) {
+  localStorage.setItem(VOCAB_USAGE_IN_PROGRESS_QUIZ_KEY, JSON.stringify(state))
+}
+
+export function clearVocabUsageInProgressQuiz() {
+  localStorage.removeItem(VOCAB_USAGE_IN_PROGRESS_QUIZ_KEY)
+}
+
 // same again, for 문법 퀴즈
 export function getGrammarInProgressQuiz(): GrammarInProgressQuiz | null {
   try {
@@ -660,6 +689,10 @@ export function importVocabWritingInProgressQuiz(quiz: VocabWritingInProgressQui
 
 export function importVocabSynonymInProgressQuiz(quiz: VocabSynonymInProgressQuiz | null) {
   if (quiz && !getVocabSynonymInProgressQuiz()) saveVocabSynonymInProgressQuiz(quiz)
+}
+
+export function importVocabUsageInProgressQuiz(quiz: VocabUsageInProgressQuiz | null) {
+  if (quiz && !getVocabUsageInProgressQuiz()) saveVocabUsageInProgressQuiz(quiz)
 }
 
 export function importVocabTransitivityInProgressQuiz(quiz: VocabTransitivityInProgressQuiz | null) {
@@ -1107,7 +1140,7 @@ export function importSrsState(domain: SrsDomain, entries: Record<string, SrsEnt
 // and cloud sync (src/lib/cloudSync.ts) — one shape, one place that builds
 // and applies it, so the two stay in sync automatically
 export interface BackupPayload {
-  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26
+  version: 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27
   exportedAt: string
   wrongNotes: WrongNoteEntry[]
   quizHistory: QuizHistoryEntry[]
@@ -1158,6 +1191,8 @@ export interface BackupPayload {
   conjugationWrongNotes?: ConjugationWrongNoteEntry[]
   // added in version 24 (단어 유의어 퀴즈) — optional so older backup files still validate
   vocabSynonymInProgressQuiz?: VocabSynonymInProgressQuiz | null
+  // added in version 27
+  vocabUsageInProgressQuiz?: VocabUsageInProgressQuiz | null
   // added in version 25 (활용 퀴즈 기록 — 주간 통계/최근 기록 편입) — optional so older backup files still validate
   conjugationQuizHistory?: ConjugationQuizHistoryEntry[]
   // added in version 26 (가나 퀴즈 기록 — 주간 통계/최근 기록 편입) — optional so older backup files still validate
@@ -1170,7 +1205,7 @@ export function isBackupPayload(value: unknown): value is BackupPayload {
 
 export function buildBackupPayload(): BackupPayload {
   return {
-    version: 26,
+    version: 27,
     exportedAt: new Date().toISOString(),
     wrongNotes: getWrongNotes(),
     quizHistory: getQuizHistory(),
@@ -1206,6 +1241,7 @@ export function buildBackupPayload(): BackupPayload {
     kanaWrongNotes: getKanaWrongNotes(),
     conjugationWrongNotes: getConjugationWrongNotes(),
     vocabSynonymInProgressQuiz: getVocabSynonymInProgressQuiz(),
+    vocabUsageInProgressQuiz: getVocabUsageInProgressQuiz(),
     conjugationQuizHistory: getConjugationQuizHistory(),
     kanaQuizHistory: getKanaQuizHistory(),
   }
@@ -1251,6 +1287,7 @@ export function applyBackupPayload(payload: Partial<BackupPayload> & { wrongNote
   if (payload.kanaWrongNotes) importKanaWrongNotes(payload.kanaWrongNotes)
   if (payload.conjugationWrongNotes) importConjugationWrongNotes(payload.conjugationWrongNotes)
   if (payload.vocabSynonymInProgressQuiz) importVocabSynonymInProgressQuiz(payload.vocabSynonymInProgressQuiz)
+  if (payload.vocabUsageInProgressQuiz) importVocabUsageInProgressQuiz(payload.vocabUsageInProgressQuiz)
   if (payload.conjugationQuizHistory) importConjugationQuizHistory(payload.conjugationQuizHistory)
   if (payload.kanaQuizHistory) importKanaQuizHistory(payload.kanaQuizHistory)
 }

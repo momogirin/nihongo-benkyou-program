@@ -350,3 +350,58 @@ export function generateVocabSynonymQuestionsFromIds(ids: string[]): VocabSynony
     .filter((w) => synonymsOf(w).length > 0)
   return shuffle(entries).map(buildSynonymQuestion)
 }
+
+// JLPT 用法(그 단어의 올바른 쓰임) — 제시 단어가 문맥상 자연스럽게 들어가는 예문을
+// 고른다. 文脈規定(2번)이 "이 문장 → 맞는 단어"라면 用法은 그 역방향인 "이 단어 →
+// 맞는 문장"으로, 시험에서 별도 대문제로 나온다.
+//
+// 신규 데이터 없이 구현: 정답 문장은 entry 자신의 exampleJp를 blankSentence로 가린
+// 것(단어를 그대로 노출하면 답이 뻔하므로 4문장 모두에서 대상 자리를 _____로 가림).
+// 오답 문장은 "뜻이 겹치지 않는" 다른 단어들의 빈칸 예문 — 뜻이 같은(유의어) 단어의
+// 문장이면 제시 단어도 그 자리에 들어가 정답이 2개가 될 수 있어 배제한다. 그래도
+// 남는 미세한 위험(무관해 보여도 문맥상 둘 다 가능한 경우)은 문맥 빈칸 퀴즈와 동일한
+// 수준의 노이즈로 감수한다.
+export interface VocabUsageQuestion {
+  entry: VocabWord // 제시 단어(프롬프트)
+  blankedChoices: { entry: VocabWord; blankedSentence: string }[] // 정답 1 + 오답 3, 셔플됨
+}
+
+// blankable한 예문이 있어야 출제 가능(정답 문장을 만들 수 있어야 함)
+export function vocabUsageLevelPool(level: KanjiLevel): VocabWord[] {
+  return vocabLevelPool(level).filter((w) => blankSentence(w) !== null)
+}
+
+function buildUsageQuestion(entry: VocabWord): VocabUsageQuestion {
+  const answerMeaning = normalizeMeaning(entry.meaningKr)
+  const distractorPool = vocabUsageLevelPool(entry.level).filter(
+    (w) => w.id !== entry.id && normalizeMeaning(w.meaningKr) !== answerMeaning,
+  )
+  const distractors = shuffle(distractorPool).slice(0, 3)
+  const blankedChoices = shuffle(
+    [entry, ...distractors].map((w) => ({ entry: w, blankedSentence: blankSentence(w)! })),
+  )
+  return { entry, blankedChoices }
+}
+
+export function generateVocabUsageQuestions(
+  level: KanjiLevel,
+  count: number,
+  order: 'random' | 'sequential' = 'random',
+): VocabUsageQuestion[] {
+  const pool = vocabUsageLevelPool(level)
+  const ordered = order === 'random' ? shuffle(pool) : pool
+  // 오답 3개를 확보하려면 같은 급수에 뜻이 다른 blankable 단어가 최소 3개 더 있어야
+  // 하는데, 실데이터(급수당 수백~수천)에선 항상 충족되므로 별도 가드는 두지 않는다.
+  const selected = ordered.slice(0, Math.min(count, pool.length))
+  return selected.map(buildUsageQuestion)
+}
+
+// same shape, but for a fixed set of ids (오답노트 재도전) — ids that are no
+// longer blankable (e.g. a data update changed exampleJp) are silently skipped
+export function generateVocabUsageQuestionsFromIds(ids: string[]): VocabUsageQuestion[] {
+  const entries = ids
+    .map((id) => vocabList.find((w) => w.id === id))
+    .filter((w): w is VocabWord => w !== undefined)
+    .filter((w) => blankSentence(w) !== null)
+  return shuffle(entries).map(buildUsageQuestion)
+}
