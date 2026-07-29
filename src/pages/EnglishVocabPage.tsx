@@ -25,6 +25,7 @@ import {
   type EnglishVocabInProgressQuiz,
   type EnglishVocabDerivationInProgressQuiz,
 } from '../lib/storage'
+import { isComposingEnter } from '../lib/imeGuard'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
 import './StudyPage.css'
@@ -415,6 +416,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   useEffect(() => {
     if (phase !== 'quiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (quizFeedback) {
         if (!quizFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextQuiz()
         return
@@ -471,6 +473,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   useEffect(() => {
     if (phase !== 'derivationQuiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (derivationFeedback) {
         if (!derivationFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextDerivation()
         return

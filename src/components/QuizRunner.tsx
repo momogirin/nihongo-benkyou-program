@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { generateQuestions, type QuizQuestion } from '../lib/quizGenerator'
 import { correctAnswerLabel, isCorrectAnswer } from '../lib/answerMatching'
+import { isComposingEnter } from '../lib/imeGuard'
 import type { InProgressQuiz } from '../lib/storage'
 import type { Kanji } from '../data/kanji'
 import type { AnsweredQuestion, QuizConfig } from '../types'
@@ -98,6 +99,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
   // bug as the already-fixed 오답 "다음" button auto-focus, just showing up
   // via the per-question choice-focus effect instead)
   const skipNextFocusRef = useRef(false)
+  const nextButtonRef = useRef<HTMLButtonElement>(null)
 
   const question = questions[index]
   const isChoiceMode = config.questionType !== 'promptToAnswer'
@@ -121,6 +123,17 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
       inputRef.current?.focus()
     }
   }, [index, isChoiceMode])
+
+  // 입력형 문제에서 오답이 뜨면 <input disabled>로 바뀌면서 브라우저가 강제로
+  // blur시켜 포커스가 완전히 유실된다(disabled 요소는 focus를 가질 수 없음).
+  // 그 상태로는 window keydown 리스너가 Enter를 잡아도 사용자 체감상 "먹통"처럼
+  // 느껴지므로, 오답으로 확정되는 순간 "다음" 버튼으로 포커스를 옮겨 Enter/Tab
+  // 흐름이 끊기지 않게 한다.
+  useEffect(() => {
+    if (activeFeedback && !activeFeedback.isCorrect) {
+      nextButtonRef.current?.focus()
+    }
+  }, [activeFeedback])
 
   function goNext(nextIndex: number) {
     if (nextIndex < questions.length) {
@@ -184,6 +197,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
   // Enter-to-advance past a wrong answer all go through here
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (activeFeedback) {
         if (!activeFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNext()
         return
@@ -233,7 +247,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
           )}
           {activeFeedback && !activeFeedback.isCorrect && <KanjiHint kanji={question.kanji} />}
           {activeFeedback && !activeFeedback.isCorrect && (
-            <button type="button" className="quiz-next-button" onClick={handleNext}>
+            <button type="button" ref={nextButtonRef} className="quiz-next-button" onClick={handleNext}>
               다음
             </button>
           )}
@@ -274,7 +288,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
           </div>
           {activeFeedback && !activeFeedback.isCorrect && <KanjiHint kanji={question.kanji} />}
           {activeFeedback && !activeFeedback.isCorrect && (
-            <button type="button" className="quiz-next-button" onClick={handleNext}>
+            <button type="button" ref={nextButtonRef} className="quiz-next-button" onClick={handleNext}>
               다음
             </button>
           )}

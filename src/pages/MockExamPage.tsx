@@ -22,6 +22,7 @@ import {
   type MockExamInProgressQuiz,
 } from '../lib/storage'
 import type { MockExamHistoryEntry } from '../types'
+import { isComposingEnter } from '../lib/imeGuard'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
 import '../components/SetupScreen.css'
@@ -224,6 +225,7 @@ export default function MockExamPage() {
   useEffect(() => {
     if (phase !== 'running') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (feedback) {
         if (!feedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNext()
         return

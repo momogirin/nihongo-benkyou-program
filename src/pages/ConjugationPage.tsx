@@ -7,6 +7,7 @@ import {
   type ConjugationEntry,
 } from '../lib/conjugation'
 import { vocabConjugationEntries } from '../lib/vocabConjugation'
+import { isComposingEnter } from '../lib/imeGuard'
 import type { KanjiLevel } from '../data/kanji'
 import {
   addConjugationQuizHistoryEntry,
@@ -359,6 +360,7 @@ function ConjugationQuiz() {
   useEffect(() => {
     if (phase !== 'running') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       const question = questions[index]
       if (!question) return
       if (!feedback && e.key >= '1' && e.key <= '9') {

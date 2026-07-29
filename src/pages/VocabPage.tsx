@@ -3,6 +3,7 @@ import { vocabList, type VocabWord } from '../data/vocab'
 import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
 import { isCorrectAnswer } from '../lib/answerMatching'
+import { isComposingEnter } from '../lib/imeGuard'
 import { TYPE_LABELS } from '../lib/conjugation'
 import {
   generateVocabQuestions,
@@ -241,6 +242,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [readingAnswers, setReadingAnswers] = useState<ReadingAnswer[]>([])
   const [readingFeedback, setReadingFeedback] = useState<{ isCorrect: boolean; userAnswer: string } | null>(null)
   const readingInputRef = useRef<HTMLInputElement>(null)
+  const readingNextButtonRef = useRef<HTMLButtonElement>(null)
   const readingRestartButtonRef = useRef<HTMLButtonElement>(null)
   const readingStartRef = useRef(0)
   const lastAdvancedReadingIndexRef = useRef(-1)
@@ -722,6 +724,15 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     readingInputRef.current?.focus()
   }, [phase, readingIndex])
 
+  // 오답이 뜨면 <input disabled>로 바뀌며 브라우저가 강제로 blur시켜 포커스가
+  // 완전히 유실된다(disabled 요소는 focus 불가) — 오답 확정 순간 "다음"
+  // 버튼으로 포커스를 옮겨 Enter 흐름이 끊기지 않게 한다 (QuizRunner.tsx와 동일 이유)
+  useEffect(() => {
+    if (readingFeedback && !readingFeedback.isCorrect) {
+      readingNextButtonRef.current?.focus()
+    }
+  }, [readingFeedback])
+
   useEffect(() => {
     if (phase !== 'writingQuiz') return
     if (skipNextChoiceFocusRef.current) {
@@ -810,6 +821,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'quiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (quizFeedback) {
         if (!quizFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextQuiz()
         return
@@ -866,6 +878,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'blankQuiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (blankFeedback) {
         if (!blankFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextBlank()
         return
@@ -927,6 +940,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'readingQuiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (readingFeedback) {
         if (!readingFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextReading()
         return
@@ -983,6 +997,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'writingQuiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (writingFeedback) {
         if (!writingFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextWriting()
         return
@@ -1039,6 +1054,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'transitivityQuiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (transitivityFeedback) {
         if (!transitivityFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextTransitivity()
         return
@@ -1096,6 +1112,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'synonymQuiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (synonymFeedback) {
         if (!synonymFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextSynonym()
         return
@@ -1153,6 +1170,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'usageQuiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (usageFeedback) {
         if (!usageFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextUsage()
         return
@@ -1668,7 +1686,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         )}
         {readingFeedback && !readingFeedback.isCorrect && <VocabHint entry={entry} />}
         {readingFeedback && !readingFeedback.isCorrect && (
-          <button type="button" className="quiz-next-button" onClick={handleNextReading}>
+          <button type="button" ref={readingNextButtonRef} className="quiz-next-button" onClick={handleNextReading}>
             다음
           </button>
         )}

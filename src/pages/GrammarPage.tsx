@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { GrammarPoint } from '../data/grammar'
 import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
+import { isComposingEnter } from '../lib/imeGuard'
 import {
   generateGrammarQuestions,
   generateGrammarQuestionsFromIds,
@@ -483,6 +484,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'quiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (quizFeedback) {
         if (!quizFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextQuiz()
         return
@@ -539,6 +541,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   useEffect(() => {
     if (phase !== 'blankQuiz') return
     function handleKeyDown(e: KeyboardEvent) {
+      if (isComposingEnter(e)) return
       if (blankFeedback) {
         if (!blankFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextBlank()
         return
