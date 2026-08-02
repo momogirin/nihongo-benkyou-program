@@ -100,6 +100,11 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: transparent;
+  /* explicit theme color — without this the button falls back to the system
+     `buttontext` color, which follows OS color-scheme (light dark) instead of
+     the app's theme toggle, making the label near-invisible when the app is in
+     light mode but the OS is in dark mode */
+  color: var(--color-ink);
   font-size: 14px;
   cursor: pointer;
 }
