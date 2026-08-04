@@ -229,7 +229,7 @@
 }
 
 .study-page {
-  max-width: 560px;
+  max-width: 720px;
 }
 
 .study-page-table {
@@ -359,13 +359,10 @@
   padding: 32px 28px;
   margin: 12px 0 20px;
   text-align: left;
-  /* fixed instead of content-sized: etymology/example length used to
-     push the 이전/다음 buttons up and down between cards, so the mouse
-     had to chase the button on every card. Empty space at the bottom
-     of shorter cards is fine; overflow-y is just a safety net for the
-     rare card that's still taller than this. */
-  height: 480px;
-  overflow-y: auto;
+  /* min-height instead of fixed: keeps short cards from looking empty
+     while letting long cards (etymology/example text) grow the card
+     itself instead of scrolling inside a clipped box. */
+  min-height: 560px;
 }
 
 .study-top {

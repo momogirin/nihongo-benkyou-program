@@ -91,8 +91,10 @@ export default function StudyPage({ onStartQuiz }: Props) {
         setCardIndex((i) => (i + 1 < batch.length ? i + 1 : i))
       } else if (e.key === 'ArrowLeft') {
         setCardIndex((i) => (i > 0 ? i - 1 : i))
-      } else if (e.key === 'Enter') {
+      } else if (e.key === 'Enter' || e.key === 'y' || e.key === 'Y') {
         selfCheck(batch[cardIndex].id, true)
+      } else if (e.key === 'n' || e.key === 'N') {
+        selfCheck(batch[cardIndex].id, false)
       }
     }
     window.addEventListener('keydown', handleKeyDown)
@@ -286,7 +288,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
                 알겠음
               </button>
             </div>
-            <p className="shortcut-hint">← → 로 이전/다음 · Enter로 알겠음 처리 후 다음</p>
+            <p className="shortcut-hint">← → 로 이전/다음 · Y 또는 Enter로 알겠음 · N으로 모르겠음</p>
           </>
         )}
         {viewMode === 'table' && isLast && (
