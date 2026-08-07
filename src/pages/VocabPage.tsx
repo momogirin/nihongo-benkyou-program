@@ -193,6 +193,9 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [phase, setPhase] = useState<Phase>('setup')
   const [batch, setBatch] = useState<VocabWord[]>([])
   const [cardIndex, setCardIndex] = useState(0)
+  // 방금 학습 카드로 넘긴 항목들 — done 화면에서 바로 퀴즈로 확인시키기 위해 보관
+  // (GrammarPage와 동일한 이유·동일한 패턴)
+  const [studiedBatch, setStudiedBatch] = useState<VocabWord[]>([])
   const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
 
   const levelWords = useMemo(() => vocabList.filter((w) => w.level === level), [level])
@@ -311,6 +314,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   function finishBatch() {
     setVocabStudyProgress(level, Math.min(completedCount + batch.length, pool.length))
+    setStudiedBatch(batch)
     setPhase('done')
   }
 
@@ -334,9 +338,17 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   // saves progress up to (not including) the card being left, so 이어하기
   // re-shows that same card rather than skipping it
+  // 중간에 나가도 지금까지 본 카드만 대상으로 done 화면을 거친다 — 배치가 "남은
+  // 전체"(N5 단어면 718개)라 끝까지 넘기는 일이 없어서, 이렇게 하지 않으면
+  // "방금 배운 것 확인하기"를 볼 기회가 사실상 없다 (GrammarPage와 동일)
   function exitBatch() {
     setVocabStudyProgress(level, completedCount + cardIndex)
-    setPhase('setup')
+    if (cardIndex > 0) {
+      setStudiedBatch(batch.slice(0, cardIndex))
+      setPhase('done')
+    } else {
+      setPhase('setup')
+    }
   }
 
   function startQuiz() {
@@ -506,17 +518,24 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     setPhase('usageQuiz')
   }
 
-  useEffect(() => {
-    if (!retryIds || retryIds.length === 0) return
+  // 특정 id 집합만 출제 — 오답 재도전(retryIds)과 학습 직후 "방금 배운 것 확인"이
+  // 공유한다. 뜻 맞히기는 모든 단어가 출제 가능하므로 이 유형으로 고정한다
+  // (읽기/표기/자타동사 등은 조건을 만족하는 단어만 남아 문항 수가 들쭉날쭉해짐).
+  function startQuizFromIds(ids: string[]) {
     clearVocabInProgressQuiz()
     setSavedQuiz(null)
-    setQuizQuestions(generateVocabQuestionsFromIds(retryIds))
+    setQuizQuestions(generateVocabQuestionsFromIds(ids))
     setQuizIndex(0)
     setQuizAnswers([])
     setQuizFeedback(null)
     lastAdvancedQuizIndexRef.current = -1
     quizStartRef.current = Date.now()
     setPhase('quiz')
+  }
+
+  useEffect(() => {
+    if (!retryIds || retryIds.length === 0) return
+    startQuizFromIds(retryIds)
     onRetryIdsConsumed?.()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [retryIds])
@@ -1407,12 +1426,23 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     return (
       <div className="page">
         <h1>수고했어요!</h1>
-        <p className="page-placeholder">단어 {batch.length}개를 학습했습니다.</p>
+        <p className="page-placeholder">
+          단어 {studiedBatch.length}개를 학습했습니다. 방금 배운 단어로 퀴즈를 풀어볼까요?
+        </p>
         <div className="study-done-actions">
+          {studiedBatch.length > 0 && (
+            <button
+              type="button"
+              ref={donePrimaryButtonRef}
+              className="study-nav-primary"
+              onClick={() => startQuizFromIds(studiedBatch.map((w) => w.id))}
+            >
+              방금 배운 {studiedBatch.length}개 확인하기
+            </button>
+          )}
           <button
             type="button"
-            ref={donePrimaryButtonRef}
-            className="study-nav-primary"
+            ref={studiedBatch.length > 0 ? undefined : donePrimaryButtonRef}
             onClick={() => setPhase('setup')}
           >
             그만하기

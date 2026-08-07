@@ -33,6 +33,9 @@ export default function StudyPage({ onStartQuiz }: Props) {
 
   const [phase, setPhase] = useState<Phase>('setup')
   const [batch, setBatch] = useState<Kanji[]>([])
+  // 방금 학습 카드로 넘긴 항목들 — done 화면에서 이것만 퀴즈로 확인시킨다
+  // (중간에 나가면 batch 전체가 아니라 실제로 본 앞부분만 담긴다)
+  const [studiedBatch, setStudiedBatch] = useState<Kanji[]>([])
   const [cardIndex, setCardIndex] = useState(0)
   const [viewMode, setViewMode] = useState<ViewMode>('card')
   const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
@@ -54,6 +57,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
   function finishBatch() {
     if (!level) return
     setStudyProgress(level, Math.min(completedCount + batch.length, pool.length))
+    setStudiedBatch(batch)
     setPhase('done')
   }
 
@@ -78,10 +82,18 @@ export default function StudyPage({ onStartQuiz }: Props) {
 
   // saves progress up to (not including) the card being left, so 이어하기
   // re-shows that same card rather than skipping it
+  // 중간에 나가도 지금까지 본 카드만 대상으로 done 화면을 거친다 — 배치가 "남은
+  // 전체"라 끝까지 넘기는 일이 없어서, 이렇게 하지 않으면 done 화면의
+  // "방금 배운 것 확인하기"를 볼 기회가 사실상 없다 (Vocab/GrammarPage와 동일)
   function exitBatch() {
     if (!level) return
     setStudyProgress(level, completedCount + cardIndex)
-    setPhase('setup')
+    if (cardIndex > 0) {
+      setStudiedBatch(batch.slice(0, cardIndex))
+      setPhase('done')
+    } else {
+      setPhase('setup')
+    }
   }
 
   useEffect(() => {
@@ -306,18 +318,26 @@ export default function StudyPage({ onStartQuiz }: Props) {
     return (
       <div className="page">
         <h1>수고했어요!</h1>
-        <p className="page-placeholder">{batch.length}자를 학습했습니다. 방금 배운 한자로 퀴즈를 풀어볼까요?</p>
+        <p className="page-placeholder">
+          {studiedBatch.length}자를 학습했습니다. 방금 배운 한자로 퀴즈를 풀어볼까요?
+        </p>
         <div className="study-done-actions">
+          {studiedBatch.length > 0 && (
+            <button
+              type="button"
+              ref={donePrimaryButtonRef}
+              className="study-nav-primary"
+              onClick={() => onStartQuiz(kanjiIdsQuizConfig(studiedBatch.map((k) => k.id)))}
+            >
+              방금 배운 {studiedBatch.length}자 확인하기
+            </button>
+          )}
           <button
             type="button"
-            ref={donePrimaryButtonRef}
-            className="study-nav-primary"
-            onClick={() => onStartQuiz(kanjiIdsQuizConfig(batch.map((k) => k.id)))}
+            ref={studiedBatch.length > 0 ? undefined : donePrimaryButtonRef}
+            onClick={() => setPhase('setup')}
           >
-            퀴즈 풀기
-          </button>
-          <button type="button" onClick={() => setPhase('setup')}>
-            나중에
+            그만하기
           </button>
         </div>
       </div>

@@ -124,6 +124,11 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [phase, setPhase] = useState<Phase>('setup')
   const [batch, setBatch] = useState<GrammarPoint[]>([])
   const [cardIndex, setCardIndex] = useState(0)
+  // 방금 학습 카드로 넘긴 항목들 — done 화면에서 "방금 배운 것만" 바로 퀴즈로
+  // 확인할 수 있게 보관한다. 배운 직후 확인이 학습에서 가장 효과가 큰데, 기존에는
+  // setup으로 돌아가 급수 전체 풀에서 랜덤 출제하는 경로밖에 없어서 아직 안 배운
+  // 항목이 섞여 나왔다.
+  const [studiedBatch, setStudiedBatch] = useState<GrammarPoint[]>([])
   const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
 
   const [browseIndex, setBrowseIndex] = useState<number | null>(null)
@@ -204,6 +209,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   function finishBatch() {
     setGrammarStudyProgress(level, Math.min(completedCount + batch.length, pool.length))
+    setStudiedBatch(batch)
     setPhase('done')
   }
 
@@ -226,9 +232,18 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   // saves progress up to (not including) the card being left, so 이어하기
   // re-shows that same card rather than skipping it
+  // 배치는 "남은 전체"라 끝까지 넘기는 일이 드물다(N5 문법이면 85개). 그래서 중간에
+  // 나가도 setup으로 직행하지 않고, 지금까지 본 카드만 대상으로 done 화면을 거치게
+  // 한다 — 그러지 않으면 "방금 배운 것 확인하기"를 볼 기회가 사실상 없다.
+  // cardIndex는 "지금 보고 있는 카드"라 아직 판정하지 않았으므로 그 앞까지만 학습분.
   function exitBatch() {
     setGrammarStudyProgress(level, completedCount + cardIndex)
-    setPhase('setup')
+    if (cardIndex > 0) {
+      setStudiedBatch(batch.slice(0, cardIndex))
+      setPhase('done')
+    } else {
+      setPhase('setup')
+    }
   }
 
   function startQuiz() {
@@ -304,17 +319,24 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     setPhase('sentenceQuiz')
   }
 
-  useEffect(() => {
-    if (!retryIds || retryIds.length === 0) return
+  // 특정 id 집합만 출제 — 오답 재도전(retryIds)과 학습 직후 "방금 배운 것 확인"이
+  // 공유한다. 뜻 맞히기는 모든 문형이 출제 가능하므로 여기서는 그 유형으로 고정한다
+  // (빈칸/문장배열은 조건을 만족하는 항목만 남아 문항 수가 들쭉날쭉해짐).
+  function startQuizFromIds(ids: string[]) {
     clearGrammarInProgressQuiz()
     setSavedQuiz(null)
-    setQuizQuestions(generateGrammarQuestionsFromIds(retryIds))
+    setQuizQuestions(generateGrammarQuestionsFromIds(ids))
     setQuizIndex(0)
     setQuizAnswers([])
     setQuizFeedback(null)
     lastAdvancedQuizIndexRef.current = -1
     quizStartRef.current = Date.now()
     setPhase('quiz')
+  }
+
+  useEffect(() => {
+    if (!retryIds || retryIds.length === 0) return
+    startQuizFromIds(retryIds)
     onRetryIdsConsumed?.()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [retryIds])
@@ -814,15 +836,27 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   }
 
   if (phase === 'done') {
+    const studiedIds = studiedBatch.map((g) => g.id)
     return (
       <div className="page">
         <h1>수고했어요!</h1>
-        <p className="page-placeholder">문법 {batch.length}개를 학습했습니다.</p>
+        <p className="page-placeholder">
+          문법 {studiedIds.length}개를 학습했습니다. 방금 배운 문법으로 퀴즈를 풀어볼까요?
+        </p>
         <div className="study-done-actions">
+          {studiedIds.length > 0 && (
+            <button
+              type="button"
+              ref={donePrimaryButtonRef}
+              className="study-nav-primary"
+              onClick={() => startQuizFromIds(studiedIds)}
+            >
+              방금 배운 {studiedIds.length}개 확인하기
+            </button>
+          )}
           <button
             type="button"
-            ref={donePrimaryButtonRef}
-            className="study-nav-primary"
+            ref={studiedIds.length > 0 ? undefined : donePrimaryButtonRef}
             onClick={() => setPhase('setup')}
           >
             그만하기
