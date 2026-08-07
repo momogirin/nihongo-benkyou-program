@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { vocabList, type VocabWord } from '../data/vocab'
 import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
-import { isCorrectAnswer } from '../lib/answerMatching'
+import { acceptableReadings, isCorrectAnswer } from '../lib/answerMatching'
 import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
 import QuizVerdict from '../components/QuizVerdict'
 import { TYPE_LABELS } from '../lib/conjugation'
@@ -881,7 +881,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     if (lastSubmittedReadingIndexRef.current === readingIndex) return
     lastSubmittedReadingIndexRef.current = readingIndex
     const entry = readingQuestions[readingIndex]
-    const isCorrect = isCorrectAnswer(rawAnswer, entry.reading)
+    const isCorrect = isCorrectAnswer(rawAnswer, acceptableReadings(entry.reading))
     setReadingFeedback({ isCorrect, userAnswer: rawAnswer })
     const updatedAnswers = [...readingAnswers, { entry, userAnswer: rawAnswer, isCorrect }]
     setReadingAnswers(updatedAnswers)
