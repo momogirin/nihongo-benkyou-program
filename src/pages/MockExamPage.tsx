@@ -23,6 +23,7 @@ import {
 } from '../lib/storage'
 import type { MockExamHistoryEntry } from '../types'
 import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
+import QuizVerdict from '../components/QuizVerdict'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
 import '../components/SetupScreen.css'
@@ -391,6 +392,7 @@ export default function MockExamPage() {
             )
           })}
         </div>
+        {feedback && <QuizVerdict isCorrect={feedback.isCorrect} />}
         {feedback && !feedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNext}>
             다음

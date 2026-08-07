@@ -8,6 +8,7 @@ import {
 } from '../lib/conjugation'
 import { vocabConjugationEntries } from '../lib/vocabConjugation'
 import { isComposingEnter } from '../lib/imeGuard'
+import QuizVerdict from '../components/QuizVerdict'
 import type { KanjiLevel } from '../data/kanji'
 import {
   addConjugationQuizHistoryEntry,
@@ -471,6 +472,7 @@ function ConjugationQuiz() {
             )
           })}
         </div>
+        {feedback && <QuizVerdict isCorrect={feedback.isCorrect} />}
         {feedback && !feedback.isCorrect && <ConjHint entry={question.entry} target={question.target} />}
         {feedback && !feedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={goNext}>

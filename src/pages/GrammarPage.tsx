@@ -3,6 +3,7 @@ import type { GrammarPoint } from '../data/grammar'
 import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
 import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
+import QuizVerdict from '../components/QuizVerdict'
 import {
   generateGrammarQuestions,
   generateGrammarQuestionsFromIds,
@@ -878,6 +879,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {quizFeedback && <QuizVerdict isCorrect={quizFeedback.isCorrect} />}
         {quizFeedback && !quizFeedback.isCorrect && <GrammarHint entry={question.entry} />}
         {quizFeedback && !quizFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextQuiz}>
@@ -966,6 +968,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {blankFeedback && <QuizVerdict isCorrect={blankFeedback.isCorrect} />}
         {blankFeedback && !blankFeedback.isCorrect && <GrammarHint entry={question.entry} />}
         {blankFeedback && !blankFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextBlank}>
@@ -1061,6 +1064,8 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+
+        {sentenceFeedback && <QuizVerdict isCorrect={sentenceFeedback.isCorrect} />}
 
         {/* 오답 시 정답 순서를 아래에 노출 */}
         {sentenceFeedback && !sentenceFeedback.isCorrect && (

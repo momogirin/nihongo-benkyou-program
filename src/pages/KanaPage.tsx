@@ -8,6 +8,9 @@ import {
   recordSrsReview,
   removeKanaWrongNote,
 } from '../lib/storage'
+import QuizVerdict from '../components/QuizVerdict'
+// .quiz-feedback(정/오답 문구) 스타일이 여기 있다 — 다른 퀴즈 화면들과 동일
+import '../components/QuizRunner.css'
 import './StudyPage.css'
 import './VocabPage.css'
 import './KanjiPage.css'
@@ -603,6 +606,7 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
             )
           })}
         </div>
+        {feedback && <QuizVerdict isCorrect={feedback.isCorrect} />}
         {feedback && !feedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={goNext}>
             다음

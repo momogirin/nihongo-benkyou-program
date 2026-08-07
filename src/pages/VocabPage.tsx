@@ -4,6 +4,7 @@ import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
 import { isCorrectAnswer } from '../lib/answerMatching'
 import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
+import QuizVerdict from '../components/QuizVerdict'
 import { TYPE_LABELS } from '../lib/conjugation'
 import {
   generateVocabQuestions,
@@ -1468,6 +1469,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {quizFeedback && <QuizVerdict isCorrect={quizFeedback.isCorrect} />}
         {quizFeedback && !quizFeedback.isCorrect && <VocabHint entry={question.entry} />}
         {quizFeedback && !quizFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextQuiz}>
@@ -1559,6 +1561,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {blankFeedback && <QuizVerdict isCorrect={blankFeedback.isCorrect} />}
         {blankFeedback && !blankFeedback.isCorrect && <VocabHint entry={question.entry} />}
         {blankFeedback && !blankFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextBlank}>
@@ -1644,9 +1647,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           onChange={(e) => setReadingInputValue(e.target.value)}
         />
         {readingFeedback && (
-          <p className={`quiz-feedback ${readingFeedback.isCorrect ? 'correct' : 'incorrect'}`}>
-            {readingFeedback.isCorrect ? '정답입니다' : `오답 · 정답: ${entry.reading}`}
-          </p>
+          <QuizVerdict isCorrect={readingFeedback.isCorrect} answerLabel={entry.reading} />
         )}
         {readingFeedback && !readingFeedback.isCorrect && <VocabHint entry={entry} />}
         {readingFeedback && !readingFeedback.isCorrect && (
@@ -1741,6 +1742,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {writingFeedback && <QuizVerdict isCorrect={writingFeedback.isCorrect} />}
         {writingFeedback && !writingFeedback.isCorrect && <VocabHint entry={question.entry} />}
         {writingFeedback && !writingFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextWriting}>
@@ -1799,6 +1801,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {transitivityFeedback && <QuizVerdict isCorrect={transitivityFeedback.isCorrect} />}
         {transitivityFeedback && !transitivityFeedback.isCorrect && <VocabHint entry={question.entry} />}
         {transitivityFeedback && !transitivityFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextTransitivity}>
@@ -1943,6 +1946,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {synonymFeedback && <QuizVerdict isCorrect={synonymFeedback.isCorrect} />}
         {synonymFeedback && !synonymFeedback.isCorrect && <VocabHint entry={question.answer} />}
         {synonymFeedback && !synonymFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextSynonym}>
@@ -2046,6 +2050,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             )
           })}
         </div>
+        {usageFeedback && <QuizVerdict isCorrect={usageFeedback.isCorrect} />}
         {usageFeedback && !usageFeedback.isCorrect && <VocabHint entry={question.entry} />}
         {usageFeedback && !usageFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextUsage}>

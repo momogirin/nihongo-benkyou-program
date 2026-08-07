@@ -26,6 +26,7 @@ import {
   type EnglishVocabDerivationInProgressQuiz,
 } from '../lib/storage'
 import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
+import QuizVerdict from '../components/QuizVerdict'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
 import './StudyPage.css'
@@ -774,6 +775,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
             )
           })}
         </div>
+        {quizFeedback && <QuizVerdict isCorrect={quizFeedback.isCorrect} />}
         {quizFeedback && !quizFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextQuiz}>
             다음
@@ -865,6 +867,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
             )
           })}
         </div>
+        {derivationFeedback && <QuizVerdict isCorrect={derivationFeedback.isCorrect} />}
         {derivationFeedback && !derivationFeedback.isCorrect && (
           <button type="button" className="quiz-next-button" onClick={handleNextDerivation}>
             다음

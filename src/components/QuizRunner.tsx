@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { generateQuestions, type QuizQuestion } from '../lib/quizGenerator'
 import { correctAnswerLabel, isCorrectAnswer } from '../lib/answerMatching'
 import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
+import QuizVerdict from './QuizVerdict'
 import type { InProgressQuiz } from '../lib/storage'
 import type { Kanji } from '../data/kanji'
 import type { AnsweredQuestion, QuizConfig } from '../types'
@@ -227,11 +228,10 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
             onChange={(e) => setInputValue(e.target.value)}
           />
           {activeFeedback && (
-            <p className={`quiz-feedback ${activeFeedback.isCorrect ? 'correct' : 'incorrect'}`}>
-              {activeFeedback.isCorrect
-                ? '정답입니다'
-                : `오답 · 정답: ${correctAnswerLabel(config.questionType, question.kanji)}`}
-            </p>
+            <QuizVerdict
+              isCorrect={activeFeedback.isCorrect}
+              answerLabel={correctAnswerLabel(config.questionType, question.kanji)}
+            />
           )}
           {activeFeedback && !activeFeedback.isCorrect && <KanjiHint kanji={question.kanji} />}
           {activeFeedback && !activeFeedback.isCorrect && (
@@ -274,6 +274,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
               )
             })}
           </div>
+          {activeFeedback && <QuizVerdict isCorrect={activeFeedback.isCorrect} />}
           {activeFeedback && !activeFeedback.isCorrect && <KanjiHint kanji={question.kanji} />}
           {activeFeedback && !activeFeedback.isCorrect && (
             <button type="button" ref={nextButtonRef} className="quiz-next-button" onClick={handleNext}>
