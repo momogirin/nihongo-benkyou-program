@@ -14,11 +14,13 @@ import {
   addWrongNotes,
   clearMockExamInProgressQuiz,
   getMockExamInProgressQuiz,
+  getSetupPrefs,
   recordSrsReview,
   removeGrammarWrongNote,
   removeVocabWrongNote,
   removeWrongNote,
   saveMockExamInProgressQuiz,
+  setSetupPrefs,
   type MockExamInProgressQuiz,
 } from '../lib/storage'
 import type { MockExamHistoryEntry } from '../types'
@@ -58,10 +60,28 @@ function emptyBreakdown(): Record<MockExamDomain, { total: number; correct: numb
   return { kanji: { total: 0, correct: 0 }, vocab: { total: 0, correct: 0 }, grammar: { total: 0, correct: 0 } }
 }
 
+// 마지막으로 고른 급수/문항수 — 다음 진입 시 되살린다(다른 setup 화면과 동일 패턴)
+interface MockExamSetupPrefs {
+  level: KanjiLevel
+  count: number
+}
+
 export default function MockExamPage() {
+  const prefs = useMemo(() => {
+    const saved = getSetupPrefs<MockExamSetupPrefs>('mockExam')
+    if (!saved) return {}
+    return {
+      level: MOCK_EXAM_LEVELS.includes(saved.level as KanjiLevel) ? saved.level : undefined,
+      count: typeof saved.count === 'number' && saved.count > 0 ? saved.count : undefined,
+    }
+  }, [])
   const [phase, setPhase] = useState<Phase>('setup')
-  const [level, setLevel] = useState<KanjiLevel>(MOCK_EXAM_LEVELS[0])
-  const [count, setCount] = useState(20)
+  const [level, setLevel] = useState<KanjiLevel>(prefs.level ?? MOCK_EXAM_LEVELS[0])
+  const [count, setCount] = useState(prefs.count ?? 20)
+
+  useEffect(() => {
+    setSetupPrefs<MockExamSetupPrefs>('mockExam', { level, count })
+  }, [level, count])
 
   const [questions, setQuestions] = useState<MockExamQuestion[]>([])
   const [index, setIndex] = useState(0)

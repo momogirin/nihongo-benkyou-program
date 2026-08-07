@@ -27,6 +27,7 @@ import {
   getGrammarBlankInProgressQuiz,
   getGrammarSentenceInProgressQuiz,
   getGrammarStudyProgress,
+  getSetupPrefs,
   recordSrsReview,
   recordSrsSelfCheck,
   removeGrammarWrongNote,
@@ -34,6 +35,7 @@ import {
   saveGrammarBlankInProgressQuiz,
   saveGrammarSentenceInProgressQuiz,
   setGrammarStudyProgress,
+  setSetupPrefs,
   type GrammarInProgressQuiz,
   type GrammarBlankInProgressQuiz,
   type GrammarSentenceInProgressQuiz,
@@ -113,8 +115,33 @@ function GrammarHint({ entry }: { entry: GrammarPoint }) {
   )
 }
 
+// setup 화면에서 마지막으로 고른 값 — 다음 진입 시 그대로 되살린다. 저장된 값이
+// 지금 코드에서 유효하지 않으면(옵션이 사라짐 등) 조용히 기본값으로 떨어진다.
+interface GrammarSetupPrefs {
+  level: KanjiLevel
+  quizType: QuizType
+  quizCount: (typeof QUIZ_COUNT_OPTIONS)[number]
+  quizOrder: 'random' | 'sequential'
+}
+
+function loadGrammarPrefs(): Partial<GrammarSetupPrefs> {
+  const saved = getSetupPrefs<GrammarSetupPrefs>('grammar')
+  if (!saved) return {}
+  return {
+    level: grammarAvailableLevels.includes(saved.level as KanjiLevel) ? saved.level : undefined,
+    quizType: (['meaning', 'blank', 'sentence'] as const).includes(saved.quizType as QuizType)
+      ? saved.quizType
+      : undefined,
+    quizCount: QUIZ_COUNT_OPTIONS.includes(saved.quizCount as (typeof QUIZ_COUNT_OPTIONS)[number])
+      ? saved.quizCount
+      : undefined,
+    quizOrder: saved.quizOrder === 'random' || saved.quizOrder === 'sequential' ? saved.quizOrder : undefined,
+  }
+}
+
 export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
-  const [level, setLevel] = useState<KanjiLevel>(grammarAvailableLevels[0])
+  const prefs = useMemo(loadGrammarPrefs, [])
+  const [level, setLevel] = useState<KanjiLevel>(prefs.level ?? grammarAvailableLevels[0])
   const pool = useMemo(() => grammarLevelPool(level), [level])
   const blankPool = useMemo(() => grammarBlankLevelPool(level), [level])
   const sentencePool = useMemo(() => grammarSentenceLevelPool(level), [level])
@@ -134,8 +161,10 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [browseIndex, setBrowseIndex] = useState<number | null>(null)
   const [browseQuery, setBrowseQuery] = useState('')
 
-  const [quizCount, setQuizCount] = useState<(typeof QUIZ_COUNT_OPTIONS)[number]>(QUIZ_QUESTION_COUNT)
-  const [quizOrder, setQuizOrder] = useState<'random' | 'sequential'>('random')
+  const [quizCount, setQuizCount] = useState<(typeof QUIZ_COUNT_OPTIONS)[number]>(
+    prefs.quizCount ?? QUIZ_QUESTION_COUNT,
+  )
+  const [quizOrder, setQuizOrder] = useState<'random' | 'sequential'>(prefs.quizOrder ?? 'random')
   const [quizQuestions, setQuizQuestions] = useState<GrammarQuizQuestion[]>([])
   const [quizIndex, setQuizIndex] = useState(0)
   const [quizAnswers, setQuizAnswers] = useState<QuizAnswer[]>([])
@@ -153,7 +182,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   // 문장 빈칸 채우기 퀴즈 — 뜻 맞히기 퀴즈와 질문/정답 shape이 달라 상태를 따로 둠
   // (이 페이지 안에서도, storage.ts에서도 나란한 병렬 구조 — EnglishVocabPage의
   // 뜻맞히기/품사변환 퀴즈와 같은 패턴)
-  const [quizType, setQuizType] = useState<QuizType>('meaning')
+  const [quizType, setQuizType] = useState<QuizType>(prefs.quizType ?? 'meaning')
   const [blankQuestions, setBlankQuestions] = useState<GrammarBlankQuestion[]>([])
   const [blankIndex, setBlankIndex] = useState(0)
   const [blankAnswers, setBlankAnswers] = useState<BlankAnswer[]>([])
@@ -199,6 +228,12 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     if (phase === 'blankQuizResult') blankRestartButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'sentenceQuizResult') sentenceRestartButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
+
+  // setup 선택이 바뀔 때마다 저장 — 각 setter 호출부에 흩어놓지 않고 한곳에서
+  // 값 변화를 관찰한다(선택 경로가 버튼·키보드 등 여러 개라 누락되기 쉬움)
+  useEffect(() => {
+    setSetupPrefs<GrammarSetupPrefs>('grammar', { level, quizType, quizCount, quizOrder })
+  }, [level, quizType, quizCount, quizOrder])
 
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
     const fromPool = grammarLevelPool(fromLevel)

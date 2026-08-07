@@ -1038,6 +1038,41 @@ export function setRadicalStudyBatchSize(size: number) {
   localStorage.setItem(RADICAL_STUDY_BATCH_SIZE_KEY, String(size))
 }
 
+// setup 화면에서 마지막으로 고른 급수/퀴즈종류/문항수 등을 화면별로 기억한다.
+// 급수 하나를 여러 달에 걸쳐 도는데(N5 단어 718개) 매번 들어올 때마다 같은 선택을
+// 반복하게 하는 건 그 자체가 학습 마찰이라, 다음 진입 시 기본값으로 되살린다.
+// 값의 shape은 화면마다 달라서(단어는 퀴즈종류 7종, 문법은 3종) 화면이 자기
+// 타입으로 읽고 쓰게 두고, 여기서는 저장/복원만 담당한다. 저장된 값이 더 이상
+// 유효하지 않은 경우(퀴즈 종류가 코드에서 사라짐 등)를 호출부가 걸러낼 수 있도록
+// 파싱 실패·키 부재는 null로 돌려준다.
+const SETUP_PREFS_KEY = 'kanjiApp.setupPrefs'
+
+export function getSetupPrefs<T>(screen: string): Partial<T> | null {
+  const raw = localStorage.getItem(SETUP_PREFS_KEY)
+  if (!raw) return null
+  try {
+    const all = JSON.parse(raw) as Record<string, Partial<T>>
+    return all[screen] ?? null
+  } catch {
+    return null
+  }
+}
+
+export function setSetupPrefs<T>(screen: string, prefs: Partial<T>) {
+  const raw = localStorage.getItem(SETUP_PREFS_KEY)
+  let all: Record<string, unknown> = {}
+  if (raw) {
+    try {
+      all = JSON.parse(raw) as Record<string, unknown>
+    } catch {
+      // 손상된 값이면 통째로 다시 쓴다 — 화면 설정이라 유실돼도 기본값으로 복귀할 뿐
+      all = {}
+    }
+  }
+  all[screen] = { ...(all[screen] as object | undefined), ...prefs }
+  localStorage.setItem(SETUP_PREFS_KEY, JSON.stringify(all))
+}
+
 // same shape again, but for the 단어(vocab) 학습 flow
 export function getVocabStudyProgress(level: KanjiLevel): number {
   return getLevelProgressMap(VOCAB_STUDY_PROGRESS_KEY)[level] ?? 0

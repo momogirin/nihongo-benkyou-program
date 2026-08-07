@@ -5,8 +5,10 @@ import {
   addKanaQuizHistoryEntry,
   addKanaWrongNotes,
   getDueSrsIds,
+  getSetupPrefs,
   recordSrsReview,
   removeKanaWrongNote,
+  setSetupPrefs,
 } from '../lib/storage'
 import QuizVerdict from '../components/QuizVerdict'
 // .quiz-feedback(정/오답 문구) 스타일이 여기 있다 — 다른 퀴즈 화면들과 동일
@@ -418,11 +420,34 @@ const QUIZ_TYPE_LABELS: Record<QuizType, string> = {
   pairs: '표기 구분',
 }
 
+// 마지막으로 고른 퀴즈 종류/행 범위/방향/문항수 — 다음 진입 시 되살린다
+interface KanaSetupPrefs {
+  quizType: QuizType
+  group: GroupFilter
+  direction: QuizDirection
+  count: QuizCount
+}
+
 function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
-  const [quizType, setQuizType] = useState<QuizType>('romaji')
-  const [group, setGroup] = useState<GroupFilter>('gojuon')
-  const [direction, setDirection] = useState<QuizDirection>('toRomaji')
-  const [count, setCount] = useState<QuizCount>(20)
+  const prefs = useMemo(() => {
+    const saved = getSetupPrefs<KanaSetupPrefs>('kana')
+    if (!saved) return {}
+    return {
+      quizType: saved.quizType === 'romaji' || saved.quizType === 'pairs' ? saved.quizType : undefined,
+      group: GROUP_FILTERS.some((g) => g.id === saved.group) ? saved.group : undefined,
+      direction:
+        saved.direction === 'toRomaji' || saved.direction === 'toKana' ? saved.direction : undefined,
+      count: QUIZ_COUNTS.includes(saved.count as QuizCount) ? saved.count : undefined,
+    }
+  }, [])
+  const [quizType, setQuizType] = useState<QuizType>(prefs.quizType ?? 'romaji')
+  const [group, setGroup] = useState<GroupFilter>(prefs.group ?? 'gojuon')
+  const [direction, setDirection] = useState<QuizDirection>(prefs.direction ?? 'toRomaji')
+  const [count, setCount] = useState<QuizCount>(prefs.count ?? 20)
+
+  useEffect(() => {
+    setSetupPrefs<KanaSetupPrefs>('kana', { quizType, group, direction, count })
+  }, [quizType, group, direction, count])
   const [phase, setPhase] = useState<Phase>('setup')
   const [questions, setQuestions] = useState<NormQuestion[]>([])
   const [index, setIndex] = useState(0)

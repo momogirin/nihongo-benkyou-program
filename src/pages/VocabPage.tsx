@@ -46,6 +46,7 @@ import {
   getVocabTransitivityInProgressQuiz,
   getVocabSynonymInProgressQuiz,
   getVocabUsageInProgressQuiz,
+  getSetupPrefs,
   getVocabStudyProgress,
   recordSrsReview,
   recordSrsSelfCheck,
@@ -57,6 +58,7 @@ import {
   saveVocabTransitivityInProgressQuiz,
   saveVocabSynonymInProgressQuiz,
   saveVocabUsageInProgressQuiz,
+  setSetupPrefs,
   setVocabStudyProgress,
   type VocabInProgressQuiz,
   type VocabBlankInProgressQuiz,
@@ -178,8 +180,33 @@ function VocabHint({ entry }: { entry: VocabWord }) {
   )
 }
 
+// setup 화면에서 마지막으로 고른 값 — 다음 진입 시 되살린다(GrammarPage와 동일 패턴).
+// 이 화면은 퀴즈 종류만 7종이라 매번 고르는 부담이 특히 크다.
+interface VocabSetupPrefs {
+  level: KanjiLevel
+  quizType: QuizType
+  quizCount: (typeof QUIZ_COUNT_OPTIONS)[number]
+  quizOrder: 'random' | 'sequential'
+}
+
+const QUIZ_TYPES = ['meaning', 'blank', 'reading', 'writing', 'transitivity', 'synonym', 'usage'] as const
+
+function loadVocabPrefs(): Partial<VocabSetupPrefs> {
+  const saved = getSetupPrefs<VocabSetupPrefs>('vocab')
+  if (!saved) return {}
+  return {
+    level: ALL_LEVELS.includes(saved.level as KanjiLevel) ? saved.level : undefined,
+    quizType: QUIZ_TYPES.includes(saved.quizType as QuizType) ? saved.quizType : undefined,
+    quizCount: QUIZ_COUNT_OPTIONS.includes(saved.quizCount as (typeof QUIZ_COUNT_OPTIONS)[number])
+      ? saved.quizCount
+      : undefined,
+    quizOrder: saved.quizOrder === 'random' || saved.quizOrder === 'sequential' ? saved.quizOrder : undefined,
+  }
+}
+
 export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
-  const [level, setLevel] = useState<KanjiLevel>(ALL_LEVELS[0])
+  const prefs = useMemo(loadVocabPrefs, [])
+  const [level, setLevel] = useState<KanjiLevel>(prefs.level ?? ALL_LEVELS[0])
   const pool = useMemo(() => vocabLevelPool(level), [level])
   const blankPool = useMemo(() => vocabBlankLevelPool(level), [level])
   const readingPool = useMemo(() => vocabReadingLevelPool(level), [level])
@@ -202,8 +229,10 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [browseIndex, setBrowseIndex] = useState<number | null>(null)
   const [browseQuery, setBrowseQuery] = useState('')
 
-  const [quizCount, setQuizCount] = useState<(typeof QUIZ_COUNT_OPTIONS)[number]>(QUIZ_QUESTION_COUNT)
-  const [quizOrder, setQuizOrder] = useState<'random' | 'sequential'>('random')
+  const [quizCount, setQuizCount] = useState<(typeof QUIZ_COUNT_OPTIONS)[number]>(
+    prefs.quizCount ?? QUIZ_QUESTION_COUNT,
+  )
+  const [quizOrder, setQuizOrder] = useState<'random' | 'sequential'>(prefs.quizOrder ?? 'random')
   const [quizQuestions, setQuizQuestions] = useState<VocabQuizQuestion[]>([])
   const [quizIndex, setQuizIndex] = useState(0)
   const [quizAnswers, setQuizAnswers] = useState<QuizAnswer[]>([])
@@ -220,7 +249,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   // 문맥 빈칸 채우기 퀴즈 — 뜻 맞히기 퀴즈와 질문/정답 shape이 달라 상태를 따로 둠
   // (GrammarPage의 뜻맞히기/빈칸채우기 퀴즈와 같은 병렬 구조)
-  const [quizType, setQuizType] = useState<QuizType>('meaning')
+  const [quizType, setQuizType] = useState<QuizType>(prefs.quizType ?? 'meaning')
   const [blankQuestions, setBlankQuestions] = useState<VocabBlankQuestion[]>([])
   const [blankIndex, setBlankIndex] = useState(0)
   const [blankAnswers, setBlankAnswers] = useState<BlankAnswer[]>([])
@@ -304,6 +333,11 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     if (phase === 'synonymQuizResult') synonymRestartButtonRef.current?.focus({ preventScroll: true })
     if (phase === 'usageQuizResult') usageRestartButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
+
+  // setup 선택이 바뀔 때마다 저장 (GrammarPage와 동일 패턴)
+  useEffect(() => {
+    setSetupPrefs<VocabSetupPrefs>('vocab', { level, quizType, quizCount, quizOrder })
+  }, [level, quizType, quizCount, quizOrder])
 
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
     const fromPool = vocabLevelPool(fromLevel)

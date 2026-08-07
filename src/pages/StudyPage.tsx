@@ -5,7 +5,13 @@ import { radicalList } from '../data/radicals'
 import { kanjiIdsQuizConfig } from '../lib/quizGenerator'
 import { wordsUsingKanji, wordsUsingKanjiCount } from '../lib/kanjiWordIndex'
 import { onReadingExamples } from '../lib/kanjiOnReadingIndex'
-import { getStudyProgress, setStudyProgress, recordSrsSelfCheck } from '../lib/storage'
+import {
+  getSetupPrefs,
+  getStudyProgress,
+  recordSrsSelfCheck,
+  setSetupPrefs,
+  setStudyProgress,
+} from '../lib/storage'
 import type { QuizConfig } from '../types'
 import './StudyPage.css'
 
@@ -26,7 +32,16 @@ type ViewMode = 'card' | 'table'
 
 export default function StudyPage({ onStartQuiz }: Props) {
   const availableLevels = useMemo(() => ALL_LEVELS.filter((l) => levelPool(l).length > 0), [])
-  const [level, setLevel] = useState<KanjiLevel | null>(availableLevels[0] ?? null)
+  // 마지막으로 보던 급수를 되살린다 — 한 급수를 오래 도는데 매번 N5로 되돌아갈 이유가 없다
+  const savedLevel = useMemo(() => {
+    const saved = getSetupPrefs<{ level: KanjiLevel }>('kanjiStudy')?.level
+    return saved && availableLevels.includes(saved) ? saved : null
+  }, [availableLevels])
+  const [level, setLevel] = useState<KanjiLevel | null>(savedLevel ?? availableLevels[0] ?? null)
+
+  useEffect(() => {
+    if (level) setSetupPrefs<{ level: KanjiLevel }>('kanjiStudy', { level })
+  }, [level])
   const pool = useMemo(() => (level ? levelPool(level) : []), [level])
   const completedCount = level ? Math.min(getStudyProgress(level), pool.length) : 0
   const remaining = pool.length - completedCount

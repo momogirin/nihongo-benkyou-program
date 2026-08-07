@@ -1,6 +1,7 @@
-import { Fragment, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useState } from 'react'
 import { kanjiList, type KanjiLevel } from '../data/kanji'
 import { levelPool } from '../lib/quizGenerator'
+import { getSetupPrefs, setSetupPrefs } from '../lib/storage'
 import type { QuestionCount, QuestionType, QuizConfig, QuizOrder } from '../types'
 import './SetupScreen.css'
 
@@ -28,13 +29,41 @@ interface Props {
   onStart: (config: QuizConfig) => void
 }
 
+// 마지막으로 고른 설정 — 문제 유형은 일부러 제외한다(매번 직접 고르게 두는 게
+// 이 화면의 원래 설계)
+interface KanjiSetupPrefs {
+  levels: KanjiLevel[]
+  order: QuizOrder | null
+  count: QuestionCount | null
+}
+
+function loadKanjiSetupPrefs(): Partial<KanjiSetupPrefs> {
+  const saved = getSetupPrefs<KanjiSetupPrefs>('kanji')
+  if (!saved) return {}
+  const levels = Array.isArray(saved.levels)
+    ? saved.levels.filter((l): l is KanjiLevel => ALL_LEVELS.includes(l))
+    : []
+  return {
+    levels: levels.length > 0 ? levels : undefined,
+    order: saved.order === 'random' || saved.order === 'sequential' ? saved.order : undefined,
+    count: COUNT_OPTIONS.includes(saved.count as QuestionCount) ? saved.count : undefined,
+  }
+}
+
 export default function SetupScreen({ onStart }: Props) {
   // 급수(첫 레벨)/순서/문제수는 거의 항상 같은 값을 고르게 되므로 기본값을 채워
-  // 두고, 매번 실제로 달라질 만한 문제 유형만 매번 직접 고르게 둔다
-  const [levels, setLevels] = useState<KanjiLevel[]>([ALL_LEVELS[0]])
+  // 두고, 매번 실제로 달라질 만한 문제 유형만 매번 직접 고르게 둔다.
+  // 그 기본값을 "마지막에 고른 값"으로 되살린다 — 한 급수를 여러 달 도는데 매번
+  // 같은 선택을 반복시킬 이유가 없다. 문제 유형은 위 의도대로 저장하지 않는다.
+  const prefs = useMemo(loadKanjiSetupPrefs, [])
+  const [levels, setLevels] = useState<KanjiLevel[]>(prefs.levels ?? [ALL_LEVELS[0]])
   const [questionType, setQuestionType] = useState<QuestionType | null>(null)
-  const [order, setOrder] = useState<QuizOrder | null>('random')
-  const [count, setCount] = useState<QuestionCount | null>(20)
+  const [order, setOrder] = useState<QuizOrder | null>(prefs.order ?? 'random')
+  const [count, setCount] = useState<QuestionCount | null>(prefs.count ?? 20)
+
+  useEffect(() => {
+    setSetupPrefs<KanjiSetupPrefs>('kanji', { levels, order, count })
+  }, [levels, order, count])
 
   const availableCount = useMemo(
     () => levels.reduce((sum, level) => sum + levelPool(level).length, 0),

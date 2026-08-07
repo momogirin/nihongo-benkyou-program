@@ -14,8 +14,10 @@ import {
   addConjugationQuizHistoryEntry,
   addConjugationWrongNotes,
   getDueSrsIds,
+  getSetupPrefs,
   recordSrsReview,
   removeConjugationWrongNote,
+  setSetupPrefs,
 } from '../lib/storage'
 import './StudyPage.css'
 import './VocabPage.css'
@@ -290,11 +292,33 @@ function buildQuestion(entry: ConjugationEntry): QuizQuestion {
   return { entry, target, choices }
 }
 
+// 마지막으로 고른 출처/범위/모드/문항수 — 다음 진입 시 되살린다(다른 setup 화면과 동일)
+interface ConjugationSetupPrefs {
+  source: Source
+  scope: Scope
+  mode: QuizMode
+  count: QuizCount
+}
+
 function ConjugationQuiz() {
-  const [source, setSource] = useState<Source>('curated')
-  const [scope, setScope] = useState<Scope>('all')
-  const [mode, setMode] = useState<QuizMode>('produce')
-  const [count, setCount] = useState<QuizCount>(20)
+  const prefs = useMemo(() => {
+    const saved = getSetupPrefs<ConjugationSetupPrefs>('conjugation')
+    if (!saved) return {}
+    return {
+      source: SOURCES.some((s) => s.id === saved.source) ? saved.source : undefined,
+      scope: SCOPES.some((s) => s.id === saved.scope) ? saved.scope : undefined,
+      mode: saved.mode === 'produce' || saved.mode === 'identify' ? saved.mode : undefined,
+      count: QUIZ_COUNTS.includes(saved.count as QuizCount) ? saved.count : undefined,
+    }
+  }, [])
+  const [source, setSource] = useState<Source>(prefs.source ?? 'curated')
+  const [scope, setScope] = useState<Scope>(prefs.scope ?? 'all')
+  const [mode, setMode] = useState<QuizMode>(prefs.mode ?? 'produce')
+  const [count, setCount] = useState<QuizCount>(prefs.count ?? 20)
+
+  useEffect(() => {
+    setSetupPrefs<ConjugationSetupPrefs>('conjugation', { source, scope, mode, count })
+  }, [source, scope, mode, count])
   const [phase, setPhase] = useState<Phase>('setup')
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [index, setIndex] = useState(0)
