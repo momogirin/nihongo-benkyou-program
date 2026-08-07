@@ -47,6 +47,7 @@ import {
   getVocabSynonymInProgressQuiz,
   getVocabUsageInProgressQuiz,
   getSetupPrefs,
+  getStudyBatchSize,
   getVocabStudyProgress,
   recordSrsReview,
   recordSrsSelfCheck,
@@ -59,6 +60,7 @@ import {
   saveVocabSynonymInProgressQuiz,
   saveVocabUsageInProgressQuiz,
   setSetupPrefs,
+  setStudyBatchSize,
   setVocabStudyProgress,
   type VocabInProgressQuiz,
   type VocabBlankInProgressQuiz,
@@ -76,6 +78,8 @@ import './VocabPage.css'
 const ALL_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
 const QUIZ_QUESTION_COUNT = 20
 const QUIZ_COUNT_OPTIONS = [10, 20, 30, 50, 'all'] as const
+// 한 세션에 학습할 카드 수 — 한자/문법 화면과 같은 선택지
+const STUDY_BATCH_OPTIONS = [5, 10, 20, 30] as const
 const FEEDBACK_DELAY_MS = 550
 
 type Phase =
@@ -250,6 +254,8 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   // 문맥 빈칸 채우기 퀴즈 — 뜻 맞히기 퀴즈와 질문/정답 shape이 달라 상태를 따로 둠
   // (GrammarPage의 뜻맞히기/빈칸채우기 퀴즈와 같은 병렬 구조)
   const [quizType, setQuizType] = useState<QuizType>(prefs.quizType ?? 'meaning')
+  // 한 번에 학습할 카드 수 — 급수 전체를 한 세션에 열지 않기 위한 단위
+  const [batchSize, setBatchSize] = useState(() => getStudyBatchSize('vocab'))
   const [blankQuestions, setBlankQuestions] = useState<VocabBlankQuestion[]>([])
   const [blankIndex, setBlankIndex] = useState(0)
   const [blankAnswers, setBlankAnswers] = useState<BlankAnswer[]>([])
@@ -339,9 +345,11 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     setSetupPrefs<VocabSetupPrefs>('vocab', { level, quizType, quizCount, quizOrder })
   }, [level, quizType, quizCount, quizOrder])
 
+  // 급수 전체가 아니라 batchSize개씩 끊어서 학습한다 — 예전에는 남은 전체를 한
+  // 세션으로 열어(N5 단어 718개) "오늘 여기까지"라는 단위가 없었다
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
     const fromPool = vocabLevelPool(fromLevel)
-    setBatch(fromPool.slice(fromCompleted))
+    setBatch(fromPool.slice(fromCompleted, fromCompleted + batchSize))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -365,7 +373,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   function restartBatch(fromLevel: KanjiLevel) {
     const fromPool = vocabLevelPool(fromLevel)
-    setBatch(fromPool)
+    setBatch(fromPool.slice(0, batchSize))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -2285,6 +2293,25 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         {level} · {completedCount} / {pool.length}단어 학습함
       </p>
 
+      <div className="quiz-option-group">
+        <span className="quiz-option-label">한 번에 학습할 개수</span>
+        <div className="study-level-picker">
+          {STUDY_BATCH_OPTIONS.map((n) => (
+            <button
+              key={n}
+              type="button"
+              className={`study-level-btn${batchSize === n ? ' active' : ''}`}
+              onClick={() => {
+                setBatchSize(n)
+                setStudyBatchSize('vocab', n)
+              }}
+            >
+              {n}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {isLevelFinished ? (
         <>
           <p className="page-placeholder">이 급수 단어를 모두 학습했습니다.</p>
@@ -2294,7 +2321,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         </>
       ) : (
         <button type="button" className="study-start-button" onClick={() => startBatch(level, completedCount)}>
-          {completedCount > 0 ? '이어하기' : '시작하기'}
+          {completedCount > 0 ? '이어하기' : '시작하기'} ({Math.min(batchSize, remaining)}개)
         </button>
       )}
 

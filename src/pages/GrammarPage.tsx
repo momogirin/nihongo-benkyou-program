@@ -28,6 +28,7 @@ import {
   getGrammarSentenceInProgressQuiz,
   getGrammarStudyProgress,
   getSetupPrefs,
+  getStudyBatchSize,
   recordSrsReview,
   recordSrsSelfCheck,
   removeGrammarWrongNote,
@@ -36,6 +37,7 @@ import {
   saveGrammarSentenceInProgressQuiz,
   setGrammarStudyProgress,
   setSetupPrefs,
+  setStudyBatchSize,
   type GrammarInProgressQuiz,
   type GrammarBlankInProgressQuiz,
   type GrammarSentenceInProgressQuiz,
@@ -47,6 +49,8 @@ import './GrammarPage.css'
 
 const QUIZ_QUESTION_COUNT = 20
 const QUIZ_COUNT_OPTIONS = [10, 20, 30, 50, 'all'] as const
+// 한 세션에 학습할 카드 수 — 한자/단어 화면과 같은 선택지
+const STUDY_BATCH_OPTIONS = [5, 10, 20, 30] as const
 const FEEDBACK_DELAY_MS = 550
 
 type Phase =
@@ -183,6 +187,8 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   // (이 페이지 안에서도, storage.ts에서도 나란한 병렬 구조 — EnglishVocabPage의
   // 뜻맞히기/품사변환 퀴즈와 같은 패턴)
   const [quizType, setQuizType] = useState<QuizType>(prefs.quizType ?? 'meaning')
+  // 한 번에 학습할 카드 수 — 급수 전체를 한 세션에 열지 않기 위한 단위
+  const [batchSize, setBatchSize] = useState(() => getStudyBatchSize('grammar'))
   const [blankQuestions, setBlankQuestions] = useState<GrammarBlankQuestion[]>([])
   const [blankIndex, setBlankIndex] = useState(0)
   const [blankAnswers, setBlankAnswers] = useState<BlankAnswer[]>([])
@@ -235,9 +241,11 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
     setSetupPrefs<GrammarSetupPrefs>('grammar', { level, quizType, quizCount, quizOrder })
   }, [level, quizType, quizCount, quizOrder])
 
+  // 급수 전체가 아니라 batchSize개씩 끊어서 학습한다 — 예전에는 남은 전체를 한
+  // 세션으로 열어(N5 문법 85개) "오늘 여기까지"라는 단위가 없었다
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
     const fromPool = grammarLevelPool(fromLevel)
-    setBatch(fromPool.slice(fromCompleted))
+    setBatch(fromPool.slice(fromCompleted, fromCompleted + batchSize))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -260,7 +268,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   function restartBatch(fromLevel: KanjiLevel) {
     const fromPool = grammarLevelPool(fromLevel)
-    setBatch(fromPool)
+    setBatch(fromPool.slice(0, batchSize))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -1284,6 +1292,25 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
         {level} · {completedCount} / {pool.length}개 학습함
       </p>
 
+      <div className="quiz-option-group">
+        <span className="quiz-option-label">한 번에 학습할 개수</span>
+        <div className="study-level-picker">
+          {STUDY_BATCH_OPTIONS.map((n) => (
+            <button
+              key={n}
+              type="button"
+              className={`study-level-btn${batchSize === n ? ' active' : ''}`}
+              onClick={() => {
+                setBatchSize(n)
+                setStudyBatchSize('grammar', n)
+              }}
+            >
+              {n}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {isLevelFinished ? (
         <>
           <p className="page-placeholder">이 급수 문법을 모두 학습했습니다.</p>
@@ -1293,7 +1320,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
         </>
       ) : (
         <button type="button" className="study-start-button" onClick={() => startBatch(level, completedCount)}>
-          {completedCount > 0 ? '이어하기' : '시작하기'}
+          {completedCount > 0 ? '이어하기' : '시작하기'} ({Math.min(batchSize, remaining)}개)
         </button>
       )}
 

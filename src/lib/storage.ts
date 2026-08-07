@@ -240,7 +240,6 @@ const ENGLISH_VOCAB_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.englishVocabInProgressQuiz'
 const ENGLISH_VOCAB_DERIVATION_IN_PROGRESS_QUIZ_KEY = 'kanjiApp.englishVocabDerivationInProgressQuiz'
 const STUDY_PROGRESS_KEY = 'kanjiApp.studyProgress'
 const RADICAL_STUDY_PROGRESS_KEY = 'kanjiApp.radicalStudyProgress'
-const RADICAL_STUDY_BATCH_SIZE_KEY = 'kanjiApp.radicalStudyBatchSize'
 const VOCAB_STUDY_PROGRESS_KEY = 'kanjiApp.vocabStudyProgress'
 const GRAMMAR_STUDY_PROGRESS_KEY = 'kanjiApp.grammarStudyProgress'
 const ENGLISH_VOCAB_STUDY_PROGRESS_KEY = 'kanjiApp.englishVocabStudyProgress'
@@ -988,12 +987,6 @@ function importLevelProgress(key: string, progress: Record<string, number>) {
   localStorage.setItem(key, JSON.stringify(merged))
 }
 
-function getBatchSize(key: string): number {
-  const raw = localStorage.getItem(key)
-  const n = raw ? Number(raw) : NaN
-  return Number.isFinite(n) && n > 0 ? n : DEFAULT_STUDY_BATCH_SIZE
-}
-
 // how many kanji (in `num` order) have been completed in the study flow for
 // a given level, so "이어하기" can resume past what's already been studied
 export function getStudyProgress(level: KanjiLevel): number {
@@ -1030,12 +1023,15 @@ export function importRadicalStudyProgress(progress: Record<string, number>) {
   importLevelProgress(RADICAL_STUDY_PROGRESS_KEY, progress)
 }
 
-export function getRadicalStudyBatchSize(): number {
-  return getBatchSize(RADICAL_STUDY_BATCH_SIZE_KEY)
+// 한 번에 학습할 카드 수 — 급수 전체(N5 단어 718개)를 한 세션에 여는 대신
+// "오늘 N개"로 끊는다. 화면별로 따로 기억한다(한자와 단어의 적정 분량이 다름).
+export function getStudyBatchSize(screen: string): number {
+  const saved = getSetupPrefs<{ batchSize: number }>(screen)?.batchSize
+  return typeof saved === 'number' && saved > 0 ? saved : DEFAULT_STUDY_BATCH_SIZE
 }
 
-export function setRadicalStudyBatchSize(size: number) {
-  localStorage.setItem(RADICAL_STUDY_BATCH_SIZE_KEY, String(size))
+export function setStudyBatchSize(screen: string, size: number) {
+  setSetupPrefs<{ batchSize: number }>(screen, { batchSize: size })
 }
 
 // setup 화면에서 마지막으로 고른 급수/퀴즈종류/문항수 등을 화면별로 기억한다.

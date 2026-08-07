@@ -7,9 +7,11 @@ import { wordsUsingKanji, wordsUsingKanjiCount } from '../lib/kanjiWordIndex'
 import { onReadingExamples } from '../lib/kanjiOnReadingIndex'
 import {
   getSetupPrefs,
+  getStudyBatchSize,
   getStudyProgress,
   recordSrsSelfCheck,
   setSetupPrefs,
+  setStudyBatchSize,
   setStudyProgress,
 } from '../lib/storage'
 import type { QuizConfig } from '../types'
@@ -20,6 +22,8 @@ interface Props {
 }
 
 const ALL_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+// 한 세션에 학습할 카드 수 — 단어/문법 화면과 같은 선택지
+const STUDY_BATCH_OPTIONS = [5, 10, 20, 30] as const
 
 function levelPool(level: KanjiLevel): Kanji[] {
   return kanjiList
@@ -51,6 +55,8 @@ export default function StudyPage({ onStartQuiz }: Props) {
   // 방금 학습 카드로 넘긴 항목들 — done 화면에서 이것만 퀴즈로 확인시킨다
   // (중간에 나가면 batch 전체가 아니라 실제로 본 앞부분만 담긴다)
   const [studiedBatch, setStudiedBatch] = useState<Kanji[]>([])
+  // 한 번에 학습할 카드 수 — 급수 전체를 한 세션에 열지 않기 위한 단위
+  const [batchSize, setBatchSize] = useState(() => getStudyBatchSize('kanjiStudy'))
   const [cardIndex, setCardIndex] = useState(0)
   const [viewMode, setViewMode] = useState<ViewMode>('card')
   const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
@@ -62,9 +68,11 @@ export default function StudyPage({ onStartQuiz }: Props) {
     if (phase === 'done') donePrimaryButtonRef.current?.focus({ preventScroll: true })
   }, [phase])
 
+  // 급수 전체가 아니라 batchSize자씩 끊어서 학습한다 — 예전에는 남은 전체를 한
+  // 세션으로 열어(N1이면 1158자) "오늘 여기까지"라는 단위가 없었다
   function startBatch() {
     if (!level) return
-    setBatch(pool.slice(completedCount))
+    setBatch(pool.slice(completedCount, completedCount + batchSize))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -90,7 +98,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
 
   function restartBatch() {
     if (!level) return
-    setBatch(pool)
+    setBatch(pool.slice(0, batchSize))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -384,6 +392,25 @@ export default function StudyPage({ onStartQuiz }: Props) {
         {level} · {completedCount} / {pool.length}자 학습함
       </p>
 
+      <div className="quiz-option-group">
+        <span className="quiz-option-label">한 번에 학습할 개수</span>
+        <div className="study-level-picker">
+          {STUDY_BATCH_OPTIONS.map((n) => (
+            <button
+              key={n}
+              type="button"
+              className={`study-level-btn${batchSize === n ? ' active' : ''}`}
+              onClick={() => {
+                setBatchSize(n)
+                setStudyBatchSize('kanjiStudy', n)
+              }}
+            >
+              {n}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {isLevelFinished ? (
         <>
           <p className="page-placeholder">이 급수를 모두 학습했습니다.</p>
@@ -394,7 +421,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
       ) : (
         <>
           <button type="button" className="study-start-button" onClick={startBatch}>
-            {completedCount > 0 ? '이어하기' : '시작하기'}
+            {completedCount > 0 ? '이어하기' : '시작하기'} ({Math.min(batchSize, remaining)}자)
           </button>
         </>
       )}
