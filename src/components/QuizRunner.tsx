@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { generateQuestions, type QuizQuestion } from '../lib/quizGenerator'
 import { correctAnswerLabel, isCorrectAnswer } from '../lib/answerMatching'
-import { isComposingEnter } from '../lib/imeGuard'
+import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
 import type { InProgressQuiz } from '../lib/storage'
 import type { Kanji } from '../data/kanji'
 import type { AnsweredQuestion, QuizConfig } from '../types'
@@ -91,14 +91,6 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
   // Guards handleNext the same way — an incorrect answer waits for an explicit
   // 다음/Enter, and a held-down or double-tapped Enter must not skip a question.
   const lastAdvancedIndexRef = useRef(-1)
-  // when the next question is reached via the 다음-button/Enter path, skip
-  // the next auto-focus once — otherwise the still-in-flight keyup of that
-  // same Enter press can natively "activate" whichever choice button the
-  // focus effect just moved focus to, silently auto-submitting the new
-  // question (discovered while building the 영어단어 파생어 퀴즈; same class of
-  // bug as the already-fixed 오답 "다음" button auto-focus, just showing up
-  // via the per-question choice-focus effect instead)
-  const skipNextFocusRef = useRef(false)
   const nextButtonRef = useRef<HTMLButtonElement>(null)
 
   const question = questions[index]
@@ -113,10 +105,6 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
   // each new question left nothing focused (the previous choice button was
   // disabled/unmounted), forcing a mouse click just to continue
   useEffect(() => {
-    if (skipNextFocusRef.current) {
-      skipNextFocusRef.current = false
-      return
-    }
     if (isChoiceMode) {
       choicesRef.current?.querySelector('button')?.focus()
     } else {
@@ -153,7 +141,7 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
   function handleNext() {
     if (lastAdvancedIndexRef.current === index) return
     lastAdvancedIndexRef.current = index
-    skipNextFocusRef.current = true
+    swallowNextEnterKeyup()
     goNext(index + 1)
   }
 

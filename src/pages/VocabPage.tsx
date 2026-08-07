@@ -3,7 +3,7 @@ import { vocabList, type VocabWord } from '../data/vocab'
 import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
 import { isCorrectAnswer } from '../lib/answerMatching'
-import { isComposingEnter } from '../lib/imeGuard'
+import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
 import { TYPE_LABELS } from '../lib/conjugation'
 import {
   generateVocabQuestions,
@@ -210,13 +210,6 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   // guards handleNextQuiz so a rapid/repeat Enter can't advance twice past
   // the same wrong answer
   const lastAdvancedQuizIndexRef = useRef(-1)
-  // when the next question is reached via the 다음-button/Enter path, skip
-  // the next choicesRef auto-focus once — otherwise the still-in-flight
-  // keyup of that same Enter press can natively "click" whichever choice
-  // button the focus effect just moved focus to, silently auto-submitting
-  // the new question (see EnglishVocabPage.tsx for the full writeup of how
-  // this was found)
-  const skipNextChoiceFocusRef = useRef(false)
   // saved quiz session from a previous visit that was never finished — shown
   // on the setup screen as an 이어하기 option instead of silently losing it
   const [savedQuiz, setSavedQuiz] = useState(() => getVocabInProgressQuiz())
@@ -247,7 +240,6 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   const readingStartRef = useRef(0)
   const lastAdvancedReadingIndexRef = useRef(-1)
   const lastSubmittedReadingIndexRef = useRef(-1)
-  const skipNextReadingFocusRef = useRef(false)
   const [savedReadingQuiz, setSavedReadingQuiz] = useState(() => getVocabReadingInProgressQuiz())
 
   // 표기 퀴즈(히라가나 → 한자) — 나머지 세 퀴즈와 나란한 병렬 구조
@@ -697,19 +689,11 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   useEffect(() => {
     if (phase !== 'quiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
     choicesRef.current?.querySelector('button')?.focus()
   }, [phase, quizIndex])
 
   useEffect(() => {
     if (phase !== 'blankQuiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
     blankChoicesRef.current?.querySelector('button')?.focus()
   }, [phase, blankIndex])
 
@@ -717,10 +701,6 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   // promptToAnswer 모드와 동일한 이유로 자동 포커스 필요)
   useEffect(() => {
     if (phase !== 'readingQuiz') return
-    if (skipNextReadingFocusRef.current) {
-      skipNextReadingFocusRef.current = false
-      return
-    }
     readingInputRef.current?.focus()
   }, [phase, readingIndex])
 
@@ -735,37 +715,21 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   useEffect(() => {
     if (phase !== 'writingQuiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
     writingChoicesRef.current?.querySelector('button')?.focus()
   }, [phase, writingIndex])
 
   useEffect(() => {
     if (phase !== 'transitivityQuiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
     transitivityChoicesRef.current?.querySelector('button')?.focus()
   }, [phase, transitivityIndex])
 
   useEffect(() => {
     if (phase !== 'synonymQuiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
     synonymChoicesRef.current?.querySelector('button')?.focus()
   }, [phase, synonymIndex])
 
   useEffect(() => {
     if (phase !== 'usageQuiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
     usageChoicesRef.current?.querySelector('button')?.focus()
   }, [phase, usageIndex])
 
@@ -786,7 +750,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function handleNextQuiz() {
     if (lastAdvancedQuizIndexRef.current === quizIndex) return
     lastAdvancedQuizIndexRef.current = quizIndex
-    skipNextChoiceFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextQuiz(quizIndex + 1)
   }
 
@@ -847,7 +811,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function handleNextBlank() {
     if (lastAdvancedBlankIndexRef.current === blankIndex) return
     lastAdvancedBlankIndexRef.current = blankIndex
-    skipNextChoiceFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextBlank(blankIndex + 1)
   }
 
@@ -908,7 +872,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function handleNextReading() {
     if (lastAdvancedReadingIndexRef.current === readingIndex) return
     lastAdvancedReadingIndexRef.current = readingIndex
-    skipNextReadingFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextReading(readingIndex + 1)
   }
 
@@ -966,7 +930,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function handleNextWriting() {
     if (lastAdvancedWritingIndexRef.current === writingIndex) return
     lastAdvancedWritingIndexRef.current = writingIndex
-    skipNextChoiceFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextWriting(writingIndex + 1)
   }
 
@@ -1023,7 +987,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function handleNextTransitivity() {
     if (lastAdvancedTransitivityIndexRef.current === transitivityIndex) return
     lastAdvancedTransitivityIndexRef.current = transitivityIndex
-    skipNextChoiceFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextTransitivity(transitivityIndex + 1)
   }
 
@@ -1080,7 +1044,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function handleNextSynonym() {
     if (lastAdvancedSynonymIndexRef.current === synonymIndex) return
     lastAdvancedSynonymIndexRef.current = synonymIndex
-    skipNextChoiceFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextSynonym(synonymIndex + 1)
   }
 
@@ -1138,7 +1102,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
   function handleNextUsage() {
     if (lastAdvancedUsageIndexRef.current === usageIndex) return
     lastAdvancedUsageIndexRef.current = usageIndex
-    skipNextChoiceFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextUsage(usageIndex + 1)
   }
 

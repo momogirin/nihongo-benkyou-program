@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { GrammarPoint } from '../data/grammar'
 import type { KanjiLevel } from '../data/kanji'
 import { usedKanji } from '../lib/kanjiUsage'
-import { isComposingEnter } from '../lib/imeGuard'
+import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
 import {
   generateGrammarQuestions,
   generateGrammarQuestionsFromIds,
@@ -140,13 +140,6 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   // guards handleNextQuiz so a rapid/repeat Enter can't advance twice past
   // the same wrong answer
   const lastAdvancedQuizIndexRef = useRef(-1)
-  // when the next question is reached via the 다음-button/Enter path, skip
-  // the next choicesRef auto-focus once — otherwise the still-in-flight
-  // keyup of that same Enter press can natively "click" whichever choice
-  // button the focus effect just moved focus to, silently auto-submitting
-  // the new question (see EnglishVocabPage.tsx for the full writeup of how
-  // this was found)
-  const skipNextChoiceFocusRef = useRef(false)
   // saved quiz session from a previous visit that was never finished — shown
   // on the setup screen as an 이어하기 option instead of silently losing it
   const [savedQuiz, setSavedQuiz] = useState(() => getGrammarInProgressQuiz())
@@ -416,19 +409,11 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   useEffect(() => {
     if (phase !== 'quiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
     choicesRef.current?.querySelector('button')?.focus()
   }, [phase, quizIndex])
 
   useEffect(() => {
     if (phase !== 'blankQuiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
     blankChoicesRef.current?.querySelector('button')?.focus()
   }, [phase, blankIndex])
 
@@ -449,7 +434,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   function handleNextQuiz() {
     if (lastAdvancedQuizIndexRef.current === quizIndex) return
     lastAdvancedQuizIndexRef.current = quizIndex
-    skipNextChoiceFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextQuiz(quizIndex + 1)
   }
 
@@ -510,7 +495,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   function handleNextBlank() {
     if (lastAdvancedBlankIndexRef.current === blankIndex) return
     lastAdvancedBlankIndexRef.current = blankIndex
-    skipNextChoiceFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextBlank(blankIndex + 1)
   }
 

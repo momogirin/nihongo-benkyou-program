@@ -25,7 +25,7 @@ import {
   type EnglishVocabInProgressQuiz,
   type EnglishVocabDerivationInProgressQuiz,
 } from '../lib/storage'
-import { isComposingEnter } from '../lib/imeGuard'
+import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
 import '../components/QuizRunner.css'
 import '../components/ResultScreen.css'
 import './StudyPage.css'
@@ -156,15 +156,6 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   // guards handleNextQuiz so a rapid/repeat Enter can't advance twice past
   // the same wrong answer
   const lastAdvancedQuizIndexRef = useRef(-1)
-  // when the next question is reached via the 다음-button/Enter path (as
-  // opposed to a fresh quiz start or a correct-answer auto-advance), skip
-  // the next choicesRef auto-focus once — otherwise the still-in-flight
-  // keyup of that same Enter press natively "clicks" whichever choice
-  // button the focus effect just moved focus to, silently auto-answering
-  // the new question (same root cause the 오답 "다음" button's own auto-focus
-  // was removed for, see StudyPage/QuizRunner history — this is the same
-  // race showing up via the per-question choice-focus effect instead)
-  const skipNextChoiceFocusRef = useRef(false)
   // saved quiz session from a previous visit that was never finished — shown
   // on the setup screen as an 이어하기 option instead of silently losing it
   const [savedQuiz, setSavedQuiz] = useState(() => getEnglishVocabInProgressQuiz())
@@ -348,19 +339,11 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
 
   useEffect(() => {
     if (phase !== 'quiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
     choicesRef.current?.querySelector('button')?.focus()
   }, [phase, quizIndex])
 
   useEffect(() => {
     if (phase !== 'derivationQuiz') return
-    if (skipNextChoiceFocusRef.current) {
-      skipNextChoiceFocusRef.current = false
-      return
-    }
     derivationChoicesRef.current?.querySelector('button')?.focus()
   }, [phase, derivationIndex])
 
@@ -381,7 +364,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   function handleNextQuiz() {
     if (lastAdvancedQuizIndexRef.current === quizIndex) return
     lastAdvancedQuizIndexRef.current = quizIndex
-    skipNextChoiceFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextQuiz(quizIndex + 1)
   }
 
@@ -442,7 +425,7 @@ export default function EnglishVocabPage({ retryIds, onRetryIdsConsumed }: Props
   function handleNextDerivation() {
     if (lastAdvancedDerivationIndexRef.current === derivationIndex) return
     lastAdvancedDerivationIndexRef.current = derivationIndex
-    skipNextChoiceFocusRef.current = true
+    swallowNextEnterKeyup()
     goNextDerivation(derivationIndex + 1)
   }
 
