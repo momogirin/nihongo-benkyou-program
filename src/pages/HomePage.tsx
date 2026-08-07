@@ -1,5 +1,5 @@
-import { useMemo } from 'react'
-import { kanjiList } from '../data/kanji'
+import { useMemo, useState } from 'react'
+import { kanjiList, type KanjiLevel } from '../data/kanji'
 import { vocabList } from '../data/vocab'
 import { grammarList } from '../data/grammar'
 import { englishVocabList } from '../data/englishVocab'
@@ -26,11 +26,14 @@ import {
   getVocabInProgressQuiz,
   getVocabQuizHistory,
   getVocabWrongNotes,
+  getSetupPrefs,
   getWrongNotes,
+  setSetupPrefs,
 } from '../lib/storage'
 import {
   getEnglishVocabStudyProgressSummary,
   getGrammarStudyProgressSummary,
+  getLevelProgress,
   getStudyProgressSummary,
   getVocabStudyProgressSummary,
 } from '../lib/studyProgress'
@@ -46,6 +49,8 @@ import './HomePage.css'
 
 // 가나·활용은 통계/정답률 도메인 집계 대상이 아니라 실제로 이 라벨로 렌더되지는
 // 않지만, SrsDomain 유니온에 포함돼 타입상 키가 필요함
+const GOAL_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+
 const DOMAIN_LABEL = {
   kanji: '한자',
   vocab: '단어',
@@ -106,6 +111,20 @@ export default function HomePage({
   onRetryGrammar,
   onRetryEnglishVocab,
 }: Props) {
+  // 목표 급수 — "지금 내가 준비하는 급수"를 하나 정해두면 도메인별로 흩어진 진도를
+  // 홈에서 합산해 보여준다. 급수 단위 완료 여부를 알 방법이 이것 말고는 없었다
+  // (화면 5개를 각각 들어가 확인해야 했음).
+  const [goalLevel, setGoalLevel] = useState<KanjiLevel>(() => {
+    const saved = getSetupPrefs<{ goalLevel: KanjiLevel }>('home')?.goalLevel
+    return saved && GOAL_LEVELS.includes(saved) ? saved : 'N5'
+  })
+  const levelProgress = useMemo(() => getLevelProgress(goalLevel), [goalLevel])
+
+  function changeGoalLevel(level: KanjiLevel) {
+    setGoalLevel(level)
+    setSetupPrefs<{ goalLevel: KanjiLevel }>('home', { goalLevel: level })
+  }
+
   const history = useMemo(() => getQuizHistory(), [])
   const vocabHistory = useMemo(() => getVocabQuizHistory(), [])
   const grammarHistory = useMemo(() => getGrammarQuizHistory(), [])
@@ -303,11 +322,81 @@ export default function HomePage({
     dueEnglishVocabIds.length > 0 ||
     dueKanaIds.length > 0 ||
     dueConjugationIds.length > 0
+  // 목표 급수 카드 — 학습 기록이 하나도 없어도(첫 진입) 보여준다. 오히려 그때가
+  // "N5는 뭘 얼마나 해야 하나"를 알려줘야 하는 시점이라, 예전의 안내 문구 한 줄보다
+  // 이 카드가 그 역할을 한다.
+  const goalSection = (
+    <section className="home-section">
+      <div className="home-goal-header">
+        <h2 className="home-section-title">목표 급수</h2>
+        <div className="home-goal-levels">
+          {GOAL_LEVELS.map((l) => (
+            <button
+              key={l}
+              type="button"
+              className={`home-goal-level${l === goalLevel ? ' active' : ''}`}
+              onClick={() => changeGoalLevel(l)}
+            >
+              {l}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="home-goal-card">
+        <div className="home-goal-total">
+          <span className="home-goal-total-label">
+            {goalLevel} 전체 진행률
+            {levelProgress.total > 0 && levelProgress.completed >= levelProgress.total && ' · 학습 완료'}
+          </span>
+          <span className="home-goal-total-value">
+            {levelProgress.total > 0 ? Math.round((levelProgress.completed / levelProgress.total) * 100) : 0}%
+          </span>
+        </div>
+        <span className="home-progress-bar">
+          <span
+            className="home-progress-bar-fill"
+            style={{
+              width: `${levelProgress.total > 0 ? Math.round((levelProgress.completed / levelProgress.total) * 100) : 0}%`,
+            }}
+          />
+        </span>
+        <p className="home-goal-total-detail">
+          {levelProgress.completed}/{levelProgress.total} 학습함 · 정착 {levelProgress.mastered}개
+        </p>
+
+        <div className="home-goal-domains">
+          {levelProgress.domains.map((d) => {
+            const rate = d.total > 0 ? d.completed / d.total : 0
+            const nav = weakestNav[d.domain]
+            return (
+              <button
+                key={d.domain}
+                type="button"
+                className="home-goal-domain"
+                onClick={nav}
+              >
+                <span className="home-goal-domain-label">{d.label}</span>
+                <span className="home-progress-bar">
+                  <span className="home-progress-bar-fill" style={{ width: `${Math.round(rate * 100)}%` }} />
+                </span>
+                <span className="home-goal-domain-detail">
+                  {d.completed}/{d.total} · 정착 {d.mastered}
+                </span>
+              </button>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+
   if (!hasAnyEntry && mergedHistory.length === 0) {
     return (
       <div className="page">
         <h1>홈</h1>
-        <p className="page-placeholder">사이드바의 '한자'에서 학습을 시작하세요.</p>
+        {goalSection}
+        <p className="page-placeholder">사이드바에서 학습할 영역을 골라 시작하세요.</p>
       </div>
     )
   }
@@ -476,6 +565,8 @@ export default function HomePage({
   return (
     <div className="page">
       <h1>홈</h1>
+
+      {goalSection}
 
       {priorityItems.length > 0 && (
         <section className="home-section">

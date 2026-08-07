@@ -15,6 +15,124 @@
   margin: 0 0 12px;
 }
 
+/* 목표 급수 — 도메인별로 흩어진 진도를 한 급수 기준으로 합산해 보여준다.
+   막대/색은 아래 학습 진도 카드의 .home-progress-bar 토큰을 그대로 재사용 */
+.home-goal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+/* 섹션 제목의 하단 여백은 헤더가 대신 잡는다(제목과 급수 버튼이 같은 줄) */
+.home-goal-header .home-section-title {
+  margin-bottom: 0;
+}
+
+.home-goal-levels {
+  display: flex;
+  gap: 6px;
+}
+
+.home-goal-level {
+  min-width: 40px;
+  padding: 5px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink-muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.home-goal-level:hover {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+}
+
+.home-goal-level.active {
+  border-color: var(--color-primary-dark);
+  background: var(--color-primary-dark);
+  color: var(--color-bg-elevated);
+}
+
+.home-goal-card {
+  padding: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+}
+
+.home-goal-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.home-goal-total-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink-muted);
+}
+
+.home-goal-total-value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.home-goal-total-detail {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--color-ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.home-goal-domains {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+}
+
+.home-goal-domain {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--color-ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.home-goal-domain:hover {
+  border-color: var(--color-primary-dark);
+  background: var(--color-selected-bg);
+}
+
+.home-goal-domain-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink-muted);
+}
+
+.home-goal-domain-detail {
+  font-size: 12px;
+  color: var(--color-ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
 /* 지금 할 일 — 복습(긴급)과 이어하기(재개)를 긴급도순 세로 리스트로.
    왼쪽 색 띠로 성격 구분(urgent=긴급 복습, 기본=이어서 하기) */
 .home-priority-list {
