@@ -101,7 +101,9 @@ export function getLevelProgress(level: KanjiLevel): LevelProgress {
   const vocabIds = vocabList.filter((w) => w.level === level).map((w) => w.id)
   const grammarIds = grammarList.filter((g) => g.level === level).map((g) => g.id)
 
-  const domains: LevelDomainProgress[] = [
+  // 배열 리터럴에 직접 타입을 붙인다 — .filter()를 거치면 선언부의 타입 주석이
+  // 리터럴 추론에 적용되지 않아 domain이 string으로 넓어진다
+  const domains = ([
     {
       domain: 'kanji',
       label: '한자',
@@ -123,7 +125,7 @@ export function getLevelProgress(level: KanjiLevel): LevelProgress {
       total: grammarIds.length,
       mastered: masteredIn('grammar', grammarIds),
     },
-  ].filter((d) => d.total > 0)
+  ] as LevelDomainProgress[]).filter((d) => d.total > 0)
 
   return {
     level,
