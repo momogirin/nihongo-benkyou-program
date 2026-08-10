@@ -33,8 +33,7 @@ export function generateVocabQuestions(
   const selected = ordered.slice(0, Math.min(count, pool.length))
 
   return selected.map((entry) => {
-    const distractorPool = pool.filter((w) => w.id !== entry.id && w.meaningKr !== entry.meaningKr)
-    const distractors = shuffle(distractorPool).slice(0, 3)
+    const distractors = pickMeaningDistractors(entry, pool)
     return { entry, choices: shuffle([entry, ...distractors]) }
   })
 }
@@ -47,8 +46,7 @@ export function generateVocabQuestionsFromIds(ids: string[]): VocabQuizQuestion[
 
   return shuffle(entries).map((entry) => {
     const pool = vocabLevelPool(entry.level)
-    const distractorPool = pool.filter((w) => w.id !== entry.id && w.meaningKr !== entry.meaningKr)
-    const distractors = shuffle(distractorPool).slice(0, 3)
+    const distractors = pickMeaningDistractors(entry, pool)
     return { entry, choices: shuffle([entry, ...distractors]) }
   })
 }
@@ -104,8 +102,9 @@ export function generateVocabBlankQuestions(
   const selected = ordered.slice(0, Math.min(count, pool.length))
 
   return selected.map((entry) => {
-    const distractorPool = pool.filter((w) => w.id !== entry.id && w.meaningKr !== entry.meaningKr)
-    const distractors = shuffle(distractorPool).slice(0, 3)
+    // 빈칸에 들어갈 "단어"를 고르는 유형이라 품사가 다르면 문법적으로 애초에 안 맞아
+    // 소거되어 버린다 — 뜻 맞히기와 같은 기준으로 품사부터 맞춘다
+    const distractors = pickMeaningDistractors(entry, pool)
     return { entry, blankedSentence: blankSentence(entry)!, choices: shuffle([entry, ...distractors]) }
   })
 }
@@ -120,8 +119,7 @@ export function generateVocabBlankQuestionsFromIds(ids: string[]): VocabBlankQue
 
   return shuffle(entries).map((entry) => {
     const pool = vocabBlankLevelPool(entry.level)
-    const distractorPool = pool.filter((w) => w.id !== entry.id && w.meaningKr !== entry.meaningKr)
-    const distractors = shuffle(distractorPool).slice(0, 3)
+    const distractors = pickMeaningDistractors(entry, pool)
     return { entry, blankedSentence: blankSentence(entry)!, choices: shuffle([entry, ...distractors]) }
   })
 }
@@ -177,6 +175,43 @@ function pickDistractors(entry: VocabWord, pool: VocabWord[]): VocabWord[] {
       if (picked.length >= 3) break
       if (usedIds.has(w.id)) continue
       usedIds.add(w.id)
+      picked.push(w)
+    }
+    if (picked.length >= 3) break
+  }
+  return picked
+}
+
+// 선택지가 "뜻"인 유형(뜻 맞히기·문맥 빈칸)용 오답 선별. pickDistractors는 표기/읽기
+// 처럼 단어 형태를 고르는 유형에 맞춰 읽기·한자 유사성만 보는데, 뜻을 고르는 유형에서는
+// 그것만으로 부족하다 — 무작위로 뽑으면 "동사 하나 + 명사 셋"처럼 품사만 보고도 답이
+// 드러나서, 단어를 몰라도 소거법으로 맞힐 수 있다.
+//
+// 그래서 품사(conjugationType)가 같은 후보를 최우선으로 두고, 그 다음 형태 유사성
+// (읽기 첫 글자·공유 한자), 마지막으로 나머지를 쓴다. conjugationType이 없는 항목
+// (명사 등 태깅 스코프 밖)끼리도 "둘 다 없음"으로 묶여 같은 부류로 취급된다.
+function pickMeaningDistractors(entry: VocabWord, pool: VocabWord[]): VocabWord[] {
+  const others = pool.filter((w) => w.id !== entry.id && w.meaningKr !== entry.meaningKr)
+  const entryKanji = kanjiChars(entry.word)
+  const readingHead = entry.reading.slice(0, 1)
+
+  const samePos = others.filter((w) => w.conjugationType === entry.conjugationType)
+  // 품사가 같으면서 형태까지 비슷하면 가장 헷갈린다 — 최우선
+  const samePosSimilarForm = samePos.filter(
+    (w) => w.reading.slice(0, 1) === readingHead || [...kanjiChars(w.word)].some((c) => entryKanji.has(c)),
+  )
+
+  const picked: VocabWord[] = []
+  const usedIds = new Set<string>()
+  // 뜻까지 중복 제거한다 — 데이터에 뜻이 같은 단어쌍이 실제로 있어(頬/頬, 混ぜる/交ぜる,
+  // 煎る/炒る 등) 뜻만 표시되는 선택지에 똑같은 항목이 두 개 뜨는 경우가 있었다
+  const usedMeanings = new Set<string>([entry.meaningKr])
+  for (const source of [shuffle(samePosSimilarForm), shuffle(samePos), shuffle(others)]) {
+    for (const w of source) {
+      if (picked.length >= 3) break
+      if (usedIds.has(w.id) || usedMeanings.has(w.meaningKr)) continue
+      usedIds.add(w.id)
+      usedMeanings.add(w.meaningKr)
       picked.push(w)
     }
     if (picked.length >= 3) break
@@ -326,7 +361,9 @@ function buildSynonymQuestion(entry: VocabWord): VocabSynonymQuestion {
   const distractorPool = vocabLevelPool(entry.level).filter(
     (w) => w.id !== entry.id && w.id !== answer.id && normalizeMeaning(w.meaningKr) !== answerMeaning,
   )
-  const distractors = shuffle(distractorPool).slice(0, 3)
+  // 정답(유의어)과 같은 품사·비슷한 형태를 우선 — 품사가 제각각이면 유의어를
+  // 몰라도 품사만 보고 걸러진다. 기준점은 entry가 아니라 정답인 answer
+  const distractors = pickMeaningDistractors(answer, [answer, ...distractorPool])
   return { entry, answer, choices: shuffle([answer, ...distractors]) }
 }
 
@@ -376,7 +413,9 @@ function buildUsageQuestion(entry: VocabWord): VocabUsageQuestion {
   const distractorPool = vocabUsageLevelPool(entry.level).filter(
     (w) => w.id !== entry.id && normalizeMeaning(w.meaningKr) !== answerMeaning,
   )
-  const distractors = shuffle(distractorPool).slice(0, 3)
+  // 오답 문장도 제시 단어와 같은 품사인 단어의 예문으로 — 품사가 다르면 문장을
+  // 읽지 않고도 "이 단어가 들어갈 자리가 아니다"가 티나서 변별력이 떨어진다
+  const distractors = pickMeaningDistractors(entry, [entry, ...distractorPool])
   const blankedChoices = shuffle(
     [entry, ...distractors].map((w) => ({ entry: w, blankedSentence: blankSentence(w)! })),
   )
