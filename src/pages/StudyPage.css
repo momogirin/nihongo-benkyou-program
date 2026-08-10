@@ -2,20 +2,27 @@
   max-width: 480px;
 }
 
+/* 칩 개수·라벨 길이가 화면마다 다르다(N5~N1 5개 ~ 퀴즈 종류 7개, "N5"~"문맥 빈칸
+   채우기"). wrap 없이 두면 좁은 폭에서 flex가 각 칩을 글자 폭 아래로 찌부러뜨려
+   세로 한 글자씩 쌓이므로, 줄바꿈을 허용하고 칩 자체는 축소되지 않게 고정한다 */
 .study-level-picker {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
   margin-bottom: 16px;
 }
 
 .study-level-btn {
+  flex: 0 0 auto;
+  min-height: 36px;
   padding: 8px 16px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-bg-elevated);
   color: var(--color-ink);
   font-size: 14px;
+  white-space: nowrap;
   cursor: pointer;
 }
 
