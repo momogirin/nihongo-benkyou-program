@@ -237,6 +237,9 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     prefs.quizCount ?? QUIZ_QUESTION_COUNT,
   )
   const [quizOrder, setQuizOrder] = useState<'random' | 'sequential'>(prefs.quizOrder ?? 'random')
+  // 퀴즈 세부 설정은 기본으로 접어 둔다 — 값은 마지막 선택이 복원되므로 대부분
+  // 펼칠 일 없이 바로 풀기 버튼만 누르면 된다
+  const [quizSettingsOpen, setQuizSettingsOpen] = useState(false)
   const [quizQuestions, setQuizQuestions] = useState<VocabQuizQuestion[]>([])
   const [quizIndex, setQuizIndex] = useState(0)
   const [quizAnswers, setQuizAnswers] = useState<QuizAnswer[]>([])
@@ -2172,6 +2175,41 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   const isLevelFinished = pool.length > 0 && remaining <= 0
 
+  // 선택된 퀴즈 종류가 출제 대상으로 삼는 단어 풀 — 문항 수 상한/표시에 함께 쓴다
+  const activePool =
+    quizType === 'meaning'
+      ? pool
+      : quizType === 'blank'
+        ? blankPool
+        : quizType === 'reading'
+          ? readingPool
+          : quizType === 'writing'
+            ? writingPool
+            : quizType === 'transitivity'
+              ? transitivityPool
+              : quizType === 'synonym'
+                ? synonymPool
+                : usagePool
+  const quizCountLabel = quizCount === 'all' ? `전체 ${activePool.length}문제` : `${quizCount}문제`
+
+  // 진행 중이던 퀴즈 — 7종을 각각 배너로 쌓지 않고, 있는 것 하나만 한 줄로 보여준다.
+  // 동시에 여러 종류가 남아 있을 일은 거의 없고, 있어도 하나 끝내면 다음 게 뜬다
+  const resumable = savedQuiz
+    ? { label: QUIZ_TYPE_LABELS.meaning, level: savedQuiz.level, index: savedQuiz.index, total: savedQuiz.questions.length, resume: () => resumeQuiz(savedQuiz) }
+    : savedBlankQuiz
+      ? { label: QUIZ_TYPE_LABELS.blank, level: savedBlankQuiz.level, index: savedBlankQuiz.index, total: savedBlankQuiz.questions.length, resume: () => resumeBlankQuiz(savedBlankQuiz) }
+      : savedReadingQuiz
+        ? { label: QUIZ_TYPE_LABELS.reading, level: savedReadingQuiz.level, index: savedReadingQuiz.index, total: savedReadingQuiz.questions.length, resume: () => resumeReadingQuiz(savedReadingQuiz) }
+        : savedWritingQuiz
+          ? { label: QUIZ_TYPE_LABELS.writing, level: savedWritingQuiz.level, index: savedWritingQuiz.index, total: savedWritingQuiz.questions.length, resume: () => resumeWritingQuiz(savedWritingQuiz) }
+          : savedTransitivityQuiz
+            ? { label: QUIZ_TYPE_LABELS.transitivity, level: savedTransitivityQuiz.level, index: savedTransitivityQuiz.index, total: savedTransitivityQuiz.questions.length, resume: () => resumeTransitivityQuiz(savedTransitivityQuiz) }
+            : savedSynonymQuiz
+              ? { label: QUIZ_TYPE_LABELS.synonym, level: savedSynonymQuiz.level, index: savedSynonymQuiz.index, total: savedSynonymQuiz.questions.length, resume: () => resumeSynonymQuiz(savedSynonymQuiz) }
+              : savedUsageQuiz
+                ? { label: QUIZ_TYPE_LABELS.usage, level: savedUsageQuiz.level, index: savedUsageQuiz.index, total: savedUsageQuiz.questions.length, resume: () => resumeUsageQuiz(savedUsageQuiz) }
+                : null
+
   return (
     <div className="page study-setup">
       <div className="page-header">
@@ -2189,91 +2227,15 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         </button>
       </div>
 
-      {savedQuiz && (
-        <>
-          <p className="page-placeholder">
-            진행 중이던 단어 퀴즈가 있어요 ({savedQuiz.level} · {savedQuiz.index}/{savedQuiz.questions.length}문제)
-          </p>
-          <button type="button" className="study-start-button" onClick={() => resumeQuiz(savedQuiz)}>
+      {resumable && (
+        <div className="study-resume">
+          <span className="study-resume-text">
+            진행 중이던 {resumable.label} 퀴즈 ({resumable.level} · {resumable.index}/{resumable.total}문제)
+          </span>
+          <button type="button" className="study-resume-button" onClick={resumable.resume}>
             이어서 풀기
           </button>
-        </>
-      )}
-
-      {savedBlankQuiz && (
-        <>
-          <p className="page-placeholder">
-            진행 중이던 단어 문맥 빈칸 퀴즈가 있어요 ({savedBlankQuiz.level} · {savedBlankQuiz.index}/
-            {savedBlankQuiz.questions.length}문제)
-          </p>
-          <button type="button" className="study-start-button" onClick={() => resumeBlankQuiz(savedBlankQuiz)}>
-            이어서 풀기
-          </button>
-        </>
-      )}
-
-      {savedReadingQuiz && (
-        <>
-          <p className="page-placeholder">
-            진행 중이던 단어 읽기 입력 퀴즈가 있어요 ({savedReadingQuiz.level} · {savedReadingQuiz.index}/
-            {savedReadingQuiz.questions.length}문제)
-          </p>
-          <button type="button" className="study-start-button" onClick={() => resumeReadingQuiz(savedReadingQuiz)}>
-            이어서 풀기
-          </button>
-        </>
-      )}
-
-      {savedWritingQuiz && (
-        <>
-          <p className="page-placeholder">
-            진행 중이던 단어 표기 퀴즈가 있어요 ({savedWritingQuiz.level} · {savedWritingQuiz.index}/
-            {savedWritingQuiz.questions.length}문제)
-          </p>
-          <button type="button" className="study-start-button" onClick={() => resumeWritingQuiz(savedWritingQuiz)}>
-            이어서 풀기
-          </button>
-        </>
-      )}
-
-      {savedTransitivityQuiz && (
-        <>
-          <p className="page-placeholder">
-            진행 중이던 자타동사 구분 퀴즈가 있어요 ({savedTransitivityQuiz.level} · {savedTransitivityQuiz.index}/
-            {savedTransitivityQuiz.questions.length}문제)
-          </p>
-          <button
-            type="button"
-            className="study-start-button"
-            onClick={() => resumeTransitivityQuiz(savedTransitivityQuiz)}
-          >
-            이어서 풀기
-          </button>
-        </>
-      )}
-
-      {savedSynonymQuiz && (
-        <>
-          <p className="page-placeholder">
-            진행 중이던 유의어 퀴즈가 있어요 ({savedSynonymQuiz.level} · {savedSynonymQuiz.index}/
-            {savedSynonymQuiz.questions.length}문제)
-          </p>
-          <button type="button" className="study-start-button" onClick={() => resumeSynonymQuiz(savedSynonymQuiz)}>
-            이어서 풀기
-          </button>
-        </>
-      )}
-
-      {savedUsageQuiz && (
-        <>
-          <p className="page-placeholder">
-            진행 중이던 용법 퀴즈가 있어요 ({savedUsageQuiz.level} · {savedUsageQuiz.index}/
-            {savedUsageQuiz.questions.length}문제)
-          </p>
-          <button type="button" className="study-start-button" onClick={() => resumeUsageQuiz(savedUsageQuiz)}>
-            이어서 풀기
-          </button>
-        </>
+        </div>
       )}
 
       <div className="study-level-picker">
@@ -2293,107 +2255,113 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         {level} · {completedCount} / {pool.length}단어 학습함
       </p>
 
-      <div className="quiz-option-group">
-        <span className="quiz-option-label">한 번에 학습할 개수</span>
-        <div className="study-level-picker">
-          {STUDY_BATCH_OPTIONS.map((n) => (
-            <button
-              key={n}
-              type="button"
-              className={`study-level-btn${batchSize === n ? ' active' : ''}`}
-              onClick={() => {
-                setBatchSize(n)
-                setStudyBatchSize('vocab', n)
-              }}
-            >
-              {n}
-            </button>
-          ))}
-        </div>
-      </div>
+      <div className="study-section">
+        <span className="study-section-title">새 단어 학습</span>
 
-      {isLevelFinished ? (
-        <>
-          <p className="page-placeholder">이 급수 단어를 모두 학습했습니다.</p>
-          <button type="button" className="study-start-button" onClick={() => restartBatch(level)}>
-            처음부터 다시 학습하기
-          </button>
-        </>
-      ) : (
-        <button type="button" className="study-start-button" onClick={() => startBatch(level, completedCount)}>
-          {completedCount > 0 ? '이어하기' : '시작하기'} ({Math.min(batchSize, remaining)}개)
-        </button>
-      )}
-
-      <div className="quiz-option-group">
-        <span className="quiz-option-label">퀴즈 종류</span>
-        <div className="study-level-picker">
-          {(['meaning', 'blank', 'reading', 'writing', 'transitivity', 'synonym', 'usage'] as const).map((t) => (
-            <button
-              key={t}
-              type="button"
-              className={`study-level-btn${quizType === t ? ' active' : ''}`}
-              onClick={() => setQuizType(t)}
-            >
-              {QUIZ_TYPE_LABELS[t]}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="quiz-option-group">
-        <span className="quiz-option-label">문항 수</span>
-        <div className="study-level-picker">
-          {QUIZ_COUNT_OPTIONS.map((opt) => {
-            const activePool =
-              quizType === 'meaning'
-                ? pool
-                : quizType === 'blank'
-                  ? blankPool
-                  : quizType === 'reading'
-                    ? readingPool
-                    : quizType === 'writing'
-                      ? writingPool
-                      : quizType === 'transitivity'
-                        ? transitivityPool
-                        : quizType === 'synonym'
-                          ? synonymPool
-                          : usagePool
-            const disabled = opt !== 'all' && opt > activePool.length
-            return (
+        <div className="quiz-option-group">
+          <span className="quiz-option-label">한 번에 학습할 개수</span>
+          <div className="study-level-picker">
+            {STUDY_BATCH_OPTIONS.map((n) => (
               <button
-                key={opt}
+                key={n}
                 type="button"
-                className={`study-level-btn${quizCount === opt ? ' active' : ''}`}
-                disabled={disabled}
-                onClick={() => setQuizCount(opt)}
+                className={`study-level-btn${batchSize === n ? ' active' : ''}`}
+                onClick={() => {
+                  setBatchSize(n)
+                  setStudyBatchSize('vocab', n)
+                }}
               >
-                {opt === 'all' ? `전체 (${activePool.length})` : opt}
+                {n}
               </button>
-            )
-          })}
+            ))}
+          </div>
         </div>
+
+        {isLevelFinished ? (
+          <>
+            <p className="page-placeholder">이 급수 단어를 모두 학습했습니다.</p>
+            <button type="button" className="study-start-button" onClick={() => restartBatch(level)}>
+              처음부터 다시 학습하기
+            </button>
+          </>
+        ) : (
+          <button type="button" className="study-start-button" onClick={() => startBatch(level, completedCount)}>
+            {completedCount > 0 ? '이어하기' : '시작하기'} ({Math.min(batchSize, remaining)}개)
+          </button>
+        )}
       </div>
 
-      <div className="quiz-option-group">
-        <span className="quiz-option-label">순서</span>
-        <div className="study-level-picker">
-          <button
-            type="button"
-            className={`study-level-btn${quizOrder === 'random' ? ' active' : ''}`}
-            onClick={() => setQuizOrder('random')}
-          >
-            랜덤
-          </button>
-          <button
-            type="button"
-            className={`study-level-btn${quizOrder === 'sequential' ? ' active' : ''}`}
-            onClick={() => setQuizOrder('sequential')}
-          >
-            순차
-          </button>
-        </div>
-      </div>
+      <div className="study-section">
+        <span className="study-section-title">퀴즈로 복습</span>
+
+        <button
+          type="button"
+          className="study-settings-toggle"
+          aria-expanded={quizSettingsOpen}
+          onClick={() => setQuizSettingsOpen((v) => !v)}
+        >
+          {quizSettingsOpen ? '설정 접기 ▲' : `${QUIZ_TYPE_LABELS[quizType]} · ${quizCountLabel} · ${quizOrder === 'random' ? '랜덤' : '순차'} · 설정 바꾸기 ▼`}
+        </button>
+
+        {quizSettingsOpen && (
+          <>
+            <div className="quiz-option-group">
+              <span className="quiz-option-label">퀴즈 종류</span>
+              <div className="study-level-picker">
+                {QUIZ_TYPES.map((t) => (
+                  <button
+                    key={t}
+                    type="button"
+                    className={`study-level-btn${quizType === t ? ' active' : ''}`}
+                    onClick={() => setQuizType(t)}
+                  >
+                    {QUIZ_TYPE_LABELS[t]}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="quiz-option-group">
+              <span className="quiz-option-label">문항 수</span>
+              <div className="study-level-picker">
+                {QUIZ_COUNT_OPTIONS.map((opt) => {
+                  const disabled = opt !== 'all' && opt > activePool.length
+                  return (
+                    <button
+                      key={opt}
+                      type="button"
+                      className={`study-level-btn${quizCount === opt ? ' active' : ''}`}
+                      disabled={disabled}
+                      onClick={() => setQuizCount(opt)}
+                    >
+                      {opt === 'all' ? `전체 (${activePool.length})` : opt}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+
+            <div className="quiz-option-group">
+              <span className="quiz-option-label">순서</span>
+              <div className="study-level-picker">
+                <button
+                  type="button"
+                  className={`study-level-btn${quizOrder === 'random' ? ' active' : ''}`}
+                  onClick={() => setQuizOrder('random')}
+                >
+                  랜덤
+                </button>
+                <button
+                  type="button"
+                  className={`study-level-btn${quizOrder === 'sequential' ? ' active' : ''}`}
+                  onClick={() => setQuizOrder('sequential')}
+                >
+                  순차
+                </button>
+              </div>
+            </div>
+          </>
+        )}
 
       {quizType === 'blank' && blankPool.length === 0 ? (
         <p className="page-placeholder">이 급수는 아직 빈칸 퀴즈로 낼 수 있는 단어가 없습니다.</p>
@@ -2437,6 +2405,7 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
           용법 퀴즈 풀기 ({quizCount === 'all' ? usagePool.length : Math.min(quizCount, usagePool.length)}문제)
         </button>
       )}
+      </div>
     </div>
   )
 }

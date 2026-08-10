@@ -43,10 +43,90 @@
   cursor: not-allowed;
 }
 
+/* 설정 화면의 "학습" / "퀴즈" 영역 구분 — 예전에는 급수·개수·퀴즈종류·문항수·순서가
+   한 흐름으로 쭉 나열돼 학습 시작 버튼과 퀴즈 시작 버튼 사이에 설정이 끼어 있었다.
+   두 행동을 각각 카드로 묶어 "지금 뭘 누르면 되는지"가 보이게 한다 */
+.study-section {
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  margin-bottom: 16px;
+}
+
+.study-section-title {
+  display: block;
+  color: var(--color-ink-muted);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* 진행 중이던 퀴즈 이어하기 — 퀴즈 종류마다 따로 쌓이던 배너를 한 줄로 통일.
+   설정 카드보다 위에서 먼저 눈에 띄어야 하므로 강조 배경을 쓴다 */
+.study-resume {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: var(--radius-lg);
+  background: var(--color-selected-bg);
+  margin-bottom: 16px;
+}
+
+.study-resume-text {
+  color: var(--color-ink);
+  font-size: 14px;
+  text-align: left;
+}
+
+.study-resume-button {
+  flex: 0 0 auto;
+  min-height: 36px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-button-fill);
+  color: var(--color-on-primary);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.study-resume-button:hover {
+  filter: brightness(0.93);
+}
+
+/* 퀴즈 세부 설정(종류·문항수·순서)은 거의 항상 같은 값을 쓰므로 접어 둔다 —
+   매번 세 줄을 스크롤해서 지나갈 이유가 없다 */
+.study-settings-toggle {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--color-ink-muted);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.study-settings-toggle:hover {
+  color: var(--color-primary-dark);
+}
+
 /* 단어/문법 퀴즈 설정의 문항 수·순서 선택 — study-level-picker(.study-level-btn 칩)를
    그대로 재사용하고, 그 위에 붙는 라벨만 이 두 클래스로 감싼다 */
 .quiz-option-group {
   margin-bottom: 16px;
+}
+
+/* 카드 안 마지막 옵션 그룹은 아래 여백을 카드 패딩에 맡긴다 */
+.study-section .quiz-option-group:last-child {
+  margin-bottom: 0;
 }
 
 .quiz-option-label {
