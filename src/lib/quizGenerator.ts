@@ -1,4 +1,5 @@
 import { kanjiList, type Kanji, type KanjiLevel } from '../data/kanji'
+import { studyContentByKanjiId } from '../data/studyContent'
 import type { QuizConfig } from '../types'
 
 export interface QuizQuestion {
@@ -73,6 +74,36 @@ function pickDistinctBy(items: Kanji[], field: ReadingField, n: number): Kanji[]
   return result
 }
 
+// 무작위 오답이면 생김새가 전혀 달라서 한자를 몰라도 소거된다 — 진짜 헷갈릴
+// 만한 오답을 우선순위로 뽑는다: ①같은 부수(획이 비슷해 실제로 혼동하는 짝)
+// ②같은 음독(발음이 같아 표기를 헷갈리는 짝) ③그래도 모자라면 나머지 무작위.
+// 부수는 studyContent의 radicalNumber(전 급수 100% 보유)를 그대로 쓴다.
+function radicalOf(kanji: Kanji): number | undefined {
+  return studyContentByKanjiId[kanji.id]?.radicalNumber
+}
+
+function pickKanjiDistractors(kanji: Kanji, pool: Kanji[]): Kanji[] {
+  const others = pool.filter((k) => k.id !== kanji.id)
+  const radical = radicalOf(kanji)
+  const sameRadical = radical === undefined ? [] : others.filter((k) => radicalOf(k) === radical)
+  const sameOn = hasReading(kanji, 'onJp')
+    ? others.filter((k) => k.onJp === kanji.onJp && hasReading(k, 'onJp'))
+    : []
+
+  const picked: Kanji[] = []
+  const usedIds = new Set<string>()
+  for (const source of [shuffle(sameRadical), shuffle(sameOn), shuffle(others)]) {
+    for (const k of source) {
+      if (picked.length >= 3) break
+      if (usedIds.has(k.id)) continue
+      usedIds.add(k.id)
+      picked.push(k)
+    }
+    if (picked.length >= 3) break
+  }
+  return picked
+}
+
 // which reading field a question type is testing (undefined = not reading-based)
 const READING_FIELD: Partial<Record<QuizConfig['questionType'], ReadingField>> = {
   kunReading: 'kunJp',
@@ -102,7 +133,7 @@ export function generateQuestions(config: QuizConfig): QuizQuestion[] {
 
   if (KANJI_CHOICE_TYPES.has(config.questionType)) {
     return selected.map((kanji) => {
-      const distractors = shuffle(basePool.filter((k) => k.id !== kanji.id)).slice(0, 3)
+      const distractors = pickKanjiDistractors(kanji, basePool)
       return { kanji, choices: shuffle([kanji, ...distractors]) }
     })
   }
@@ -110,7 +141,16 @@ export function generateQuestions(config: QuizConfig): QuizQuestion[] {
   if (field) {
     return selected.map((kanji) => {
       const distractorPool = pool.filter((k) => k.id !== kanji.id && k[field] !== kanji[field])
-      const distractors = pickDistinctBy(shuffle(distractorPool), field, 3)
+      // 선택지가 "읽기 문자열"이라 부수 유사성은 무의미하다 — 첫 글자가 같은
+      // 읽기(かえる/かえす처럼 실제로 헷갈리는 짝)를 먼저 채우고 나머지로 채운다.
+      // pickDistinctBy는 그대로 거쳐 같은 읽기가 두 번 뜨는 건 계속 막는다
+      const head = kanji[field].trim().slice(0, 1)
+      const sameHead = distractorPool.filter((k) => k[field].trim().slice(0, 1) === head)
+      const distractors = pickDistinctBy(
+        [...shuffle(sameHead), ...shuffle(distractorPool)],
+        field,
+        3,
+      )
       return { kanji, choices: shuffle([kanji, ...distractors]) }
     })
   }
