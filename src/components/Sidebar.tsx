@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { PageId } from '../types'
 import { getStoredTheme, setTheme, type ThemeMode } from '../lib/theme'
+import { APP_VERSION } from '../data/changelog'
 import './Sidebar.css'
 
 const THEME_OPTIONS: { mode: ThemeMode; label: string }[] = [
@@ -124,6 +125,17 @@ export default function Sidebar({ active, onNavigate, open, onToggle }: Props) {
           </button>
         ))}
       </div>
+
+      {/* 지금 보고 있는 게 어느 버전인지(=변경사항이 반영됐는지) 확인하는 자리.
+          클릭하면 개정이력 페이지로 — 다른 nav 항목과 같은 active 규칙을 따른다 */}
+      <button
+        type="button"
+        className={`sidebar-version${active === 'changelog' ? ' active' : ''}`}
+        title="개정이력 보기"
+        onClick={() => onNavigate('changelog')}
+      >
+        v{APP_VERSION}
+      </button>
     </aside>
   )
 }

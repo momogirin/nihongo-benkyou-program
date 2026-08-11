@@ -10,6 +10,7 @@ import ConjugationPage from './pages/ConjugationPage'
 import MockExamPage from './pages/MockExamPage'
 import EnglishVocabPage from './pages/EnglishVocabPage'
 import BackupPage from './pages/BackupPage'
+import ChangelogPage from './pages/ChangelogPage'
 import type { PageId, QuizConfig } from './types'
 
 const MOBILE_QUERY = '(max-width: 768px)'
@@ -141,6 +142,8 @@ function App() {
         )
       case 'backup':
         return <BackupPage />
+      case 'changelog':
+        return <ChangelogPage />
     }
   }
 
