@@ -9,6 +9,7 @@ import GrammarPage from './pages/GrammarPage'
 import ConjugationPage from './pages/ConjugationPage'
 import MockExamPage from './pages/MockExamPage'
 import EnglishVocabPage from './pages/EnglishVocabPage'
+import ExportPage from './pages/ExportPage'
 import BackupPage from './pages/BackupPage'
 import ChangelogPage from './pages/ChangelogPage'
 import type { PageId, QuizConfig } from './types'
@@ -140,6 +141,8 @@ function App() {
             onRetryIdsConsumed={() => setPendingEnglishVocabRetryIds(null)}
           />
         )
+      case 'export':
+        return <ExportPage />
       case 'backup':
         return <BackupPage />
       case 'changelog':

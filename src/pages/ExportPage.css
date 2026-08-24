@@ -1,0 +1,49 @@
+/* 급수/열 체크박스·fieldset·내려받기 버튼은 SetupScreen.css를 그대로 재사용하고,
+   이 파일에는 내보내기 화면에만 있는 것(열 다중선택 그리드, 전체선택 링크,
+   결과 메시지)만 둔다. */
+
+.export-page .page-placeholder {
+  margin-bottom: 20px;
+}
+
+/* 열은 11개라 5칸 그리드로는 라벨이 잘린다. 최소 너비를 주고 남는 만큼 채우되,
+   좁아지면 자연스럽게 줄 수가 줄도록. */
+.export-column-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.export-bulk {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  padding-left: 2px;
+}
+
+.export-link-button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-ink-muted);
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.export-link-button:hover {
+  color: var(--color-primary-dark);
+}
+
+/* .hint(안내문)와 같은 자리에 나오므로 위 여백을 맞춘다 */
+.export-status {
+  margin: 16px 2px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.export-status-success {
+  color: var(--color-correct);
+}
+
+.export-status-error {
+  color: var(--color-incorrect);
+}

@@ -105,6 +105,14 @@ export default function Sidebar({ active, onNavigate, open, onToggle }: Props) {
 
         <button
           type="button"
+          className={`nav-item${active === 'export' ? ' active' : ''}`}
+          onClick={() => onNavigate('export')}
+        >
+          엑셀 내보내기
+        </button>
+
+        <button
+          type="button"
           className={`nav-item${active === 'backup' ? ' active' : ''}`}
           onClick={() => onNavigate('backup')}
         >

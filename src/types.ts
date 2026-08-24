@@ -2,7 +2,7 @@ import type { Kanji, KanjiLevel } from './data/kanji'
 import type { EnglishLevel } from './data/englishVocab'
 import type { MockExamDomain } from './lib/mockExamGenerator'
 
-export type PageId = 'home' | 'kana' | 'kanji' | 'wrongNote' | 'vocab' | 'grammar' | 'conjugation' | 'mockExam' | 'englishVocab' | 'backup' | 'changelog'
+export type PageId = 'home' | 'kana' | 'kanji' | 'wrongNote' | 'vocab' | 'grammar' | 'conjugation' | 'mockExam' | 'englishVocab' | 'export' | 'backup' | 'changelog'
 
 export type QuestionType =
   | 'promptToAnswer'
