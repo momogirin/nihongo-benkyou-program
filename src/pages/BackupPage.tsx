@@ -2,6 +2,8 @@ import { useState, type ChangeEvent } from 'react'
 import { applyBackupPayload, buildBackupPayload, isBackupPayload } from '../lib/storage'
 import { isFirebaseConfigured } from '../lib/firebase'
 import { useCloudSync } from '../lib/useCloudSync'
+import { clearAppCache, reloadFresh } from '../lib/appUpdate'
+import { APP_VERSION } from '../data/changelog'
 import './BackupPage.css'
 
 type Status = { type: 'success' | 'error'; message: string }
@@ -54,6 +56,75 @@ function AccountSection() {
           </button>
         </>
       )}
+      {error && (
+        <p className="backup-status backup-status-error" role="status">
+          {error}
+        </p>
+      )}
+    </section>
+  )
+}
+
+// 캐시 비우기 — 웹앱이라 새로 배포해도 예전 화면이 남아 있을 수 있어서
+// (서비스워커가 js/css를 캐시한다) 사용자가 직접 최신 버전을 받아올 수단.
+// 되돌릴 수 없는 동작은 아니지만 화면이 리로드되므로 한 번 확인을 받는다.
+function CacheSection() {
+  const [clearing, setClearing] = useState(false)
+  const [confirming, setConfirming] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  async function handleClear() {
+    setClearing(true)
+    setError(null)
+    try {
+      await clearAppCache()
+      // 캐시를 비웠으니 곧바로 새로 받아온다 — 성공 메시지를 보여줄 새도 없이
+      // 화면이 다시 뜨는 게 사용자가 기대하는 결과다
+      reloadFresh()
+    } catch (e) {
+      // 조용히 실패시키지 않는다
+      setError(`캐시를 비우지 못했습니다: ${e instanceof Error ? e.message : String(e)}`)
+      setClearing(false)
+      setConfirming(false)
+    }
+  }
+
+  return (
+    <section className="cache-section">
+      <h2>업데이트</h2>
+      <p className="page-placeholder">
+        현재 버전 v{APP_VERSION}. 업데이트한 내용이 화면에 보이지 않으면 아래 버튼으로 저장된 캐시를 비우고
+        최신 버전을 다시 받아올 수 있습니다. <strong>학습 진도와 오답노트는 지워지지 않습니다.</strong>
+      </p>
+
+      <div className="backup-actions">
+        {confirming ? (
+          <>
+            <button type="button" className="backup-button" onClick={handleClear} disabled={clearing}>
+              {clearing ? '비우는 중…' : '비우고 새로고침'}
+            </button>
+            <button
+              type="button"
+              className="backup-button"
+              onClick={() => setConfirming(false)}
+              disabled={clearing}
+            >
+              취소
+            </button>
+          </>
+        ) : (
+          <button type="button" className="backup-button" onClick={() => setConfirming(true)}>
+            캐시 비우고 새로고침
+          </button>
+        )}
+      </div>
+
+      {confirming && !clearing && (
+        <p className="backup-status" role="status">
+          화면이 새로 고쳐집니다. 계속할까요?
+        </p>
+      )}
+
       {error && (
         <p className="backup-status backup-status-error" role="status">
           {error}
@@ -130,6 +201,8 @@ export default function BackupPage() {
           {status.message}
         </p>
       )}
+
+      <CacheSection />
     </div>
   )
 }
