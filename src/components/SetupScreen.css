@@ -127,6 +127,13 @@
   color: var(--color-ink-muted);
 }
 
+/* 버튼 바로 아래, 가운데 정렬. min-height로 문구 유무와 무관하게 높이 고정 */
+.start-hint {
+  margin: 8px 0 0;
+  min-height: 18px;
+  text-align: center;
+}
+
 .start-button {
   display: block;
   width: 100%;

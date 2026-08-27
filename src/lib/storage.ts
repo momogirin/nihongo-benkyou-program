@@ -1316,6 +1316,22 @@ export function buildBackupPayload(): BackupPayload {
   }
 }
 
+// 이 앱이 localStorage에 쓰는 키는 전부 'kanjiApp.' 접두사를 쓴다(위 *_KEY
+// 상수들, SETUP_PREFS_KEY, SRS_STATE_KEY 값 전부). 진행사항 초기화는 이
+// 접두사로 시작하는 키를 통째로 지운다 — 새 학습 도메인이 늘어도 여기 목록을
+// 따로 관리하지 않아도 되게. 단, 테마('kanjiApp.theme')는 진행사항이 아니라
+// 화면 설정이므로 남긴다.
+const PROGRESS_KEY_KEEP = new Set(['kanjiApp.theme'])
+
+export function clearAllProgress() {
+  const toRemove: string[] = []
+  for (let i = 0; i < localStorage.length; i += 1) {
+    const key = localStorage.key(i)
+    if (key && key.startsWith('kanjiApp.') && !PROGRESS_KEY_KEEP.has(key)) toRemove.push(key)
+  }
+  for (const key of toRemove) localStorage.removeItem(key)
+}
+
 // merges a payload into local storage — every import* below takes the union
 // (progress: max, notes/history: newest-wins by id), so applying a cloud
 // snapshot can never erase progress made locally since the last sync

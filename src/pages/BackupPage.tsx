@@ -1,5 +1,10 @@
 import { useState, type ChangeEvent } from 'react'
-import { applyBackupPayload, buildBackupPayload, isBackupPayload } from '../lib/storage'
+import {
+  applyBackupPayload,
+  buildBackupPayload,
+  clearAllProgress,
+  isBackupPayload,
+} from '../lib/storage'
 import { isFirebaseConfigured } from '../lib/firebase'
 import { useCloudSync } from '../lib/useCloudSync'
 import { clearAppCache, reloadFresh } from '../lib/appUpdate'
@@ -134,6 +139,81 @@ function CacheSection() {
   )
 }
 
+// 진행사항 초기화 — 이 기기 localStorage에 쌓인 학습 진도/오답노트/퀴즈 기록/
+// 이어하기 상태를 전부 지운다. 되돌릴 수 없으므로 CacheSection과 같은 2단계
+// 확인을 거치고, 문구는 더 강하게 둔다.
+// 로그인 상태에서는 비활성화한다 — 초기화해도 다음 동기화 때 클라우드 문서를
+// 먼저 pull → 병합(진도 max / 기록 newest-wins)하므로 로컬만 비운 건 곧
+// 되돌아온다. "정말 다 지우기"를 로그인 상태에서 흉내만 내는 것보다,
+// 먼저 로그아웃하게 안내하는 편이 정직하다.
+function ResetSection() {
+  const { user } = useCloudSync()
+  const [resetting, setResetting] = useState(false)
+  const [confirming, setConfirming] = useState(false)
+
+  function handleReset() {
+    setResetting(true)
+    clearAllProgress()
+    // 화면 곳곳이 localStorage 스냅샷을 마운트 시점에 memo해 두므로(SetupScreen의
+    // setupPrefs, 각 페이지의 진도 표시 등) 리로드해야 빈 상태가 제대로 반영된다.
+    reloadFresh()
+  }
+
+  return (
+    <section className="reset-section">
+      <h2>진행사항 초기화</h2>
+      <p className="page-placeholder">
+        이 기기에 저장된 <strong>학습 진도 · 오답노트 · 퀴즈 기록 · SRS 복습 상태 · 마무리 못한 퀴즈</strong>를
+        모두 지웁니다. <strong>되돌릴 수 없습니다.</strong> 화면 테마 설정은 유지됩니다.
+      </p>
+
+      {user ? (
+        <p className="backup-status backup-status-error" role="status">
+          로그인 상태에서는 초기화해도 다음 동기화 때 계정에 저장된 진도가 다시 내려옵니다. 먼저 로그아웃한 뒤
+          초기화하세요. (다른 기기의 진도까지 지우려면 각 기기에서 따로 초기화해야 합니다.)
+        </p>
+      ) : (
+        <div className="backup-actions">
+          {confirming ? (
+            <>
+              <button
+                type="button"
+                className="backup-button backup-button-danger"
+                onClick={handleReset}
+                disabled={resetting}
+              >
+                {resetting ? '지우는 중…' : '정말 모두 지우기'}
+              </button>
+              <button
+                type="button"
+                className="backup-button"
+                onClick={() => setConfirming(false)}
+                disabled={resetting}
+              >
+                취소
+              </button>
+            </>
+          ) : (
+            <button
+              type="button"
+              className="backup-button backup-button-danger"
+              onClick={() => setConfirming(true)}
+            >
+              진행사항 초기화
+            </button>
+          )}
+        </div>
+      )}
+
+      {confirming && !resetting && !user && (
+        <p className="backup-status" role="status">
+          정말 모두 지우면 되돌릴 수 없습니다. 필요하면 먼저 위에서 "내보내기"로 백업하세요.
+        </p>
+      )}
+    </section>
+  )
+}
+
 export default function BackupPage() {
   const [status, setStatus] = useState<Status | null>(null)
 
@@ -201,6 +281,8 @@ export default function BackupPage() {
           {status.message}
         </p>
       )}
+
+      <ResetSection />
 
       <CacheSection />
     </div>

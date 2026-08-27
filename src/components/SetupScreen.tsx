@@ -79,6 +79,19 @@ export default function SetupScreen({ onStart }: Props) {
   const canStart =
     levels.length > 0 && availableCount > 0 && questionType !== null && order !== null && count !== null
 
+  // 시작 버튼이 왜 눌리지 않는지 — 급수/문제수는 각 fieldset에 안내가 있지만
+  // 문제 유형은 기본값을 일부러 안 넣어서(매번 직접 고르는 설계) 아무 표시 없이
+  // 비활성으로만 남는다. 미충족 조건을 버튼 옆에 한 줄로 알려준다.
+  const missingReason = !canStart
+    ? levels.length === 0 || availableCount === 0
+      ? '급수를 하나 이상 선택하세요'
+      : questionType === null
+        ? '문제 유형을 하나 선택하세요'
+        : count === null
+          ? '문제 수를 선택하세요'
+          : '순서를 선택하세요'
+    : null
+
   return (
     <div className="setup-screen">
       <h1>학습 설정</h1>
@@ -189,6 +202,10 @@ export default function SetupScreen({ onStart }: Props) {
       >
         시작하기
       </button>
+      {/* 자리는 항상 차지해서(레이아웃 시프트 방지) 문구가 생겨도 버튼이 안 밀린다 */}
+      <p className="hint start-hint" aria-live="polite">
+        {missingReason ?? ' '}
+      </p>
     </div>
   )
 }

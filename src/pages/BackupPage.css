@@ -27,6 +27,19 @@
   cursor: not-allowed;
 }
 
+/* destructive 액션(진행사항 초기화) — 일반 backup-button과 크기/여백은 같고
+   색만 위험색으로 */
+.backup-button-danger {
+  border-color: var(--color-incorrect);
+  color: var(--color-incorrect);
+}
+
+.backup-button-danger:hover {
+  border-color: var(--color-incorrect);
+  color: var(--color-bg-elevated);
+  background: var(--color-incorrect);
+}
+
 .account-section {
   padding-bottom: 32px;
   margin-bottom: 32px;
@@ -39,7 +52,8 @@
   margin-bottom: 16px;
 }
 
-/* 마지막 구역이라 .account-section과 달리 위쪽에 구분선을 둔다 */
+/* 아래쪽 구역들은 .account-section과 달리 위쪽에 구분선을 둔다 */
+.reset-section,
 .cache-section {
   padding-top: 32px;
   margin-top: 32px;
