@@ -23,7 +23,8 @@ interface Props {
 
 const ALL_LEVELS: KanjiLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
 // 한 세션에 학습할 카드 수 — 단어/문법 화면과 같은 선택지
-const STUDY_BATCH_OPTIONS = [5, 10, 20, 30] as const
+// 0 = 전체(남은 전부를 한 세션으로) — 진도가 기록되므로 중간에 나가도 이어서 볼 수 있다
+const STUDY_BATCH_OPTIONS = [5, 10, 20, 30, 0] as const
 
 function levelPool(level: KanjiLevel): Kanji[] {
   return kanjiList
@@ -57,6 +58,8 @@ export default function StudyPage({ onStartQuiz }: Props) {
   const [studiedBatch, setStudiedBatch] = useState<Kanji[]>([])
   // 한 번에 학습할 카드 수 — 급수 전체를 한 세션에 열지 않기 위한 단위
   const [batchSize, setBatchSize] = useState(() => getStudyBatchSize('kanjiStudy'))
+  // batchSize 0 = "전체" — 남은 전부를 한 세션으로 연다
+  const takeCount = (poolLength: number) => (batchSize === 0 ? poolLength : batchSize)
   const [cardIndex, setCardIndex] = useState(0)
   const [viewMode, setViewMode] = useState<ViewMode>('card')
   const donePrimaryButtonRef = useRef<HTMLButtonElement>(null)
@@ -72,7 +75,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
   // 세션으로 열어(N1이면 1158자) "오늘 여기까지"라는 단위가 없었다
   function startBatch() {
     if (!level) return
-    setBatch(pool.slice(completedCount, completedCount + batchSize))
+    setBatch(pool.slice(completedCount, completedCount + takeCount(pool.length)))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -98,7 +101,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
 
   function restartBatch() {
     if (!level) return
-    setBatch(pool.slice(0, batchSize))
+    setBatch(pool.slice(0, takeCount(pool.length)))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -405,7 +408,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
                 setStudyBatchSize('kanjiStudy', n)
               }}
             >
-              {n}
+              {n === 0 ? '전체' : n}
             </button>
           ))}
         </div>
@@ -421,7 +424,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
       ) : (
         <>
           <button type="button" className="study-start-button" onClick={startBatch}>
-            {completedCount > 0 ? '이어하기' : '시작하기'} ({Math.min(batchSize, remaining)}자)
+            {completedCount > 0 ? '이어하기' : '시작하기'} ({batchSize === 0 ? remaining : Math.min(batchSize, remaining)}자)
           </button>
         </>
       )}

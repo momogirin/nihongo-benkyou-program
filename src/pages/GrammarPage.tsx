@@ -50,7 +50,8 @@ import './GrammarPage.css'
 const QUIZ_QUESTION_COUNT = 20
 const QUIZ_COUNT_OPTIONS = [10, 20, 30, 50, 'all'] as const
 // 한 세션에 학습할 카드 수 — 한자/단어 화면과 같은 선택지
-const STUDY_BATCH_OPTIONS = [5, 10, 20, 30] as const
+// 0 = 전체(남은 전부를 한 세션으로) — 진도가 기록되므로 중간에 나가도 이어서 볼 수 있다
+const STUDY_BATCH_OPTIONS = [5, 10, 20, 30, 0] as const
 const FEEDBACK_DELAY_MS = 550
 
 type Phase =
@@ -192,6 +193,8 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   const [quizType, setQuizType] = useState<QuizType>(prefs.quizType ?? 'meaning')
   // 한 번에 학습할 카드 수 — 급수 전체를 한 세션에 열지 않기 위한 단위
   const [batchSize, setBatchSize] = useState(() => getStudyBatchSize('grammar'))
+  // batchSize 0 = "전체" — 남은 전부를 한 세션으로 연다
+  const takeCount = (poolLength: number) => (batchSize === 0 ? poolLength : batchSize)
   const [blankQuestions, setBlankQuestions] = useState<GrammarBlankQuestion[]>([])
   const [blankIndex, setBlankIndex] = useState(0)
   const [blankAnswers, setBlankAnswers] = useState<BlankAnswer[]>([])
@@ -248,7 +251,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
   // 세션으로 열어(N5 문법 85개) "오늘 여기까지"라는 단위가 없었다
   function startBatch(fromLevel: KanjiLevel, fromCompleted: number) {
     const fromPool = grammarLevelPool(fromLevel)
-    setBatch(fromPool.slice(fromCompleted, fromCompleted + batchSize))
+    setBatch(fromPool.slice(fromCompleted, fromCompleted + takeCount(fromPool.length)))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -271,7 +274,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
 
   function restartBatch(fromLevel: KanjiLevel) {
     const fromPool = grammarLevelPool(fromLevel)
-    setBatch(fromPool.slice(0, batchSize))
+    setBatch(fromPool.slice(0, takeCount(fromPool.length)))
     setCardIndex(0)
     setPhase('studying')
   }
@@ -1301,7 +1304,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
                   setStudyBatchSize('grammar', n)
                 }}
               >
-                {n}
+                {n === 0 ? '전체' : n}
               </button>
             ))}
           </div>
@@ -1316,7 +1319,7 @@ export default function GrammarPage({ retryIds, onRetryIdsConsumed }: Props) {
           </>
         ) : (
           <button type="button" className="study-start-button" onClick={() => startBatch(level, completedCount)}>
-            {completedCount > 0 ? '이어하기' : '시작하기'} ({Math.min(batchSize, remaining)}개)
+            {completedCount > 0 ? '이어하기' : '시작하기'} ({batchSize === 0 ? remaining : Math.min(batchSize, remaining)}개)
           </button>
         )}
       </div>

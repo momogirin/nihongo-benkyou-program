@@ -1025,9 +1025,11 @@ export function importRadicalStudyProgress(progress: Record<string, number>) {
 
 // 한 번에 학습할 카드 수 — 급수 전체(N5 단어 718개)를 한 세션에 여는 대신
 // "오늘 N개"로 끊는다. 화면별로 따로 기억한다(한자와 단어의 적정 분량이 다름).
+// 0은 "전체"(분량을 안 끊고 남은 전부) 센티널 — 진도는 어차피 기록되므로
+// 중간에 나가도 다음에 이어서 볼 수 있다.
 export function getStudyBatchSize(screen: string): number {
   const saved = getSetupPrefs<{ batchSize: number }>(screen)?.batchSize
-  return typeof saved === 'number' && saved > 0 ? saved : DEFAULT_STUDY_BATCH_SIZE
+  return typeof saved === 'number' && saved >= 0 ? saved : DEFAULT_STUDY_BATCH_SIZE
 }
 
 export function setStudyBatchSize(screen: string, size: number) {
