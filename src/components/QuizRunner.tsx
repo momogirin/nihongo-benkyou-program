@@ -188,7 +188,15 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
     function handleKeyDown(e: KeyboardEvent) {
       if (isComposingEnter(e)) return
       if (activeFeedback) {
-        if (!activeFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNext()
+        if (!activeFeedback.isCorrect && e.key === 'Enter' && !e.repeat) {
+          // 포커스된 "다음" 버튼에서 브라우저가 이 keydown을 native click으로
+          // 바꾸는데, handleNext()가 그 전에 다음 문제로 넘기고 1번 선택지에
+          // 포커스를 주므로 그 click이 새 문제의 1번을 눌러버린다.
+          // 기본 동작을 여기서 끊어야 그게 막힌다(handleNext 안에서는 늦다 —
+          // 이벤트 객체가 없어 preventDefault를 부를 수 없다).
+          e.preventDefault()
+          handleNext()
+        }
         return
       }
       if (isChoiceMode) {
@@ -199,8 +207,10 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
         submit(inputValue)
       }
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    // capture 단계 — 포커스된 버튼이 keydown을 받아 native click을 만들기
+    // 전에 우리가 먼저 처리하고 필요하면 기본 동작을 끊기 위해서다.
+    window.addEventListener('keydown', handleKeyDown, true)
+    return () => window.removeEventListener('keydown', handleKeyDown, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isChoiceMode, question, activeFeedback, inputValue])
 

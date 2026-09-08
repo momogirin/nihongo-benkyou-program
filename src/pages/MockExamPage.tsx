@@ -237,15 +237,21 @@ export default function MockExamPage() {
     function handleKeyDown(e: KeyboardEvent) {
       if (isComposingEnter(e)) return
       if (feedback) {
-        if (!feedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNext()
+        if (!feedback.isCorrect && e.key === 'Enter' && !e.repeat) {
+          // 포커스된 "다음" 버튼의 Enter를 브라우저가 native click으로 바꾸기 전에
+          // 기본 동작을 끊는다 — 안 끊으면 그 click이 다음 문제의 1번 선택지를
+          // 눌러 자동 제출된다.
+          e.preventDefault()
+          handleNext()
+        }
         return
       }
       const choiceIndex = Number(e.key) - 1
       const choice = questionsRef.current[index]?.choices[choiceIndex]
       if (choice) submit(choice.label)
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    window.addEventListener('keydown', handleKeyDown, true)
+    return () => window.removeEventListener('keydown', handleKeyDown, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, index, feedback])
 

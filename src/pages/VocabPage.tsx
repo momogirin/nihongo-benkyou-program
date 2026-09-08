@@ -855,15 +855,21 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     function handleKeyDown(e: KeyboardEvent) {
       if (isComposingEnter(e)) return
       if (quizFeedback) {
-        if (!quizFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextQuiz()
+        if (!quizFeedback.isCorrect && e.key === 'Enter' && !e.repeat) {
+          // 포커스된 "다음" 버튼의 Enter를 브라우저가 native click으로 바꾸기 전에
+          // 기본 동작을 끊는다 — 안 끊으면 그 click이 다음 문제의 1번 선택지를
+          // 눌러 자동 제출된다.
+          e.preventDefault()
+          handleNextQuiz()
+        }
         return
       }
       const choiceIndex = Number(e.key) - 1
       const choice = quizQuestions[quizIndex]?.choices[choiceIndex]
       if (choice) submitQuizAnswer(choice.meaningKr)
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    window.addEventListener('keydown', handleKeyDown, true)
+    return () => window.removeEventListener('keydown', handleKeyDown, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, quizIndex, quizFeedback])
 
@@ -912,15 +918,21 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     function handleKeyDown(e: KeyboardEvent) {
       if (isComposingEnter(e)) return
       if (blankFeedback) {
-        if (!blankFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextBlank()
+        if (!blankFeedback.isCorrect && e.key === 'Enter' && !e.repeat) {
+          // 포커스된 "다음" 버튼의 Enter를 브라우저가 native click으로 바꾸기 전에
+          // 기본 동작을 끊는다 — 안 끊으면 그 click이 다음 문제의 1번 선택지를
+          // 눌러 자동 제출된다.
+          e.preventDefault()
+          handleNextBlank()
+        }
         return
       }
       const choiceIndex = Number(e.key) - 1
       const choice = blankQuestions[blankIndex]?.choices[choiceIndex]
       if (choice) submitBlankAnswer(choice.id)
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    window.addEventListener('keydown', handleKeyDown, true)
+    return () => window.removeEventListener('keydown', handleKeyDown, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, blankIndex, blankFeedback])
 
@@ -974,15 +986,21 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     function handleKeyDown(e: KeyboardEvent) {
       if (isComposingEnter(e)) return
       if (readingFeedback) {
-        if (!readingFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextReading()
+        if (!readingFeedback.isCorrect && e.key === 'Enter' && !e.repeat) {
+          // 포커스된 "다음" 버튼의 Enter를 브라우저가 native click으로 바꾸기 전에
+          // 기본 동작을 끊는다 — 안 끊으면 그 click이 다음 문제의 1번 선택지를
+          // 눌러 자동 제출된다.
+          e.preventDefault()
+          handleNextReading()
+        }
         return
       }
       if (e.key === 'Enter' && !e.repeat && readingInputValue.trim() !== '') {
         submitReadingAnswer(readingInputValue)
       }
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    window.addEventListener('keydown', handleKeyDown, true)
+    return () => window.removeEventListener('keydown', handleKeyDown, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, readingIndex, readingFeedback, readingInputValue])
 
@@ -1031,15 +1049,21 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     function handleKeyDown(e: KeyboardEvent) {
       if (isComposingEnter(e)) return
       if (writingFeedback) {
-        if (!writingFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextWriting()
+        if (!writingFeedback.isCorrect && e.key === 'Enter' && !e.repeat) {
+          // 포커스된 "다음" 버튼의 Enter를 브라우저가 native click으로 바꾸기 전에
+          // 기본 동작을 끊는다 — 안 끊으면 그 click이 다음 문제의 1번 선택지를
+          // 눌러 자동 제출된다.
+          e.preventDefault()
+          handleNextWriting()
+        }
         return
       }
       const choiceIndex = Number(e.key) - 1
       const choice = writingQuestions[writingIndex]?.choices[choiceIndex]
       if (choice) submitWritingAnswer(choice.id)
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    window.addEventListener('keydown', handleKeyDown, true)
+    return () => window.removeEventListener('keydown', handleKeyDown, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, writingIndex, writingFeedback])
 
@@ -1088,15 +1112,21 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     function handleKeyDown(e: KeyboardEvent) {
       if (isComposingEnter(e)) return
       if (transitivityFeedback) {
-        if (!transitivityFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextTransitivity()
+        if (!transitivityFeedback.isCorrect && e.key === 'Enter' && !e.repeat) {
+          // 포커스된 "다음" 버튼의 Enter를 브라우저가 native click으로 바꾸기 전에
+          // 기본 동작을 끊는다 — 안 끊으면 그 click이 다음 문제의 1번 선택지를
+          // 눌러 자동 제출된다.
+          e.preventDefault()
+          handleNextTransitivity()
+        }
         return
       }
       const choiceIndex = Number(e.key) - 1
       const choice = transitivityQuestions[transitivityIndex]?.choices[choiceIndex]
       if (choice) submitTransitivityAnswer(choice.id)
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    window.addEventListener('keydown', handleKeyDown, true)
+    return () => window.removeEventListener('keydown', handleKeyDown, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, transitivityIndex, transitivityFeedback])
 
@@ -1146,15 +1176,21 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     function handleKeyDown(e: KeyboardEvent) {
       if (isComposingEnter(e)) return
       if (synonymFeedback) {
-        if (!synonymFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextSynonym()
+        if (!synonymFeedback.isCorrect && e.key === 'Enter' && !e.repeat) {
+          // 포커스된 "다음" 버튼의 Enter를 브라우저가 native click으로 바꾸기 전에
+          // 기본 동작을 끊는다 — 안 끊으면 그 click이 다음 문제의 1번 선택지를
+          // 눌러 자동 제출된다.
+          e.preventDefault()
+          handleNextSynonym()
+        }
         return
       }
       const choiceIndex = Number(e.key) - 1
       const choice = synonymQuestions[synonymIndex]?.choices[choiceIndex]
       if (choice) submitSynonymAnswer(choice.id)
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    window.addEventListener('keydown', handleKeyDown, true)
+    return () => window.removeEventListener('keydown', handleKeyDown, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, synonymIndex, synonymFeedback])
 
@@ -1204,15 +1240,21 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
     function handleKeyDown(e: KeyboardEvent) {
       if (isComposingEnter(e)) return
       if (usageFeedback) {
-        if (!usageFeedback.isCorrect && e.key === 'Enter' && !e.repeat) handleNextUsage()
+        if (!usageFeedback.isCorrect && e.key === 'Enter' && !e.repeat) {
+          // 포커스된 "다음" 버튼의 Enter를 브라우저가 native click으로 바꾸기 전에
+          // 기본 동작을 끊는다 — 안 끊으면 그 click이 다음 문제의 1번 선택지를
+          // 눌러 자동 제출된다.
+          e.preventDefault()
+          handleNextUsage()
+        }
         return
       }
       const choiceIndex = Number(e.key) - 1
       const choice = usageQuestions[usageIndex]?.blankedChoices[choiceIndex]
       if (choice) submitUsageAnswer(choice.entry.id)
     }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    window.addEventListener('keydown', handleKeyDown, true)
+    return () => window.removeEventListener('keydown', handleKeyDown, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, usageIndex, usageFeedback])
 
