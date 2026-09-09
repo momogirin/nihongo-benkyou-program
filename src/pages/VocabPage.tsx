@@ -996,6 +996,10 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
         return
       }
       if (e.key === 'Enter' && !e.repeat && readingInputValue.trim() !== '') {
+        // 제출로 오답이 확정되면 그 직후 "다음" 버튼이 포커스를 받는데, 바로 이
+        // Enter의 기본 동작이 그 버튼을 native click 해 판정을 볼 새도 없이
+        // 다음 문제로 넘어간다. 여기서도 기본 동작을 끊어야 한다.
+        e.preventDefault()
         submitReadingAnswer(readingInputValue)
       }
     }
