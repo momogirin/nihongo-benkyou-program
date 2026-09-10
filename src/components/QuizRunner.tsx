@@ -264,12 +264,27 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
         </div>
       </div>
 
+      {/* 몇 번째인지 숫자만으로는 남은 양이 체감되지 않는다 — 홈 화면이 쓰는
+          진행률 막대와 같은 방식으로 얼마나 남았는지 보여준다.
+          채움은 "푼 문제 수"(index) 기준이라 첫 문제에서 0%로 시작한다 */}
+      <div className="quiz-progress-bar">
+        <div
+          className="quiz-progress-bar-fill"
+          style={{ width: `${(index / questions.length) * 100}%` }}
+        />
+      </div>
+
       {!isChoiceMode ? (
         <>
           <div className="quiz-kanji">{question.kanji.kanji}</div>
+          {/* 판정이 나면 입력칸 자체도 정답/오답으로 물들인다 — 판정 문구는
+              입력칸 아래에 따로 있어서, 입력칸만 평상시 회색이면 방금 친 답이
+              맞았는지가 눈에 바로 안 들어온다 */}
           <input
             ref={inputRef}
-            className="quiz-input"
+            className={`quiz-input${
+              activeFeedback ? (activeFeedback.isCorrect ? ' correct' : ' incorrect') : ''
+            }`}
             type="text"
             value={inputValue}
             disabled={activeFeedback !== null}

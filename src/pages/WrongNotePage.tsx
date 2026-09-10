@@ -46,6 +46,8 @@ interface Props {
   onRetryEnglishVocab: (ids: string[]) => void
   onGoToKana: () => void
   onGoToConjugation: () => void
+  // 오답이 하나도 없을 때 "퀴즈 풀러 가기"로 보낼 곳
+  onGoToKanji: () => void
 }
 
 type DetailTarget =
@@ -104,6 +106,7 @@ export default function WrongNotePage({
   onRetryEnglishVocab,
   onGoToKana,
   onGoToConjugation,
+  onGoToKanji,
 }: Props) {
   const [wrongNotes, setWrongNotes] = useState(() => getWrongNotes())
   const [vocabWrongNotes, setVocabWrongNotes] = useState(() => getVocabWrongNotes())
@@ -271,6 +274,10 @@ export default function WrongNotePage({
       <div className="page">
         <h1>오답노트</h1>
         <p className="page-placeholder">아직 틀린 문제가 없습니다. 퀴즈를 풀면 여기에 쌓입니다.</p>
+        {/* 안내만 하고 갈 길을 안 열어주면 사용자가 사이드바에서 직접 찾아야 한다 */}
+        <button type="button" className="empty-state-button" onClick={onGoToKanji}>
+          퀴즈 풀러 가기
+        </button>
       </div>
     )
   }

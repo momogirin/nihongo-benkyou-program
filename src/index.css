@@ -132,6 +132,24 @@ button:focus-visible {
   color: var(--color-ink-muted);
 }
 
+/* 빈 화면의 행동 유도 버튼 — 안내 문구만 두고 갈 길을 안 열어주면 사용자가
+   사이드바에서 직접 찾아야 한다. 어느 빈 화면에서나 같은 모양을 쓴다 */
+.empty-state-button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-primary-dark);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.empty-state-button:hover {
+  background: var(--color-selected-bg);
+}
+
 /* 앱 전역 확인 다이얼로그 — 오답노트 제거 확인, 퀴즈 이탈 확인 등이
    같은 모양·같은 키보드 동작(Esc 취소 / Enter 확인)을 쓴다 */
 .confirm-modal-backdrop {

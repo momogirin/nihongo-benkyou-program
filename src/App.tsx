@@ -159,6 +159,7 @@ function App() {
             onRetryEnglishVocab={retryEnglishVocab}
             onGoToKana={() => handleNavigate('kana')}
             onGoToConjugation={() => handleNavigate('conjugation')}
+            onGoToKanji={() => handleNavigate('kanji')}
           />
         )
       case 'vocab':
