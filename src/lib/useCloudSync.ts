@@ -34,6 +34,17 @@ function describeAuthError(err: unknown): string {
 // always-on login/logout/tab-hide/manual triggers below
 const AUTO_SYNC_INTERVAL_MS = 5 * 60 * 1000
 
+// 로컬에서 무언가를 "지운" 직후 클라우드 문서를 지금 상태로 덮어쓴다.
+// 일반 동기화(syncNow)는 pull→병합(union)→push라서, 삭제한 항목이 클라우드에
+// 남아 있으면 다음 동기화 때 그대로 되살아난다. 삭제만큼은 pull 없이 push해야
+// 다른 브라우저에도 삭제가 전파된다.
+// 로그아웃 상태이거나 Firebase 미설정이면 아무것도 하지 않는다(로컬 삭제로 충분).
+export async function pushLocalStateAfterDelete(): Promise<void> {
+  if (!isFirebaseConfigured || !auth?.currentUser || !db) return
+  const ref = doc(db, 'users', auth.currentUser.uid)
+  await setDoc(ref, buildBackupPayload())
+}
+
 export interface CloudSyncState {
   user: User | null
   loading: boolean

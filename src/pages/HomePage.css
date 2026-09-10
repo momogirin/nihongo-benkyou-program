@@ -141,17 +141,32 @@
   gap: 10px;
 }
 
+/* 카드 본체 + 폐기(×) 버튼을 한 상자로 묶는다. 테두리·배경은 행이 갖고,
+   안쪽 버튼 둘은 배경만 바꾼다(버튼 안에 버튼을 넣을 수 없으므로) */
+.home-priority-row {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary-dark);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  overflow: hidden;
+}
+
+.home-priority-row.urgent {
+  border-left-color: var(--color-incorrect);
+}
+
 .home-priority-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   padding: 16px 18px;
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-primary-dark);
-  border-radius: var(--radius-lg);
-  background: var(--color-bg-elevated);
+  border: none;
+  background: transparent;
   color: var(--color-ink);
   text-align: left;
   cursor: pointer;
@@ -159,10 +174,6 @@
 
 .home-priority-card:hover {
   background: var(--color-selected-bg);
-}
-
-.home-priority-card.urgent {
-  border-left-color: var(--color-incorrect);
 }
 
 .home-priority-body {
@@ -190,7 +201,7 @@
   color: var(--color-primary-dark);
 }
 
-.home-priority-card.urgent .home-priority-chip {
+.home-priority-row.urgent .home-priority-chip {
   color: var(--color-incorrect);
 }
 
@@ -345,24 +356,75 @@
   gap: 8px;
 }
 
+/* 진행중 카드와 같은 구조 — 테두리는 행이 갖고 안쪽에 본체 + 폐기(×) */
+.home-history-row {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  overflow: hidden;
+}
+
+.home-history-row:hover {
+  border-color: var(--color-primary-dark);
+}
+
 .home-history-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   padding: 14px 16px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: var(--color-bg-elevated);
+  border: none;
+  background: transparent;
   color: var(--color-ink);
   text-align: left;
   cursor: pointer;
 }
 
 .home-history-item:hover {
-  border-color: var(--color-primary-dark);
   background: var(--color-selected-bg);
+}
+
+/* 진행중/기록 항목의 폐기(×) — 보조 동작이라 평소엔 약하게, hover/focus에서만
+   또렷하게. 진행중 목록의 복습 항목은 폐기 대상이 아니라 자리만 차지한다
+   (.placeholder) — 있고 없고에 따라 카드 폭이 흔들리지 않게 */
+.home-discard-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 40px;
+  align-self: stretch;
+  border: none;
+  border-left: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-ink-muted);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.home-discard-button:hover:not(:disabled) {
+  background: var(--color-selected-bg);
+  color: var(--color-incorrect);
+}
+
+.home-discard-button.placeholder {
+  visibility: hidden;
+}
+
+.home-discard-error {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-incorrect);
+  border-radius: var(--radius-md);
+  color: var(--color-incorrect);
+  font-size: 13px;
+  text-align: left;
 }
 
 .home-history-main {

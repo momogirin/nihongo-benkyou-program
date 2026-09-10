@@ -455,6 +455,40 @@ export function importQuizHistory(entries: QuizHistoryEntry[]) {
   localStorage.setItem(QUIZ_HISTORY_KEY, JSON.stringify(merged.slice(0, QUIZ_HISTORY_LIMIT)))
 }
 
+// 홈 "최근 기록"에서 항목 하나를 폐기할 때 쓴다. 기록은 도메인마다 키가
+// 따로지만 저장 형태(id를 가진 배열)는 전부 같으므로, 도메인별로 같은 함수를
+// 일곱 벌 만들지 않고 키만 골라 쓴다.
+export type QuizHistoryDomain =
+  | 'kanji'
+  | 'vocab'
+  | 'grammar'
+  | 'englishVocab'
+  | 'conjugation'
+  | 'kana'
+  | 'mockExam'
+
+const QUIZ_HISTORY_KEY_BY_DOMAIN: Record<QuizHistoryDomain, string> = {
+  kanji: QUIZ_HISTORY_KEY,
+  vocab: VOCAB_QUIZ_HISTORY_KEY,
+  grammar: GRAMMAR_QUIZ_HISTORY_KEY,
+  englishVocab: ENGLISH_VOCAB_QUIZ_HISTORY_KEY,
+  conjugation: CONJUGATION_QUIZ_HISTORY_KEY,
+  kana: KANA_QUIZ_HISTORY_KEY,
+  mockExam: MOCK_EXAM_HISTORY_KEY,
+}
+
+export function removeQuizHistoryEntry(domain: QuizHistoryDomain, id: string) {
+  const key = QUIZ_HISTORY_KEY_BY_DOMAIN[domain]
+  let entries: { id: string }[]
+  try {
+    const raw = localStorage.getItem(key)
+    entries = raw ? JSON.parse(raw) : []
+  } catch {
+    return
+  }
+  localStorage.setItem(key, JSON.stringify(entries.filter((entry) => entry.id !== id)))
+}
+
 // only one in-progress quiz is tracked at a time — starting any new quiz
 // (fresh setup, 오답 재도전, 학습 배치, re-running a history entry) replaces it
 export function getInProgressQuiz(): InProgressQuiz | null {

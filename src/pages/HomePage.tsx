@@ -28,8 +28,16 @@ import {
   getVocabWrongNotes,
   getSetupPrefs,
   getWrongNotes,
+  removeQuizHistoryEntry,
   setSetupPrefs,
+  clearInProgressQuiz,
+  clearVocabInProgressQuiz,
+  clearGrammarInProgressQuiz,
+  clearMockExamInProgressQuiz,
+  clearEnglishVocabInProgressQuiz,
+  type QuizHistoryDomain,
 } from '../lib/storage'
+import { pushLocalStateAfterDelete } from '../lib/useCloudSync'
 import {
   getEnglishVocabStudyProgressSummary,
   getGrammarStudyProgressSummary,
@@ -125,13 +133,31 @@ export default function HomePage({
     setSetupPrefs<{ goalLevel: KanjiLevel }>('home', { goalLevel: level })
   }
 
-  const history = useMemo(() => getQuizHistory(), [])
-  const vocabHistory = useMemo(() => getVocabQuizHistory(), [])
-  const grammarHistory = useMemo(() => getGrammarQuizHistory(), [])
-  const mockExamHistory = useMemo(() => getMockExamHistory(), [])
-  const englishVocabHistory = useMemo(() => getEnglishVocabQuizHistory(), [])
-  const conjugationHistory = useMemo(() => getConjugationQuizHistory(), [])
-  const kanaHistory = useMemo(() => getKanaQuizHistory(), [])
+  // 이 화면은 localStorage 스냅샷을 마운트 시점에 memo해 둔다. 폐기(x) 후에는
+  // 다시 읽어야 목록에서 사라지므로, 이 값을 올려 아래 memo들을 갱신한다.
+  const [discardCount, setDiscardCount] = useState(0)
+  const [discardError, setDiscardError] = useState<string | null>(null)
+
+  // 폐기는 로컬에서 지운 뒤 클라우드에 지금 상태를 바로 push한다. 일반 동기화는
+  // pull→병합(union)이라 push하지 않으면 다음 동기화 때 되살아난다.
+  function discard(remove: () => void) {
+    remove()
+    setDiscardCount((v) => v + 1)
+    void pushLocalStateAfterDelete().catch((err) => {
+      // 로컬 삭제는 이미 끝났고 화면에도 반영됐다. 클라우드 반영만 실패한
+      // 상황이라 조용히 넘기지 않고 사용자에게 알린다.
+      console.error(err)
+      setDiscardError('폐기한 항목을 계정에 반영하지 못했습니다 — 다른 기기에서 다시 나타날 수 있습니다')
+    })
+  }
+
+  const history = useMemo(() => getQuizHistory(), [discardCount])
+  const vocabHistory = useMemo(() => getVocabQuizHistory(), [discardCount])
+  const grammarHistory = useMemo(() => getGrammarQuizHistory(), [discardCount])
+  const mockExamHistory = useMemo(() => getMockExamHistory(), [discardCount])
+  const englishVocabHistory = useMemo(() => getEnglishVocabQuizHistory(), [discardCount])
+  const conjugationHistory = useMemo(() => getConjugationQuizHistory(), [discardCount])
+  const kanaHistory = useMemo(() => getKanaQuizHistory(), [discardCount])
 
   // merge all three domains' quiz history into one chronological feed —
   // vocab/grammar entries don't carry a replayable config like kanji's, so
@@ -139,6 +165,7 @@ export default function HomePage({
   const mergedHistory = useMemo(() => {
     const kanjiItems = history.map((e) => ({
       id: e.id,
+      domain: 'kanji' as QuizHistoryDomain,
       finishedAt: e.finishedAt,
       correct: e.correct,
       total: e.total,
@@ -147,6 +174,7 @@ export default function HomePage({
     }))
     const vocabItems = vocabHistory.map((e) => ({
       id: e.id,
+      domain: 'vocab' as QuizHistoryDomain,
       finishedAt: e.finishedAt,
       correct: e.correct,
       total: e.total,
@@ -155,6 +183,7 @@ export default function HomePage({
     }))
     const grammarItems = grammarHistory.map((e) => ({
       id: e.id,
+      domain: 'grammar' as QuizHistoryDomain,
       finishedAt: e.finishedAt,
       correct: e.correct,
       total: e.total,
@@ -163,6 +192,7 @@ export default function HomePage({
     }))
     const mockExamItems = mockExamHistory.map((e) => ({
       id: e.id,
+      domain: 'mockExam' as QuizHistoryDomain,
       finishedAt: e.finishedAt,
       correct: e.correct,
       total: e.total,
@@ -171,6 +201,7 @@ export default function HomePage({
     }))
     const englishVocabItems = englishVocabHistory.map((e) => ({
       id: e.id,
+      domain: 'englishVocab' as QuizHistoryDomain,
       finishedAt: e.finishedAt,
       correct: e.correct,
       total: e.total,
@@ -179,6 +210,7 @@ export default function HomePage({
     }))
     const conjugationItems = conjugationHistory.map((e) => ({
       id: e.id,
+      domain: 'conjugation' as QuizHistoryDomain,
       finishedAt: e.finishedAt,
       correct: e.correct,
       total: e.total,
@@ -187,6 +219,7 @@ export default function HomePage({
     }))
     const kanaItems = kanaHistory.map((e) => ({
       id: e.id,
+      domain: 'kana' as QuizHistoryDomain,
       finishedAt: e.finishedAt,
       correct: e.correct,
       total: e.total,
@@ -207,11 +240,11 @@ export default function HomePage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [history, vocabHistory, grammarHistory, mockExamHistory, englishVocabHistory, conjugationHistory, kanaHistory])
 
-  const inProgress = useMemo(() => getInProgressQuiz(), [])
-  const vocabInProgress = useMemo(() => getVocabInProgressQuiz(), [])
-  const grammarInProgress = useMemo(() => getGrammarInProgressQuiz(), [])
-  const mockExamInProgress = useMemo(() => getMockExamInProgressQuiz(), [])
-  const englishVocabInProgress = useMemo(() => getEnglishVocabInProgressQuiz(), [])
+  const inProgress = useMemo(() => getInProgressQuiz(), [discardCount])
+  const vocabInProgress = useMemo(() => getVocabInProgressQuiz(), [discardCount])
+  const grammarInProgress = useMemo(() => getGrammarInProgressQuiz(), [discardCount])
+  const mockExamInProgress = useMemo(() => getMockExamInProgressQuiz(), [discardCount])
+  const englishVocabInProgress = useMemo(() => getEnglishVocabInProgressQuiz(), [discardCount])
   const studyProgress = useMemo(() => getStudyProgressSummary(), [])
   const vocabStudyProgress = useMemo(() => getVocabStudyProgressSummary(), [])
   const grammarStudyProgress = useMemo(() => getGrammarStudyProgressSummary(), [])
@@ -412,6 +445,8 @@ export default function HomePage({
       title: '한자 복습',
       detail: `${dueKanjiIds.length}자 복습할 시간이에요`,
       onClick: () => onStartQuiz(kanjiIdsQuizConfig(dueKanjiIds)),
+      // 복습 알림은 SRS 일정에서 파생된 값이라 폐기 대상이 아니다
+      onDiscard: null,
     },
     dueVocabIds.length > 0 && {
       key: 'due-vocab',
@@ -419,6 +454,7 @@ export default function HomePage({
       title: '단어 복습',
       detail: `${dueVocabIds.length}개 복습할 시간이에요`,
       onClick: () => onRetryVocab(dueVocabIds),
+      onDiscard: null,
     },
     dueGrammarIds.length > 0 && {
       key: 'due-grammar',
@@ -426,6 +462,7 @@ export default function HomePage({
       title: '문법 복습',
       detail: `${dueGrammarIds.length}개 복습할 시간이에요`,
       onClick: () => onRetryGrammar(dueGrammarIds),
+      onDiscard: null,
     },
     dueEnglishVocabIds.length > 0 && {
       key: 'due-english',
@@ -433,6 +470,7 @@ export default function HomePage({
       title: '영어단어 복습',
       detail: `${dueEnglishVocabIds.length}개 복습할 시간이에요`,
       onClick: () => onRetryEnglishVocab(dueEnglishVocabIds),
+      onDiscard: null,
     },
     dueKanaIds.length > 0 && {
       key: 'due-kana',
@@ -440,6 +478,7 @@ export default function HomePage({
       title: '가나 복습',
       detail: `${dueKanaIds.length}자 복습할 시간이에요`,
       onClick: onGoToKana,
+      onDiscard: null,
     },
     dueConjugationIds.length > 0 && {
       key: 'due-conjugation',
@@ -447,6 +486,7 @@ export default function HomePage({
       title: '활용 복습',
       detail: `${dueConjugationIds.length}개 복습할 시간이에요`,
       onClick: onGoToConjugation,
+      onDiscard: null,
     },
     inProgress && {
       key: 'resume-kanji',
@@ -454,6 +494,7 @@ export default function HomePage({
       title: '마무리못한 한자 퀴즈',
       detail: `${configSummary(inProgress.config)} · ${inProgress.index}/${inProgress.questions.length} 진행 중`,
       onClick: onResumeQuiz,
+      onDiscard: () => discard(clearInProgressQuiz),
     },
     vocabInProgress && {
       key: 'resume-vocab',
@@ -461,6 +502,7 @@ export default function HomePage({
       title: '마무리못한 단어 퀴즈',
       detail: `${vocabInProgress.level} · ${vocabInProgress.index}/${vocabInProgress.questions.length} 진행 중`,
       onClick: onGoToVocab,
+      onDiscard: () => discard(clearVocabInProgressQuiz),
     },
     grammarInProgress && {
       key: 'resume-grammar',
@@ -468,6 +510,7 @@ export default function HomePage({
       title: '마무리못한 문법 퀴즈',
       detail: `${grammarInProgress.level} · ${grammarInProgress.index}/${grammarInProgress.questions.length} 진행 중`,
       onClick: onGoToGrammar,
+      onDiscard: () => discard(clearGrammarInProgressQuiz),
     },
     mockExamInProgress && {
       key: 'resume-mockExam',
@@ -475,6 +518,7 @@ export default function HomePage({
       title: '마무리못한 모의고사',
       detail: `${mockExamInProgress.level} · ${mockExamInProgress.index}/${mockExamInProgress.questions.length} 진행 중`,
       onClick: onGoToMockExam,
+      onDiscard: () => discard(clearMockExamInProgressQuiz),
     },
     englishVocabInProgress && {
       key: 'resume-english',
@@ -482,6 +526,7 @@ export default function HomePage({
       title: '마무리못한 영어단어 퀴즈',
       detail: `${englishVocabInProgress.level} · ${englishVocabInProgress.index}/${englishVocabInProgress.questions.length} 진행 중`,
       onClick: onGoToEnglishVocab,
+      onDiscard: () => discard(clearEnglishVocabInProgressQuiz),
     },
   ].filter((item): item is Exclude<typeof item, false | null> => Boolean(item))
 
@@ -566,6 +611,12 @@ export default function HomePage({
     <div className="page">
       <h1>홈</h1>
 
+      {discardError && (
+        <p className="home-discard-error" role="status">
+          {discardError}
+        </p>
+      )}
+
       {goalSection}
 
       {priorityItems.length > 0 && (
@@ -573,18 +624,29 @@ export default function HomePage({
           <h2 className="home-section-title">지금 할 일</h2>
           <div className="home-priority-list">
             {priorityItems.map((item) => (
-              <button
-                key={item.key}
-                type="button"
-                className={`home-priority-card${item.urgent ? ' urgent' : ''}`}
-                onClick={item.onClick}
-              >
-                <span className="home-priority-body">
-                  <span className="home-priority-title">{item.title}</span>
-                  <span className="home-priority-detail">{item.detail}</span>
-                </span>
-                <span className="home-priority-chip">{item.urgent ? '시작' : '이어하기'} →</span>
-              </button>
+              <div key={item.key} className={`home-priority-row${item.urgent ? ' urgent' : ''}`}>
+                <button type="button" className="home-priority-card" onClick={item.onClick}>
+                  <span className="home-priority-body">
+                    <span className="home-priority-title">{item.title}</span>
+                    <span className="home-priority-detail">{item.detail}</span>
+                  </span>
+                  <span className="home-priority-chip">{item.urgent ? '시작' : '이어하기'} →</span>
+                </button>
+                {/* 폐기 자리는 항목마다 항상 예약해 둔다(복습 항목은 비활성) —
+                    있고 없고에 따라 카드 폭이 흔들리지 않게 */}
+                <button
+                  type="button"
+                  className={`home-discard-button${item.onDiscard ? '' : ' placeholder'}`}
+                  aria-label={`${item.title} 폐기`}
+                  aria-hidden={!item.onDiscard}
+                  tabIndex={item.onDiscard ? undefined : -1}
+                  title="폐기"
+                  disabled={!item.onDiscard}
+                  onClick={item.onDiscard ?? undefined}
+                >
+                  ×
+                </button>
+              </div>
             ))}
           </div>
         </section>
@@ -679,7 +741,7 @@ export default function HomePage({
           <h2 className="home-section-title">최근 기록</h2>
           <ul className="home-history-list">
             {mergedHistory.map((entry) => (
-              <li key={entry.id}>
+              <li key={`${entry.domain}:${entry.id}`} className="home-history-row">
                 <button type="button" className="home-history-item" onClick={entry.onClick}>
                   <span className="home-history-main">
                     <span className="home-history-summary">{entry.label}</span>
@@ -688,6 +750,15 @@ export default function HomePage({
                   <span className="home-history-score">
                     {entry.correct}/{entry.total}
                   </span>
+                </button>
+                <button
+                  type="button"
+                  className="home-discard-button"
+                  aria-label={`${entry.label} 기록 폐기`}
+                  title="폐기"
+                  onClick={() => discard(() => removeQuizHistoryEntry(entry.domain, entry.id))}
+                >
+                  ×
                 </button>
               </li>
             ))}
