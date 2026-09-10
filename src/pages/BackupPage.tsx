@@ -45,10 +45,19 @@ function AccountSection() {
             <button type="button" className="backup-button" onClick={syncNow} disabled={syncing}>
               {syncing ? '동기화 중…' : '지금 동기화'}
             </button>
-            <button type="button" className="backup-button" onClick={signOut}>
+            <button
+              type="button"
+              className="backup-button"
+              onClick={() => void signOut()}
+              disabled={syncing}
+            >
               로그아웃
             </button>
           </div>
+          <p className="page-placeholder">
+            로그아웃하면 지금까지의 진도를 계정에 저장한 뒤 이 기기에서는 비웁니다(같은 브라우저에서 다른
+            계정으로 로그인했을 때 진도가 섞이지 않도록). 다시 로그인하면 그대로 돌아옵니다.
+          </p>
         </>
       ) : (
         <>

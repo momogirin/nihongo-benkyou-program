@@ -9,7 +9,8 @@ import {
 } from 'firebase/auth'
 import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { auth, db, isFirebaseConfigured } from './firebase'
-import { applyBackupPayload, buildBackupPayload, isBackupPayload } from './storage'
+import { applyBackupPayload, buildBackupPayload, clearAllProgress, isBackupPayload } from './storage'
+import { reloadFresh } from './appUpdate'
 
 // surfaces the actual Firebase error code instead of a one-size-fits-all
 // message — "popup blocked" and "this domain isn't allowed to sign in" look
@@ -52,7 +53,8 @@ export interface CloudSyncState {
   error: string | null
   lastSyncedAt: string | null
   signIn: () => void
-  signOut: () => void
+  // 마지막 push → 로그아웃 → 로컬 비우기 순으로 진행하므로 비동기다
+  signOut: () => void | Promise<void>
   syncNow: () => void
 }
 
@@ -133,9 +135,30 @@ export function useCloudSync(): CloudSyncState {
       .finally(() => setLoading(false))
   }
 
-  function signOut() {
+  // 로그아웃은 (1) 마지막 상태를 계정에 올리고 (2) 이 기기의 로컬 진도를 비운다.
+  // (2)가 없으면 같은 브라우저에서 다른 계정으로 로그인했을 때, 남아 있던 이전
+  // 계정의 진도가 pull→병합(union) 과정에서 새 계정 문서에 섞여 올라간다.
+  // 로컬을 비워도 진도는 방금 계정에 올라가 있으므로, 다시 로그인하면 그대로
+  // 돌아온다. 마지막 push가 실패하면 로그아웃하지 않고 이유를 알린다 —
+  // 여기서 조용히 비우면 아직 안 올라간 진도가 사라진다.
+  async function signOut() {
     if (!auth) return
-    firebaseSignOut(auth)
+    setSyncing(true)
+    setError(null)
+    try {
+      if (auth.currentUser && db) {
+        await setDoc(doc(db, 'users', auth.currentUser.uid), buildBackupPayload())
+      }
+      await firebaseSignOut(auth)
+      clearAllProgress()
+      // 화면 곳곳이 localStorage 스냅샷을 마운트 시점에 memo해 두므로
+      // 리로드해야 비워진 상태가 제대로 반영된다
+      reloadFresh()
+    } catch (err) {
+      const code = err instanceof FirebaseError ? ` (${err.code})` : ''
+      setError(`로그아웃 실패${code} — 마지막 진도를 계정에 저장하지 못해 로그아웃을 취소했습니다`)
+      setSyncing(false)
+    }
   }
 
   return { user, loading, syncing, error, lastSyncedAt, signIn, signOut, syncNow }
