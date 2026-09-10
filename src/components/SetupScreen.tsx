@@ -191,6 +191,12 @@ export default function SetupScreen({ onStart }: Props) {
         </div>
       </fieldset>
 
+      {/* 비활성 이유는 버튼 "위"에 둔다 — 아래에 있으면 사용자가 회색 버튼(결과)을
+          먼저 보고 이유를 나중에 찾게 된다. 자리는 항상 차지해서(레이아웃 시프트
+          방지) 문구가 생겨도 버튼이 안 밀린다 */}
+      <p className="hint start-hint" aria-live="polite">
+        {missingReason ?? ' '}
+      </p>
       <button
         type="button"
         className="start-button"
@@ -202,10 +208,6 @@ export default function SetupScreen({ onStart }: Props) {
       >
         시작하기
       </button>
-      {/* 자리는 항상 차지해서(레이아웃 시프트 방지) 문구가 생겨도 버튼이 안 밀린다 */}
-      <p className="hint start-hint" aria-live="polite">
-        {missingReason ?? ' '}
-      </p>
     </div>
   )
 }
