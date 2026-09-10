@@ -996,10 +996,20 @@ export function importConjugationWrongNotes(entries: ConjugationWrongNoteEntry[]
   localStorage.setItem(CONJUGATION_WRONG_NOTES_KEY, JSON.stringify([...byId.values()]))
 }
 
+// 저장된 값이 손상됐을 때(구버전 형식, 동기화 사고, 손으로 고친 localStorage)
+// 숫자가 아닌 값이 그대로 계산에 흘러들면 화면에 "NaN%"가 노출된다. 진도 값은
+// 전부 이 함수를 거치므로 여기서 한 번만 걸러낸다 — 숫자로 읽히지 않는 항목은
+// 없는 것으로 본다(0부터 다시 쌓임).
 function getLevelProgressMap(key: string): Record<string, number> {
   try {
     const raw = localStorage.getItem(key)
-    return raw ? JSON.parse(raw) : {}
+    const parsed: unknown = raw ? JSON.parse(raw) : {}
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {}
+    const clean: Record<string, number> = {}
+    for (const [level, value] of Object.entries(parsed)) {
+      if (typeof value === 'number' && Number.isFinite(value)) clean[level] = value
+    }
+    return clean
   } catch {
     return {}
   }
