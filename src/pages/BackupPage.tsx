@@ -26,8 +26,8 @@ function AccountSection() {
       <section className="account-section">
         <h2>로그인</h2>
         <p className="page-placeholder">
-          클라우드 동기화가 아직 설정되지 않았습니다. 설정 방법은 HANDOFF.md를 참고하세요. 설정 전에는 아래
-          "내보내기/가져오기"로 기기를 옮길 수 있습니다.
+          이 버전에서는 계정 로그인을 사용할 수 없습니다. 아래 "내보내기/가져오기"로 학습 진도를 파일에 저장해
+          다른 기기로 옮길 수 있습니다.
         </p>
       </section>
     )

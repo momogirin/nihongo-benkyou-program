@@ -151,6 +151,9 @@ export default function HomePage({
     })
   }
 
+  // discardCount는 이 memo들의 "입력값"은 아니지만, 폐기 후 localStorage를
+  // 다시 읽게 하는 트리거다(린터는 이걸 불필요한 의존성으로 본다 — 의도된 것)
+  /* eslint-disable react-hooks/exhaustive-deps */
   const history = useMemo(() => getQuizHistory(), [discardCount])
   const vocabHistory = useMemo(() => getVocabQuizHistory(), [discardCount])
   const grammarHistory = useMemo(() => getGrammarQuizHistory(), [discardCount])
@@ -158,6 +161,7 @@ export default function HomePage({
   const englishVocabHistory = useMemo(() => getEnglishVocabQuizHistory(), [discardCount])
   const conjugationHistory = useMemo(() => getConjugationQuizHistory(), [discardCount])
   const kanaHistory = useMemo(() => getKanaQuizHistory(), [discardCount])
+  /* eslint-enable react-hooks/exhaustive-deps */
 
   // merge all three domains' quiz history into one chronological feed —
   // vocab/grammar entries don't carry a replayable config like kanji's, so
@@ -240,11 +244,13 @@ export default function HomePage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [history, vocabHistory, grammarHistory, mockExamHistory, englishVocabHistory, conjugationHistory, kanaHistory])
 
+  /* eslint-disable react-hooks/exhaustive-deps */
   const inProgress = useMemo(() => getInProgressQuiz(), [discardCount])
   const vocabInProgress = useMemo(() => getVocabInProgressQuiz(), [discardCount])
   const grammarInProgress = useMemo(() => getGrammarInProgressQuiz(), [discardCount])
   const mockExamInProgress = useMemo(() => getMockExamInProgressQuiz(), [discardCount])
   const englishVocabInProgress = useMemo(() => getEnglishVocabInProgressQuiz(), [discardCount])
+  /* eslint-enable react-hooks/exhaustive-deps */
   const studyProgress = useMemo(() => getStudyProgressSummary(), [])
   const vocabStudyProgress = useMemo(() => getVocabStudyProgressSummary(), [])
   const grammarStudyProgress = useMemo(() => getGrammarStudyProgressSummary(), [])

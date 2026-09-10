@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { generateQuestions, type QuizQuestion } from '../lib/quizGenerator'
 import { correctAnswerLabel, isCorrectAnswer } from '../lib/answerMatching'
 import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
+import { setQuizActive } from '../lib/quizActive'
 import QuizVerdict from './QuizVerdict'
 import type { InProgressQuiz } from '../lib/storage'
 import type { Kanji } from '../data/kanji'
@@ -93,6 +94,10 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
   // 다음/Enter, and a held-down or double-tapped Enter must not skip a question.
   const lastAdvancedIndexRef = useRef(-1)
   const nextButtonRef = useRef<HTMLButtonElement>(null)
+  // 나가기 확인 — 사이드바 이동(App)과 같은 확인을 거치게 해 이탈 경로마다
+  // 동작이 달라지지 않게 한다
+  const [confirmExit, setConfirmExit] = useState(false)
+  const confirmExitCancelRef = useRef<HTMLButtonElement>(null)
 
   const question = questions[index]
   const isChoiceMode = config.questionType !== 'promptToAnswer'
@@ -101,6 +106,13 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
   // question it was actually recorded for — otherwise the new question can
   // flash the previous question's correct/incorrect coloring.
   const activeFeedback = feedback && lastSubmittedIndexRef.current === index ? feedback : null
+
+  // 퀴즈가 떠 있는 동안만 앱 전체에 "진행 중"을 알린다 — App이 이걸 보고
+  // 사이드바 이동 전에 확인을 받는다(풀던 문제가 예고 없이 사라지지 않게)
+  useEffect(() => {
+    setQuizActive(true)
+    return () => setQuizActive(false)
+  }, [])
 
   // keeps keyboard focus inside the quiz across questions — without this,
   // each new question left nothing focused (the previous choice button was
@@ -187,6 +199,9 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if (isComposingEnter(e)) return
+      // 나가기 확인이 떠 있으면 퀴즈 조작 키는 전부 멈춘다 — 다이얼로그의
+      // Esc/Enter만 동작해야 한다
+      if (confirmExit) return
       if (activeFeedback) {
         if (!activeFeedback.isCorrect && e.key === 'Enter' && !e.repeat) {
           // 포커스된 "다음" 버튼에서 브라우저가 이 keydown을 native click으로
@@ -216,12 +231,32 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
     window.addEventListener('keydown', handleKeyDown, true)
     return () => window.removeEventListener('keydown', handleKeyDown, true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isChoiceMode, question, activeFeedback, inputValue])
+  }, [isChoiceMode, question, activeFeedback, inputValue, confirmExit])
+
+  // 나가기 확인: Esc = 취소, Enter = 나가기(앱 전역 확인 다이얼로그 규칙)
+  useEffect(() => {
+    if (!confirmExit) return
+    confirmExitCancelRef.current?.focus()
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        e.stopPropagation()
+        setConfirmExit(false)
+      } else if (e.key === 'Enter' && !e.repeat) {
+        e.preventDefault()
+        e.stopPropagation()
+        onExit()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown, true)
+    return () => window.removeEventListener('keydown', handleKeyDown, true)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [confirmExit])
 
   return (
     <div className="quiz-runner">
       <div className="quiz-topbar">
-        <button type="button" className="quiz-exit-button" onClick={onExit}>
+        <button type="button" className="quiz-exit-button" onClick={() => setConfirmExit(true)}>
           나가기
         </button>
         <div className="quiz-progress">
@@ -297,6 +332,36 @@ export default function QuizRunner({ config, resume, onProgress, onFinish, onExi
           )}
           <p className="shortcut-hint">숫자키(1~4)로 선택 · 오답이면 Enter로 다음 문제</p>
         </>
+      )}
+
+      {confirmExit && (
+        <div className="confirm-modal-backdrop" onClick={() => setConfirmExit(false)}>
+          <div
+            className="confirm-modal"
+            onClick={(e) => e.stopPropagation()}
+            role="alertdialog"
+            aria-modal="true"
+          >
+            <p className="confirm-modal-message">
+              퀴즈를 그만둘까요?
+              <br />
+              지금까지 푼 문제는 저장되며, 홈에서 이어서 풀 수 있습니다.
+            </p>
+            <div className="confirm-modal-actions">
+              <button
+                type="button"
+                ref={confirmExitCancelRef}
+                className="confirm-modal-cancel"
+                onClick={() => setConfirmExit(false)}
+              >
+                계속 풀기
+              </button>
+              <button type="button" className="confirm-modal-danger" onClick={onExit}>
+                나가기
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   )

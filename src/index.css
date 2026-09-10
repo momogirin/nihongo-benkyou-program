@@ -132,6 +132,74 @@ button:focus-visible {
   color: var(--color-ink-muted);
 }
 
+/* 앱 전역 확인 다이얼로그 — 오답노트 제거 확인, 퀴즈 이탈 확인 등이
+   같은 모양·같은 키보드 동작(Esc 취소 / Enter 확인)을 쓴다 */
+.confirm-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.confirm-modal {
+  width: 100%;
+  max-width: 340px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-elevated);
+  text-align: center;
+}
+
+.confirm-modal-message {
+  margin: 0 0 20px;
+  color: var(--color-ink);
+  font-size: 15px;
+}
+
+.confirm-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* 확인 다이얼로그의 취소 쪽 버튼 — .confirm-modal-danger와 같은 치수를 쓴다
+   (StudyPage의 .study-exit-button과 같은 모양이지만, 그 파일은 App에서
+   import되지 않으므로 전역 버전이 따로 필요하다) */
+.confirm-modal-cancel {
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink-muted);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.confirm-modal-cancel:hover {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+}
+
+.confirm-modal-danger {
+  padding: 6px 12px;
+  border: 1px solid var(--color-incorrect);
+  border-radius: var(--radius-md);
+  background: var(--color-incorrect);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.confirm-modal-danger:hover {
+  filter: brightness(0.93);
+}
+
 /* shared "title + primary action" row, reused by any page that needs a
    header-level button (오답노트/홈/백업) instead of the centered .page title */
 .page-header {

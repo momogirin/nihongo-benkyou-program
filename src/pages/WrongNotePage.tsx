@@ -573,7 +573,7 @@ export default function WrongNotePage({
       )}
 
       {confirmTarget && (
-        <div className="wrong-note-modal-backdrop" onClick={() => setConfirmTarget(null)}>
+        <div className="confirm-modal-backdrop" onClick={() => setConfirmTarget(null)}>
           <div className="confirm-modal" onClick={(e) => e.stopPropagation()} role="alertdialog" aria-modal="true">
             <p className="confirm-modal-message">{confirmTarget.label} 오답노트에서 제거할까요?</p>
             <div className="confirm-modal-actions">

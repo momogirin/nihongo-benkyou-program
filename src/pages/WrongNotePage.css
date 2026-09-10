@@ -188,39 +188,5 @@
   margin: 0;
 }
 
-.confirm-modal {
-  width: 100%;
-  max-width: 340px;
-  padding: 24px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  background: var(--color-bg-elevated);
-  text-align: center;
-}
-
-.confirm-modal-message {
-  margin: 0 0 20px;
-  color: var(--color-ink);
-  font-size: 15px;
-}
-
-.confirm-modal-actions {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.confirm-modal-danger {
-  padding: 6px 12px;
-  border: 1px solid var(--color-incorrect);
-  border-radius: var(--radius-md);
-  background: var(--color-incorrect);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.confirm-modal-danger:hover {
-  filter: brightness(0.93);
-}
+/* .confirm-modal* 은 앱 전역에서 쓰는 확인 다이얼로그라 index.css로 옮겼다
+   (오답노트 제거 확인 / 퀴즈 이탈 확인이 같은 모양이어야 하므로) */
