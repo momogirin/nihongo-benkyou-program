@@ -5,6 +5,7 @@ import { usedKanji } from '../lib/kanjiUsage'
 import { acceptableReadings, isCorrectAnswer } from '../lib/answerMatching'
 import { isComposingEnter, swallowNextEnterKeyup } from '../lib/imeGuard'
 import QuizVerdict from '../components/QuizVerdict'
+import PageTabs, { type PageTab } from '../components/PageTabs'
 import { TYPE_LABELS } from '../lib/conjugation'
 import {
   generateVocabQuestions,
@@ -82,6 +83,13 @@ const QUIZ_COUNT_OPTIONS = [10, 20, 30, 50, 'all'] as const
 // 0 = 전체(남은 전부를 한 세션으로) — 진도가 기록되므로 중간에 나가도 이어서 볼 수 있다
 const STUDY_BATCH_OPTIONS = [5, 10, 20, 30, 0] as const
 const FEEDBACK_DELAY_MS = 550
+
+type VocabTab = 'learn' | 'browse'
+
+const VOCAB_TABS: PageTab<VocabTab>[] = [
+  { id: 'learn', label: '학습·퀴즈' },
+  { id: 'browse', label: '전체보기' },
+]
 
 type Phase =
   | 'setup'
@@ -1371,15 +1379,17 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
       : levelWords
 
     return (
-      <div className="page">
-        <div className="page-header">
-          <h1>
-            단어 전체 목록 · {level}
-          </h1>
-          <button type="button" className="study-exit-button" onClick={() => setPhase('setup')}>
-            ← 학습으로
-          </button>
-        </div>
+      <>
+        <PageTabs
+          title="단어"
+          tabs={VOCAB_TABS}
+          active="browse"
+          onChange={(id) => {
+            if (id === 'learn') setPhase('setup')
+          }}
+        />
+        <div className="page">
+          <p className="browse-level-caption">{level} 전체 목록</p>
         <input
           type="text"
           className="browse-search-input"
@@ -1419,7 +1429,8 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
             </table>
           </div>
         )}
-      </div>
+        </div>
+      </>
     )
   }
 
@@ -2260,22 +2271,23 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
                 : null
 
   return (
-    <div className="page study-setup">
-      <div className="page-header">
-        <h1>단어</h1>
-        <button
-          type="button"
-          className="study-exit-button"
-          onClick={() => {
+    <>
+      {/* 다른 학습 화면(한자/가나/활용)과 같은 "제목 → 탭 → 본문" 구조.
+          예전에는 여기만 탭이 없고 제목 옆 "전체 목록 보기" 버튼이 그 역할을
+          해서, 화면마다 이동 방식을 새로 익혀야 했다 */}
+      <PageTabs
+        title="단어"
+        tabs={VOCAB_TABS}
+        active="learn"
+        onChange={(id) => {
+          if (id === 'browse') {
             setBrowseIndex(null)
             setBrowseQuery('')
             setPhase('browse')
-          }}
-        >
-          전체 목록 보기
-        </button>
-      </div>
-
+          }
+        }}
+      />
+      <div className="page study-setup">
       {resumable && (
         <div className="study-resume">
           <span className="study-resume-text">
@@ -2456,5 +2468,6 @@ export default function VocabPage({ retryIds, onRetryIdsConsumed }: Props) {
       )}
       </div>
     </div>
+    </>
   )
 }

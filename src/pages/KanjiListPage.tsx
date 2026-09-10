@@ -182,7 +182,7 @@ export default function KanjiListPage() {
 
   return (
     <div className="page">
-      <h1>한자 전체보기</h1>
+      {/* 제목은 상위 KanjiPage의 PageTabs가 "한자 + 전체보기 탭"으로 이미 보여준다 */}
       <input
         type="text"
         className="browse-search-input"

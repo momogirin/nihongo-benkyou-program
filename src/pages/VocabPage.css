@@ -254,3 +254,11 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* 전체보기 탭에서 어느 급수를 보고 있는지 — 예전에는 제목에 "· N5"로 붙어
+   있었지만, 제목이 PageTabs로 올라가면서 본문 첫 줄로 내려왔다 */
+.browse-level-caption {
+  margin: 0 0 12px;
+  color: var(--color-ink-muted);
+  font-size: 13px;
+}

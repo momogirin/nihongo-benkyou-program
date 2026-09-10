@@ -374,8 +374,7 @@ export default function StudyPage({ onStartQuiz }: Props) {
 
   return (
     <div className="page study-setup">
-      <h1>학습</h1>
-
+      {/* 제목은 상위 KanjiPage의 PageTabs가 "한자 + 학습 탭"으로 이미 보여준다 */}
       {availableLevels.length > 1 && (
         <div className="study-level-picker">
           {availableLevels.map((l) => (

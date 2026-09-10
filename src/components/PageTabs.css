@@ -1,0 +1,68 @@
+/* 제목 + 탭 한 덩어리. .page와 같은 폭·좌우 패딩을 써서 아래 본문과
+   좌우 기준선이 맞는다(본문은 각 하위 페이지의 .page가 그린다) */
+.page-tabs-header {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 40px 0;
+}
+
+.page-tabs-title {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.page-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* 탭 아래에 오는 본문은 제목 자리를 다시 비울 필요가 없으므로
+   위쪽 패딩을 줄인다(제목·탭이 이미 그 자리를 썼다) */
+.page-tabs-header + .page {
+  padding-top: 24px;
+}
+
+.page-tab {
+  padding: 8px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.page-tab:hover {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+}
+
+.page-tab.active {
+  background: var(--color-selected-bg);
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .page-tabs-header {
+    padding: 64px 20px 0;
+  }
+
+  /* 좁은 화면에서 탭이 넘치면 줄바꿈 대신 가로 스크롤 —
+     줄이 늘어나면 본문 시작 위치가 화면마다 달라진다 */
+  .page-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .page-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-tab {
+    flex: none;
+  }
+}

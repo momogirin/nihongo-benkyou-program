@@ -94,8 +94,9 @@ export default function SetupScreen({ onStart }: Props) {
 
   return (
     <div className="setup-screen">
-      <h1>학습 설정</h1>
-
+      {/* 제목은 상위 KanjiPage의 PageTabs가 "한자 + 퀴즈 탭"으로 보여준다.
+          예전에는 여기가 "학습 설정"이라 눌러 들어온 "퀴즈" 탭과 라벨이
+          어긋났다 */}
       <fieldset>
         <legend>급수</legend>
         <div className="option-grid option-grid-5">

@@ -87,7 +87,7 @@ export default function RadicalsPage() {
 
   return (
     <div className="page">
-      <h1>부수</h1>
+      {/* 제목은 상위 KanjiPage의 PageTabs가 "한자 + 부수 탭"으로 이미 보여준다 */}
       {[...groups.entries()]
         .sort((a, b) => a[0] - b[0])
         .map(([strokeCount, items]) => (

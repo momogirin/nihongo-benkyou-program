@@ -9,6 +9,7 @@ import {
 import { vocabConjugationEntries } from '../lib/vocabConjugation'
 import { isComposingEnter } from '../lib/imeGuard'
 import QuizVerdict from '../components/QuizVerdict'
+import PageTabs, { type PageTab } from '../components/PageTabs'
 import type { KanjiLevel } from '../data/kanji'
 import {
   addConjugationQuizHistoryEntry,
@@ -21,7 +22,6 @@ import {
 } from '../lib/storage'
 import './StudyPage.css'
 import './VocabPage.css'
-import './KanjiPage.css'
 import './KanaPage.css'
 import './ConjugationPage.css'
 
@@ -44,6 +44,11 @@ function ConjHint({ entry, target }: { entry: ConjugationEntry; target: Conjugat
 }
 
 type SubTab = 'study' | 'quiz'
+
+const TABS: PageTab<SubTab>[] = [
+  { id: 'study', label: '학습' },
+  { id: 'quiz', label: '퀴즈' },
+]
 // 활용 그룹별 집중 연습을 위한 필터
 type Scope = 'all' | 'godan' | 'ichidan' | 'suruKuru' | 'iadj' | 'naadj'
 type QuizCount = 10 | 20 | 'all'
@@ -111,14 +116,7 @@ export default function ConjugationPage() {
   const [subTab, setSubTab] = useState<SubTab>('study')
   return (
     <>
-      <div className="kanji-tabs">
-        <button type="button" className={`kanji-tab${subTab === 'study' ? ' active' : ''}`} onClick={() => setSubTab('study')}>
-          학습
-        </button>
-        <button type="button" className={`kanji-tab${subTab === 'quiz' ? ' active' : ''}`} onClick={() => setSubTab('quiz')}>
-          퀴즈
-        </button>
-      </div>
+      <PageTabs title="활용" tabs={TABS} active={subTab} onChange={setSubTab} />
       {subTab === 'study' ? <ConjugationStudy /> : <ConjugationQuiz />}
     </>
   )
@@ -192,7 +190,7 @@ function ConjugationStudy() {
 
   return (
     <div className="page study-setup">
-      <h1>활용 학습</h1>
+      {/* 제목은 상위 PageTabs가 "활용 + 학습 탭"으로 보여준다 */}
       <div className="conj-quiz-field">
         <span className="conj-quiz-field-label">단어</span>
         <div className="study-level-picker">
@@ -540,7 +538,7 @@ function ConjugationQuiz() {
 
   return (
     <div className="page study-setup">
-      <h1>활용 퀴즈</h1>
+      {/* 제목은 상위 PageTabs가 "활용 + 퀴즈 탭"으로 보여준다 */}
       {dueEntries.length > 0 && (
         <button type="button" className="kana-review-banner" onClick={() => startReview(dueEntries)}>
           복습할 활용어 <strong>{dueEntries.length}개</strong> — 지금 복습하기

@@ -11,14 +11,20 @@ import {
   setSetupPrefs,
 } from '../lib/storage'
 import QuizVerdict from '../components/QuizVerdict'
+import PageTabs, { type PageTab } from '../components/PageTabs'
 // .quiz-feedback(정/오답 문구) 스타일이 여기 있다 — 다른 퀴즈 화면들과 동일
 import '../components/QuizRunner.css'
 import './StudyPage.css'
 import './VocabPage.css'
-import './KanjiPage.css'
 import './KanaPage.css'
 
 type SubTab = 'study' | 'chart' | 'quiz'
+
+const TABS: PageTab<SubTab>[] = [
+  { id: 'chart', label: '표' },
+  { id: 'study', label: '학습' },
+  { id: 'quiz', label: '퀴즈' },
+]
 type Script = 'hiragana' | 'katakana'
 // 탁음/반탁음은 같은 학습 묶음으로 다룸(반탁음은 5자뿐이라 따로 급수를 두면 산만)
 type GroupFilter = 'all' | 'gojuon' | 'dakuten' | 'youon'
@@ -77,17 +83,7 @@ export default function KanaPage() {
 
   return (
     <>
-      <div className="kanji-tabs">
-        <button type="button" className={`kanji-tab${subTab === 'chart' ? ' active' : ''}`} onClick={() => setSubTab('chart')}>
-          표
-        </button>
-        <button type="button" className={`kanji-tab${subTab === 'study' ? ' active' : ''}`} onClick={() => setSubTab('study')}>
-          학습
-        </button>
-        <button type="button" className={`kanji-tab${subTab === 'quiz' ? ' active' : ''}`} onClick={() => setSubTab('quiz')}>
-          퀴즈
-        </button>
-      </div>
+      <PageTabs title="가나" tabs={TABS} active={subTab} onChange={setSubTab} />
 
       {subTab === 'chart' && <KanaChart script={script} onScriptChange={setScript} />}
       {subTab === 'study' && <KanaStudy script={script} onScriptChange={setScript} />}
@@ -144,7 +140,7 @@ function KanaChart({ script, onScriptChange }: ScriptToggleProps) {
 
   return (
     <div className="page">
-      <h1>가나</h1>
+      {/* 제목은 상위 KanaPage의 PageTabs가 "가나 + 표 탭"으로 이미 보여준다 */}
       <ScriptToggle script={script} onScriptChange={onScriptChange} />
 
       <section className="kana-chart-section">
@@ -374,7 +370,7 @@ function KanaStudy({ script, onScriptChange }: ScriptToggleProps) {
 
   return (
     <div className="page study-setup">
-      <h1>가나 학습</h1>
+      {/* 제목은 상위 PageTabs가 "가나 + 학습 탭"으로 보여준다 */}
       <ScriptToggle script={script} onScriptChange={onScriptChange} />
       <div className="study-level-picker">
         {GROUP_FILTERS.map((g) => (
@@ -674,7 +670,7 @@ function KanaQuiz({ script, onScriptChange }: ScriptToggleProps) {
 
   return (
     <div className="page study-setup">
-      <h1>가나 퀴즈</h1>
+      {/* 제목은 상위 PageTabs가 "가나 + 퀴즈 탭"으로 보여준다 */}
       {quizType === 'romaji' && dueKana.length > 0 && (
         <button type="button" className="kana-review-banner" onClick={() => startReview(dueKana)}>
           복습할 가나 <strong>{dueKana.length}자</strong> — 지금 복습하기
