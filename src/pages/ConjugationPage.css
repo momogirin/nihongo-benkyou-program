@@ -142,11 +142,14 @@
 /* 퀴즈 설정 필드(라벨 + 선택 그룹) */
 .conj-quiz-field {
   margin-bottom: 16px;
-  text-align: left;
 }
 
+/* 다른 화면의 같은 패턴(StudyPage의 .quiz-option-label — 라벨 + 칩 한 줄)과
+   같이 중앙정렬한다. 칩 줄(.study-level-picker)이 justify-content: center라
+   라벨만 좌측이면 둘의 기준선이 어긋나 보인다 */
 .conj-quiz-field-label {
   display: block;
+  text-align: center;
   font-size: 13px;
   font-weight: 600;
   color: var(--color-ink-muted);
