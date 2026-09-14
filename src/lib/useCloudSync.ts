@@ -13,6 +13,7 @@ import {
   applyBackupPayload,
   buildBackupPayload,
   clearAllProgress,
+  hasInProgressQuiz,
   isBackupPayload,
   snapshotProgress,
 } from './storage'
@@ -130,11 +131,17 @@ export function useCloudSync(): CloudSyncState {
   // 방금 로컬에서 내린 진도가 클라우드의 옛 값과 union 병합되어 도로 올라오는
   // 걸 막기 위해서다(pushLocalStateAfterDelete와 같은 이유).
   // 백그라운드 동작이라 syncing 표시는 건드리지 않지만, 실패는 드러낸다.
+  //
+  // pull을 건너뛰는 대신 { merge: true }로 쓴다. 통짜 setDoc이면 두 기기를
+  // 동시에 쓸 때 상대가 그 사이 올린 필드까지 지워버리는데, merge면 이쪽이
+  // 담아 보낸 필드만 덮고 나머지는 그대로 둔다. (필드 안쪽 배열·맵의 내용까지
+  // 합쳐주지는 않으므로 완전한 해결은 아니고, 겹치지 않는 영역을 공부하는
+  // 흔한 경우를 지켜준다. 겹친 필드는 다음 syncNow의 pull→union 병합이 맞춘다.)
   const pushNow = useCallback(async () => {
     if (!isFirebaseConfigured || !auth?.currentUser || !db) return
     try {
       const payload = buildBackupPayload()
-      await setDoc(doc(db, 'users', auth.currentUser.uid), payload)
+      await setDoc(doc(db, 'users', auth.currentUser.uid), payload, { merge: true })
       setLastSyncedAt(payload.exportedAt)
       setError(null)
     } catch (err) {
@@ -160,6 +167,10 @@ export function useCloudSync(): CloudSyncState {
         void syncNow().then((changed) => {
           if (!changed) return
           if (sessionStorage.getItem(PULL_RELOADED_KEY)) return
+          // 풀다 만 퀴즈가 있으면 리로드하지 않는다. 받은 진도는 이미
+          // localStorage에 병합돼 있으므로 유실되지 않고, 화면 반영만 다음
+          // 로드로 미뤄진다 — 풀던 문제를 날리는 것보다 이쪽이 낫다.
+          if (hasInProgressQuiz()) return
           sessionStorage.setItem(PULL_RELOADED_KEY, '1')
           reloadFresh()
         })

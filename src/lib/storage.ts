@@ -1382,6 +1382,21 @@ export function snapshotProgress(): string {
   return keys.map((key) => `${key} ${localStorage.getItem(key) ?? ''}`).join('')
 }
 
+// 풀다 만 퀴즈가 하나라도 저장돼 있는지. 진행 중 퀴즈 키는 도메인별로 14개나
+// 되지만 이름이 전부 'kanjiApp.…InProgressQuiz'로 끝나서 접미사로 한 번에 본다
+// (위 *_IN_PROGRESS_QUIZ_KEY 상수들과 같은 규칙 — 새 도메인이 늘어도 그 규칙만
+// 지키면 여기 목록을 따로 관리하지 않아도 된다).
+// 값이 'null'로 저장돼 있으면(풀기를 끝냈거나 비운 상태) 진행 중이 아니다.
+export function hasInProgressQuiz(): boolean {
+  for (let i = 0; i < localStorage.length; i += 1) {
+    const key = localStorage.key(i)
+    if (!key || !key.toLowerCase().endsWith('inprogressquiz')) continue
+    const raw = localStorage.getItem(key)
+    if (raw && raw !== 'null') return true
+  }
+  return false
+}
+
 export function clearAllProgress() {
   const toRemove: string[] = []
   for (let i = 0; i < localStorage.length; i += 1) {
