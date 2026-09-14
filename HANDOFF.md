@@ -317,6 +317,42 @@ JLPT 한자·단어·문법 학습 + (2026-07-14부터) 영어(TOEIC) 단어 학
 - `src/lib/firebase.ts` — `VITE_FIREBASE_*` 4개 env var로 초기화. **env var가 하나라도 없으면 `isFirebaseConfigured=false`가 되고 로그인 기능 전체가 조용히 꺼짐**(기존 로컬 전용 동작은 그대로 유지) — 그래서 아래 Firebase 프로젝트 설정을 안 해도 앱은 정상 빌드/동작함.
 - `src/lib/storage.ts`의 `buildBackupPayload()`/`applyBackupPayload()`/`isBackupPayload()` — 기존 BackupPage의 export/import 로직을 그대로 뽑아내 공용화(진도는 max, 오답노트/기록은 최신 항목 우선으로 병합 — 원래 있던 로직 그대로라 안전).
 - `src/lib/useCloudSync.ts` — Google 로그인/로그아웃, 로그인 시 자동 pull→merge→push, 5분마다 + 탭이 백그라운드로 갈 때 자동 재동기화, `syncNow()` 수동 트리거. Firestore 문서 경로는 `users/{uid}` 하나에 `BackupPayload` 전체를 저장(파일 백업과 완전히 같은 포맷).
+
+### 2026-09-14 — "다른 PC에서 진도가 반영 안 된다" 수정 (⚠️ 실기기 미검증)
+
+사용자 신고: A PC에서 문제 풀고 B PC에서 같은 계정으로 로그인하면 진도가 안 보임.
+코드를 읽고 원인을 추론해 고친 것이며 **두 기기로 재현/검증하지는 못했다**(사용자가 확인 불가 상태).
+다음 세션에서 실제 동작 확인이 필요함.
+
+먼저 배포 번들(`index-DaNhWp49.js`)을 직접 받아 `momogi-9bce4.firebaseapp.com`/`momogi-9bce4`/`AIzaSy…`가
+인라인된 걸 확인함 → **Firebase env 누락은 원인이 아님**(`isFirebaseConfigured=true`).
+
+- **주원인으로 추정한 것**: 로그인 시 pull→병합은 정상이었지만, 화면들이 마운트 시점의 localStorage를
+  memo해 두기 때문에 병합 결과가 화면에 안 나타남. 로그아웃 경로는 같은 이유로 이미 `reloadFresh()`를
+  부르고 있었는데 **로그인 경로에만 그게 빠져 있었음**. → `syncNow()`가 "로컬이 실제로 바뀌었는지"를
+  반환하게 하고(판정은 새 `storage.snapshotProgress()`, `buildBackupPayload()`는 `exportedAt`이 매번
+  달라 비교 불가), 바뀐 경우에만 1회 리로드. 리로드가 다시 pull을 유발하므로 `sessionStorage`
+  플래그(`kanjiApp.session.pullReloaded`)로 세션당 한 번만 돌게 막음.
+- **진도 변경 시 debounced push 추가**: 기존엔 push가 로그인/5분/탭 숨김/수동/로그아웃뿐이라 문제 풀고
+  5분 안에 브라우저를 닫으면 유실됐음. 3초마다 `snapshotProgress()`를 비교해 변화 감지 → 10초 debounce
+  후 push. `storage.ts`는 `localStorage.setItem`이 54곳에 흩어져 있고 공통 진입점이 없어서 저장 함수마다
+  훅을 다는 대신(누락 위험) 스냅샷 폴링을 택함.
+- **`pushNow()` 신설**: 변경 직후 경로는 pull을 하지 않음 — 방금 내린 진도가 클라우드 옛 값과 union
+  병합되어 도로 올라오는 걸 막기 위해(`pushLocalStateAfterDelete`와 같은 논리). 대신 `{ merge: true }`로
+  써서 두 기기 동시 사용 시 상대가 올린 필드를 통째로 날리지 않게 함. `pagehide`도 `syncNow`→`pushNow`로
+  교체(떠나는 순간 pull까지 할 시간 없음). 삭제 전파·로그아웃·`syncNow`의 `setDoc`은 덮어쓰기가 목적이라
+  통짜 유지.
+- **퀴즈 중 로그인 시 리로드 보류**: 새 `storage.hasInProgressQuiz()`(진행 중 퀴즈 키 14개가 전부
+  `…InProgressQuiz`로 끝나는 규칙 이용)로 풀다 만 퀴즈가 있으면 리로드하지 않음. 진도는 이미 병합돼
+  있어 유실 없고 화면 반영만 다음 로드로 미뤄짐.
+
+**일부러 고치지 않은 것 — 진도 하향이 다른 기기로 전파되지 않음**: `importLevelProgress`가 `Math.max`,
+오답노트/기록은 최신 우선 union이라 "안 외움"으로 되돌린 게 전파되지 않음. 이건 버그가 아니라 "진도는
+오직 증가한다"는 기존 설계이고, 뒤집으면 백업 복원·동시 사용 때 진도가 깎임. `BackupPage`가 로그인
+중에는 초기화 버튼을 비활성화하고 "먼저 로그아웃한 뒤 초기화하세요"로 이미 안내하고 있음.
+
+**남은 한계**: `{ merge: true }`는 필드 단위라 같은 필드 안쪽 배열·맵까지 합쳐주진 않음(겹친 필드는
+다음 `syncNow`의 pull→union이 맞춤). `pagehide`의 비동기 `setDoc`은 끝까지 못 갈 수 있어 보장이 아님.
 - `src/pages/BackupPage.tsx` — 상단에 "계정 동기화" 섹션 추가(로그인 버튼/로그인 상태/마지막 동기화 시각/수동 동기화·로그아웃). 기존 "내보내기/가져오기"는 그대로 아래에 유지(로그인 없이 기기 옮길 때 여전히 유효).
 - `.github/workflows/deploy.yml` — 빌드 스텝에 `VITE_FIREBASE_*` 4개를 GitHub Secrets에서 주입하도록 추가.
 - `firestore.rules` — 사용자 본인 문서(`users/{uid}`)만 읽고 쓸 수 있게 제한하는 규칙. Firebase 콘솔 Rules 탭에 그대로 붙여넣으면 됨(CLI 불필요).
