@@ -41,6 +41,18 @@ function describeAuthError(err: unknown): string {
 // always-on login/logout/tab-hide/manual triggers below
 const AUTO_SYNC_INTERVAL_MS = 5 * 60 * 1000
 
+// 진도가 바뀐 걸 알아채기 위해 로컬 스냅샷을 확인하는 주기.
+// storage.ts의 저장 함수는 54곳에서 제각기 localStorage.setItem을 부르고
+// 공통 진입점이 없어서, 저장할 때마다 알림을 쏘게 하려면 그 전부를 고쳐야 한다
+// (누락 위험이 크고 변경 범위도 넓다). 대신 여기서 스냅샷을 주기적으로 비교한다 —
+// snapshotProgress()는 로그인 pull 판정에 이미 쓰는 함수라 새 개념이 늘지 않고,
+// storage.ts는 건드리지 않는다.
+const CHANGE_POLL_INTERVAL_MS = 3 * 1000
+
+// 변화를 감지한 뒤 push까지 기다리는 시간. 문제를 연달아 푸는 동안 매번
+// 올리지 않도록 묶어주되, 브라우저를 닫기 전에는 올라가도록 짧게 잡는다.
+const CHANGE_PUSH_DEBOUNCE_MS = 10 * 1000
+
 // 로그인 직후 pull 결과를 화면에 반영하려고 리로드했는지 표시하는 플래그.
 // sessionStorage라 탭을 닫으면 사라지고, 로그아웃 때도 지운다.
 const PULL_RELOADED_KEY = 'kanjiApp.session.pullReloaded'
@@ -114,6 +126,23 @@ export function useCloudSync(): CloudSyncState {
     return changed
   }, [])
 
+  // 진도가 바뀐 직후 올리는 경로. syncNow와 달리 pull을 하지 않는다 —
+  // 방금 로컬에서 내린 진도가 클라우드의 옛 값과 union 병합되어 도로 올라오는
+  // 걸 막기 위해서다(pushLocalStateAfterDelete와 같은 이유).
+  // 백그라운드 동작이라 syncing 표시는 건드리지 않지만, 실패는 드러낸다.
+  const pushNow = useCallback(async () => {
+    if (!isFirebaseConfigured || !auth?.currentUser || !db) return
+    try {
+      const payload = buildBackupPayload()
+      await setDoc(doc(db, 'users', auth.currentUser.uid), payload)
+      setLastSyncedAt(payload.exportedAt)
+      setError(null)
+    } catch (err) {
+      const code = err instanceof FirebaseError ? ` (${err.code})` : ''
+      setError(`동기화 실패${code} — 네트워크를 확인하고 다시 시도하세요`)
+    }
+  }, [])
+
   useEffect(() => {
     if (!isFirebaseConfigured || !auth) return
     return onAuthStateChanged(auth, (nextUser) => {
@@ -152,14 +181,43 @@ export function useCloudSync(): CloudSyncState {
     // 놓치는 경로가 있고(특히 모바일/브라우저 종료), 여기서 한 번 더 올려야
     // 마지막으로 푼 문제가 유실되지 않는다. 이 시점에는 비동기 setDoc이 끝까지
     // 가지 못할 수 있어 보장은 아니지만, 없는 것보다 확실히 낫다.
+    // 떠나는 순간에는 pull→병합까지 할 시간이 없으므로 올리기만 한다.
     document.addEventListener('visibilitychange', handleVisibility)
-    window.addEventListener('pagehide', syncNow)
+    window.addEventListener('pagehide', pushNow)
     return () => {
       clearInterval(interval)
       document.removeEventListener('visibilitychange', handleVisibility)
-      window.removeEventListener('pagehide', syncNow)
+      window.removeEventListener('pagehide', pushNow)
     }
-  }, [user, syncNow])
+  }, [user, syncNow, pushNow])
+
+  // 진도가 바뀌면 곧바로(debounce 후) 올린다.
+  // 이게 없으면 push는 5분 주기·탭 숨김·종료 시점에만 일어나서, 문제를 풀고
+  // 5분 안에 브라우저를 닫으면 그만큼이 클라우드에 올라가지 않는다.
+  useEffect(() => {
+    if (!user) return
+    // 로그인 직후 pull이 막 병합해둔 상태를 기준선으로 잡는다. 그래야 그
+    // 병합분이 "새 변화"로 오인되어 곧바로 push되지 않는다.
+    let baseline = snapshotProgress()
+    let timer: ReturnType<typeof setTimeout> | null = null
+
+    const poll = setInterval(() => {
+      const current = snapshotProgress()
+      if (current === baseline) return
+      baseline = current
+      // 연달아 바뀌는 동안에는 마지막 변화 기준으로 미룬다
+      if (timer) clearTimeout(timer)
+      timer = setTimeout(() => {
+        timer = null
+        void pushNow()
+      }, CHANGE_PUSH_DEBOUNCE_MS)
+    }, CHANGE_POLL_INTERVAL_MS)
+
+    return () => {
+      clearInterval(poll)
+      if (timer) clearTimeout(timer)
+    }
+  }, [user, pushNow])
 
   function signIn() {
     if (!isFirebaseConfigured || !auth) return
