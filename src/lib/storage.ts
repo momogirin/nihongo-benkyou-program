@@ -1367,6 +1367,21 @@ export function buildBackupPayload(): BackupPayload {
 // 화면 설정이므로 남긴다.
 const PROGRESS_KEY_KEEP = new Set(['kanjiApp.theme'])
 
+// 진행사항 키들의 현재 내용을 하나의 문자열로 요약한다. 클라우드에서 받은
+// 스냅샷을 병합한 뒤 "로컬이 실제로 달라졌는지" 판정하는 데 쓴다 —
+// buildBackupPayload()는 exportedAt이 매번 바뀌어서 비교에 쓸 수 없다.
+// 키 목록은 clearAllProgress()와 같은 'kanjiApp.' 접두사 규칙을 따르고,
+// 순서가 달라도 같은 값이 나오도록 정렬한다.
+export function snapshotProgress(): string {
+  const keys: string[] = []
+  for (let i = 0; i < localStorage.length; i += 1) {
+    const key = localStorage.key(i)
+    if (key && key.startsWith('kanjiApp.') && !PROGRESS_KEY_KEEP.has(key)) keys.push(key)
+  }
+  keys.sort()
+  return keys.map((key) => `${key} ${localStorage.getItem(key) ?? ''}`).join('')
+}
+
 export function clearAllProgress() {
   const toRemove: string[] = []
   for (let i = 0; i < localStorage.length; i += 1) {
